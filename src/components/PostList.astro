@@ -1,0 +1,32 @@
+---
+// Blog index list + pagination, shared by /category/insights/ and /category/insights/page/N/
+interface Props {
+  posts: any[];
+  currentPage: number;
+  lastPage: number;
+}
+const { posts, currentPage, lastPage } = Astro.props;
+const pageUrl = (n: number) => (n === 1 ? '/category/insights/' : `/category/insights/page/${n}/`);
+---
+<ul class="post-list">
+  {posts.map((p) => (
+    <li class="post-card">
+      <a href={`/${p.data.slug}/`}>
+        {p.data.cover
+          ? <img src={p.data.cover.src} alt={p.data.cover.alt} width={p.data.cover.width} height={p.data.cover.height} loading="lazy" decoding="async" />
+          : <img src="/og-default.jpg" alt="" width="1200" height="630" loading="lazy" decoding="async" />}
+        <h2>{p.data.title}</h2>
+      </a>
+      <time datetime={p.data.pubDate.toISOString()}>{p.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</time>
+      {p.data.excerpt && <p>{p.data.excerpt}</p>}
+    </li>
+  ))}
+</ul>
+
+{lastPage > 1 && (
+  <nav class="pagination" aria-label="Pagination">
+    {currentPage > 1 && <a href={pageUrl(currentPage - 1)} rel="prev">Newer posts</a>}
+    <span>Page {currentPage} of {lastPage}</span>
+    {currentPage < lastPage && <a href={pageUrl(currentPage + 1)} rel="next">Older posts</a>}
+  </nav>
+)}

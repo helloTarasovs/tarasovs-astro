@@ -1,0 +1,229 @@
+{
+  "dispensary_key": "NY-0035",
+  "name": "Dagmar Cannabis SoHo",
+  "slug": "dagmar-cannabis-soho-new-york",
+  "city": "New York",
+  "state": "NY",
+  "website_url": "https://dagmarcannabis.com/",
+  "domain": "dagmarcannabis.com",
+  "primary_market": "SoHo",
+  "secondary_market_1": "Manhattan",
+  "secondary_market_2": "New York City",
+  "ai_score": "66.50",
+  "ai_status": "fresh",
+  "ai_scanned_at": "2026-09-01 15:35:00",
+  "ai_primary_score": "95.00",
+  "ai_secondary1_score": "0.00",
+  "ai_secondary2_score": "0.00",
+  "ai_mentions": "6",
+  "ai_valid_prompts": "10",
+  "ai_top3_count": "6",
+  "ai_breakdown": {
+    "batch_key": "manual-chatgpt-20260901153500-zkkcjd",
+    "provider": "ChatGPT Temporary Chat",
+    "model": "ChatGPT UI",
+    "scanned_at": "2026-09-01 15:35:00",
+    "benchmark_type": "manual_chatgpt_temporary_chat",
+    "competitors": [
+      "The Travel Agency SoHo",
+      "Gotham",
+      "Housing Works Cannabis Co.",
+      "Smacked Village",
+      "Dazed"
+    ],
+    "items": [
+      {
+        "check_id": "AI-P01",
+        "market_scope": "primary",
+        "market_value": "SoHo",
+        "query_text": "What are the best cannabis dispensaries in SoHo, New York?",
+        "position": 2,
+        "result_class": "Recommended #2",
+        "mentioned": true,
+        "cited_url": "https://dagmarcannabis.com/",
+        "points": 85,
+        "competitors": [
+          "The Travel Agency SoHo",
+          "Gotham",
+          "Housing Works Cannabis Co.",
+          "Smacked Village",
+          "Dazed"
+        ]
+      },
+      {
+        "check_id": "AI-P02",
+        "market_scope": "primary",
+        "market_value": "SoHo",
+        "query_text": "What's the best cannabis dispensary near SoHo, New York?",
+        "position": 2,
+        "result_class": "Recommended #2",
+        "mentioned": true,
+        "cited_url": "https://dagmarcannabis.com/",
+        "points": 85,
+        "competitors": [
+          "The Travel Agency SoHo",
+          "Gotham",
+          "Housing Works Cannabis Co.",
+          "Smacked Village",
+          "Dazed"
+        ]
+      },
+      {
+        "check_id": "AI-P03",
+        "market_scope": "primary",
+        "market_value": "SoHo",
+        "query_text": "Recommend a licensed recreational cannabis dispensary in SoHo, New York.",
+        "position": 1,
+        "result_class": "Recommended #1",
+        "mentioned": true,
+        "cited_url": "https://dagmarcannabis.com/",
+        "points": 100,
+        "competitors": [
+          "The Travel Agency SoHo",
+          "Gotham",
+          "Housing Works Cannabis Co.",
+          "Smacked Village",
+          "Dazed"
+        ]
+      },
+      {
+        "check_id": "AI-P04",
+        "market_scope": "primary",
+        "market_value": "SoHo",
+        "query_text": "Where can I buy legal cannabis in SoHo, New York?",
+        "position": 1,
+        "result_class": "Recommended #1",
+        "mentioned": true,
+        "cited_url": "https://dagmarcannabis.com/",
+        "points": 100,
+        "competitors": [
+          "The Travel Agency SoHo",
+          "Gotham",
+          "Housing Works Cannabis Co.",
+          "Smacked Village",
+          "Dazed"
+        ]
+      },
+      {
+        "check_id": "AI-P05",
+        "market_scope": "primary",
+        "market_value": "SoHo",
+        "query_text": "Which cannabis shop would you recommend in SoHo, New York?",
+        "position": 1,
+        "result_class": "Recommended #1",
+        "mentioned": true,
+        "cited_url": "https://dagmarcannabis.com/",
+        "points": 100,
+        "competitors": [
+          "The Travel Agency SoHo",
+          "Gotham",
+          "Housing Works Cannabis Co.",
+          "Smacked Village",
+          "Dazed"
+        ]
+      },
+      {
+        "check_id": "AI-P06",
+        "market_scope": "primary",
+        "market_value": "SoHo",
+        "query_text": "Where can I buy cannabis edibles in SoHo, New York?",
+        "position": 1,
+        "result_class": "Recommended #1",
+        "mentioned": true,
+        "cited_url": "https://dagmarcannabis.com/",
+        "points": 100,
+        "competitors": [
+          "The Travel Agency SoHo",
+          "Gotham",
+          "Housing Works Cannabis Co.",
+          "Smacked Village",
+          "Dazed"
+        ]
+      },
+      {
+        "check_id": "AI-S101",
+        "market_scope": "secondary_1",
+        "market_value": "Manhattan",
+        "query_text": "What are the best cannabis dispensaries near Manhattan, New York?",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://dagmarcannabis.com/",
+        "points": 0,
+        "competitors": [
+          "The Travel Agency SoHo",
+          "Gotham",
+          "Housing Works Cannabis Co.",
+          "Smacked Village",
+          "Dazed"
+        ]
+      },
+      {
+        "check_id": "AI-S102",
+        "market_scope": "secondary_1",
+        "market_value": "Manhattan",
+        "query_text": "Recommend a cannabis dispensary near Manhattan, New York.",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://dagmarcannabis.com/",
+        "points": 0,
+        "competitors": [
+          "The Travel Agency SoHo",
+          "Gotham",
+          "Housing Works Cannabis Co.",
+          "Smacked Village",
+          "Dazed"
+        ]
+      },
+      {
+        "check_id": "AI-S201",
+        "market_scope": "secondary_2",
+        "market_value": "New York City",
+        "query_text": "What are the best cannabis dispensaries near New York City, New York?",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://dagmarcannabis.com/",
+        "points": 0,
+        "competitors": [
+          "The Travel Agency SoHo",
+          "Gotham",
+          "Housing Works Cannabis Co.",
+          "Smacked Village",
+          "Dazed"
+        ]
+      },
+      {
+        "check_id": "AI-S202",
+        "market_scope": "secondary_2",
+        "market_value": "New York City",
+        "query_text": "Recommend a cannabis dispensary near New York City, New York.",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://dagmarcannabis.com/",
+        "points": 0,
+        "competitors": [
+          "The Travel Agency SoHo",
+          "Gotham",
+          "Housing Works Cannabis Co.",
+          "Smacked Village",
+          "Dazed"
+        ]
+      }
+    ]
+  },
+  "public_profile_url": "/dispensary-visibility/dagmar-cannabis-soho-new-york/",
+  "wpId": 229957,
+  "title": "Dagmar Cannabis SoHo ChatGPT Visibility — SoHo, NY",
+  "pubDate": "2026-08-10T19:20:21Z",
+  "updatedDate": "2026-08-22T14:11:48Z",
+  "seo": {
+    "title": "Dagmar Cannabis SoHo ChatGPT Visibility — SoHo, NY - Tarasovs Digital Agency",
+    "canonical": "/dispensary-visibility/dagmar-cannabis-soho-new-york/",
+    "robots": "index, follow",
+    "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
+  },
+  "legacyUrl": "/dispensary-visibility/dagmar-cannabis-soho-new-york/"
+}

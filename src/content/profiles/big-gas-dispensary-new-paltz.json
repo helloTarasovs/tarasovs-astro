@@ -1,0 +1,218 @@
+{
+  "dispensary_key": "NY-0040",
+  "name": "Big Gas Dispensary",
+  "slug": "big-gas-dispensary-new-paltz",
+  "city": "New Paltz",
+  "state": "NY",
+  "website_url": "https://biggasdispensary.com/",
+  "domain": "biggasdispensary.com",
+  "primary_market": "New Paltz",
+  "secondary_market_1": "Poughkeepsie",
+  "secondary_market_2": "Kingston",
+  "ai_score": "39.67",
+  "ai_status": "fresh",
+  "ai_scanned_at": "2026-09-02 06:31:00",
+  "ai_primary_score": "51.67",
+  "ai_secondary1_score": "0.00",
+  "ai_secondary2_score": "35.00",
+  "ai_mentions": "5",
+  "ai_valid_prompts": "10",
+  "ai_top3_count": "5",
+  "ai_breakdown": {
+    "batch_key": "manual-chatgpt-20260902063100-uulifp",
+    "provider": "ChatGPT Temporary Chat",
+    "model": "ChatGPT UI",
+    "scanned_at": "2026-09-02 06:31:00",
+    "benchmark_type": "manual_chatgpt_temporary_chat",
+    "competitors": [
+      "Black Market Canna Co.",
+      "The Haze Poughkeepsie",
+      "Curaleaf Newburgh",
+      "Kingston-area licensed retailers"
+    ],
+    "items": [
+      {
+        "check_id": "AI-P01",
+        "market_scope": "primary",
+        "market_value": "New Paltz",
+        "query_text": "What are the best cannabis dispensaries in New Paltz, New York?",
+        "position": 3,
+        "result_class": "Recommended #3",
+        "mentioned": true,
+        "cited_url": "https://biggasdispensary.com/",
+        "points": 70,
+        "competitors": [
+          "Black Market Canna Co.",
+          "The Haze Poughkeepsie",
+          "Curaleaf Newburgh",
+          "Kingston-area licensed retailers"
+        ]
+      },
+      {
+        "check_id": "AI-P02",
+        "market_scope": "primary",
+        "market_value": "New Paltz",
+        "query_text": "What's the best cannabis dispensary near New Paltz, New York?",
+        "position": 2,
+        "result_class": "Recommended #2",
+        "mentioned": true,
+        "cited_url": "https://biggasdispensary.com/",
+        "points": 85,
+        "competitors": [
+          "Black Market Canna Co.",
+          "The Haze Poughkeepsie",
+          "Curaleaf Newburgh",
+          "Kingston-area licensed retailers"
+        ]
+      },
+      {
+        "check_id": "AI-P03",
+        "market_scope": "primary",
+        "market_value": "New Paltz",
+        "query_text": "Recommend a licensed recreational cannabis dispensary in New Paltz, New York.",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://biggasdispensary.com/",
+        "points": 0,
+        "competitors": [
+          "Black Market Canna Co.",
+          "The Haze Poughkeepsie",
+          "Curaleaf Newburgh",
+          "Kingston-area licensed retailers"
+        ]
+      },
+      {
+        "check_id": "AI-P04",
+        "market_scope": "primary",
+        "market_value": "New Paltz",
+        "query_text": "Where can I buy legal cannabis in New Paltz, New York?",
+        "position": 3,
+        "result_class": "Recommended #3",
+        "mentioned": true,
+        "cited_url": "https://biggasdispensary.com/",
+        "points": 70,
+        "competitors": [
+          "Black Market Canna Co.",
+          "The Haze Poughkeepsie",
+          "Curaleaf Newburgh",
+          "Kingston-area licensed retailers"
+        ]
+      },
+      {
+        "check_id": "AI-P05",
+        "market_scope": "primary",
+        "market_value": "New Paltz",
+        "query_text": "Which cannabis shop would you recommend in New Paltz, New York?",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://biggasdispensary.com/",
+        "points": 0,
+        "competitors": [
+          "Black Market Canna Co.",
+          "The Haze Poughkeepsie",
+          "Curaleaf Newburgh",
+          "Kingston-area licensed retailers"
+        ]
+      },
+      {
+        "check_id": "AI-P06",
+        "market_scope": "primary",
+        "market_value": "New Paltz",
+        "query_text": "Where can I buy cannabis edibles in New Paltz, New York?",
+        "position": 2,
+        "result_class": "Recommended #2",
+        "mentioned": true,
+        "cited_url": "https://biggasdispensary.com/",
+        "points": 85,
+        "competitors": [
+          "Black Market Canna Co.",
+          "The Haze Poughkeepsie",
+          "Curaleaf Newburgh",
+          "Kingston-area licensed retailers"
+        ]
+      },
+      {
+        "check_id": "AI-S101",
+        "market_scope": "secondary_1",
+        "market_value": "Poughkeepsie",
+        "query_text": "What are the best cannabis dispensaries near Poughkeepsie, New York?",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://biggasdispensary.com/",
+        "points": 0,
+        "competitors": [
+          "Black Market Canna Co.",
+          "The Haze Poughkeepsie",
+          "Curaleaf Newburgh",
+          "Kingston-area licensed retailers"
+        ]
+      },
+      {
+        "check_id": "AI-S102",
+        "market_scope": "secondary_1",
+        "market_value": "Poughkeepsie",
+        "query_text": "Recommend a cannabis dispensary near Poughkeepsie, New York.",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://biggasdispensary.com/",
+        "points": 0,
+        "competitors": [
+          "Black Market Canna Co.",
+          "The Haze Poughkeepsie",
+          "Curaleaf Newburgh",
+          "Kingston-area licensed retailers"
+        ]
+      },
+      {
+        "check_id": "AI-S201",
+        "market_scope": "secondary_2",
+        "market_value": "Kingston",
+        "query_text": "What are the best cannabis dispensaries near Kingston, New York?",
+        "position": 3,
+        "result_class": "Recommended #3",
+        "mentioned": true,
+        "cited_url": "https://biggasdispensary.com/",
+        "points": 70,
+        "competitors": [
+          "Black Market Canna Co.",
+          "The Haze Poughkeepsie",
+          "Curaleaf Newburgh",
+          "Kingston-area licensed retailers"
+        ]
+      },
+      {
+        "check_id": "AI-S202",
+        "market_scope": "secondary_2",
+        "market_value": "Kingston",
+        "query_text": "Recommend a cannabis dispensary near Kingston, New York.",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://biggasdispensary.com/",
+        "points": 0,
+        "competitors": [
+          "Black Market Canna Co.",
+          "The Haze Poughkeepsie",
+          "Curaleaf Newburgh",
+          "Kingston-area licensed retailers"
+        ]
+      }
+    ]
+  },
+  "public_profile_url": "/dispensary-visibility/big-gas-dispensary-new-paltz/",
+  "wpId": 229962,
+  "title": "Big Gas Dispensary ChatGPT Visibility — New Paltz, NY",
+  "pubDate": "2026-08-10T19:23:25Z",
+  "updatedDate": "2026-08-22T14:11:39Z",
+  "seo": {
+    "title": "Big Gas Dispensary ChatGPT Visibility — New Paltz, NY - Tarasovs Digital Agency",
+    "canonical": "/dispensary-visibility/big-gas-dispensary-new-paltz/",
+    "robots": "index, follow",
+    "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
+  },
+  "legacyUrl": "/dispensary-visibility/big-gas-dispensary-new-paltz/"
+}

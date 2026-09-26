@@ -1,0 +1,18 @@
+---
+// Canonical blog index (WordPress already 301s /insights/ here). Page 1.
+import Base from '../../../layouts/Base.astro';
+import PostList from '../../../components/PostList.astro';
+import { sortedPosts, pageSlice } from '../../../lib/posts';
+import { breadcrumbSchema } from '../../../lib/schema';
+
+const { items, lastPage } = pageSlice(await sortedPosts(), 1);
+---
+<Base
+  title="Insights - Tarasovs Digital Agency"
+  description="Articles on GEO, AI search visibility, SEO, Framer and web design from Tarasovs Digital Agency."
+  canonical="/category/insights/"
+  jsonld={[breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Insights', path: '/category/insights/' }])]}
+>
+  <h1>Insights</h1>
+  <PostList posts={items} currentPage={1} lastPage={lastPage} />
+</Base>

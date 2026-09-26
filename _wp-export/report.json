@@ -1,0 +1,513 @@
+{
+  "base": "https://tarasovs.me",
+  "startedAt": "2026-09-26T16:54:14.720Z",
+  "counts": {
+    "posts": 41,
+    "projects": 11,
+    "profilesListed": 132,
+    "profilesExported": 131,
+    "pages": 27,
+    "imagesReferenced": 166
+  },
+  "warnings": [
+    {
+      "type": "post",
+      "slug": "geo-glossary",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "how-scroll-scrubbed-video-works-in-framer",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "llms-txt-guide",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "track-ai-assistant-traffic-ga4",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "framer-chatgpt-codex-workflow",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "ny-dispensary-chatgpt-visibility-study",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "where-can-ny-dispensaries-advertise-2026",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "new-york-dispensary-ai-visibility-index",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "best-ai-tools-ui-ux-designers-2026",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "higgsfield-claude-framer-ai-video",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "geo-ecommerce-chatgpt-perplexity",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "connect-claude-to-framer",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "how-to-appear-in-google-ai-overviews",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "geo-vs-seo-vs-aeo",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "dispensary-seo-2026",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "aeo-for-webflow-sites-step-by-step",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "framer-for-agencies-why-studios-are-switching",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "conversion-focused-design-7-ux-issues-killing-your-leads",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "figma-to-framer-handoff-workflow",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "verdi-cannabis-dutchie-pro-case-study",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "framer-vs-wordpress-2026",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "shoppingmodaitalia-seo-ai-case-study-2026",
+      "msg": "2 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "ai-search-visibility-tracking",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "claude-fable-5-shutdown-export-controls-explained",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "claude-fable-5-geo-ai-search-visibility",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "local-seo-new-york-small-businesses-2026",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "is-framer-good-for-seo",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "share-of-model-ai-search-visibility",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "framer-vs-webflow-2026",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "how-to-get-your-business-cited-in-chatgpt-answers",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "what-is-geo-generative-engine-optimization",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "post",
+      "slug": "why-framer-is-the-future-of-design",
+      "msg": "img without alt: /wp-content/uploads/2025/04/framer-future.webp"
+    },
+    {
+      "type": "post",
+      "slug": "framer-vs-webflow-comparing-top-website-builders-2024",
+      "msg": "skipped: redirected"
+    },
+    {
+      "type": "post",
+      "slug": "10-best-ai-tools-for-ui-ux-designers-in-2024",
+      "msg": "img without alt: /wp-content/uploads/2026/08/best-ai-tools-ui-ux-designers-2026-square.webp"
+    },
+    {
+      "type": "post",
+      "slug": "wix-adi-2024-review-unleashing-its-power-and-performance",
+      "msg": "img without alt: /wp-content/uploads/2024/04/a77aa0_baf7783de96e4cda86bce04205405292mv2.webp"
+    },
+    {
+      "type": "post",
+      "slug": "guide-choosing-the-right-web-development-framework-for-your-project",
+      "msg": "img without alt: /wp-content/uploads/2024/03/pexels-pixabay-247791.jpg"
+    },
+    {
+      "type": "post",
+      "slug": "the-broken-layout-trend",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "page",
+      "slug": "dispensary-visibility",
+      "msg": "1 <script> tag(s) left in body"
+    },
+    {
+      "type": "page",
+      "slug": "dispensary-visibility",
+      "msg": "2 <style> block(s) in body"
+    },
+    {
+      "type": "page",
+      "slug": "dispensary-seo-new-york",
+      "msg": "1 <script> tag(s) left in body"
+    },
+    {
+      "type": "page",
+      "slug": "dispensary-seo-new-york",
+      "msg": "2 <style> block(s) in body"
+    },
+    {
+      "type": "page",
+      "slug": "google-business-profile-optimization",
+      "msg": "1 <script> tag(s) left in body"
+    },
+    {
+      "type": "page",
+      "slug": "google-business-profile-optimization",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "page",
+      "slug": "local-seo-manhattan-brooklyn",
+      "msg": "1 <script> tag(s) left in body"
+    },
+    {
+      "type": "page",
+      "slug": "local-seo-manhattan-brooklyn",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "page",
+      "slug": "dutchie-menu-seo",
+      "msg": "1 <script> tag(s) left in body"
+    },
+    {
+      "type": "page",
+      "slug": "dutchie-menu-seo",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "page",
+      "slug": "dutchie-pro-migration-seo",
+      "msg": "1 <script> tag(s) left in body"
+    },
+    {
+      "type": "page",
+      "slug": "dutchie-pro-migration-seo",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "page",
+      "slug": "dispensary-seo-nyc",
+      "msg": "2 <script> tag(s) left in body"
+    },
+    {
+      "type": "page",
+      "slug": "dispensary-seo-nyc",
+      "msg": "2 <style> block(s) in body"
+    },
+    {
+      "type": "page",
+      "slug": "terms-of-service-tarasovs-digital-agency",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "page",
+      "slug": "privacy-cookie-policy-tarasovs-digital-agency",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "page",
+      "slug": "website-design-services",
+      "msg": "img without alt: /wp-content/uploads/2026/04/lp_img_47.webp"
+    },
+    {
+      "type": "page",
+      "slug": "website-design-services",
+      "msg": "img without alt: /wp-content/uploads/2026/04/lp_img_06.webp"
+    },
+    {
+      "type": "page",
+      "slug": "website-design-services",
+      "msg": "img without alt: /wp-content/uploads/2026/08/cannabis-advertising-compliance-new-york.webp"
+    },
+    {
+      "type": "page",
+      "slug": "website-design-services",
+      "msg": "img without alt: /wp-content/uploads/2026/04/lp_img_47.webp"
+    },
+    {
+      "type": "page",
+      "slug": "website-design-services",
+      "msg": "img without alt: /wp-content/uploads/2026/04/lp_img_47.webp"
+    },
+    {
+      "type": "page",
+      "slug": "website-design-services",
+      "msg": "img without alt: /wp-content/uploads/2026/04/lp_img_47.webp"
+    },
+    {
+      "type": "page",
+      "slug": "website-design-services",
+      "msg": "img without alt: /wp-content/uploads/2026/04/lp_img_47.webp"
+    },
+    {
+      "type": "page",
+      "slug": "contact-us",
+      "msg": "1 <script> tag(s) left in body"
+    },
+    {
+      "type": "page",
+      "slug": "contact-us",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "page",
+      "slug": "expert-web-design-seo-services-in-staten-island",
+      "msg": "img without alt: /wp-content/uploads/2024/09/a_professional_web_designer_working_.jpg"
+    },
+    {
+      "type": "page",
+      "slug": "expert-web-design-seo-services-in-staten-island",
+      "msg": "img without alt: /wp-content/uploads/2024/09/a_stock_image_of_a_professional_digital_agency_team_2.jpg"
+    },
+    {
+      "type": "page",
+      "slug": "seo-services",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "page",
+      "slug": "e-commerce",
+      "msg": "3 <style> block(s) in body"
+    },
+    {
+      "type": "page",
+      "slug": "website-development",
+      "msg": "img without alt: /wp-content/uploads/2026/04/lp_img_47.webp"
+    },
+    {
+      "type": "page",
+      "slug": "website-development",
+      "msg": "img without alt: /wp-content/uploads/2026/04/lp_img_06.webp"
+    },
+    {
+      "type": "page",
+      "slug": "website-development",
+      "msg": "img without alt: /wp-content/uploads/2025/12/ytCaVg5g-oh__img35.2.jpeg"
+    },
+    {
+      "type": "page",
+      "slug": "ui-ux-design",
+      "msg": "2 <style> block(s) in body"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "external image: https://secure.gravatar.com/avatar/52ba0e1038df15e142790549036b1918f978e94d204c9e943f816e2759faabdc?s=50&d=mm&r=g"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "img without alt: /wp-content/uploads/2026/09/How-Scroll-Scrubbed-Video-Works-in-Framer.webp"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "external image: https://secure.gravatar.com/avatar/9b9d02da8295bf308ae53236fe7eb457a99a87b0999719a728321aebc4bf7503?s=50&d=mm&r=g"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "external image: https://secure.gravatar.com/avatar/52ba0e1038df15e142790549036b1918f978e94d204c9e943f816e2759faabdc?s=50&d=mm&r=g"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "external image: https://secure.gravatar.com/avatar/52ba0e1038df15e142790549036b1918f978e94d204c9e943f816e2759faabdc?s=50&d=mm&r=g"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "img without alt: /wp-content/uploads/2026/08/framer-chatgpt-codex-workflow-future-image.webp"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "external image: https://secure.gravatar.com/avatar/9b9d02da8295bf308ae53236fe7eb457a99a87b0999719a728321aebc4bf7503?s=50&d=mm&r=g"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "external image: https://secure.gravatar.com/avatar/9b9d02da8295bf308ae53236fe7eb457a99a87b0999719a728321aebc4bf7503?s=50&d=mm&r=g"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "img without alt: /wp-content/uploads/2026/08/cannabis-advertising-compliance-new-york.webp"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "external image: https://secure.gravatar.com/avatar/9b9d02da8295bf308ae53236fe7eb457a99a87b0999719a728321aebc4bf7503?s=50&d=mm&r=g"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "img without alt: /wp-content/uploads/2026/08/New-York-Dispensary-Visibility-Index-1.webp"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "external image: https://secure.gravatar.com/avatar/9b9d02da8295bf308ae53236fe7eb457a99a87b0999719a728321aebc4bf7503?s=50&d=mm&r=g"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "img without alt: /wp-content/uploads/2026/08/best-ai-tools-ui-ux-designers-2026-square.webp"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "external image: https://secure.gravatar.com/avatar/52ba0e1038df15e142790549036b1918f978e94d204c9e943f816e2759faabdc?s=50&d=mm&r=g"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "img without alt: /wp-content/uploads/2026/08/higgsfield-kling-video-generation-result-fi.webp"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "external image: https://secure.gravatar.com/avatar/9b9d02da8295bf308ae53236fe7eb457a99a87b0999719a728321aebc4bf7503?s=50&d=mm&r=g"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "external image: https://secure.gravatar.com/avatar/52ba0e1038df15e142790549036b1918f978e94d204c9e943f816e2759faabdc?s=50&d=mm&r=g"
+    },
+    {
+      "type": "page",
+      "slug": "insights",
+      "msg": "external image: https://secure.gravatar.com/avatar/9b9d02da8295bf308ae53236fe7eb457a99a87b0999719a728321aebc4bf7503?s=50&d=mm&r=g"
+    },
+    {
+      "type": "page",
+      "slug": "services",
+      "msg": "1 <script> tag(s) left in body"
+    },
+    {
+      "type": "page",
+      "slug": "services",
+      "msg": "1 <style> block(s) in body"
+    },
+    {
+      "type": "page",
+      "slug": "services",
+      "msg": "img without alt: /wp-content/uploads/2026/04/lp_img_53.webp"
+    },
+    {
+      "type": "page",
+      "slug": "services",
+      "msg": "img without alt: /wp-content/uploads/2026/04/lp_img_53.webp"
+    },
+    {
+      "type": "page",
+      "slug": "services",
+      "msg": "img without alt: /wp-content/uploads/2026/04/lp_img_53.webp"
+    },
+    {
+      "type": "page",
+      "slug": "services",
+      "msg": "img without alt: /wp-content/uploads/2026/04/lp_img_53.webp"
+    },
+    {
+      "type": "page",
+      "slug": "services",
+      "msg": "img without alt: /wp-content/uploads/2026/04/lp_img_53.webp"
+    },
+    {
+      "type": "page",
+      "slug": "services",
+      "msg": "img without alt: /wp-content/uploads/2026/04/lp_img_53.webp"
+    },
+    {
+      "type": "page",
+      "slug": "services",
+      "msg": "img without alt: /wp-content/uploads/2026/04/lp_img_53.webp"
+    },
+    {
+      "type": "page",
+      "slug": "services",
+      "msg": "img without alt: /wp-content/uploads/2026/04/lp_img_53.webp"
+    }
+  ],
+  "failures": [
+    {
+      "type": "profile",
+      "slug": "gotham-buds-new-york",
+      "error": "404 https://tarasovs.me/wp-json/tdv/v1/dispensaries/gotham-buds-new-york",
+      "wroteStub": true
+    }
+  ],
+  "finishedAt": "2026-09-26T16:55:43.494Z"
+}

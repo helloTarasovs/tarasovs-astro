@@ -1,0 +1,89 @@
+---
+// Dispensary profiles: /dispensary-visibility/<slug>/  (data from the tdv plugin export)
+// Structure only: style it to match the current design.
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { breadcrumbSchema } from '../../lib/schema';
+import { abs } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const profiles = await getCollection('profiles');
+  return profiles.map((profile) => ({ params: { slug: profile.data.slug }, props: { profile } }));
+}
+
+const { profile } = Astro.props;
+const d = profile.data as any;
+const path = `/dispensary-visibility/${d.slug}/`;
+const place = [d.city, d.state].filter(Boolean).join(', ');
+const title = d.seo?.title ?? `${d.name} ChatGPT Visibility${place ? ` - ${place}` : ''} - Tarasovs Digital Agency`;
+const items: any[] = d.ai_breakdown?.items ?? [];
+const score = d.ai_score != null ? Math.round(d.ai_score) : null;
+
+const markets = [
+  { label: d.primary_market, score: d.ai_primary_score },
+  { label: d.secondary_market_1, score: d.ai_secondary1_score },
+  { label: d.secondary_market_2, score: d.ai_secondary2_score },
+].filter((m) => m.label);
+
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${abs(path)}#webpage`,
+    name: title,
+    description: d.seo?.description,
+    url: abs(path),
+    about: { '@type': 'Store', name: d.name, url: d.website_url, address: place ? { '@type': 'PostalAddress', addressLocality: d.city, addressRegion: d.state } : undefined },
+    dateModified: d.updatedDate ? new Date(d.updatedDate).toISOString() : undefined,
+  },
+  breadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'NY Dispensary Visibility Index', path: '/dispensary-visibility/' },
+    { name: d.name, path },
+  ]),
+];
+---
+<Base title={title} description={d.seo?.description} canonical={d.seo?.canonical ?? path} robots={d.seo?.robots} ogImage={d.seo?.ogImage} jsonld={jsonld}>
+  <article class="profile">
+    <p class="eyebrow"><a href="/dispensary-visibility/">NY Dispensary Visibility Index</a></p>
+    <h1>{d.name}{place && <span class="profile-place"> · {place}</span>}</h1>
+
+    {d.needsData ? (
+      <p>Benchmark data for this dispensary is being updated.</p>
+    ) : (
+      <>
+        <section class="profile-score">
+          {score != null && <p class="score"><strong>{score}</strong>/100 ChatGPT Visibility</p>}
+          <ul class="profile-stats">
+            {d.ai_mentions != null && <li>Mentioned in {d.ai_mentions}/{d.ai_valid_prompts} recorded prompts</li>}
+            {d.ai_top3_count != null && <li>Top-3 placements: {d.ai_top3_count}/{d.ai_valid_prompts}</li>}
+            {d.ai_scanned_at && <li>Scanned: {d.ai_scanned_at.slice(0, 10)}</li>}
+          </ul>
+        </section>
+
+        {markets.length > 0 && (
+          <section>
+            <h2>Market reach</h2>
+            <ul>{markets.map((m) => <li>{m.label}: {Math.round(Number(m.score ?? 0))}/100</li>)}</ul>
+          </section>
+        )}
+
+        {items.length > 0 && (
+          <section>
+            <h2>Recorded prompts</h2>
+            <table>
+              <thead><tr><th>Prompt</th><th>Market</th><th>Result</th></tr></thead>
+              <tbody>
+                {items.map((it) => (
+                  <tr><td>{it.query_text}</td><td>{it.market_value}</td><td>{it.result_class}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
+        )}
+      </>
+    )}
+
+    {d.website_url && <p><a href={d.website_url} rel="nofollow noopener" target="_blank">{d.domain ?? d.website_url}</a></p>}
+  </article>
+</Base>

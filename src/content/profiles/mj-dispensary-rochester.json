@@ -1,0 +1,229 @@
+{
+  "dispensary_key": "NY-0033",
+  "name": "MJ Dispensary",
+  "slug": "mj-dispensary-rochester",
+  "city": "Rochester",
+  "state": "NY",
+  "website_url": "https://mjdispensary585.com/",
+  "domain": "mjdispensary585.com",
+  "primary_market": "Rochester",
+  "secondary_market_1": "Henrietta",
+  "secondary_market_2": "Greece",
+  "ai_score": "36.58",
+  "ai_status": "fresh",
+  "ai_scanned_at": "2026-09-02 10:42:00",
+  "ai_primary_score": "20.83",
+  "ai_secondary1_score": "92.50",
+  "ai_secondary2_score": "35.00",
+  "ai_mentions": "5",
+  "ai_valid_prompts": "10",
+  "ai_top3_count": "4",
+  "ai_breakdown": {
+    "batch_key": "manual-chatgpt-20260902104200-kv4qqn",
+    "provider": "ChatGPT Temporary Chat",
+    "model": "ChatGPT UI",
+    "scanned_at": "2026-09-02 10:42:00",
+    "benchmark_type": "manual_chatgpt_temporary_chat",
+    "competitors": [
+      "RISE Henrietta",
+      "Good Life Collective",
+      "Misfits Dispensary",
+      "Rochester's Finest Cannabis",
+      "MJ Dispensary Park Ave"
+    ],
+    "items": [
+      {
+        "check_id": "AI-P01",
+        "market_scope": "primary",
+        "market_value": "Rochester",
+        "query_text": "What are the best cannabis dispensaries in Rochester, New York?",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://mjdispensary585.com/",
+        "points": 0,
+        "competitors": [
+          "RISE Henrietta",
+          "Good Life Collective",
+          "Misfits Dispensary",
+          "Rochester's Finest Cannabis",
+          "MJ Dispensary Park Ave"
+        ]
+      },
+      {
+        "check_id": "AI-P02",
+        "market_scope": "primary",
+        "market_value": "Rochester",
+        "query_text": "What's the best cannabis dispensary near Rochester, New York?",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://mjdispensary585.com/",
+        "points": 0,
+        "competitors": [
+          "RISE Henrietta",
+          "Good Life Collective",
+          "Misfits Dispensary",
+          "Rochester's Finest Cannabis",
+          "MJ Dispensary Park Ave"
+        ]
+      },
+      {
+        "check_id": "AI-P03",
+        "market_scope": "primary",
+        "market_value": "Rochester",
+        "query_text": "Recommend a licensed recreational cannabis dispensary in Rochester, New York.",
+        "position": 3,
+        "result_class": "Recommended #3",
+        "mentioned": true,
+        "cited_url": "https://mjdispensary585.com/",
+        "points": 70,
+        "competitors": [
+          "RISE Henrietta",
+          "Good Life Collective",
+          "Misfits Dispensary",
+          "Rochester's Finest Cannabis",
+          "MJ Dispensary Park Ave"
+        ]
+      },
+      {
+        "check_id": "AI-P04",
+        "market_scope": "primary",
+        "market_value": "Rochester",
+        "query_text": "Where can I buy legal cannabis in Rochester, New York?",
+        "position": 5,
+        "result_class": "Recommended #4–5",
+        "mentioned": true,
+        "cited_url": "https://mjdispensary585.com/",
+        "points": 55,
+        "competitors": [
+          "RISE Henrietta",
+          "Good Life Collective",
+          "Misfits Dispensary",
+          "Rochester's Finest Cannabis",
+          "MJ Dispensary Park Ave"
+        ]
+      },
+      {
+        "check_id": "AI-P05",
+        "market_scope": "primary",
+        "market_value": "Rochester",
+        "query_text": "Which cannabis shop would you recommend in Rochester, New York?",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://mjdispensary585.com/",
+        "points": 0,
+        "competitors": [
+          "RISE Henrietta",
+          "Good Life Collective",
+          "Misfits Dispensary",
+          "Rochester's Finest Cannabis",
+          "MJ Dispensary Park Ave"
+        ]
+      },
+      {
+        "check_id": "AI-P06",
+        "market_scope": "primary",
+        "market_value": "Rochester",
+        "query_text": "Where can I buy cannabis edibles in Rochester, New York?",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://mjdispensary585.com/",
+        "points": 0,
+        "competitors": [
+          "RISE Henrietta",
+          "Good Life Collective",
+          "Misfits Dispensary",
+          "Rochester's Finest Cannabis",
+          "MJ Dispensary Park Ave"
+        ]
+      },
+      {
+        "check_id": "AI-S101",
+        "market_scope": "secondary_1",
+        "market_value": "Henrietta",
+        "query_text": "What are the best cannabis dispensaries near Henrietta, New York?",
+        "position": 2,
+        "result_class": "Recommended #2",
+        "mentioned": true,
+        "cited_url": "https://mjdispensary585.com/",
+        "points": 85,
+        "competitors": [
+          "RISE Henrietta",
+          "Good Life Collective",
+          "Misfits Dispensary",
+          "Rochester's Finest Cannabis",
+          "MJ Dispensary Park Ave"
+        ]
+      },
+      {
+        "check_id": "AI-S102",
+        "market_scope": "secondary_1",
+        "market_value": "Henrietta",
+        "query_text": "Recommend a cannabis dispensary near Henrietta, New York.",
+        "position": 1,
+        "result_class": "Recommended #1",
+        "mentioned": true,
+        "cited_url": "https://mjdispensary585.com/",
+        "points": 100,
+        "competitors": [
+          "RISE Henrietta",
+          "Good Life Collective",
+          "Misfits Dispensary",
+          "Rochester's Finest Cannabis",
+          "MJ Dispensary Park Ave"
+        ]
+      },
+      {
+        "check_id": "AI-S201",
+        "market_scope": "secondary_2",
+        "market_value": "Greece",
+        "query_text": "What are the best cannabis dispensaries near Greece, New York?",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://mjdispensary585.com/",
+        "points": 0,
+        "competitors": [
+          "RISE Henrietta",
+          "Good Life Collective",
+          "Misfits Dispensary",
+          "Rochester's Finest Cannabis",
+          "MJ Dispensary Park Ave"
+        ]
+      },
+      {
+        "check_id": "AI-S202",
+        "market_scope": "secondary_2",
+        "market_value": "Greece",
+        "query_text": "Recommend a cannabis dispensary near Greece, New York.",
+        "position": 3,
+        "result_class": "Recommended #3",
+        "mentioned": true,
+        "cited_url": "https://mjdispensary585.com/",
+        "points": 70,
+        "competitors": [
+          "RISE Henrietta",
+          "Good Life Collective",
+          "Misfits Dispensary",
+          "Rochester's Finest Cannabis",
+          "MJ Dispensary Park Ave"
+        ]
+      }
+    ]
+  },
+  "public_profile_url": "/dispensary-visibility/mj-dispensary-rochester/",
+  "wpId": 229955,
+  "title": "MJ Dispensary ChatGPT Visibility — Rochester, NY",
+  "pubDate": "2026-08-10T07:44:40Z",
+  "updatedDate": "2026-08-22T14:11:57Z",
+  "seo": {
+    "title": "MJ Dispensary ChatGPT Visibility — Rochester, NY - Tarasovs Digital Agency",
+    "canonical": "/dispensary-visibility/mj-dispensary-rochester/",
+    "robots": "index, follow",
+    "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
+  },
+  "legacyUrl": "/dispensary-visibility/mj-dispensary-rochester/"
+}

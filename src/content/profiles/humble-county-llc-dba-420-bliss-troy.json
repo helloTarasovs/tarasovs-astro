@@ -1,0 +1,240 @@
+{
+  "dispensary_key": "NY-0031",
+  "name": "Humble County LLC (dba 420 Bliss)",
+  "slug": "humble-county-llc-dba-420-bliss-troy",
+  "city": "Troy",
+  "state": "NY",
+  "website_url": "https://420-bliss.com/",
+  "domain": "420-bliss.com",
+  "primary_market": "Troy",
+  "secondary_market_1": "Albany",
+  "secondary_market_2": "Schenectady",
+  "ai_score": "14.58",
+  "ai_status": "fresh",
+  "ai_scanned_at": "2026-09-01 18:55:00",
+  "ai_primary_score": "20.83",
+  "ai_secondary1_score": "0.00",
+  "ai_secondary2_score": "0.00",
+  "ai_mentions": "2",
+  "ai_valid_prompts": "10",
+  "ai_top3_count": "1",
+  "ai_breakdown": {
+    "batch_key": "manual-chatgpt-20260901185500-nvxn1h",
+    "provider": "ChatGPT Temporary Chat",
+    "model": "ChatGPT UI",
+    "scanned_at": "2026-09-01 18:55:00",
+    "benchmark_type": "manual_chatgpt_temporary_chat",
+    "competitors": [
+      "Transcend Wellness",
+      "400 River",
+      "Stage One Dispensary",
+      "Royale Flower",
+      "Capital District Cannabis & Wellness",
+      "Upstate Canna Co."
+    ],
+    "items": [
+      {
+        "check_id": "AI-P01",
+        "market_scope": "primary",
+        "market_value": "Troy",
+        "query_text": "What are the best cannabis dispensaries in Troy, New York?",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://420-bliss.com/",
+        "points": 0,
+        "competitors": [
+          "Transcend Wellness",
+          "400 River",
+          "Stage One Dispensary",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness",
+          "Upstate Canna Co."
+        ]
+      },
+      {
+        "check_id": "AI-P02",
+        "market_scope": "primary",
+        "market_value": "Troy",
+        "query_text": "What's the best cannabis dispensary near Troy, New York?",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://420-bliss.com/",
+        "points": 0,
+        "competitors": [
+          "Transcend Wellness",
+          "400 River",
+          "Stage One Dispensary",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness",
+          "Upstate Canna Co."
+        ]
+      },
+      {
+        "check_id": "AI-P03",
+        "market_scope": "primary",
+        "market_value": "Troy",
+        "query_text": "Recommend a licensed recreational cannabis dispensary in Troy, New York.",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://420-bliss.com/",
+        "points": 0,
+        "competitors": [
+          "Transcend Wellness",
+          "400 River",
+          "Stage One Dispensary",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness",
+          "Upstate Canna Co."
+        ]
+      },
+      {
+        "check_id": "AI-P04",
+        "market_scope": "primary",
+        "market_value": "Troy",
+        "query_text": "Where can I buy legal cannabis in Troy, New York?",
+        "position": null,
+        "result_class": "Mentioned / unranked",
+        "mentioned": true,
+        "cited_url": "https://420-bliss.com/",
+        "points": 40,
+        "competitors": [
+          "Transcend Wellness",
+          "400 River",
+          "Stage One Dispensary",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness",
+          "Upstate Canna Co."
+        ]
+      },
+      {
+        "check_id": "AI-P05",
+        "market_scope": "primary",
+        "market_value": "Troy",
+        "query_text": "Which cannabis shop would you recommend in Troy, New York?",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://420-bliss.com/",
+        "points": 0,
+        "competitors": [
+          "Transcend Wellness",
+          "400 River",
+          "Stage One Dispensary",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness",
+          "Upstate Canna Co."
+        ]
+      },
+      {
+        "check_id": "AI-P06",
+        "market_scope": "primary",
+        "market_value": "Troy",
+        "query_text": "Where can I buy cannabis edibles in Troy, New York?",
+        "position": 2,
+        "result_class": "Recommended #2",
+        "mentioned": true,
+        "cited_url": "https://420-bliss.com/",
+        "points": 85,
+        "competitors": [
+          "Transcend Wellness",
+          "400 River",
+          "Stage One Dispensary",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness",
+          "Upstate Canna Co."
+        ]
+      },
+      {
+        "check_id": "AI-S101",
+        "market_scope": "secondary_1",
+        "market_value": "Albany",
+        "query_text": "What are the best cannabis dispensaries near Albany, New York?",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://420-bliss.com/",
+        "points": 0,
+        "competitors": [
+          "Transcend Wellness",
+          "400 River",
+          "Stage One Dispensary",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness",
+          "Upstate Canna Co."
+        ]
+      },
+      {
+        "check_id": "AI-S102",
+        "market_scope": "secondary_1",
+        "market_value": "Albany",
+        "query_text": "Recommend a cannabis dispensary near Albany, New York.",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://420-bliss.com/",
+        "points": 0,
+        "competitors": [
+          "Transcend Wellness",
+          "400 River",
+          "Stage One Dispensary",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness",
+          "Upstate Canna Co."
+        ]
+      },
+      {
+        "check_id": "AI-S201",
+        "market_scope": "secondary_2",
+        "market_value": "Schenectady",
+        "query_text": "What are the best cannabis dispensaries near Schenectady, New York?",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://420-bliss.com/",
+        "points": 0,
+        "competitors": [
+          "Transcend Wellness",
+          "400 River",
+          "Stage One Dispensary",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness",
+          "Upstate Canna Co."
+        ]
+      },
+      {
+        "check_id": "AI-S202",
+        "market_scope": "secondary_2",
+        "market_value": "Schenectady",
+        "query_text": "Recommend a cannabis dispensary near Schenectady, New York.",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "",
+        "points": 0,
+        "competitors": [
+          "Transcend Wellness",
+          "400 River",
+          "Stage One Dispensary",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness",
+          "Upstate Canna Co."
+        ]
+      }
+    ]
+  },
+  "public_profile_url": "/dispensary-visibility/humble-county-llc-dba-420-bliss-troy/",
+  "wpId": 229953,
+  "title": "Humble County LLC (dba 420 Bliss) ChatGPT Visibility — Troy, NY",
+  "pubDate": "2026-08-10T19:18:59Z",
+  "updatedDate": "2026-08-22T14:11:49Z",
+  "seo": {
+    "title": "Humble County LLC (dba 420 Bliss) ChatGPT Visibility — Troy, NY - Tarasovs Digital Agency",
+    "canonical": "/dispensary-visibility/humble-county-llc-dba-420-bliss-troy/",
+    "robots": "index, follow",
+    "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
+  },
+  "legacyUrl": "/dispensary-visibility/humble-county-llc-dba-420-bliss-troy/"
+}

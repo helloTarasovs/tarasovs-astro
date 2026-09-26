@@ -1,0 +1,38 @@
+---
+// Case studies: /project/<slug>/  (same URLs as WordPress ohio_portfolio)
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { articleSchema, breadcrumbSchema, withFallbackArticle } from '../../lib/schema';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({ params: { slug: project.data.slug }, props: { project } }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const d = project.data;
+const path = `/project/${d.slug}/`;
+const title = d.seo?.title ?? `${d.title} - Tarasovs Digital Agency`;
+const image = d.seo?.ogImage ?? d.cover?.src;
+
+const jsonld = [
+  ...withFallbackArticle(d.jsonld, articleSchema({ path, title: d.title, description: d.seo?.description, image, published: d.pubDate, modified: d.updatedDate })),
+  breadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Case Studies', path: '/case-studies/' },
+    { name: d.title, path },
+  ]),
+];
+---
+<Base title={title} description={d.seo?.description} canonical={d.seo?.canonical ?? path} robots={d.seo?.robots} ogImage={image} ogType="article" jsonld={jsonld}>
+  <article class="project">
+    <header>
+      <h1>{d.title}</h1>
+      {d.cover && <img src={d.cover.src} alt={d.cover.alt} width={d.cover.width} height={d.cover.height} fetchpriority="high" decoding="async" />}
+    </header>
+    <div class="post-body">
+      <Content />
+    </div>
+  </article>
+</Base>

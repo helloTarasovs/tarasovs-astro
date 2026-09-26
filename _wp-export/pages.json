@@ -1,0 +1,2952 @@
+[
+  {
+    "url": "/dispensary-visibility/",
+    "file": "dispensary-visibility.html",
+    "title": "New York Dispensary Visibility Index | ChatGPT Rankings",
+    "updatedDate": "2026-09-02T11:57:08Z",
+    "seo": {
+      "title": "New York Dispensary Visibility Index | ChatGPT Rankings",
+      "description": "See which New York dispensaries ChatGPT recommends. Search the Index for scores, recommendation positions and the competitors surfaced instead.",
+      "canonical": "/dispensary-visibility/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://tarasovs.me/dispensary-visibility/#webpage",
+            "url": "https://tarasovs.me/dispensary-visibility/",
+            "name": "New York Dispensary Visibility Index — ChatGPT Rankings",
+            "description": "See which New York cannabis dispensaries ChatGPT recommends. Search the Index for ChatGPT Visibility scores, recommendation positions and competitors.",
+            "inLanguage": "en-US",
+            "isPartOf": {
+              "@id": "https://tarasovs.me/#website"
+            },
+            "publisher": {
+              "@id": "https://tarasovs.me/#organization"
+            },
+            "dateModified": "2026-08-17"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://tarasovs.me/#organization",
+            "name": "Tarasovs Digital Agency",
+            "url": "https://tarasovs.me/",
+            "sameAs": [
+              "https://www.linkedin.com/company/tarasovs-digital-agency/",
+              "https://www.instagram.com/tarasovs.me/"
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://tarasovs.me/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "New York Dispensary Visibility Index",
+                "item": "https://tarasovs.me/dispensary-visibility/"
+              }
+            ]
+          },
+          {
+            "@type": "ItemList",
+            "name": "Published New York dispensary visibility profiles",
+            "itemListOrder": "https://schema.org/ItemListUnordered",
+            "numberOfItems": 100,
+            "itemListElement": []
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the New York Dispensary Visibility Index?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It is a database measuring how New York cannabis dispensaries appear in ChatGPT recommendations across a standardized set of local discovery prompts. Each published dispensary gets a public profile with its score, prompt-by-prompt results and the competitors ChatGPT surfaced."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is ChatGPT Visibility?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "ChatGPT Visibility measures whether a dispensary appears in ChatGPT recommendations and where it is positioned within the answer. It is scored 0–100 by weighting three market-level averages: 70% primary market, 20% secondary market and 10% regional market."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why isn't my dispensary showing up in ChatGPT?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Usually it is not a judgment about the business. AI systems leave out businesses they cannot verify confidently. Inconsistent name, address and phone data across directories, thin or unclaimed listings, low review response rates and no third-party editorial coverage are the common causes. A dispensary can rank well on Google and still fail that confidence threshold."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where does ChatGPT get local business information from?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "ChatGPT Search can combine information from the open web and third-party data providers when generating local recommendations. The exact source mix can vary by query, location and product experience, which is one reason we measure the resulting recommendation itself rather than assuming visibility from any single directory."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does a good Google ranking mean good ChatGPT visibility?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. In SOCi's 2026 Local Visibility Index, only 45% of retail brands leading Google's local results also appeared in AI recommendations. The two run on different inputs and should be measured separately."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How many prompts are tested?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ten standardized recommendation prompts per dispensary: six in the Primary Market, two in the Secondary Market and two in the Regional Market. Each prompt is run and the resulting ChatGPT response is recorded, so every result reflects an actual recommendation appearance rather than an inferred one."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does \"Not mentioned\" mean?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The dispensary did not appear in the ChatGPT response recorded for that specific prompt on the check date. It scores zero points for that prompt."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why is my profile marked Pending?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A public composite score is published only once all 10 standardized prompts return a valid result. If a request fails, times out, or cannot be validated, the profile stays Pending until the missing check completes successfully — we do not publish a score from a partial scan."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is this different from Weedmaps or Leafly rankings?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Weedmaps and Leafly rank dispensaries inside their own platforms, using their own listings and reviews. The Index does not rank anything itself. It records what ChatGPT says when asked a neutral question, and reports the result."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Gemini included?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The current public benchmark covers ChatGPT only. Other AI providers may be published as separate datasets once their data is reliable enough to report."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are Google rankings included?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Not in the public score. Google Organic and Google Maps analysis is available through the Full Visibility Report."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Menu SEO included in the public score?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Menu SEO can be analyzed as part of the Full Visibility Report but is not part of the public composite score."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How often are results updated?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Profiles are rechecked periodically because AI recommendations change. Every profile shows the date of its most recent check."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "My score looks wrong. Can I get it rechecked?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Request a recheck through the Full Visibility Report form and we will re-run the standardized prompt set and update the profile with a new check date."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who runs the New York Dispensary Visibility Index?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tarasovs Digital Agency, a remote-first agency serving New York and US clients. The agency also sells dispensary SEO services, which is disclosed on this page. Every dispensary is measured with the same prompt set and the same scoring, and profiles are published whether the score is high or low."
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "New York Dispensary ChatGPT Visibility Index",
+        "description": "A live statewide ranking of New York cannabis dispensaries based on 10 recorded, non-branded ChatGPT recommendation prompts entered in separate Temporary Chats for each published profile.",
+        "url": "https://tarasovs.me/dispensary-visibility/",
+        "isAccessibleForFree": true,
+        "creator": {
+          "@type": "Organization",
+          "name": "Tarasovs Digital Agency",
+          "url": "https://tarasovs.me/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tarasovs Digital Agency",
+          "url": "https://tarasovs.me/"
+        },
+        "spatialCoverage": {
+          "@type": "AdministrativeArea",
+          "name": "New York State"
+        },
+        "measurementTechnique": "Ten standardized, non-branded ChatGPT recommendation prompts entered in ten separate Temporary Chats. Results are scored by observed recommendation position and combined using 70 percent Primary, 20 percent Secondary and 10 percent Regional market weighting.",
+        "variableMeasured": [
+          {
+            "@type": "PropertyValue",
+            "name": "ChatGPT Visibility score",
+            "description": "A 0–100 composite based on recommendation prominence across three geographic market levels."
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "ChatGPT mentions",
+            "description": "The number of recorded responses in which the dispensary appeared across the complete 10-prompt benchmark."
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Top-three recommendations",
+            "description": "The number of recorded responses in which the dispensary appeared in recommendation positions one through three."
+          }
+        ],
+        "includedInDataCatalog": {
+          "@type": "DataCatalog",
+          "name": "Tarasovs Digital Agency Research"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is each dispensary measured?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Each published profile uses 10 standardized, non-branded recommendation prompts entered in 10 separate new ChatGPT Temporary Chats. The benchmark records the returned response, observed position, market and surfaced competitors."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is the ChatGPT Visibility score calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Recorded results receive 100 points for #1, 85 for #2, 70 for #3, 55 for #4–5, 40 for an unranked mention and 0 for no mention. Market scores are combined using 70% Primary, 20% Secondary and 10% Regional weighting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does invisible mean in this index?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A dispensary is classified as invisible when it receives no mentions across the complete standardized 10-prompt ChatGPT benchmark."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why can a dispensary's score change?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ChatGPT responses can vary by date, model, location, available sources and wording. A new benchmark snapshot may therefore produce a different set or order of recommendations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is a Pending profile excluded from the ranking?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A public score is published only after all 10 standardized checks have a documented result. A partial benchmark remains Pending and is excluded from the statistics and ranking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which AI platforms does the index cover?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "This edition measures ChatGPT only. Results from other AI platforms are not included in the published score."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the index cover all licensed New York dispensaries?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The statistics describe the complete, published profiles in the measured sample shown on this page, not every licensed dispensary in New York State."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I request that a dispensary be added?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Contact Tarasovs Digital Agency to request inclusion in a future measurement batch."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "/dispensary-seo-new-york/",
+    "file": "dispensary-seo-new-york.html",
+    "title": "Cannabis Dispensary SEO in New York State",
+    "updatedDate": "2026-09-15T12:52:49Z",
+    "seo": {
+      "title": "Cannabis Dispensary SEO in New York State - Tarasovs Digital Agency",
+      "description": "SEO for licensed cannabis dispensaries across New York — Google Maps, Dutchie menu SEO, local pages, and AI search visibility. From NYC to Buffalo.",
+      "canonical": "/dispensary-seo-new-york/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2026/08/f1e7ceb1-3582-4b39-9585-f9816710b3a0.png"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://tarasovs.me/dispensary-seo-new-york/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you only work with dispensaries in New York City?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. We work with licensed dispensaries across New York State - Long Island, the Hudson Valley, the Capital Region, Western New York, Rochester, Syracuse, and the Southern Tier. If you are in the five boroughs, our NYC dispensary SEO page covers that market specifically."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is SEO for an upstate dispensary different from NYC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, meaningfully. In the city, proximity dominates and you are competing with dozens of stores in the same few blocks. Upstate, customers search across a 15 to 25 minute drive, competition is thinner, and basics like a properly built Google Business Profile and an indexable menu can move you into the Map Pack within a couple of months."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We have stores in more than one region. How does that work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "One domain, one authority base, a separate page per location with genuinely local content, clean and consistent NAP data, and a Google Business Profile managed per store. Reporting is broken out by location so you can see which market is actually producing orders."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can dispensaries actually do SEO if they can't advertise?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes - and that's exactly why it matters more for you than for most businesses. Google Ads and Meta do not accept cannabis retail advertising, and New York adds its own restrictions on audience and placement. Organic search, Google Maps, and AI search are your main channels for reaching new customers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this compliant? Will it put my listings or license at risk?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Compliance comes first. We avoid health claims and the content patterns that get listings flagged or suspended, we work within New York's marketing and advertising rules on audience and placement, and we follow the cannabis-specific rules for Google Business Profile. Protecting your listings is part of the job, not an afterthought."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you build a separate page for every town?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only where there is real demand and real content to put on the page. Mass-produced city pages with a swapped town name are doorway pages, and Google has been demoting them for years. We build fewer pages that actually rank."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you optimize our Dutchie menu for SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We audit how your Dutchie menu connects to your website, whether menu, category, and product pages are crawlable and indexed, and how they support local and organic search. We also handle Dutchie Pro migrations without losing rankings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is GEO / AI search optimization?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GEO (Generative Engine Optimization) is structuring your content and data so AI assistants - ChatGPT, Perplexity, Google's AI - cite and recommend your dispensary when people ask. Those answers name two or three businesses rather than ten links, and almost no dispensary in New York is optimized for it yet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How fast will I see results?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Local and Google Maps improvements often show within the first 30 to 60 days, and usually faster in less competitive upstate markets than in the city. AI-search visibility builds over a few weeks to a couple of months as content and trust signals take hold."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you help with Dutchie Pro migration?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We help dispensaries plan SEO-safe migrations from Dutchie Plus, Dutchie iFrame, or legacy Dutchie setups to Dutchie Pro: URL planning, indexation checks, Google Search Console setup, GA4 tracking, redirect planning, technical SEO review, and post-launch monitoring."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does it cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Engagements are monthly programs scoped to your market and number of locations. The best place to start is the free visibility audit - it shows what's needed before you commit to anything."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "/google-business-profile-optimization/",
+    "file": "google-business-profile-optimization.html",
+    "title": "Cannabis Google Business Profile Optimization",
+    "updatedDate": "2026-07-09T12:19:59Z",
+    "seo": {
+      "title": "Cannabis Google Business Profile Optimization - Tarasovs Digital Agency",
+      "description": "Google Business Profile optimization for licensed dispensaries — rank in Maps, stay compliant, and avoid suspension under Google's 2026 rules.",
+      "canonical": "/google-business-profile-optimization/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2026/07/Google-Business-Profile-optimization-for-licensed-dispensaries.webp"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why do dispensary Google Business Profiles get suspended?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Usually a business name that doesn't match the license, an inconsistent address, missing verification documents, category or policy violations, or — new in 2026 — stock and AI-generated images that trigger suppression audits. We fix these risk factors before they take your listing down."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a suspended dispensary profile be reinstated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Often, yes. Reinstatement means correcting whatever triggered the suspension and submitting the right documentation with a clear appeal. We prepare and handle that process, then keep the profile compliant so it doesn't happen again."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What categories should a cannabis dispensary use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A cannabis-appropriate primary category plus relevant secondary categories and attributes. Categories are your strongest relevance lever for the Map Pack, and the wrong ones both hurt ranking and raise suspension risk — so we choose them carefully."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I really need to post and add photos regularly now?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Google's 2026 update added a 30-day photo-freshness rule as a scoring signal, replacing vague “post regularly” advice. Profiles that go stale lose Map position, so we run a real, recurring photo and posting cadence."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happened to the Q&A section?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Google retired user-facing Q&A. Gemini now auto-answers questions using your services catalog, posts, photos, reviews, and website content — so a complete, accurate profile is how you control what the AI tells customers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I show products and prices on my profile?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Within cannabis policy, we structure your services and link a compliant menu so Google and AI understand what you sell, without the pricing or promotion claims that get listings flagged."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does my Google Business Profile connect to Map Pack and AI search?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It's the core local signal both use. A complete, fresh, compliant profile is what makes you eligible for the Map Pack and for AI assistants recommending a dispensary nearby — the two places high-intent local customers now look."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Google Business Profile Optimization for Dispensaries",
+        "serviceType": "Google Business Profile optimization and management",
+        "provider": {
+          "@type": "Organization",
+          "name": "Tarasovs Digital Agency",
+          "url": "https://tarasovs.me/"
+        },
+        "areaServed": [
+          "Manhattan",
+          "Brooklyn",
+          "New York City",
+          "United States"
+        ],
+        "url": "https://tarasovs.me/google-business-profile-optimization/"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tarasovs.me/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://tarasovs.me/services/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Google Business Profile Optimization",
+            "item": "https://tarasovs.me/google-business-profile-optimization/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "/local-seo-manhattan-brooklyn/",
+    "file": "local-seo-manhattan-brooklyn.html",
+    "title": "Local SEO for NYC Dispensaries",
+    "updatedDate": "2026-09-15T12:47:09Z",
+    "seo": {
+      "title": "Local SEO for NYC Dispensaries - Tarasovs Digital Agency",
+      "description": "Local SEO for licensed dispensaries in Manhattan & Brooklyn. Rank in the Google Map Pack and neighborhood “near me” searches — compliant GBP.",
+      "canonical": "/local-seo-manhattan-brooklyn/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2026/07/Local-SEO-for-Dispensaries-in-Manhattan-Brooklyn.webp"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can cannabis dispensaries even show up on Google Maps?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. A Google Business Profile is the main way licensed dispensaries appear in Maps and the local pack. The rules are stricter than for other businesses, so it has to be optimized carefully — but done right, it's your highest-intent local channel."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What changed with the 2026 Google Business Profile update?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Google retired user-facing Q&A (Gemini now auto-answers from your profile and website), banned stock and AI images as suppression triggers, and added a 30-day photo-freshness rule. For dispensaries with no paid-ads backstop, these changes affect local visibility much more than for typical retailers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you rank in the Google Map Pack?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Google weighs proximity, relevance, and prominence. We optimize your profile completeness and categories, build local landing pages, generate reviews, keep photos fresh, and fix citation consistency — the signals that decide the top three local results."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need separate pages for each neighborhood?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For a competitive market or multiple service areas, yes. Dedicated neighborhood pages capture searches like “park slope dispensary” or “Chelsea weed delivery” that a single generic locations page can't rank for."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will optimizing my Google Business Profile risk a suspension?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only if it's done without the cannabis-specific rules. We follow Google's requirements on categories, pricing, promotions, and imagery so your listing stays live — protecting it is part of the work, not an afterthought."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How fast does local SEO work for a dispensary?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Map Pack and Google Business Profile improvements often show within the first 30–60 days, since local signals update faster than broad organic rankings. Your free audit flags the quickest wins first."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does local SEO connect to AI search?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI assistants build local recommendations from the same signals as Google — a complete profile, reviews, fresh photos, and crawlable location pages. Strong local SEO is what makes your dispensary eligible to be the name an assistant recommends nearby."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Local SEO for Cannabis Dispensaries (Manhattan & Brooklyn)",
+        "serviceType": "Local SEO and Google Business Profile optimization",
+        "provider": {
+          "@type": "Organization",
+          "name": "Tarasovs Digital Agency",
+          "url": "https://tarasovs.me/"
+        },
+        "areaServed": [
+          "Manhattan",
+          "Brooklyn",
+          "New York City",
+          "New York"
+        ],
+        "url": "https://tarasovs.me/local-seo-manhattan-brooklyn/"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tarasovs.me/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://tarasovs.me/services/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Local SEO — Manhattan & Brooklyn",
+            "item": "https://tarasovs.me/local-seo-manhattan-brooklyn/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "/dutchie-menu-seo/",
+    "file": "dutchie-menu-seo.html",
+    "title": "Dutchie Menu SEO for Dispensaries",
+    "updatedDate": "2026-07-08T16:23:36Z",
+    "seo": {
+      "title": "Dutchie Menu SEO for Dispensaries - Tarasovs Digital Agency",
+      "description": "Make your Dutchie menu, categories, and product pages crawlable, indexable, and connected to your site's SEO — so your inventory ranks and drives orders.",
+      "canonical": "/dutchie-menu-seo/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2026/07/Dutchie-Menu-SEO.webp"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can Google actually index my Dutchie menu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on your configuration. The default embedded iFrame is only partially indexed, while Dutchie Pro (root-domain) and Dutchie+ serve fully crawlable product pages. We audit what's indexed today and fix how your menu is served so pages can be crawled."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why aren't my Dutchie products showing up in search?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Usually because the menu is embedded in a cross-origin iFrame Google doesn't crawl as part of your page, there's no Product schema on your domain, and product pages are thin or duplicated. Those are exactly the issues a menu SEO engagement fixes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the best Dutchie setup for SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For most dispensaries, Dutchie Pro (or Pro + Proxy) is best because your menu is served on your root domain with real product URLs and schema. We generally avoid a subdomain-only menu, since Google treats subdomains as separate sites."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need Dutchie Pro to do menu SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can win some ground on an embedded menu, but the ceiling is low. Real product-level ranking needs indexable pages on your domain — which is why we often pair menu SEO with a move to Dutchie Pro."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will a subdomain menu hurt my SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It's better than a fully hidden iFrame, but Google treats a subdomain as a separate site, so authority, local relevance, and internal links don't fully flow to your main domain. Root-domain configurations consolidate that value instead."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you optimize product pages for specific strains and products?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We give categories and high-value products unique, compliant descriptions, add product schema, and build category hubs — while fixing duplication so similar products don't compete with each other."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does menu SEO help with AI search?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI assistants recommend and cite from clear, crawlable, structured pages. Indexable product pages with schema are what make your inventory eligible to be the answer when someone asks an assistant for a product near them."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Dutchie Menu SEO",
+        "serviceType": "Cannabis dispensary menu SEO",
+        "provider": {
+          "@type": "Organization",
+          "name": "Tarasovs Digital Agency",
+          "url": "https://tarasovs.me/"
+        },
+        "areaServed": [
+          "Manhattan",
+          "Brooklyn",
+          "New York",
+          "United States"
+        ],
+        "url": "https://tarasovs.me/dutchie-menu-seo/"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tarasovs.me/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://tarasovs.me/services/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Dutchie Menu SEO",
+            "item": "https://tarasovs.me/dutchie-menu-seo/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "/dutchie-pro-migration-seo/",
+    "file": "dutchie-pro-migration-seo.html",
+    "title": "Dutchie Pro Migration SEO | Migrate Without Losing Rankings",
+    "updatedDate": "2026-08-29T08:04:55Z",
+    "seo": {
+      "title": "Dutchie Pro Migration SEO | Tarasovs",
+      "description": "SEO-safe Dutchie Pro migration for dispensaries. Move off Dutchie Plus or iFrame without losing rankings, menu indexation, or online orders. Proven on Verdi Cannabis",
+      "canonical": "/dutchie-pro-migration-seo/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2026/07/Dutchie-Pro-Migration-SEO.webp"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "When is Dutchie Plus being sunset?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dutchie has said it will support legacy Dutchie Plus customers through the end of 2026. Exact end-of-life dates are tier-dependent, so request a written timeline from your Dutchie account manager and plan to complete migration well before the API stops responding."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between the Dutchie iFrame and Dutchie Pro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The default iFrame embeds your menu from Dutchie's domain inside a frame, which search engines struggle to index as real pages. Dutchie Pro serves store and product pages as standalone, crawlable URLs on your own domain, so each can be found, ranked, and cited individually."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will migrating to Dutchie Pro hurt my SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only if it's done without proper URL mapping and redirects. The real risks are URL changes without 301s, dropped metadata, broken internal links, and stale schema. We map every indexed URL before migration and preserve structure wherever possible — which is why Verdi's rankings grew through the migration instead of dropping."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a Dutchie Pro migration take to show results?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Indexing of newly crawlable pages typically begins within the first few weeks. Meaningful ranking and traffic gains build over 3–6 months as Google gains confidence in the new URLs — consistent with the six-month window behind the Verdi results."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I have to leave Dutchie to fix my menu SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. If you're happy with Dutchie operationally, migrating to Dutchie Pro keeps your POS, staff, and customer accounts while making your menu indexable. Switching providers only makes sense if you were already planning to leave for other reasons."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you migrate a multi-location / MSO setup?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Multi-location migrations need more URL mapping and per-location QA, and we scope the timeline accordingly. Store-location pages are usually among the biggest winners, since each becomes an indexable, locally relevant page instead of a menu tab."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does a Dutchie Pro migration cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Engagements are scoped to your setup — how many URLs are indexed, whether you're on Plus or the iFrame, and how much local and content work you want alongside the technical migration. The honest starting point is the free audit; it shows what's actually needed before you commit."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to migrate a dispensary to Dutchie Pro without losing SEO",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Baseline Audit & URL Mapping",
+            "text": "Crawl the current setup and export every indexed URL, ranking position, and internal-link count as the recovery target and 1:1 map to Dutchie Pro."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Migration & Redirects",
+            "text": "Migrate the live menu to Dutchie Pro with URL structure preserved, add 301 redirects for anything that changes, and configure fresh product schema and a new XML sitemap."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Verification",
+            "text": "Re-crawl the new structure, validate schema in Rich Results Test, confirm indexing in Search Console, and test every redirect end to end."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "30/60/90-Day Monitoring",
+            "text": "Run indexation diffs against baseline, watch Core Web Vitals and rankings, and remediate any URL that slips."
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tarasovs.me/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://tarasovs.me/services/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Dutchie Pro Migration",
+            "item": "https://tarasovs.me/dutchie-pro-migration-seo/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "/dispensary-seo-nyc/",
+    "file": "dispensary-seo-nyc.html",
+    "title": "NYC Dispensary SEO Agency | Cannabis & Dutchie SEO",
+    "template": "elementor_theme",
+    "updatedDate": "2026-09-15T12:43:07Z",
+    "seo": {
+      "title": "Cannabis Dispensary SEO & Dutchie SEO Services in NYC",
+      "description": "Grow your NYC dispensary’s visibility in Google Maps, organic search, Dutchie menus and AI results. Get a practical SEO and visibility audit.",
+      "canonical": "/dispensary-seo-nyc/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2026/07/Cannabis-Dispensary-Verdi-NYC.webp"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you only work with dispensaries in NYC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our primary focus is licensed dispensaries in New York City, including Manhattan, Brooklyn, Queens, the Bronx and Staten Island. We can also support licensed cannabis retailers in other New York and US markets."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you optimize our Dutchie menu for SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We audit how your Dutchie menu is connected to your website, whether its category and product pages are discoverable, and how the menu supports your local and organic search visibility."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you optimize Google Business Profiles for dispensaries?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Google Maps visibility is a core part of our dispensary SEO work. We review profile categories, services, business information, reviews, photos, posts and local relevance signals."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can dispensaries use SEO when advertising is restricted?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. SEO helps dispensaries reduce their reliance on restricted advertising channels. Organic search, Google Maps, menu searches and AI-assisted discovery can connect licensed retailers with people already searching for nearby products and stores."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is dispensary SEO compliant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our work is designed for licensed cannabis businesses. We avoid unsupported health claims, review platform policies and structure content around factual business, product and location information. Final legal and regulatory compliance remains the responsibility of the retailer and its legal advisers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is GEO or AI search optimization?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Generative Engine Optimization, or GEO, improves how clearly AI systems can understand your dispensary, locations, products and expertise. It builds on traditional SEO using structured information, credible content and consistent business signals. No agency can guarantee an AI citation or recommendation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is this different from a regular SEO agency?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We understand the search challenges specific to licensed dispensaries: local competition, platform restrictions, Dutchie menu indexing, migrations, Google Business Profile management and cannabis content review. The strategy is built around these issues rather than adapted from a generic local SEO package."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How quickly can dispensary SEO produce results?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Technical fixes and Google Business Profile updates may be reflected within several weeks. Meaningful organic growth usually takes longer and depends on your current website, competition, location, authority and implementation scope. We use Google Search Console and GA4 to measure actual progress."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you help with Dutchie Pro migrations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We help plan SEO-safe migrations from Dutchie Plus, Dutchie iFrame and legacy setups to Dutchie Pro. This can include URL mapping, redirect planning, indexation checks, GA4 and Search Console tracking, technical review and post-launch monitoring."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does dispensary SEO cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The scope depends on your market, website, Dutchie setup, number of locations and growth goals. We begin with a visibility review and then recommend a focused project or monthly program based on the work actually required."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "/terms-of-service-tarasovs-digital-agency/",
+    "file": "terms-of-service-tarasovs-digital-agency.html",
+    "title": "Terms of Service — Tarasovs Digital Agency",
+    "updatedDate": "2026-06-06T13:52:37Z",
+    "seo": {
+      "title": "Terms of Service — Tarasovs Digital Agency - Tarasovs Digital Agency",
+      "canonical": "/terms-of-service-tarasovs-digital-agency/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
+    },
+    "jsonld": []
+  },
+  {
+    "url": "/privacy-cookie-policy-tarasovs-digital-agency/",
+    "file": "privacy-cookie-policy-tarasovs-digital-agency.html",
+    "title": "Privacy & Cookie Policy — Tarasovs Digital Agency",
+    "updatedDate": "2026-06-06T13:52:55Z",
+    "seo": {
+      "title": "Privacy &amp; Cookie Policy — Tarasovs Digital Agency - Tarasovs Digital Agency",
+      "canonical": "/privacy-cookie-policy-tarasovs-digital-agency/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
+    },
+    "jsonld": []
+  },
+  {
+    "url": "/services/framer-development/",
+    "file": "services__framer-development.html",
+    "title": "Framer Development Agency Led by a Framer Expert",
+    "parent": 6,
+    "updatedDate": "2026-09-21T08:36:30Z",
+    "seo": {
+      "title": "Framer Development Agency | Expert-Led Websites | Tarasovs",
+      "description": "Founder-led Framer design and development for startups, agencies and B2B teams. CMS, custom React components, motion, SEO and migration support.",
+      "canonical": "/services/framer-development/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2026/06/kos-arch_project-sm.webp"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Framer Development",
+        "alternateName": "Framer Website Design and Development",
+        "url": "https://tarasovs.me/services/framer-development/",
+        "mainEntityOfPage": {
+          "@id": "https://tarasovs.me/services/framer-development/"
+        },
+        "description": "Founder-led Framer design and development for startups, agencies and B2B teams, including CMS architecture, custom React components, motion, technical SEO and migration support.",
+        "serviceType": "Framer Design and Development",
+        "provider": {
+          "@id": "https://tarasovs.me/#organization"
+        },
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "United States"
+          },
+          {
+            "@type": "Country",
+            "name": "United Kingdom"
+          },
+          {
+            "@type": "Place",
+            "name": "European Union"
+          }
+        ],
+        "knowsAbout": [
+          "Framer Development",
+          "Framer CMS",
+          "Framer SEO",
+          "React and TypeScript Code Components",
+          "Framer Animations",
+          "Rive Animation",
+          "Core Web Vitals",
+          "WordPress to Framer Migration"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can you build from an existing Figma design?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We can develop an approved Figma system in Framer or handle strategy and design before the build. Existing designs are reviewed for component logic, responsive behaviour, CMS requirements and interaction feasibility before development begins."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you build custom React components in Framer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We use React and TypeScript for custom interactions, data-driven components, API integrations and functionality that goes beyond Framer’s native tools. Custom code is scoped only where it adds real value."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a Framer website take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most Framer projects take 2–4 weeks from approved scope to launch. A focused landing page may move faster, while migrations, larger CMS builds and complex interaction systems require more time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does Framer development cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Development-only work based on an approved design is scoped differently from a full strategy, design and Framer engagement. Share the page count, CMS requirements, motion level, integrations and deadline, and we will provide a fixed-price proposal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you migrate an existing website to Framer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We map the existing content and priority URLs, preserve URLs where practical, prepare redirects where they change, validate metadata and indexation settings, and monitor the launch to reduce SEO migration risk. Temporary ranking fluctuations can still occur during any platform migration."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Framer suitable for e-commerce?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Framer works well for product marketing and small storefront experiences connected to external checkout tools. For complex catalogues, inventory, accounts or fulfilment workflows, Shopify or WooCommerce is usually the better foundation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will our team be able to update the site?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. CMS collections and reusable components are structured for day-to-day updates without changing the design. Training and handover documentation can be included in the project scope."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer support after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Ongoing support can cover content updates, new sections, component work, performance checks and search maintenance. The scope is agreed separately based on how frequently the site changes."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "/services/geo-ai-search-optimization/",
+    "file": "services__geo-ai-search-optimization.html",
+    "title": "Get Your Business Cited in ChatGPT and Perplexity — GEO Services by Tarasovs",
+    "parent": 6,
+    "updatedDate": "2026-09-01T02:13:21Z",
+    "seo": {
+      "title": "GEO — AI Search Optimization Services | Tarasovs Digital Agency",
+      "description": "Tarasovs helps businesses appear in ChatGPT, Perplexity, and Google AI Overviews through GEO - Generative Engine Optimization.",
+      "canonical": "/services/geo-ai-search-optimization/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is GEO (Generative Engine Optimization)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GEO — Generative Engine Optimization — is the discipline of optimizing website content, structured data, and brand authority signals so that AI-powered search engines — including ChatGPT, Google AI Overviews, Perplexity, and Microsoft Copilot — cite your brand in their generated responses. Unlike traditional SEO, which targets search engine rankings, GEO targets the AI layer that now answers a growing share of user queries directly, without requiring a website click."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is GEO different from SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Traditional SEO optimizes for keyword rankings in Google's blue-link results. GEO optimizes for citations in AI-generated answers. The two disciplines share some foundations — quality content, technical site health, authority signals — but GEO requires additional practices: structured content architecture for AI retrieval, FAQPage schema, prompt-aligned content, E-E-A-T authority building, and Share of Model measurement. In 2026, businesses need both."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does GEO take to show results?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "First AI citations typically appear within 4–8 weeks for well-optimized content in low-to-medium competition topics. New content enters AI citation pools within 3–5 business days on most platforms, though competitive queries take longer to penetrate. Share of Model improvements become measurable within the first 60 days. Sustained authority in competitive niches typically takes 3–6 months, similar to traditional SEO timelines."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you measure GEO results?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We measure GEO through Share of Model (SoM) — the percentage of relevant AI queries where your brand is cited. Each month, we test a predefined set of 50–100 queries across ChatGPT, Perplexity, Google AI Overviews, and Copilot, and document where your brand appears, in what position, and with what context. We also track citation growth on Clutch, industry publications, and other third-party sources that feed AI model training."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can GEO work alongside my existing SEO strategy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — and it works better when it does. GEO and traditional SEO share the same technical foundation: fast-loading, crawlable sites with strong content and authority signals. The GEO-specific additions — structured content, FAQ schema, E-E-A-T optimization — also improve traditional SEO performance. Tarasovs manages both disciplines in an integrated strategy so they reinforce rather than duplicate each other."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is GEO and why is it included in your web design projects?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GEO (Generative Engine Optimization) is the practice of structuring website content so that AI-powered search platforms — ChatGPT, Google AI Overviews, Perplexity — cite your business in their generated answers. We include GEO-ready content structure in every project because AI search is already where a significant portion of user attention goes in 2026."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which AI platforms does GEO target?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tarasovs GEO strategy targets the major AI search and answer platforms in 2026: ChatGPT, Perplexity AI, Google AI Overviews, and Microsoft Copilot. Each platform has different retrieval and citation behavior, so our strategy accounts for platform-specific optimization techniques."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Share of Model and how do you track it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Share of Model (SoM) is the percentage of relevant AI queries in your industry where your brand is mentioned or cited. It is the GEO equivalent of keyword rankings — the primary metric for measuring AI search visibility. Tarasovs tracks SoM monthly by testing your defined query set across all major AI platforms, documenting brand appearances, competitor presence, and citation context. We report SoM changes monthly alongside the specific content changes that drove improvements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is my website not showing up in ChatGPT or Perplexity?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The most common reasons are: AI crawlers are blocked by your robots.txt or CDN configuration; your content lacks the structured Q&A format that AI retrieval systems prefer; your site has low E-E-A-T signals and is not recognized as an authoritative source; your brand is not mentioned on independent third-party domains that AI models use for corroboration; or your content is rendered client-side in JavaScript, which many AI bots cannot process. A GEO audit identifies which factors apply to your site and prioritizes fixes by impact."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://tarasovs.me/services/geo-ai-search-optimization/#service",
+        "name": "Generative Engine Optimization (GEO) Services",
+        "serviceType": "Generative Engine Optimization",
+        "alternateName": [
+          "GEO",
+          "AI Search Optimization",
+          "AI Visibility Optimization"
+        ],
+        "description": "Systematic optimization of website content, structured data, and brand authority signals so that AI search platforms — ChatGPT, Google AI Overviews, Perplexity, and Microsoft Copilot — cite your brand in their generated answers.",
+        "url": "https://tarasovs.me/services/geo-ai-search-optimization/",
+        "dateModified": "2026-07-20",
+        "provider": {
+          "@id": "https://tarasovs.me/#organization"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://tarasovs.me/services/geo-ai-search-optimization/"
+        },
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "United States"
+          },
+          {
+            "@type": "Country",
+            "name": "United Kingdom"
+          },
+          {
+            "@type": "Country",
+            "name": "Romania"
+          },
+          {
+            "@type": "Place",
+            "name": "European Union"
+          }
+        ],
+        "audience": {
+          "@type": "BusinessAudience",
+          "name": "B2B service businesses, SaaS companies, e-commerce brands, and agencies"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "900",
+          "highPrice": "4900",
+          "offerCount": 3,
+          "url": "https://tarasovs.me/services/geo-ai-search-optimization/#packages"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "GEO service packages",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "GEO Starter",
+              "description": "AI visibility audit (25-query baseline), prompt-aligned FAQ optimization for 5 pages, FAQPage schema, one-time AI crawlability audit, and a monthly Share of Model report.",
+              "price": "900",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://tarasovs.me/services/geo-ai-search-optimization/#packages",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "900",
+                "priceCurrency": "USD",
+                "unitCode": "MON",
+                "unitText": "per month, billed yearly",
+                "billingDuration": 1,
+                "billingIncrement": 1
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "GEO Growth",
+              "description": "Everything in Starter plus a 50-query audit with competitor gap analysis, full content restructure for up to 8 pages, triple schema stacking, E-E-A-T optimization, and brand citation outreach to 5 domains per month.",
+              "price": "1800",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://tarasovs.me/services/geo-ai-search-optimization/#packages",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "1800",
+                "priceCurrency": "USD",
+                "unitCode": "MON",
+                "unitText": "per month, billed yearly",
+                "billingDuration": 1,
+                "billingIncrement": 1
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "GEO Premium",
+              "description": "Everything in Growth plus a 100-query multi-market audit, content restructure and new content for up to 20 pages, full schema suite with LocalBusiness, original research, PR-level citation building to 10 domains per month, and a custom Share of Model dashboard. White-label available.",
+              "price": "4900",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://tarasovs.me/services/geo-ai-search-optimization/#packages",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "4900",
+                "priceCurrency": "USD",
+                "unitCode": "MON",
+                "unitText": "per month, billed yearly",
+                "billingDuration": 1,
+                "billingIncrement": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "url": "/case-studies/",
+    "file": "case-studies.html",
+    "title": "Case Studies",
+    "updatedDate": "2026-07-28T11:07:11Z",
+    "seo": {
+      "title": "Case Studies - Tarasovs Digital Agency",
+      "description": "Explore web design, development, SEO and AI visibility case studies from Tarasovs Digital Agency, with real projects and measurable results.",
+      "canonical": "/case-studies/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2021/05/laundry_bg1.jpg"
+    },
+    "jsonld": []
+  },
+  {
+    "url": "/",
+    "file": "home.html",
+    "title": "Tarasovs Digital Agency — Web Design, SEO & AI Search Optimization",
+    "updatedDate": "2026-08-14T13:27:37Z",
+    "seo": {
+      "title": "Tarasovs — Web Design, SEO & AI Search Agency",
+      "description": "Tarasovs builds websites that rank on Google and get cited by ChatGPT, Perplexity and AI Overviews. Web design, SEO and GEO services for New York and Europe.",
+      "canonical": "/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2026/07/Cannabis-Dispensary-Verdi-NYC.webp"
+    },
+    "jsonld": []
+  },
+  {
+    "url": "/services/website-design-services/",
+    "file": "services__website-design-services.html",
+    "title": "Website Design Services in New York",
+    "parent": 6,
+    "updatedDate": "2026-08-25T17:38:47Z",
+    "seo": {
+      "title": "Website Design Services in New York - Tarasovs Digital Agency",
+      "description": "Tarasovs designs fast, conversion-focused websites for businesses in New York and Europe. Built for Google rankings, Core Web Vitals, and AI search visibility from day one.",
+      "canonical": "/services/website-design-services/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2026/04/lp_img_47.webp"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://tarasovs.me/services/website-design-services/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a website design cost with Tarasovs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Website design pricing depends on the scope, number of pages, and functionality required. A professional business website typically starts from $3,000. E-commerce and custom web applications start from $6,000. We provide a detailed proposal after our discovery call."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to design and launch a website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most business websites take 6–10 weeks from kickoff to launch. E-commerce projects typically take 8–14 weeks. Timeline depends on scope, content readiness, and how quickly feedback rounds are completed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you design websites for businesses outside New York?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We regularly work with clients across the United States and Europe, including the UK, Germany, the Netherlands, and Romania. Our team is distributed across multiple time zones, which makes remote collaboration smooth."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What platforms do you build on?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We work with Framer, Webflow, WordPress, Shopify and custom-built solutions depending on your needs. We recommend the platform that best fits your content management style, budget, and scalability requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is SEO included in the website design?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every site we build includes technical SEO foundations: clean code, optimized page speed, proper heading structure, meta tags, schema markup, and sitemap. Ongoing SEO and content strategy are available as a separate service."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is GEO and why is it included in your web design projects?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GEO (Generative Engine Optimization) is the practice of structuring website content so that AI-powered search platforms — ChatGPT, Google AI Overviews, Perplexity — cite your business in their generated answers. We include GEO-ready content structure in every project because AI search is already where a significant portion of user attention goes in 2026."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide website maintenance after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We offer monthly maintenance plans that include software updates, security monitoring, performance checks, and content edits. Details are included in every project proposal."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "/contact-us/",
+    "file": "contact-us.html",
+    "title": "Contacts",
+    "updatedDate": "2026-08-14T13:35:57Z",
+    "seo": {
+      "title": "Contacts - Tarasovs Digital Agency",
+      "description": "Contact Tarasovs Digital Agency for Framer development, web design, SEO, and digital marketing services for businesses in New York, Europe, and worldwide.",
+      "canonical": "/contact-us/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
+    },
+    "jsonld": []
+  },
+  {
+    "url": "/expert-web-design-seo-services-in-staten-island/",
+    "file": "expert-web-design-seo-services-in-staten-island.html",
+    "title": "Expert Web Design & SEO Services in Staten Island",
+    "updatedDate": "2026-06-01T21:08:58Z",
+    "seo": {
+      "title": "Expert Web Design & SEO Services in Staten Island - Tarasovs Digital Agency",
+      "canonical": "/expert-web-design-seo-services-in-staten-island/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2024/09/a_stock_image_of_a_professional_digital_agency_team.jpg"
+    },
+    "jsonld": []
+  },
+  {
+    "url": "/services/digital-marketing/",
+    "file": "services__digital-marketing.html",
+    "title": "Digital Marketing",
+    "parent": 6,
+    "updatedDate": "2026-05-27T09:07:21Z",
+    "seo": {
+      "title": "Digital Marketing - Website, Branding, Social Media Marketing - Tarasovs Digital Agency",
+      "description": "Elevate Your Online Presence with Tarasovs Digital Marketing Solutions - Drive Brand Visibility, Engagement, and Conversions with Our Expert Strategies.",
+      "canonical": "/services/digital-marketing/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
+    },
+    "jsonld": []
+  },
+  {
+    "url": "/services/seo-services/",
+    "file": "services__seo-services.html",
+    "title": "SEO Services for Businesses in the US and Europe",
+    "parent": 6,
+    "updatedDate": "2026-07-28T09:36:53Z",
+    "seo": {
+      "title": "SEO Services for US & European Businesses | Tarasovs Digital Agency",
+      "description": "Tarasovs provides SEO services that increase organic traffic, improve rankings, and support long-term visibility in Google and AI-powered search. Serving clients in the US, UK, and Europe.",
+      "canonical": "/services/seo-services/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2024/04/istock-1597792454-2.jpg"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://tarasovs.me/services/seo-services/#faq",
+        "url": "https://tarasovs.me/services/seo-services/",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How long does SEO take to show results?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most websites start seeing measurable ranking improvements within 3 to 6 months. Competitive niches or websites with significant technical issues may take longer. SEO compounds over time — the earlier you start, the stronger your position becomes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work with businesses outside New York?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We serve clients across the United States, United Kingdom, and Europe. Our work is fully remote, and we have experience targeting both US and European search markets."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What makes your SEO different from other agencies?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We do not separate SEO from web development. When we identify a technical issue, we fix it. When a page needs better content, we write it. Most agencies stop at recommendations — we execute."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer one-time audits?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. If you need a comprehensive SEO audit without an ongoing retainer, we offer standalone technical and content audits. Contact us to discuss the scope."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can SEO help me appear in ChatGPT or Google AI answers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — this is what we call GEO (Generative Engine Optimization). It requires structured content, strong authority signals, and FAQ schema. We integrate GEO into our SEO process across all packages."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you report progress?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every month you receive a report covering keyword rankings, organic traffic, technical issue status, backlink growth, and the plan for the next 30 days. Strategy calls are held at a frequency matched to your package."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What do you need from us to get started?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Access to your Google Search Console, Google Analytics 4, and a call to align on your business goals and target audience. Everything else we handle."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://tarasovs.me/services/seo-services/#service",
+        "url": "https://tarasovs.me/services/seo-services/",
+        "name": "SEO Services for Businesses in the US and Europe",
+        "description": "SEO services combining technical optimization, keyword research, on-page SEO, content strategy, link building, local SEO, analytics, and AI search optimization for businesses in the United States, United Kingdom, and Europe.",
+        "serviceType": [
+          "Search Engine Optimization",
+          "Technical SEO",
+          "Keyword Research",
+          "On-Page SEO",
+          "SEO Content Strategy",
+          "SEO Copywriting",
+          "Link Building",
+          "Local SEO",
+          "SEO Analytics and Reporting",
+          "Generative Engine Optimization"
+        ],
+        "category": "Search Engine Optimization Services",
+        "provider": {
+          "@type": "ProfessionalService",
+          "@id": "https://tarasovs.me/#organization",
+          "name": "Tarasovs Digital Agency",
+          "url": "https://tarasovs.me/",
+          "email": "hello@tarasovs.me",
+          "telephone": "+40748708694"
+        },
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "United States"
+          },
+          {
+            "@type": "Country",
+            "name": "United Kingdom"
+          },
+          {
+            "@type": "Continent",
+            "name": "Europe"
+          }
+        ],
+        "audience": {
+          "@type": "BusinessAudience",
+          "audienceType": "Small businesses, startups, established businesses, and companies targeting US and European search markets"
+        },
+        "availableChannel": {
+          "@type": "ServiceChannel",
+          "serviceUrl": "https://tarasovs.me/services/seo-services/",
+          "availableLanguage": "English"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "SEO Services and Packages",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "SEO Foundation",
+              "description": "SEO package for small businesses and startups building organic visibility from scratch. Includes a technical SEO audit and implementation, on-page optimization for up to 10 pages, keyword research and mapping, monthly reporting, and Google Search Console and GA4 setup.",
+              "url": "https://tarasovs.me/services/seo-services/#pricing",
+              "priceCurrency": "USD",
+              "price": "1200",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "1200",
+                "priceCurrency": "USD",
+                "unitText": "MONTH",
+                "description": "Monthly price, billed yearly"
+              },
+              "itemOffered": {
+                "@type": "Service",
+                "name": "SEO Foundation Package"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "SEO Growth",
+              "description": "SEO package for established businesses competing for high-value keywords. Includes everything in SEO Foundation, two SEO articles or page rewrites per month, link building with up to six backlinks per month, schema markup implementation, local SEO for one target market, and bi-weekly strategy calls.",
+              "url": "https://tarasovs.me/services/seo-services/#pricing",
+              "priceCurrency": "USD",
+              "price": "2200",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "2200",
+                "priceCurrency": "USD",
+                "unitText": "MONTH",
+                "description": "Monthly price, billed yearly"
+              },
+              "itemOffered": {
+                "@type": "Service",
+                "name": "SEO Growth Package"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "SEO Authority",
+              "description": "SEO package for companies in competitive industries or targeting multiple markets. Includes everything in SEO Growth, four or more content pieces per month, ten or more backlinks per month, multi-location or multi-market SEO, AI search optimization, priority support, and weekly updates.",
+              "url": "https://tarasovs.me/services/seo-services/#pricing",
+              "priceCurrency": "USD",
+              "price": "3800",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "3800",
+                "priceCurrency": "USD",
+                "unitText": "MONTH",
+                "description": "Monthly price, billed yearly"
+              },
+              "itemOffered": {
+                "@type": "Service",
+                "name": "SEO Authority Package"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Custom SEO Engagement",
+              "description": "A custom SEO scope for one-time audits, content-only retainers, pre-launch SEO setups, or projects that do not fit a standard package.",
+              "url": "https://tarasovs.me/contacts/",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Custom SEO Services"
+              }
+            }
+          ]
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://tarasovs.me/services/seo-services/"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/services/content-management/",
+    "file": "services__content-management.html",
+    "title": "Content Management",
+    "parent": 6,
+    "updatedDate": "2026-07-28T11:37:34Z",
+    "seo": {
+      "title": "Content Management - Tarasovs Digital Agency",
+      "description": "Unlock your digital potential with Tarasovs Digital Agency. Discover our seamless content management solutions",
+      "canonical": "/services/content-management/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://tarasovs.me/services/content-management/#faq",
+        "url": "https://tarasovs.me/services/content-management/",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a content management system?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A content management system, or CMS, allows your team to create, modify, organize, and publish website content through a user-friendly interface without having to edit the website code directly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can multiple team members manage the website content?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our CMS solutions can support multiple users, allowing designated team members to contribute, edit, review, and publish content while maintaining an organized content management workflow."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What content can we update through the CMS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Depending on the website configuration, your team can update text, images, links, individual page sections, and other structured content directly through the CMS interface."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can the CMS be customized for our business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We tailor the CMS structure and functionality to your website requirements, whether you need simple content updates or more complex content management and publishing workflows."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will the CMS be easy for our team to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We organize the CMS to provide an intuitive and efficient editing experience, helping your team manage routine updates and maintain the website after launch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you approach CMS security?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We prioritize secure and up-to-date CMS solutions designed to reduce potential vulnerabilities and support the security and compliance requirements of your website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can the CMS evolve as our content needs grow?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our CMS solutions are designed to be flexible and adaptable, allowing the website’s content structure and management workflows to evolve as your business and publishing needs change."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://tarasovs.me/services/content-management/#service",
+        "url": "https://tarasovs.me/services/content-management/",
+        "name": "Content Management System Services",
+        "alternateName": "CMS Development and Content Management",
+        "description": "Flexible content management system services that help businesses create, organize, edit, and publish website content through an intuitive and secure CMS tailored to their workflows.",
+        "serviceType": [
+          "Content Management System Development",
+          "CMS Configuration",
+          "Custom CMS Development",
+          "Multi-User Content Management",
+          "CMS Workflow Development",
+          "Website Content Management",
+          "CMS Security and Maintenance"
+        ],
+        "category": "Content Management Services",
+        "provider": {
+          "@type": "Organization",
+          "@id": "https://tarasovs.me/#organization",
+          "name": "Tarasovs Digital Agency",
+          "url": "https://tarasovs.me/",
+          "telephone": "+40748708694",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Str. Narcisei, Bloc 64",
+            "postalCode": "307220",
+            "addressLocality": "Timisoara",
+            "addressCountry": "RO"
+          }
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "New York"
+          },
+          {
+            "@type": "Country",
+            "name": "United States"
+          },
+          {
+            "@type": "Continent",
+            "name": "Europe"
+          }
+        ],
+        "audience": {
+          "@type": "BusinessAudience",
+          "audienceType": "Businesses and organizations that need an intuitive, flexible, and secure system for managing website content"
+        },
+        "availableChannel": {
+          "@type": "ServiceChannel",
+          "serviceUrl": "https://tarasovs.me/services/content-management/",
+          "availableLanguage": "English"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Content Management Capabilities",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Multi-User Content Management",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Multi-User Content Management",
+                "description": "CMS configuration that allows designated team members to contribute, edit, review, and publish website content."
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Intuitive CMS Interface",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Intuitive CMS Interface",
+                "description": "An organized content editing interface for updating text, images, links, page sections, and other structured website content."
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Custom CMS Configuration",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Custom CMS Configuration",
+                "description": "A flexible CMS structure customized around the website’s content, functionality, and publishing requirements."
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Content Workflow Development",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Content Workflow Development",
+                "description": "Content management workflows designed for simple website updates or more complex contribution, review, and publishing processes."
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "CMS Security and Compliance",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "CMS Security and Compliance",
+                "description": "Secure and up-to-date CMS implementation designed to reduce vulnerabilities and support website security requirements."
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Scalable Content Management",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Scalable Content Management",
+                "description": "Adaptable content structures and workflows that can evolve as a business and its website content requirements grow."
+              }
+            }
+          ]
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://tarasovs.me/services/content-management/"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/services/insights-analytics/",
+    "file": "services__insights-analytics.html",
+    "title": "Insights & Analytics",
+    "parent": 6,
+    "updatedDate": "2026-07-28T11:29:20Z",
+    "seo": {
+      "title": "Insights & Analytics - Tarasovs Digital Agency",
+      "description": "Optimize your website's performance and drive conversion with insights and analytics from Tarasovs. Unlock your business's potential today!",
+      "canonical": "/services/insights-analytics/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
+    },
+    "jsonld": []
+  },
+  {
+    "url": "/services/e-commerce/",
+    "file": "services__e-commerce.html",
+    "title": "E-Commerce Website Design & Catalog SEO",
+    "parent": 6,
+    "updatedDate": "2026-08-03T13:02:22Z",
+    "seo": {
+      "title": "E-Commerce Website Design & Catalog SEO - Tarasovs Digital Agency",
+      "description": "Elevate your online business with our customized E-Commerce solutions. Seamless, scalable, and tailored to your needs. Contact us today!",
+      "canonical": "/services/e-commerce/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://tarasovs.me/services/e-commerce/#faq",
+        "mainEntityOfPage": {
+          "@id": "https://tarasovs.me/services/e-commerce/"
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Which platforms do you build on?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Shopify and WooCommerce for full stores. For businesses using a third-party catalog like Dutchie, we work with the platform you're on and fix how it connects to your site's SEO."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why aren't my product pages showing up in Google?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The most common cause is an embedded catalog, an iFrame or JavaScript widget that renders products after the page loads. Google often doesn't see those pages at all. A crawl audit will tell you within a day whether this applies to you, usually by checking whether your product data appears in the page's raw HTML."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you fix SEO for an embedded menu or third-party catalog?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. This is one of our specialisms. We audit how the catalog connects to your domain, whether category and product pages are crawlable, and restructure so they support organic search instead of sitting outside it, as we did for Verdi Cannabis on Dutchie."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We're replatforming. Will we lose our rankings?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not if the migration is planned. We handle URL mapping, redirect planning, indexation checks, Search Console and GA4 setup, and post-launch monitoring for several weeks after launch. Rankings drop when redirects are an afterthought, not when they're planned."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you do e-commerce SEO as well as development?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, and we prefer to do both. When SEO is planned during the build, the structure is right from day one instead of being retrofitted."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is e-commerce GEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Structuring product data, category descriptions, and FAQs so AI assistants can cite your store when someone asks for a product recommendation. Most stores have zero presence in AI answers today."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work with international stores?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We handle multi-language setups, hreflang, and opening an existing catalog to new markets, as we did for ShoppingModaItalia."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://tarasovs.me/services/e-commerce/#service",
+        "serviceType": "E-Commerce Development and SEO",
+        "name": "E-Commerce Website Design & Catalog SEO",
+        "description": "Shopify and WooCommerce development combined with product catalog SEO, including indexation fixes for embedded and third-party catalogs such as Dutchie, and replatforming without losing search rankings.",
+        "provider": {
+          "@id": "https://tarasovs.me/#organization"
+        },
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "United States"
+          },
+          {
+            "@type": "Country",
+            "name": "United Kingdom"
+          },
+          {
+            "@type": "Place",
+            "name": "European Union"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "E-Commerce Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Shopify Development",
+              "description": "Theme customization, collection structure, and app selection for Shopify stores."
+            },
+            {
+              "@type": "Offer",
+              "name": "WooCommerce Development",
+              "description": "Full e-commerce builds and rebuilds on WordPress with performance and indexation handled from the start."
+            },
+            {
+              "@type": "Offer",
+              "name": "Product Catalog SEO",
+              "description": "Indexability, URL structure, and faceted navigation for category and product pages."
+            },
+            {
+              "@type": "Offer",
+              "name": "Embedded Menu & Third-Party Catalog SEO",
+              "description": "Audits and restructuring for Dutchie and other embedded or iFrame-based product catalogs."
+            },
+            {
+              "@type": "Offer",
+              "name": "Migration SEO",
+              "description": "Redirect mapping, indexation checks, and post-launch monitoring for e-commerce replatforming."
+            },
+            {
+              "@type": "Offer",
+              "name": "E-Commerce GEO",
+              "description": "Product data and catalog content structured for citation by AI shopping assistants."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "url": "/services/responsive-web-design/",
+    "file": "services__responsive-web-design.html",
+    "title": "Responsive Web Design",
+    "parent": 6,
+    "updatedDate": "2026-07-28T11:41:48Z",
+    "seo": {
+      "title": "Responsive Web Design - Tarasovs Digital Agency",
+      "description": "Crafting custom websites that are visually stunning, highly functional, and optimized for success. Elevate your online presence today!",
+      "canonical": "/services/responsive-web-design/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://tarasovs.me/services/responsive-web-design/#faq",
+        "url": "https://tarasovs.me/services/responsive-web-design/",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is responsive web design?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Responsive web design is an approach that allows a website to automatically adapt its layout, content, navigation, and functionality to different screen sizes and devices, including desktops, tablets, and smartphones."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does my business need a responsive website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A responsive website gives visitors a consistent and accessible experience across devices. It makes content easier to read, improves navigation, supports user engagement, and helps reduce friction that may prevent visitors from taking action."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you use a mobile-first design approach?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We begin with the mobile experience so essential content, functionality, and user journeys are prioritized from the start. The design is then expanded and optimized for tablets, laptops, and desktop screens."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will the website work on different screen sizes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We create flexible layouts that adjust to a wide range of screen sizes and resolutions, helping the website remain functional, readable, and visually consistent across current devices."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you optimize navigation for mobile devices?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We design clear navigation structures, mobile-friendly menus, readable layouts, and controls optimized for touch interactions. This helps visitors find important information and move through the website without unnecessary difficulty."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will a responsive website load quickly on mobile networks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We optimize responsive websites for speed and performance across devices and connection types. This can include efficient layouts, optimized media, clean development, and careful loading of website resources."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you make my existing website responsive?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We can review an existing website, identify problems across mobile, tablet, and desktop layouts, and determine whether it should be improved, rebuilt, or redesigned to provide a consistent responsive experience."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you test a responsive website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We test layouts, navigation, content readability, touch interactions, and functionality across multiple viewport sizes and modern browsers to identify issues before the website is launched."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://tarasovs.me/services/responsive-web-design/#service",
+        "url": "https://tarasovs.me/services/responsive-web-design/",
+        "name": "Responsive Web Design Services",
+        "alternateName": "Mobile-First Responsive Website Design",
+        "description": "Responsive web design services focused on adaptable layouts, mobile-first user experiences, intuitive navigation, touch-friendly interactions, and optimized website performance across desktops, tablets, and smartphones.",
+        "serviceType": [
+          "Responsive Web Design",
+          "Mobile-First Web Design",
+          "Mobile Website Design",
+          "Adaptive Website Layouts",
+          "Responsive Website Redesign",
+          "Cross-Device User Experience Design",
+          "Touch-Friendly Interface Design",
+          "Responsive Website Performance Optimization"
+        ],
+        "category": "Responsive Website Design Services",
+        "provider": {
+          "@type": "Organization",
+          "@id": "https://tarasovs.me/#organization",
+          "name": "Tarasovs Digital Agency",
+          "url": "https://tarasovs.me/",
+          "email": "hello@tarasovs.me",
+          "telephone": "+40748708694",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Str. Narcisei, Bloc 64",
+            "postalCode": "307220",
+            "addressLocality": "Timisoara",
+            "addressCountry": "RO"
+          }
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "New York"
+          },
+          {
+            "@type": "Country",
+            "name": "United States"
+          }
+        ],
+        "audience": {
+          "@type": "BusinessAudience",
+          "audienceType": "Businesses and organizations that need a mobile-friendly website optimized for different devices and screen sizes"
+        },
+        "availableChannel": {
+          "@type": "ServiceChannel",
+          "serviceUrl": "https://tarasovs.me/services/responsive-web-design/",
+          "availableLanguage": "English"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Responsive Web Design Capabilities",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Adaptive Website Layouts",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Adaptive Website Layouts",
+                "description": "Flexible website layouts that adapt to different screen sizes and resolutions while maintaining functionality, readability, and visual consistency."
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Mobile-First Web Design",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Mobile-First Web Design",
+                "description": "Mobile-first website design that prioritizes essential content, functionality, and user journeys before expanding the experience for larger screens."
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Responsive Navigation Design",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Responsive Navigation Design",
+                "description": "Clear navigation structures, mobile-friendly menus, and touch-optimized controls that help visitors move through the website across different devices."
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Cross-Device User Experience",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Cross-Device User Experience",
+                "description": "Consistent and intuitive website experiences designed for desktop computers, laptops, tablets, and smartphones."
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Responsive Performance Optimization",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Responsive Performance Optimization",
+                "description": "Website speed and performance improvements intended to support efficient loading across devices and different network conditions."
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Responsive Website Redesign",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Responsive Website Redesign",
+                "description": "Evaluation and improvement of existing websites that do not provide a consistent or effective experience across mobile, tablet, and desktop layouts."
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Responsive Website Testing",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Responsive Website Testing",
+                "description": "Testing of layouts, navigation, content readability, touch interactions, and website functionality across multiple viewport sizes and modern browsers."
+              }
+            }
+          ]
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://tarasovs.me/services/responsive-web-design/"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/services/website-development/",
+    "file": "services__website-development.html",
+    "title": "Custom Website Development — Built to Perform in Search and in AI",
+    "parent": 6,
+    "updatedDate": "2026-07-28T10:52:50Z",
+    "seo": {
+      "title": "Website Development Services — Tarasovs Digital Agency",
+      "description": "Tarasovs builds fast, SEO-ready websites on Framer, Webflow, and WordPress for businesses. Custom development, GEO-optimized from day one.",
+      "canonical": "/services/website-development/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2026/04/lp_img_47.webp"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://tarasovs.me/services/website-development/#faq",
+        "url": "https://tarasovs.me/services/website-development/",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Which website development platforms do you work with?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We develop websites in Framer, Webflow, and WordPress. We choose the platform based on your goals, content requirements, integrations, and how your team plans to manage the website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you choose the right platform for a project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Framer is often the best fit for high-performance marketing websites, portfolios, and startup launches. Webflow works well for scalable CMS websites and complex interactions, while WordPress is suitable for projects that require plugins, custom post types, WooCommerce, or an established content infrastructure."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is included in every website development project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every development project includes clean semantic HTML, Core Web Vitals optimization, a mobile-first responsive build, GEO-ready content architecture, structured headings, schema markup, cross-browser testing, and developer handoff documentation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will my website be optimized for SEO and AI search?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We structure websites so that search engines and AI-powered platforms can understand the content accurately. This includes semantic HTML, clear heading structures, fast performance, FAQ sections, structured content, and relevant schema markup."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you build responsive websites?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every website is developed using a mobile-first approach and tested across desktop, tablet, and mobile screen sizes, as well as modern web browsers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can my team manage the website after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We configure the CMS around your content and provide handoff documentation so your team can update pages, publish content, and manage the website independently after launch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you develop e-commerce websites?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. For projects that require online selling, product management, and advanced e-commerce functionality, we can develop a WordPress website with WooCommerce when it is the right platform for the project."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who do you provide website development services for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We work with startups launching their first website, established companies replacing underperforming platforms, and agencies that need a reliable development partner. We serve businesses in New York, across the United States, and throughout Europe."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "/services/ui-ux-design/",
+    "file": "services__ui-ux-design.html",
+    "title": "UI/UX Design Services for Web — Figma to Framer",
+    "parent": 6,
+    "updatedDate": "2026-07-31T17:35:34Z",
+    "seo": {
+      "title": "UI/UX Design Services for Web — Figma to Framer - Tarasovs Digital Agency",
+      "description": "UI/UX design that ships. We design in Figma and build in Framer, Webflow or WordPress — no handoff, no lost detail.",
+      "canonical": "/services/ui-ux-design/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://tarasovs.me/services/ui-ux-design/#faq",
+        "mainEntityOfPage": {
+          "@id": "https://tarasovs.me/services/ui-ux-design/"
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What's the difference between UI and UX design?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "UX is the structure and logic — how someone moves through your site and whether they find what they came for. UI is the visual layer: typography, colour, spacing, and components. We do both, because splitting them across two vendors is where most projects lose their original intent."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you only design, or do you build the site too?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Both. Every project we design, we can also build — in Framer, Webflow, or WordPress. You get one team from wireframe to live site, and nothing is lost in handoff."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you deliver the Figma files?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. You own the Figma file with organised components and a documented design system, whether or not we build the site."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you work from our existing brand guidelines?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. If you have a brand system, we design within it. If you don't, establishing the visual direction is part of the project."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a UI/UX project take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A landing page takes around 2 weeks. A full marketing site typically takes 4 to 6 weeks from discovery to design approval, with build running immediately after or alongside."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you redesign an existing site without starting over?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We audit what's working, keep what converts, and rebuild what doesn't. A full redesign is not always the right answer, and we'll say so if it isn't."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you design mobile-first?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Most traffic arrives on mobile, and layouts designed for desktop first tend to lose their structure when they're squeezed down."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work with clients outside Europe?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We work remotely with clients across the United States, United Kingdom, and Europe, with support hours Monday to Friday, 6 am to 8 pm EST."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What do you need from us to start?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A short brief on what you're building and who it's for, any existing brand assets, and access to analytics if the site already exists. We'll take it from there."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://tarasovs.me/services/ui-ux-design/#service",
+        "serviceType": "UI/UX Design",
+        "name": "UI/UX Design Services",
+        "description": "UI and UX design for websites and web products, from research and information architecture through Figma design systems to build in Framer, Webflow or WordPress.",
+        "provider": {
+          "@id": "https://tarasovs.me/#organization"
+        },
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "United States"
+          },
+          {
+            "@type": "Country",
+            "name": "United Kingdom"
+          },
+          {
+            "@type": "Place",
+            "name": "European Union"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "UI/UX Design Packages",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Landing Page Design",
+              "description": "Single high-converting page: research, wireframe, full UI design, responsive layouts, component states."
+            },
+            {
+              "@type": "Offer",
+              "name": "Website Design",
+              "description": "Full marketing site of 5-10 pages with UX research, information architecture, component library, prototype and accessibility review."
+            },
+            {
+              "@type": "Offer",
+              "name": "Design and Build",
+              "description": "Design and development in one engagement, including CMS setup, Core Web Vitals optimization and schema markup."
+            }
+          ]
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://tarasovs.me/services/ui-ux-design/#faq",
+        "mainEntityOfPage": {
+          "@id": "https://tarasovs.me/services/ui-ux-design/"
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What's the difference between UI and UX design?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "UX is the structure and logic — how someone moves through your site and whether they find what they came for. UI is the visual layer: typography, colour, spacing, and components. We do both, because splitting them across two vendors is where most projects lose their original intent."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you only design, or do you build the site too?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Both. Every project we design, we can also build — in Framer, Webflow, or WordPress. You get one team from wireframe to live site, and nothing is lost in handoff."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you deliver the Figma files?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. You own the Figma file with organised components and a documented design system, whether or not we build the site."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you work from our existing brand guidelines?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. If you have a brand system, we design within it. If you don't, establishing the visual direction is part of the project."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a UI/UX project take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A landing page takes around 2 weeks. A full marketing site typically takes 4 to 6 weeks from discovery to design approval, with build running immediately after or alongside."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you redesign an existing site without starting over?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We audit what's working, keep what converts, and rebuild what doesn't. A full redesign is not always the right answer, and we'll say so if it isn't."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you design mobile-first?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Most traffic arrives on mobile, and layouts designed for desktop first tend to lose their structure when they're squeezed down."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work with clients outside Europe?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We work remotely with clients across the United States, United Kingdom, and Europe, with support hours Monday to Friday, 6 am to 8 pm EST."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What do you need from us to start?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A short brief on what you're building and who it's for, any existing brand assets, and access to analytics if the site already exists. We'll take it from there."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://tarasovs.me/services/ui-ux-design/#service",
+        "serviceType": "UI/UX Design",
+        "name": "UI/UX Design Services",
+        "description": "UI and UX design for websites and web products, from research and information architecture through Figma design systems to build in Framer, Webflow or WordPress.",
+        "provider": {
+          "@id": "https://tarasovs.me/#organization"
+        },
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "United States"
+          },
+          {
+            "@type": "Country",
+            "name": "United Kingdom"
+          },
+          {
+            "@type": "Place",
+            "name": "European Union"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "UI/UX Design Packages",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Landing Page Design",
+              "description": "Single high-converting page: research, wireframe, full UI design, responsive layouts, component states."
+            },
+            {
+              "@type": "Offer",
+              "name": "Website Design",
+              "description": "Full marketing site of 5-10 pages with UX research, information architecture, component library, prototype and accessibility review."
+            },
+            {
+              "@type": "Offer",
+              "name": "Design and Build",
+              "description": "Design and development in one engagement, including CMS setup, Core Web Vitals optimization and schema markup."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "url": "/insights/",
+    "file": "insights.html",
+    "title": "Insights",
+    "updatedDate": "2026-05-20T18:35:28Z",
+    "seo": {
+      "title": "Web Design & SEO Insights for New York Businesses - Tarasovs Digital Agency",
+      "description": "Stay updated with the latest web design, SEO trends, and digital marketing tips for New York businesses. Explore the Tarasovs Digital Agency blog for expert insights.",
+      "canonical": "/insights/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2025/04/how-to-choose-a-web-designer-in-europe-3.webp"
+    },
+    "jsonld": []
+  },
+  {
+    "url": "/about/",
+    "file": "about.html",
+    "title": "About Tarasovs Digital Agency",
+    "template": "elementor_header_footer",
+    "updatedDate": "2026-08-14T10:18:48Z",
+    "seo": {
+      "title": "Leading Web Design & SEO in New York - Tarasovs Digital Agency",
+      "description": "Learn about Tarasovs Digital Agency, a premier web design and SEO agency serving New York businesses. Our team is dedicated to delivering exceptional results.",
+      "canonical": "/about/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2024/03/pexels-pixabay-39284.jpg"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://tarasovs.me/about/#faq",
+        "mainEntityOfPage": {
+          "@id": "https://tarasovs.me/about/"
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does Tarasovs Digital Agency do?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tarasovs Digital Agency provides web design, web development, SEO, and GEO (Generative Engine Optimization) services for businesses in New York and Europe. We build websites that rank in traditional search engines and appear in AI-powered search platforms including ChatGPT, Perplexity, and Google AI Overviews."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is Tarasovs Digital Agency located?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tarasovs Digital Agency is a remote-first agency with its office in Giroc, in the Timișoara metropolitan area of Romania. Our distributed team works across Romania and Ukraine, serving clients in the United States, United Kingdom, and Europe. All project work is conducted remotely, with support hours Monday to Friday, 6 am to 8 pm EST."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long has Tarasovs been operating?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tarasovs Digital Agency was founded in New York in 2018. Since then, we have delivered 79+ projects for clients across the United States, the United Kingdom, Germany, the Netherlands, Poland, Romania, and beyond."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is GEO and why does Tarasovs offer it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GEO — Generative Engine Optimization — is the practice of structuring website content and authority signals so that AI-powered platforms like ChatGPT, Perplexity, and Google AI Overviews cite your business in their generated answers. Tarasovs integrated GEO into our service offering in 2024 because AI search is now a primary discovery channel for a growing share of users — and businesses that aren’t optimizing for it are leaving visibility on the table."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Tarasovs work with businesses outside New York?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We regularly work with businesses across the United States and Europe, including the UK, Germany, the Netherlands, Poland, and Romania. All project work is conducted remotely through structured communication and collaboration tools, with no compromise on quality or responsiveness."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I start a project with Tarasovs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The best starting point is our contact form or a direct email to hello@tarasovs.me. We’ll review your project, ask a few questions to understand your goals and timeline, and schedule a 30-minute discovery call. Within 48 hours of that call, you’ll receive a detailed proposal with clear scope, timeline, and investment."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "/services/",
+    "file": "services.html",
+    "title": "Digital Agency Services — Web Design, SEO & GEO in New York and Europe",
+    "updatedDate": "2026-07-30T12:43:55Z",
+    "seo": {
+      "title": "Digital Agency Services — Web Design, SEO & GEO | Tarasovs",
+      "description": "Tarasovs offers web design, Framer development, SEO, GEO, UI/UX for businesses in New York and Europe. Built to rank on Google and get cited in AI search.",
+      "canonical": "/services/",
+      "robots": "index, follow",
+      "ogImage": "/wp-content/uploads/2024/03/istockphoto-1906630287-1024x1024-1.jpg"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://tarasovs.me/services/#service",
+        "name": "Digital Agency Services",
+        "description": "Tarasovs Digital Agency offers web design, Framer and Webflow development, SEO, GEO (AI search optimization), UI/UX design, e-commerce, digital marketing, and analytics for businesses in the US, UK, and Europe.",
+        "url": "https://tarasovs.me/services/",
+        "provider": {
+          "@type": "Organization",
+          "@id": "https://tarasovs.me/#organization",
+          "name": "Tarasovs Digital Agency",
+          "url": "https://tarasovs.me"
+        },
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "United States"
+          },
+          {
+            "@type": "Country",
+            "name": "United Kingdom"
+          },
+          {
+            "@type": "Place",
+            "name": "Europe"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Tarasovs Digital Agency Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Website Design",
+                "url": "https://tarasovs.me/services/website-design-services/",
+                "description": "Conversion-focused website design for businesses in New York and Europe. Mobile-first, SEO-ready, and GEO-optimized."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Framer Development",
+                "url": "https://tarasovs.me/services/framer-development/",
+                "description": "High-performance Framer websites with 95+ PageSpeed, React-based output, CMS setup, and GEO-ready architecture."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Website Development",
+                "url": "https://tarasovs.me/services/website-development/",
+                "description": "Website development on Framer, Webflow, and WordPress with clean semantic code and Core Web Vitals optimization."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "SEO Services",
+                "url": "https://tarasovs.me/services/seo-services/",
+                "description": "Technical SEO, content strategy, link building, and local SEO for businesses in the US and Europe."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "GEO — AI Search Optimization",
+                "url": "https://tarasovs.me/services/geo-ai-search-optimization/",
+                "description": "Generative Engine Optimization to get your business cited in ChatGPT, Perplexity, and Google AI Overviews."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "UI/UX Design",
+                "url": "https://tarasovs.me/services/ui-ux-design/",
+                "description": "User experience design grounded in research — wireframes, prototypes, and high-fidelity UI for web products."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "E-Commerce",
+                "url": "https://tarasovs.me/services/e-commerce/",
+                "description": "E-commerce design and development on Shopify and WooCommerce, optimized for conversion and organic search."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Digital Marketing",
+                "url": "https://tarasovs.me/services/digital-marketing/",
+                "description": "Integrated digital marketing strategy across SEO, GEO, content, and paid channels."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Content Management",
+                "url": "https://tarasovs.me/services/content-management/",
+                "description": "Content strategy, creation, and CMS setup written for human readers and AI retrieval systems."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Insights & Analytics",
+                "url": "https://tarasovs.me/services/insights-analytics/",
+                "description": "GA4 setup, Search Console integration, conversion tracking, and monthly reporting."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://tarasovs.me/services/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What services does Tarasovs Digital Agency offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tarasovs Digital Agency offers web design, Framer and Webflow development, WordPress development, SEO, GEO (AI search optimization), UI/UX design, e-commerce, digital marketing, content management, and analytics. Every service is built around one outcome: your business performing better online — in Google, in AI search, and with the clients that matter."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work with businesses outside New York?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Tarasovs is a remote-first agency serving clients across the United States, United Kingdom, and Europe. All project work is managed remotely with no compromise on quality or responsiveness."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you handle both web design and SEO in one project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Tarasovs integrates web design, development, and SEO from the start. Every site ships with technical SEO foundations, schema markup, Core Web Vitals optimization, and GEO-ready content structure included by default."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is GEO and why does it matter in 2026?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GEO — Generative Engine Optimization — is the practice of structuring website content so that AI-powered platforms like ChatGPT, Perplexity, and Google AI Overviews cite your brand in their generated responses. In 2026, AI search is one of the fastest-growing discovery channels. Businesses that appear in AI answers receive high-intent referrals at no cost per click."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a typical web design project take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most business websites take 6–10 weeks from kickoff to launch. Framer projects typically take 3–5 weeks. E-commerce builds take 8–14 weeks depending on scope."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which platform do you build websites on?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tarasovs builds on Framer, Webflow, and WordPress — recommending the platform based on project needs. Framer is best for design-heavy marketing sites. Webflow suits content-heavy sites with complex CMS needs. WordPress is best for large-scale sites and e-commerce with WooCommerce."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I get started with Tarasovs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Fill out the contact form at tarasovs.me/contact-us or email work@tarasovs.me. We review the project, schedule a 30-minute discovery call, and send a detailed proposal within 48 hours — including scope, timeline, and investment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer standalone SEO without a web design project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. SEO and GEO are available as standalone retainer services. One-time SEO audits are also available without an ongoing engagement."
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

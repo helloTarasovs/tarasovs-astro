@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+
+# OpenAI / ChatGPT — live citation only. GPTBot (training crawler) stays
+# blocked via Cloudflare AI Crawl Control, do not re-allow it here.
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude — live citation only. ClaudeBot (training crawler)
+# stays blocked via Cloudflare AI Crawl Control, do not re-allow it here.
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Common search bots
+User-agent: Bingbot
+Allow: /
+User-agent: Googlebot
+Allow: /
+User-agent: Applebot
+Allow: /
+User-agent: YouBot
+Allow: /
+
+Disallow: /tag/*/feed/
+Disallow: /category/*/feed/
+
+Sitemap: https://tarasovs.me/sitemap_index.xml

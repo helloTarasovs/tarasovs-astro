@@ -1,0 +1,229 @@
+{
+  "dispensary_key": "NY-0032",
+  "name": "Amsterdam Cannabis, Inc.",
+  "slug": "amsterdam-cannabis-inc-amsterdam",
+  "city": "Amsterdam",
+  "state": "NY",
+  "website_url": "https://damcanna.com/",
+  "domain": "damcanna.com",
+  "primary_market": "Amsterdam",
+  "secondary_market_1": "Schenectady",
+  "secondary_market_2": "Albany",
+  "ai_score": "70.00",
+  "ai_status": "fresh",
+  "ai_scanned_at": "2026-09-02 06:37:00",
+  "ai_primary_score": "100.00",
+  "ai_secondary1_score": "0.00",
+  "ai_secondary2_score": "0.00",
+  "ai_mentions": "6",
+  "ai_valid_prompts": "10",
+  "ai_top3_count": "6",
+  "ai_breakdown": {
+    "batch_key": "manual-chatgpt-20260902063700-pnfnm8",
+    "provider": "ChatGPT Temporary Chat",
+    "model": "ChatGPT UI",
+    "scanned_at": "2026-09-02 06:37:00",
+    "benchmark_type": "manual_chatgpt_temporary_chat",
+    "competitors": [
+      "Upstate Canna Co.",
+      "The People's Joint",
+      "Ripe Cannabis",
+      "Royale Flower",
+      "Capital District Cannabis & Wellness"
+    ],
+    "items": [
+      {
+        "check_id": "AI-P01",
+        "market_scope": "primary",
+        "market_value": "Amsterdam",
+        "query_text": "What are the best cannabis dispensaries in Amsterdam, New York?",
+        "position": 1,
+        "result_class": "Recommended #1",
+        "mentioned": true,
+        "cited_url": "https://damcanna.com/",
+        "points": 100,
+        "competitors": [
+          "Upstate Canna Co.",
+          "The People's Joint",
+          "Ripe Cannabis",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness"
+        ]
+      },
+      {
+        "check_id": "AI-P02",
+        "market_scope": "primary",
+        "market_value": "Amsterdam",
+        "query_text": "What's the best cannabis dispensary near Amsterdam, New York?",
+        "position": 1,
+        "result_class": "Recommended #1",
+        "mentioned": true,
+        "cited_url": "https://damcanna.com/",
+        "points": 100,
+        "competitors": [
+          "Upstate Canna Co.",
+          "The People's Joint",
+          "Ripe Cannabis",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness"
+        ]
+      },
+      {
+        "check_id": "AI-P03",
+        "market_scope": "primary",
+        "market_value": "Amsterdam",
+        "query_text": "Recommend a licensed recreational cannabis dispensary in Amsterdam, New York.",
+        "position": 1,
+        "result_class": "Recommended #1",
+        "mentioned": true,
+        "cited_url": "https://damcanna.com/",
+        "points": 100,
+        "competitors": [
+          "Upstate Canna Co.",
+          "The People's Joint",
+          "Ripe Cannabis",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness"
+        ]
+      },
+      {
+        "check_id": "AI-P04",
+        "market_scope": "primary",
+        "market_value": "Amsterdam",
+        "query_text": "Where can I buy legal cannabis in Amsterdam, New York?",
+        "position": 1,
+        "result_class": "Recommended #1",
+        "mentioned": true,
+        "cited_url": "https://damcanna.com/",
+        "points": 100,
+        "competitors": [
+          "Upstate Canna Co.",
+          "The People's Joint",
+          "Ripe Cannabis",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness"
+        ]
+      },
+      {
+        "check_id": "AI-P05",
+        "market_scope": "primary",
+        "market_value": "Amsterdam",
+        "query_text": "Which cannabis shop would you recommend in Amsterdam, New York?",
+        "position": 1,
+        "result_class": "Recommended #1",
+        "mentioned": true,
+        "cited_url": "https://damcanna.com/",
+        "points": 100,
+        "competitors": [
+          "Upstate Canna Co.",
+          "The People's Joint",
+          "Ripe Cannabis",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness"
+        ]
+      },
+      {
+        "check_id": "AI-P06",
+        "market_scope": "primary",
+        "market_value": "Amsterdam",
+        "query_text": "Where can I buy cannabis edibles in Amsterdam, New York?",
+        "position": 1,
+        "result_class": "Recommended #1",
+        "mentioned": true,
+        "cited_url": "https://damcanna.com/",
+        "points": 100,
+        "competitors": [
+          "Upstate Canna Co.",
+          "The People's Joint",
+          "Ripe Cannabis",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness"
+        ]
+      },
+      {
+        "check_id": "AI-S101",
+        "market_scope": "secondary_1",
+        "market_value": "Schenectady",
+        "query_text": "What are the best cannabis dispensaries near Schenectady, New York?",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://damcanna.com/",
+        "points": 0,
+        "competitors": [
+          "Upstate Canna Co.",
+          "The People's Joint",
+          "Ripe Cannabis",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness"
+        ]
+      },
+      {
+        "check_id": "AI-S102",
+        "market_scope": "secondary_1",
+        "market_value": "Schenectady",
+        "query_text": "Recommend a cannabis dispensary near Schenectady, New York.",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://damcanna.com/",
+        "points": 0,
+        "competitors": [
+          "Upstate Canna Co.",
+          "The People's Joint",
+          "Ripe Cannabis",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness"
+        ]
+      },
+      {
+        "check_id": "AI-S201",
+        "market_scope": "secondary_2",
+        "market_value": "Albany",
+        "query_text": "What are the best cannabis dispensaries near Albany, New York?",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "https://damcanna.com/",
+        "points": 0,
+        "competitors": [
+          "Upstate Canna Co.",
+          "The People's Joint",
+          "Ripe Cannabis",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness"
+        ]
+      },
+      {
+        "check_id": "AI-S202",
+        "market_scope": "secondary_2",
+        "market_value": "Albany",
+        "query_text": "Recommend a cannabis dispensary near Albany, New York.",
+        "position": null,
+        "result_class": "Not mentioned",
+        "mentioned": false,
+        "cited_url": "",
+        "points": 0,
+        "competitors": [
+          "Upstate Canna Co.",
+          "The People's Joint",
+          "Ripe Cannabis",
+          "Royale Flower",
+          "Capital District Cannabis & Wellness"
+        ]
+      }
+    ]
+  },
+  "public_profile_url": "/dispensary-visibility/amsterdam-cannabis-inc-amsterdam/",
+  "wpId": 229954,
+  "title": "Amsterdam Cannabis, Inc. ChatGPT Visibility — Amsterdam, NY",
+  "pubDate": "2026-08-10T17:05:48Z",
+  "updatedDate": "2026-08-22T14:11:52Z",
+  "seo": {
+    "title": "Amsterdam Cannabis, Inc. ChatGPT Visibility — Amsterdam, NY - Tarasovs Digital Agency",
+    "canonical": "/dispensary-visibility/amsterdam-cannabis-inc-amsterdam/",
+    "robots": "index, follow",
+    "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
+  },
+  "legacyUrl": "/dispensary-visibility/amsterdam-cannabis-inc-amsterdam/"
+}

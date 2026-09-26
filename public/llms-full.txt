@@ -1,0 +1,597 @@
+# Tarasovs Digital Agency — Full Content Reference
+
+> Europe-based digital agency helping businesses in the US, UK, and Europe build websites that rank on Google and get cited by AI-powered search platforms including ChatGPT, Perplexity, and Google AI Overviews.
+
+Tarasovs is a founder-led studio run by Yurii Tarasov, a recognized Framer Expert with 15+ years of web design and development experience. We combine Framer, Webflow, and WordPress development with SEO strategy and Generative Engine Optimization (GEO) — helping brands become visible in both traditional and AI-powered search.
+
+Last updated: 2026-09-02
+
+---
+
+## Founder
+
+**Yurii Tarasov** — Founder & Web Designer, Tarasovs Digital Agency
+
+Yurii Tarasov is the founder of Tarasovs Digital Agency, with 15+ years of experience in web design and development. He personally leads every project — from Figma design through Framer and WordPress development to SEO and GEO (Generative Engine Optimization) strategy.
+
+Yurii is a recognized Framer Expert, featured in the official Framer Experts directory and active in the Framer community, where he shares build breakdowns and Framer/AI workflow experiments. He is also available for select independent projects on Contra.
+
+Based in Giroc, in the Timișoara metropolitan area of Romania, Yurii works remotely with clients across the United States, United Kingdom, and Europe.
+
+**Areas of expertise:** Framer development, Webflow development, WordPress development, web design, UI/UX design, technical SEO, local SEO, Generative Engine Optimization, AI search visibility.
+
+**Verified external profiles:**
+
+- LinkedIn: https://www.linkedin.com/in/yurii-tarasov/
+- Framer Community (Expert): https://www.framer.com/@yurii-tarasov/
+- Framer Experts directory: https://www.framer.com/experts/
+- Contra (Framer Expert & Webflow Expert, Senior UI/UX Designer): https://contra.com/yurii_tarasov_framer_expert
+- X: https://x.com/yurii_tarasov
+
+**Published work on Framer Community:** KOS Architecture, Elano Studio, Qollective, RetroDrive, Studio79.
+
+---
+
+## Homepage
+
+URL: https://tarasovs.me/
+
+### We build websites that get found on Google and in AI
+
+Based in Europe. Serving clients in the US, UK, EU, and beyond.
+
+Tarasovs Digital Agency helps businesses in the US and Europe create modern websites that look premium, communicate clearly, convert visitors, and support long-term visibility in Google and AI-powered search.
+
+### What We Help You Build
+
+A website should do more than look good. It should explain your offer, build trust, guide visitors, support SEO, and help your brand become easier to discover across modern search platforms.
+
+**Framer, Webflow and WordPress Website Development:** We build fast, responsive, and visually polished Framer websites for startups, agencies, service businesses, and growing brands. From Figma to Framer, we focus on clean structure, smooth animations, mobile responsiveness, CMS setup, and easy future updates.
+
+**Website Design & Redesign:** We design modern websites that help businesses look more professional, communicate more clearly, and improve user experience. Whether you need a new website or a redesign of an outdated one, we create layouts that are clean, strategic, and conversion-focused.
+
+**SEO Strategy & Technical Optimization:** We help websites build a stronger foundation for organic growth. This includes page structure, metadata, headings, internal linking, technical SEO, schema markup, content planning, and performance improvements.
+
+**AI Search Optimization:** Most agencies optimize for yesterday's search. We build for today's: where AI assistants like ChatGPT and Google AI Overviews answer questions before users click a single link. Your content will be structured to be cited, not just ranked.
+
+### Prepare Your Website for the Future of Search
+
+Traditional SEO is still important, but it is no longer the only way people discover businesses online. More users now rely on AI-powered platforms to compare services, ask for recommendations, and make decisions faster. That means your website needs clear content, structured information, strong trust signals, helpful service pages, FAQ sections, schema markup, and a logical content hierarchy. Our AI search optimization approach helps your website become easier for search engines and AI platforms to understand, summarize, and reference.
+
+### Why Businesses Choose Tarasovs Digital Agency
+
+We do not build websites as isolated design projects. We build digital assets that support your brand, visibility, and business growth. Our work combines creative design, technical development, SEO thinking, and a practical understanding of how users search for services today.
+
+- **Design That Builds Trust:** Your website is often the first impression of your business. We create clean, modern, and professional designs that help visitors understand your value quickly.
+- **Framer Development with SEO in Mind:** We build Framer websites with responsive layouts, clean page structure, optimized headings, metadata, internal links, and a strong foundation for organic visibility.
+- **Built for Google and AI Search:** We help your website communicate clearly to users, search engines, and AI-powered discovery platforms.
+
+### A Founder-Led Digital Studio for International Clients
+
+We work with startups, service businesses, agencies, and growing brands across the United States, Europe, and international markets. Every project is personally led by Yurii Tarasov, combining 15+ years of web design and development experience with a modern approach to Framer, SEO, and AI-powered search visibility. You get direct communication, clear project structure, attention to detail, and the quality of an agency without unnecessary layers or communication gaps.
+
+- 79+ projects in Framer, SEO and AI search optimization
+- 15+ years of web design experience
+- Europe-based, working worldwide
+
+### FAQ — Homepage
+
+**What does Tarasovs Digital Agency do?**
+Tarasovs Digital Agency provides web design, web development, SEO, and GEO (Generative Engine Optimization) services for businesses in New York and Europe. We build websites that rank in traditional search engines and appear in AI-powered platforms including ChatGPT, Perplexity, and Google AI Overviews.
+
+**How long has Tarasovs been operating?**
+Tarasovs Digital Agency was founded in New York in 2018. We have delivered 79+ projects for clients across the United States, United Kingdom, Germany, Netherlands, Poland, and Romania.
+
+**What is GEO (Generative Engine Optimization)?**
+GEO is the practice of optimizing website content to appear in AI-generated search responses — such as those from ChatGPT, Perplexity, Google AI Overviews, and similar platforms. It focuses on content authority, structure, and trust signals.
+
+**How is GEO different from traditional SEO?**
+Traditional SEO targets search engine rankings on results pages. GEO targets the AI layer on top of those results — ensuring your brand is cited when AI models summarize answers for users.
+
+**Can Tarasovs handle both web design and AI SEO?**
+Yes. We provide end-to-end service: from building a technically sound, fast-loading website to implementing the content and optimization strategies needed to rank in both Google and AI-powered search engines.
+
+**Do you work with businesses outside New York?**
+Yes. We are a remote-first agency serving clients in the US, UK, and Europe.
+
+---
+
+## About Page
+
+URL: https://tarasovs.me/about/
+
+### We build digital products that get found — by people and by AI
+
+Tarasovs is a web design, SEO, and GEO agency serving businesses in New York and across Europe. We've been building digital products that perform since 2018 — and since 2024, we've been building them to perform in AI search too.
+
+### How Tarasovs Started
+
+Tarasovs began as a two-person web design studio in Staten Island, New York. The founding idea was simple: most small businesses in New York were paying for websites that looked professional but generated no traffic, no leads, and no return. We wanted to fix that.
+
+Over the next six years, we grew into a full-service digital agency. Today the team works from Romania and Ukraine, serving clients across the US, UK, and Europe. We've worked with local businesses on Staten Island, B2B companies in Germany, e-commerce brands in the UK, and startups across the US.
+
+In 2024, we made a deliberate shift. As AI-powered search platforms — ChatGPT, Perplexity, Google AI Overviews — began answering user queries directly, we realized that traditional SEO alone was no longer sufficient. We invested in developing a GEO (Generative Engine Optimization) methodology and integrated it into every service we offer. Today, every website we launch is built to perform in both Google and AI search from day one.
+
+### Key numbers
+
+- 15+ years building for the web
+- 79+ projects delivered across the US and Europe
+- 12 industries served — from legal to e-commerce
+- 2024 — year we launched GEO as a core service
+- 100% of projects launched with AI-ready structure
+
+### What We Believe
+
+- **Research before design.** We don't open a design tool until we understand your users, your competitors, and your business goals. Every visual and structural decision we make is traceable to a reason.
+- **Build for where search is going, not where it's been.** AI search is not a future trend — it's a present reality. We take it seriously because our clients' businesses depend on being discoverable wherever their customers are looking.
+- **Transparency over performance.** We report what actually happened — traffic, citations, conversions, what worked and what didn't. If a strategy isn't delivering, we say so and adjust.
+- **Character is non-negotiable.** Skill and experience are the minimum requirement. We hire people who take ownership, communicate proactively, and care about the outcome beyond their specific deliverable.
+- **Quality over volume.** We take on fewer clients than we could, because every client gets senior attention.
+
+### What We Do and Why It's Different
+
+Most digital agencies offer web design, SEO, or both. We do the same — but with one additional layer: GEO, Generative Engine Optimization.
+
+In 2026, a growing share of potential clients don't search Google. They ask ChatGPT. They use Perplexity. They get answers from Google AI Overviews without clicking a single link. If your business isn't represented in those AI-generated responses, you're invisible to a portion of your market that's growing every month.
+
+**Web Design & Development:** Fast, conversion-focused websites built on clean semantic code, optimized for Core Web Vitals, and structured for both human readers and AI retrieval systems.
+
+**SEO:** Technical SEO, content strategy, and local SEO for New York and target European markets. Rankings that compound over time, not paid placements that disappear when the budget stops.
+
+**GEO — AI Search Optimization:** Structured content, FAQPage schema, E-E-A-T authority building, and Share of Model tracking. We help your brand appear in ChatGPT answers, Perplexity citations, and Google AI Overviews.
+
+### Who We Work With
+
+- Small and mid-size businesses in New York competing with larger competitors online
+- European B2B companies entering US and UK markets
+- Service businesses — law firms, medical practices, consultancies, creative studios — where the website is the primary trust-building tool
+- Agencies and founders who want a reliable technical partner without building an in-house team
+
+### FAQ — About Page
+
+**What does Tarasovs Digital Agency do?**
+Tarasovs Digital Agency provides web design, web development, SEO, and GEO (Generative Engine Optimization) services for businesses in New York and Europe. We build websites that rank in traditional search engines and appear in AI-powered search platforms including ChatGPT, Perplexity, and Google AI Overviews.
+
+**Where is Tarasovs Digital Agency located?**
+Tarasovs Digital Agency is a remote-first agency with its office in Giroc, in the Timișoara metropolitan area of Romania. Our distributed team works across Romania and Ukraine, serving clients in the United States, United Kingdom, and Europe. All project work is conducted remotely, with support hours Monday to Friday, 6 am to 8 pm EST.
+
+**How long has Tarasovs been operating?**
+Tarasovs Digital Agency was founded in New York in 2018. Since then, we have delivered 79+ projects for clients across the United States, the United Kingdom, Germany, the Netherlands, Poland, Romania, and beyond.
+
+**What is GEO and why does Tarasovs offer it?**
+GEO — Generative Engine Optimization — is the practice of structuring website content and authority signals so that AI-powered platforms like ChatGPT, Perplexity, and Google AI Overviews cite your business in their generated answers. Tarasovs integrated GEO into our service offering in 2024 because AI search is now a primary discovery channel for a growing share of users.
+
+**Does Tarasovs work with businesses outside New York?**
+Yes. We regularly work with businesses across the United States and Europe, including the UK, Germany, the Netherlands, Poland, and Romania. All project work is conducted remotely.
+
+**How do I start a project with Tarasovs?**
+The best starting point is our contact form or a direct email to hello@tarasovs.me. We'll review your project, schedule a 30-minute discovery call, and within 48 hours you'll receive a detailed proposal with clear scope, timeline, and investment.
+
+---
+
+## SEO Services
+
+URL: https://tarasovs.me/services/seo-services/
+
+### SEO Services for Businesses in the US and Europe
+
+Search engine optimization is not a one-time task. It is a long-term investment in your website's ability to attract the right audience, without paying for every click.
+
+At Tarasovs Digital Agency, we build SEO strategies that combine technical precision, content structure, and authority signals — helping businesses in the United States and Europe rank higher on Google and get discovered across modern search platforms, including AI-powered tools like ChatGPT, Perplexity, and Google AI Overviews.
+
+Every SEO engagement starts with understanding your business, your audience, and the competitive landscape — not with a generic checklist.
+
+### What Our SEO Services Include
+
+**Technical SEO Audit & Optimization:** Crawl errors, Core Web Vitals, mobile usability, structured data, duplicate content, redirect chains, XML sitemap, and robots.txt configuration.
+
+**Keyword Research & Intent Mapping:** Competitor gap analysis, long-tail keyword identification, and keyword-to-page mapping.
+
+**On-Page SEO Optimization:** Title tags, meta descriptions, heading hierarchy, content structure, image alt text, internal linking, URL structure, and schema markup.
+
+**Content Strategy & SEO Copywriting:** Service page creation and optimization, blog content planning and writing, location-specific landing pages, FAQ sections optimized for featured snippets and AI citations, and content refreshes.
+
+**Link Building & Authority Development:** Editorial outreach, digital PR, local citation building for US and European directories, and disavow file management.
+
+**Local SEO (US & European Markets):** Google Business Profile optimization, NAP consistency, local citation building, location page creation.
+
+**SEO Reporting & Analytics:** Monthly reporting on keyword rankings, organic traffic (GA4), technical issue tracking, and backlink profile growth.
+
+### How We Work — The Process
+
+1. **Discovery & Audit (Week 1–2):** Full technical audit, keyword research, and competitor analysis.
+2. **Strategy & Roadmap (Week 2–3):** Prioritized SEO roadmap structured by impact and effort.
+3. **Implementation (Month 1–3):** Technical fixes, on-page optimizations, content improvements, and link building.
+4. **Monitor & Iterate (Ongoing):** Monthly reporting, ranking monitoring, and strategy adjustment.
+
+### Pricing & Packages
+
+**SEO Foundation — from $1,200/month:** For small businesses and startups. Technical SEO audit, on-page optimization (up to 10 pages), keyword research, monthly reporting, Google Search Console and GA4 setup.
+
+**SEO Growth — from $2,200/month:** For established businesses. Everything in Foundation plus 2 SEO articles or page rewrites/month, link building (up to 6 backlinks/month), schema markup, local SEO (1 market), bi-weekly strategy calls.
+
+**SEO Authority — from $3,800/month:** For competitive industries or multiple markets. Everything in Growth plus 4+ content pieces/month, aggressive link building (10+/month), multi-location SEO, GEO integration, priority support and weekly updates.
+
+### FAQ — SEO Services
+
+**How long does SEO take to show results?**
+Most websites start seeing measurable ranking improvements within 3 to 6 months. SEO compounds over time.
+
+**What makes your SEO different from other agencies?**
+We do not separate SEO from web development. When we identify a technical issue, we fix it. When a page needs better content, we write it. Most agencies stop at recommendations — we execute.
+
+**Do you offer one-time audits?**
+Yes. We offer standalone technical and content audits without an ongoing retainer.
+
+**Can SEO help me appear in ChatGPT or Google AI answers?**
+Yes — this is what we call GEO (Generative Engine Optimization). It requires structured content, strong authority signals, and FAQ schema. We integrate GEO into our SEO process across all packages.
+
+**What do you need from us to get started?**
+Access to your Google Search Console, Google Analytics 4, and a call to align on your business goals and target audience.
+
+---
+
+## GEO — AI Search Optimization
+
+URL: https://tarasovs.me/services/geo-ai-search-optimization/
+
+### Get Your Business Cited in ChatGPT and Perplexity
+
+Search has changed. Millions of people now get answers directly from AI assistants — without clicking any website. Tarasovs helps businesses appear in those AI-generated answers through GEO: a systematic approach to making your brand the source AI models trust, cite, and recommend.
+
+### What is GEO — Generative Engine Optimization?
+
+GEO is the practice of structuring and positioning website content so that AI-powered search engines, including ChatGPT, Google AI Overviews, Perplexity, and Microsoft Copilot, cite your brand in their generated responses. Unlike traditional SEO, which targets blue-link rankings, GEO targets the AI layer above those results.
+
+GEO encompasses five core disciplines: content authority building, structured data implementation, E-E-A-T optimization, prompt-aligned FAQ creation, and brand citation strategy across authoritative third-party sources.
+
+### GEO vs SEO: Key Differences
+
+| | Traditional SEO | GEO |
+|---|---|---|
+| Goal | Rank on page 1 of Google | Get cited in AI-generated answers |
+| Target | Googlebot | LLM retrieval systems (RAG) |
+| Success metric | Keyword position, organic traffic | Share of Model, citation frequency |
+| Content format | Keyword-rich long-form articles | Structured, question-answer, authority-first |
+| Trust signal | Backlinks, domain authority | E-E-A-T, cross-domain citations, named entities |
+| Timeline | 3–6 months for traction | 4–8 weeks for first AI citations |
+
+### What's Included in Tarasovs GEO Service
+
+1. **GEO Audit & AI Visibility Baseline:** Testing brand visibility across ChatGPT, Perplexity, Google AI Overviews, and Copilot. Deliverable: AI visibility report, competitor citation analysis, priority action list.
+2. **Content Architecture for AI Retrieval:** Restructuring content following the two-layer GEO architecture — Quick Answer block in the first 200 words, followed by deep authoritative content for AI extraction.
+3. **Structured Data & Schema Implementation:** Triple JSON-LD schema stacking — FAQPage, Article, and Service schema on every key page, plus LocalBusiness schema for local market targeting.
+4. **E-E-A-T Optimization:** Author bios, first-person data, professional credentials, editorial standards, and About page authority signals.
+5. **Prompt-Aligned FAQ Strategy:** Researching exact questions submitted to AI platforms, writing authoritative answers structured for extraction, and implementing FAQPage schema.
+6. **Brand Citation & Authority Building:** Strategic placements on Clutch, G2, industry publications, and authoritative third-party sites. Outreach to 5–10 authoritative domains per month.
+7. **AI Crawlability Audit:** Ensuring ChatGPT-User, PerplexityBot, ClaudeBot, and other AI agents can access your content. Covers robots.txt, llms.txt, CDN configuration, and JavaScript rendering.
+8. **Share of Model Reporting:** Monthly SoM report tracking how often your brand appears in AI-generated answers across target queries.
+
+### GEO Service Packages
+
+**GEO Starter — from $800/month:** AI visibility audit, FAQ optimization (5 pages), basic schema implementation, monthly SoM report.
+
+**GEO Growth — from $1,800/month:** Everything in Starter plus full content restructure, triple schema stacking, brand citation outreach, competitor gap analysis.
+
+**GEO Premium — from $3,500/month:** Everything in Growth plus original research, PR-level citation building, custom SoM dashboard. White-label available.
+
+### FAQ — GEO Services
+
+**What is GEO (Generative Engine Optimization)?**
+GEO is the discipline of optimizing website content, structured data, and brand authority signals so that AI-powered search engines — including ChatGPT, Google AI Overviews, Perplexity, and Microsoft Copilot — cite your brand in their generated responses.
+
+**How is GEO different from SEO?**
+Traditional SEO optimizes for keyword rankings in Google's blue-link results. GEO optimizes for citations in AI-generated answers. GEO requires additional practices: structured content architecture for AI retrieval, FAQPage schema, prompt-aligned content, E-E-A-T authority building, and Share of Model measurement.
+
+**How long does GEO take to show results?**
+First AI citations typically appear within 4–8 weeks for well-optimized content in low-to-medium competition topics. Share of Model improvements become measurable within the first 60 days.
+
+**How do you measure GEO results?**
+We measure GEO through Share of Model (SoM) — the percentage of relevant AI queries where your brand is cited. Each month, we test a predefined set of 50–100 queries across ChatGPT, Perplexity, Google AI Overviews, and Copilot.
+
+**Why is my website not showing up in ChatGPT or Perplexity?**
+The most common reasons: AI crawlers blocked by robots.txt or CDN; content lacks structured Q&A format; low E-E-A-T signals; brand not mentioned on independent third-party domains; or content rendered client-side in JavaScript. A GEO audit identifies which factors apply.
+
+**Which AI platforms does GEO target?**
+ChatGPT, Perplexity AI, Google AI Overviews, and Microsoft Copilot.
+
+**What is Share of Model and how do you track it?**
+Share of Model (SoM) is the percentage of relevant AI queries in your industry where your brand is mentioned or cited. It is the GEO equivalent of keyword rankings.
+
+---
+
+## Cannabis Dispensary SEO (NYC)
+
+URL: https://tarasovs.me/dispensary-seo-nyc/
+
+### Cannabis Dispensary SEO Services in NYC
+
+We help licensed cannabis dispensaries in Manhattan and Brooklyn get found in Google Maps, organic search, Dutchie menu results, and AI assistants like ChatGPT. From Google Business Profile optimization to Dutchie Pro migration and compliant SEO content, we build search systems that drive foot traffic, online orders, and local visibility.
+
+### When cannabis ads are limited, search becomes your storefront
+
+For licensed dispensaries in NYC, customers usually discover stores through Google Maps, "near me" searches, product and menu searches, delivery queries, and now AI recommendations. The problem: many dispensary websites and Dutchie menus are not structured to capture that demand.
+
+### What we do for NYC dispensaries
+
+**Local SEO for Manhattan & Brooklyn** (https://tarasovs.me/local-seo-manhattan-brooklyn/): Rank for high-intent searches like "dispensary near me," "weed delivery Manhattan," "cannabis dispensary Brooklyn," and neighborhood-specific searches.
+
+**Google Business Profile Optimization** (https://tarasovs.me/google-business-profile-optimization/): Optimize categories, services, reviews, photos, posts, and local relevance signals to improve Maps visibility, following cannabis-specific GBP rules.
+
+**Dutchie Menu SEO** (https://tarasovs.me/dutchie-menu-seo/): Make sure your Dutchie menu, categories, and product pages are discoverable, crawlable, and connected to your main website's SEO strategy. Embedded menus often don't get indexed; we fix that.
+
+**Dutchie Pro Migration** (https://tarasovs.me/dutchie-pro-migration-seo/): SEO-safe migration from Dutchie Plus, Dutchie iFrame, or a legacy Dutchie setup to Dutchie Pro. Includes URL planning, indexation checks, Google Search Console setup, GA4 tracking, redirect planning, technical SEO review, and post-launch monitoring.
+
+**AI Search (GEO) for dispensaries:** When customers ask ChatGPT, Perplexity, or Google's AI for the best dispensary nearby, we make sure your name is the one it recommends.
+
+**Compliant Cannabis Content:** SEO content for licensed dispensaries that avoids risky claims, unsafe language, and low-quality generic cannabis copy.
+
+### Why dispensary SEO is different
+
+Cannabis SEO isn't regular SEO. The compliance rules, the platform restrictions, and the technical quirks are different — and getting them wrong can get your listings suspended.
+
+- Dispensary-correct schema and local data, structured the way search engines and AI models expect for licensed retailers
+- Compliance-first content — no health claims, no policy violations that trigger penalties or takedowns
+- Google Business Profile done right — cannabis-specific rules on categories, pricing, and promotions
+- Dutchie and Shopify menu indexing — embedded menus often don't get indexed; we fix that
+
+### How we grow dispensary search visibility
+
+1. **Dutchie & Local SEO Audit:** We review your website, Dutchie setup, Google Business Profile, Search Console data, local rankings, AI visibility, and competitor presence.
+2. **Search Visibility Roadmap:** A prioritized plan covering technical SEO, Dutchie menu visibility, local pages, GBP improvements, content, and GEO opportunities.
+3. **Implementation:** Content, internal links, schema, local landing pages, GBP updates, Dutchie migration SEO, tracking, and indexation.
+4. **Monthly Reporting:** Google Search Console, GA4, Google Maps, keyword rankings, and AI search visibility.
+
+### FAQ — Dispensary SEO
+
+**Do you only work with dispensaries in NYC?**
+Our main focus is licensed dispensaries in Manhattan and Brooklyn, but we can also support cannabis retailers in other competitive local markets.
+
+**Can you optimize our Dutchie menu for SEO?**
+Yes. We audit how your Dutchie menu is connected to your website, whether menu, category, and product pages are discoverable, and how they support local and organic search.
+
+**Can dispensaries actually do SEO if they can't advertise?**
+Yes — and that's exactly why it matters more for you than for most businesses. With paid ads off the table, organic search, Google Maps, and AI search are your main ways to reach new customers.
+
+**Is this compliant? Will it put my listings or license at risk?**
+Compliance comes first. We avoid health claims and the policy violations that get content flagged or listings suspended, and we follow the cannabis-specific rules for Google Business Profile.
+
+**How fast will I see results?**
+Local and Google Maps improvements often show within the first 30–60 days. AI-search visibility builds over a few weeks to a couple of months.
+
+**Do you help with Dutchie Pro migration?**
+Yes. We help dispensaries plan SEO-safe migrations from Dutchie Plus, Dutchie iFrame, or legacy Dutchie setups to Dutchie Pro.
+
+---
+
+## New York Dispensary Visibility Index
+
+URL: https://tarasovs.me/dispensary-visibility/
+
+### Is ChatGPT recommending your dispensary?
+
+The New York Dispensary Visibility Index is a proprietary, continuously updated benchmark that tracks how licensed New York-area cannabis dispensaries appear in ChatGPT recommendations. Each dispensary is tested against 10 standardized prompts, and the resulting composite ChatGPT Visibility score (0–100) reflects recommendation position, geographic reach, and which competitors ChatGPT surfaces instead. This is original data collected and published by Tarasovs Digital Agency — not a summary of someone else's research.
+
+### Current coverage
+
+- 132 dispensaries measured, out of 705 licensed dispensaries in New York State
+- 1,000+ recorded ChatGPT prompts tested
+- 3 geographic market levels evaluated per dispensary (primary, secondary, regional)
+- Individual dispensary profiles are published at their own URLs (e.g. https://tarasovs.me/dispensary-visibility/[dispensary-slug]/), each carrying its own measurement date
+
+### How the composite ChatGPT Visibility score works
+
+Each dispensary is scored across 10 prompts, weighted by geographic market:
+
+- Primary Market (neighborhood-level query): 70% weight, 6 prompts
+- Secondary Market (surrounding area): 20% weight, 2 prompts
+- Regional Market (wider metro): 10% weight, 2 prompts
+
+Composite = (Primary × 0.70) + (Secondary × 0.20) + (Regional × 0.10)
+
+Points awarded per prompt, by recommendation position:
+
+| Position | Points |
+|---|---|
+| #1 recommendation | 100 |
+| #2 | 85 |
+| #3 | 70 |
+| #4–5 | 55 |
+| Mentioned, unranked | 40 |
+| Not mentioned | 0 |
+
+A dispensary only receives a public score once all 10 standardized prompts return a valid result. Partial benchmarks are marked "Pending" and excluded from public rankings. Each check runs in a separate, new ChatGPT Temporary Chat with no prior conversation history, and results are recorded as dated benchmarks that are re-checked over time as the underlying model and its sources change.
+
+### What the first 100 measured dispensaries show
+
+- 31 scored under 40/100
+- 9 were not named in any of their 10 prompts
+- 50 scored 70 or higher
+- 19 scored between 40 and 69
+- Median composite score, Manhattan: 36
+- Median composite score, rest of New York State: 70
+
+### Statewide index snapshot
+
+- 35.6% of measured dispensaries have strong visibility (70/100 or higher)
+- 7.6% of measured dispensaries received zero ChatGPT mentions
+- Average score across the index: 49.6/100
+
+### Industry benchmark cited for context
+
+Source: SOCi 2026 Local Visibility Index (cross-industry, not cannabis-specific)
+
+- Google 3-pack visibility: 35.9% of businesses
+- Gemini visibility: 11%
+- Perplexity visibility: 7.4%
+- ChatGPT visibility: 1.2%
+- Only 45% of brands leading in Google results also appear in AI recommendations — meaning strong Google rankings do not reliably predict ChatGPT visibility
+
+### Visibility patterns
+
+The index classifies each dispensary's visibility shape into one of six patterns: hyperlocal only, local-led visibility, broad visibility, evenly distributed, wider-market visibility, or limited visibility.
+
+### Methodology and transparency disclosures
+
+Tarasovs Digital Agency also sells dispensary SEO and GEO services, including to some of the dispensaries measured in this index. This is disclosed directly on the page: profiles are published regardless of score, and every dispensary is measured using the same protocol, whether or not it is a Tarasovs client.
+
+Noted limitations: the 132-profile sample is not all 705 licensed New York dispensaries and is not randomly selected; ChatGPT responses vary by date, model version, location, and underlying sources; the index covers ChatGPT only (not Gemini, Perplexity, or Google Maps); scores measure recommendation visibility, not business quality or customer satisfaction.
+
+### How to cite this data
+
+For the full dataset: "Tarasovs Digital Agency. 'New York Dispensary ChatGPT Visibility Index.' https://tarasovs.me/dispensary-visibility/. Accessed [Date]."
+
+For an individual dispensary's score: link to that dispensary's specific profile page and cite the measurement date shown on the profile.
+
+### FAQ topics covered on this page
+
+The page includes a dedicated FAQ section (14 questions) covering: what the index is, what "ChatGPT Visibility" means, why a dispensary may not be showing up in ChatGPT, where ChatGPT gets local business information from, whether a good Google ranking predicts good ChatGPT visibility, how many prompts are tested per dispensary, what "Not mentioned" means, why a profile may be marked "Pending," how this differs from Weedmaps or Leafly rankings, whether Gemini or Google rankings are included, how often results are updated, how to request a recheck, and who runs the index.
+
+---
+
+## Case Studies
+
+URL: https://tarasovs.me/case-studies/
+
+### Verdi Cannabis — licensed dispensary, NYC
+
+URL: https://tarasovs.me/project/verdi-cannabis/
+Extended write-up: https://tarasovs.me/verdi-cannabis-dutchie-pro-case-study/
+
+Verdi Cannabis needed its Dutchie-powered menu to actually show up in search — the default iFrame embed made every product page invisible to Google. Work included UX and SEO-safe URL structure, WordPress blog and podcast template design, and migration from Dutchie iFrame to Dutchie Pro.
+
+Categories: Cannabis, SEO and AI Visibility, WordPress.
+
+### Leaf Haus — licensed cannabis dispensary, Somerset, NJ
+
+URL: https://tarasovs.me/project/leaf-haus/
+
+Full WordPress site design and build from scratch, including a cannabis education hub (strains, terpenes, glossary), product category grid, blog system, and ongoing design updates.
+
+Categories: Cannabis, SEO and AI Visibility, WordPress.
+
+### ShoppingModaItalia.com — SEO & AI Visibility
+
+URL: https://tarasovs.me/project/shoppingmodaitalia-com-seo-and-ai-visibility-optimization/
+Extended write-up: https://tarasovs.me/shoppingmodaitalia-seo-ai-case-study-2026/
+
+Client: Anna Chekunova, personal stylist in Milan. Website: https://shoppingmodaitalia.com/en/
+
+An Italian fashion boutique site running on a decade-old WordPress theme with no English version and no sitewide keyword strategy. The goal was twofold: open the site to international, English-speaking buyers, and build AI search visibility. Work included service page restructuring, FAQ schema implementation, and repositioning the About page to establish authority.
+
+Categories: SEO and AI Visibility, WordPress.
+
+### KOS Architecture
+
+URL: https://tarasovs.me/project/kos-architecture-framer-website-development/
+Live site: kos-arch.com
+
+A refined, image-driven Framer website for a high-end architecture and interior design studio. Clean homepage structure focused on visual storytelling, with reusable Framer components for consistent layouts and easier future updates.
+
+Client: Lukas Kos. Technologies: Framer.
+
+### Qollective
+
+URL: https://tarasovs.me/project/qollective/
+Live site: qollective.ai
+
+A premium Framer website built to communicate complex AI-driven growth services through a clean, structured, and engaging digital experience. Full component system, 3D elements, and scroll-triggered animations. One set of reusable blocks powers every page.
+
+Work: Brand Strategy, UX Strategy, Content Structure, UI/UX Design, Framer Development.
+
+### Elano Studio
+
+URL: https://tarasovs.me/project/elanostudio/
+Live site: elanostudio.com
+
+A modern Framer one-pager for a German design and development subscription studio. Anchored sections, a Rive-powered hero animation, and a three-plan pricing block. Every conversion path leads to a single booking step.
+
+Work: Brand Strategy, UX Strategy, UI/UX Design, Art Direction, Framer Development.
+
+### AMG Agency
+
+URL: https://tarasovs.me/project/amg-agency/
+
+A high-converting Framer landing page built around a clear offer, bold visual direction, and a smooth user journey.
+
+Work: UX Strategy, Conversion Strategy, Content Structure, Landing Page Design, Framer Development.
+
+### Aidron Duckworth Art Museum — Red Hook, Brooklyn, NY
+
+URL: https://tarasovs.me/project/duckworthgallery-com/
+
+A clean and functional art gallery website focused on exhibitions, events, artwork presentation, and easy content management.
+
+Work: UI/UX Design, Art Direction.
+
+---
+
+## Additional Services
+
+- **Website Design & Redesign** (https://tarasovs.me/services/website-design-services/): Modern, conversion-focused website design and redesign for startups, agencies, and service businesses.
+- **Website Development** (https://tarasovs.me/services/website-development/): Framer, Webflow, and WordPress development.
+- **Framer Design & Development** (https://tarasovs.me/services/framer-development/): High-performance Framer websites built from Figma, with CMS setup, animations, and SEO foundation.
+- **Digital Marketing** (https://tarasovs.me/services/digital-marketing/): SEO, PPC, social media, content marketing, email marketing, CRO, and analytics.
+- **E-Commerce** (https://tarasovs.me/services/e-commerce/): E-commerce website design and development.
+- **UI/UX Design** (https://tarasovs.me/services/ui-ux-design/): Interface and experience design for web products and marketing sites.
+- **Responsive Web Design** (https://tarasovs.me/services/responsive-web-design/): Mobile-first, fully responsive layouts.
+- **Insights & Analytics** (https://tarasovs.me/services/insights-analytics/): GA4 setup, tracking, and reporting.
+- **Content Management** (https://tarasovs.me/services/content-management/): CMS implementation and content operations.
+
+---
+
+## Blog & Insights
+
+URL: https://tarasovs.me/insights/
+
+Key articles on GEO and AI search:
+
+- What is GEO (Generative Engine Optimization): https://tarasovs.me/what-is-geo-generative-engine-optimization/
+- GEO vs SEO vs AEO: https://tarasovs.me/geo-vs-seo-vs-aeo/
+- How to appear in Google AI Overviews: https://tarasovs.me/how-to-appear-in-google-ai-overviews/
+- How to get your business cited in ChatGPT answers: https://tarasovs.me/how-to-get-your-business-cited-in-chatgpt-answers/
+- Share of Model — measuring AI search visibility: https://tarasovs.me/share-of-model-ai-search-visibility/
+- AI search visibility tracking: https://tarasovs.me/ai-search-visibility-tracking/
+- AEO for Webflow sites, step by step: https://tarasovs.me/aeo-for-webflow-sites-step-by-step/
+
+Key articles on Framer and platform choice:
+
+- Connecting Claude Code to Framer's External Agent: https://tarasovs.me/connect-claude-to-framer/
+- Is Framer good for SEO?: https://tarasovs.me/is-framer-good-for-seo/
+- Framer vs WordPress in 2026: https://tarasovs.me/framer-vs-wordpress-2026/
+- Framer vs Webflow in 2026: https://tarasovs.me/framer-vs-webflow-2026/
+- Framer for agencies — why studios are switching: https://tarasovs.me/framer-for-agencies-why-studios-are-switching/
+- Figma to Framer handoff workflow: https://tarasovs.me/figma-to-framer-handoff-workflow/
+
+Key articles on local and cannabis SEO:
+
+- Dispensary SEO in 2026: https://tarasovs.me/dispensary-seo-2026/
+- Local SEO for New York small businesses: https://tarasovs.me/local-seo-new-york-small-businesses-2026/
+
+Key articles on design and conversion:
+
+- Conversion-focused design: 7 UX issues killing your leads: https://tarasovs.me/conversion-focused-design-7-ux-issues-killing-your-leads/
+- How to choose a web designer in Europe: https://tarasovs.me/how-to-choose-a-web-designer-in-europe/
+
+---
+
+## Client Testimonials
+
+**Anna Chekunova, Shopping Moda Italia — Personal Stylist in Milan (AI Search Optimization):**
+"I came to Tarasovs because my website ranked well on Google, but I wasn't appearing when people asked ChatGPT or Perplexity for the best personal stylist in Milan. Instead, AI tools were recommending competitors with far less experience. Tarasovs fixed that by restructuring my service pages, adding FAQ schema, and repositioning my About page to clearly show my authority — 15 years of experience, work at Prada, and 700+ clients styled. Within six weeks, Shopping Moda Italia started appearing in AI answers for personal stylist searches in Milan. In the first month after launch, three new clients told me they found me through ChatGPT. For a trust-based service business, being recommended by AI feels like the new word-of-mouth referral."
+
+---
+
+## Contact
+
+URL: https://tarasovs.me/contact-us/
+
+- General questions: hello@tarasovs.me
+- New business enquiries: work@tarasovs.me
+- Office: Str. Narcisei 64, 307220 Giroc, Timis, Romania (Timișoara metropolitan area)
+- Phone: +40748708694
+- Support hours: Monday to Friday, 6 am to 8 pm EST
+- Remote-first agency serving clients in the United States, United Kingdom, and Europe
+- LinkedIn: https://www.linkedin.com/company/tarasovs-digital-agency/
+- Instagram: https://www.instagram.com/tarasovs.me/
+- Facebook: https://www.facebook.com/tarasovs.web/

@@ -1,0 +1,38 @@
+# tarasovs.me: Cloudflare static assets _redirects
+# www -> apex налаштовується як Redirect Rule у дашборді Cloudflare, не тут.
+
+# --- Перенесено з плагіна Redirection ---
+/case-study                     /case-studies/            301
+/case-study/                    /case-studies/            301
+/contacts                       /contact-us/              301
+/contacts/                      /contact-us/              301
+/dispensary-seo                 /dispensary-seo-nyc/      301
+/dispensary-seo/                /dispensary-seo-nyc/      301
+/framer-vs-webflow-comparing-top-website-builders-2024   /framer-vs-webflow-2026/   301
+/framer-vs-webflow-comparing-top-website-builders-2024/  /framer-vs-webflow-2026/   301
+/framer-vs-wordpress-2026-ai-search-cost   /framer-vs-wordpress-2026/   301
+/framer-vs-wordpress-2026-ai-search-cost/  /framer-vs-wordpress-2026/   301
+/higgsfield-framer-ai-video     /higgsfield-claude-framer-ai-video/   301
+/higgsfield-framer-ai-video/    /higgsfield-claude-framer-ai-video/   301
+/services/digital-marketing     /services/                301
+/services/digital-marketing/    /services/                301
+/services/content-management    /services/                301
+/services/content-management/   /services/                301
+/services/insights-analytics    /services/                301
+/services/insights-analytics/   /services/                301
+
+# --- Блог: канонічна адреса /category/insights/, як зараз ---
+/insights                       /category/insights/       301
+/insights/                      /category/insights/       301
+/insights/page/:n/              /category/insights/page/:n/  301
+/category/insights/seo/         /category/insights/       301
+/category/insights/seo/page/:n/ /category/insights/       301
+
+# --- Системні адреси WordPress ---
+/sitemap_index.xml              /sitemap-index.xml        301
+/post-sitemap.xml               /sitemap-index.xml        301
+/page-sitemap.xml               /sitemap-index.xml        301
+/tdv_profile-sitemap.xml        /sitemap-index.xml        301
+/ohio_portfolio-sitemap.xml     /sitemap-index.xml        301
+/feed/                          /rss.xml                  301
+/category/insights/feed/        /rss.xml                  301

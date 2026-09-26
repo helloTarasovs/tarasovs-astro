@@ -1,0 +1,23 @@
+---
+// /category/insights/page/2/, /page/3/ ... same URL pattern as WordPress
+import Base from '../../../../layouts/Base.astro';
+import PostList from '../../../../components/PostList.astro';
+import { sortedPosts, pageSlice } from '../../../../lib/posts';
+
+export async function getStaticPaths() {
+  const all = await sortedPosts();
+  const { lastPage } = pageSlice(all, 1);
+  return Array.from({ length: lastPage - 1 }, (_, i) => ({ params: { page: String(i + 2) } }));
+}
+
+const page = Number(Astro.params.page);
+const { items, lastPage } = pageSlice(await sortedPosts(), page);
+---
+<Base
+  title={`Insights - Page ${page} of ${lastPage} - Tarasovs Digital Agency`}
+  description="Articles on GEO, AI search visibility, SEO, Framer and web design from Tarasovs Digital Agency."
+  canonical={`/category/insights/page/${page}/`}
+>
+  <h1>Insights <span>Page {page}</span></h1>
+  <PostList posts={items} currentPage={page} lastPage={lastPage} />
+</Base>
