@@ -1,0 +1,44 @@
+---
+// Privacy and Terms: same layout, copy lives in src/content/legal/*.html
+import Base from './Base.astro';
+import { wpPage } from '../lib/pages';
+import { breadcrumbSchema } from '../lib/schema';
+
+interface Props {
+  url: string;
+  updated: string; // "Last updated" line as written in the document
+  intro: string;
+  html: string;
+}
+const { url, updated, intro, html } = Astro.props;
+const page = wpPage(url);
+const jsonld = [...page.jsonld, breadcrumbSchema([{ name: 'Home', path: '/' }, { name: page.title, path: url }])];
+---
+<Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld}>
+  <article class="legal container container-prose">
+    <header class="legal-header">
+      <p class="eyebrow">Legal · {updated}</p>
+      <h1>{page.title}</h1>
+      <p class="legal-intro">{intro}</p>
+    </header>
+    <div class="prose legal-body" set:html={html} />
+  </article>
+</Base>
+
+<style>
+  .legal { padding-block: var(--space-7) var(--space-8); }
+  .legal h1 { margin-top: var(--space-3); font-size: var(--text-h2); }
+  .legal-header { padding-bottom: var(--space-6); margin-bottom: var(--space-6); border-bottom: 1px solid var(--color-border); }
+  .legal-intro { margin-top: var(--space-4); color: var(--color-text-muted); font-size: var(--text-lg); }
+  .legal-body :global(h2) { font-size: var(--text-h3); }
+  .legal-body :global(h3) { font-size: var(--text-h4); }
+  .legal-body :global(.legal-contact) {
+    margin-top: var(--space-7);
+    padding: var(--space-5) var(--space-5);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+  }
+  .legal-body :global(.legal-contact h2) { margin-top: 0; }
+  .legal-body :global(.legal-contact > * + *) { margin-top: 1em; }
+</style>

@@ -1,0 +1,104 @@
+---
+// Contact form -> Web3Forms. Works without JS (plain POST); with JS it submits via fetch
+// and shows success / error in place. Other pages link to /contact-us/#CForm, keep the id.
+interface Props {
+  subject?: string;
+  submitLabel?: string;
+}
+const { subject = 'New inquiry from tarasovs.me', submitLabel = 'Get a Quote' } = Astro.props;
+const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? '';
+if (!accessKey) console.warn('[ContactForm] PUBLIC_WEB3FORMS_KEY is not set: the form will show an error on submit.');
+---
+<form id="CForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-contact-form>
+  <input type="hidden" name="access_key" value={accessKey} />
+  <input type="hidden" name="subject" value={subject} />
+  <input type="hidden" name="from_name" value="tarasovs.me" />
+  <!-- Honeypot: humans never see it; Web3Forms drops submissions that fill it -->
+  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+  <div class="field">
+    <label for="cf-name">Name <span class="req">(required)</span></label>
+    <input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="400" placeholder="Your name" />
+  </div>
+  <div class="field">
+    <label for="cf-email">Email <span class="req">(required)</span></label>
+    <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="400" placeholder="Your working email" />
+  </div>
+  <div class="field">
+    <label for="cf-message">Message</label>
+    <textarea id="cf-message" name="message" rows="6" maxlength="2000" placeholder="Brief project details"></textarea>
+  </div>
+
+  <p class="consent">
+    By submitting this form, I agree to the <a href="/terms-of-service-tarasovs-digital-agency/">terms &amp; conditions</a> and <a href="/privacy-cookie-policy-tarasovs-digital-agency/">privacy policy</a>.
+  </p>
+
+  <button class="button" type="submit" data-submit>{submitLabel}</button>
+  <p class="status" role="status" aria-live="polite" data-status></p>
+</form>
+
+<style>
+  .contact-form { display: grid; gap: var(--space-4); scroll-margin-top: calc(var(--header-h) + var(--space-5)); }
+  .field { display: grid; gap: var(--space-2); }
+  label { font-weight: 500; font-size: var(--text-sm); }
+  .req { color: var(--color-text-muted); font-weight: 400; }
+  input:not([type='hidden']):not(.hp), textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 1rem; /* 16px+ stops iOS zoom on focus */
+    transition: border-color var(--dur) var(--ease);
+  }
+  textarea { resize: vertical; min-height: 140px; }
+  input::placeholder, textarea::placeholder { color: var(--color-text-muted); opacity: 0.8; }
+  input:focus-visible, textarea:focus-visible { border-color: var(--color-focus); outline-offset: 0; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .consent { color: var(--color-text-muted); font-size: var(--text-xs); }
+  .button { justify-self: start; min-width: 160px; }
+  .button[disabled] { opacity: 0.7; cursor: progress; }
+  .status:empty { display: none; }
+  .status { padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm); font-size: var(--text-sm); }
+  .status.is-success { background: color-mix(in srgb, #16a34a 14%, transparent); color: var(--color-text); }
+  .status.is-error { background: color-mix(in srgb, #dc2626 14%, transparent); color: var(--color-text); }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('[data-contact-form]').forEach((form) => {
+    const status = form.querySelector<HTMLElement>('[data-status]')!;
+    const submit = form.querySelector<HTMLButtonElement>('[data-submit]')!;
+    const label = submit.textContent;
+    const show = (kind: 'success' | 'error', text: string) => {
+      status.className = `status is-${kind}`;
+      status.textContent = text;
+    };
+
+    form.addEventListener('submit', async (e) => {
+      // Native required/email validation has already run: submit only fires for a valid form.
+      e.preventDefault();
+      submit.disabled = true;
+      submit.textContent = 'Sending…';
+      status.className = 'status';
+      status.textContent = '';
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(form),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data.success) throw new Error(data.message || `HTTP ${res.status}`);
+        form.reset();
+        show('success', 'Thank you! Your message has been sent. We will get back to you soon.');
+      } catch {
+        show('error', 'Sorry, the message could not be sent. Please try again or email hello@tarasovs.me.');
+      } finally {
+        submit.disabled = false;
+        submit.textContent = label;
+      }
+    });
+  });
+</script>

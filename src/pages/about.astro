@@ -1,0 +1,281 @@
+---
+// /about/  Copy from _wp-export/pages/about.html, SEO + FAQPage from pages.json.
+// Visible FAQ is rendered from the FAQPage schema, so the two always match.
+import Base from '../layouts/Base.astro';
+import { wpPage } from '../lib/pages';
+import { breadcrumbSchema } from '../lib/schema';
+
+const page = wpPage('/about/');
+const faq: any = page.jsonld.find((b: any) => b['@type'] === 'FAQPage');
+const faqItems: { q: string; a: string }[] = (faq?.mainEntity ?? []).map((e: any) => ({ q: e.name, a: e.acceptedAnswer.text }));
+const linkEmail = (s: string) => s.replace(/hello@tarasovs\.me/g, '<a href="mailto:hello@tarasovs.me">hello@tarasovs.me</a>');
+
+const jsonld = [...page.jsonld, breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'About', path: '/about/' }])];
+
+const stats = [
+  { value: '15+', label: 'Years building', hl: 'for the web' },
+  { value: '79+', label: 'Projects delivered across', hl: 'the US and Europe' },
+  { value: '12', label: 'Industries served — from legal to', hl: 'e-commerce' },
+  { value: '2024', label: 'Year we launched', hl: 'GEO as a core service' },
+  { value: '100%', label: 'Of projects launched', hl: 'with AI-ready structure' },
+];
+
+const beliefs = [
+  { title: 'Research before design.', text: 'We don’t open a design tool until we understand your users, your competitors, and your business goals. Every visual and structural decision we make is traceable to a reason. This makes our work more predictable and your investment more defensible.' },
+  { title: 'Build for where search is going, not where it’s been.', text: 'The agencies still optimizing purely for Google 2020 are doing their clients a disservice. AI search is not a future trend — it’s a present reality. We take it seriously because our clients’ businesses depend on being discoverable wherever their customers are looking.' },
+  { title: 'Transparency over performance.', text: 'We report what actually happened — traffic, citations, conversions, what worked and what didn’t. If a strategy isn’t delivering, we say so and adjust. We’d rather have an honest conversation than a comfortable client relationship built on misleading reports.' },
+  { title: 'Character is non-negotiable.', text: 'Skill and experience are the minimum requirement. We hire people who take ownership, communicate proactively, and care about the outcome beyond their specific deliverable. A team of talented people with poor character produces poor results. We’ve built our team the other way around.' },
+  { title: 'Quality over volume.', text: 'We take on fewer clients than we could, because every client gets senior attention. We’re not interested in scaling a model that waters down quality. We’re interested in building a reputation that compounds.' },
+];
+
+const services = [
+  { title: 'Web Design & Development', text: 'Fast, conversion-focused websites built on clean semantic code, optimized for Core Web Vitals, and structured for both human readers and AI retrieval systems.' },
+  { title: 'SEO', text: 'Technical SEO, content strategy, and local SEO for New York and target European markets. Rankings that compound over time, not paid placements that disappear when the budget stops.' },
+  { title: 'GEO — AI Search Optimization', text: 'Structured content, FAQPage schema, E-E-A-T authority building, and Share of Model tracking. We help your brand appear in ChatGPT answers, Perplexity citations, and Google AI Overviews — where the next generation of clients is looking.' },
+];
+
+const clients = [
+  { title: 'Small and mid-size businesses', hl: 'in New York', text: 'who want to compete with larger competitors online through better SEO, stronger design, and AI search visibility.' },
+  { title: 'European', hl: 'B2B companies', text: 'who want to compete with larger competitors online through better SEO, stronger design, and AI search visibility.' },
+  { title: 'Service', hl: 'businesses', text: 'law firms, medical practices, consultancies, creative studios — where the website is the primary trust-building tool before a client makes contact.' },
+  { title: 'Agencies and', hl: 'founders', text: 'who want a reliable technical partner for web design and SEO without building an in-house team.' },
+];
+
+const reasons = [
+  { title: 'We practice what we sell', text: 'This About page, our service pages, our blog, and our FAQ sections are all structured for AI retrieval. We appear in ChatGPT and Perplexity answers about GEO agencies in New York. We don’t just promise AI search visibility — we have it ourselves.' },
+  { title: 'One team, full ownership', text: 'No handoffs to junior staff after the sales call. The team you meet is the team that builds your project, from brief to launch and beyond.' },
+  { title: 'We say no when it’s the right answer', text: 'If a client’s brief is unclear, the budget doesn’t match the scope, or we genuinely don’t think we’re the best fit — we say so. Clients who’ve worked with agencies that overpromise and underdeliver appreciate this more than we expected.' },
+  { title: 'Long-term thinking', text: 'SEO and GEO are not short-term plays. We structure our engagements for sustained growth — content that compounds, authority that builds, and strategies that keep working after the first invoice is paid.' },
+];
+---
+<Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld}>
+  <div class="about">
+    <header class="hero container">
+      <p class="eyebrow">About Tarasovs Digital Agency</p>
+      <h1>We build digital products that get found <span class="hl">— by people and by AI</span></h1>
+      <p class="hero-lead">Tarasovs is a web design, SEO, and GEO agency serving businesses in New York and across Europe. We’ve been building digital products that perform since 2018 — and since 2024, we’ve been building them to perform in AI search too.</p>
+    </header>
+
+    <section class="section container" aria-labelledby="story">
+      <div class="container-prose intro">
+      <h2 id="story">How Tarasovs started</h2>
+      <div class="prose">
+        <p>Tarasovs began as a two-person web design studio in Staten Island, New York. Over the next six years we grew into a full-service digital agency. Today the team works from Romania and Ukraine, serving clients across the US, UK, and Europe.</p>
+        <p>Over the next six years, we grew into a full-service digital agency with a distributed team across three countries — New York, Sumy (Ukraine), and Timișoara (Romania). We’ve worked with local businesses on Staten Island, B2B companies in Germany, e-commerce brands in the UK, and startups across the US.</p>
+        <p>In 2024, we made a deliberate shift. As AI-powered search platforms — ChatGPT, Perplexity, Google AI Overviews — began answering user queries directly, we realized that traditional SEO alone was no longer sufficient. We invested in developing a GEO (Generative Engine Optimization) methodology and integrated it into every service we offer. Today, every website we launch is built to perform in both Google and AI search from day one.</p>
+      </div>
+      </div>
+    </section>
+
+    <section class="container" aria-label="Tarasovs in numbers">
+      <ul class="stats">
+        {stats.map((s) => (
+          <li>
+            <span class="stat-value">{s.value}</span>
+            <span class="stat-label">{s.label} <span class="hl">{s.hl}</span></span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="section container founder" aria-labelledby="founder">
+      <div class="founder-photo">
+        <img src="/wp-content/uploads/2026/07/tarasovs-portfolio-400x400-1.webp" alt="Yurii Tarasov Founder & Web Designer" width="400" height="400" loading="lazy" decoding="async" />
+      </div>
+      <div class="founder-text">
+        <p class="eyebrow">About Founder &amp; Web Designer</p>
+        <h2 id="founder">Yurii Tarasov</h2>
+        <div class="prose">
+          <p>Yurii Tarasov is the founder of Tarasovs Digital Agency, with 15+ years of experience in web design and development. He personally leads every project — from Figma design through Framer and WordPress development to SEO and GEO (Generative Engine Optimization) strategy.</p>
+          <p>Yurii is a recognized <strong>Framer Expert</strong>, featured in the official <a href="https://www.framer.com/experts/">Framer Experts directory</a> and active in the <a href="https://www.framer.com/@yurii-tarasov/">Framer community</a>, where he shares build breakdowns and Framer/AI workflow experiments. He is also available for select independent projects on <a href="https://contra.com/yurii_tarasov_framer_expert">Contra</a>.</p>
+          <p>Based in Timișoara, Romania, Yurii works remotely with clients across the United States, United Kingdom, and Europe.</p>
+          <p>Connect: <a href="https://www.linkedin.com/in/yurii-tarasov/" rel="me">LinkedIn</a> · <a href="https://www.framer.com/@yurii-tarasov/" rel="me">Framer Community</a> · <a href="https://contra.com/yurii_tarasov_framer_expert" rel="me">Contra</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="beliefs">
+      <h2 id="beliefs">What we believe</h2>
+      <div class="cards cards--3">
+        {beliefs.map((b) => (
+          <article class="card">
+            <h3>{b.title}</h3>
+            <p>{b.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="what-we-do">
+      <div class="container-prose intro">
+        <h2 id="what-we-do">What we do <span class="hl">and why it’s different</span></h2>
+        <div class="prose">
+          <p>Most digital agencies offer web design, SEO, or both. We do the same — but with one additional layer that most agencies haven’t built yet: <strong>GEO, Generative Engine Optimization</strong>.</p>
+          <p><strong>In 2026, a growing share of your potential clients</strong> don’t search Google. They ask ChatGPT. They use Perplexity. They get answers from Google AI Overviews without clicking a single link. If your business isn’t represented in those AI-generated responses, you’re invisible to a portion of your market that’s growing every month.</p>
+          <p><strong>We build websites</strong> and digital strategies that work across all three discovery channels simultaneously:</p>
+        </div>
+      </div>
+      <div class="cards cards--3">
+        {services.map((s) => (
+          <article class="card">
+            <h3>{s.title}</h3>
+            <p>{s.text}</p>
+          </article>
+        ))}
+      </div>
+      <picture>
+        <source type="image/webp" srcset="/wp-content/uploads/2026/05/copilot_graph-768x432.webp 768w, /wp-content/uploads/2026/05/copilot_graph.webp 1672w" sizes="(min-width: 1400px) 1344px, calc(100vw - 2rem)" />
+        <img class="graph" src="/wp-content/uploads/2026/05/copilot_graph.png" alt="Built for Google and AI Search" width="1672" height="941" loading="lazy" decoding="async" />
+      </picture>
+    </section>
+
+    <section class="section container" aria-labelledby="who">
+      <div class="container-prose intro">
+        <h2 id="who">Who we work with</h2>
+        <p class="section-lead">We work best with businesses that are serious about their digital presence — not looking for the cheapest option, but looking for the right one. Our clients are typically one of the following:</p>
+      </div>
+      <div class="cards cards--4">
+        {clients.map((c) => (
+          <article class="card">
+            <h3>{c.title} <span class="hl">{c.hl}</span></h3>
+            <p>{c.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="why">
+      <h2 id="why">Why clients choose us — and stay</h2>
+      <div class="cards cards--2">
+        {reasons.map((r) => (
+          <article class="card">
+            <h3>{r.title}</h3>
+            <p>{r.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    {faqItems.length > 0 && (
+      <section class="section container" aria-labelledby="faq">
+        <div class="container-prose intro">
+        <p class="eyebrow">Still have Qs?</p>
+        <h2 id="faq">Questions we get a lot.</h2>
+        <div class="faq">
+          {faqItems.map((f) => (
+            <details>
+              <summary><h3>{f.q}</h3></summary>
+              <p set:html={linkEmail(f.a)} />
+            </details>
+          ))}
+        </div>
+        <p class="faq-more">Still have questions? <a href="/contact-us/#CForm">Contact Us</a></p>
+        </div>
+      </section>
+    )}
+
+    <section class="section container" aria-labelledby="cta">
+      <div class="cta">
+        <p class="eyebrow">Let’s Collaborate</p>
+        <h2 id="cta">Ready to <span class="hl">work together?</span></h2>
+        <p class="cta-text">Whether you need a new website, stronger search rankings, or AI search visibility — or all three — we’d like to hear about your project.</p>
+        <a class="button button--highlight" href="mailto:hello@tarasovs.me">
+          Start your project
+          <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 11h11.6l-5.3-5.3L12.7 4.3 20.4 12l-7.7 7.7-1.4-1.4 5.3-5.3H5z" /></svg>
+        </a>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .about { padding-bottom: var(--space-8); }
+  .hero { padding-block: var(--space-8) var(--space-6); }
+  .hero h1 { margin-top: var(--space-4); max-width: 20ch; }
+  .hero-lead { margin-top: var(--space-5); max-width: 62ch; font-size: var(--text-lg); color: var(--color-text-muted); }
+
+  .section { margin-top: var(--space-9); }
+  .section h2 { margin-bottom: var(--space-5); }
+  .intro { margin-inline: 0; padding-inline: 0; margin-bottom: var(--space-6); }
+  .section-lead { color: var(--color-text-muted); }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
+    margin-top: var(--space-8);
+    padding: 0;
+    list-style: none;
+  }
+  .stats li { display: flex; flex-direction: column; gap: var(--space-2); padding-top: var(--space-4); border-top: 1px solid var(--color-border); }
+  .stats li:last-child { grid-column: 1 / -1; }
+  .stat-value { font-family: var(--font-title); font-size: var(--text-h1); font-weight: 500; line-height: 1; color: var(--color-heading); letter-spacing: var(--tracking-title); }
+  .stat-label { font-size: var(--text-sm); color: var(--color-text-muted); }
+
+  .founder { display: grid; gap: var(--space-6); }
+  .founder-photo img { width: min(320px, 100%); border-radius: var(--radius-lg); }
+  .founder-text h2 { margin-top: var(--space-3); }
+
+  .cards { display: grid; gap: var(--space-4); }
+  .card {
+    padding: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+  }
+  .card h3 { font-size: var(--text-h4); margin-bottom: var(--space-3); }
+  .card p { color: var(--color-text-muted); font-size: var(--text-sm); }
+  .graph { width: 100%; margin-top: var(--space-6); border-radius: var(--radius-lg); }
+
+  .faq { border-top: 1px solid var(--color-border); }
+  details { border-bottom: 1px solid var(--color-border); }
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    min-height: 56px;
+    padding-block: var(--space-4);
+    cursor: pointer;
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: '';
+    flex: none;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg) translateY(-3px);
+    transition: transform var(--dur) var(--ease);
+  }
+  details[open] summary::after { transform: rotate(-135deg) translateY(-3px); }
+  summary h3 { font-size: var(--text-lg); font-weight: 600; }
+  details p { padding-bottom: var(--space-5); color: var(--color-text-muted); }
+  .faq-more { margin-top: var(--space-5); }
+
+  .cta {
+    padding: var(--space-7) var(--space-5);
+    border-radius: var(--radius-lg);
+    background: var(--brand-navy);
+    color: #f4f3f7;
+  }
+  .cta .eyebrow { color: #b9b6c3; }
+  .cta h2 { margin-top: var(--space-3); color: #fff; }
+  .cta-text { max-width: 52ch; margin-bottom: var(--space-6); font-size: var(--text-lg); color: #d6d3de; }
+
+  @media (min-width: 40em) {
+    .stats { grid-template-columns: repeat(3, 1fr); }
+    .stats li:last-child { grid-column: auto; }
+    .cards--2, .cards--4 { grid-template-columns: repeat(2, 1fr); }
+    .cta { padding: var(--space-8) var(--space-7); }
+  }
+  @media (min-width: 64em) {
+    .stats { grid-template-columns: repeat(5, 1fr); }
+    .founder { grid-template-columns: 320px 1fr; gap: var(--space-8); align-items: start; }
+    .cards--3 { grid-template-columns: repeat(3, 1fr); }
+    .cards--4 { grid-template-columns: repeat(4, 1fr); }
+    .cards { gap: var(--space-5); }
+  }
+</style>

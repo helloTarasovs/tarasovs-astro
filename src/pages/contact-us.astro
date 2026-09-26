@@ -1,0 +1,92 @@
+---
+// /contact-us/  Copy from _wp-export/pages/contact-us.html, SEO from pages.json
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { wpPage } from '../lib/pages';
+import { breadcrumbSchema } from '../lib/schema';
+import { CONTACT } from '../lib/nav';
+
+const page = wpPage('/contact-us/');
+const jsonld = [...page.jsonld, breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Contacts', path: '/contact-us/' }])];
+---
+<Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld}>
+  <div class="contact container">
+    <header class="contact-header">
+      <h1>Contacts</h1>
+    </header>
+
+    <div class="contact-grid">
+      <section class="offices" aria-labelledby="offices-title">
+        <h2 id="offices-title">Our offices</h2>
+        <p class="lead">Remote-first agency serving New York and US clients</p>
+
+        <div class="office">
+          <h3>Timisoara</h3>
+          <p>Str. Narcisei 64, 307220 Giroc</p>
+          <p><strong>Call us:</strong><br /><a href={CONTACT.phoneHref}>{CONTACT.phone}</a></p>
+          <p><strong>Assistance hours:</strong><br />Monday – Friday<br />6 am to 8 pm EST (toll-free)</p>
+        </div>
+
+        <div class="office">
+          <h3>General questions</h3>
+          <p>Remote-first agency serving<br /><strong>New York and US clients</strong></p>
+          <p><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
+        </div>
+      </section>
+
+      <section class="inquiry" aria-labelledby="inquiry-title">
+        <h2 id="inquiry-title">Work inquiries</h2>
+        <p class="lead">Fill in this form<br /> with your support inquiry.</p>
+        <ContactForm />
+      </section>
+    </div>
+
+    <div class="map">
+      <iframe
+        loading="lazy"
+        src="https://maps.google.com/maps?q=Str.%20Narcisei%2064%2C%20307220%20Giroc&t=m&z=10&output=embed&iwloc=near"
+        title="Map: Str. Narcisei 64, 307220 Giroc"
+        width="1344"
+        height="420"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <section class="careers" aria-labelledby="careers-title">
+      <p class="eyebrow">Careers</p>
+      <h2 id="careers-title">Join us to create <span class="hl">the best digital solutions.</span></h2>
+      <a class="button" href="/contact-us/#CForm">
+        Explore Careers
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 11h11.6l-5.3-5.3L12.7 4.3 20.4 12l-7.7 7.7-1.4-1.4 5.3-5.3H5z" /></svg>
+      </a>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .contact { padding-block: var(--space-7) var(--space-8); }
+  .contact-header { margin-bottom: var(--space-7); }
+  .contact-grid { display: grid; gap: var(--space-7); }
+  h2 { font-size: var(--text-h3); }
+  .lead { margin-top: var(--space-3); color: var(--color-text-muted); }
+  .office { margin-top: var(--space-6); padding-top: var(--space-5); border-top: 1px solid var(--color-border); }
+  .office h3 { font-size: var(--text-h4); margin-bottom: var(--space-3); }
+  .office p + p { margin-top: var(--space-3); }
+  .office strong { font-weight: 600; }
+  .inquiry {
+    padding: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+  .inquiry .lead { margin-bottom: var(--space-5); }
+  .map { margin-top: var(--space-8); border-radius: var(--radius-lg); overflow: hidden; background: var(--color-surface-2); }
+  .map iframe { display: block; width: 100%; height: clamp(280px, 40vw, 420px); border: 0; }
+  :global([data-theme='dark']) .map iframe { filter: invert(0.9) hue-rotate(180deg); }
+  .careers { margin-top: var(--space-8); }
+  .careers h2 { margin-block: var(--space-3) var(--space-5); font-size: var(--text-h2); max-width: 18ch; }
+  @media (min-width: 64em) {
+    .contact-grid { grid-template-columns: 5fr 7fr; gap: var(--space-8); align-items: start; }
+    .inquiry { padding: var(--space-7); }
+  }
+</style>
