@@ -68,10 +68,18 @@ const inSection = (item: NavItem): boolean =>
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 1px solid var(--color-border);
+  }
+  /* Blur lives on a pseudo-element: backdrop-filter on the header itself would make it the
+     containing block of the fixed mobile menu (Safari then clips the menu to ~80px). */
+  .site-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
     background: var(--color-header-bg);
     backdrop-filter: saturate(1.4) blur(12px);
     -webkit-backdrop-filter: saturate(1.4) blur(12px);
-    border-bottom: 1px solid var(--color-border);
   }
   .header-inner {
     display: flex;
@@ -146,6 +154,7 @@ const inSection = (item: NavItem): boolean =>
       display: none;
       position: fixed;
       inset: 64px 0 0 0;
+      height: calc(100dvh - 64px);
       overflow-y: auto;
       overscroll-behavior: contain;
       padding: var(--space-4) var(--gutter) var(--space-8);
