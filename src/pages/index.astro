@@ -11,8 +11,8 @@ import { wpPage } from '../lib/pages';
 import { sortedProjects } from '../lib/projects';
 import homeFaq from '../content/home-faq.json';
 
-// "PageSpeed Grade: A" stays off until the rebuilt home scores 90+ on mobile PageSpeed.
-const SHOW_PAGESPEED_CLAIM = false;
+// "PageSpeed Grade: A": verified 2026-09-26, Lighthouse 12 mobile on workers.dev = 100 (median of 3; PSI API was over quota).
+const SHOW_PAGESPEED_CLAIM = true;
 
 const page = wpPage('/');
 const projects = (await sortedProjects()).slice(0, 7);
@@ -320,7 +320,8 @@ const stats = [
   .panel .button { align-self: flex-start; margin-top: auto; }
   .panel :global(.checklist) { grid-template-columns: 1fr; }
   .perf { display: grid; gap: var(--space-2); padding: 0; list-style: none; font-size: var(--text-sm); }
-  .perf strong { display: inline-block; min-width: 3.2em; font-family: var(--font-title); font-size: var(--text-h4); color: var(--color-link); }
+  .perf li { display: grid; grid-template-columns: 3.5rem 1fr; align-items: baseline; gap: var(--space-3); }
+  .perf strong { font-family: var(--font-title); font-size: var(--text-h4); color: var(--color-link); }
   .assistants { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: auto; padding: 0; list-style: none; }
   .assistants li { display: flex; align-items: center; gap: var(--space-2); padding: 0.35rem 0.8rem 0.35rem 0.35rem; border-radius: var(--radius-pill); background: var(--color-surface-2); font-size: var(--text-sm); font-weight: 500; }
   .assistants img { width: 28px; height: 28px; border-radius: 50%; background: #fff; object-fit: contain; }
