@@ -15,7 +15,8 @@ const { Content } = await render(post);
 const d = post.data;
 const path = `/${d.slug}/`;
 const title = d.seo?.title ?? `${d.title} - Tarasovs Digital Agency`;
-const description = d.seo?.description ?? d.excerpt;
+// Only the Yoast description: WordPress had none on some posts, and the excerpt is not a usable fallback.
+const description = d.seo?.description;
 const image = d.seo?.ogImage ?? d.cover?.src;
 // A few WordPress bodies start with their own <h1>; then the template title must not add a second one.
 const bodyHasH1 = /<h1[\s>]/i.test(post.body ?? '');

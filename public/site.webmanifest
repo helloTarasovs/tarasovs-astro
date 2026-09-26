@@ -1,0 +1,11 @@
+{
+  "name": "Tarasovs Digital Agency",
+  "short_name": "Tarasovs",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#130F24",
+  "background_color": "#F9F9F9",
+  "display": "browser"
+}

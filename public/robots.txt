@@ -32,4 +32,4 @@ Allow: /
 Disallow: /tag/*/feed/
 Disallow: /category/*/feed/
 
-Sitemap: https://tarasovs.me/sitemap_index.xml
+Sitemap: https://tarasovs.me/sitemap-index.xml

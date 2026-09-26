@@ -14,8 +14,8 @@ const page = Number(Astro.params.page);
 const { items, lastPage } = pageSlice(await sortedPosts(), page);
 ---
 <Base
-  title={`Insights - Page ${page} of ${lastPage} - Tarasovs Digital Agency`}
-  description="Articles on GEO, AI search visibility, SEO, Framer and web design from Tarasovs Digital Agency."
+  title={`Insights Archives - Page ${page} of ${lastPage} - Tarasovs Digital Agency`}
+  description="Explore expert insights on web design, development, SEO, GEO, AI search, Framer, Webflow, and digital growth from Tarasovs Digital Agency."
   canonical={`/category/insights/page/${page}/`}
 >
   <div class="page container">

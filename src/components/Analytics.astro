@@ -1,0 +1,34 @@
+---
+// GA4 (Google tag) + Microsoft Clarity. Nothing loads until the visitor first interacts
+// (pointer, key, scroll, touch), and only on the production host, so PageSpeed/test URLs stay clean.
+import { ANALYTICS } from '../lib/site';
+const { googleTagId, clarityId, hosts } = ANALYTICS;
+---
+<script is:inline define:vars={{ googleTagId, clarityId, hosts }}>
+  (function () {
+    if (hosts.indexOf(location.hostname) === -1) return;
+    var loaded = false;
+    var events = ['pointerdown', 'keydown', 'scroll', 'touchstart'];
+    function load() {
+      if (loaded) return;
+      loaded = true;
+      events.forEach(function (e) { removeEventListener(e, load, true); });
+      // Google tag
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', googleTagId);
+      var g = document.createElement('script');
+      g.async = true;
+      g.src = 'https://www.googletagmanager.com/gtag/js?id=' + googleTagId;
+      document.head.appendChild(g);
+      // Microsoft Clarity
+      (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+        t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', clarityId);
+    }
+    events.forEach(function (e) { addEventListener(e, load, { capture: true, passive: true, once: true }); });
+  })();
+</script>
