@@ -1,0 +1,373 @@
+---
+// Home. Copy from the live home page (the WP export only holds the testimonials widget).
+// SEO fields from pages.json; FAQPage JSON-LD from the live page (src/content/home-faq.json).
+import Base from '../layouts/Base.astro';
+import PortfolioGrid from '../components/PortfolioGrid.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Cards from '../components/blocks/Cards.astro';
+import Faq from '../components/blocks/Faq.astro';
+import Checklist from '../components/blocks/Checklist.astro';
+import { wpPage } from '../lib/pages';
+import { sortedProjects } from '../lib/projects';
+import homeFaq from '../content/home-faq.json';
+
+// "PageSpeed Grade: A" stays off until the rebuilt home scores 90+ on mobile PageSpeed.
+const SHOW_PAGESPEED_CLAIM = false;
+
+const page = wpPage('/');
+const projects = (await sortedProjects()).slice(0, 7);
+const faqItems = homeFaq.mainEntity.map((e) => ({ q: e.name, a: `<p>${e.acceptedAnswer.text}</p>` }));
+const jsonld = [...page.jsonld, homeFaq];
+
+const U = '/wp-content/uploads';
+const features = [
+  { label: 'Figma design', icon: `${U}/2026/06/250px-Figma-logo.svg-96w.webp`, w: 96, h: 144 },
+  { label: 'No coding skills required', icon: `${U}/2026/06/webflow-icon.svg`, w: 512, h: 319 },
+  { label: 'Framer, Webflow, WordPress', icon: 'framer' },
+  { label: 'AI-powered search visibility', icon: `${U}/2026/05/Google-Gemini-Logo-Transparent-96w.webp`, w: 96, h: 96 },
+  { label: 'Reliable and regular updates', icon: `${U}/2026/04/revslider_icon.webp`, w: 160, h: 160 },
+];
+
+const build = [
+  {
+    meta: 'Ready-to-use',
+    title: 'Framer, Webflow and WordPress Website Development',
+    html: '<p>We build fast, responsive, and visually polished Framer websites for startups, agencies, service businesses, and growing brands. From Figma to Framer, we focus on clean structure, smooth animations, mobile responsiveness, CMS setup, and easy future updates.</p>',
+    link: { label: 'Show all projects', href: '/services/website-development/' },
+  },
+  {
+    meta: 'Customizable',
+    title: 'Website Design &amp; Redesign',
+    html: '<p>We design modern websites that help businesses look more professional, communicate more clearly, and improve user experience. Whether you need a new website or a redesign of an outdated one, we create layouts that are clean, strategic, and conversion-focused.</p>',
+    link: { label: 'Improve Your Website', href: '/services/website-design-services/' },
+    img: { src: `${U}/2026/05/tarasovs-home-2.webp`, alt: 'process of Website Design & Redesign', width: 1424, height: 976 },
+  },
+  {
+    meta: 'Ready-to-grow',
+    title: 'SEO Strategy &amp; Technical Optimization',
+    html: '<p>We help websites build a stronger foundation for organic growth. This includes page structure, metadata, headings, internal linking, technical SEO, schema markup, content planning, and performance improvements.</p>',
+    link: { label: 'Grow with SEO', href: '/services/seo-services/' },
+  },
+  {
+    meta: 'Improvements in AI citing',
+    title: 'AI Search Optimization',
+    html: '<p>Most agencies optimize for yesterday’s search. We build for today’s: where AI assistants like ChatGPT and Google AI Overviews answer questions before users click a single link. Your content will be structured to be cited, not just ranked.</p>',
+    link: { label: 'Prepare for AI Search', href: '/services/geo-ai-search-optimization/' },
+    img: { src: `${U}/2026/06/tarasovs-ui-optimisation-for-ai-seo.webp`, alt: 'AI Search Optimization', width: 1536, height: 1024 },
+  },
+];
+
+const improve = ['Website structure and page hierarchy', 'Service page clarity', 'SEO-friendly content', 'FAQ sections', 'Schema markup', 'Internal linking', 'Brand trust signals', 'Case study structure'];
+
+const assistants = [
+  { name: 'GPT', src: `${U}/2026/05/vecteezy_chatgpt-logo-chat-gpt-icon-on-white-background_21059827-96w.webp` },
+  { name: 'Claude', src: `${U}/2026/05/claude_ai-96w.webp` },
+  { name: 'Copilot', src: `${U}/2026/05/copilot-96w.webp` },
+  { name: 'Gemini', src: `${U}/2026/05/Google-Gemini-Logo-Transparent-96w.webp` },
+];
+
+const testimonials = [
+  {
+    year: '2024',
+    tag: 'AI Search Optimization',
+    quote: [
+      'I came to Tarasovs because my website ranked well on Google, but I wasn’t appearing when people asked ChatGPT or Perplexity for the best personal stylist in Milan. Instead, AI tools were recommending competitors with far less experience.',
+      'Tarasovs fixed that by restructuring my service pages, adding FAQ schema, and repositioning my About page to clearly show my authority — 15 years of experience, work at Prada, and 700+ clients styled.',
+      'Within six weeks, Shopping Moda Italia started appearing in AI answers for personal stylist searches in Milan. In the first month after launch, three new clients told me they found me through ChatGPT.',
+      'For a trust-based service business, being recommended by AI feels like the new word-of-mouth referral. Tarasovs made that happen.',
+    ],
+    name: 'Anna Chekunova',
+    role: 'Shopping Moda Italia — Personal Stylist in Milan',
+  },
+  {
+    year: '2025',
+    tag: 'Web Development / Framer',
+    quote: [
+      'We needed a Framer site that didn’t look like every other Framer site — and that’s exactly what Tarasovs delivered. They took our rough brand direction and turned it into something genuinely distinctive: smooth interactions, a clean component structure, and performance scores that came in at 97 on PageSpeed from day one. The handoff was equally impressive — everything documented, CMS collections set up so our team could manage content without touching code. Three months post-launch, the site has become our best sales tool. Every new prospect comments on it before we say a word about our work.',
+    ],
+    name: 'Sophie van der Berg',
+    role: 'Head of Marketing, Praxis Legal Group - New York, NY',
+  },
+  {
+    year: '2026',
+    tag: 'SEO services',
+    quote: [
+      'We launched our interior design studio’s English-language site with almost no organic visibility in the UK and US markets. Tarasovs built our SEO strategy from scratch — keyword architecture, technical audit, local citation building, and a content plan that actually made sense for our business. Six months later we’re ranking on page one for seven target keywords, organic traffic is up 340%, and we’re getting inbound inquiries from London and New York without running a single ad. What stood out was how clearly they explained every decision — no jargon, no mystery. Just a plan, executed consistently.',
+    ],
+    name: 'Marcus Reid',
+    role: 'Founder & CEO, Bloomfield Interiors — Amsterdam, Netherlands',
+  },
+];
+
+const why = [
+  { title: 'Design That Builds Trust', html: '<p>Your website is often the first impression of your business. We create clean, modern, and professional designs that help visitors understand your value quickly.</p>' },
+  { title: 'Framer Development with SEO in Mind', html: '<p>We build Framer websites with responsive layouts, clean page structure, optimized headings, metadata, internal links, and a strong foundation for organic visibility.</p>' },
+  { title: 'Built for Google and AI Search', html: '<p>We help your website communicate clearly to users, search engines, and AI-powered discovery platforms.</p>' },
+];
+
+const stats = [
+  { value: '79+', label: 'Framer, SEO <span class="hl">and AI search optimization</span>' },
+  { value: '4.9 / 5', label: 'Client <span class="hl">satisfaction</span>' },
+  { value: '15+', label: 'Years <span class="hl">of web design experience</span>' },
+];
+---
+<Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld}>
+
+  <section class="hero container" aria-labelledby="hero-title">
+    <p class="hero-badge"><a href="/services/geo-ai-search-optimization/"><span>New</span> GEO AI Search Optimization</a></p>
+    <h1 id="hero-title">We build websites that get found <span class="hl">on Google and in AI</span></h1>
+    <p class="hero-lead">Based in Europe. Serving clients in the US, UK, EU, and beyond</p>
+    <p class="actions">
+      <a class="button" href="/contact-us/#CForm">Start a Project</a>
+      <a class="button button--ghost" href="/case-studies/">View Our Work</a>
+    </p>
+  </section>
+
+  <section class="section container" aria-labelledby="work-title">
+    <h2 id="work-title" class="visually-hidden">Selected work</h2>
+    {/* LCP on home is the h1 at every width (measured), so no image preload here */}
+    <PortfolioGrid projects={projects} />
+    <p class="more"><a class="button button--ghost" href="/case-studies/">View All Work</a></p>
+  </section>
+
+  <section class="section container" aria-labelledby="studio-title">
+    <div class="head">
+      <h2 id="studio-title">A Europe-Based Digital Studio for Websites, SEO and AI Search</h2>
+      <p class="intro">Tarasovs Digital Agency helps businesses in the US and Europe create modern websites that look premium, communicate clearly, convert visitors, and support long-term visibility in Google and AI-powered search.</p>
+    </div>
+    <ul class="features">
+      {features.map((f) => (
+        <li>
+          <span class="feature-icon" aria-hidden="true">
+            {f.icon === 'framer'
+              ? <svg width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M4 0h16v8h-8zM4 8h8l8 8H4zM4 16h8v8z" /></svg>
+              : <img src={f.icon} alt="" width={f.w} height={f.h} loading="lazy" decoding="async" />}
+          </span>
+          {f.label}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section container" aria-labelledby="build-title">
+    <div class="head">
+      <h2 id="build-title">What We Help You Build</h2>
+      <p class="intro">A website should do more than look good. It should explain your offer, build trust, guide visitors, support SEO, and help your brand become easier to discover across modern search platforms.</p>
+    </div>
+    {[build.slice(0, 2), build.slice(2, 4)].map((pair, row) => {
+      const img = pair.find((c) => c.img)!.img!;
+      return (
+        <div class:list={['build-row', { reverse: row === 1 }]}>
+          <div class="build-cards">
+            {pair.map((c) => (
+              <article class="build-card">
+                <p class="build-meta">{c.meta}</p>
+                <h3 set:html={c.title} />
+                <div class="muted" set:html={c.html} />
+                <a class="build-link" href={c.link.href}>{c.link.label}<span class="visually-hidden">: {c.title.replace('&amp;', '&')}</span><span aria-hidden="true"> →</span></a>
+              </article>
+            ))}
+          </div>
+          <img class="build-img" src={img.src} alt={img.alt} width={img.width} height={img.height} loading="lazy" decoding="async" />
+        </div>
+      );
+    })}
+  </section>
+
+  <section class="section container" aria-labelledby="future-title">
+    <div class="head">
+      <h2 id="future-title">Prepare Your Website for the Future of Search</h2>
+      <p class="intro">Traditional SEO is still important, but it is no longer the only way people discover businesses online. More users now rely on AI-powered platforms to compare services, ask for recommendations, and make decisions faster. That means your website needs clear content, structured information, strong trust signals, helpful service pages, FAQ sections, schema markup, and a logical content hierarchy. Our AI search optimization approach helps your website become easier for search engines and AI platforms to understand, summarize, and reference.</p>
+    </div>
+    <div class="future">
+      <div class="panel">
+        <h3>What We Improve</h3>
+        <Checklist items={improve} />
+      </div>
+      <div class="panel">
+        <h3>Optimized for fast loading.</h3>
+        <p class="muted">High-performance Framer or Webflow architecture optimized for speed and search engine visibility.</p>
+        {SHOW_PAGESPEED_CLAIM && (
+          <ul class="perf">
+            <li><strong>A</strong> PageSpeed Grade: A</li>
+            <li><strong>61%</strong> Less CSS and JS code files from 0 to 61%</li>
+          </ul>
+        )}
+        <a class="button" href="/services/geo-ai-search-optimization/">Make Your Website AI-Ready</a>
+      </div>
+      <div class="panel">
+        <h3>SEO Foundation for Long-Term Growth</h3>
+        <p class="muted">We strengthen your website’s SEO foundation by improving its structure, content, technical setup, internal linking, schema markup, and performance — helping search engines better understand your business and support long-term organic growth.</p>
+        <ul class="assistants">
+          {assistants.map((a) => (
+            <li><img src={a.src} alt="" width="96" height="96" loading="lazy" decoding="async" /> {a.name}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="reviews-title">
+    <h2 id="reviews-title" class="visually-hidden">What clients say</h2>
+    <ul class="testimonials">
+      {testimonials.map((t) => (
+        <li>
+          <figure>
+            <p class="t-tag"><span>{t.year}</span> {t.tag}</p>
+            <blockquote>{t.quote.map((q) => <p>{q}</p>)}</blockquote>
+            <figcaption><strong>{t.name}</strong><span>{t.role}</span></figcaption>
+          </figure>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section container" aria-labelledby="why-title">
+    <div class="head">
+      <h2 id="why-title">Why Businesses Choose <span class="hl">Tarasovs Digital Agency</span></h2>
+      <p class="intro">We do not build websites as isolated design projects. We build digital assets that support your brand, visibility, and business growth. Our work combines creative design, technical development, SEO thinking, and a practical understanding of how users search for services today.</p>
+    </div>
+    <Cards items={why} columns={3} />
+    <picture>
+      <source type="image/webp" srcset={`${U}/2026/05/copilot_graph-768x432.webp 768w, ${U}/2026/05/copilot_graph.webp 1672w`} sizes="(min-width: 1400px) 1344px, calc(100vw - 2rem)" />
+      <img class="graph" src={`${U}/2026/05/copilot_graph.png`} alt="Built for Google and AI Search" width="1672" height="941" loading="lazy" decoding="async" />
+    </picture>
+  </section>
+
+  <section class="section container" aria-labelledby="founder-title">
+    <div class="founder">
+      <div>
+        <h2 id="founder-title">A Founder-Led Digital Studio for International Clients</h2>
+        <p class="intro">We work with startups, service businesses, agencies, and growing brands across the United States, Europe, and international markets. Every project is personally led by <a href="/about/">Yurii Tarasov</a>, combining 15+ years of web design and development experience with a modern approach to Framer, SEO, and AI-powered search visibility. You get direct communication, clear project structure, attention to detail, and the quality of an agency without unnecessary layers or communication gaps.</p>
+      </div>
+      <div class="founder-stats">
+        <p class="worldwide">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-2.9a15.7 15.7 0 0 0-1.4-3.6A8 8 0 0 1 18.9 8ZM12 4a13.9 13.9 0 0 1 1.9 4h-3.8A13.9 13.9 0 0 1 12 4ZM4.3 14a8.2 8.2 0 0 1 0-4h3.4a16.5 16.5 0 0 0 0 4H4.3Zm.8 2h2.9a15.7 15.7 0 0 0 1.4 3.6A8 8 0 0 1 5.1 16ZM8 8H5.1a8 8 0 0 1 4.3-3.6A15.7 15.7 0 0 0 8 8Zm4 12a13.9 13.9 0 0 1-1.9-4h3.8A13.9 13.9 0 0 1 12 20Zm2.3-6H9.7a14.6 14.6 0 0 1 0-4h4.6a14.6 14.6 0 0 1 0 4Zm.3 5.6a15.7 15.7 0 0 0 1.4-3.6h2.9a8 8 0 0 1-4.3 3.6Zm1.7-5.6a16.5 16.5 0 0 0 0-4h3.4a8.2 8.2 0 0 1 0 4h-3.4Z" /></svg>
+          Europe-based, <span class="hl">working worldwide</span>
+        </p>
+        <ul class="stats">
+          {stats.map((s) => <li><span class="value">{s.value}</span><span class="label" set:html={s.label} /></li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="contact-title">
+    <div class="contact">
+      <div>
+        <p class="eyebrow">Say hello</p>
+        <h2 id="contact-title">Got a project? Let’s talk.</h2>
+      </div>
+      <div class="form-card"><ContactForm subject="New inquiry from the home page" /></div>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <p class="eyebrow">Still have Qs?</p>
+      <h2 id="faq-title">Questions we get a lot.</h2>
+      <Faq items={faqItems} />
+      <p class="faq-more">Still have questions? <a href="/contact-us/#CForm">Contact Us</a></p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero { padding-block: var(--space-8) var(--space-7); }
+  .hero-badge a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: 36px;
+    padding: 0.3rem 0.9rem 0.3rem 0.3rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    text-decoration: none;
+  }
+  .hero-badge a:hover { border-color: var(--brand-violet); }
+  .hero-badge span { padding: 0.15rem 0.6rem; border-radius: var(--radius-pill); background: var(--color-highlight); color: var(--color-on-highlight); font-size: var(--text-xs); font-weight: 600; }
+  .hero h1 { margin-top: var(--space-5); max-width: 16ch; font-size: clamp(2.5rem, 1.6rem + 4vw, 5rem); }
+  .hero-lead { margin-top: var(--space-5); color: var(--color-text-muted); font-size: var(--text-lg); }
+  .actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
+
+  .section { padding-block: var(--space-8); }
+  .head { max-width: 50rem; margin-bottom: var(--space-6); }
+  .intro { margin-top: var(--space-4); color: var(--color-text-muted); font-size: var(--text-lg); }
+  .more { margin-top: var(--space-7); text-align: center; }
+  .muted { color: var(--color-text-muted); font-size: var(--text-sm); }
+
+  .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); padding: 0; list-style: none; }
+  .features li { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); font-weight: 500; font-size: var(--text-sm); }
+  .feature-icon { display: grid; place-items: center; flex: none; width: 40px; height: 40px; color: var(--color-heading); }
+  .feature-icon img { max-width: 32px; max-height: 32px; width: auto; height: auto; }
+
+  .build-row { display: grid; gap: var(--space-4); }
+  .build-row + .build-row { margin-top: var(--space-4); }
+  .build-cards { display: grid; gap: var(--space-4); }
+  .build-card { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+  .build-card h3 { font-size: var(--text-h4); }
+  .build-meta { color: var(--color-text-muted); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.06em; }
+  .build-link { font-weight: 600; font-size: var(--text-sm); text-decoration: none; }
+  .build-link:hover { text-decoration: underline; }
+  .build-img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md); }
+
+  .future { display: grid; gap: var(--space-4); }
+  .panel { display: flex; flex-direction: column; gap: var(--space-4); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); }
+  .panel h3 { font-size: var(--text-h4); }
+  .panel .button { align-self: flex-start; margin-top: auto; }
+  .panel :global(.checklist) { grid-template-columns: 1fr; }
+  .perf { display: grid; gap: var(--space-2); padding: 0; list-style: none; font-size: var(--text-sm); }
+  .perf strong { display: inline-block; min-width: 3.2em; font-family: var(--font-title); font-size: var(--text-h4); color: var(--color-link); }
+  .assistants { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: auto; padding: 0; list-style: none; }
+  .assistants li { display: flex; align-items: center; gap: var(--space-2); padding: 0.35rem 0.8rem 0.35rem 0.35rem; border-radius: var(--radius-pill); background: var(--color-surface-2); font-size: var(--text-sm); font-weight: 500; }
+  .assistants img { width: 28px; height: 28px; border-radius: 50%; background: #fff; object-fit: contain; }
+
+  .testimonials { display: grid; gap: var(--space-4); padding: 0; list-style: none; }
+  figure { display: flex; flex-direction: column; gap: var(--space-4); height: 100%; margin: 0; padding: var(--space-6) var(--space-5); border-radius: var(--radius-lg); background: var(--color-surface); border: 1px solid var(--color-border); }
+  .t-tag { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .t-tag span { margin-right: var(--space-2); padding: 0.1rem 0.5rem; border-radius: var(--radius-pill); background: var(--color-highlight); color: var(--color-on-highlight); font-weight: 600; }
+  blockquote { margin: 0; color: var(--color-text); font-size: var(--text-sm); }
+  blockquote p + p { margin-top: 0.8em; }
+  figcaption { display: flex; flex-direction: column; margin-top: auto; padding-top: var(--space-4); border-top: 1px solid var(--color-border); font-size: var(--text-sm); }
+  figcaption span { color: var(--color-text-muted); font-size: var(--text-xs); }
+  .graph { width: 100%; margin-top: var(--space-6); border-radius: var(--radius-lg); }
+
+  .founder { display: grid; gap: var(--space-7); }
+  .worldwide { display: flex; align-items: center; gap: var(--space-3); font-family: var(--font-title); font-size: var(--text-h4); font-weight: 500; color: var(--color-heading); }
+  .stats { display: grid; gap: var(--space-4); margin-top: var(--space-5); padding: 0; list-style: none; }
+  .stats li { display: flex; flex-direction: column; gap: var(--space-1); padding-top: var(--space-4); border-top: 1px solid var(--color-border); }
+  .value { font-family: var(--font-title); font-size: var(--text-h1); font-weight: 500; line-height: 1; color: var(--color-heading); }
+  .label { color: var(--color-text-muted); font-size: var(--text-sm); }
+
+  .contact { display: grid; gap: var(--space-6); padding: var(--space-6) var(--space-5); border-radius: var(--radius-lg); background: var(--brand-navy); }
+  .contact h2 { margin-top: var(--space-2); color: #fff; max-width: 12ch; }
+  .contact .eyebrow { color: #b9b6c3; }
+  .form-card { padding: var(--space-5); border-radius: var(--radius-md); background: var(--color-surface); }
+
+  .faq-wrap { max-width: 52rem; }
+  .faq-wrap h2 { margin-block: var(--space-2) var(--space-5); }
+  .faq-more { margin-top: var(--space-5); }
+
+  @media (min-width: 40em) {
+    .features { grid-template-columns: repeat(3, 1fr); }
+    .stats { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (min-width: 64em) {
+    .hero { padding-block: var(--space-9) var(--space-8); }
+    .section { padding-block: var(--space-9); }
+    .features { grid-template-columns: repeat(5, 1fr); }
+    .build-row { grid-template-columns: 1fr 1fr; gap: var(--space-5); align-items: stretch; }
+    .build-row + .build-row { margin-top: var(--space-5); }
+    .build-row.reverse .build-img { order: -1; }
+    .build-cards { gap: var(--space-5); }
+    .build-card { padding: var(--space-6); }
+    .future { grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+    .testimonials { grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+    .founder { grid-template-columns: 1.2fr 1fr; gap: var(--space-8); align-items: end; }
+    .contact { grid-template-columns: 1fr 1.3fr; gap: var(--space-8); padding: var(--space-8); align-items: start; }
+    .form-card { padding: var(--space-6); }
+  }
+</style>

@@ -1,0 +1,79 @@
+---
+// Case-study grid with a category filter (home + /case-studies/). Every card is in the HTML;
+// the filter only toggles [hidden], so the page stays fully crawlable.
+import type { CollectionEntry } from 'astro:content';
+import ProjectCard from './ProjectCard.astro';
+import { CATEGORY_LABELS, categoryLabel } from '../lib/projects';
+
+interface Props {
+  projects: CollectionEntry<'projects'>[];
+  headingLevel?: 'h2' | 'h3';
+  priorityFirst?: boolean;
+  label?: string;
+}
+const { projects, headingLevel = 'h3', priorityFirst = false, label = 'Filter projects by category' } = Astro.props;
+const cats = Object.keys(CATEGORY_LABELS)
+  .map((slug) => ({ slug, count: projects.filter((p) => p.data.categories.includes(slug)).length }))
+  .filter((c) => c.count > 0);
+const pad = (n: number) => String(n).padStart(2, '0');
+---
+<div class="portfolio" data-portfolio>
+  <div class="filter" role="group" aria-label={label}>
+    <span class="filter-label" aria-hidden="true">Filter by</span>
+    <button type="button" aria-pressed="true" data-filter="all">All <span class="count">{pad(projects.length)}</span></button>
+    {cats.map((c) => (
+      <button type="button" aria-pressed="false" data-filter={c.slug}>{categoryLabel(c.slug)} <span class="count">{pad(c.count)}</span></button>
+    ))}
+  </div>
+  <p class="visually-hidden" aria-live="polite" data-status></p>
+  <ul class="grid">
+    {projects.map((p, i) => (
+      <li data-cats={p.data.categories.join(' ')}>
+        <ProjectCard project={p} headingLevel={headingLevel} priority={priorityFirst && i === 0} />
+      </li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .filter { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); margin-bottom: var(--space-6); }
+  .filter-label { margin-right: var(--space-2); color: var(--color-text-muted); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.06em; }
+  button {
+    min-height: 40px;
+    padding: 0.4rem 0.95rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: var(--text-sm);
+  }
+  button:hover { border-color: var(--brand-violet); }
+  button[aria-pressed='true'] { background: var(--brand-violet); border-color: var(--brand-violet); color: #fff; }
+  .count { margin-left: 0.2em; font-size: 0.8em; opacity: 0.75; font-variant-numeric: tabular-nums; }
+  [aria-pressed='true'] .count { opacity: 1; }
+  .grid { display: grid; gap: var(--space-7) var(--space-5); padding: 0; list-style: none; }
+  .grid > [hidden] { display: none; }
+  @media (min-width: 40em) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 64em) { .grid { grid-template-columns: repeat(3, 1fr); } }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-portfolio]').forEach((root) => {
+    const buttons = [...root.querySelectorAll<HTMLButtonElement>('[data-filter]')];
+    const items = [...root.querySelectorAll<HTMLElement>('[data-cats]')];
+    const status = root.querySelector<HTMLElement>('[data-status]')!;
+    buttons.forEach((btn) =>
+      btn.addEventListener('click', () => {
+        const f = btn.dataset.filter!;
+        buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+        let shown = 0;
+        items.forEach((li) => {
+          const on = f === 'all' || li.dataset.cats!.split(' ').includes(f);
+          li.hidden = !on;
+          if (on) shown++;
+        });
+        status.textContent = `${shown} project${shown === 1 ? '' : 's'} shown`;
+      }),
+    );
+  });
+</script>

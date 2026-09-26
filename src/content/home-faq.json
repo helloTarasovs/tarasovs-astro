@@ -1,0 +1,54 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does Tarasovs Digital Agency do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tarasovs Digital Agency provides web design, web development, SEO, and GEO (Generative Engine Optimization) services for businesses in New York and Europe. We build websites that rank in traditional search engines and appear in AI-powered platforms including ChatGPT, Perplexity, and Google AI Overviews."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long has Tarasovs been operating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tarasovs Digital Agency was founded in New York in 2018. We have delivered 79+ projects for clients across the United States, United Kingdom, Germany, Netherlands, Poland, and Romania."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is GEO (Generative Engine Optimization)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GEO is the practice of optimizing website content to appear in AI-generated search responses — such as those from ChatGPT, Perplexity, Google AI Overviews, and similar platforms. It focuses on content authority, structure, and trust signals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is GEO different from traditional SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional SEO targets search engine rankings on results pages. GEO targets the AI layer on top of those results — ensuring your brand is cited when AI models summarize answers for users."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Tarasovs handle both web design and AI SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We provide end-to-end service: from building a technically sound, fast-loading website to implementing the content and optimization strategies needed to rank in both Google and AI-powered search engines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with businesses outside New York?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We are a remote-first agency serving clients in the US, UK, and Europe."
+      }
+    }
+  ]
+}

@@ -1,5 +1,7 @@
-# build output
+# build output (dist is a symlink to dist.nosync locally, so iCloud leaves it alone)
+dist
 dist/
+dist.nosync/
 # generated types
 .astro/
 

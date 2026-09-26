@@ -1,0 +1,48 @@
+---
+// One case-study card. Fixed 4:3 frame + explicit sizes so filtering never shifts layout.
+import type { CollectionEntry } from 'astro:content';
+import { categoryLabel, coverSrcset, CARD_SIZES } from '../lib/projects';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+  priority?: boolean; // LCP candidate: eager + fetchpriority=high
+  headingLevel?: 'h2' | 'h3';
+}
+const { project, priority = false, headingLevel = 'h3' } = Astro.props;
+const d = project.data;
+const Heading = headingLevel;
+const v = d.cover ? coverSrcset(d.cover.src, d.cover.width) : undefined;
+---
+<article class="project-card">
+  <div class="media">
+    {d.cover && (
+      <img
+        src={v?.src ?? d.cover.src}
+        srcset={v?.srcset}
+        sizes={v ? CARD_SIZES : undefined}
+        alt=""
+        width={d.cover.width}
+        height={d.cover.height}
+        loading={priority ? 'eager' : 'lazy'}
+        fetchpriority={priority ? 'high' : undefined}
+        decoding="async"
+      />
+    )}
+  </div>
+  <Heading class="title"><a href={`/project/${d.slug}/`}>{d.title}</a></Heading>
+  {d.categories.length > 0 && <p class="cats">{d.categories.map(categoryLabel).join(' · ')}</p>}
+</article>
+
+<style>
+  .project-card { position: relative; }
+  .media { display: block; overflow: hidden; border-radius: var(--radius-md); background: var(--color-surface-2); aspect-ratio: 4 / 3; }
+  img { width: 100%; height: 100%; object-fit: cover; transition: transform 400ms var(--ease); }
+  .project-card:hover img { transform: scale(1.03); }
+  .title { margin-top: var(--space-4); font-size: var(--text-h4); }
+  .title a { color: var(--color-heading); text-decoration: none; }
+  .title a::after { content: ''; position: absolute; inset: 0; } /* whole card clickable, one link in the a11y tree */
+  .title a:hover { color: var(--color-link); }
+  .title a:focus-visible { outline: none; }
+  .project-card:has(.title a:focus-visible) { outline: 2px solid var(--color-focus); outline-offset: 6px; border-radius: var(--radius-md); }
+  .cats { margin-top: var(--space-1); color: var(--color-text-muted); font-size: var(--text-xs); }
+</style>
