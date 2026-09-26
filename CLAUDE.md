@@ -14,6 +14,10 @@ Static rebuild of tarasovs.me (was WordPress + Elementor, Ohio theme). Goal: sam
 - `node scripts/check-urls.mjs` - compares dist/ with `tarasovs-url-map.csv`. Run after every build.
 - Do NOT re-run `scripts/wp-export.mjs`. Content in `src/content/` has manual fixes; git is the source of truth now.
 
+## Dev server
+- Start it in background mode: `astro dev --background`.
+- Manage it with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+
 ## URLs (hard rules)
 - `trailingSlash: 'always'`, `build.format: 'directory'`. Every URL ends with `/`.
 - Never rename or drop a URL listed as KEEP in `tarasovs-url-map.csv`.
