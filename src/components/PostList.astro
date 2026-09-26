@@ -30,3 +30,19 @@ const pageUrl = (n: number) => (n === 1 ? '/category/insights/' : `/category/ins
     {currentPage < lastPage && <a href={pageUrl(currentPage + 1)} rel="next">Older posts</a>}
   </nav>
 )}
+
+<style>
+  .post-list { display: grid; gap: var(--space-6); padding: 0; list-style: none; }
+  .post-card { display: flex; flex-direction: column; gap: var(--space-2); }
+  .post-card a { color: var(--color-heading); text-decoration: none; }
+  .post-card a:hover h2 { color: var(--color-link); }
+  .post-card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--radius-md); background: var(--color-surface-2); }
+  .post-card h2 { margin-top: var(--space-4); font-size: var(--text-h4); transition: color var(--dur) var(--ease); }
+  .post-card time { color: var(--color-text-muted); font-size: var(--text-xs); }
+  .post-card p { color: var(--color-text-muted); font-size: var(--text-sm); }
+  .pagination { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-8); padding-top: var(--space-5); border-top: 1px solid var(--color-border); }
+  .pagination a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
+  .pagination span { color: var(--color-text-muted); font-size: var(--text-sm); }
+  @media (min-width: 40em) { .post-list { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 64em) { .post-list { grid-template-columns: repeat(3, 1fr); gap: var(--space-7) var(--space-6); } }
+</style>

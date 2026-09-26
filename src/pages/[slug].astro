@@ -17,6 +17,9 @@ const path = `/${d.slug}/`;
 const title = d.seo?.title ?? `${d.title} - Tarasovs Digital Agency`;
 const description = d.seo?.description ?? d.excerpt;
 const image = d.seo?.ogImage ?? d.cover?.src;
+// A few WordPress bodies start with their own <h1>; then the template title must not add a second one.
+const bodyHasH1 = /<h1[\s>]/i.test(post.body ?? '');
+const fmt = (date: Date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
 const jsonld = [
   ...withFallbackArticle(d.jsonld, articleSchema({ path, title: d.title, description, image, published: d.pubDate, modified: d.updatedDate })),
@@ -39,22 +42,44 @@ const jsonld = [
   jsonld={jsonld}
 >
   <article class="post">
-    <header class="post-header">
-      <h1>{d.title}</h1>
+    <header class="post-header container container-prose">
+      <p class="eyebrow"><a href="/category/insights/">Insights</a></p>
+      {!bodyHasH1 && <h1 class="post-title">{d.title}</h1>}
       <p class="post-meta">
-        <time datetime={d.pubDate.toISOString()}>
-          {d.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-        </time>
+        <time datetime={d.pubDate.toISOString()}>{fmt(d.pubDate)}</time>
         {d.updatedDate && d.updatedDate > d.pubDate && (
-          <> · Updated <time datetime={d.updatedDate.toISOString()}>{d.updatedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time></>
+          <> · Updated <time datetime={d.updatedDate.toISOString()}>{fmt(d.updatedDate)}</time></>
         )}
       </p>
-      {d.cover && (
-        <img src={d.cover.src} alt={d.cover.alt} width={d.cover.width} height={d.cover.height} fetchpriority="high" decoding="async" />
-      )}
     </header>
-    <div class="post-body">
+    {d.cover && (
+      <figure class="post-cover container">
+        <img src={d.cover.src} alt={d.cover.alt ?? ''} width={d.cover.width} height={d.cover.height} fetchpriority="high" decoding="async" />
+      </figure>
+    )}
+    <div class="post-body prose container container-prose">
       <Content />
     </div>
   </article>
 </Base>
+
+<style>
+  .post { padding-block: var(--space-7) var(--space-8); }
+  .post-header { margin-bottom: var(--space-6); }
+  .post-title {
+    margin-top: var(--space-3);
+    font-family: var(--font-title);
+    font-size: var(--text-h1);
+    font-weight: 500;
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-title);
+    color: var(--color-heading);
+    text-wrap: balance;
+  }
+  .post-meta { margin-top: var(--space-4); color: var(--color-text-muted); font-size: var(--text-sm); }
+  .post-cover { max-width: calc(1040px + 2 * var(--gutter)); margin-bottom: var(--space-7); }
+  .post-cover img { width: 100%; max-height: 640px; object-fit: cover; border-radius: var(--radius-lg); }
+  /* Posts built with ta- components were laid out for a wider Elementor column */
+  .post-body:has(.ta-post) { max-width: calc(960px + 2 * var(--gutter)); }
+  article:has(.ta-post) > header { max-width: calc(960px + 2 * var(--gutter)); }
+</style>

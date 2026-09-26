@@ -18,6 +18,8 @@ const { items, lastPage } = pageSlice(await sortedPosts(), page);
   description="Articles on GEO, AI search visibility, SEO, Framer and web design from Tarasovs Digital Agency."
   canonical={`/category/insights/page/${page}/`}
 >
-  <h1>Insights <span>Page {page}</span></h1>
-  <PostList posts={items} currentPage={page} lastPage={lastPage} />
+  <div class="page container">
+    <h1>Insights <span>Page {page}</span></h1>
+    <PostList posts={items} currentPage={page} lastPage={lastPage} />
+  </div>
 </Base>

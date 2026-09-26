@@ -1,0 +1,122 @@
+---
+// Site footer: same content as the live footer (address, phone, email, social, CTA, legal links).
+import Logo from './Logo.astro';
+import { CONTACT, SOCIAL, LEGAL } from '../lib/nav';
+---
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-card">
+      <div class="footer-brand">
+        <a class="footer-logo" href="/" rel="home"><Logo /></a>
+        <p class="footer-tagline">Disrupting the ordinary in brand &amp; digital design.</p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-label">Office</p>
+        <address>
+          str. Narcisei,<br /> Bloc 64, 307220,<br />
+          <strong>Timisoara, Romania</strong>
+        </address>
+        <p><a href={CONTACT.mapsUrl} target="_blank" rel="noopener">Get directions<span class="visually-hidden"> (Google Maps, opens in a new tab)</span></a></p>
+        <p class="footer-label">Call</p>
+        <p><a href={CONTACT.phoneHref}>{CONTACT.phone}</a></p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-label">General questions</p>
+        <p>Remote-first agency serving <strong>New York and US clients</strong></p>
+        <p><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
+        <p class="footer-label">Follow us</p>
+        <ul class="footer-social">
+          {SOCIAL.map((s) => (
+            <li><a href={s.href} target="_blank" rel="noopener me">{s.label}<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-cta">
+        <p class="footer-cta-text">Want a no-obligation to-hire estimate?</p>
+        <a class="button button--highlight" href="/contact-us/#CForm">
+          Get a quote
+          <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 11h11.6l-5.3-5.3L12.7 4.3 20.4 12l-7.7 7.7-1.4-1.4 5.3-5.3H5z" /></svg>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <ul class="footer-legal">
+          {LEGAL.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+        </ul>
+        <p>&copy; {new Date().getFullYear()} Tarasovs Digital Agency</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer { padding-block: var(--space-4) var(--space-5); }
+  .footer-card {
+    display: grid;
+    gap: var(--space-6);
+    padding: var(--space-7) var(--space-5) var(--space-5);
+    border-radius: var(--radius-lg);
+    background: var(--color-footer-bg);
+    color: var(--color-footer-text);
+    font-size: var(--text-sm);
+  }
+  .footer-card a { color: var(--color-footer-link); text-decoration: none; }
+  .footer-card a:hover { text-decoration: underline; }
+  .footer-card :focus-visible { outline-color: var(--color-footer-link); }
+  .footer-card p + p, .footer-card address + p { margin-top: var(--space-2); }
+  .footer-card strong { font-weight: 600; }
+  address { font-style: normal; }
+
+  .footer-card .footer-logo { display: inline-flex; color: var(--color-footer-text); }
+  .footer-card .footer-logo:hover { text-decoration: none; }
+  .footer-logo :global(svg) { height: 34px; width: auto; }
+  .footer-tagline {
+    margin-top: var(--space-5);
+    max-width: 18ch;
+    font-family: var(--font-title);
+    font-size: var(--text-h3);
+    font-weight: 500;
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-title);
+  }
+  .footer-label {
+    color: var(--color-footer-muted);
+    font-size: var(--text-xs);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .footer-card .footer-label:not(:first-child) { margin-top: var(--space-5); }
+  .footer-social, .footer-legal { list-style: none; padding: 0; }
+  .footer-social { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4); margin-top: var(--space-2); }
+  .footer-social a, .footer-legal a { display: inline-block; padding-block: var(--space-1); }
+  .footer-cta-text { font-size: var(--text-lg); max-width: 22ch; margin-bottom: var(--space-4); text-wrap: balance; }
+  .footer-card .footer-cta .button { color: var(--color-on-highlight); }
+  .footer-card .footer-cta .button:hover { text-decoration: none; }
+
+  .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-5);
+    padding-top: var(--space-5);
+    border-top: 1px solid rgb(255 255 255 / 0.12);
+    color: var(--color-footer-muted);
+    font-size: var(--text-xs);
+  }
+  .footer-legal { display: flex; flex-wrap: wrap; gap: 0 var(--space-5); }
+  .footer-card .footer-legal a { color: var(--color-footer-muted); }
+  .footer-card .footer-legal a:hover { color: var(--color-footer-text); }
+
+  @media (min-width: 40em) {
+    .footer-card { grid-template-columns: repeat(2, 1fr); padding-inline: var(--space-7); }
+    .footer-brand, .footer-bottom { grid-column: 1 / -1; }
+  }
+  @media (min-width: 64em) {
+    .footer-card { grid-template-columns: 1.4fr 1fr 1fr 1.1fr; gap: var(--space-7); padding: var(--space-8) var(--space-8) var(--space-5); }
+    .footer-brand { grid-column: auto; }
+    .footer-bottom { margin-top: var(--space-4); }
+  }
+</style>

@@ -27,12 +27,41 @@ const jsonld = [
 ---
 <Base title={title} description={d.seo?.description} canonical={d.seo?.canonical ?? path} robots={d.seo?.robots} ogImage={image} ogType="article" jsonld={jsonld}>
   <article class="project">
-    <header>
-      <h1>{d.title}</h1>
-      {d.cover && <img src={d.cover.src} alt={d.cover.alt} width={d.cover.width} height={d.cover.height} fetchpriority="high" decoding="async" />}
+    <header class="project-header container container-prose">
+      <p class="eyebrow"><a href="/case-studies/">Case Studies</a></p>
+      <h1 class="project-title">{d.title}</h1>
+      {d.categories.length > 0 && (
+        <ul class="project-tags" aria-label="Categories">
+          {d.categories.map((c) => <li>{c.replace(/-/g, ' ')}</li>)}
+        </ul>
+      )}
     </header>
-    <div class="post-body">
+    {d.cover && (
+      <figure class="project-cover container">
+        <img src={d.cover.src} alt={d.cover.alt ?? ''} width={d.cover.width} height={d.cover.height} fetchpriority="high" decoding="async" />
+      </figure>
+    )}
+    <div class="post-body prose container container-prose">
       <Content />
     </div>
   </article>
 </Base>
+
+<style>
+  .project { padding-block: var(--space-7) var(--space-8); }
+  .project-header { margin-bottom: var(--space-6); }
+  .project-title { margin-top: var(--space-3); }
+  .project-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-4); padding: 0; list-style: none; }
+  .project-tags li {
+    padding: var(--space-1) var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    color: var(--color-text-muted);
+    font-size: var(--text-xs);
+    text-transform: capitalize;
+  }
+  .project-cover { max-width: calc(1200px + 2 * var(--gutter)); margin-bottom: var(--space-7); }
+  .project-cover img { width: 100%; border-radius: var(--radius-lg); }
+  .post-body:has(.ta-post) { max-width: calc(960px + 2 * var(--gutter)); }
+  article:has(.ta-post) > header { max-width: calc(960px + 2 * var(--gutter)); }
+</style>

@@ -1,0 +1,277 @@
+---
+// Site header: logo, main menu (Services dropdown), Get Started CTA, theme toggle, mobile menu.
+import Logo from './Logo.astro';
+import { MAIN_NAV, type NavItem } from '../lib/nav';
+
+const path = Astro.url.pathname;
+const isCurrent = (href: string) => href === path;
+const inSection = (item: NavItem): boolean =>
+  isCurrent(item.href) || (item.children ?? []).some(inSection);
+---
+<header class="site-header" data-site-header>
+  <div class="container header-inner">
+    <a class="brand" href="/" rel="home" aria-current={isCurrent('/') ? 'page' : undefined}>
+      <Logo class="brand-logo" />
+    </a>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        {MAIN_NAV.map((item) => item.children ? (
+          <li class="nav-item has-sub">
+            <div class="nav-row">
+              <a class:list={['nav-link', { 'is-active': inSection(item) }]} href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+              <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="sub-services" data-sub-toggle>
+                <span class="visually-hidden">{item.label} submenu</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M0 7.33l2.83-2.83 9.17 9.34 9.17-9.34L24 7.33 12 19.5z" /></svg>
+              </button>
+            </div>
+            <ul id="sub-services" class="sub-menu">
+              {item.children.map((child) => (
+                <li class:list={['sub-item', { 'has-children': child.children }]}>
+                  <a class="sub-link" href={child.href} aria-current={isCurrent(child.href) ? 'page' : undefined}>{child.label}</a>
+                  {child.children && (
+                    <ul class="sub-sub-menu">
+                      {child.children.map((g) => (
+                        <li><a class="sub-link sub-link--child" href={g.href} aria-current={isCurrent(g.href) ? 'page' : undefined}>{g.label}</a></li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </li>
+        ) : (
+          <li class="nav-item">
+            <a class:list={['nav-link', { 'is-active': inSection(item) }]} href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
+      <a class="button nav-cta" href="/contact-us/">Get Started</a>
+    </nav>
+
+    <div class="header-tools">
+      <button class="icon-button theme-toggle" type="button" aria-pressed="false" data-theme-toggle>
+        <span class="visually-hidden">Dark theme</span>
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.3 22a10 10 0 0 1-2.1-19.8 1 1 0 0 1 1.1 1.4A7.5 7.5 0 0 0 20.4 12.7a1 1 0 0 1 1.4 1.1A10 10 0 0 1 12.3 22Z" /></svg>
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10ZM11 1h2v3h-2V1Zm0 19h2v3h-2v-3ZM3.5 4.9l1.4-1.4 2.1 2.1-1.4 1.4-2.1-2.1Zm13.4 13.4 1.4-1.4 2.1 2.1-1.4 1.4-2.1-2.1ZM19.1 3.5l1.4 1.4-2.1 2.1-1.4-1.4 2.1-2.1ZM5.6 17l1.4 1.4-2.1 2.1-1.4-1.4L5.6 17ZM23 11v2h-3v-2h3ZM4 11v2H1v-2h3Z" /></svg>
+      </button>
+      <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+        <span class="visually-hidden">Menu</span>
+        <span class="burger" aria-hidden="true"><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-header-bg);
+    backdrop-filter: saturate(1.4) blur(12px);
+    -webkit-backdrop-filter: saturate(1.4) blur(12px);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    min-height: 64px;
+  }
+  .brand { display: inline-flex; color: var(--color-heading); margin-right: auto; padding-block: var(--space-2); }
+  .brand:hover { color: var(--color-heading); }
+  .brand-logo { height: 30px; width: auto; }
+
+  .header-tools { display: flex; align-items: center; gap: var(--space-1); }
+  .icon-button {
+    display: inline-grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: transparent;
+    color: var(--color-heading);
+  }
+  .icon-button:hover { background: var(--color-surface-2); }
+
+  .theme-toggle .icon-sun { display: none; }
+  :global([data-theme='dark']) .theme-toggle .icon-sun { display: block; }
+  :global([data-theme='dark']) .theme-toggle .icon-moon { display: none; }
+
+  .burger { position: relative; display: block; width: 20px; height: 14px; }
+  .burger::before, .burger::after, .burger span {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease);
+  }
+  .burger::before { top: 0; }
+  .burger span { top: 6px; }
+  .burger::after { top: 12px; }
+  [aria-expanded='true'] .burger::before { transform: translateY(6px) rotate(45deg); }
+  [aria-expanded='true'] .burger span { opacity: 0; }
+  [aria-expanded='true'] .burger::after { transform: translateY(-6px) rotate(-45deg); }
+
+  .nav-list { list-style: none; padding: 0; }
+  .nav-link, .sub-link { text-decoration: none; color: var(--color-heading); }
+  .nav-link { font-family: var(--font-title); font-weight: 500; }
+  .nav-link:hover, .sub-link:hover, .nav-link[aria-current='page'], .sub-link[aria-current='page'] { color: var(--color-link); }
+  .nav-link.is-active { color: var(--color-link); }
+  .nav-row { display: flex; align-items: center; }
+  .sub-toggle {
+    display: inline-grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--color-heading);
+  }
+  .sub-toggle svg { transition: transform var(--dur) var(--ease); }
+  .sub-toggle[aria-expanded='true'] svg { transform: rotate(180deg); }
+  .sub-menu, .sub-sub-menu { list-style: none; padding: 0; }
+  .sub-link { display: block; padding: var(--space-2) 0; line-height: 1.35; }
+  .sub-link--child { font-size: var(--text-sm); color: var(--color-text-muted); }
+
+  /* Mobile and tablet: full-screen panel under the bar */
+  @media (max-width: 63.99em) {
+    .site-nav {
+      display: none;
+      position: fixed;
+      inset: 64px 0 0 0;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding: var(--space-4) var(--gutter) var(--space-8);
+      background: var(--color-bg);
+    }
+    .site-header[data-open] .site-nav { display: block; }
+    .nav-item { border-bottom: 1px solid var(--color-border); }
+    .nav-link { display: flex; align-items: center; flex: 1; min-height: 52px; font-size: var(--text-lg); }
+    .sub-toggle { width: 44px; height: 44px; }
+    .sub-menu { display: none; padding: 0 0 var(--space-4) var(--space-4); }
+    .nav-row:has(.sub-toggle[aria-expanded='true']) + .sub-menu { display: block; }
+    .sub-link { padding-block: var(--space-3); }
+    .sub-sub-menu { padding-left: var(--space-4); }
+    .nav-cta { width: 100%; margin-top: var(--space-6); }
+  }
+
+  /* Desktop: inline menu with a hover/focus dropdown */
+  @media (min-width: 64em) {
+    .header-inner { min-height: var(--header-h); gap: var(--space-5); }
+    .brand-logo { height: 36px; }
+    .menu-toggle { display: none; }
+    .site-nav { display: flex; align-items: center; gap: var(--space-5); }
+    .nav-list { display: flex; align-items: center; gap: var(--space-1); }
+    .nav-item { position: relative; }
+    .nav-link { display: inline-flex; align-items: center; min-height: 44px; padding-inline: var(--space-3); font-size: var(--text-sm); }
+    .has-sub .nav-link { padding-right: 0; }
+    .sub-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: max-content;
+      max-width: min(620px, 90vw);
+      columns: 2;
+      column-gap: var(--space-6);
+      padding: var(--space-4) var(--space-5);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(6px);
+      transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease), visibility 0s linear var(--dur);
+    }
+    .has-sub:hover .sub-menu,
+    .has-sub:focus-within .sub-menu,
+    .has-sub:has(.sub-toggle[aria-expanded='true']) .sub-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      transition-delay: 0s;
+    }
+    .has-sub.is-closed .sub-menu { opacity: 0; visibility: hidden; }
+    .sub-item { break-inside: avoid; min-width: 240px; }
+    .sub-link { font-size: var(--text-sm); padding-block: 0.45rem; }
+    .sub-item.has-children > .sub-link { font-weight: 600; }
+    .sub-sub-menu { padding-left: var(--space-3); border-left: 1px solid var(--color-border); margin-bottom: var(--space-2); }
+    .sub-link--child { font-size: var(--text-xs); padding-block: 0.35rem; }
+  }
+</style>
+
+<script>
+  const header = document.querySelector<HTMLElement>('[data-site-header]')!;
+  const menuBtn = header.querySelector<HTMLButtonElement>('[data-menu-toggle]')!;
+  const subToggles = [...header.querySelectorAll<HTMLButtonElement>('[data-sub-toggle]')];
+  const themeBtn = header.querySelector<HTMLButtonElement>('[data-theme-toggle]')!;
+  const root = document.documentElement;
+  const desktop = matchMedia('(min-width: 64em)');
+  const systemDark = matchMedia('(prefers-color-scheme: dark)');
+
+  const setMenu = (open: boolean) => {
+    menuBtn.setAttribute('aria-expanded', String(open));
+    header.toggleAttribute('data-open', open);
+    root.classList.toggle('nav-open', open);
+  };
+  const setSub = (btn: HTMLButtonElement, open: boolean) => {
+    btn.setAttribute('aria-expanded', String(open));
+    // Esc on desktop must also beat :hover / :focus-within
+    btn.closest('.has-sub')?.classList.toggle('is-closed', !open && desktop.matches);
+  };
+
+  menuBtn.addEventListener('click', () => setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'));
+  subToggles.forEach((btn) => {
+    btn.addEventListener('click', () => setSub(btn, btn.getAttribute('aria-expanded') !== 'true'));
+    btn.closest('.has-sub')?.addEventListener('mouseleave', () => btn.closest('.has-sub')?.classList.remove('is-closed'));
+    btn.closest('.has-sub')?.addEventListener('focusout', (e) => {
+      const item = btn.closest('.has-sub')!;
+      if (!item.contains((e as FocusEvent).relatedTarget as Node)) {
+        item.classList.remove('is-closed');
+        if (desktop.matches) btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const openSub = subToggles.find((b) => b.getAttribute('aria-expanded') === 'true' || b.closest('.has-sub')?.matches(':hover, :focus-within'));
+    if (openSub && (desktop.matches || openSub.getAttribute('aria-expanded') === 'true')) {
+      setSub(openSub, false);
+      openSub.focus();
+      return;
+    }
+    if (menuBtn.getAttribute('aria-expanded') === 'true') {
+      setMenu(false);
+      menuBtn.focus();
+    }
+  });
+  document.addEventListener('click', (e) => {
+    if (!header.contains(e.target as Node)) subToggles.forEach((b) => b.setAttribute('aria-expanded', 'false'));
+  });
+  desktop.addEventListener('change', () => setMenu(false));
+
+  // Theme: <head> script already set data-theme before paint; this keeps the toggle in sync.
+  const applyTheme = (theme: string) => {
+    root.dataset.theme = theme;
+    document.body.classList.toggle('dark-scheme', theme === 'dark'); // post bodies style against body.dark-scheme
+    themeBtn.setAttribute('aria-pressed', String(theme === 'dark'));
+  };
+  const stored = () => { try { return localStorage.getItem('theme'); } catch { return null; } };
+  applyTheme(root.dataset.theme === 'dark' ? 'dark' : 'light');
+  themeBtn.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    try { localStorage.setItem('theme', next); } catch {}
+  });
+  systemDark.addEventListener('change', (e) => {
+    if (!stored()) applyTheme(e.matches ? 'dark' : 'light');
+  });
+</script>

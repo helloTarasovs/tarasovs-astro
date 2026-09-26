@@ -13,6 +13,8 @@ const { items, lastPage } = pageSlice(await sortedPosts(), 1);
   canonical="/category/insights/"
   jsonld={[breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Insights', path: '/category/insights/' }])]}
 >
-  <h1>Insights</h1>
-  <PostList posts={items} currentPage={1} lastPage={lastPage} />
+  <div class="page container">
+    <h1>Insights</h1>
+    <PostList posts={items} currentPage={1} lastPage={lastPage} />
+  </div>
 </Base>

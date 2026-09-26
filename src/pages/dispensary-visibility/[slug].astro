@@ -44,46 +44,102 @@ const jsonld = [
 ];
 ---
 <Base title={title} description={d.seo?.description} canonical={d.seo?.canonical ?? path} robots={d.seo?.robots} ogImage={d.seo?.ogImage} jsonld={jsonld}>
-  <article class="profile">
+  <article class="profile container">
     <p class="eyebrow"><a href="/dispensary-visibility/">NY Dispensary Visibility Index</a></p>
-    <h1>{d.name}{place && <span class="profile-place"> · {place}</span>}</h1>
+    <h1 class="profile-title">{d.name}{place && <span class="profile-place">{place}</span>}</h1>
 
     {d.needsData ? (
-      <p>Benchmark data for this dispensary is being updated.</p>
+      <p class="profile-note">Benchmark data for this dispensary is being updated.</p>
     ) : (
       <>
-        <section class="profile-score">
-          {score != null && <p class="score"><strong>{score}</strong>/100 ChatGPT Visibility</p>}
+        <section class="profile-score" aria-label="ChatGPT visibility score">
+          {score != null && (
+            <p class="score"><strong>{score}</strong><span>/100</span> <span class="score-label">ChatGPT Visibility</span></p>
+          )}
           <ul class="profile-stats">
-            {d.ai_mentions != null && <li>Mentioned in {d.ai_mentions}/{d.ai_valid_prompts} recorded prompts</li>}
-            {d.ai_top3_count != null && <li>Top-3 placements: {d.ai_top3_count}/{d.ai_valid_prompts}</li>}
-            {d.ai_scanned_at && <li>Scanned: {d.ai_scanned_at.slice(0, 10)}</li>}
+            {d.ai_mentions != null && <li><strong>{d.ai_mentions}/{d.ai_valid_prompts}</strong> prompts mention it</li>}
+            {d.ai_top3_count != null && <li><strong>{d.ai_top3_count}/{d.ai_valid_prompts}</strong> top-3 placements</li>}
+            {d.ai_scanned_at && <li>Scanned <strong><time datetime={d.ai_scanned_at.slice(0, 10)}>{d.ai_scanned_at.slice(0, 10)}</time></strong></li>}
           </ul>
         </section>
 
         {markets.length > 0 && (
-          <section>
+          <section class="profile-section">
             <h2>Market reach</h2>
-            <ul>{markets.map((m) => <li>{m.label}: {Math.round(Number(m.score ?? 0))}/100</li>)}</ul>
+            <ul class="markets">
+              {markets.map((m) => {
+                const v = Math.round(Number(m.score ?? 0));
+                return (
+                  <li>
+                    <span class="market-name">{m.label}</span>
+                    <span class="market-bar" aria-hidden="true"><span style={`width:${v}%`}></span></span>
+                    <span class="market-score">{v}/100</span>
+                  </li>
+                );
+              })}
+            </ul>
           </section>
         )}
 
         {items.length > 0 && (
-          <section>
+          <section class="profile-section">
             <h2>Recorded prompts</h2>
-            <table>
-              <thead><tr><th>Prompt</th><th>Market</th><th>Result</th></tr></thead>
-              <tbody>
-                {items.map((it) => (
-                  <tr><td>{it.query_text}</td><td>{it.market_value}</td><td>{it.result_class}</td></tr>
-                ))}
-              </tbody>
-            </table>
+            <div class="table-wrap" tabindex="0" role="region" aria-label="Recorded prompts">
+              <table>
+                <thead><tr><th scope="col">Prompt</th><th scope="col">Market</th><th scope="col">Result</th></tr></thead>
+                <tbody>
+                  {items.map((it) => (
+                    <tr><td>{it.query_text}</td><td>{it.market_value}</td><td>{it.result_class}</td></tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </section>
         )}
       </>
     )}
 
-    {d.website_url && <p><a href={d.website_url} rel="nofollow noopener" target="_blank">{d.domain ?? d.website_url}</a></p>}
+    {d.website_url && (
+      <p class="profile-site">Website: <a href={d.website_url} rel="nofollow noopener" target="_blank">{d.domain ?? d.website_url}<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+    )}
   </article>
 </Base>
+
+<style>
+  .profile { max-width: calc(960px + 2 * var(--gutter)); padding-block: var(--space-7) var(--space-8); }
+  .profile-title { margin-top: var(--space-3); font-size: var(--text-h2); }
+  .profile-place { display: block; margin-top: var(--space-2); color: var(--color-text-muted); font-family: var(--font-text); font-size: var(--text-lg); font-weight: 400; letter-spacing: var(--tracking-text); }
+  .profile-note { margin-top: var(--space-5); }
+  .profile-score {
+    display: grid;
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+    padding: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+  .score { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 var(--space-2); font-family: var(--font-title); }
+  .score strong { font-size: clamp(3rem, 2.4rem + 3vw, 4.5rem); line-height: 1; color: var(--color-link); font-weight: 600; }
+  .score > span:not(.score-label) { font-size: var(--text-lg); color: var(--color-text-muted); }
+  .score-label { flex-basis: 100%; margin-top: var(--space-2); font-size: var(--text-sm); color: var(--color-text-muted); font-family: var(--font-text); }
+  .profile-stats { display: grid; gap: var(--space-2); padding: 0; list-style: none; font-size: var(--text-sm); color: var(--color-text-muted); }
+  .profile-stats strong { color: var(--color-text); font-weight: 600; }
+  .profile-section { margin-top: var(--space-7); }
+  .profile-section h2 { font-size: var(--text-h3); margin-bottom: var(--space-4); }
+  .markets { display: grid; gap: var(--space-3); padding: 0; list-style: none; }
+  .markets li { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: var(--space-1) var(--space-4); }
+  .market-bar { grid-column: 1 / -1; grid-row: 2; height: 8px; border-radius: var(--radius-pill); background: var(--color-surface-2); overflow: hidden; }
+  .market-bar span { display: block; height: 100%; border-radius: inherit; background: var(--brand-violet); }
+  .market-score { font-variant-numeric: tabular-nums; color: var(--color-text-muted); font-size: var(--text-sm); }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+  table { width: 100%; min-width: 560px; font-size: var(--text-sm); }
+  th, td { padding: var(--space-3) var(--space-4); text-align: left; vertical-align: top; border-bottom: 1px solid var(--color-border); }
+  th { font-weight: 600; color: var(--color-text-muted); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.06em; }
+  tbody tr:last-child td { border-bottom: 0; }
+  .profile-site { margin-top: var(--space-6); color: var(--color-text-muted); }
+  @media (min-width: 40em) {
+    .profile-score { grid-template-columns: auto 1fr; align-items: center; gap: var(--space-6); padding: var(--space-6); }
+    .profile-stats { border-left: 1px solid var(--color-border); padding-left: var(--space-6); }
+  }
+</style>

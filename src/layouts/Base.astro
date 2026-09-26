@@ -1,6 +1,15 @@
 ---
 // Every page goes through this layout. It owns <head>: title, description, canonical, robots, OG, Twitter, JSON-LD.
 import { SITE, abs } from '../lib/site';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '@fontsource-variable/inter';
+import '@fontsource-variable/dm-sans';
+import '../styles/tokens.css';
+import '../styles/global.css';
+// Same files the @font-face rules point to, so the preload is reused (latin subset only).
+import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
+import dmSansLatin from '@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2?url';
 
 interface Props {
   title: string;
@@ -37,6 +46,19 @@ const robotsFull = robots.includes('index') && !robots.includes('noindex')
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>
+      // Runs before CSS paints: pick the saved theme, else the OS setting. No flash.
+      (function () {
+        var t;
+        try { t = localStorage.getItem('theme'); } catch (e) {}
+        if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = t;
+      })();
+    </script>
+    <link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={dmSansLatin} as="font" type="font/woff2" crossorigin />
+    <meta name="theme-color" content="#f9f9f9" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111013" media="(prefers-color-scheme: dark)" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
     <meta name="robots" content={robotsFull} />
@@ -63,11 +85,15 @@ const robotsFull = robots.includes('index') && !robots.includes('noindex')
     <slot name="head" />
   </head>
   <body>
+    <script is:inline>
+      // Post bodies (Ohio theme era) style dark mode against body.dark-scheme
+      if (document.documentElement.dataset.theme === 'dark') document.body.classList.add('dark-scheme');
+    </script>
     <a class="skip-link" href="#main">Skip to content</a>
-    <slot name="header" />
-    <main id="main">
+    <slot name="header"><Header /></slot>
+    <main id="main" tabindex="-1">
       <slot />
     </main>
-    <slot name="footer" />
+    <slot name="footer"><Footer /></slot>
   </body>
 </html>
