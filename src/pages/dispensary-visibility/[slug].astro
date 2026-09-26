@@ -1,29 +1,38 @@
 ---
 // Dispensary profiles: /dispensary-visibility/<slug>/  (data from the tdv plugin export)
-// Structure only: style it to match the current design.
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { breadcrumbSchema } from '../../lib/schema';
 import { abs } from '../../lib/site';
+import { dispensaryRows, bandFor } from '../../lib/dispensaries';
 
 export async function getStaticPaths() {
   const profiles = await getCollection('profiles');
-  return profiles.map((profile) => ({ params: { slug: profile.data.slug }, props: { profile } }));
+  const rows = await dispensaryRows();
+  const ranked = rows.filter((r) => r.rank != null).length;
+  return profiles.map((profile) => ({
+    params: { slug: profile.data.slug },
+    props: { profile, row: rows.find((r) => r.slug === profile.data.slug)!, ranked },
+  }));
 }
 
-const { profile } = Astro.props;
+const { profile, row, ranked } = Astro.props;
 const d = profile.data as any;
 const path = `/dispensary-visibility/${d.slug}/`;
 const place = [d.city, d.state].filter(Boolean).join(', ');
 const title = d.seo?.title ?? `${d.name} ChatGPT Visibility${place ? ` - ${place}` : ''} - Tarasovs Digital Agency`;
 const items: any[] = d.ai_breakdown?.items ?? [];
-const score = d.ai_score != null ? Math.round(d.ai_score) : null;
+const score = row.rounded;
+const band = row.score != null ? bandFor(row.score) : null;
+const fmt = (date: Date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 
 const markets = [
-  { label: d.primary_market, score: d.ai_primary_score },
-  { label: d.secondary_market_1, score: d.ai_secondary1_score },
-  { label: d.secondary_market_2, score: d.ai_secondary2_score },
+  { level: 'Primary market', weight: '70%', prompts: 6, label: d.primary_market, score: d.ai_primary_score },
+  { level: 'Secondary market', weight: '20%', prompts: 2, label: d.secondary_market_1, score: d.ai_secondary1_score },
+  { level: 'Regional market', weight: '10%', prompts: 2, label: d.secondary_market_2, score: d.ai_secondary2_score },
 ].filter((m) => m.label);
+const scopeLabel: Record<string, string> = { primary: 'Primary', secondary_1: 'Secondary', secondary_2: 'Regional' };
+const resultTone = (r: string) => (/#1|#2/.test(r) ? 'top' : /Recommended|Mentioned/.test(r) ? 'mid' : 'none');
 
 const jsonld = [
   {
@@ -45,35 +54,61 @@ const jsonld = [
 ---
 <Base title={title} description={d.seo?.description} canonical={d.seo?.canonical ?? path} robots={d.seo?.robots} ogImage={d.seo?.ogImage} jsonld={jsonld}>
   <article class="profile container">
-    <p class="eyebrow"><a href="/dispensary-visibility/">NY Dispensary Visibility Index</a></p>
-    <h1 class="profile-title">{d.name}{place && <span class="profile-place">{place}</span>}</h1>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/dispensary-visibility/">NY Dispensary Visibility Index</a></li>
+        <li><span aria-current="page">{d.name}</span></li>
+      </ol>
+    </nav>
 
-    {d.needsData ? (
-      <p class="profile-note">Benchmark data for this dispensary is being updated.</p>
+    <header class="profile-head">
+      <p class="eyebrow">ChatGPT visibility profile</p>
+      <h1 class="profile-title">{d.name}</h1>
+      <p class="profile-place">{row.location}</p>
+    </header>
+
+    {row.score == null ? (
+      <div class="pending">
+        <p><strong>Benchmark Pending.</strong> A public score is published only once all 10 standardized prompts return a valid result. This profile will be scored when the missing checks complete.</p>
+        <p><a href="/dispensary-visibility/#full-report">Request a Full Visibility Report</a></p>
+      </div>
     ) : (
       <>
-        <section class="profile-score" aria-label="ChatGPT visibility score">
-          {score != null && (
-            <p class="score"><strong>{score}</strong><span>/100</span> <span class="score-label">ChatGPT Visibility</span></p>
-          )}
-          <ul class="profile-stats">
-            {d.ai_mentions != null && <li><strong>{d.ai_mentions}/{d.ai_valid_prompts}</strong> prompts mention it</li>}
-            {d.ai_top3_count != null && <li><strong>{d.ai_top3_count}/{d.ai_valid_prompts}</strong> top-3 placements</li>}
-            {d.ai_scanned_at && <li>Scanned <strong><time datetime={d.ai_scanned_at.slice(0, 10)}>{d.ai_scanned_at.slice(0, 10)}</time></strong></li>}
-          </ul>
+        <section class="scorecard" aria-labelledby="score-title">
+          <h2 id="score-title" class="visually-hidden">ChatGPT Visibility score</h2>
+          <div class="score-main">
+            <p class="score"><strong>{score}</strong><span>/100</span></p>
+            <p class="score-label">Composite ChatGPT Visibility</p>
+            <div class="meter" aria-hidden="true"><span style={`width:${score}%`}></span></div>
+            <p class="chips">
+              <span class:list={['band', `band--${band!.id}`]}>{band!.label}</span>
+              {row.rank && <span class="chip">Rank #{row.rank} of {ranked}</span>}
+            </p>
+          </div>
+          <dl class="score-facts">
+            {d.ai_mentions != null && <div><dt>Mentioned in</dt><dd>{d.ai_mentions}/{d.ai_valid_prompts} prompts</dd></div>}
+            {d.ai_top3_count != null && <div><dt>Top-3 placements</dt><dd>{d.ai_top3_count}/{d.ai_valid_prompts} prompts</dd></div>}
+            {row.measured && <div><dt>Measured</dt><dd><time datetime={row.measured.toISOString().slice(0, 10)}>{fmt(row.measured)}</time></dd></div>}
+            <div><dt>Platform</dt><dd>ChatGPT Temporary Chat</dd></div>
+          </dl>
         </section>
 
         {markets.length > 0 && (
-          <section class="profile-section">
-            <h2>Market reach</h2>
+          <section class="section" aria-labelledby="markets-title">
+            <h2 id="markets-title">Visibility by market level</h2>
+            <p class="muted">Each market level is averaged separately, then combined: primary 70%, secondary 20%, regional 10%.</p>
             <ul class="markets">
               {markets.map((m) => {
                 const v = Math.round(Number(m.score ?? 0));
                 return (
                   <li>
-                    <span class="market-name">{m.label}</span>
-                    <span class="market-bar" aria-hidden="true"><span style={`width:${v}%`}></span></span>
-                    <span class="market-score">{v}/100</span>
+                    <p class="market-level">{m.level} <span>· {m.prompts} prompts · weight {m.weight}</span></p>
+                    <p class="market-name">{m.label}</p>
+                    <div class="market-row">
+                      <span class="market-bar" aria-hidden="true"><span style={`width:${v}%`}></span></span>
+                      <span class="market-score">{v}/100</span>
+                    </div>
                   </li>
                 );
               })}
@@ -82,14 +117,20 @@ const jsonld = [
         )}
 
         {items.length > 0 && (
-          <section class="profile-section">
-            <h2>Recorded prompts</h2>
+          <section class="section" aria-labelledby="prompts-title">
+            <h2 id="prompts-title">All 10 recorded prompts</h2>
+            <p class="muted">Each prompt was entered in a separate ChatGPT Temporary Chat. “Named instead” lists the dispensaries ChatGPT recommended in that response.</p>
             <div class="table-wrap" tabindex="0" role="region" aria-label="Recorded prompts">
               <table>
-                <thead><tr><th scope="col">Prompt</th><th scope="col">Market</th><th scope="col">Result</th></tr></thead>
+                <thead><tr><th scope="col">Prompt</th><th scope="col">Market</th><th scope="col">Result</th><th scope="col">Named instead</th></tr></thead>
                 <tbody>
                   {items.map((it) => (
-                    <tr><td>{it.query_text}</td><td>{it.market_value}</td><td>{it.result_class}</td></tr>
+                    <tr>
+                      <td class="q">{it.query_text}</td>
+                      <td data-label="Market"><span><span class="scope">{scopeLabel[it.market_scope] ?? it.market_scope}</span> {it.market_value}</span></td>
+                      <td data-label="Result"><span class:list={['result', `result--${resultTone(it.result_class)}`]}>{it.result_class}</span></td>
+                      <td data-label="Named instead" class="competitors"><span>{it.competitors?.length ? it.competitors.join(', ') : '—'}</span></td>
+                    </tr>
                   ))}
                 </tbody>
               </table>
@@ -99,47 +140,96 @@ const jsonld = [
       </>
     )}
 
-    {d.website_url && (
-      <p class="profile-site">Website: <a href={d.website_url} rel="nofollow noopener" target="_blank">{d.domain ?? d.website_url}<span class="visually-hidden"> (opens in a new tab)</span></a></p>
-    )}
+    <section class="section" aria-labelledby="about-title">
+      <h2 id="about-title" class="visually-hidden">About this profile</h2>
+      <div class="aside">
+        {d.website_url && (
+          <p>Website: <a href={d.website_url} rel="nofollow noopener" target="_blank">{d.domain ?? d.website_url}<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+        )}
+        <p class="small">Benchmark note: these are standardized Temporary Chat checks, not a prediction of what every user will see. ChatGPT responses vary by date, model, location, available sources and wording. Read this profile as a dated snapshot. When citing this score, link to this page and include the measured date.</p>
+        <p class="links">
+          <a class="button" href="/dispensary-visibility/#full-report">Get the Full Visibility Report</a>
+          <a class="button button--ghost" href="/dispensary-visibility/#directory">Back to the Index</a>
+        </p>
+      </div>
+    </section>
   </article>
 </Base>
 
 <style>
-  .profile { max-width: calc(960px + 2 * var(--gutter)); padding-block: var(--space-7) var(--space-8); }
+  .profile { max-width: calc(1040px + 2 * var(--gutter)); padding-block: var(--space-6) var(--space-8); }
+  .crumbs ol { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-2); padding: 0; list-style: none; font-size: var(--text-xs); color: var(--color-text-muted); }
+  .crumbs li + li::before { content: '/'; margin-right: var(--space-2); opacity: 0.6; }
+  .crumbs a { color: inherit; text-decoration: none; }
+  .crumbs a:hover { color: var(--color-link); text-decoration: underline; }
+  .profile-head { margin-top: var(--space-6); }
   .profile-title { margin-top: var(--space-3); font-size: var(--text-h2); }
-  .profile-place { display: block; margin-top: var(--space-2); color: var(--color-text-muted); font-family: var(--font-text); font-size: var(--text-lg); font-weight: 400; letter-spacing: var(--tracking-text); }
-  .profile-note { margin-top: var(--space-5); }
-  .profile-score {
-    display: grid;
-    gap: var(--space-4);
-    margin-top: var(--space-6);
-    padding: var(--space-5);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    background: var(--color-surface);
-  }
-  .score { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 var(--space-2); font-family: var(--font-title); }
-  .score strong { font-size: clamp(3rem, 2.4rem + 3vw, 4.5rem); line-height: 1; color: var(--color-link); font-weight: 600; }
-  .score > span:not(.score-label) { font-size: var(--text-lg); color: var(--color-text-muted); }
-  .score-label { flex-basis: 100%; margin-top: var(--space-2); font-size: var(--text-sm); color: var(--color-text-muted); font-family: var(--font-text); }
-  .profile-stats { display: grid; gap: var(--space-2); padding: 0; list-style: none; font-size: var(--text-sm); color: var(--color-text-muted); }
-  .profile-stats strong { color: var(--color-text); font-weight: 600; }
-  .profile-section { margin-top: var(--space-7); }
-  .profile-section h2 { font-size: var(--text-h3); margin-bottom: var(--space-4); }
+  .profile-place { margin-top: var(--space-2); color: var(--color-text-muted); font-size: var(--text-lg); }
+  .pending { margin-top: var(--space-6); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+  .pending p + p { margin-top: var(--space-3); }
+
+  .scorecard { display: grid; gap: var(--space-5); margin-top: var(--space-6); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); }
+  .score { display: flex; align-items: baseline; gap: var(--space-1); font-family: var(--font-title); }
+  .score strong { font-size: clamp(3.2rem, 2.4rem + 3vw, 4.8rem); line-height: 1; font-weight: 600; color: var(--color-heading); }
+  .score span { font-size: var(--text-lg); color: var(--color-text-muted); }
+  .score-label { margin-top: var(--space-1); color: var(--color-text-muted); font-size: var(--text-sm); }
+  .meter { height: 10px; margin-top: var(--space-4); border-radius: var(--radius-pill); background: var(--color-surface-2); overflow: hidden; }
+  .meter span { display: block; height: 100%; border-radius: inherit; background: var(--brand-violet); }
+  .chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-4); }
+  .band, .chip { padding: 0.15rem 0.65rem; border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 600; }
+  .chip { border: 1px solid var(--color-border); }
+  .band--strong { background: color-mix(in srgb, #16a34a 16%, transparent); }
+  .band--limited { background: color-mix(in srgb, var(--brand-yellow) 26%, transparent); }
+  .band--low { background: color-mix(in srgb, #f97316 18%, transparent); }
+  .band--almost-invisible { background: color-mix(in srgb, #dc2626 16%, transparent); }
+  .score-facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); margin: 0; }
+  .score-facts dt { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .score-facts dd { margin: var(--space-1) 0 0; font-weight: 600; }
+
+  .section { margin-top: var(--space-8); }
+  .section h2 { font-size: var(--text-h3); }
+  .muted { margin-block: var(--space-2) var(--space-5); color: var(--color-text-muted); font-size: var(--text-sm); max-width: 60ch; }
   .markets { display: grid; gap: var(--space-3); padding: 0; list-style: none; }
-  .markets li { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: var(--space-1) var(--space-4); }
-  .market-bar { grid-column: 1 / -1; grid-row: 2; height: 8px; border-radius: var(--radius-pill); background: var(--color-surface-2); overflow: hidden; }
+  .markets li { padding: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+  .market-level { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-muted); }
+  .market-level span { text-transform: none; letter-spacing: 0; }
+  .market-name { margin-top: var(--space-1); font-weight: 600; }
+  .market-row { display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-3); }
+  .market-bar { flex: 1; height: 8px; border-radius: var(--radius-pill); background: var(--color-surface-2); overflow: hidden; }
   .market-bar span { display: block; height: 100%; border-radius: inherit; background: var(--brand-violet); }
-  .market-score { font-variant-numeric: tabular-nums; color: var(--color-text-muted); font-size: var(--text-sm); }
+  .market-score { font-variant-numeric: tabular-nums; font-size: var(--text-sm); }
+
   .table-wrap { overflow-x: auto; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
-  table { width: 100%; min-width: 560px; font-size: var(--text-sm); }
+  table { width: 100%; min-width: 680px; font-size: var(--text-sm); }
   th, td { padding: var(--space-3) var(--space-4); text-align: left; vertical-align: top; border-bottom: 1px solid var(--color-border); }
-  th { font-weight: 600; color: var(--color-text-muted); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.06em; }
+  th { font-weight: 600; color: var(--color-text-muted); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.06em; background: var(--color-surface-2); }
   tbody tr:last-child td { border-bottom: 0; }
-  .profile-site { margin-top: var(--space-6); color: var(--color-text-muted); }
+  .scope { display: inline-block; margin-right: var(--space-1); padding: 0 0.4rem; border-radius: 4px; background: var(--color-surface-2); font-size: var(--text-xs); }
+  .result { white-space: nowrap; padding: 0.1rem 0.5rem; border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 600; }
+  .result--top { background: color-mix(in srgb, #16a34a 16%, transparent); }
+  .result--mid { background: color-mix(in srgb, var(--brand-yellow) 26%, transparent); }
+  .result--none { background: color-mix(in srgb, #dc2626 12%, transparent); }
+  .competitors { color: var(--color-text-muted); font-size: var(--text-xs); }
+
+  .aside { padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); }
+  .aside p + p { margin-top: var(--space-4); }
+  .small { font-size: var(--text-xs); color: var(--color-text-muted); }
+  .links { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+
+  /* Phones: each prompt becomes a stacked card instead of a sideways-scrolling table */
+  @media (max-width: 39.99em) {
+    .table-wrap { overflow: visible; border: 0; background: none; }
+    table { min-width: 0; }
+    thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    tbody { display: grid; gap: var(--space-3); }
+    tbody tr { display: grid; gap: var(--space-2); padding: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+    tbody td { display: grid; grid-template-columns: 7.5rem 1fr; gap: var(--space-3); padding: 0; border: 0; }
+    tbody td.q { display: block; font-weight: 600; }
+    tbody td[data-label]::before { content: attr(data-label); font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .result { justify-self: start; }
+  }
   @media (min-width: 40em) {
-    .profile-score { grid-template-columns: auto 1fr; align-items: center; gap: var(--space-6); padding: var(--space-6); }
-    .profile-stats { border-left: 1px solid var(--color-border); padding-left: var(--space-6); }
+    .scorecard { grid-template-columns: 1.1fr 1fr; align-items: center; gap: var(--space-7); padding: var(--space-6); }
+    .markets { grid-template-columns: repeat(3, 1fr); }
   }
 </style>

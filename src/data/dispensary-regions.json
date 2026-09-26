@@ -1,0 +1,662 @@
+{
+ "400-river-dispensary-troy": {
+  "region": "capital-region",
+  "area": "upstate",
+  "location": "Troy, New York · Capital Region"
+ },
+ "716-cannabis-llc-hamburg": {
+  "region": "western-new-york",
+  "area": "upstate",
+  "location": "Hamburg, New York · Western New York"
+ },
+ "air-city-cannabis-utica": {
+  "region": "mohawk-valley",
+  "area": "upstate",
+  "location": "Utica, New York · Mohawk Valley"
+ },
+ "amsterdam-cannabis-inc-amsterdam": {
+  "region": "mohawk-valley",
+  "area": "upstate",
+  "location": "Amsterdam, New York · Mohawk Valley"
+ },
+ "aspire-ithaca": {
+  "region": "southern-tier",
+  "area": "upstate",
+  "location": "Ithaca, New York · Southern Tier"
+ },
+ "beechnut-ridge-enterprises-llc-dba-the-grass-hole-cannabis-plattsburgh": {
+  "region": "north-country",
+  "area": "upstate",
+  "location": "Plattsburgh, New York · North Country"
+ },
+ "big-gas-dispensary-new-paltz": {
+  "region": "hudson-valley",
+  "area": "upstate",
+  "location": "New Paltz, New York · Hudson Valley"
+ },
+ "bk-exotic-brooklyn": {
+  "region": "brooklyn",
+  "area": "nyc",
+  "location": "Flatbush, New York · Brooklyn"
+ },
+ "black-market-canna-co-llc-poughkeepsie": {
+  "region": "hudson-valley",
+  "area": "upstate",
+  "location": "Poughkeepsie, New York · Hudson Valley"
+ },
+ "bliss-lex-weedish-llc-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Upper East Side, New York · Manhattan"
+ },
+ "bloom-cannabis-dispensary-penn-yan": {
+  "region": "finger-lakes",
+  "area": "upstate",
+  "location": "Penn Yan, New York · Finger Lakes"
+ },
+ "bronx-joint-bronx": {
+  "region": "bronx",
+  "area": "nyc",
+  "location": "Hunts Point, New York · Bronx"
+ },
+ "brown-budda-new-york-southampton": {
+  "region": "long-island",
+  "area": "upstate",
+  "location": "Southampton, New York · Long Island"
+ },
+ "brownies-dispensary-llc-albany": {
+  "region": "capital-region",
+  "area": "upstate",
+  "location": "Albany, New York · Capital Region"
+ },
+ "buffalo-dreams-buffalo": {
+  "region": "western-new-york",
+  "area": "upstate",
+  "location": "Buffalo, New York · Western New York"
+ },
+ "canna-culture-co-corning": {
+  "region": "southern-tier",
+  "area": "upstate",
+  "location": "Corning, New York · Southern Tier"
+ },
+ "cannabis-emporium-dba-hush-bronx": {
+  "region": "bronx",
+  "area": "nyc",
+  "location": "Allerton, New York · Bronx"
+ },
+ "cannabis-realm-ny-white-plains-white-plains": {
+  "region": "hudson-valley",
+  "area": "upstate",
+  "location": "White Plains, New York · Hudson Valley"
+ },
+ "cannavita-astoria": {
+  "region": "queens",
+  "area": "nyc",
+  "location": "Astoria, New York · Queens"
+ },
+ "cannawave-albion": {
+  "region": "western-new-york",
+  "area": "upstate",
+  "location": "Albion, New York · Western New York"
+ },
+ "canterra-buffalo": {
+  "region": "western-new-york",
+  "area": "upstate",
+  "location": "Buffalo, New York · Western New York"
+ },
+ "capital-district-cannabis-and-wellness-inc-albany": {
+  "region": "capital-region",
+  "area": "upstate",
+  "location": "Albany, New York · Capital Region"
+ },
+ "charlie-fox-hamptons-southampton": {
+  "region": "long-island",
+  "area": "upstate",
+  "location": "Southampton, New York · Long Island"
+ },
+ "collegetown-dispensary-ithaca": {
+  "region": "southern-tier",
+  "area": "upstate",
+  "location": "Collegetown, New York · Southern Tier"
+ },
+ "conbud-llc-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Lower East Side, New York · Manhattan"
+ },
+ "culture-house-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Midtown, New York · Manhattan"
+ },
+ "curaleaf-ny-llc-newburgh": {
+  "region": "hudson-valley",
+  "area": "upstate",
+  "location": "Newburgh, New York · Hudson Valley"
+ },
+ "dagmar-cannabis-soho-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "SoHo, New York · Manhattan"
+ },
+ "dank-716-llc-buffalo": {
+  "region": "western-new-york",
+  "area": "upstate",
+  "location": "Buffalo, New York · Western New York"
+ },
+ "dazed-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Union Square, New York · Manhattan"
+ },
+ "dosha-farms-llc-dba-dosha-oneonta": {
+  "region": "mohawk-valley",
+  "area": "upstate",
+  "location": "Oneonta, New York · Mohawk Valley"
+ },
+ "elevate-mt-vernon": {
+  "region": "hudson-valley",
+  "area": "upstate",
+  "location": "Mount Vernon, New York · Hudson Valley"
+ },
+ "etain-white-plains": {
+  "region": "hudson-valley",
+  "area": "upstate",
+  "location": "White Plains, New York · Hudson Valley"
+ },
+ "evergreen-retail-brockport": {
+  "region": "finger-lakes",
+  "area": "upstate",
+  "location": "Brockport, New York · Finger Lakes"
+ },
+ "exit-31-exotic-utica": {
+  "region": "mohawk-valley",
+  "area": "upstate",
+  "location": "Utica, New York · Mohawk Valley"
+ },
+ "exscape-inc-dba-sacred-bloom-vestal": {
+  "region": "southern-tier",
+  "area": "upstate",
+  "location": "Vestal, New York · Southern Tier"
+ },
+ "fingerlakes-cannabis-co-victor": {
+  "region": "finger-lakes",
+  "area": "upstate",
+  "location": "Victor, New York · Finger Lakes"
+ },
+ "fiorello-pharmaceuticals-inc-dba-rise-rochester": {
+  "region": "finger-lakes",
+  "area": "upstate",
+  "location": "Rochester, New York · Finger Lakes"
+ },
+ "flower-power-dispensers-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Upper West Side, New York · Manhattan"
+ },
+ "flynnstoned-binghamton": {
+  "region": "southern-tier",
+  "area": "upstate",
+  "location": "Binghamton, New York · Southern Tier"
+ },
+ "flynnstoned-corporation-syracuse": {
+  "region": "central-new-york",
+  "area": "upstate",
+  "location": "Syracuse, New York · Central New York"
+ },
+ "flynnstoned-oswego": {
+  "region": "central-new-york",
+  "area": "upstate",
+  "location": "Oswego, New York · Central New York"
+ },
+ "freshly-baked-nyc-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Midtown, New York · Manhattan"
+ },
+ "good-grades-llc-jamaica": {
+  "region": "queens",
+  "area": "nyc",
+  "location": "Jamaica, New York · Queens"
+ },
+ "good-life-collective-finger-lakes-canandaigua": {
+  "region": "finger-lakes",
+  "area": "upstate",
+  "location": "Canandaigua, New York · Finger Lakes"
+ },
+ "good-life-collective-rochester": {
+  "region": "finger-lakes",
+  "area": "upstate",
+  "location": "Rochester, New York · Finger Lakes"
+ },
+ "gotham-buds-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Harlem, New York · Manhattan"
+ },
+ "gotham-caurd-llc-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "NoHo, New York · Manhattan"
+ },
+ "gotham-hudson": {
+  "region": "hudson-valley",
+  "area": "upstate",
+  "location": "Hudson, New York · Hudson Valley"
+ },
+ "gotham-williamsburg-brooklyn": {
+  "region": "brooklyn",
+  "area": "nyc",
+  "location": "Williamsburg, New York · Brooklyn"
+ },
+ "greenery-spot-llc-johnson-city": {
+  "region": "southern-tier",
+  "area": "upstate",
+  "location": "Johnson City, New York · Southern Tier"
+ },
+ "grow-together-brooklyn": {
+  "region": "brooklyn",
+  "area": "nyc",
+  "location": "Gravesend, New York · Brooklyn"
+ },
+ "happy-days-dispensary-inc-farmingdale": {
+  "region": "long-island",
+  "area": "upstate",
+  "location": "Farmingdale, New York · Long Island"
+ },
+ "happy-goat-dispensary-rochester": {
+  "region": "finger-lakes",
+  "area": "upstate",
+  "location": "Rochester, New York · Finger Lakes"
+ },
+ "happy-munkey-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Inwood, New York · Manhattan"
+ },
+ "happy-times-cannabis-co-niagara-falls": {
+  "region": "western-new-york",
+  "area": "upstate",
+  "location": "Niagara Falls, New York · Western New York"
+ },
+ "herbal-iq-depew": {
+  "region": "western-new-york",
+  "area": "upstate",
+  "location": "Depew, New York · Western New York"
+ },
+ "high-points-dispensary-geneva": {
+  "region": "finger-lakes",
+  "area": "upstate",
+  "location": "Geneva, New York · Finger Lakes"
+ },
+ "high-stone-staten-island": {
+  "region": "staten-island",
+  "area": "nyc",
+  "location": "Grasmere, New York · Staten Island"
+ },
+ "highlife-health-new-rochelle": {
+  "region": "hudson-valley",
+  "area": "upstate",
+  "location": "New Rochelle, New York · Hudson Valley"
+ },
+ "honey-kenmore-nickel-city-green-llc-kenmore": {
+  "region": "western-new-york",
+  "area": "upstate",
+  "location": "Kenmore, New York · Western New York"
+ },
+ "housing-works-cannabis-co-nomad-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "NoMad, New York · Manhattan"
+ },
+ "housing-works-cannabis-llc-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Greenwich Village, New York · Manhattan"
+ },
+ "humble-county-llc-dba-420-bliss-troy": {
+  "region": "capital-region",
+  "area": "upstate",
+  "location": "Troy, New York · Capital Region"
+ },
+ "just-a-little-higher-queens": {
+  "region": "queens",
+  "area": "nyc",
+  "location": "Queens, New York · Queens"
+ },
+ "just-breathe-binghamton": {
+  "region": "southern-tier",
+  "area": "upstate",
+  "location": "Binghamton, New York · Southern Tier"
+ },
+ "just-breathe-fingerlakes-seneca-falls": {
+  "region": "finger-lakes",
+  "area": "upstate",
+  "location": "Seneca Falls, New York · Finger Lakes"
+ },
+ "king-of-budz-cannabis-company-cheektowaga": {
+  "region": "western-new-york",
+  "area": "upstate",
+  "location": "Cheektowaga, New York · Western New York"
+ },
+ "lakehouse-cannabis-cortland": {
+  "region": "central-new-york",
+  "area": "upstate",
+  "location": "Cortland, New York · Central New York"
+ },
+ "late-bloomers-nyc-llc-ridgewood": {
+  "region": "queens",
+  "area": "nyc",
+  "location": "Ridgewood, New York · Queens"
+ },
+ "leafy-peaks-waterford": {
+  "region": "capital-region",
+  "area": "upstate",
+  "location": "Waterford, New York · Capital Region"
+ },
+ "legacy-dispensary-albany": {
+  "region": "capital-region",
+  "area": "upstate",
+  "location": "Albany, New York · Capital Region"
+ },
+ "liberty-buds-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Upper East Side, New York · Manhattan"
+ },
+ "lifted-jamestown": {
+  "region": "western-new-york",
+  "area": "upstate",
+  "location": "Jamestown, New York · Western New York"
+ },
+ "long-island-cannabis-club-deer-park": {
+  "region": "long-island",
+  "area": "upstate",
+  "location": "Deer Park, New York · Long Island"
+ },
+ "lotusworks-wellness-beacon": {
+  "region": "hudson-valley",
+  "area": "upstate",
+  "location": "Beacon, New York · Hudson Valley"
+ },
+ "matawana-dispensary-brooklyn": {
+  "region": "brooklyn",
+  "area": "nyc",
+  "location": "Park Slope, New York · Brooklyn"
+ },
+ "mj-dispensary-rochester": {
+  "region": "finger-lakes",
+  "area": "upstate",
+  "location": "Rochester, New York · Finger Lakes"
+ },
+ "mr-good-vybz-albany": {
+  "region": "capital-region",
+  "area": "upstate",
+  "location": "Albany, New York · Capital Region"
+ },
+ "native-haze-cannabis-co-macedon": {
+  "region": "finger-lakes",
+  "area": "upstate",
+  "location": "Macedon, New York · Finger Lakes"
+ },
+ "new-york-city-cannabis-exchange-bellerose": {
+  "region": "queens",
+  "area": "nyc",
+  "location": "Bellerose, New York · Queens"
+ },
+ "north-county-roots-inc-dba-elevate-adk-saranac-lake": {
+  "region": "north-country",
+  "area": "upstate",
+  "location": "Saranac Lake, New York · North Country"
+ },
+ "northern-lights-menards-menands": {
+  "region": "capital-region",
+  "area": "upstate",
+  "location": "Menands, New York · Capital Region"
+ },
+ "nughub-ny-staten-island": {
+  "region": "staten-island",
+  "area": "nyc",
+  "location": "Port Richmond, New York · Staten Island"
+ },
+ "nycbud-long-island-city": {
+  "region": "queens",
+  "area": "nyc",
+  "location": "Long Island City, New York · Queens"
+ },
+ "orange-county-cannabis-co-wawayanda": {
+  "region": "hudson-valley",
+  "area": "upstate",
+  "location": "Middletown, New York · Hudson Valley"
+ },
+ "p-nuggs-malone": {
+  "region": "north-country",
+  "area": "upstate",
+  "location": "Malone, New York · North Country"
+ },
+ "platinum-leaf-rock-hill": {
+  "region": "hudson-valley",
+  "area": "upstate",
+  "location": "Rock Hill, New York · Hudson Valley"
+ },
+ "premier-earth-corp-buffalo": {
+  "region": "western-new-york",
+  "area": "upstate",
+  "location": "Buffalo, New York · Western New York"
+ },
+ "public-flower-buffalo": {
+  "region": "western-new-york",
+  "area": "upstate",
+  "location": "Buffalo, New York · Western New York"
+ },
+ "puff-theory-cannabis-utica": {
+  "region": "mohawk-valley",
+  "area": "upstate",
+  "location": "Utica, New York · Mohawk Valley"
+ },
+ "purple-owl-dispensary-white-plains": {
+  "region": "hudson-valley",
+  "area": "upstate",
+  "location": "White Plains, New York · Hudson Valley"
+ },
+ "raven-dispensaries-llc-dba-raven-s-joint-clay": {
+  "region": "central-new-york",
+  "area": "upstate",
+  "location": "Clay, New York · Central New York"
+ },
+ "root-9-dispensary-wappingers-falls": {
+  "region": "hudson-valley",
+  "area": "upstate",
+  "location": "Wappingers Falls, New York · Hudson Valley"
+ },
+ "royale-flower-albany": {
+  "region": "capital-region",
+  "area": "upstate",
+  "location": "Albany, New York · Capital Region"
+ },
+ "sesh-nyc-bronx": {
+  "region": "bronx",
+  "area": "nyc",
+  "location": "Woodlawn, New York · Bronx"
+ },
+ "silk-road-nyc-jamaica": {
+  "region": "queens",
+  "area": "nyc",
+  "location": "Jamaica, New York · Queens"
+ },
+ "smacked-village-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Greenwich Village, New York · Manhattan"
+ },
+ "smiley-exotics-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Kips Bay, New York · Manhattan"
+ },
+ "soodaks-inc-dba-verdi-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Chelsea, New York · Manhattan"
+ },
+ "stage-one-cannabis-llc-rensselaer": {
+  "region": "capital-region",
+  "area": "upstate",
+  "location": "Rensselaer, New York · Capital Region"
+ },
+ "star-buds-buffalo": {
+  "region": "western-new-york",
+  "area": "upstate",
+  "location": "Buffalo, New York · Western New York"
+ },
+ "statis-cannabis-co-new-rochelle": {
+  "region": "hudson-valley",
+  "area": "upstate",
+  "location": "New Rochelle, New York · Hudson Valley"
+ },
+ "strain-stars-llc-farmingdale": {
+  "region": "long-island",
+  "area": "upstate",
+  "location": "Farmingdale, New York · Long Island"
+ },
+ "terp-bros-queens": {
+  "region": "queens",
+  "area": "nyc",
+  "location": "Astoria, New York · Queens"
+ },
+ "the-bakery-cannabis-dispensary-cohoes": {
+  "region": "capital-region",
+  "area": "upstate",
+  "location": "Cohoes, New York · Capital Region"
+ },
+ "the-cannabis-place-middle-village": {
+  "region": "queens",
+  "area": "nyc",
+  "location": "Middle Village, New York · Queens"
+ },
+ "the-dabbery-hashery-elmira": {
+  "region": "southern-tier",
+  "area": "upstate",
+  "location": "Elmira, New York · Southern Tier"
+ },
+ "the-emerald-dispensary-brooklyn": {
+  "region": "brooklyn",
+  "area": "nyc",
+  "location": "Bushwick, New York · Brooklyn"
+ },
+ "the-firehaus-ny-potsdam": {
+  "region": "north-country",
+  "area": "upstate",
+  "location": "Potsdam, New York · North Country"
+ },
+ "the-flowery-queens-forest-hills": {
+  "region": "queens",
+  "area": "nyc",
+  "location": "Forest Hills, New York · Queens"
+ },
+ "the-flowery-staten-island-staten-island": {
+  "region": "staten-island",
+  "area": "nyc",
+  "location": "Charleston, New York · Staten Island"
+ },
+ "the-herbal-care-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Upper East Side, New York · Manhattan"
+ },
+ "the-highest-peak-llc-potsdam": {
+  "region": "north-country",
+  "area": "upstate",
+  "location": "Potsdam, New York · North Country"
+ },
+ "the-kokoro-way-cannabis-kenmore": {
+  "region": "western-new-york",
+  "area": "upstate",
+  "location": "Kenmore, New York · Western New York"
+ },
+ "the-travel-agency-downtown-brooklyn-brooklyn": {
+  "region": "brooklyn",
+  "area": "nyc",
+  "location": "Downtown Brooklyn, New York · Brooklyn"
+ },
+ "the-travel-agency-union-square-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Union Square, New York · Manhattan"
+ },
+ "tiki-leaves-brooklyn": {
+  "region": "brooklyn",
+  "area": "nyc",
+  "location": "Coney Island, New York · Brooklyn"
+ },
+ "tj-s-cannabis-corp-liverpool": {
+  "region": "central-new-york",
+  "area": "upstate",
+  "location": "Liverpool, New York · Central New York"
+ },
+ "torches-nyc-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Midtown East, New York · Manhattan"
+ },
+ "transcend-wellness-troy": {
+  "region": "capital-region",
+  "area": "upstate",
+  "location": "Troy, New York · Capital Region"
+ },
+ "treehead-culture-amherst": {
+  "region": "western-new-york",
+  "area": "upstate",
+  "location": "Amherst, New York · Western New York"
+ },
+ "treehouse-cannabis-nyack": {
+  "region": "hudson-valley",
+  "area": "upstate",
+  "location": "Nyack, New York · Hudson Valley"
+ },
+ "trends-dispensaries-llc-long-island-city": {
+  "region": "queens",
+  "area": "nyc",
+  "location": "Long Island City, New York · Queens"
+ },
+ "two-buds-dispensary-bronx": {
+  "region": "bronx",
+  "area": "nyc",
+  "location": "Wakefield, New York · Bronx"
+ },
+ "upstate-canna-co-schenectady": {
+  "region": "capital-region",
+  "area": "upstate",
+  "location": "Schenectady, New York · Capital Region"
+ },
+ "urban-weeds-astoria": {
+  "region": "queens",
+  "area": "nyc",
+  "location": "Astoria, New York · Queens"
+ },
+ "verilife-albany-latham": {
+  "region": "capital-region",
+  "area": "upstate",
+  "location": "Latham, New York · Capital Region"
+ },
+ "verilife-east-syracuse": {
+  "region": "central-new-york",
+  "area": "upstate",
+  "location": "East Syracuse, New York · Central New York"
+ },
+ "weed-mart-by-new-metro-bayside": {
+  "region": "queens",
+  "area": "nyc",
+  "location": "Bayside, New York · Queens"
+ },
+ "whiteboxthc-llc-dba-lenox-hill-cannabis-co-new-york": {
+  "region": "manhattan",
+  "area": "nyc",
+  "location": "Lenox Hill, New York · Manhattan"
+ },
+ "william-jane-corporation-ithaca": {
+  "region": "southern-tier",
+  "area": "upstate",
+  "location": "Ithaca, New York · Southern Tier"
+ }
+}

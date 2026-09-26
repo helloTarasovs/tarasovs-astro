@@ -1,0 +1,720 @@
+---
+// /dispensary-visibility/  New York Dispensary ChatGPT Visibility Index (hub).
+// Rows, stats and the ItemList come from the profiles collection at build time; the directory
+// is plain HTML (crawlable) and a small inline script only filters / sorts it.
+// Copy from the live page; SEO + JSON-LD from pages.json (the two FAQPage blocks are merged into one).
+import Base from '../../layouts/Base.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import Faq from '../../components/blocks/Faq.astro';
+import { wpPage } from '../../lib/pages';
+import { abs } from '../../lib/site';
+import { dispensaryRows, indexStats, regionStats, REGION_LABELS, BANDS } from '../../lib/dispensaries';
+import { getCollection } from 'astro:content';
+
+const page = wpPage('/dispensary-visibility/');
+const rows = await dispensaryRows();
+const stats = indexStats(rows);
+const byRegion = regionStats(rows);
+const ranked = rows.filter((r) => r.rank != null);
+const regionsPresent = Object.keys(REGION_LABELS).filter((id) => rows.some((r) => r.region === id));
+
+const fmtDate = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+const shortDate = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
+const iso = (d: Date) => d.toISOString().slice(0, 10);
+const PREVIEW = 20; // rows visible before "Show all" (all rows are in the HTML)
+const lastUpdated = stats.lastUpdated!;
+
+// ---- JSON-LD: keep the WordPress graph, fill its empty ItemList, merge the two FAQPage blocks
+const faqEntities: any[] = [];
+const jsonld = page.jsonld
+  .map((block: any) => {
+    const graph = block['@graph'];
+    if (graph) {
+      block = {
+        ...block,
+        '@graph': graph.map((node: any) => {
+          if (node['@type'] === 'FAQPage') {
+            faqEntities.push(...node.mainEntity);
+            return null;
+          }
+          if (node['@type'] === 'ItemList') {
+            return {
+              ...node,
+              numberOfItems: ranked.length,
+              itemListElement: ranked.map((r) => ({ '@type': 'ListItem', position: r.rank, name: r.name, url: abs(r.url) })),
+            };
+          }
+          if (node['@type'] === 'WebPage') return { ...node, dateModified: lastUpdated.toISOString() };
+          return node;
+        }).filter(Boolean),
+      };
+      return block;
+    }
+    if (block['@type'] === 'FAQPage') {
+      faqEntities.push(...block.mainEntity);
+      return null;
+    }
+    if (block['@type'] === 'Dataset') return { ...block, dateModified: iso(lastUpdated) };
+    return block;
+  })
+  .filter(Boolean);
+const faqPage = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqEntities };
+jsonld.push(faqPage);
+const faqItems = faqEntities.map((e: any) => ({ q: e.name, a: `<p>${e.acceptedAnswer.text}</p>` }));
+
+// ---- Related research (titles from the posts collection)
+const posts = await getCollection('posts');
+const related = ['ny-dispensary-chatgpt-visibility-study', 'new-york-dispensary-ai-visibility-index', 'verdi-cannabis-dutchie-pro-case-study'].map((slug) => {
+  const p = posts.find((x) => x.data.slug === slug);
+  if (!p) throw new Error(`Related research: missing post ${slug}`);
+  return { title: p.data.title, url: `/${slug}/`, excerpt: p.data.excerpt };
+});
+
+const measures = [
+  { t: 'Mention and position', d: 'Whether the dispensary appears at all, and where it sits in the recommendation order.' },
+  { t: 'Consistency across prompts', d: 'Appearing once is noise. The benchmark uses a fixed set of ten prompts to separate reliable visibility from a lucky hit.' },
+  { t: 'Geographic reach', d: 'Visibility in the immediate neighborhood, the surrounding area, and the wider metro, scored separately.' },
+  { t: 'Competitors surfaced', d: 'Which dispensaries ChatGPT names when the business in question is missing from the answer.' },
+  { t: 'Prompt-level detail', d: 'Each of the ten prompts is published with its own result, so the score can be checked rather than taken on trust.' },
+  { t: 'Change over time', d: 'Profiles carry a check date and are re-run periodically, because AI recommendations shift.' },
+];
+const points = [['#1 recommendation', '100'], ['#2', '85'], ['#3', '70'], ['#4–5', '55'], ['Mentioned / unranked', '40'], ['Not mentioned', '0']];
+const patterns = [
+  ['Hyperlocal only', 'Strong primary-market visibility with little or no visibility at broader levels.'],
+  ['Local-led visibility', 'Visibility is concentrated in the primary market, with some broader reach.'],
+  ['Broad visibility', 'Meaningful visibility across all three geographic levels.'],
+  ['Evenly distributed', 'Similar visibility across the three market levels.'],
+  ['Wider-market visibility', 'A surrounding or wider market outperforms the primary market.'],
+  ['Limited visibility', 'Low visibility across all three market levels.'],
+  ['Mixed visibility', 'The three scores do not form one of the defined geographic patterns.'],
+];
+const distribution = [['85–100', 15], ['70–84', 35], ['55–69', 14], ['40–54', 5], ['0–39', 31]] as const;
+const citationUrl = abs('/dispensary-visibility/');
+---
+<Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld}>
+  <div class="dv">
+    <header class="hero container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol><li><a href="/">Home</a></li><li><span aria-current="page">NY Dispensary Visibility Index</span></li></ol>
+      </nav>
+      <p class="eyebrow">Live statewide research dataset</p>
+      <h1>New York Dispensary <span class="hl">ChatGPT Visibility Index</span></h1>
+      <p class="lead"><strong>Is ChatGPT recommending your dispensary?</strong> See how your dispensary appeared across 10 recorded ChatGPT prompts, including recommendation position, geographic visibility and the competitors surfaced instead.</p>
+      <p class="meta-line">10 recorded prompts · Directly observed ChatGPT responses · Every prompt published</p>
+      <p class="actions">
+        <a class="button" href="#directory">Browse all profiles</a>
+        <a class="button button--ghost" href="#methodology">How the Index works</a>
+      </p>
+      <dl class="facts">
+        <div><dt>Platform measured</dt><dd>ChatGPT</dd></div>
+        <div><dt>Coverage</dt><dd>New York State</dd></div>
+        <div><dt>Protocol</dt><dd>Separate Temporary Chats</dd></div>
+        <div><dt>Publication threshold</dt><dd>10/10 checks</dd></div>
+        <div><dt>Publisher</dt><dd>Tarasovs Digital Agency</dd></div>
+        <div><dt>Last updated</dt><dd><time datetime={iso(lastUpdated)}>{fmtDate(lastUpdated)}</time></dd></div>
+      </dl>
+    </header>
+
+    <section class="section container" id="live-rankings" aria-labelledby="qa-title">
+      <div class="quick">
+        <h2 id="qa-title" class="eyebrow-h">Quick answer</h2>
+        <p>The New York Dispensary ChatGPT Visibility Index measures whether a dispensary becomes part of ChatGPT’s answer when a user asks for a local cannabis recommendation. Every published score comes from 10 non-branded prompts entered in 10 separate Temporary Chats. A dispensary with zero mentions across all 10 recorded responses is classified as invisible.</p>
+      </div>
+      <ul class="kpis">
+        <li><strong>{stats.count}</strong> dispensaries are included in the current measured sample.</li>
+        <li><strong>{stats.invisiblePct}%</strong> of measured dispensaries received zero ChatGPT mentions across 10 prompts.</li>
+        <li><strong>{stats.average}/100</strong> is the average ChatGPT Share of Model score across the measured sample.</li>
+        <li><strong>{stats.strongPct}%</strong> of measured dispensaries have strong visibility at 70/100 or higher.</li>
+        <li><strong>{stats.highest}/100</strong> is the highest current ChatGPT Share of Model score.</li>
+      </ul>
+    </section>
+
+    <section class="section container" aria-labelledby="why-title">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Why this exists</p>
+          <h2 id="why-title">AI does not rank you lower. It leaves you out of the answer.</h2>
+        </div>
+        <div class="prose-col">
+          <p>Across the first 100 New York dispensaries we measured, 31 scored under 40 and nine were not named in a single one of their ten recorded prompts. Not ranked low. Absent.</p>
+          <p>The pattern is not specific to cannabis. SOCi’s 2026 Local Visibility Index analyzed more than 350,000 business locations: Google’s local 3-pack surfaced 35.9% of them, ChatGPT 1.2%. In retail, only 45% of the brands leading Google’s local results also appeared in AI recommendations.</p>
+          <p class="small">Source: SOCi 2026 Local Visibility Index. Cross-industry, not cannabis-specific.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="findings-title">
+      <div class="head">
+        <p class="eyebrow">First 100 profiles</p>
+        <h2 id="findings-title">What 1,000 recorded prompts show</h2>
+        <p class="intro">Every figure below comes from the profiles published on this page. Recorded as of 17 August 2026, across the first 100 New York dispensaries to complete the benchmark.</p>
+      </div>
+      <ul class="kpis kpis--4">
+        <li><strong>31</strong> scored under 40 out of 100</li>
+        <li><strong>9</strong> were not named in any of their 10 prompts</li>
+        <li><strong>50</strong> scored 70 or higher</li>
+        <li><strong>19</strong> landed anywhere in between</li>
+      </ul>
+      <div class="findings">
+        <article>
+          <h3>The result is not a bell curve</h3>
+          <p>Half the dispensaries measured are visible. Roughly a third are close to invisible. The middle is thin. ChatGPT is not ranking these businesses along a gradient, it is sorting most of them into recommended or not recommended.</p>
+          <figure class="bars" aria-label="Score distribution of the first 100 profiles">
+            {distribution.map(([range, n]) => (
+              <div class="bar"><span class="bar-label">{range}</span><span class="bar-track"><span style={`width:${(n / 35) * 100}%`}></span></span><span class="bar-value">{n}</span></div>
+            ))}
+            <figcaption>Composite score band → number of dispensaries (first 100 profiles).</figcaption>
+          </figure>
+        </article>
+        <article>
+          <h3>Manhattan is the weakest market we have measured</h3>
+          <p>Across 18 measured Manhattan dispensaries the median composite is 36. Across the rest of the state it is 70. Manhattan also holds the highest scores in the entire Index, which is the point: a handful of well-known names absorb the recommendations and the rest are not named at all.</p>
+          <p>Density appears to concentrate visibility rather than spread it. Boroughs with fewer than ten measured profiles are not compared here, because the samples are too small to say anything.</p>
+        </article>
+        <article>
+          <h3>Being first at home is not the same as being visible</h3>
+          <p>Eleven dispensaries scored exactly 70: first in all six prompts in their own market, absent from all four prompts covering the surrounding and wider markets. On a single number that reads as healthy visibility. In practice it means only customers who already name the neighbourhood ever see them.</p>
+          <p>This is why every profile carries a visibility pattern alongside the composite.</p>
+        </article>
+      </div>
+      <p class="small note">These figures describe the 100 dispensaries measured so far, not all 705 licensed retailers in New York, and the sample is not random: it reflects the order in which profiles were benchmarked. Figures are restated as coverage grows.</p>
+    </section>
+
+    <section class="section container" id="directory" aria-labelledby="dir-title">
+      <div class="head">
+        <p class="eyebrow">Rankings</p>
+        <h2 id="dir-title">New York dispensary ChatGPT visibility rankings</h2>
+        <p class="intro">All published 10-prompt profiles, ranked from the strongest current Share of Model score to the weakest. Every profile shows the full 10-prompt result set, market-level breakdown and the competitors ChatGPT surfaced.</p>
+      </div>
+
+      <div class="dir" data-dir>
+        <div class="controls" id="search">
+          <div class="control control--search">
+            <label for="dir-q">Search</label>
+            <input id="dir-q" type="search" placeholder="Dispensary name or city…" autocomplete="off" data-q />
+          </div>
+          <div class="control" role="group" aria-label="Area">
+            <span class="control-label" aria-hidden="true">Area</span>
+            <div class="scope">
+              <button type="button" aria-pressed="true" data-area="all">All NY</button>
+              <button type="button" aria-pressed="false" data-area="nyc">NYC</button>
+              <button type="button" aria-pressed="false" data-area="upstate">Upstate</button>
+            </div>
+          </div>
+          <div class="control">
+            <label for="dir-region">Region</label>
+            <select id="dir-region" data-region>
+              <option value="">All regions</option>
+              {regionsPresent.map((id) => <option value={id}>{REGION_LABELS[id]}</option>)}
+            </select>
+          </div>
+          <div class="control">
+            <label for="dir-band">Visibility</label>
+            <select id="dir-band" data-band>
+              <option value="">All visibility</option>
+              {BANDS.map((b) => <option value={b.id}>{b.label}</option>)}
+            </select>
+          </div>
+          <div class="control">
+            <label for="dir-sort">Sort</label>
+            <select id="dir-sort" data-sort>
+              <option value="score-desc">Highest visibility</option>
+              <option value="score-asc">Lowest visibility</option>
+              <option value="name">A–Z</option>
+              <option value="measured">Recently measured</option>
+            </select>
+          </div>
+        </div>
+        <p class="results" aria-live="polite" data-count>{rows.length} profiles</p>
+
+        <ol class="dir-list is-collapsed" id="dir-list" data-list>
+          {rows.map((r, i) => (
+            <li
+              class:list={{ 'is-extra': i >= PREVIEW }}
+              data-name={r.name.toLowerCase()}
+              data-city={`${(r.city ?? '')} ${r.location.replace(/, New York\b/g, '')}`.toLowerCase()}
+              data-area={r.area}
+              data-region={r.region}
+              data-band={r.band?.id ?? 'pending'}
+              data-score={r.score ?? -1}
+              data-measured={r.measured ? r.measured.valueOf() : 0}
+            >
+              <a href={r.url}>
+                <span class="rank">{r.rank ? <><span class="visually-hidden">Rank </span>#{r.rank}</> : '—'}</span>
+                <span class="who">
+                  <span class="name">{r.name}</span>
+                  <span class="loc">{r.location}</span>
+                </span>
+                {r.score != null ? (
+                  <span class="score">
+                    <span class="num"><strong>{r.rounded}</strong>/100</span>
+                    <span class="meter" aria-hidden="true"><span style={`width:${r.rounded}%`}></span></span>
+                    <span class:list={['band', `band--${r.band!.id}`]}>{r.band!.label}</span>
+                  </span>
+                ) : (
+                  <span class="score"><span class="band band--pending">Pending</span></span>
+                )}
+                <span class="measured">{r.measured ? <time datetime={iso(r.measured)}>Measured {shortDate(r.measured)}</time> : 'Benchmark in progress'}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+        <p class="empty" hidden data-empty>No profiles match these filters.</p>
+        <p class="more"><button type="button" class="button button--ghost" aria-controls="dir-list" data-more>Show all {rows.length} profiles</button></p>
+      </div>
+
+      <p class="small note">{rows.length} profiles published so far — new verified benchmarks are being added in controlled batches. New York has 705 licensed dispensaries open as of August 2026, and the Index is being built out across the state. <a href="#full-report">Add my dispensary</a></p>
+
+      <div class="definitions" id="definitions">
+        <h3>How to interpret the ranking</h3>
+        <dl>
+          <div><dt>ChatGPT Visibility score</dt><dd>A 0–100 composite based on the observed prominence of a dispensary across three geographic market levels.</dd></div>
+          <div><dt>Share of Model</dt><dd>The index’s comparable measure of how consistently and prominently a dispensary appeared in the recorded recommendation responses.</dd></div>
+          <div><dt>Invisible in ChatGPT</dt><dd>A dispensary with zero recorded mentions across the complete standardized 10-prompt benchmark.</dd></div>
+          <div><dt>READY profile</dt><dd>A public profile with a documented result for all 10 required checks. Partial benchmarks remain Pending and are excluded.</dd></div>
+        </dl>
+        <p class="small">This is a recommendation-discovery benchmark, not a traditional search-results ranking. The statewide order uses the current composite score. Ties are ordered alphabetically. The measured date on each profile identifies when that dispensary’s latest benchmark was recorded.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="statewide-coverage" aria-labelledby="geo-title">
+      <div class="head">
+        <p class="eyebrow">Geographic coverage</p>
+        <h2 id="geo-title">A statewide view, not only New York City</h2>
+        <p class="intro">The index includes eligible published profiles from New York City and from regions across the state. Regional comparisons become more useful as coverage grows; a region with fewer published profiles should not be interpreted as stronger or weaker solely from its sample size.</p>
+      </div>
+      <div class="table-wrap" role="region" aria-label="Visibility by region" tabindex="0">
+        <table class="geo">
+          <caption class="visually-hidden">ChatGPT visibility by New York region (published READY profiles)</caption>
+          <thead><tr><th scope="col">Region</th><th scope="col">Area</th><th scope="col">Profiles</th><th scope="col">Median score</th><th scope="col">Strong (70+)</th><th scope="col">Invisible</th></tr></thead>
+          <tbody>
+            {byRegion.map((g) => (
+              <tr>
+                <th scope="row">{g.label}</th>
+                <td>{g.area === 'nyc' ? 'NYC' : 'Upstate'}</td>
+                <td>{g.count}</td>
+                <td>{g.median}/100</td>
+                <td>{g.strongPct}%</td>
+                <td>{g.invisible}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="small note">Calculated from the {stats.count} published profiles on <time datetime={iso(lastUpdated)}>{fmtDate(lastUpdated)}</time>. “Invisible” = zero mentions across all 10 prompts.</p>
+
+      <div class="example">
+        <h3>Visibility changes with the size of the search area</h3>
+        <p>A dispensary can dominate ChatGPT recommendations on its own block and disappear entirely once the question widens to the borough. Averaging those into one number would hide the thing that matters most.</p>
+        <ul class="levels">
+          <li><span class="level">Primary Market</span><strong>Excellent</strong><span>Kenmore. First or second recommendation in all six neighborhood prompts.</span></li>
+          <li><span class="level">Secondary Market</span><strong>Very Weak</strong><span>Buffalo. Not named in either surrounding-market prompt.</span></li>
+          <li><span class="level">Regional Market</span><strong>Very Weak</strong><span>Tonawanda. Not named in either wider-market prompt.</span></li>
+        </ul>
+        <p class="small">Measured values from <a href="/dispensary-visibility/honey-kenmore-nickel-city-green-llc-kenmore/">Honey Kenmore</a>, recorded 16 August 2026. Composite 67 out of 100, pattern Hyperlocal only. The composite alone would not tell you that visibility stops at the town line.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="methodology" aria-labelledby="method-title">
+      <div class="head">
+        <p class="eyebrow">Research design</p>
+        <h2 id="method-title">How the ChatGPT Visibility score works</h2>
+        <p class="intro">The Index tests whether ChatGPT recommends a dispensary when users ask common non-branded local discovery questions — the kind a customer actually types before deciding where to shop. 10 recorded prompts. 3 market levels. 1 composite score.</p>
+      </div>
+
+      <ul class="measures">
+        {measures.map((m) => <li><h3>{m.t}</h3><p>{m.d}</p></li>)}
+      </ul>
+
+      <div class="method-grid">
+        <div class="panel">
+          <h3>Recommendation-position scoring</h3>
+          <table class="mini">
+            <thead><tr><th scope="col">Recommendation result</th><th scope="col">Points</th></tr></thead>
+            <tbody>{points.map(([r, p]) => <tr><td>{r}</td><td>{p}</td></tr>)}</tbody>
+          </table>
+        </div>
+        <div class="panel">
+          <h3>Market weighting</h3>
+          <p>Each market level is scored as the average of its own prompts, then the three level scores are combined by weight. This gives the greatest weight to the market where the dispensary most directly competes for customers.</p>
+          <p class="formula">Composite = Primary Market × 70% + Secondary Market × 20% + Regional Market × 10%</p>
+          <p class="small">Six prompts test the primary market, two the secondary market and two the regional or wider market.</p>
+        </div>
+        <div class="panel">
+          <h3>We require 10/10 valid results</h3>
+          <p>A dispensary does not receive a public score from a partial scan. The benchmark is marked ready only after all 10 standardized prompts return a valid result. If a request times out, fails, or cannot be validated, the profile stays Pending until the missing check completes successfully.</p>
+        </div>
+      </div>
+
+      <h3 class="sub">How to read the composite</h3>
+      <p class="muted">The composite supports comparison between dispensaries. It does not describe geographic reach on its own, so every profile also carries a visibility pattern. Read the two together.</p>
+      <div class="table-wrap" role="region" aria-label="Visibility patterns" tabindex="0">
+        <table class="geo">
+          <thead><tr><th scope="col">Pattern</th><th scope="col">What it means</th></tr></thead>
+          <tbody>{patterns.map(([p, m]) => <tr><th scope="row">{p}</th><td>{m}</td></tr>)}</tbody>
+        </table>
+      </div>
+
+      <h3 class="sub">Protocol and limitations</h3>
+      <ul class="bullets">
+        <li>Each of the 10 non-branded prompts is entered in a separate new ChatGPT Temporary Chat with no previous benchmark conversation history. For every prompt we record the returned response, the observed recommendation position, the market being tested and the competing dispensaries named in that same response.</li>
+        <li>Scores come from directly observed Temporary Chat results. Web results, directories and our own judgment are not used to reconstruct or estimate a recorded position. If a response was not captured, the profile stays Pending rather than being filled in.</li>
+        <li>A ranked position is only assigned when it is clearly identifiable in the response. Where a dispensary is mentioned but no clear Top-5 order can be identified, it is scored as mentioned / unranked rather than guessed at.</li>
+        <li>A high composite score does not represent business quality, product quality, customer satisfaction or revenue.</li>
+        <li>Google Search, Google Maps, Gemini and other AI platforms are not included in the public composite score.</li>
+        <li><strong>Benchmark note:</strong> These are standardized Temporary Chat checks, not a prediction of what every user will see. ChatGPT responses vary by date, model, location, available sources and wording. Read a profile as a dated snapshot, not a permanent ranking.</li>
+      </ul>
+    </section>
+
+    <section class="section container" id="how-to-cite" aria-labelledby="cite-title">
+      <div class="cite">
+        <p class="eyebrow">For journalists and researchers</p>
+        <h2 id="cite-title">How to cite this index</h2>
+        <p>When quoting a statewide statistic, include the dataset name, publisher, canonical URL and access date. The statistics update as eligible profiles are added or remeasured. When citing a dispensary score, link to the individual profile and include the “Measured” date displayed on that profile. Do not describe the measured sample as every licensed dispensary in New York State.</p>
+        <figure class="citation">
+          <figcaption>Suggested citation</figcaption>
+          <p data-citation>Tarasovs Digital Agency. “New York Dispensary ChatGPT Visibility Index.” {citationUrl} (accessed <span data-today>{fmtDate(new Date())}</span>).</p>
+          <button type="button" class="button button--ghost" data-copy>Copy citation</button>
+        </figure>
+        <h3>Publisher and commercial disclosure</h3>
+        <p>The index is published and maintained by <a href="/about/">Tarasovs Digital Agency</a>. Tarasovs also provides dispensary SEO and visibility services. Every included dispensary is evaluated with the same benchmark structure, profiles are published whether scores are high or low, and commercial relationships do not change the scoring rules. Dispensary owners can <a href="#full-report">request a recheck</a> of their profile at any time.</p>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="related-title">
+      <h2 id="related-title">Related research</h2>
+      <ul class="related">
+        {related.map((r) => (
+          <li><a href={r.url}><span class="r-title">{r.title}</span>{r.excerpt && <span class="r-ex">{r.excerpt}</span>}</a></li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="section container" id="full-report" aria-labelledby="report-title">
+      <div class="report">
+        <div>
+          <p class="eyebrow">Full Visibility Report</p>
+          <h2 id="report-title">Get the Full Visibility Report</h2>
+          <p>Your public profile measures ChatGPT. The Full Visibility Report shows why you’re winning or losing, and adds the channels that are not published here.</p>
+          <ul class="channels">
+            <li><h3>Google Organic</h3><p>High-intent rankings and landing-page gaps.</p></li>
+            <li><h3>Google Maps</h3><p>Local Pack visibility and competitor overlap.</p></li>
+            <li><h3>Menu SEO</h3><p>Dutchie crawlability, category/product URLs and indexing.</p></li>
+            <li><h3>Additional AI platforms</h3><p>Gemini, Perplexity and citation-level opportunities beyond the public ChatGPT benchmark.</p></li>
+          </ul>
+        </div>
+        <div class="form-card">
+          <ContactForm
+            id="report-form"
+            subject="Full Visibility Report request (NY Dispensary Visibility Index)"
+            emailLabel="Work email"
+            messageLabel="Anything specific you want us to check? (optional)"
+            messagePlaceholder="For example: Google Maps rankings, organic visibility, menu SEO, competitors…"
+            dispensaries={rows.map((r) => r.name)}
+            submitLabel="Get my Full Visibility Report"
+            note="No spam. We'll use your details only to respond to this visibility report request."
+            successText="Your Full Visibility Report request is in. We will review the available data and send it to your work email."
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="faq" aria-labelledby="faq-title">
+      <div class="faq-wrap">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title">Frequently asked questions</h2>
+        <Faq items={faqItems} />
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="missing-title">
+      <div class="cta">
+        <h2 id="missing-title">Missing from ChatGPT recommendations?</h2>
+        <p>The Index shows where the gap is. Tarasovs helps New York dispensaries improve organic search, local SEO, technical menu SEO and AI discoverability.</p>
+        <a class="button button--highlight" href="/dispensary-seo-new-york/">Explore dispensary SEO services</a>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .dv { padding-bottom: var(--space-6); }
+  .hero { padding-block: var(--space-6) var(--space-7); }
+  .crumbs ol { display: flex; gap: var(--space-2); padding: 0; list-style: none; font-size: var(--text-xs); color: var(--color-text-muted); }
+  .crumbs li + li::before { content: '/'; margin-right: var(--space-2); opacity: 0.6; }
+  .crumbs a { color: inherit; text-decoration: none; }
+  .crumbs a:hover { color: var(--color-link); text-decoration: underline; }
+  .hero .eyebrow { margin-top: var(--space-6); }
+  .hero h1 { margin-top: var(--space-3); max-width: 20ch; }
+  .lead { margin-top: var(--space-5); max-width: 62ch; font-size: var(--text-lg); color: var(--color-text-muted); }
+  .lead strong { color: var(--color-text); }
+  .meta-line { margin-top: var(--space-3); font-size: var(--text-sm); color: var(--color-text-muted); }
+  .actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
+  .facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); margin-top: var(--space-7); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+  .facts dt { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .facts dd { margin: 0; font-weight: 600; font-size: var(--text-sm); }
+
+  .section { padding-block: var(--space-8); }
+  .head { max-width: 50rem; margin-bottom: var(--space-6); }
+  .head h2 { margin-top: var(--space-2); }
+  .intro { margin-top: var(--space-4); color: var(--color-text-muted); font-size: var(--text-lg); }
+  .small { font-size: var(--text-xs); color: var(--color-text-muted); }
+  .note { margin-top: var(--space-5); max-width: 62rem; }
+  .muted { color: var(--color-text-muted); }
+  .eyebrow-h { font-family: var(--font-text); font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-muted); }
+
+  .quick { max-width: 52rem; padding: var(--space-5); border-left: 3px solid var(--brand-violet); background: var(--color-surface); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+  .quick p { margin-top: var(--space-3); }
+  .kpis { display: grid; gap: var(--space-4); margin-top: var(--space-6); padding: 0; list-style: none; }
+  .kpis li { display: flex; flex-direction: column; gap: var(--space-2); padding-top: var(--space-4); border-top: 1px solid var(--color-border); color: var(--color-text-muted); font-size: var(--text-sm); }
+  .kpis strong { font-family: var(--font-title); font-size: var(--text-h2); font-weight: 500; line-height: 1; color: var(--color-heading); }
+
+  .split { display: grid; gap: var(--space-5); }
+  .split h2 { margin-top: var(--space-2); }
+  .prose-col p + p { margin-top: var(--space-4); }
+
+  .findings { display: grid; gap: var(--space-4); margin-top: var(--space-7); }
+  .findings article { padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+  .findings h3 { font-size: var(--text-h4); margin-bottom: var(--space-3); }
+  .findings p { color: var(--color-text-muted); font-size: var(--text-sm); }
+  .findings p + p { margin-top: var(--space-3); }
+  .bars { display: grid; gap: var(--space-2); margin: var(--space-4) 0 0; }
+  .bar { display: grid; grid-template-columns: 4.2rem 1fr 2rem; align-items: center; gap: var(--space-3); font-size: var(--text-xs); }
+  .bar-track { height: 10px; border-radius: var(--radius-pill); background: var(--color-surface-2); overflow: hidden; }
+  .bar-track span { display: block; height: 100%; background: var(--brand-violet); border-radius: inherit; }
+  .bar-value { text-align: right; font-variant-numeric: tabular-nums; }
+  .bars figcaption { margin-top: var(--space-2); font-size: var(--text-xs); color: var(--color-text-muted); }
+
+  .controls { display: grid; gap: var(--space-4); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); scroll-margin-top: calc(var(--header-h) + var(--space-4)); }
+  .control { display: grid; gap: var(--space-2); }
+  .control label, .control-label { font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-muted); }
+  .control input, .control select {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.55rem 0.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: 1rem;
+  }
+  .scope { display: flex; gap: var(--space-2); }
+  .scope button { flex: 1; min-height: 44px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-bg); color: var(--color-text); font-size: var(--text-sm); }
+  .scope button[aria-pressed='true'] { background: var(--brand-violet); border-color: var(--brand-violet); color: #fff; }
+  .results { margin-block: var(--space-4) var(--space-3); color: var(--color-text-muted); font-size: var(--text-sm); }
+
+  .dir-list { display: grid; gap: var(--space-2); padding: 0; list-style: none; }
+  .dir-list li[hidden] { display: none; }
+  .dir-list.is-collapsed li.is-extra { display: none; }
+  .more { margin-top: var(--space-5); text-align: center; }
+  .more[hidden] { display: none; }
+  .dir-list a {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    grid-template-areas: 'rank who' 'rank score' 'rank measured';
+    gap: var(--space-1) var(--space-3);
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .dir-list a:hover { border-color: var(--brand-violet); }
+  .dir-list a:hover .name { color: var(--color-link); }
+  .rank { grid-area: rank; font-family: var(--font-title); font-weight: 600; color: var(--color-text-muted); font-variant-numeric: tabular-nums; }
+  .who { grid-area: who; display: flex; flex-direction: column; }
+  .name { font-weight: 600; color: var(--color-heading); }
+  .loc { font-size: var(--text-xs); color: var(--color-text-muted); }
+  .score { grid-area: score; display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-2); }
+  .num { font-size: var(--text-xs); color: var(--color-text-muted); white-space: nowrap; }
+  .num strong { font-family: var(--font-title); font-size: var(--text-lg); color: var(--color-heading); }
+  .meter { flex: 1; min-width: 60px; height: 8px; border-radius: var(--radius-pill); background: var(--color-surface-2); overflow: hidden; }
+  .meter span { display: block; height: 100%; border-radius: inherit; background: var(--brand-violet); }
+  .band { padding: 0.1rem 0.55rem; border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 600; white-space: nowrap; }
+  .band--strong { background: color-mix(in srgb, #16a34a 16%, transparent); }
+  .band--limited { background: color-mix(in srgb, var(--brand-yellow) 26%, transparent); }
+  .band--low { background: color-mix(in srgb, #f97316 18%, transparent); }
+  .band--almost-invisible { background: color-mix(in srgb, #dc2626 16%, transparent); }
+  .band--pending { background: var(--color-surface-2); }
+  .measured { grid-area: measured; font-size: var(--text-xs); color: var(--color-text-muted); }
+  .empty { padding: var(--space-6); text-align: center; color: var(--color-text-muted); }
+
+  .definitions { margin-top: var(--space-7); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); }
+  .definitions h3 { font-size: var(--text-h4); margin-bottom: var(--space-4); }
+  .definitions dl { display: grid; gap: var(--space-4); margin-bottom: var(--space-4); }
+  .definitions dt { font-weight: 600; }
+  .definitions dd { margin: var(--space-1) 0 0; color: var(--color-text-muted); font-size: var(--text-sm); }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+  table.geo { width: 100%; min-width: 560px; font-size: var(--text-sm); }
+  .geo th, .geo td { padding: var(--space-3) var(--space-4); text-align: left; border-bottom: 1px solid var(--color-border); }
+  .geo thead th { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-muted); background: var(--color-surface-2); }
+  .geo tbody th { font-weight: 600; }
+  .geo td { font-variant-numeric: tabular-nums; }
+  .geo tbody tr:last-child > * { border-bottom: 0; }
+
+  .example { margin-top: var(--space-7); max-width: 52rem; }
+  .example h3 { font-size: var(--text-h3); margin-bottom: var(--space-3); }
+  .example > p { color: var(--color-text-muted); }
+  .levels { display: grid; gap: var(--space-3); margin-block: var(--space-5); padding: 0; list-style: none; }
+  .levels li { display: grid; gap: var(--space-1); padding: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); font-size: var(--text-sm); }
+  .level { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-muted); }
+
+  .measures { display: grid; gap: var(--space-4); padding: 0; list-style: none; }
+  .measures li { padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+  .measures h3 { font-size: var(--text-h4); margin-bottom: var(--space-2); }
+  .measures p { color: var(--color-text-muted); font-size: var(--text-sm); }
+  .method-grid { display: grid; gap: var(--space-4); margin-top: var(--space-5); }
+  .panel { padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+  .panel h3 { font-size: var(--text-h4); margin-bottom: var(--space-3); }
+  .panel p { color: var(--color-text-muted); font-size: var(--text-sm); }
+  .panel p + p { margin-top: var(--space-3); }
+  .mini { width: 100%; font-size: var(--text-sm); }
+  .mini th, .mini td { padding: var(--space-2) 0; text-align: left; border-bottom: 1px solid var(--color-border); }
+  .mini td:last-child, .mini th:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+  .mini thead th { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .formula { padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm); background: var(--color-surface-2); color: var(--color-text) !important; font-weight: 600; }
+  .sub { margin-block: var(--space-7) var(--space-3); font-size: var(--text-h4); }
+  .sub + .muted { margin-bottom: var(--space-4); max-width: 52rem; }
+  .bullets { display: grid; gap: var(--space-3); max-width: 60rem; padding-left: 1.2em; color: var(--color-text-muted); font-size: var(--text-sm); }
+
+  .cite { max-width: 52rem; }
+  .cite h2 { margin-block: var(--space-2) var(--space-4); }
+  .cite h3 { margin-block: var(--space-6) var(--space-3); font-size: var(--text-h4); }
+  .cite > p { color: var(--color-text-muted); }
+  .citation { margin: var(--space-5) 0 0; padding: var(--space-5); border: 1px dashed var(--brand-violet); border-radius: var(--radius-md); background: var(--color-surface); }
+  .citation figcaption { font-size: var(--text-xs); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-muted); }
+  .citation p { margin-block: var(--space-2) var(--space-4); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: var(--text-sm); overflow-wrap: anywhere; }
+
+  .related { display: grid; gap: var(--space-4); margin-top: var(--space-5); padding: 0; list-style: none; }
+  .related a { display: flex; flex-direction: column; gap: var(--space-2); height: 100%; padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); text-decoration: none; }
+  .related a:hover { border-color: var(--brand-violet); }
+  .r-title { font-family: var(--font-title); font-weight: 600; font-size: var(--text-lg); color: var(--color-heading); }
+  .r-ex { color: var(--color-text-muted); font-size: var(--text-sm); }
+
+  .report { display: grid; gap: var(--space-6); padding: var(--space-6) var(--space-5); border-radius: var(--radius-lg); background: var(--brand-navy); color: #d6d3de; }
+  .report .eyebrow { color: #b9b6c3; }
+  .report h2 { margin-block: var(--space-2) var(--space-4); color: #fff; }
+  .channels { display: grid; gap: var(--space-3); margin-top: var(--space-5); padding: 0; list-style: none; }
+  .channels li { padding: var(--space-4); border-radius: var(--radius-md); background: rgb(255 255 255 / 0.06); }
+  .channels h3 { font-size: var(--text-base); color: #fff; }
+  .channels p { font-size: var(--text-sm); }
+  .form-card { padding: var(--space-5); border-radius: var(--radius-md); background: var(--color-surface); color: var(--color-text); }
+
+  .faq-wrap { max-width: 52rem; }
+  .faq-wrap h2 { margin-block: var(--space-2) var(--space-5); }
+
+  .cta { padding: var(--space-6) var(--space-5); border-radius: var(--radius-lg); border: 1px solid var(--color-border); background: var(--color-surface); }
+  .cta p { margin-block: var(--space-3) var(--space-5); max-width: 56ch; color: var(--color-text-muted); }
+
+  @media (min-width: 40em) {
+    .facts { grid-template-columns: repeat(3, 1fr); }
+    .kpis { grid-template-columns: repeat(2, 1fr); }
+    .controls { grid-template-columns: repeat(2, 1fr); }
+    .control--search { grid-column: 1 / -1; }
+    .dir-list a { grid-template-columns: 3.5rem minmax(0, 1fr) 16rem; grid-template-areas: 'rank who score' 'rank measured score'; align-items: center; }
+    .score { margin-top: 0; }
+    .definitions dl { grid-template-columns: repeat(2, 1fr); }
+    .measures { grid-template-columns: repeat(2, 1fr); }
+    .levels { grid-template-columns: repeat(3, 1fr); }
+    .channels { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 64em) {
+    .facts { grid-template-columns: repeat(6, 1fr); }
+    .section { padding-block: var(--space-9); }
+    .kpis { grid-template-columns: repeat(5, 1fr); }
+    .kpis--4 { grid-template-columns: repeat(4, 1fr); }
+    .split { grid-template-columns: 1fr 1.2fr; gap: var(--space-8); }
+    .findings { grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+    .controls { grid-template-columns: 2fr 1.4fr 1fr 1fr 1fr; align-items: end; }
+    .control--search { grid-column: auto; }
+    .measures { grid-template-columns: repeat(3, 1fr); }
+    .method-grid { grid-template-columns: repeat(3, 1fr); }
+    .related { grid-template-columns: repeat(3, 1fr); }
+    .report { grid-template-columns: 1fr 1fr; gap: var(--space-8); padding: var(--space-8); }
+    .cta { padding: var(--space-7); }
+  }
+</style>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-dir]');
+  if (root) {
+    const list = root.querySelector<HTMLOListElement>('[data-list]')!;
+    const items = [...list.children] as HTMLLIElement[];
+    const q = root.querySelector<HTMLInputElement>('[data-q]')!;
+    const region = root.querySelector<HTMLSelectElement>('[data-region]')!;
+    const band = root.querySelector<HTMLSelectElement>('[data-band]')!;
+    const sort = root.querySelector<HTMLSelectElement>('[data-sort]')!;
+    const areaBtns = [...root.querySelectorAll<HTMLButtonElement>('[data-area]')].filter((b) => b.tagName === 'BUTTON');
+    const count = root.querySelector<HTMLElement>('[data-count]')!;
+    const empty = root.querySelector<HTMLElement>('[data-empty]')!;
+    const more = root.querySelector<HTMLButtonElement>('[data-more]')!;
+    let area = 'all';
+    let expanded = false;
+
+    const num = (li: HTMLElement, k: string) => Number(li.dataset[k]);
+    const sorters: Record<string, (a: HTMLElement, b: HTMLElement) => number> = {
+      'score-desc': (a, b) => num(b, 'score') - num(a, 'score') || a.dataset.name!.localeCompare(b.dataset.name!),
+      'score-asc': (a, b) => (num(a, 'score') < 0 ? 1 : num(b, 'score') < 0 ? -1 : num(a, 'score') - num(b, 'score')) || a.dataset.name!.localeCompare(b.dataset.name!),
+      name: (a, b) => a.dataset.name!.localeCompare(b.dataset.name!),
+      measured: (a, b) => num(b, 'measured') - num(a, 'measured'),
+    };
+
+    const apply = () => {
+      const term = q.value.trim().toLowerCase();
+      let shown = 0;
+      for (const li of items) {
+        const on =
+          (!term || li.dataset.name!.includes(term) || li.dataset.city!.includes(term)) &&
+          (area === 'all' || li.dataset.area === area) &&
+          (!region.value || li.dataset.region === region.value) &&
+          (!band.value || li.dataset.band === band.value);
+        li.hidden = !on;
+        if (on) shown++;
+      }
+      const sorted = [...items].sort(sorters[sort.value]);
+      // Collapsed view = first 20 of the current order, only while nothing is filtered
+      const filtering = !!term || area !== 'all' || !!region.value || !!band.value;
+      sorted.forEach((li, i) => li.classList.toggle('is-extra', i >= 20));
+      list.classList.toggle('is-collapsed', !expanded && !filtering);
+      more.parentElement!.hidden = expanded || filtering;
+      list.append(...sorted);
+      count.textContent = shown === items.length ? `${items.length} profiles` : `${shown} of ${items.length} profiles`;
+      empty.hidden = shown > 0;
+    };
+
+    more.addEventListener('click', () => {
+      expanded = true;
+      apply();
+      (list.querySelectorAll('li')[20] as HTMLElement | undefined)?.querySelector('a')?.focus();
+    });
+    q.addEventListener('input', apply);
+    [region, band, sort].forEach((s) => s.addEventListener('change', apply));
+    areaBtns.forEach((b) =>
+      b.addEventListener('click', () => {
+        area = b.dataset.area!;
+        areaBtns.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+        apply();
+      }),
+    );
+  }
+
+  // Citation access date = the reader's today (build date is only the no-JS fallback)
+  document.querySelectorAll<HTMLElement>('[data-today]').forEach((el) => {
+    el.textContent = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  });
+
+  document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((btn) =>
+    btn.addEventListener('click', async () => {
+      const text = btn.parentElement!.querySelector('[data-citation]')!.textContent!;
+      try {
+        await navigator.clipboard.writeText(text);
+        btn.textContent = 'Copied';
+      } catch {
+        btn.textContent = 'Select the text to copy';
+      }
+      setTimeout(() => (btn.textContent = 'Copy citation'), 2500);
+    }),
+  );
+</script>

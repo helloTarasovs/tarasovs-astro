@@ -2,6 +2,7 @@
 dist
 dist/
 dist.nosync/
+dist [0-9]*/
 # generated types
 .astro/
 
