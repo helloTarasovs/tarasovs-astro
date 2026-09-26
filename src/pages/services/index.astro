@@ -1,0 +1,7 @@
+---
+// /services/ hub. Content: src/content/services/services.json
+import ServicePage from '../../layouts/ServicePage.astro';
+import data from '../../content/services/services.json';
+import type { ServicePageData } from '../../lib/service-page';
+---
+<ServicePage data={data as ServicePageData} />

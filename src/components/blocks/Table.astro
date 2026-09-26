@@ -1,0 +1,34 @@
+---
+// Comparison table. First cell of each row is a row header; `highlight` marks our column.
+interface Props { caption?: string; head: string[]; rows: string[][]; highlight?: number }
+const { caption, head, rows, highlight } = Astro.props;
+---
+<div class="table-wrap" role="region" aria-label={caption || 'Comparison'} tabindex="0">
+  <table>
+    {caption && <caption class="visually-hidden">{caption}</caption>}
+    <thead>
+      <tr>{head.map((h, i) => <th scope="col" class:list={{ 'is-us': i === highlight }} set:html={h} />)}</tr>
+    </thead>
+    <tbody>
+      {rows.map((r) => (
+        <tr>
+          {r.map((c, i) => i === 0
+            ? <th scope="row" set:html={c} />
+            : <td class:list={{ 'is-us': i === highlight }} set:html={c} />)}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .table-wrap { overflow-x: auto; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+  table { width: 100%; min-width: 600px; font-size: var(--text-sm); }
+  th, td { padding: var(--space-3) var(--space-4); text-align: left; vertical-align: top; border-bottom: 1px solid var(--color-border); }
+  thead th { font-family: var(--font-title); font-weight: 600; font-size: var(--text-sm); color: var(--color-heading); background: var(--color-surface-2); }
+  tbody th { font-weight: 600; color: var(--color-heading); width: 22%; }
+  td { color: var(--color-text-muted); }
+  .is-us { color: var(--color-text); background: color-mix(in srgb, var(--brand-violet) 8%, transparent); }
+  thead .is-us { color: var(--color-link); background: color-mix(in srgb, var(--brand-violet) 14%, transparent); }
+  tbody tr:last-child > * { border-bottom: 0; }
+</style>

@@ -1,0 +1,15 @@
+---
+// /services/<slug>/ pages. Content: src/content/services/<slug>.json (one layout, different data).
+import ServicePage from '../../layouts/ServicePage.astro';
+import type { ServicePageData } from '../../lib/service-page';
+
+export async function getStaticPaths() {
+  const files = import.meta.glob<ServicePageData>('../../content/services/*.json', { eager: true, import: 'default' });
+  return Object.values(files)
+    .filter((d) => /^\/services\/[^/]+\/$/.test(d.url))
+    .map((data) => ({ params: { slug: data.url.split('/')[2] }, props: { data } }));
+}
+
+const { data } = Astro.props;
+---
+<ServicePage data={data} />

@@ -1,0 +1,231 @@
+{
+  "url": "/services/website-design-services/",
+  "hero": {
+    "title": "Website Design Services in New York",
+    "lead": "<p>We design websites for ambitious businesses in New York and Europe — built to rank on Google, perform in AI search, and turn visitors into paying clients.</p>",
+    "actions": [
+      {
+        "label": "Start a Project",
+        "href": "/contact-us/#CForm"
+      },
+      {
+        "label": "View Our Work",
+        "href": "/case-studies/"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "eyebrow": "Design built for results, not just looks",
+      "title": "The result is a website that earns traffic, holds attention, and converts",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Most websites look good in a browser preview and underperform everywhere else. We build differently.</p><p>Every site Tarasovs delivers is designed with three things working in parallel: visual identity that reflects your brand, technical architecture that satisfies Google’s Core Web Vitals, and content structure that positions you for AI-powered search engines like ChatGPT and Google AI Overviews.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Our web design process",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Discovery &amp; Strategy",
+              "html": "<p>We start by understanding your business, your competitors, and your customers — not just your color preferences. Every design decision that follows is grounded in research, not guesswork. We define what success looks like before a single pixel is placed.</p>"
+            },
+            {
+              "title": "Design &amp; Prototyping",
+              "html": "<p>Our designers build wireframes and interactive prototypes before moving to full visual design. You see the structure and logic of your site before it's built — saving time, reducing revisions, and ensuring the final product matches your expectations.</p>"
+            },
+            {
+              "title": "Development &amp; Launch",
+              "html": "<p>Every site is built on clean, semantic code that loads fast, works flawlessly on all devices, and is structured for both search engines and AI algorithms. We handle the full launch process and provide documentation so your team can manage content independently.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "What's included in every website project",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "UI/UX Design",
+              "html": "<p>User experience design informed by your target audience’s behavior. Intuitive navigation, clear hierarchy, and interfaces that guide visitors toward action without friction.</p>"
+            },
+            {
+              "title": "Responsive &amp; Mobile-First Design",
+              "html": "<p>Over 60% of web traffic comes from mobile devices. Every site we build is designed mobile-first and tested across all screen sizes and browsers before launch.</p>"
+            },
+            {
+              "title": "SEO-Ready Architecture",
+              "html": "<p>Clean heading structure, optimized meta tags, fast load times, and semantic HTML — the technical foundation that search engines and AI models rely on to understand and rank your content.</p>"
+            },
+            {
+              "title": "AI Search Optimization (GEO)",
+              "html": "<p>We structure page content — FAQs, definitions, clear answers — so that generative AI platforms like ChatGPT, Perplexity, and Google AI Overviews can cite your business in their responses. This is standard on every project we deliver in 2026.</p>"
+            },
+            {
+              "title": "Core Web Vitals Optimization",
+              "html": "<p>Google measures LCP, CLS, and INP on every page. We optimize each metric during development, not as an afterthought, so your site passes Core Web Vitals from day one.</p>"
+            },
+            {
+              "title": "CMS Integration &amp; Training",
+              "html": "<p>We build on platforms your team can actually use. Full documentation and a training session are included with every project — you won’t need us every time you need to change a headline</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "We help to achieve goals",
+      "title": "After more than a decade in the industry, we’re proud to have completed over 79+ projects that have helped shape our local landscape.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>We’ve tackled projects of all sizes, from small-scale residential renovations to large-scale commercial developments, always with the same dedication to exceeding your expectations.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "Who we design websites for",
+      "title": "We work with businesses that take their digital presence seriously. Our clients include:",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Small and mid-size businesses",
+              "html": "<p>looking for a website that generates local leads, ranks in Google Maps, and competes with larger competitors online.</p>"
+            },
+            {
+              "title": "European B2B companies",
+              "html": "<p>entering or growing in English-speaking markets, who need a site that communicates credibility and converts international clients.</p>"
+            },
+            {
+              "title": "Service businesses and agencies",
+              "html": "<p>— consultants, law firms, medical practices, creative studios — that rely on their website to establish authority and capture qualified leads.</p>"
+            },
+            {
+              "title": "E-commerce brands",
+              "html": "<p>that need both visual appeal and conversion-rate performance, from product pages to checkout flow.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Why businesses choose <span class=\"hl\">Tarasovs for web design</span>",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "We design for where search is going, not where it's been.",
+              "html": "<p>Traditional web design agencies optimize for Google 2020. We build for Google 2026 — where AI Overviews, voice search, and generative answers change how your site needs to be structured. Every project includes GEO optimization as standard.</p>"
+            },
+            {
+              "title": "Three offices, one standard.",
+              "html": "<p>Our team operates across New York, Sumy (Ukraine), and Timișoara (Romania). This gives us the coverage to work across time zones without delays and the perspective to design for both American and European markets.</p>"
+            },
+            {
+              "title": "We measure what matters.",
+              "html": "<p>Traffic, leads, and conversions — not awards. We set up analytics from day one and provide a post-launch report showing exactly how your new site performs against the old one.</p>"
+            },
+            {
+              "title": "Senior attention on every project.",
+              "html": "<p>No handoffs to junior designers after the sales call. Your project is handled by the same experienced team from brief to launch.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "How to get started",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Fill out a brief",
+              "html": "<p>Tell us about your business, your goals, and your timeline. It takes 5 minutes and helps us come to the first call prepared.</p>"
+            },
+            {
+              "title": "Discovery call",
+              "html": "<p>A 30-minute conversation to align on scope, timeline, and budget. No pressure, no pitch deck.</p>"
+            },
+            {
+              "title": "Proposal",
+              "html": "<p>We send a detailed proposal within 48 hours, including deliverables, timeline, and investment.</p>"
+            },
+            {
+              "title": "Design &amp; build",
+              "html": "<p>From kickoff to launch, most projects take 6–10 weeks depending on scope.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faq": {
+    "eyebrow": "",
+    "title": "FAQ",
+    "items": [
+      {
+        "q": "How much does a website design cost with Tarasovs?",
+        "a": "<p>Website design pricing depends on the scope, number of pages, and functionality required. A professional business website typically starts from $3,000. E-commerce and custom web applications start from $6,000. We provide a detailed proposal after our discovery call.</p>"
+      },
+      {
+        "q": "How long does it take to design and launch a website?",
+        "a": "<p>Most business websites take 6–10 weeks from kickoff to launch. E-commerce projects typically take 8–14 weeks. Timeline depends on scope, content readiness, and how quickly feedback rounds are completed.</p>"
+      },
+      {
+        "q": "Do you design websites for businesses outside New York?",
+        "a": "Yes. We regularly work with clients across the United States and Europe, including the UK, Germany, the Netherlands, and Romania. Our team is distributed across multiple time zones, which makes remote collaboration smooth."
+      },
+      {
+        "q": "What platforms do you build on?",
+        "a": "<p>We work with Framer, Webflow, WordPress, Shopify and custom-built solutions depending on your needs. We recommend the platform that best fits your content management style, budget, and scalability requirements.</p>"
+      },
+      {
+        "q": "Is SEO included in the website design?",
+        "a": "<p>Every site we build includes technical SEO foundations: clean code, optimized page speed, proper heading structure, meta tags, schema markup, and sitemap. Ongoing SEO and content strategy are available as a separate service.</p>"
+      },
+      {
+        "q": "What is GEO and why is it included in your web design projects?",
+        "a": "<p>GEO (Generative Engine Optimization) is the practice of structuring website content so that AI-powered search platforms — ChatGPT, Google AI Overviews, Perplexity — cite your business in their generated answers. We include GEO-ready content structure in every project because AI search is already where a significant portion of user attention goes in 2026.</p>"
+      },
+      {
+        "q": "Do you provide website maintenance after launch?",
+        "a": "<p>Yes. We offer monthly maintenance plans that include software updates, security monitoring, performance checks, and content edits. Details are included in every project proposal.</p>"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Let’s Collaborate",
+    "title": "Ready to build a website <span class=\"hl\">that works as hard as you do?</span>",
+    "text": "Tell us about your project. We'll review it and come back with a clear proposal — no vague estimates, no hard sell.",
+    "action": {
+      "label": "Start your project",
+      "href": "mailto:hello@tarasovs.me"
+    }
+  },
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Services",
+      "path": "/services/"
+    }
+  ]
+}

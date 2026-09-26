@@ -1,0 +1,357 @@
+{
+  "url": "/dispensary-seo-new-york/",
+  "hero": {
+    "title": "Cannabis Dispensary SEO Across New York State",
+    "lead": "<p>We help licensed dispensaries from Manhattan to Buffalo get found in Google Maps, organic search, Dutchie menu results, and AI assistants like ChatGPT.</p><p>Every New York market works differently. We build the local pages, menu indexing, Google Business Profile signals, and compliant content that fit the market you actually operate in. +93.5% organic impressions after a Dutchie Pro migration</p>",
+    "actions": [
+      {
+        "label": "Get a Free Visibility Audit",
+        "href": "#CForm"
+      },
+      {
+        "label": "See NYC Dispensary SEO",
+        "href": "/dispensary-seo-nyc/"
+      }
+    ],
+    "crumb": "Dispensary SEO",
+    "eyebrow": "New York State SEO",
+    "chips": [
+      "Local “Near Me” SEO",
+      "Google Maps",
+      "Upstate New York",
+      "GEO",
+      "Hudson Valley",
+      "Dutchie & Menu SEO",
+      "Buffalo & Rochester",
+      "Multi-Location SEO"
+    ]
+  },
+  "sections": [
+    {
+      "eyebrow": "",
+      "title": "New York is no longer a New York City market.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Licensed retail has spread into the Hudson Valley, the Capital Region, Western New York, the Finger Lakes, and Central New York. With 700+ dispensaries now open statewide and paid ads off the table, search is how customers find a store.</p><p>In most upstate markets, local search is still wide open. The stores that claim it now are the ones that show up when someone three towns over searches “dispensary near me.”</p><p>We fix the technical, local, and content signals that put your dispensary in front of that demand.</p><p>Most dispensaries outside the city aren’t optimized for any of it. <br>That’s a problem — and an opening.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Where we work in New York",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Manhattan &amp; Brooklyn",
+              "html": "<p>Manhattan, Brooklyn, Queens, the Bronx, Staten Island — the most competitive Map Pack in the country, where proximity and review velocity decide the top three.</p>",
+              "meta": "New York City",
+              "link": {
+                "label": "NYC dispensary SEO services",
+                "href": "/dispensary-seo-nyc/"
+              }
+            },
+            {
+              "title": "Nassau &amp; Suffolk",
+              "html": "<p>Fewer licenses spread across a large service radius, with steady demand crossing town lines from municipalities that opted out of retail.</p>",
+              "meta": "Long Island"
+            },
+            {
+              "title": "Westchester to Kingston",
+              "html": "<p>Yonkers, White Plains, Newburgh, Poughkeepsie, Kingston. Commuter and weekend traffic makes route-based and driving-distance search matter.</p>",
+              "meta": "Hudson Valley"
+            },
+            {
+              "title": "Albany &amp; Saratoga",
+              "html": "<p>Albany, Troy, Schenectady, Saratoga Springs. A dense cluster of stores in a small area, and weak local SEO across most of them.</p>",
+              "meta": "Capital Region"
+            },
+            {
+              "title": "Buffalo to Finger Lakes",
+              "html": "<p>Buffalo, Niagara Falls, Rochester. Tourism and cross-border volume on top of local demand, with a large rural catchment and very little content competition.</p>",
+              "meta": "Western NY & Rochester"
+            },
+            {
+              "title": "Syracuse to Binghamton",
+              "html": "<p>Syracuse, Utica, Auburn, Binghamton, Ithaca. Small markets where one well-optimized store can own the entire region.</p>",
+              "meta": "Central NY & Southern Tier"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "What we do for New York dispensaries",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Local SEO for Dispensaries Statewide",
+              "html": "<p>Rank for high-intent searches like “dispensary near me,” “weed delivery Albany,” “cannabis dispensary Buffalo,” and town-level searches across your service radius.</p>",
+              "meta": "Local “Near Me” SEO"
+            },
+            {
+              "title": "Google Business Profile Optimization",
+              "html": "<p>Optimize categories, services, reviews, photos, posts, and local relevance signals to improve Maps visibility.</p>",
+              "meta": "Google Business"
+            },
+            {
+              "title": "Dutchie Menu SEO",
+              "html": "<p>Make sure your Dutchie menu, categories, and product pages are discoverable, crawlable, and connected to your main website’s SEO strategy.</p>",
+              "meta": "Dutchie iFrame"
+            },
+            {
+              "title": "Dutchie Pro Migration",
+              "html": "<p>Planning a move from Dutchie Plus, Dutchie iFrame, or a legacy Dutchie setup to Dutchie Pro? We help protect rankings, menu visibility, URL structure, and search data during migration.</p>",
+              "meta": "Dutchie Pro"
+            },
+            {
+              "title": "Be the AI recommendation",
+              "html": "<p>When customers ask ChatGPT, Perplexity, or Google’s AI for the best dispensary nearby, we make sure your name is the one it recommends — not your competitor’s.</p>",
+              "meta": "AI Search (GEO)",
+              "link": {
+                "label": "See the NY Dispensary Visibility Index",
+                "href": "/dispensary-visibility/"
+              }
+            },
+            {
+              "title": "Compliant Cannabis Content",
+              "html": "<p>SEO content for licensed dispensaries built around New York’s marketing rules — no health claims, no imagery that appeals to under-21 audiences, nothing that puts your listing or license at risk.</p>",
+              "meta": "Compliant Content & Web"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Three markets, three playbooks",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "A few blocks, dozens of competitors",
+              "html": "<p>Proximity dominates the Map Pack. The work is neighborhood pages, review velocity, menu indexing, and disciplined Google Business Profile management. Slower to move, because you are displacing established stores. For borough and neighborhood-level Google Maps work, see our <a href=\"/local-seo-manhattan-brooklyn/\">local SEO for Manhattan and Brooklyn dispensaries</a>.</p>",
+              "meta": "New York City"
+            },
+            {
+              "title": "A 20-minute drive, thin competition",
+              "html": "<p>Relevance and reviews outweigh proximity. Town and county pages, driving-distance content, and a properly built Google Business Profile can move you into the Map Pack in 30 to 60 days.</p>",
+              "meta": "Upstate & suburban"
+            },
+            {
+              "title": "One system, not five projects",
+              "html": "<p>One domain and one authority base, a distinct page per store with genuinely local content, clean NAP data, and per-location reporting. It scales when you open the next store instead of needing a rebuild.</p>",
+              "meta": "Multi-location operators"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Dutchie menu SEO is not optional anymore.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Your Dutchie menu is one of your most valuable SEO assets — but if it is embedded, poorly indexed, or disconnected from your main domain, Google may not fully understand your products, categories, and local inventory.<br><br>We help dispensaries across New York audit, optimize, and migrate Dutchie setups so menus can support organic search instead of sitting outside the SEO system.</p>"
+        },
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Dutchie Pro migration support",
+              "html": "<p>If your dispensary is moving from Dutchie Plus, Dutchie iFrame, or another legacy Dutchie setup to Dutchie Pro, we help with SEO planning before, during, and after migration.</p>",
+              "link": {
+                "label": "Learn about Dutchie Pro Migration SEO",
+                "href": "/dutchie-pro-migration-seo/"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "html": "<p><a href=\"/dispensary-seo-2026/\">Complete dispensary SEO guide for 2026</a></p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Cannabis SEO experience, not theory",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>We work with licensed dispensaries and cannabis brands in New York on real search visibility, local SEO, technical SEO, content, and e-commerce migration challenges.</p>"
+        },
+        {
+          "type": "projects",
+          "items": [
+            "/project/verdi-cannabis/",
+            "/project/leaf-haus/"
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "We do this for dispensaries specifically — not as a side service.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Cannabis SEO isn’t regular SEO. The compliance rules, the platform restrictions, and the technical quirks are different — and getting them wrong can get your listings suspended. We know the details that generalist agencies miss:</p>"
+        },
+        {
+          "type": "checklist",
+          "items": [
+            "<strong>New York marketing rules built in</strong> — no health claims, no under-21 appeal, and placement rules respected, so your listings and license stay protected.",
+            "<strong>Market-specific local strategy</strong> — what wins in Brooklyn is not what wins in Albany, and we do not run the same playbook in both.",
+            "<strong>Google Business Profile done right</strong> — the cannabis-specific rules on categories, pricing, and promotions that keep your listing safe.",
+            "<strong>Dutchie &amp; Shopify menu indexing</strong> — embedded menus often don’t get indexed; we fix that so your products are actually findable."
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "AI is the new “ask a friend.” Most dispensaries are invisible to it.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>When someone asks an AI assistant for a dispensary recommendation, it names two or three — not a full page of links. Those spots are getting locked in right now, and almost no dispensary in New York is optimized for AI search.</p><p>Being early here means owning the recommendation before your competitors even know it’s happening.</p>"
+        },
+        {
+          "type": "actions",
+          "items": [
+            {
+              "label": "Get a Free Visibility Audit",
+              "href": "#CForm"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "html": "<p>We’ll check your Google Business Profile, local rankings in your market, Dutchie menu setup, Search Console visibility, and AI search presence.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "How we grow dispensary search visibility",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Local &amp; Dutchie SEO Audit",
+              "html": "<p>We review your website, Dutchie setup, Google Business Profile, Search Console data, local rankings by market, AI visibility, and the competitors actually ranking in your county.</p>"
+            },
+            {
+              "title": "Search Visibility Roadmap",
+              "html": "<p>You get a prioritized plan covering technical SEO, Dutchie menu visibility, location and town pages, GBP improvements, content, and GEO — ordered by what moves orders soonest in your market.</p>"
+            },
+            {
+              "title": "Implementation",
+              "html": "<p>We handle the fixes: content, internal links, schema, local landing pages, GBP updates, Dutchie migration SEO, tracking, and indexation.</p>"
+            },
+            {
+              "title": "Monthly Reporting",
+              "html": "<p>Monthly, per location: Google Search Console, GA4, Google Maps performance, keyword rankings, and AI search visibility.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Proof, not promises.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>From Dutchie menu migration to local SEO and AI visibility, our work is built around the real search problems New York dispensaries face: embedded menus, weak Google Maps signals, missing local pages, under-optimized content, and no visibility in AI-powered discovery.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Get a Free Visibility Audit",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>We’ll review your Google Business Profile, local rankings in your market, Dutchie menu setup, Search Console visibility, and AI search presence — then send a practical list of what to fix first.</p>"
+        },
+        {
+          "type": "form"
+        }
+      ],
+      "id": "form",
+      "tone": "surface"
+    }
+  ],
+  "faq": {
+    "eyebrow": "",
+    "title": "Questions New York dispensaries ask",
+    "items": [
+      {
+        "q": "Do you only work with dispensaries in New York City?",
+        "a": "<p>No. We work with licensed dispensaries across New York State - Long Island, the Hudson Valley, the Capital Region, Western New York, Rochester, Syracuse, and the Southern Tier. If you are in the five boroughs, our NYC dispensary SEO page covers that market specifically.</p>"
+      },
+      {
+        "q": "Is SEO for an upstate dispensary different from NYC?",
+        "a": "<p>Yes, meaningfully. In the city, proximity dominates and you are competing with dozens of stores in the same few blocks. Upstate, customers search across a 15 to 25 minute drive, competition is thinner, and basics like a properly built Google Business Profile and an indexable menu can move you into the Map Pack within a couple of months.</p>"
+      },
+      {
+        "q": "We have stores in more than one region. How does that work?",
+        "a": "<p>One domain, one authority base, a separate page per location with genuinely local content, clean and consistent NAP data, and a Google Business Profile managed per store. Reporting is broken out by location so you can see which market is actually producing orders.</p>"
+      },
+      {
+        "q": "Can dispensaries actually do SEO if they can't advertise?",
+        "a": "<p>Yes - and that's exactly why it matters more for you than for most businesses. Google Ads and Meta do not accept cannabis retail advertising, and New York adds its own restrictions on audience and placement. Organic search, Google Maps, and AI search are your main channels for reaching new customers.</p>"
+      },
+      {
+        "q": "Is this compliant? Will it put my listings or license at risk?",
+        "a": "<p>Compliance comes first. We avoid health claims and the content patterns that get listings flagged or suspended, we work within New York's marketing and advertising rules on audience and placement, and we follow the cannabis-specific rules for Google Business Profile. Protecting your listings is part of the job, not an afterthought.</p>"
+      },
+      {
+        "q": "Do you build a separate page for every town?",
+        "a": "<p>Only where there is real demand and real content to put on the page. Mass-produced city pages with a swapped town name are doorway pages, and Google has been demoting them for years. We build fewer pages that actually rank.</p>"
+      },
+      {
+        "q": "Can you optimize our Dutchie menu for SEO?",
+        "a": "<p>Yes. We audit how your Dutchie menu connects to your website, whether menu, category, and product pages are crawlable and indexed, and how they support local and organic search. We also handle Dutchie Pro migrations without losing rankings.</p>"
+      },
+      {
+        "q": "What is GEO / AI search optimization?",
+        "a": "<p>GEO (Generative Engine Optimization) is structuring your content and data so AI assistants - ChatGPT, Perplexity, Google's AI - cite and recommend your dispensary when people ask. Those answers name two or three businesses rather than ten links, and almost no dispensary in New York is optimized for it yet.</p>"
+      },
+      {
+        "q": "How fast will I see results?",
+        "a": "<p>Local and Google Maps improvements often show within the first 30 to 60 days, and usually faster in less competitive upstate markets than in the city. AI-search visibility builds over a few weeks to a couple of months as content and trust signals take hold.</p>"
+      },
+      {
+        "q": "Do you help with Dutchie Pro migration?",
+        "a": "<p>Yes. We help dispensaries plan SEO-safe migrations from Dutchie Plus, Dutchie iFrame, or legacy Dutchie setups to Dutchie Pro: URL planning, indexation checks, Google Search Console setup, GA4 tracking, redirect planning, technical SEO review, and post-launch monitoring.</p>"
+      },
+      {
+        "q": "What does it cost?",
+        "a": "<p>Engagements are monthly programs scoped to your market and number of locations. The best place to start is the free visibility audit - it shows what's needed before you commit to anything.</p>"
+      }
+    ]
+  },
+  "cta": null,
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Services",
+      "path": "/services/"
+    }
+  ],
+  "formSubject": "New audit request: Cannabis Dispensary SEO Across New York State"
+}

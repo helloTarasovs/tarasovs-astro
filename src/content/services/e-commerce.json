@@ -1,0 +1,399 @@
+{
+  "url": "/services/e-commerce/",
+  "hero": {
+    "title": "E-Commerce Website Design & Catalog SEO",
+    "lead": "<p>Most embedded catalogs and legacy platforms quietly hide your products from Google. We build Shopify and WooCommerce stores, and fix the ones search engines can't see. <br>What you sell is what gets found.</p>",
+    "actions": [
+      {
+        "label": "Start a project",
+        "href": "/contact-us/#CForm"
+      },
+      {
+        "label": "View our work",
+        "href": "/case-studies/"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "eyebrow": "Stores built to convert, and built to be found",
+      "title": "At a glance",
+      "titleHidden": true,
+      "blocks": [
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "15+",
+              "label": "years designing and building for the web"
+            },
+            {
+              "value": "79+",
+              "label": "projects delivered across the US and Europe"
+            },
+            {
+              "value": "12",
+              "label": "industries served, from legal to cannabis retail"
+            },
+            {
+              "value": "100%",
+              "label": "of stores get an indexation check before launch"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Your product pages may be invisible to Google",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Most e-commerce platforms make it easy to add a catalog and hard to know whether that catalog actually gets indexed. Embedded menus, iFrame widgets, and JavaScript-rendered product grids often display fine in a browser and return nothing to a search crawler. The store owner sees products on the page and assumes everything is working. Google sees an empty container.</p><p>The same problem now extends to AI. If a language model can’t read your product data, it can’t recommend your products when someone asks for a suggestion. A catalog invisible to Google today is a catalog invisible to ChatGPT and Perplexity tomorrow.</p><p>The check is simple, even if the fix isn’t. Right-click any product page, choose “View Page Source,” and search for the product name and price. If they’re not in that raw HTML, they’re being injected by JavaScript after the page loads, and a large share of crawlers and AI agents will never see them.</p><p><strong>We saw this directly with Verdi Cannabis:</strong> their Dutchie embedded menu meant every product page returned nothing to a crawler. We rebuilt the URL structure and migrated the integration to Dutchie Pro, which exposes crawlable product pages instead of an opaque widget. Read the full breakdown in the <a href=\"/verdi-cannabis-dutchie-pro-case-study/\">Verdi Cannabis case study</a>.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Typical embedded catalog vs. a store built by Tarasovs",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Typical embedded catalog vs. a store built by Tarasovs",
+          "head": [
+            "Aspect",
+            "Typical setup",
+            "Tarasovs"
+          ],
+          "rows": [
+            [
+              "Product pages",
+              "Rendered by JavaScript, often unseen by crawlers",
+              "Indexed and confirmed in Search Console"
+            ],
+            [
+              "Core Web Vitals",
+              "Slowed by unoptimized product images",
+              "Optimized for image-heavy catalog pages"
+            ],
+            [
+              "Product schema",
+              "Missing or outdated",
+              "Price, availability and review markup in place"
+            ],
+            [
+              "Variant URLs",
+              "Duplicate pages competing with each other",
+              "Canonicalized to a single ranking page"
+            ],
+            [
+              "Faceted navigation",
+              "Generates thousands of low-value URLs",
+              "Controlled to protect crawl budget"
+            ],
+            [
+              "International markets",
+              "One language, one region",
+              "hreflang and localized versions set up correctly"
+            ],
+            [
+              "AI shopping visibility",
+              "Not on the radar of AI assistants",
+              "Product data structured for AI citation"
+            ]
+          ],
+          "highlight": 2
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "What We Do for E-Commerce",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Shopify Development",
+              "html": "<p>Theme customization, collection structure, and app selection that don’t slow the store down or bloat the checkout flow. We keep the app count low on purpose: every extra script is a Core Web Vitals hit on a mobile checkout you can’t afford to lose.</p>"
+            },
+            {
+              "title": "WooCommerce Development",
+              "html": "<p>Full builds and rebuilds for stores that need WordPress’s flexibility, with performance and indexation handled from the start rather than patched in after launch once the traffic numbers come in low.</p>"
+            },
+            {
+              "title": "Product Catalog SEO",
+              "html": "<p>Category and product page indexability, URL structure, and faceted navigation that support search instead of fighting it. This is the layer most agencies treat as an afterthought and we treat as the actual point.</p>"
+            },
+            {
+              "title": "Embedded Menu &amp; Third-Party Catalog SEO",
+              "html": "<p>Dutchie, iFrame widgets, and other embedded catalogs audited and restructured so product pages are actually crawlable, without asking you to abandon the platform your operations already depend on.</p>"
+            },
+            {
+              "title": "Migration SEO",
+              "html": "<p>Replatforming without losing rankings: redirect mapping, indexation checks, and post-launch monitoring built into the plan from day one, not added after traffic has already dropped.</p>"
+            },
+            {
+              "title": "E-Commerce GEO",
+              "html": "<p>Product data, category descriptions, and FAQs structured so AI assistants can cite your store in shopping recommendations, the way they’d cite a review site or a comparison article today.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "How We Fix Indexation and Migrate Safely",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Audit &amp; Diagnose",
+              "html": "<p>We check what search engines and AI crawlers actually see on your product pages today, and where the catalog is invisible.</p>",
+              "meta": "Week 1"
+            },
+            {
+              "title": "Fix or Rebuild",
+              "html": "<p>Restructure the embedded catalog, or build the store in Shopify or WooCommerce with indexation planned in from day one.</p>",
+              "meta": "Week 1 – 2"
+            },
+            {
+              "title": "Migrate, If Needed",
+              "html": "<p>Full URL mapping and redirect plan for any platform switch, tested before launch, not improvised after.</p>",
+              "meta": "Week 2 – 3"
+            },
+            {
+              "title": "Monitor &amp; Confirm",
+              "html": "<p>We track indexation and rankings for weeks after launch, the period where most migration problems actually surface.</p>",
+              "meta": "Week 3+"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "We help to achieve citation",
+      "title": "Who this is for",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Regulated retail with an embedded catalog",
+              "html": "<p>Cannabis dispensaries and other regulated retailers running Dutchie or a similar embedded menu, where the platform that runs operations is quietly blocking organic traffic. See our dedicated <a href=\"/dispensary-seo-nyc/\">dispensary SEO</a> and <a href=\"/dutchie-menu-seo/\">Dutchie menu SEO</a> work if this is your situation.</p>"
+            },
+            {
+              "title": "Brands opening a catalog to new markets",
+              "html": "<p>Stores with a working catalog in one language or region that need to expand internationally without rebuilding the site from scratch.</p>"
+            },
+            {
+              "title": "Stores replatforming from a legacy setup",
+              "html": "<p>Businesses moving from a dated theme, an agency that’s gone quiet, or a platform they’ve outgrown, using our <a href=\"/dutchie-pro-migration-seo/\">Dutchie Pro migration methodology</a> as the template for any platform switch.</p>"
+            },
+            {
+              "title": "Multi-brand or multi-category catalogs",
+              "html": "<p>Stores where category structure and faceted navigation have grown organically for years and now generate more crawl problems than sales.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Why choose <span class=\"hl\">Tarasovs for E-Commerce</span>",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "We've fixed the indexation problem, not just heard of it",
+              "html": "<p>Verdi Cannabis wasn't a theoretical audit. It was a live catalog with zero indexed product pages, fixed by restructuring the integration itself, not by writing more blog posts around it.</p>"
+            },
+            {
+              "title": "SEO and development happen on the same team",
+              "html": "<p>The people who build your store and the people who audit its indexation are the same people. Nothing gets lost translating a recommendation from an SEO report into an actual code change.</p>"
+            },
+            {
+              "title": "Migration is a planned project, not a launch-day scramble",
+              "html": "<p>Redirect mapping and post-launch monitoring are part of the scope from the start, not an emergency call after rankings drop three weeks after go-live.</p>"
+            },
+            {
+              "title": "Your catalog is built for the next search engine too",
+              "html": "<p>Product schema and content structure are set up so AI shopping assistants can read your catalog now, not retrofitted once every competitor has already done it.</p>"
+            },
+            {
+              "title": "Every store is indexation-checked before we call it done",
+              "html": "<p>Launch isn't the finish line. We verify product pages are actually indexed and visible before we consider a project complete, not just deployed.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "E-commerce packages",
+      "blocks": [
+        {
+          "type": "pricing",
+          "plans": [
+            {
+              "name": "Catalog SEO Audit & Fix",
+              "period": "per project",
+              "price": "$1800",
+              "tag": "",
+              "details": "Best for: an existing store with an indexation problem",
+              "features": [
+                "Full crawl and indexation audit",
+                "Embedded or third-party catalog diagnosis",
+                "Product schema implementation",
+                "Canonicalization fixes for variants",
+                "Faceted navigation cleanup",
+                "Search Console verification",
+                "Written findings and fix report",
+                "Typical timeline: 2–3 weeks"
+              ],
+              "action": {
+                "label": "Get a quote",
+                "href": "/contact-us/#CForm"
+              }
+            },
+            {
+              "name": "Shopify or WooCommerce Build",
+              "period": "per project",
+              "price": "$5900",
+              "tag": "",
+              "details": "Best for: a new store or a full rebuild",
+              "features": [
+                "Everything in Catalog SEO Audit &amp; Fix",
+                "Full theme build and customization",
+                "Product catalog structured from day one",
+                "Core Web Vitals optimization",
+                "Mobile checkout tested on real devices",
+                "Analytics and Search Console setup",
+                "Product and Service schema markup",
+                "30 days post-launch support",
+                "Typical timeline: 6–10 weeks"
+              ],
+              "action": {
+                "label": "Get a quote",
+                "href": "/contact-us/#CForm"
+              }
+            },
+            {
+              "name": "Migration & Replatform",
+              "period": "per project",
+              "price": "$7500",
+              "tag": "",
+              "details": "Best for: switching platforms without losing rankings",
+              "features": [
+                "Everything in Shopify or WooCommerce Build",
+                "Full URL mapping from old to new site",
+                "Redirect plan tested before launch",
+                "Indexation monitoring for 4+ weeks post-launch",
+                "Rollback plan if issues surface",
+                "Dedicated migration point of contact",
+                "Typical timeline: 8–12 weeks"
+              ],
+              "action": {
+                "label": "Get a quote",
+                "href": "/contact-us/#CForm"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "E-Commerce and Catalog SEO in Practice",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "meta": "Catalog indexation",
+              "title": "Verdi Cannabis",
+              "html": "<p>An embedded Dutchie menu made every product page invisible to Google. We rebuilt the URL structure and migrated to Dutchie Pro to expose a crawlable catalog.</p>",
+              "link": {
+                "label": "Read the case study",
+                "href": "/verdi-cannabis-dutchie-pro-case-study/"
+              }
+            },
+            {
+              "meta": "International expansion",
+              "title": "ShoppingModaItalia",
+              "html": "<p>A fashion catalog with no English version and no international SEO strategy. We opened it to English-speaking markets with SEO and AI visibility built in.</p>",
+              "link": {
+                "label": "Read the case study",
+                "href": "/shoppingmodaitalia-seo-ai-case-study-2026/"
+              }
+            },
+            {
+              "meta": "Catalog + content",
+              "title": "Leaf Haus",
+              "html": "<p>A WordPress build combining a product catalog with an educational content hub, so category pages and articles support each other in search.</p>",
+              "link": {
+                "label": "View the project",
+                "href": "/project/leaf-haus/"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faq": {
+    "eyebrow": "",
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "Which platforms do you build on?",
+        "a": "<p>Shopify and WooCommerce for full stores. For businesses using a third-party catalog like Dutchie, we work with the platform you're on and fix how it connects to your site's SEO.</p>"
+      },
+      {
+        "q": "Why aren't my product pages showing up in Google?",
+        "a": "<p>The most common cause is an embedded catalog, an iFrame or JavaScript widget that renders products after the page loads. Google often doesn't see those pages at all. A crawl audit will tell you within a day whether this applies to you, usually by checking whether your product data appears in the page's raw HTML.</p>"
+      },
+      {
+        "q": "Can you fix SEO for an embedded menu or third-party catalog?",
+        "a": "<p>Yes. This is one of our specialisms. We audit how the catalog connects to your domain, whether category and product pages are crawlable, and restructure so they support organic search instead of sitting outside it, as we did for Verdi Cannabis on Dutchie.</p>"
+      },
+      {
+        "q": "We're replatforming. Will we lose our rankings?",
+        "a": "<p>Not if the migration is planned. We handle URL mapping, redirect planning, indexation checks, Search Console and GA4 setup, and post-launch monitoring for several weeks after launch. Rankings drop when redirects are an afterthought, not when they're planned.</p>"
+      },
+      {
+        "q": "Do you do e-commerce SEO as well as development?",
+        "a": "<p>Yes, and we prefer to do both. When SEO is planned during the build, the structure is right from day one instead of being retrofitted.</p>"
+      },
+      {
+        "q": "What is e-commerce GEO?",
+        "a": "<p>Structuring product data, category descriptions, and FAQs so AI assistants can cite your store when someone asks for a product recommendation. Most stores have zero presence in AI answers today.</p>"
+      },
+      {
+        "q": "Do you work with international stores?",
+        "a": "<p>Yes. We handle multi-language setups, hreflang, and opening an existing catalog to new markets, as we did for ShoppingModaItalia.</p>"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Let’s Collaborate",
+    "title": "Ready to find out <span class=\"hl\">what Google can't see on your store?</span>",
+    "text": "Tell us your platform and catalog size. We'll come back with a scope, timeline and price, and flag any indexation issues we can spot before we even start.",
+    "action": {
+      "label": "Start a project",
+      "href": "/contact-us/#CForm"
+    }
+  },
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Services",
+      "path": "/services/"
+    }
+  ]
+}

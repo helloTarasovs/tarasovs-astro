@@ -1,0 +1,44 @@
+---
+// FAQ as native <details>. Items must match the page's FAQPage schema (checked in ServicePage).
+interface Props { items: { q: string; a: string }[] }
+const { items } = Astro.props;
+---
+<div class="faq">
+  {items.map((f) => (
+    <details>
+      <summary><h3>{f.q}</h3></summary>
+      <div class="answer" set:html={f.a} />
+    </details>
+  ))}
+</div>
+
+<style>
+  .faq { border-top: 1px solid var(--color-border); }
+  details { border-bottom: 1px solid var(--color-border); }
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    min-height: 56px;
+    padding-block: var(--space-4);
+    cursor: pointer;
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: '';
+    flex: none;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg) translateY(-3px);
+    transition: transform var(--dur) var(--ease);
+  }
+  details[open] summary::after { transform: rotate(-135deg) translateY(-3px); }
+  h3 { font-size: var(--text-lg); font-weight: 600; }
+  .answer { padding-bottom: var(--space-5); color: var(--color-text-muted); }
+  .answer :global(* + *) { margin-top: 0.75em; }
+  .answer :global(ul), .answer :global(ol) { padding-left: 1.3em; }
+</style>

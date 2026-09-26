@@ -1,0 +1,141 @@
+---
+// One layout for every service page: hero, content sections, FAQ, CTA. Pages differ only in their JSON.
+import Base from './Base.astro';
+import Blocks from '../components/blocks/Blocks.astro';
+import Faq from '../components/blocks/Faq.astro';
+import { wpPage } from '../lib/pages';
+import { breadcrumbSchema } from '../lib/schema';
+import { assertFaqMatchesSchema, dedupeJsonld, type ServicePageData } from '../lib/service-page';
+
+interface Props { data: ServicePageData }
+const { data } = Astro.props;
+const page = wpPage(data.url);
+const pageJsonld = dedupeJsonld(page.jsonld);
+assertFaqMatchesSchema(data, pageJsonld);
+
+const crumbs = [...data.breadcrumb, { name: data.hero.crumb ?? data.hero.title.replace(/<[^>]+>/g, ''), path: data.url }];
+const hasBreadcrumbLd = pageJsonld.some((b: any) => b?.['@type'] === 'BreadcrumbList');
+const jsonld = hasBreadcrumbLd ? pageJsonld : [...pageJsonld, breadcrumbSchema(crumbs)];
+const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/&[a-z#0-9]+;/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+---
+<Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld}>
+  <article class="service">
+    <header class="hero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            {crumbs.map((c, i) => (
+              <li>{i < crumbs.length - 1 ? <a href={c.path}>{c.name}</a> : <span aria-current="page">{c.name}</span>}</li>
+            ))}
+          </ol>
+        </nav>
+        {data.hero.eyebrow && <p class="eyebrow" set:html={data.hero.eyebrow} />}
+        <h1 set:html={data.hero.title} />
+        {data.hero.byline && <p class="hero-byline" set:html={data.hero.byline} />}
+        {data.hero.lead && <div class="hero-lead" set:html={data.hero.lead} />}
+        {data.hero.chips && data.hero.chips.length > 0 && (
+          <ul class="hero-chips">{data.hero.chips.map((c) => <li>{c}</li>)}</ul>
+        )}
+        {data.hero.actions && data.hero.actions.length > 0 && (
+          <p class="hero-actions">
+            {data.hero.actions.map((a, i) => <a class:list={['button', { 'button--ghost': i > 0 }]} href={a.href}>{a.label}</a>)}
+          </p>
+        )}
+      </div>
+    </header>
+
+    {data.sections.map((s) => {
+      const id = s.id ?? (s.title ? slugify(s.title) : undefined);
+      return (
+        <section class:list={['section', s.tone && `tone-${s.tone}`]} id={id} aria-labelledby={s.title ? `${id}-title` : undefined}>
+          <div class="container">
+            {(s.eyebrow || s.title || s.intro) && (
+              <div class="section-head">
+                {s.eyebrow && <p class="eyebrow">{s.eyebrow}</p>}
+                {s.title && <h2 id={`${id}-title`} class:list={{ 'visually-hidden': s.titleHidden }} set:html={s.title} />}
+                {s.intro && <div class="section-intro" set:html={s.intro} />}
+              </div>
+            )}
+            <Blocks blocks={s.blocks} formSubject={data.formSubject} />
+          </div>
+        </section>
+      );
+    })}
+
+    {data.faq && data.faq.items.length > 0 && (
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <div class="container"><div class="faq-wrap">
+          <div class="section-head">
+            {data.faq.eyebrow && <p class="eyebrow">{data.faq.eyebrow}</p>}
+            <h2 id="faq-title" set:html={data.faq.title} />
+          </div>
+          <Faq items={data.faq.items} />
+          {data.faq.note && <p class="faq-note" set:html={data.faq.note} />}
+        </div></div>
+      </section>
+    )}
+
+    {data.cta && (
+      <section class="section" aria-labelledby="cta-title">
+        <div class="container">
+          <div class="cta">
+            {data.cta.eyebrow && <p class="eyebrow">{data.cta.eyebrow}</p>}
+            <h2 id="cta-title" set:html={data.cta.title} />
+            {data.cta.text && <p class="cta-text">{data.cta.text}</p>}
+            {data.cta.action && (
+              <a class="button button--highlight" href={data.cta.action.href}>
+                {data.cta.action.label}
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 11h11.6l-5.3-5.3L12.7 4.3 20.4 12l-7.7 7.7-1.4-1.4 5.3-5.3H5z" /></svg>
+              </a>
+            )}
+          </div>
+        </div>
+      </section>
+    )}
+  </article>
+</Base>
+
+<style>
+  .service { padding-bottom: var(--space-6); }
+  .hero { padding-block: var(--space-6) var(--space-7); }
+  .crumbs ol { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-2); padding: 0; list-style: none; font-size: var(--text-xs); color: var(--color-text-muted); }
+  .crumbs li + li::before { content: '/'; margin-right: var(--space-2); opacity: 0.6; }
+  .crumbs a { color: inherit; text-decoration: none; }
+  .crumbs a:hover { color: var(--color-link); text-decoration: underline; }
+  .hero .eyebrow { margin-top: var(--space-6); }
+  .hero h1 { margin-top: var(--space-5); max-width: 22ch; }
+  .hero .eyebrow + h1 { margin-top: var(--space-3); }
+  .hero-lead { margin-top: var(--space-5); max-width: 62ch; font-size: var(--text-lg); color: var(--color-text-muted); }
+  .hero-lead :global(* + *) { margin-top: 0.8em; }
+  .hero-byline { margin-top: var(--space-4); color: var(--color-text-muted); font-size: var(--text-xs); }
+  .hero-chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-5); padding: 0; list-style: none; }
+  .hero-chips li { padding: 0.3rem 0.8rem; border: 1px solid var(--color-border); border-radius: var(--radius-pill); font-size: var(--text-xs); color: var(--color-text-muted); }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
+
+  .section { padding-block: var(--space-8); }
+  .section + .section { padding-top: 0; }
+  .hero + .section:has(.section-head > h2.visually-hidden:only-child) { padding-top: 0; }
+  .section-head:has(> h2.visually-hidden:only-child) { margin: 0; }
+  .section-head { max-width: 46rem; margin-bottom: var(--space-6); }
+  .section-head h2 { margin-top: var(--space-2); }
+  .section-intro { margin-top: var(--space-4); color: var(--color-text-muted); font-size: var(--text-lg); }
+  .section-intro :global(* + *) { margin-top: 0.8em; }
+  .tone-surface { background: var(--color-surface); padding-top: var(--space-8) !important; }
+  .faq-wrap { max-width: 52rem; }
+  .faq-note { margin-top: var(--space-5); color: var(--color-text-muted); font-size: var(--text-xs); }
+
+  .cta {
+    padding: var(--space-7) var(--space-5);
+    border-radius: var(--radius-lg);
+    background: var(--brand-navy);
+    color: #d6d3de;
+  }
+  .cta .eyebrow { color: #b9b6c3; }
+  .cta h2 { margin-top: var(--space-3); color: #fff; max-width: 20ch; }
+  .cta-text { max-width: 56ch; margin-block: var(--space-4) var(--space-6); font-size: var(--text-lg); }
+  @media (min-width: 64em) {
+    .hero { padding-block: var(--space-7) var(--space-8); }
+    .section { padding-block: var(--space-9); }
+    .cta { padding: var(--space-8); }
+  }
+</style>

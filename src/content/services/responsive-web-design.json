@@ -1,0 +1,113 @@
+{
+  "url": "/services/responsive-web-design/",
+  "hero": {
+    "title": "Responsive Web Design",
+    "lead": "",
+    "actions": [
+      {
+        "label": "Get a Quote",
+        "href": "/contact-us/#CForm"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "eyebrow": "",
+      "title": "Elevating User Experience Across Devices",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Adaptability at Its Core",
+              "html": "<p>Our approach to responsive web design revolves around adaptability. We understand that a website must seamlessly transition across devices to cater to diverse user needs. Our team meticulously crafts websites that fluidly adjust to different screen sizes, ensuring optimal functionality and visual appeal regardless of the device used.</p>"
+            },
+            {
+              "title": "Enhanced User Engagement",
+              "html": "<p>User engagement is pivotal in the success of any website. With responsive web design, users encounter an interface that intuitively responds to their actions, creating a fluid and enjoyable browsing experience. Whether it’s on a desktop, tablet, or smartphone, users remain engaged with your content, leading to higher retention rates and increased conversions.</p>"
+            },
+            {
+              "title": "Mobile-First Philosophy",
+              "html": "<p>In an era dominated by mobile devices, we adopt a mobile-first philosophy in our strategy. Starting with the mobile experience allows us to prioritize essential content and functionalities, ensuring a smooth and efficient user journey. This approach not only enhances user satisfaction but also boosts your website’s performance on search engine results pages.</p>"
+            },
+            {
+              "title": "Seamless Navigation and Intuitive Design",
+              "html": "<p>Navigation plays a crucial role in user experience. Our responsive web designs feature intuitive navigation menus and layouts optimized for touch interactions on mobile devices. Users effortlessly find what they’re looking for, resulting in longer visit durations and reduced bounce rates.</p>"
+            },
+            {
+              "title": "Optimized Performance Across Devices",
+              "html": "<p>Performance is key in retaining users’ interest. We optimize our projects for speed and performance on all devices. Whether accessed on a high-speed desktop connection or a slower mobile network, your website loads quickly and efficiently, delivering a seamless experience to every user.</p>"
+            },
+            {
+              "title": "Future-Proofing Your Website",
+              "html": "<p>The digital landscape is constantly evolving, with new devices and technologies emerging regularly. With us your website is future-proofed to adapt to these changes seamlessly. Whether it’s the latest smartphone or a cutting-edge tablet, your website remains relevant and accessible to users, ensuring continued success in the ever-changing digital landscape.</p>"
+            }
+          ],
+          "columns": 3
+        },
+        {
+          "type": "prose",
+          "html": "<p>Our responsive web design service goes beyond merely adapting to different devices; it prioritizes user experience, engagement, and performance across the board. With our expertise, your website becomes a versatile digital asset capable of delivering exceptional experiences to users on any device. Elevate your online presence and stay ahead of the curve with Tarasovs. Contact us today to embark on a journey towards a responsive, user-centric website that sets you apart from the competition.</p>"
+        }
+      ],
+      "intro": "<p>In the dynamic digital realm, users access websites through a multitude of devices, each with varying screen sizes and resolutions. Recognizing this, Tarasovs commits to delivering superior user experiences with its Responsive Web Design service.</p>"
+    }
+  ],
+  "faq": {
+    "eyebrow": "",
+    "title": "Responsive Web Design FAQ",
+    "items": [
+      {
+        "q": "What is responsive web design?",
+        "a": "<p>Responsive web design is an approach that allows a website to automatically adapt its layout, content, navigation, and functionality to different screen sizes and devices, including desktops, tablets, and smartphones.</p>"
+      },
+      {
+        "q": "Why does my business need a responsive website?",
+        "a": "<p>A responsive website gives visitors a consistent and accessible experience across devices. It makes content easier to read, improves navigation, supports user engagement, and helps reduce friction that may prevent visitors from taking action.</p>"
+      },
+      {
+        "q": "Do you use a mobile-first design approach?",
+        "a": "<p>Yes. We begin with the mobile experience so essential content, functionality, and user journeys are prioritized from the start. The design is then expanded and optimized for tablets, laptops, and desktop screens.</p>"
+      },
+      {
+        "q": "Will the website work on different screen sizes?",
+        "a": "<p>Yes. We create flexible layouts that adjust to a wide range of screen sizes and resolutions, helping the website remain functional, readable, and visually consistent across current devices.</p>"
+      },
+      {
+        "q": "How do you optimize navigation for mobile devices?",
+        "a": "<p>We design clear navigation structures, mobile-friendly menus, readable layouts, and controls optimized for touch interactions. This helps visitors find important information and move through the website without unnecessary difficulty.</p>"
+      },
+      {
+        "q": "Will a responsive website load quickly on mobile networks?",
+        "a": "<p>We optimize responsive websites for speed and performance across devices and connection types. This can include efficient layouts, optimized media, clean development, and careful loading of website resources.</p>"
+      },
+      {
+        "q": "Can you make my existing website responsive?",
+        "a": "<p>Yes. We can review an existing website, identify problems across mobile, tablet, and desktop layouts, and determine whether it should be improved, rebuilt, or redesigned to provide a consistent responsive experience.</p>"
+      },
+      {
+        "q": "How do you test a responsive website?",
+        "a": "<p>We test layouts, navigation, content readability, touch interactions, and functionality across multiple viewport sizes and modern browsers to identify issues before the website is launched.</p>"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Let’s Collaborate",
+    "title": "Ready to build a website <span class=\"hl\">that works as hard as you do?</span>",
+    "text": "Tell us about your project. We'll review it and come back with a clear proposal — no vague estimates, no hard sell.",
+    "action": {
+      "label": "Start your project",
+      "href": "/contact-us/#CForm"
+    }
+  },
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Services",
+      "path": "/services/"
+    }
+  ]
+}

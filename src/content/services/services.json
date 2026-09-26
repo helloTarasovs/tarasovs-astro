@@ -1,0 +1,146 @@
+{
+  "url": "/services/",
+  "hero": {
+    "title": "Digital Agency Services — Web Design, SEO & GEO in New York and Europe",
+    "lead": "<p>We design, build, and optimize digital products for businesses in New York and Europe. Every service we offer is built around one outcome: your business performing better online — in Google, in AI search, and in front of the clients who matter</p>",
+    "actions": [
+      {
+        "label": "Start a project",
+        "href": "/contact-us/#CForm"
+      }
+    ],
+    "crumb": "Services"
+  },
+  "sections": [
+    {
+      "eyebrow": "",
+      "title": "Our services",
+      "titleHidden": true,
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "AI Search Optimization",
+              "html": "<p>Millions of people now get answers from ChatGPT, Perplexity, and Google AI Overviews — without clicking a single website. GEO (Generative Engine Optimization) is the discipline of making your brand appear in those AI-generated responses. We structure your content, implement schema markup, build citation authority, and track your Share of Model monthly.</p><p class=\"best-for\"><strong>Best for:</strong> businesses in competitive markets where AI-assisted research drives purchase decisions.</p>",
+              "link": {
+                "label": "Get started",
+                "href": "/services/geo-ai-search-optimization/"
+              }
+            },
+            {
+              "title": "SEO Services",
+              "html": "<p>Technical SEO, content strategy, and local SEO for New York and European markets. We build organic visibility that compounds over time — keyword architecture, on-page optimization, link building, and Core Web Vitals — aligned with your GEO strategy from day one.</p><p class=\"best-for\"><strong>Best for:</strong> businesses that rely on organic search for lead generation and want long-term, compounding growth.</p>",
+              "link": {
+                "label": "Get started",
+                "href": "/services/seo-services/"
+              }
+            },
+            {
+              "title": "Website Design",
+              "html": "<p>Conversion-focused websites designed for your brand and your audience. Every design decision is grounded in user research, tested against usability principles, and built to perform across all devices. We design mobile-first and deliver developer-ready files with full documentation.</p><p class=\"best-for\"><strong>Best for:</strong> businesses relaunching, rebranding, or building a site that needs to convert visitors into clients.</p>",
+              "link": {
+                "label": "Get started",
+                "href": "/services/website-design-services/"
+              }
+            },
+            {
+              "title": "Website Development",
+              "html": "<p>We build on the platform that fits your goals — Framer, Webflow, or WordPress. Every site ships with clean semantic code, Core Web Vitals optimization, GEO-ready content structure, and schema markup included by default. No template shortcuts.</p><p class=\"best-for\"><strong>Best for:</strong> businesses that need a fast, technically sound website without the cost of fully custom development.</p>",
+              "link": {
+                "label": "Get started",
+                "href": "/services/website-development/"
+              }
+            },
+            {
+              "title": "Framer Development",
+              "html": "<p>Framer is our platform of choice for marketing sites, agency portfolios, and startup launches. React-based output, 95+ PageSpeed scores, and visual quality that stands out. We design and build directly in Framer — no Figma-to-Framer conversions — and deliver with full CMS setup and GEO-ready architecture.<br><br><strong>Best for:</strong> startups, agencies, and brands that want a high-design site delivered in 2–4 weeks.</p>",
+              "link": {
+                "label": "Get started",
+                "href": "/services/framer-development/"
+              }
+            },
+            {
+              "title": "UI/UX Design",
+              "html": "<p>User experience design grounded in research, not assumptions. We run discovery, build wireframes, prototype, test with real users, and deliver high-fidelity UI design ready for developer handoff. Available as a standalone service or integrated into a full web design and development project.<br><br><strong>Best for:</strong> SaaS products, complex web applications, and businesses whose current site frustrates users or underconverts.</p>",
+              "link": {
+                "label": "Get started",
+                "href": "/services/ui-ux-design/"
+              }
+            },
+            {
+              "title": "E-Commerce",
+              "html": "<p>E-commerce design and development for brands that sell online. We build on Shopify and WooCommerce — product pages, collections, checkout flows, and post-purchase sequences — optimized for conversion rate and organic search simultaneously.<br><br><strong>Best for:</strong> brands launching or scaling an online store, or replacing a platform that’s limiting growth.</p>",
+              "link": {
+                "label": "Get started",
+                "href": "/services/e-commerce/"
+              }
+            },
+            {
+              "title": "Responsive Web Design",
+              "html": "<p>Every site we build is responsive by default — but for businesses with existing sites that break on mobile, we offer a standalone responsive redesign service. Mobile-first rebuild, Core Web Vitals optimization, and cross-device QA without rebuilding from scratch.<br><br><strong>Best for:</strong> businesses with a desktop site that loses users on mobile — a problem that directly impacts Google rankings.</p>",
+              "link": {
+                "label": "Get started",
+                "href": "/services/responsive-web-design/"
+              }
+            }
+          ],
+          "columns": 4
+        }
+      ]
+    }
+  ],
+  "faq": {
+    "eyebrow": "",
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "What services does Tarasovs Digital Agency offer?",
+        "a": "<p>Tarasovs Digital Agency offers web design, Framer and Webflow development, WordPress development, SEO, GEO (AI search optimization), UI/UX design, e-commerce, digital marketing, content management, and analytics. Every service is built around one outcome: your business performing better online — in Google, in AI search, and with the clients that matter.</p>"
+      },
+      {
+        "q": "Do you work with businesses outside New York?",
+        "a": "<p>Yes. We are a remote-first agency serving clients across the United States, United Kingdom, and Europe. We have experience targeting both US and European search markets, and all project work is managed remotely with no compromise on quality or responsiveness.</p>"
+      },
+      {
+        "q": "Can you handle both web design and SEO in one project?",
+        "a": "<p>Yes — and this is one of the main reasons clients choose us. Most agencies separate design, development, and SEO into different teams or vendors. We integrate all three from the start: every site we build ships with technical SEO foundations, schema markup, Core Web Vitals optimization, and GEO-ready content structure included by default.</p>"
+      },
+      {
+        "q": "What is GEO and why does it matter in 2026?",
+        "a": "<p>GEO — Generative Engine Optimization — is the practice of structuring website content so that AI-powered platforms like ChatGPT, Perplexity, and Google AI Overviews cite your brand in their generated responses. In 2026, AI search is one of the fastest-growing discovery channels. Businesses that appear in AI answers receive high-intent referrals at no cost per click. We integrate GEO into every service we offer.</p>"
+      },
+      {
+        "q": "How long does a typical web design project take?",
+        "a": "<p>Most business websites take 6–10 weeks from kickoff to launch. Framer projects for startups and agencies typically take 3–5 weeks. E-commerce builds take 8–14 weeks depending on catalog size and custom functionality. We provide a detailed timeline in every proposal before work begins.</p>"
+      },
+      {
+        "q": "Which platform do you build websites on?",
+        "a": "<p>We build on Framer, Webflow, and WordPress — and recommend the platform based on your project needs, not our preferences. Framer is our choice for design-heavy marketing sites and agency portfolios. Webflow suits content-heavy sites with complex CMS needs. WordPress is best for large-scale sites, blogs, and e-commerce with WooCommerce.</p>"
+      },
+      {
+        "q": "How do I get started with Tarasovs?",
+        "a": "<p>Fill out our contact form or email work@tarasovs.me with a brief description of your project. We'll review it, schedule a 30-minute discovery call, and send a detailed proposal within 48 hours — including scope, timeline, and investment. No vague estimates, no hard sell.</p>"
+      },
+      {
+        "q": "Do you offer standalone SEO without a web design project?",
+        "a": "<p>Yes. SEO and GEO are available as standalone retainer services independent of any web design work. We also offer one-time SEO audits if you need a diagnosis without an ongoing engagement. See our <a href=\"/services/seo-services/\">SEO Services page</a> for full details and pricing.</p>"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Let’s Collaborate",
+    "title": "Ready to build a website <span class=\"hl\">that works as hard as you do?</span>",
+    "text": "Tell us about your project. We'll review it and come back with a clear proposal — no vague estimates, no hard sell.",
+    "action": {
+      "label": "Start your project",
+      "href": "mailto:hello@tarasovs.me"
+    }
+  },
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "path": "/"
+    }
+  ]
+}

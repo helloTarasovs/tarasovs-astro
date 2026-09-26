@@ -7,7 +7,7 @@ interface Props {
 }
 const { subject = 'New inquiry from tarasovs.me', submitLabel = 'Get a Quote' } = Astro.props;
 const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? '';
-if (!accessKey) console.warn('[ContactForm] PUBLIC_WEB3FORMS_KEY is not set: the form will show an error on submit.');
+if (!accessKey && !(globalThis as any).__w3fWarned) (globalThis as any).__w3fWarned = true, console.warn('[ContactForm] PUBLIC_WEB3FORMS_KEY is not set: the form will show an error on submit.');
 ---
 <form id="CForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-contact-form>
   <input type="hidden" name="access_key" value={accessKey} />

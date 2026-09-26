@@ -1,0 +1,281 @@
+{
+  "url": "/services/framer-development/",
+  "hero": {
+    "title": "Framer Development Agency Led by a Framer Expert",
+    "lead": "<p>Founder-led Framer design, development and custom code for startups, agencies and B2B teams.</p><p>Tarasovs designs and builds custom Framer websites for startups, agencies and B2B teams across the US, UK and Europe. Every project is led directly by <a href=\"/about/\">Yurii Tarasov</a>, a <a href=\"https://www.framer.com/@yurii-tarasov/\">Framer Expert</a>, combining responsive UI, scalable CMS, custom React components, purposeful motion and technical SEO in one workflow.</p>",
+    "actions": [
+      {
+        "label": "View selected Framer work",
+        "href": "#framer-work"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "eyebrow": "",
+      "title": "Framer expertise at a glance",
+      "titleHidden": true,
+      "blocks": [
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "Expert",
+              "label": "Official Framer profile"
+            },
+            {
+              "value": "15+",
+              "label": "years in web design and development"
+            },
+            {
+              "value": "React",
+              "label": "custom code components"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Selected Framer work",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Client websites and technical Framer builds across SaaS, creative services, architecture and conversion-focused landing pages. The projects below are pulled directly from the Framer category of our portfolio.</p>"
+        },
+        {
+          "type": "projects",
+          "items": [
+            "/project/kos-architecture-framer-website-development/",
+            "/project/amg-agency/",
+            "/project/qollective/",
+            "/project/elanostudio/"
+          ]
+        },
+        {
+          "type": "actions",
+          "items": [
+            {
+              "label": "Explore Yurii’s interactive Framer portfolio",
+              "href": "https://yuriitarasov.framer.website/"
+            }
+          ]
+        }
+      ],
+      "id": "framer-work"
+    },
+    {
+      "eyebrow": "",
+      "title": "Framer expertise, from strategy to launch",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Every Framer project is led by <a href=\"/about/\"><strong>Yurii Tarasov</strong></a>, founder of Tarasovs and a Framer Expert with 15+ years of experience in web design and development.</p><p>Yurii works across UX, visual design, responsive development, CMS architecture, custom React and TypeScript components, motion, technical SEO and launch. That means fewer handoffs, faster decisions and one senior partner responsible for how the site looks, works and performs.</p><p>His recent Framer work includes client websites, custom interactions, Rive animation and published Marketplace templates.</p>"
+        },
+        {
+          "type": "actions",
+          "items": [
+            {
+              "label": "Meet Yurii Tarasov",
+              "href": "/about/"
+            },
+            {
+              "label": "View official Framer profile",
+              "href": "https://www.framer.com/@yurii-tarasov/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Framer development services",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Custom Framer design and development",
+              "html": "<p>Start with a brief, an existing brand system or an approved Figma design. We can shape the UX and visual direction from scratch or translate an established design into a responsive Framer build. In both cases, components, breakpoints and interactions are built natively for Framer rather than copied across mechanically. Explore our <a href=\"/services/ui-ux-design/\">UI/UX design services</a>.</p>"
+            },
+            {
+              "title": "Framer CMS architecture",
+              "html": "<p>CMS collections for articles, case studies, team members, services and other repeatable content. Fields, references, filters and templates are structured so your team can publish without rebuilding layouts.</p>"
+            },
+            {
+              "title": "React and TypeScript code components",
+              "html": "<p>When the native canvas is not enough, we extend Framer with custom React and TypeScript components, API connections and interaction logic while keeping the editing experience practical. See how our <a href=\"/how-scroll-scrubbed-video-works-in-framer/\">scroll-scrubbed video component for Framer</a> works.</p>"
+            },
+            {
+              "title": "Motion and interactive experiences",
+              "html": "<p>Scroll behaviour, hover systems, page transitions, WebGL effects, SVG animation and Rive integration designed to support the story and hierarchy of the page. Motion is tested against a defined performance budget.</p>"
+            },
+            {
+              "title": "Technical SEO and performance",
+              "html": "<p>Heading hierarchy, metadata, canonical settings, image handling, crawlability, structured data where relevant and Core Web Vitals testing are considered during the build. Read our <a href=\"/is-framer-good-for-seo/\">technical analysis of Framer SEO</a>.</p>"
+            },
+            {
+              "title": "Framer migrations and integrations",
+              "html": "<p>WordPress, Webflow or legacy-site migrations with content mapping, priority URL preservation, redirect planning, metadata checks and post-launch monitoring. We also connect forms, analytics, booking tools, newsletters and other marketing systems.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "How our Framer process works",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Strategy &amp; Structure",
+              "html": "<p>We define the audience, goals, sitemap, content requirements, CMS model and technical constraints before committing to layouts.</p>"
+            },
+            {
+              "title": "Design or Figma Translation",
+              "html": "<p>We create the UI and interaction direction or review your existing Figma system for responsiveness, component logic and build readiness.</p>"
+            },
+            {
+              "title": "Framer Development",
+              "html": "<p>Reusable components, CMS templates, responsive behaviour, motion, integrations and custom code are built and reviewed in a live Framer environment.</p>"
+            },
+            {
+              "title": "QA &amp; Launch",
+              "html": "<p>We test key devices and browsers, validate forms, metadata, crawl settings and performance, then support the launch and agreed post-launch checks.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Who Framer is a good fit for",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Startups and SaaS teams",
+              "html": "<p>Marketing sites and launch pages that need strong design, quick iteration and a CMS the internal team can maintain.</p>"
+            },
+            {
+              "title": "Agencies and creative studios",
+              "html": "<p>Framer development, interaction work or white-label support when the strategy and design are already owned by your team.</p>"
+            },
+            {
+              "title": "B2B and service brands",
+              "html": "<p>Clear, credible websites where complex expertise has to become easy to understand and easy to act on.</p>"
+            },
+            {
+              "title": "Design-forward portfolios",
+              "html": "<p>Editorial and visual sites that need custom motion, refined responsive behaviour and a distinctive presentation system.</p>"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "html": "<p><strong>Typical timeline:</strong> Most Framer projects take 2–4 weeks. Larger content systems, migrations or highly interactive builds are scoped separately.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Why work with a founder-led Framer studio",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Direct senior involvement",
+              "html": "<p>Yurii leads the work from the first structural decision through launch. There is no handoff to a junior production team after the sales call.</p>"
+            },
+            {
+              "title": "Design and development in one workflow",
+              "html": "<p>Visual ideas are judged by how they behave responsively, how they affect performance and how easily the finished system can be maintained.</p>"
+            },
+            {
+              "title": "Native Framer thinking, extended with code",
+              "html": "<p>We use Framer’s strengths first, then add custom React or TypeScript only where the project genuinely needs more control.</p>"
+            },
+            {
+              "title": "Built for performance, search and maintainability",
+              "html": "<p>Content hierarchy, crawlability, metadata, CMS fields and migration risks are addressed during planning and development rather than retrofitted after publication. For AI search, we organise key facts and supporting evidence clearly without promising rankings or citations that no developer can guarantee.</p>"
+            }
+          ]
+        },
+        {
+          "type": "actions",
+          "items": [
+            {
+              "label": "Start a Framer project",
+              "href": "/contact-us/"
+            },
+            {
+              "label": "View official Framer profile",
+              "href": "https://www.framer.com/@yurii-tarasov/"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faq": {
+    "eyebrow": "",
+    "title": "Frequently asked questions about Framer development",
+    "items": [
+      {
+        "q": "Can you build from an existing Figma design?",
+        "a": "<p>Yes. We can develop an approved Figma system in Framer or handle strategy and design before the build. Existing designs are reviewed for component logic, responsive behaviour, CMS requirements and interaction feasibility before development begins.</p>"
+      },
+      {
+        "q": "Can you build custom React components in Framer?",
+        "a": "<p>Yes. We use React and TypeScript for custom interactions, data-driven components, API integrations and functionality that goes beyond Framer’s native tools. Custom code is scoped only where it adds real value.</p>"
+      },
+      {
+        "q": "How long does a Framer website take?",
+        "a": "<p>Most Framer projects take 2–4 weeks from approved scope to launch. A focused landing page may move faster, while migrations, larger CMS builds and complex interaction systems require more time.</p>"
+      },
+      {
+        "q": "How much does Framer development cost?",
+        "a": "<p>Development-only work based on an approved design is scoped differently from a full strategy, design and Framer engagement. Share the page count, CMS requirements, motion level, integrations and deadline, and we will provide a fixed-price proposal.</p>"
+      },
+      {
+        "q": "Can you migrate an existing website to Framer?",
+        "a": "<p>Yes. We map the existing content and priority URLs, preserve URLs where practical, prepare redirects where they change, validate metadata and indexation settings, and monitor the launch to reduce SEO migration risk. Temporary ranking fluctuations can still occur during any platform migration.</p>"
+      },
+      {
+        "q": "Is Framer suitable for e-commerce?",
+        "a": "<p>Framer works well for product marketing and small storefront experiences connected to external checkout tools. For complex catalogues, inventory, accounts or fulfilment workflows, Shopify or WooCommerce is usually the better foundation.</p>"
+      },
+      {
+        "q": "Will our team be able to update the site?",
+        "a": "<p>Yes. CMS collections and reusable components are structured for day-to-day updates without changing the design. Training and handover documentation can be included in the project scope.</p>"
+      },
+      {
+        "q": "Do you offer support after launch?",
+        "a": "<p>Yes. Ongoing support can cover content updates, new sections, component work, performance checks and search maintenance. The scope is agreed separately based on how frequently the site changes.</p>"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Let’s Collaborate",
+    "title": "Ready to build a Framer site that feels <span class=\"hl\">distinctly yours?</span>",
+    "text": "Tell us what you are building, your current platform, the approximate number of pages and your target launch date. We will come back with the recommended scope, timeline and next step.",
+    "action": {
+      "label": "Discuss your Framer project",
+      "href": "/contact-us/"
+    }
+  },
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Services",
+      "path": "/services/"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+---
+// Case-study cards from the projects collection (by /project/<slug>/ URL).
+import { getCollection } from 'astro:content';
+interface Props { items: string[] }
+const { items } = Astro.props;
+const all = await getCollection('projects');
+const projects = items.map((href) => {
+  const slug = href.replace(/^\/project\//, '').replace(/\/$/, '');
+  const p = all.find((x) => x.data.slug === slug);
+  if (!p) throw new Error(`Projects block: no project for ${href}`);
+  return p;
+});
+---
+<ul class="projects">
+  {projects.map((p) => (
+    <li>
+      <a href={`/project/${p.data.slug}/`}>
+        {p.data.cover && <img src={p.data.cover.src} alt="" width={p.data.cover.width} height={p.data.cover.height} loading="lazy" decoding="async" />}
+        <h3>{p.data.title}</h3>
+      </a>
+      {p.data.categories.length > 0 && <p class="cats">{p.data.categories.map((c) => c.replace(/-/g, ' ')).join(' · ')}</p>}
+    </li>
+  ))}
+</ul>
+
+<style>
+  .projects { display: grid; gap: var(--space-5); padding: 0; list-style: none; }
+  a { display: block; color: var(--color-heading); text-decoration: none; }
+  img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius-md); background: var(--color-surface-2); transition: transform var(--dur) var(--ease); }
+  a:hover img { transform: scale(1.01); }
+  a:hover h3 { color: var(--color-link); }
+  h3 { margin-top: var(--space-3); font-size: var(--text-h4); }
+  .cats { margin-top: var(--space-1); color: var(--color-text-muted); font-size: var(--text-xs); text-transform: capitalize; }
+  @media (min-width: 40em) { .projects { grid-template-columns: repeat(2, 1fr); } }
+</style>

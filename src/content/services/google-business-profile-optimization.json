@@ -1,0 +1,268 @@
+{
+  "url": "/google-business-profile-optimization/",
+  "hero": {
+    "title": "Google Business Profile Optimization That Keeps You Live and Ranking",
+    "lead": "<p>Your Google Business Profile is the one high-intent channel a licensed dispensary fully controls — and the one most likely to get suspended if it’s set up wrong. We optimize every part of your profile for Map visibility and keep it compliant, fresh, and scoring under Google’s 2026 rules, so you stay found instead of flagged.</p>",
+    "actions": [
+      {
+        "label": "Get a Free GBP Audit",
+        "href": "#CForm"
+      },
+      {
+        "label": "View Verdi Case Study",
+        "href": "/verdi-cannabis-dutchie-pro-case-study/"
+      }
+    ],
+    "crumb": "Google Business Profile Optimization",
+    "eyebrow": "Google Business Profile — Cannabis",
+    "chips": [
+      "Categories & Attributes",
+      "Products Catalog",
+      "Reviews & Responses",
+      "Fresh Photos",
+      "Suspension-Proof",
+      "Gemini Answers",
+      "Calls & Directions"
+    ]
+  },
+  "sections": [
+    {
+      "eyebrow": "",
+      "title": "The one Google asset you own — and can't afford to lose.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>A dispensary can’t buy Google Ads, so your Business Profile is the closest thing you have to a paid front-row spot — except it’s earned, not bought. It drives calls, directions, and walk-ins from people who are ready to purchase right now. When it’s fully optimized, it’s your single best local channel. The catch: cannabis profiles are held to stricter rules than any other business, and a wrong category, a mismatched name, or a stock photo can get you suppressed or suspended overnight. Most dispensary profiles are half-built and one edit away from trouble. We optimize for visibility and protect against the mistakes that take listings down.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "What we optimize on your profile",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Categories &amp; Attributes",
+              "html": "<p>The right primary and secondary categories plus every relevant attribute — the strongest relevance lever Google gives you, and the one most dispensaries get wrong.</p>",
+              "meta": "Categories"
+            },
+            {
+              "title": "Products &amp; Services",
+              "html": "<p>A structured products and services catalog (and a compliant menu link) so Google and Gemini understand what you actually sell, within cannabis policy limits.</p>",
+              "meta": "Catalog"
+            },
+            {
+              "title": "Reviews &amp; Responses",
+              "html": "<p>A steady review-generation flow plus professional, compliant responses — one of the heaviest prominence signals for Map ranking, and a trust signal for AI.</p>",
+              "meta": "Reviews"
+            },
+            {
+              "title": "Photos &amp; 30-Day Freshness",
+              "html": "<p>Genuine, geo-tagged location photos on a recurring cadence — now a measurable ranking factor under Google’s 2026 freshness rule, never stock or AI images.</p>",
+              "meta": "Photos"
+            },
+            {
+              "title": "Posts &amp; Offers",
+              "html": "<p>Regular Google Posts that feed the signals Gemini now uses to auto-answer questions, keeping your profile active and your messaging accurate.</p>",
+              "meta": "Posts"
+            },
+            {
+              "title": "Profile Integrity &amp; NAP",
+              "html": "<p>Name, address, and phone that exactly match your license and citations, correct hours and service areas, and verification kept clean to avoid suspension.</p>",
+              "meta": "Integrity",
+              "img": {
+                "type": "img",
+                "src": "/wp-content/uploads/2026/07/Google-Business-Profile-optimization-for-licensed-dispensaries.webp",
+                "alt": "Google Business Profile optimization for licensed dispensaries",
+                "width": "640",
+                "height": "336"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Suspension is the risk nobody plans for — until it happens.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p><strong>Why dispensary profiles get suspended:</strong> a business name that doesn’t match the license, an inconsistent address, missing verification documents, category or policy violations, or — new for 2026 — stock and AI-generated images that now trigger suppression audits. <strong>Why it’s worse for you:</strong> with no paid ads to fall back on, a suspended or suppressed profile doesn’t cost a few percent of traffic — it can wipe out 30–40% of your local visibility overnight, right when customers are searching. <strong>What we do:</strong> we audit your profile against the current rules, fix the risk factors before they bite, and if you’re already suspended, we prepare the documentation and appeal to get you reinstated — then keep the profile compliant so it doesn’t happen again.</p>"
+        },
+        {
+          "type": "actions",
+          "items": [
+            {
+              "label": "Want Map Pack Strategy Too? Local SEO",
+              "href": "/local-seo-manhattan-brooklyn/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Profiles that rank — and stay live",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>We work with licensed dispensaries on the profile details generalist agencies miss — the categories, compliance rules, and freshness signals that decide whether you show up in Maps or get flagged. Real cannabis local experience, not a generic GBP checklist.</p>"
+        },
+        {
+          "type": "projects",
+          "items": [
+            "/project/verdi-cannabis/",
+            "/project/leaf-haus/"
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "GBP done the cannabis way — optimized and protected.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Cannabis Google Business Profiles live under rules generalists don’t know, and the penalty for getting them wrong is suppression or suspension. Here’s what we get right:</p>"
+        },
+        {
+          "type": "checklist",
+          "items": [
+            "<strong>Compliant categories &amp; pricing</strong> — the cannabis-specific rules on categories, promotions, and pricing that keep your listing live.",
+            "<strong>Real, fresh photos</strong> — genuine location imagery on a 30-day cadence, never the stock or AI images that trigger 2026 suppression audits.",
+            "<strong>License-matched NAP</strong> — name, address, and phone that match your license and citations exactly, so verification holds.",
+            "<strong>Reinstatement-ready</strong> — documentation and appeal handling if you're suspended, plus ongoing monitoring so it doesn't recur."
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Q&amp;A is gone. Gemini answers for you now.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Google retired user-facing Q&amp;A in 2026. Gemini now auto-generates answers to customer questions using your services catalog, posts, photos, reviews, and indexed website content — so those signals decide what the AI says about your dispensary. That means a thin profile doesn’t just rank worse; it lets AI answer for you with whatever it can scrape. A complete, accurate, well-fed profile is how you control the story assistants tell nearby customers.</p>"
+        },
+        {
+          "type": "actions",
+          "items": [
+            {
+              "label": "See GEO / AI Search Optimization",
+              "href": "/services/geo-ai-search-optimization/"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "html": "<p>The same signals power AI local recommendations across ChatGPT and Perplexity. Optimizing your profile now is optimizing for AI search at the same time — where almost no dispensary has presence yet.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "How we optimize and protect your profile",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Profile &amp; Risk Audit",
+              "html": "<p>We audit every field against current Google rules, flag suspension risk factors, benchmark your Map visibility, and check name, address, and verification against your license.</p>"
+            },
+            {
+              "title": "Optimize &amp; Compliance-Proof",
+              "html": "<p>We fix categories, attributes, services, and description, correct NAP and hours, remove non-compliant imagery, and lock the profile into a compliant, high-relevance state.</p>"
+            },
+            {
+              "title": "Reviews, Photos &amp; Posts Cadence",
+              "html": "<p>We set up review generation and responses, a 30-day real-photo cadence, and a regular posting rhythm that feeds Gemini and keeps your profile scoring.</p>"
+            },
+            {
+              "title": "Monitor &amp; Protect",
+              "html": "<p>We watch profile insights, calls, and directions, catch risky edits or suspension signals early, and handle reinstatement appeals if a listing ever goes down.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Your profile is the core — but not the whole map.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>A fully optimized Google Business Profile is the single strongest local signal, but it ranks highest when it’s backed by the rest of the system: neighborhood landing pages, citations, and reviews in our <a href=\"/local-seo-manhattan-brooklyn/\">local SEO for Manhattan &amp; Brooklyn</a>, plus the technical, menu, and content work in the full <a href=\"/dispensary-seo-nyc/\">dispensary SEO and AI search</a> program. Not sure how your profile scores against the 2026 rules, or whether it’s at risk? Get a free GBP audit.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Get a Free Google Business Profile Audit",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>We’ll review how your profile is set up against Google’s 2026 rules, flag anything that risks suppression or suspension, benchmark your Map visibility, and show the fastest optimization wins — then send a prioritized plan.</p>"
+        },
+        {
+          "type": "form"
+        }
+      ],
+      "id": "form",
+      "tone": "surface"
+    }
+  ],
+  "faq": {
+    "eyebrow": "",
+    "title": "Google Business Profile FAQ",
+    "items": [
+      {
+        "q": "Why do dispensary Google Business Profiles get suspended?",
+        "a": "<p>Usually a business name that doesn't match the license, an inconsistent address, missing verification documents, category or policy violations, or — new in 2026 — stock and AI-generated images that trigger suppression audits. We fix these risk factors before they take your listing down.</p>"
+      },
+      {
+        "q": "Can a suspended dispensary profile be reinstated?",
+        "a": "<p>Often, yes. Reinstatement means correcting whatever triggered the suspension and submitting the right documentation with a clear appeal. We prepare and handle that process, then keep the profile compliant so it doesn't happen again.</p>"
+      },
+      {
+        "q": "What categories should a cannabis dispensary use?",
+        "a": "<p>A cannabis-appropriate primary category plus relevant secondary categories and attributes. Categories are your strongest relevance lever for the Map Pack, and the wrong ones both hurt ranking and raise suspension risk — so we choose them carefully.</p>"
+      },
+      {
+        "q": "Do I really need to post and add photos regularly now?",
+        "a": "<p>Yes. Google's 2026 update added a 30-day photo-freshness rule as a scoring signal, replacing vague “post regularly” advice. Profiles that go stale lose Map position, so we run a real, recurring photo and posting cadence.</p>"
+      },
+      {
+        "q": "What happened to the Q&A section?",
+        "a": "<p>Google retired user-facing Q&amp;A. Gemini now auto-answers questions using your services catalog, posts, photos, reviews, and website content — so a complete, accurate profile is how you control what the AI tells customers.</p>"
+      },
+      {
+        "q": "Can I show products and prices on my profile?",
+        "a": "<p>Within cannabis policy, we structure your services and link a compliant menu so Google and AI understand what you sell, without the pricing or promotion claims that get listings flagged.</p>"
+      },
+      {
+        "q": "How does my Google Business Profile connect to Map Pack and AI search?",
+        "a": "<p>It's the core local signal both use. A complete, fresh, compliant profile is what makes you eligible for the Map Pack and for AI assistants recommending a dispensary nearby — the two places high-intent local customers now look.</p>"
+      }
+    ]
+  },
+  "cta": null,
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Services",
+      "path": "/services/"
+    },
+    {
+      "name": "Dispensary SEO",
+      "path": "/dispensary-seo-new-york/"
+    }
+  ],
+  "formSubject": "New audit request: Google Business Profile Optimization That Keeps You Live and Ranking"
+}

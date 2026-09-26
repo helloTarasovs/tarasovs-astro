@@ -1,0 +1,74 @@
+---
+// Renders a list of typed content blocks (see lib/service-page.ts).
+import type { Block } from '../../lib/service-page';
+import Cards from './Cards.astro';
+import Steps from './Steps.astro';
+import Stats from './Stats.astro';
+import Pricing from './Pricing.astro';
+import Table from './Table.astro';
+import Checklist from './Checklist.astro';
+import Projects from './Projects.astro';
+import ContactForm from '../ContactForm.astro';
+
+interface Props { blocks: Block[]; formSubject?: string }
+const { blocks, formSubject } = Astro.props;
+---
+{blocks.map((b) => (
+  <div class:list={['block', `block-${b.type}`]}>
+    {b.type === 'prose' && <div class="prose" set:html={b.html} />}
+    {b.type === 'cards' && <Cards items={b.items} columns={b.columns} />}
+    {b.type === 'steps' && <Steps items={b.items} />}
+    {b.type === 'stats' && <Stats items={b.items} />}
+    {b.type === 'pricing' && <Pricing plans={b.plans} />}
+    {b.type === 'table' && <Table caption={b.caption} head={b.head} rows={b.rows} highlight={b.highlight} />}
+    {b.type === 'checklist' && <Checklist items={b.items} />}
+    {b.type === 'projects' && <Projects items={b.items} />}
+    {b.type === 'tags' && <ul class="tags">{b.items.map((t) => <li>{t}</li>)}</ul>}
+    {b.type === 'image' && (
+      <img class="image" src={b.src} alt={b.alt} width={b.width} height={b.height} loading="lazy" decoding="async" />
+    )}
+    {b.type === 'actions' && (
+      <p class="actions">
+        {b.items.map((a, i) => <a class:list={['button', { 'button--ghost': i > 0 }]} href={a.href}>{a.label}</a>)}
+      </p>
+    )}
+    {b.type === 'callout' && (
+      <div class="callout">
+        {b.eyebrow && <p class="eyebrow">{b.eyebrow}</p>}
+        <p class="callout-title" set:html={b.title} />
+        {b.text && <p class="callout-text">{b.text}</p>}
+        {b.action && <a class="button button--highlight" href={b.action.href}>{b.action.label}</a>}
+      </div>
+    )}
+    {b.type === 'form' && (
+      <div class="form-card">
+        {b.title && <p class="form-title">{b.title}</p>}
+        <ContactForm subject={formSubject} />
+      </div>
+    )}
+  </div>
+))}
+
+<style>
+  .block + .block { margin-top: var(--space-6); }
+  .prose { max-width: var(--container-prose); }
+  .tags { display: flex; flex-wrap: wrap; gap: var(--space-2); padding: 0; list-style: none; }
+  .tags li { padding: 0.25rem 0.75rem; border-radius: var(--radius-pill); background: var(--color-surface-2); font-size: var(--text-xs); }
+  .image { width: 100%; border-radius: var(--radius-lg); }
+  .actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+  .callout {
+    padding: var(--space-6) var(--space-5);
+    border-radius: var(--radius-lg);
+    background: var(--brand-navy);
+    color: #d6d3de;
+  }
+  .callout .eyebrow { color: #b9b6c3; }
+  .callout-title { margin-top: var(--space-2); font-family: var(--font-title); font-size: var(--text-h3); font-weight: 500; line-height: var(--leading-tight); color: #fff; }
+  .callout-text { margin-block: var(--space-3) var(--space-5); max-width: 60ch; }
+  .form-card { max-width: 720px; padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); }
+  .form-title { margin-bottom: var(--space-4); font-family: var(--font-title); font-size: var(--text-h4); font-weight: 600; color: var(--color-heading); }
+  @media (min-width: 64em) {
+    .callout { padding: var(--space-7); }
+    .form-card { padding: var(--space-7); }
+  }
+</style>

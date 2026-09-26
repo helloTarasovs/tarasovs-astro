@@ -1,0 +1,297 @@
+{
+  "url": "/dispensary-seo-nyc/",
+  "hero": {
+    "title": "Cannabis Dispensary SEO Services in NYC",
+    "lead": "<p>We help licensed cannabis dispensaries in Manhattan and Brooklyn get found in Google Maps, organic search, Dutchie menu results, and AI assistants like ChatGPT.</p><p>From Google Business Profile optimization to Dutchie Pro migration and compliant SEO content, we build search systems that drive foot traffic, online orders, and local visibility.</p>",
+    "actions": [
+      {
+        "label": "Get a Dutchie SEO Audit",
+        "href": "#CForm"
+      },
+      {
+        "label": "View Verdi Case Study",
+        "href": "/verdi-cannabis-dutchie-pro-case-study/"
+      }
+    ],
+    "crumb": "Dispensary SEO NYC",
+    "eyebrow": "<a href=\"/dispensary-visibility/\">See the NY Dispensary Visibility Index</a>",
+    "chips": [
+      "Local “Near Me” SEO",
+      "Google Maps",
+      "Brooklyn SEO",
+      "GEO",
+      "Compliant Content",
+      "Manhattan SEO",
+      "Dutchie & Dutchie SEO"
+    ]
+  },
+  "sections": [
+    {
+      "eyebrow": "",
+      "title": "When cannabis ads are limited, search becomes your storefront.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>For licensed dispensaries in NYC, customers usually discover stores through Google Maps, “near me” searches, product/menu searches, delivery queries, and now AI recommendations. The problem: many dispensary websites and Dutchie menus are not structured to capture that demand. We fix the technical, local, and content signals that help your dispensary show up where customers are already searching.</p><p>Most dispensaries aren’t optimized for any of it.<br>That’s a problem — and an opening.</p><p>Operate outside the five boroughs? Explore our<a href=\"/dispensary-seo-new-york/\">dispensary SEO across New York State</a>for upstate, suburban and multi-location markets.</p><p><a href=\"/dispensary-seo-2026/\">2026 dispensary SEO guide</a></p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "What we do for NYC dispensaries",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Local SEO for NYC dispensaries",
+              "html": "<p>Rank for high-intent searches like “dispensary near me,” “weed delivery Manhattan,” “cannabis dispensary Brooklyn,” and neighborhood-specific searches.</p>",
+              "meta": "Local “Near Me” SEO",
+              "link": {
+                "label": "local SEO for NYC dispensaries",
+                "href": "/local-seo-manhattan-brooklyn/"
+              }
+            },
+            {
+              "title": "Google Business Profile Optimization",
+              "html": "<p>Optimize categories, services, reviews, photos, posts, and local relevance signals to improve Maps visibility.</p>",
+              "meta": "Google Business",
+              "link": {
+                "label": "Get started",
+                "href": "#CForm"
+              }
+            },
+            {
+              "title": "Dutchie Menu SEO",
+              "html": "<p>Make sure your Dutchie menu, categories, and product pages are discoverable, crawlable, and connected to your main website’s SEO strategy.</p>",
+              "meta": "Dutchie iFrame",
+              "link": {
+                "label": "Get started",
+                "href": "#CForm"
+              }
+            },
+            {
+              "title": "Dutchie Pro Migration",
+              "html": "<p>Planning a move from Dutchie Plus, Dutchie iFrame, or a legacy Dutchie setup to Dutchie Pro? We help protect rankings, menu visibility, URL structure, and search data during migration.</p>",
+              "meta": "Dutchie Pro",
+              "link": {
+                "label": "Get started",
+                "href": "#CForm"
+              }
+            },
+            {
+              "title": "Be the AI recommendation",
+              "html": "<p>When customers ask ChatGPT, Perplexity, or Google’s AI for the best dispensary nearby, we make sure your name is the one it recommends — not your competitor’s.</p>",
+              "meta": "AI Search (GEO)",
+              "link": {
+                "label": "Get started",
+                "href": "#CForm"
+              }
+            },
+            {
+              "title": "Compliant Cannabis Content",
+              "html": "<p>SEO content for licensed dispensaries that avoids risky claims, unsafe language, and low-quality generic cannabis copy.</p>",
+              "meta": "Compliant Content & Web"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Dutchie menu SEO is not optional anymore.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Your Dutchie menu is one of your most valuable SEO assets — but if it is embedded, poorly indexed, or disconnected from your main domain, Google may not fully understand your products, categories, and local inventory.<br><br>We help dispensaries audit, optimize, and migrate Dutchie setups so menus can support organic search instead of sitting outside the SEO system.</p>"
+        },
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Dutchie Pro migration support",
+              "html": "<p>If your dispensary is moving from Dutchie Plus, Dutchie iFrame, or another legacy Dutchie setup to Dutchie Pro, we help with SEO planning before, during, and after migration.</p>",
+              "link": {
+                "label": "Learn about Dutchie Pro Migration SEO",
+                "href": "/dutchie-pro-migration-seo/"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Cannabis SEO experience, not theory",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>We work with cannabis brands and licensed dispensaries on real search visibility, local SEO, technical SEO, content, and e-commerce migration challenges.</p>"
+        },
+        {
+          "type": "projects",
+          "items": [
+            "/project/verdi-cannabis/",
+            "/project/leaf-haus/"
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "We do this for dispensaries specifically — not as a side service.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Cannabis SEO isn’t regular SEO. The compliance rules, the platform restrictions, and the technical quirks are different — and getting them wrong can get your listings suspended. We know the details that generalist agencies miss:</p>"
+        },
+        {
+          "type": "checklist",
+          "items": [
+            "<strong>Dispensary-correct schema &amp; local data</strong> — structured the way search engines and AI models expect for licensed retailers.",
+            "<strong>Compliance-first content</strong> — no health claims, no policy violations that trigger penalties or takedowns.",
+            "<strong>Google Business Profile done right</strong> — the cannabis-specific rules on categories, pricing, and promotions that keep your listing safe.",
+            "<strong>Dutchie &amp; Shopify menu indexing</strong> — embedded menus often don’t get indexed; we fix that so your products are actually findable.</p><p><a href=\"/dispensary-seo-2026/\">2026 dispensary SEO guide</a>"
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "AI is the new “ask a friend.” Most dispensaries are invisible to it.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>When someone asks an AI assistant for a dispensary recommendation, it names just a few — not a full page of links. Those few spots are getting locked in right now, while almost no dispensary is optimized for AI search.</p><p>Being early here means owning the recommendation before your competitors even know it’s happening.</p>"
+        },
+        {
+          "type": "actions",
+          "items": [
+            {
+              "label": "Get a Dutchie SEO Audit",
+              "href": "#CForm"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "html": "<p>We’ll check your Dutchie menu setup, Google Business Profile, local rankings, Search Console visibility, and AI search presence.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "How we grow dispensary search visibility",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Dutchie &amp; Local SEO Audit",
+              "html": "<p>We review your website, Dutchie setup, Google Business Profile, Search Console data, local rankings, AI visibility, and competitor presence.</p>"
+            },
+            {
+              "title": "Search Visibility Roadmap",
+              "html": "<p>You get a prioritized plan covering technical SEO, Dutchie menu visibility, local pages, GBP improvements, content, and GEO opportunities.</p>"
+            },
+            {
+              "title": "Implementation",
+              "html": "<p>We handle the fixes: content, internal links, schema, local landing pages, GBP updates, Dutchie migration SEO, tracking, and indexation.</p>"
+            },
+            {
+              "title": "Monthly Reporting",
+              "html": "<p>You see what changed in Google Search Console, GA4, Google Maps, keyword rankings, and AI search visibility.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Proof, not promises.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>From Dutchie menu migration to local SEO and AI visibility, our work is built around the real search problems dispensaries face: embedded menus, weak Google Maps signals, missing local pages, under-optimized content, and limited visibility in AI-powered discovery.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Get a Dutchie SEO Audit",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>We’ll review your Dutchie menu setup, Google Business Profile, local rankings, Search Console visibility, and AI search presence — then send a practical list of next steps.</p>"
+        },
+        {
+          "type": "form"
+        }
+      ],
+      "id": "form",
+      "tone": "surface"
+    }
+  ],
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions dispensaries ask",
+    "items": [
+      {
+        "q": "Do you only work with dispensaries in NYC?",
+        "a": "<p>Our primary focus is licensed dispensaries in New York City, including Manhattan, Brooklyn, Queens, the Bronx and Staten Island. We can also support licensed cannabis retailers in other New York and US markets.</p>"
+      },
+      {
+        "q": "Can you optimize our Dutchie menu for SEO?",
+        "a": "<p>Yes. We audit how your Dutchie menu is connected to your website, whether its category and product pages are discoverable, and how the menu supports your local and organic search visibility.</p>"
+      },
+      {
+        "q": "Do you optimize Google Business Profiles for dispensaries?",
+        "a": "<p>Yes. Google Maps visibility is a core part of our dispensary SEO work. We review profile categories, services, business information, reviews, photos, posts and local relevance signals.</p>"
+      },
+      {
+        "q": "Can dispensaries use SEO when advertising is restricted?",
+        "a": "<p>Yes. SEO helps dispensaries reduce their reliance on restricted advertising channels. Organic search, Google Maps, menu searches and AI-assisted discovery can connect licensed retailers with people already searching for nearby products and stores.</p>"
+      },
+      {
+        "q": "Is dispensary SEO compliant?",
+        "a": "<p>Our work is designed for licensed cannabis businesses. We avoid unsupported health claims, review platform policies and structure content around factual business, product and location information. Final legal and regulatory compliance remains the responsibility of the retailer and its legal advisers.</p>"
+      },
+      {
+        "q": "What is GEO or AI search optimization?",
+        "a": "<p>Generative Engine Optimization, or GEO, improves how clearly AI systems can understand your dispensary, locations, products and expertise. It builds on traditional SEO using structured information, credible content and consistent business signals. No agency can guarantee an AI citation or recommendation.</p>"
+      },
+      {
+        "q": "How is this different from a regular SEO agency?",
+        "a": "<p>We understand the search challenges specific to licensed dispensaries: local competition, platform restrictions, Dutchie menu indexing, migrations, Google Business Profile management and cannabis content review. The strategy is built around these issues rather than adapted from a generic local SEO package.</p>"
+      },
+      {
+        "q": "How quickly can dispensary SEO produce results?",
+        "a": "<p>Technical fixes and Google Business Profile updates may be reflected within several weeks. Meaningful organic growth usually takes longer and depends on your current website, competition, location, authority and implementation scope. We use Google Search Console and GA4 to measure actual progress.</p>"
+      },
+      {
+        "q": "Do you help with Dutchie Pro migrations?",
+        "a": "<p>Yes. We help plan SEO-safe migrations from Dutchie Plus, Dutchie iFrame and legacy setups to Dutchie Pro. This can include URL mapping, redirect planning, indexation checks, GA4 and Search Console tracking, technical review and post-launch monitoring.</p>"
+      },
+      {
+        "q": "What does dispensary SEO cost?",
+        "a": "<p>The scope depends on your market, website, Dutchie setup, number of locations and growth goals. We begin with a visibility review and then recommend a focused project or monthly program based on the work actually required.</p>"
+      }
+    ]
+  },
+  "cta": null,
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Services",
+      "path": "/services/"
+    },
+    {
+      "name": "Dispensary SEO",
+      "path": "/dispensary-seo-new-york/"
+    }
+  ],
+  "formSubject": "New audit request: Cannabis Dispensary SEO Services in NYC"
+}

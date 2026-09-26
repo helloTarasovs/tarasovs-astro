@@ -1,0 +1,260 @@
+{
+  "url": "/dutchie-pro-migration-seo/",
+  "hero": {
+    "title": "Dutchie Pro Migration Without Losing Your Rankings",
+    "lead": "<p>Dutchie is sunsetting the legacy Dutchie Plus platform through the end of 2026, and the default Dutchie iFrame was never indexable to begin with. We migrate licensed dispensaries to Dutchie Pro without losing rankings, menu indexation, or online orders — proven on a live NYC dispensary.</p>",
+    "actions": [
+      {
+        "label": "Get a Free Migration Audit",
+        "href": "#CForm"
+      },
+      {
+        "label": "View Verdi Case Study",
+        "href": "/verdi-cannabis-dutchie-pro-case-study/"
+      }
+    ],
+    "crumb": "Dutchie Pro Migration SEO",
+    "eyebrow": "Dutchie Pro Migration",
+    "byline": "By <a href=\"https://www.linkedin.com/in/yurii-tarasov/?skipRedirect=true\">Tarasov Yurii</a>, Founder &amp; SEO/GEO Strategist, Tarasovs Agency. Last updated August 29, 2026"
+  },
+  "sections": [
+    {
+      "eyebrow": "",
+      "title": "Two starting points. One deadline.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>If you’re on Dutchie Plus (headless), you have a custom storefront rendering real, ranked product URLs — and it’s being deprecated. When the API stops responding, those URLs 404 and every ranking signal you built over 12–24 months collapses at once. Dutchie supports legacy Plus through the end of 2026; after that, don’t assume a dependable path. If you’re on the standard Dutchie iFrame, your menu loads from Dutchie’s domain inside a frame — so your products are close to invisible in search today. You’re not losing rankings in a migration; you never had them. Either way the destination is the same: Dutchie Pro, which serves store and product pages as crawlable URLs on your own domain.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "What actually breaks — and what we protect",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Product URLs",
+              "html": "<p>On the iFrame they live on Dutchie’s domain; on Plus they vanish at sunset. We map every indexed URL and preserve slugs with 301 redirects.</p>",
+              "meta": "Product URLs"
+            },
+            {
+              "title": "Menu Crawlability",
+              "html": "<p>iFrame menus are effectively uncrawlable. Dutchie Pro renders store and product pages Googlebot can actually read and index.</p>",
+              "meta": "Crawlability"
+            },
+            {
+              "title": "Product Schema",
+              "html": "<p>Product, Offer and AggregateRating schema must keep emitting from live data. We configure it to stay fresh, never hardcoded.</p>",
+              "meta": "Schema"
+            },
+            {
+              "title": "Core Web Vitals",
+              "html": "<p>On the iFrame your speed is tied to Dutchie’s render budget. On Pro, page performance is back under your control.</p>",
+              "meta": "Core Web Vitals"
+            },
+            {
+              "title": "Internal Links",
+              "html": "<p>Links from blog posts and local pages must resolve to indexable pages — not a frame or a 404. We verify every one post-cutover.</p>",
+              "meta": "Internal Links"
+            },
+            {
+              "title": "AI Citability",
+              "html": "<p>Assistants can’t cite a menu that isn’t really on your domain. Indexable product pages are the precondition for AI search visibility.</p>",
+              "meta": "AI Citability",
+              "img": {
+                "type": "img",
+                "src": "/wp-content/uploads/2026/07/Dutchie-Pro-Migration-SEO.webp",
+                "alt": "Dutchie Pro Migration Without Losing Your Rankings",
+                "width": "1731",
+                "height": "909"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Proof, not theory: Verdi Cannabis",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Verdi Cannabis ran its menu on the default Dutchie iFrame — every product page invisible to Google. We migrated the menu to Dutchie Pro, preserved the existing URL and link structure, put 301 redirects in place for anything that had to change, and rebuilt their blog and podcast templates on WordPress. Comparing the six months after migration to the six before: organic impressions grew +93.5%, organic clicks +17%, and average position climbed +7 spots — from the bottom of page 2 to the top of page 1. Seven of the top ten traffic pages had little to no visibility before the move. The site went from ranking almost entirely for its own brand name to holding page-1 positions for non-branded, high-intent terms like “dispensary near me” and “park slope dispensary” — exactly the neighborhood demand that used to go to competitors.</p>"
+        },
+        {
+          "type": "actions",
+          "items": [
+            {
+              "label": "Read the Full Verdi Case Study",
+              "href": "/verdi-cannabis-dutchie-pro-case-study/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Cannabis migration experience, not guesswork",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>We’ve carried a licensed NYC dispensary from an invisible iFrame menu to page-1 rankings — and can show the Search Console proof. Migration is a technical, local, and content problem at once, and we handle all three.</p>"
+        },
+        {
+          "type": "projects",
+          "items": [
+            "/project/verdi-cannabis/",
+            "/project/leaf-haus/"
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "We migrate dispensaries specifically — not as a side service.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>A cannabis migration isn’t a generic rebuild. The compliance rules, the platform quirks, and the SEO stakes are different — and getting them wrong during a cutover is how listings get suspended at the worst possible moment. Here’s what a clean Dutchie Pro migration guarantees:</p>"
+        },
+        {
+          "type": "checklist",
+          "items": [
+            "<strong>1:1 URL mapping</strong> — every indexed URL crawled and mapped to its Dutchie Pro equivalent before anything is touched.",
+            "<strong>301 redirects for every change</strong> — no ranking silently breaks, no internal link lands on a 404.",
+            "<strong>Fresh product schema</strong> — Product, Offer and AggregateRating emit from live Pro data, not stale hardcoded markup.",
+            "<strong>30/60/90-day monitoring</strong> — indexation diffs against baseline, with any page that slips diagnosed and fixed."
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "A migration is your entry ticket to AI search.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>When someone asks ChatGPT, Perplexity, or Google’s AI for a dispensary recommendation, it names a handful — built on clear, crawlable, trustworthy pages. An iFrame menu is invisible to them for the same reason it’s invisible to Googlebot. A Dutchie Pro migration is the precondition for GEO / AI search visibility: you can’t be the assistant’s pick for “Brooklyn dispensary with X in stock” if your inventory pages don’t exist as real, structured URLs.</p>"
+        },
+        {
+          "type": "actions",
+          "items": [
+            {
+              "label": "See GEO / AI Search Optimization",
+              "href": "/services/geo-ai-search-optimization/"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "html": "<p>Most dispensaries have zero presence here today. Migrate cleanly now and you get to own the AI recommendation before competitors realize it’s a channel.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "How we run a Dutchie Pro migration",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Baseline Audit &amp; URL Mapping",
+              "html": "<p>We crawl the current setup and export every indexed URL, ranking position, and internal-link count. This becomes the recovery target and the 1:1 map to Dutchie Pro.</p>"
+            },
+            {
+              "title": "Migration &amp; Redirects",
+              "html": "<p>We migrate the live menu to Dutchie Pro with the URL structure preserved, put 301 redirects in place for anything that changes, and configure fresh product schema and a new XML sitemap.</p>"
+            },
+            {
+              "title": "Verification",
+              "html": "<p>We re-crawl the new structure, validate schema in Rich Results Test, confirm indexing in Search Console, and test every redirect end to end before calling the cutover done.</p>"
+            },
+            {
+              "title": "30/60/90-Day Monitoring",
+              "html": "<p>Migrations aren’t finished at go-live. We run indexation diffs against baseline, watch Core Web Vitals and rankings, and remediate any URL that slips.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Which path is right for your dispensary?",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>There are three honest responses to the Plus sunset or an unindexed iFrame. Falling back to the standard iFrame is cheapest but throws away product URLs and schema — only sensible for a low-volume store that never indexed products. Switching providers (Jane, Treez, Flowhub) is a 60–90 day project that only makes sense if you were already leaving Dutchie. For everyone else with traffic to protect or earn, migrating to Dutchie E-Commerce Pro is the default — you keep your POS, staff, and customer accounts and gain indexable pages plus a foundation for local and AI search. Not sure which applies? Run <em>site:yourdomain.com inurl:/products/</em> in Google, then get a free audit.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Get a Free Dutchie Migration Audit",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>We’ll check whether you’re on Plus or the iFrame, how many product URLs are actually indexed, what would break at cutover, and where the fastest local and AI-search wins are — then send a practical, prioritized migration plan.</p>"
+        },
+        {
+          "type": "form"
+        }
+      ],
+      "id": "form",
+      "tone": "surface"
+    }
+  ],
+  "faq": {
+    "eyebrow": "",
+    "title": "Dutchie Pro migration FAQ",
+    "items": [
+      {
+        "q": "When is Dutchie Plus being sunset?",
+        "a": "Dutchie has said it will support legacy Dutchie Plus customers through the end of 2026. Exact end-of-life dates are tier-dependent, so request a written timeline from your Dutchie account manager and plan to complete migration well before the API stops responding.We checked Dutchie's own Help Center, release notes, and product pages before publishing this — none of them list a public cutoff date or deprecation schedule. The end-of-2026 date and any specific timeline you see quoted elsewhere comes from account-level communication, not a published company announcement. Treat it as unconfirmed until your account manager puts a date in writing"
+      },
+      {
+        "q": "What's the difference between the Dutchie iFrame and Dutchie Pro?",
+        "a": "<p>The default iFrame embeds your menu from Dutchie's domain inside a frame, which search engines struggle to index as real pages. Dutchie Pro serves store and product pages as standalone, crawlable URLs on your own domain, so each can be found, ranked, and cited individually.</p>"
+      },
+      {
+        "q": "Will migrating to Dutchie Pro hurt my SEO?",
+        "a": "<p>Only if it's done without proper URL mapping and redirects. The real risks are URL changes without 301s, dropped metadata, broken internal links, and stale schema. We map every indexed URL before migration and preserve structure wherever possible — which is why Verdi's rankings grew through the migration instead of dropping.</p>"
+      },
+      {
+        "q": "How long does a Dutchie Pro migration take to show results?",
+        "a": "<p>Indexing of newly crawlable pages typically begins within the first few weeks. Meaningful ranking and traffic gains build over 3–6 months as Google gains confidence in the new URLs — consistent with the six-month window behind the Verdi results.</p>"
+      },
+      {
+        "q": "Do I have to leave Dutchie to fix my menu SEO?",
+        "a": "<p>No. If you're happy with Dutchie operationally, migrating to Dutchie Pro keeps your POS, staff, and customer accounts while making your menu indexable. Switching providers only makes sense if you were already planning to leave for other reasons.</p>"
+      },
+      {
+        "q": "Can you migrate a multi-location / MSO setup?",
+        "a": "<p>Yes. Multi-location migrations need more URL mapping and per-location QA, and we scope the timeline accordingly. Store-location pages are usually among the biggest winners, since each becomes an indexable, locally relevant page instead of a menu tab.</p>"
+      },
+      {
+        "q": "What does a Dutchie Pro migration cost?",
+        "a": "<p>Engagements are scoped to your setup — how many URLs are indexed, whether you're on Plus or the iFrame, and how much local and content work you want alongside the technical migration. The honest starting point is the free audit; it shows what's actually needed before you commit.</p>"
+      }
+    ]
+  },
+  "cta": null,
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Services",
+      "path": "/services/"
+    },
+    {
+      "name": "Dispensary SEO",
+      "path": "/dispensary-seo-new-york/"
+    }
+  ],
+  "formSubject": "New audit request: Dutchie Pro Migration Without Losing Your Rankings"
+}

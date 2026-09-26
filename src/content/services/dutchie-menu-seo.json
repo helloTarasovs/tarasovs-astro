@@ -1,0 +1,281 @@
+{
+  "url": "/dutchie-menu-seo/",
+  "hero": {
+    "title": "Dutchie Menu SEO That Actually Gets Your Products Ranked",
+    "lead": "<p>Your Dutchie menu holds every product a customer could search for — but if it’s embedded, poorly structured, or disconnected from your domain, Google barely sees it. We make your Dutchie menu, categories, and product pages crawlable, indexable, and connected to your main SEO — so your inventory starts driving organic orders instead of sitting invisible.</p>",
+    "actions": [
+      {
+        "label": "Get a Free Menu SEO Audit",
+        "href": "#CForm"
+      },
+      {
+        "label": "View Verdi Case Study",
+        "href": "/verdi-cannabis-dutchie-pro-case-study/"
+      }
+    ],
+    "crumb": "Dutchie Menu SEO",
+    "eyebrow": "Dutchie Menu SEO",
+    "chips": [
+      "Menu Indexation",
+      "Product Schema",
+      "Category Hubs",
+      "Root-Domain Menu",
+      "Local Inventory Signals",
+      "AI Product Search",
+      "Compliant Copy"
+    ]
+  },
+  "sections": [
+    {
+      "eyebrow": "",
+      "title": "Your menu is your biggest untapped SEO asset.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Every flower, edible, vape, and accessory you carry is something a real person is searching for by name. That’s product-level demand with high purchase intent — and for most dispensaries it goes straight to competitors, because the menu that holds those products isn’t structured for search.</p><p>The default Dutchie embed drops your menu into a cross-origin iFrame that Google doesn’t crawl as part of your page. No product URLs on your domain, no schema, no local inventory signals. The inventory exists — search engines and AI assistants just can’t reliably see it. That’s the gap we close.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "What we optimize on your Dutchie menu",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Menu Indexation",
+              "html": "<p>We audit exactly what Google has indexed from your menu, find what’s blocked by the iFrame or config, and fix how the menu is served so pages can actually be crawled.</p>",
+              "meta": "Indexation"
+            },
+            {
+              "title": "Category &amp; Product Architecture",
+              "html": "<p>Clean, crawlable URLs for categories and products — no thin, duplicate, or orphaned pages. Category hubs that pass authority down to individual products.</p>",
+              "meta": "Architecture"
+            },
+            {
+              "title": "Product &amp; Offer Schema",
+              "html": "<p>Product, Offer, and AggregateRating schema emitted from live inventory on your own domain, so listings are eligible for rich results and AI citation.</p>",
+              "meta": "Schema"
+            },
+            {
+              "title": "Menu-to-Site Connection",
+              "html": "<p>We wire your menu into your main site’s SEO — internal links from blog and local pages, consistent canonicals, and a sitemap that covers your product URLs.</p>",
+              "meta": "Connection"
+            },
+            {
+              "title": "Local Inventory Signals",
+              "html": "<p>Neighborhood and store-level relevance so your products rank for local, high-intent queries like “edibles near me” and “Brooklyn vape cart,” not just brand searches.</p>",
+              "meta": "Local"
+            },
+            {
+              "title": "Compliant Product Copy",
+              "html": "<p>Unique, useful category and product descriptions that avoid health claims and policy violations — content that ranks without putting your listings at risk.</p>",
+              "meta": "Compliant",
+              "img": {
+                "type": "img",
+                "src": "/wp-content/uploads/2026/07/dutchie-menu-seo-elementor.webp",
+                "alt": "Dutchie menu SEO for licensed dispensaries",
+                "width": "640",
+                "height": "336"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "The four Dutchie menu setups — and which one actually ranks",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Embedded menu (default iFrame):",
+              "html": "<p>only partially indexed by Google. It can drive some traffic, but product URLs and schema don’t live on your domain — a ceiling you’ll hit fast.</p>"
+            },
+            {
+              "title": "Dutchie Pro + Proxy / Dutchie Pro:",
+              "html": "<p>serves your storefront as part of your root domain, fully crawlable with real product URLs and schema. This is the configuration that ranks — and what we recommend for most dispensaries serious about organic.</p>"
+            },
+            {
+              "title": "Subdomain menu:",
+              "html": "<p>fully indexed, but Google treats a subdomain as a separate site — so authority, local relevance, and internal links don’t fully flow to your main domain. We generally avoid it. <strong>Dutchie+:</strong> a fully custom, indexable build for larger MSOs. We help you pick and configure the right one.</p>"
+            }
+          ]
+        },
+        {
+          "type": "actions",
+          "items": [
+            {
+              "label": "Planning a Platform Move? Dutchie Pro Migration",
+              "href": "/dutchie-pro-migration-seo/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Dutchie menu SEO, proven on real dispensaries",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>We took Verdi Cannabis’s invisible iFrame menu and turned individual product and store pages into ranking, traffic-driving URLs. This is menu SEO we’ve actually shipped — with the Search Console data to back it.</p>"
+        },
+        {
+          "type": "projects",
+          "items": [
+            "/project/verdi-cannabis/",
+            "/project/leaf-haus/"
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Menu SEO done the cannabis way — not a generic template.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Cannabis menus have problems generalist SEOs never see: cross-origin iFrames, duplicated product pages across locations, thin auto-generated copy, and compliance rules that get content flagged. Here’s what we get right:</p>"
+        },
+        {
+          "type": "checklist",
+          "items": [
+            "<strong>Indexable product URLs</strong> — real pages on your domain, not menu content trapped inside a frame.",
+            "<strong>No duplicate or thin pages</strong> — unique category and product content, correct canonicals across multi-location menus.",
+            "<strong>Product schema on your domain</strong> — live Product / Offer / AggregateRating markup eligible for rich results and AI answers.",
+            "<strong>Compliance-safe copy</strong> — no health claims or policy violations that flag listings or trigger takedowns."
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "AI shops your menu too — if it can read it.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>When a customer asks ChatGPT or Perplexity for “the best gummies near me” or a specific strain, the assistant pulls from clear, crawlable, structured pages. An iFrame menu is invisible to it — the same reason it’s invisible to Googlebot. Structured, indexable product pages are the raw material AI search uses to recommend and cite. Menu SEO isn’t just about blue links anymore; it’s what makes your inventory eligible to be the answer.</p>"
+        },
+        {
+          "type": "actions",
+          "items": [
+            {
+              "label": "See GEO / AI Search Optimization",
+              "href": "/services/geo-ai-search-optimization/"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "html": "<p>Almost no dispensary has product-level AI visibility yet. Fix your menu now and you’re eligible for product recommendations your competitors can’t even show up for.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "How we optimize your Dutchie menu",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Menu Indexation Audit",
+              "html": "<p>We check what Google and Bing have actually indexed from your menu, identify what your Dutchie config is blocking, and benchmark your product-page visibility and competitors.</p>"
+            },
+            {
+              "title": "Architecture &amp; Schema Fixes",
+              "html": "<p>We fix category and product URL structure, remove thin and duplicate pages, add Product/Offer schema on your domain, and generate a sitemap covering every product URL.</p>"
+            },
+            {
+              "title": "Menu-to-Site Connection",
+              "html": "<p>We connect the menu to your main SEO — internal links from blog and local pages, category hubs, canonical handling, and local inventory signals for neighborhood queries.</p>"
+            },
+            {
+              "title": "Monitoring &amp; Iteration",
+              "html": "<p>We track indexation, rankings, and product-page traffic in Search Console, then keep refining category content and internal links as inventory and demand shift.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Your menu is the engine — but not the whole system.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>A crawlable, well-structured Dutchie menu is the foundation, but it ranks fastest when it’s wired into everything around it: a strong Google Business Profile, local landing pages, category and education content, and clean technical SEO. If you’re also changing platforms, menu SEO pairs directly with a <a href=\"/dutchie-pro-migration-seo/\">Dutchie Pro migration</a>; if you want the full local and AI picture, it sits inside our <a href=\"/dispensary-seo-nyc/\">dispensary SEO and AI search</a> program. Not sure what your menu is currently costing you? Run <em>site:yourdomain.com</em> in Google, count how few product pages appear, then get a free audit.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Get a Free Dutchie Menu SEO Audit",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>We’ll check how your Dutchie menu is configured, how much of it Google has actually indexed, whether your product pages carry schema, and where the fastest local and AI-search wins are — then send a prioritized menu SEO plan.</p>"
+        },
+        {
+          "type": "form"
+        }
+      ],
+      "id": "form",
+      "tone": "surface"
+    }
+  ],
+  "faq": {
+    "eyebrow": "",
+    "title": "Dutchie menu SEO FAQ",
+    "items": [
+      {
+        "q": "Can Google actually index my Dutchie menu?",
+        "a": "<p>It depends on your configuration. The default embedded iFrame is only partially indexed, while Dutchie Pro (root-domain) and Dutchie+ serve fully crawlable product pages. We audit what's indexed today and fix how your menu is served so pages can be crawled.</p>"
+      },
+      {
+        "q": "Why aren't my Dutchie products showing up in search?",
+        "a": "<p>Usually because the menu is embedded in a cross-origin iFrame Google doesn't crawl as part of your page, there's no Product schema on your domain, and product pages are thin or duplicated. Those are exactly the issues a menu SEO engagement fixes.</p>"
+      },
+      {
+        "q": "What's the best Dutchie setup for SEO?",
+        "a": "<p>For most dispensaries, Dutchie Pro (or Pro + Proxy) is best because your menu is served on your root domain with real product URLs and schema. We generally avoid a subdomain-only menu, since Google treats subdomains as separate sites.</p>"
+      },
+      {
+        "q": "Do I need Dutchie Pro to do menu SEO?",
+        "a": "<p>You can win some ground on an embedded menu, but the ceiling is low. Real product-level ranking needs indexable pages on your domain — which is why we often pair menu SEO with a move to Dutchie Pro.</p>"
+      },
+      {
+        "q": "Will a subdomain menu hurt my SEO?",
+        "a": "<p>It's better than a fully hidden iFrame, but Google treats a subdomain as a separate site, so authority, local relevance, and internal links don't fully flow to your main domain. Root-domain configurations consolidate that value instead.</p>"
+      },
+      {
+        "q": "Can you optimize product pages for specific strains and products?",
+        "a": "<p>Yes. We give categories and high-value products unique, compliant descriptions, add product schema, and build category hubs — while fixing duplication so similar products don't compete with each other.</p>"
+      },
+      {
+        "q": "How does menu SEO help with AI search?",
+        "a": "<p>AI assistants recommend and cite from clear, crawlable, structured pages. Indexable product pages with schema are what make your inventory eligible to be the answer when someone asks an assistant for a product near them.</p>"
+      }
+    ]
+  },
+  "cta": null,
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Services",
+      "path": "/services/"
+    },
+    {
+      "name": "Dispensary SEO",
+      "path": "/dispensary-seo-new-york/"
+    }
+  ],
+  "formSubject": "New audit request: Dutchie Menu SEO That Actually Gets Your Products Ranked"
+}

@@ -1,0 +1,54 @@
+---
+import type { Plan } from '../../lib/service-page';
+interface Props { plans: Plan[] }
+const { plans } = Astro.props;
+const featured = plans.length === 3 ? 1 : -1;
+---
+<ul class="plans">
+  {plans.map((p, i) => (
+    <li class:list={['plan', { 'is-featured': i === featured }]}>
+      <h3>{p.name}</h3>
+      {p.details && <p class="details">{p.details}</p>}
+      <p class="price"><strong>{p.price}</strong>{p.period && <span> {p.period}</span>}</p>
+      {p.tag && <p class="tag">{p.tag}</p>}
+      <ul class="features">
+        {p.features.map((f) => <li set:html={f} />)}
+      </ul>
+      {p.action && <a class:list={['button', { 'button--highlight': i === featured }]} href={p.action.href}>{p.action.label}<span class="visually-hidden"> with {p.name}</span></a>}
+    </li>
+  ))}
+</ul>
+
+<style>
+  .plans { display: grid; gap: var(--space-4); padding: 0; list-style: none; }
+  .plan {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-6) var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+  .plan.is-featured { border-color: var(--brand-violet); box-shadow: 0 0 0 1px var(--brand-violet), var(--shadow-md); }
+  h3 { font-size: var(--text-h4); }
+  .details { color: var(--color-text-muted); font-size: var(--text-sm); }
+  .price { margin-top: var(--space-2); color: var(--color-text-muted); font-size: var(--text-sm); }
+  .price strong { font-family: var(--font-title); font-size: var(--text-h2); font-weight: 600; color: var(--color-heading); letter-spacing: var(--tracking-title); }
+  .tag { align-self: flex-start; padding: 0.15rem 0.6rem; border-radius: var(--radius-pill); background: var(--color-surface-2); font-size: var(--text-xs); }
+  .features { display: grid; gap: var(--space-2); margin-block: var(--space-3); padding: 0; list-style: none; font-size: var(--text-sm); }
+  .features li { position: relative; padding-left: 1.6em; }
+  .features li::before {
+    content: '';
+    position: absolute;
+    left: 0.15em;
+    top: 0.45em;
+    width: 0.9em;
+    height: 0.5em;
+    border-left: 2px solid var(--brand-violet);
+    border-bottom: 2px solid var(--brand-violet);
+    transform: rotate(-45deg);
+  }
+  .button { margin-top: auto; width: 100%; }
+  @media (min-width: 64em) { .plans { grid-template-columns: repeat(3, 1fr); gap: var(--space-5); } }
+</style>

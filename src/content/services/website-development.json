@@ -1,0 +1,136 @@
+{
+  "url": "/services/website-development/",
+  "hero": {
+    "title": "Custom Website Development — Built to Perform in Search and in AI",
+    "lead": "<p>We develop websites that load fast, rank well, and are structured for both Google and AI-powered search platforms. Whether your project needs Framer, Webflow, or WordPress — we choose the platform that fits your goals, not the one we're most comfortable selling.</p>",
+    "actions": [
+      {
+        "label": "Get a Quote",
+        "href": "/contact-us/#CForm"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "eyebrow": "",
+      "title": "Development platforms we work with",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Framer",
+              "html": "<p>Our platform of choice for marketing sites, agency portfolios, and startup launches that demand high design quality and fast performance. Framer's React-based output is semantic, clean, and SEO-ready. We build, optimize, and launch Framer sites with full CMS setup and GEO-optimized content structure.</p>"
+            },
+            {
+              "title": "Webflow",
+              "html": "<p>For businesses that need a powerful CMS, complex interactions, or a scalable design system without traditional development overhead. Webflow gives editorial teams full control without touching code. We build, optimize, and launch Webflow sites with full CMS setup and GEO-optimized content structure.</p>"
+            },
+            {
+              "title": "WordPress",
+              "html": "<p>For projects that require deep plugin ecosystems, custom post types, WooCommerce, or an established content infrastructure. We build on WordPress when it's the right tool — not by default. We build, optimize, and launch WordPress sites for GEO-optimized content structure.</p>"
+            }
+          ],
+          "columns": 3
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "What every development project includes",
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            "Clean semantic HTML structure that search engines and AI models can read accurately.",
+            "Core Web Vitals optimization — LCP, CLS, and INP — tested before launch, not after.",
+            "Mobile-first responsive build across all screen sizes and browsers.",
+            "GEO-ready content architecture: FAQ sections, structured headings, and schema markup included by default.",
+            "Developer handoff documentation so your team can manage the site independently."
+          ]
+        },
+        {
+          "type": "actions",
+          "items": [
+            {
+              "label": "Start a project",
+              "href": "/contact-us/#CForm"
+            },
+            {
+              "label": "See our work",
+              "href": "/case-studies/"
+            }
+          ]
+        }
+      ],
+      "intro": "<p>Regardless of platform, every site we build ships with the same technical foundation:</p>"
+    },
+    {
+      "eyebrow": "",
+      "title": "Who we build for",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Businesses in New York and Europe that need a website that works — not just looks good in a preview. Startups launching their first site. Established companies replacing underperforming platforms. Agencies that need a reliable development partner.</p>"
+        }
+      ]
+    }
+  ],
+  "faq": {
+    "eyebrow": "",
+    "title": "Website Development FAQ",
+    "items": [
+      {
+        "q": "Which website development platforms do you work with?",
+        "a": "<p>We develop websites in Framer, Webflow, and WordPress. We choose the platform based on your goals, content requirements, integrations, and how your team plans to manage the website.</p>"
+      },
+      {
+        "q": "How do you choose the right platform for a project?",
+        "a": "<p>Framer is often the best fit for high-performance marketing websites, portfolios, and startup launches. Webflow works well for scalable CMS websites and complex interactions, while WordPress is suitable for projects that require plugins, custom post types, WooCommerce, or an established content infrastructure.</p>"
+      },
+      {
+        "q": "What is included in every website development project?",
+        "a": "<p>Every development project includes clean semantic HTML, Core Web Vitals optimization, a mobile-first responsive build, GEO-ready content architecture, structured headings, schema markup, cross-browser testing, and developer handoff documentation.</p>"
+      },
+      {
+        "q": "Will my website be optimized for SEO and AI search?",
+        "a": "<p>Yes. We structure websites so that search engines and AI-powered platforms can understand the content accurately. This includes semantic HTML, clear heading structures, fast performance, FAQ sections, structured content, and relevant schema markup.</p>"
+      },
+      {
+        "q": "Do you build responsive websites?",
+        "a": "<p>Yes. Every website is developed using a mobile-first approach and tested across desktop, tablet, and mobile screen sizes, as well as modern web browsers.</p>"
+      },
+      {
+        "q": "Can my team manage the website after launch?",
+        "a": "<p>Yes. We configure the CMS around your content and provide handoff documentation so your team can update pages, publish content, and manage the website independently after launch.</p>"
+      },
+      {
+        "q": "Do you develop e-commerce websites?",
+        "a": "<p>Yes. For projects that require online selling, product management, and advanced e-commerce functionality, we can develop a WordPress website with WooCommerce when it is the right platform for the project.</p>"
+      },
+      {
+        "q": "Who do you provide website development services for?",
+        "a": "<p>We work with startups launching their first website, established companies replacing underperforming platforms, and agencies that need a reliable development partner. We serve businesses in New York, across the United States, and throughout Europe.</p>"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Let’s Collaborate",
+    "title": "Ready to build a website <span class=\"hl\">that works as hard as you do?</span>",
+    "text": "Tell us about your project. We'll review it and come back with a clear proposal — no vague estimates, no hard sell.",
+    "action": {
+      "label": "Start your project",
+      "href": "/contact-us/#CForm"
+    }
+  },
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Services",
+      "path": "/services/"
+    }
+  ]
+}

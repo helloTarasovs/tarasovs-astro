@@ -1,0 +1,272 @@
+{
+  "url": "/local-seo-manhattan-brooklyn/",
+  "hero": {
+    "title": "Local SEO That Puts Your Dispensary on the Map — Literally",
+    "lead": "<p>In NYC, customers find dispensaries through Google Maps, “near me” searches, and neighborhood queries — and with cannabis ads off the table, that local visibility is your storefront. We get licensed dispensaries in Manhattan and Brooklyn into the Map Pack, ranking for the searches that walk real customers through your door.</p>",
+    "actions": [
+      {
+        "label": "Get a Free Local Visibility Audit",
+        "href": "#CForm"
+      },
+      {
+        "label": "View Verdi Case Study",
+        "href": "/verdi-cannabis-dutchie-pro-case-study/"
+      }
+    ],
+    "crumb": "Local SEO for NYC",
+    "eyebrow": "Local SEO — Manhattan & Brooklyn",
+    "chips": [
+      "Google Map Pack",
+      "“Near Me” SEO",
+      "GBP Optimization",
+      "Neighborhood Ranking",
+      "Reviews & Photos",
+      "Local Schema",
+      "AI Local Search"
+    ]
+  },
+  "sections": [
+    {
+      "eyebrow": "",
+      "title": "When you can't run ads, the map is your storefront.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Most cannabis dispensaries can’t buy their way onto Google. That makes the Map Pack — the three local listings above the organic results — the single most valuable piece of real estate you can win. In dense markets like Manhattan and Brooklyn, ranking there for “dispensary near me” is the difference between a full counter and an empty one. Google ranks local results on proximity, relevance, and prominence. Most dispensaries leave all three under-optimized: incomplete Google Business Profiles, weak categories, stale photos, thin location pages, and inconsistent citations. We fix the signals that decide who shows up when a nearby customer is ready to buy.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "What we do for your local visibility",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Google Business Profile",
+              "html": "<p>Cannabis-correct categories, services, attributes, hours, and posts — optimized for Map Pack relevance and kept compliant so your listing doesn’t get suspended.</p>",
+              "meta": "GBP"
+            },
+            {
+              "title": "Map Pack Ranking",
+              "html": "<p>We strengthen the proximity, relevance, and prominence signals Google uses to pick its top three local results for high-intent “near me” searches.</p>",
+              "meta": "Map Pack"
+            },
+            {
+              "title": "Neighborhood Landing Pages",
+              "html": "<p>Dedicated, indexable pages for the neighborhoods you serve — Chelsea, SoHo, Williamsburg, Park Slope, Bushwick — capturing hyper-local demand competitors ignore.</p>",
+              "meta": "Neighborhoods"
+            },
+            {
+              "title": "Reviews &amp; Fresh Photos",
+              "html": "<p>Review generation and response plus a real, recurring photo cadence — now a measurable ranking signal under Google’s 2026 freshness rules.</p>",
+              "meta": "Reviews"
+            },
+            {
+              "title": "Local Citations &amp; NAP",
+              "html": "<p>Consistent name, address, and phone across the directories and cannabis platforms Google cross-checks — removing the inconsistencies that quietly suppress rankings.</p>",
+              "meta": "Citations"
+            },
+            {
+              "title": "Local Schema",
+              "html": "<p>LocalBusiness and Store schema structured the way search engines and AI models expect for licensed retailers, so your location data is machine-readable.</p>",
+              "meta": "Schema",
+              "img": {
+                "type": "img",
+                "src": "/wp-content/uploads/2026/07/Local-SEO-for-Dispensaries-in-Manhattan-Brooklyn.webp",
+                "alt": "Local SEO for licensed dispensaries in Manhattan & Brooklyn. Rank in the Google Map Pack and neighborhood “near me” searches — compliant GBP, free local audit.",
+                "width": "640",
+                "height": "336"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "The 2026 Google Business Profile update changed the game for dispensaries",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p><strong>Q&amp;A is gone.</strong> Google retired user-facing Q&amp;A; Gemini now auto-answers common questions from your services catalog, posts, photos, reviews, and indexed website content — so those signals matter more than ever. <strong>Stock and AI images are banned</strong> and now act as audit triggers that can suppress your listing. A new <strong>30-day photo-freshness rule</strong> replaced vague “post regularly” advice with a measurable cadence — “set it and forget it” profiles lose Map Pack position. For dispensaries this hits harder than for anyone else: with no paid ads to fall back on, a GBP scoring change that costs a normal retailer a few percent of visibility can cost a dispensary 30–40%. We keep your profile compliant, fresh, and scoring — before your competitors adjust.</p>"
+        },
+        {
+          "type": "actions",
+          "items": [
+            {
+              "label": "Explore our complete NYC dispensary SEO program",
+              "href": "/dispensary-seo-nyc/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Local ranking, proven in NYC",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Verdi Cannabis now holds page-1 positions for exactly the local searches that convert — “dispensary near me” and neighborhood queries like “park slope dispensary” — demand that used to go straight to competitors. This is local visibility we’ve actually built, with the Search Console data to prove it.</p>"
+        },
+        {
+          "type": "projects",
+          "items": [
+            "/project/verdi-cannabis/",
+            "/project/leaf-haus/"
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Local SEO the cannabis way — compliant by design.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>Cannabis local SEO has rules generalists don’t know — and breaking them gets your listing suppressed or suspended right when you need it most. Here’s what we get right:</p>"
+        },
+        {
+          "type": "checklist",
+          "items": [
+            "<strong>Compliance-safe GBP</strong> — cannabis-specific category, pricing, and promotion rules that keep your listing live, not suspended.",
+            "<strong>Real, fresh photos</strong> — genuine location imagery on a 30-day cadence, never stock or AI images that trigger 2026 suppression audits.",
+            "<strong>Dispensary-correct local schema</strong> — LocalBusiness / Store markup structured for licensed retailers and AI models.",
+            "<strong>Neighborhood-level pages</strong> — indexable local pages that win hyper-local queries instead of one generic “locations” page."
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "“Near me” is moving into AI. Be the name it says.",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>When someone asks ChatGPT, Gemini, or Perplexity for “a good dispensary near me,” the assistant names a few — not a page of links. Those picks are built from the same local signals Google uses: a complete profile, fresh photos, strong reviews, and crawlable location pages. The dispensaries winning the Map Pack today are the ones AI will recommend tomorrow, because they share a foundation. Optimize local now and you’re building AI local visibility at the same time.</p>"
+        },
+        {
+          "type": "actions",
+          "items": [
+            {
+              "label": "See GEO / AI Search Optimization",
+              "href": "/services/geo-ai-search-optimization/"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "html": "<p>Almost no NYC dispensary is optimized for AI local discovery yet. The neighborhoods you lock in now are the recommendations your competitors won’t be able to take back.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "How we grow your local visibility",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Local Visibility Audit",
+              "html": "<p>We benchmark your Map Pack rankings by neighborhood, audit your Google Business Profile against 2026 rules, check citation consistency, and map local competitors.</p>"
+            },
+            {
+              "title": "GBP &amp; Citation Cleanup",
+              "html": "<p>We optimize categories, services, attributes, and posts, fix NAP inconsistencies across directories, and set up a compliant, fresh photo and review cadence.</p>"
+            },
+            {
+              "title": "Neighborhood Pages &amp; Reviews",
+              "html": "<p>We build indexable neighborhood landing pages, add local schema and internal links, and put a review-generation system in place for the areas you serve.</p>"
+            },
+            {
+              "title": "Track &amp; Iterate",
+              "html": "<p>We monitor Map Pack positions, GBP insights, calls, and directions in Search Console and GBP, then keep refining by neighborhood as rankings move.</p>"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "html": "<p>For a deeper explanation of how local SEO, crawlable menus<br>and AI visibility work together, read our<a href=\"/dispensary-seo-2026/\">2026 dispensary SEO guide</a>.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Local SEO for NYC Dispensaries",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>“New York dispensary” is too broad to convert — real customers search their block. We target the neighborhoods you actually serve: Chelsea, SoHo, the Lower East Side, Midtown, Harlem and the Village in Manhattan; Williamsburg, Park Slope, Bushwick, Bed-Stuy, DUMBO and Downtown Brooklyn.</p><p>Rank for high-intent searches like “dispensary near me,”<br>“weed delivery Manhattan,” “cannabis dispensary Brooklyn,”<br>and neighborhood-specific searches. For dedicated Google Maps<br>and neighborhood optimization, explore our local SEO for NYC dispensaries<br>.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Get a Free Local Visibility Audit",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>We’ll check your Map Pack rankings by neighborhood, audit your Google Business Profile against Google’s 2026 rules, review citations and reviews, and show where the fastest local wins are — then send a prioritized plan.</p>"
+        },
+        {
+          "type": "form"
+        }
+      ],
+      "id": "form",
+      "tone": "surface"
+    }
+  ],
+  "faq": {
+    "eyebrow": "",
+    "title": "Local SEO FAQ",
+    "items": [
+      {
+        "q": "Can cannabis dispensaries even show up on Google Maps?",
+        "a": "<p>Yes. A Google Business Profile is the main way licensed dispensaries appear in Maps and the local pack. The rules are stricter than for other businesses, so it has to be optimized carefully — but done right, it's your highest-intent local channel.</p>"
+      },
+      {
+        "q": "What changed with the 2026 Google Business Profile update?",
+        "a": "<p>Google retired user-facing Q&amp;A (Gemini now auto-answers from your profile and website), banned stock and AI images as suppression triggers, and added a 30-day photo-freshness rule. For dispensaries with no paid-ads backstop, these changes affect local visibility much more than for typical retailers.</p>"
+      },
+      {
+        "q": "How do you rank in the Google Map Pack?",
+        "a": "<p>Google weighs proximity, relevance, and prominence. We optimize your profile completeness and categories, build local landing pages, generate reviews, keep photos fresh, and fix citation consistency — the signals that decide the top three local results.</p>"
+      },
+      {
+        "q": "Do I need separate pages for each neighborhood?",
+        "a": "<p>For a competitive market or multiple service areas, yes. Dedicated neighborhood pages capture searches like “park slope dispensary” or “Chelsea weed delivery” that a single generic locations page can't rank for.</p>"
+      },
+      {
+        "q": "Will optimizing my Google Business Profile risk a suspension?",
+        "a": "<p>Only if it's done without the cannabis-specific rules. We follow Google's requirements on categories, pricing, promotions, and imagery so your listing stays live — protecting it is part of the work, not an afterthought.</p>"
+      },
+      {
+        "q": "How fast does local SEO work for a dispensary?",
+        "a": "<p>Map Pack and Google Business Profile improvements often show within the first 30–60 days, since local signals update faster than broad organic rankings. Your free audit flags the quickest wins first.</p>"
+      },
+      {
+        "q": "How does local SEO connect to AI search?",
+        "a": "<p>AI assistants build local recommendations from the same signals as Google — a complete profile, reviews, fresh photos, and crawlable location pages. Strong local SEO is what makes your dispensary eligible to be the name an assistant recommends nearby.</p>"
+      }
+    ]
+  },
+  "cta": null,
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Services",
+      "path": "/services/"
+    },
+    {
+      "name": "Dispensary SEO",
+      "path": "/dispensary-seo-new-york/"
+    }
+  ],
+  "formSubject": "New audit request: Local SEO That Puts Your Dispensary on the Map — Literally"
+}

@@ -1,0 +1,301 @@
+{
+  "url": "/services/seo-services/",
+  "hero": {
+    "title": "SEO Services for Businesses in the US and Europe",
+    "lead": "<p>Search engine optimization is not a one-time task. It is a long-term investment in your website’s ability to attract the right audience, without paying for every click.</p><p>At Tarasovs Digital Agency, we build SEO strategies that combine technical precision, content structure, and authority signals — helping businesses in the United States and Europe rank higher on Google and get discovered across modern search platforms, including AI-powered tools like ChatGPT, Perplexity, and Google AI Overviews.</p><p>Every SEO engagement starts with understanding your business, your audience, and the competitive landscape — not with a generic checklist.</p>",
+    "actions": [
+      {
+        "label": "Start Your SEO Project",
+        "href": "/contact-us/#CForm"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "eyebrow": "",
+      "title": "What Our SEO Services Include",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Technical SEO <span class=\"hl\">Audit &amp; Optimization</span>",
+              "html": "<p>We analyze your site’s technical foundation and fix what holds it back — before building visibility on a shaky base.</p>",
+              "tags": [
+                "Crawl & Indexation",
+                "Core Web Vitals",
+                "Mobile Usability",
+                "Structured Data"
+              ]
+            },
+            {
+              "title": "Keyword Research <span class=\"hl\">Intent Mapping</span>",
+              "html": "<p>We identify the keywords your target audience actually uses — not just high-volume terms, but phrases that signal intent to hire, buy, or engage. We then map those keywords to specific pages and content opportunities across your site.</p>",
+              "tags": [
+                "Competitor Gap Analysis",
+                "Long-tail Keywords",
+                "Intent Classification"
+              ]
+            },
+            {
+              "title": "On-Page SEO Optimization",
+              "html": "<p>Every page on your website sends signals to search engines. We optimize those signals systematically — from headings and metadata to internal linking and content structure.</p>",
+              "tags": [
+                "Title & Meta Tags",
+                "Heading Hierarchy",
+                "Schema Markup"
+              ]
+            },
+            {
+              "title": "Content Strategy <span class=\"hl\">SEO Copywriting</span>",
+              "html": "<p>We develop a content plan aligned with your keyword strategy — and write or restructure the content itself.</p>",
+              "tags": [
+                "Service Pages",
+                "Blog Planning",
+                "Location Pages",
+                "FAQ for AI"
+              ]
+            },
+            {
+              "title": "Link Building <span class=\"hl\">Authority Development</span>",
+              "html": "<p>External links remain one of Google’s strongest ranking signals. We build high-quality backlinks through editorial outreach, digital PR, and strategic partnerships — not through shortcuts that risk penalties.</p>",
+              "tags": [
+                "Editorial Outreach",
+                "Digital PR",
+                "Local Citations"
+              ]
+            },
+            {
+              "title": "Local SEO <span class=\"hl\">US &amp; European Markets</span>",
+              "html": "<p>For businesses targeting clients in specific cities or regions, local SEO drives high-intent traffic from people actively searching in your area. We optimize for Google Maps, local search results, and geo-targeted content.</p>",
+              "tags": [
+                "Google Business Profile",
+                "NAP Consistency",
+                "Location Pages"
+              ]
+            },
+            {
+              "title": "SEO Reporting <span class=\"hl\">Analytics</span>",
+              "html": "<p>We provide clear, monthly reporting on rankings, traffic, and conversions — without inflated metrics or vague summaries. You always know what was done, what changed, and what comes next.</p>",
+              "tags": [
+                "Keyword Rankings",
+                "Organic Traffic",
+                "GA4 Integration"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "How We Work — The Process",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Discovery &amp; Audit",
+              "html": "<p>Full technical audit, keyword research, and competitor analysis. A clear picture of where your website stands and what is holding it back.</p>",
+              "meta": "Week 1 - 2"
+            },
+            {
+              "title": "Strategy &amp; Roadmap",
+              "html": "<p>We present a prioritized SEO roadmap — structured by impact and effort. You know exactly what we will work on and why.</p>",
+              "meta": "Week 2 – 3"
+            },
+            {
+              "title": "Implementation",
+              "html": "<p>Technical fixes, on-page optimizations, content improvements, and ongoing link building across the engagement.</p>",
+              "meta": "Month 1 – 3"
+            },
+            {
+              "title": "Monitor &amp; Iterate",
+              "html": "<p>We monitor rankings, analyze traffic, adjust the strategy based on data, and report progress every month.</p>",
+              "meta": "Week 3 – 4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Pricing &amp; Packages",
+      "blocks": [
+        {
+          "type": "pricing",
+          "plans": [
+            {
+              "name": "SEO Foundation",
+              "period": "per month",
+              "price": "$1,200",
+              "tag": "Billed Yearly",
+              "details": "For small businesses and startups building organic visibility from scratch.",
+              "features": [
+                "Technical SEO audit and implementation",
+                "On-page optimization (up to 10 pages)",
+                "Keyword research and mapping",
+                "Monthly reporting",
+                "Google Search Console &amp; GA4 setup"
+              ],
+              "action": {
+                "label": "Get Started",
+                "href": "/contact-us/#CForm"
+              }
+            },
+            {
+              "name": "SEO Growth",
+              "period": "per month",
+              "price": "$2,200",
+              "tag": "Billed Yearly",
+              "details": "For established businesses competing for high-value keywords.",
+              "features": [
+                "Everything in Foundation",
+                "2 SEO articles or page rewrites / month",
+                "Link building — up to 6 backlinks / month",
+                "Schema markup implementation",
+                "Local SEO (1 target market)",
+                "Bi-weekly strategy calls"
+              ],
+              "action": {
+                "label": "Get Started",
+                "href": "/contact-us/#CForm"
+              }
+            },
+            {
+              "name": "SEO Authority",
+              "period": "per month",
+              "price": "$3,800",
+              "tag": "Billed Yearly",
+              "details": "For companies in competitive industries or targeting multiple markets.",
+              "features": [
+                "Everything in Growth",
+                "4+ content pieces per month",
+                "Aggressive link building — 10+ / month",
+                "Multi-location or multi-market SEO",
+                "AI search optimization (GEO)",
+                "Priority support &amp; weekly updates"
+              ],
+              "action": {
+                "label": "Get Started",
+                "href": "/contact-us/#CForm"
+              }
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "eyebrow": "Let’s Collaborate",
+          "title": "Custom Engagement",
+          "text": "If your needs do not fit a standard package — a one-time audit, a content-only retainer, or a pre-launch SEO setup — we can structure a custom scope.",
+          "action": {
+            "label": "Contact us to discuss your project",
+            "href": "/contact-us/#CForm"
+          }
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "What a Technical SEO Audit Covers",
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            "Crawl errors and indexation issues",
+            "Page speed and Core Web Vitals (LCP, CLS, INP)",
+            "Mobile usability and responsive layout",
+            "Duplicate content and canonical tag errors",
+            "Broken links and redirect chains",
+            "XML sitemap and robots.txt configuration",
+            "HTTPS, security signals, and structured data"
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Why Tarasovs for SEO",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "SEO + Web Development Combined",
+              "html": "<p>Most agencies hand you a list of fixes. We handle both — so recommendations actually get done, and done correctly.</p>"
+            },
+            {
+              "title": "Google and AI Search Optimized",
+              "html": "<p>We structure your content to rank on Google and be cited by ChatGPT, Perplexity, and Google AI Overviews — a growing source of discovery for service businesses.</p>"
+            },
+            {
+              "title": "US &amp; European Market Expertise",
+              "html": "<p>English-language SEO for the US and UK, and multilingual / regional SEO for European businesses.</p>"
+            },
+            {
+              "title": "Founder-Led Every Engagement",
+              "html": "<p>Yurii Tarasov personally leads every SEO project. You work directly with the decision-maker — not a rotating account manager.</p>"
+            },
+            {
+              "title": "Reporting That Actually Matters",
+              "html": "<p>No vanity metrics. Clear data on traffic, rankings, and business impact — every month.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faq": {
+    "eyebrow": "",
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "How long does SEO take to show results?",
+        "a": "<p>Most websites start seeing measurable ranking improvements within 3 to 6 months. Competitive niches or websites with significant technical issues may take longer. SEO compounds over time — the earlier you start, the stronger your position becomes.</p>"
+      },
+      {
+        "q": "Do you work with businesses outside New York?",
+        "a": "<p>Yes. We serve clients across the United States, United Kingdom, and Europe. Our work is fully remote, and we have experience targeting both US and European search markets.</p>"
+      },
+      {
+        "q": "What makes your SEO different from other agencies?",
+        "a": "<p>We do not separate SEO from web development. When we identify a technical issue, we fix it. When a page needs better content, we write it. Most agencies stop at recommendations — we execute.</p>"
+      },
+      {
+        "q": "Do you offer one-time audits?",
+        "a": "<p>Yes. If you need a comprehensive SEO audit without an ongoing retainer, we offer standalone technical and content audits. Contact us to discuss the scope.</p>"
+      },
+      {
+        "q": "Can SEO help me appear in ChatGPT or Google AI answers?",
+        "a": "<p>Yes — this is what we call GEO (Generative Engine Optimization). It requires structured content, strong authority signals, and FAQ schema. We integrate GEO into our SEO process across all packages.</p>"
+      },
+      {
+        "q": "How do you report progress?",
+        "a": "<p>Every month you receive a report covering keyword rankings, organic traffic, technical issue status, backlink growth, and the plan for the next 30 days. Strategy calls are held at a frequency matched to your package.</p>"
+      },
+      {
+        "q": "What do you need from us to get started?",
+        "a": "<p>Access to your Google Search Console, Google Analytics 4, and a call to align on your business goals and target audience. Everything else we handle.</p>"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Let’s Collaborate",
+    "title": "Ready to Build Sustainable <span class=\"hl\">Organic Growth?</span>",
+    "text": "Tell us about your business and your current SEO challenges. We will review your website and come back with an honest assessment and a clear proposal — no vague promises, no hard sell.",
+    "action": {
+      "label": "Start Your SEO Project",
+      "href": "/contact-us/#CForm"
+    }
+  },
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Services",
+      "path": "/services/"
+    }
+  ]
+}

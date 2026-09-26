@@ -1,0 +1,387 @@
+{
+  "url": "/services/ui-ux-design/",
+  "hero": {
+    "title": "UI/UX Design Services for Web — Figma to Framer",
+    "lead": "<p>Most studios hand over a Figma file and disappear. We design in Figma and build the site ourselves — in Framer, Webflow, or WordPress. <br>What you approve is what ships.</p>",
+    "actions": [
+      {
+        "label": "Start a project",
+        "href": "/contact-us/#CForm"
+      },
+      {
+        "label": "View our work",
+        "href": "/case-studies/"
+      }
+    ],
+    "crumb": "UI/UX Design"
+  },
+  "sections": [
+    {
+      "eyebrow": "",
+      "title": "At a glance",
+      "titleHidden": true,
+      "blocks": [
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "15+",
+              "label": "years designing and building for the web"
+            },
+            {
+              "value": "79+",
+              "label": "projects delivered across the US and Europe"
+            },
+            {
+              "value": "12",
+              "label": "industries served — from legal to cannabis retail"
+            },
+            {
+              "value": "100%",
+              "label": "of our designs are built by the same team"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "What UI/UX design actually decides",
+      "blocks": [
+        {
+          "type": "prose",
+          "html": "<p>UX is structure and logic: how someone moves through your site, what they understand in the first ten seconds, and whether they find what they came for. UI is the visual layer on top — typography, colour, spacing, states, and the components that hold it all together.</p><p>Split across two vendors, these two layers drift apart. The UX researcher hands over a flow, the visual designer reinterprets it, the developer simplifies both into something buildable. Every handoff loses intent, and the client pays twice: once for the design, once for the fixes.</p><p>We keep research, structure, visual design, and build in one place. Not because it is cheaper, but because it is the only way the thing you approved in Figma is the thing that goes live.</p>"
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Design-only studio vs design and build in one place",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Comparison of a design-only studio and Tarasovs across eight aspects of a web design project",
+          "head": [
+            "Aspect",
+            "Design-only studio",
+            "Tarasovs"
+          ],
+          "rows": [
+            [
+              "What you get",
+              "A Figma file",
+              "A live, working website"
+            ],
+            [
+              "Who builds it",
+              "Your developer — or one you still need to find",
+              "We do"
+            ],
+            [
+              "Animations",
+              "Described in a doc, often dropped in build",
+              "Designed to be built, then built"
+            ],
+            [
+              "Responsive",
+              "Desktop and mobile frames",
+              "Every breakpoint, tested on real devices"
+            ],
+            [
+              "Design system",
+              "Components in Figma",
+              "Components in Figma and in the CMS"
+            ],
+            [
+              "What breaks",
+              "Intent lost between design and code",
+              "Nothing to lose — same team"
+            ],
+            [
+              "Timeline",
+              "Design, then find a developer, then build",
+              "Design and build overlap"
+            ],
+            [
+              "Search &amp; AI visibility",
+              "Not their scope",
+              "Structure and schema planned during design"
+            ]
+          ],
+          "highlight": 2
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "What's included in a UI/UX project",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Discovery &amp; UX Research",
+              "html": "<p>We don’t open a design tool until we understand who is buying, what they compare you against, and what has to happen on the page for the business to work. That means competitor teardowns, a review of your analytics if you have them, and a direct conversation about who actually says yes to your offer. Skipping this step is why so many redesigns look better and convert exactly the same.</p>"
+            },
+            {
+              "title": "Information Architecture",
+              "html": "<p>Page structure, navigation logic, and the order in which information appears. This is where most conversion problems are solved or created, long before anything is styled. We map what each page has to answer, in what sequence, and what the next step is from every point on the site.</p>"
+            },
+            {
+              "title": "Wireframes &amp; User Flows",
+              "html": "<p>Low-fidelity layouts that settle structure before visual decisions get emotional. Moving a block in a wireframe costs minutes; moving it in an approved design costs a week. You see the skeleton of every key page and the path a visitor takes from landing to enquiry.</p>"
+            },
+            {
+              "title": "UI Design in Figma",
+              "html": "<p>The visual layer: typography scale, colour system, spacing rules, iconography, and imagery direction. Every component gets its states — default, hover, active, disabled, error, empty. Designs that only show the happy path are the ones that fall apart in build.</p>"
+            },
+            {
+              "title": "Design System &amp; Components",
+              "html": "<p>Reusable blocks that keep the site consistent and make future updates cheap. One set of components powers every page, so adding a service page next year takes hours instead of a new design project. You own the Figma library, organised and documented.</p>"
+            },
+            {
+              "title": "Prototyping &amp; Interaction Design",
+              "html": "<p>Motion designed by someone who will also build it. Scroll behaviour, transitions, hover states, and micro-interactions are specified as things that can actually ship, not as a mood reel. This is the single biggest source of disappointment in design-only engagements.</p>"
+            },
+            {
+              "title": "Responsive &amp; Accessibility Review",
+              "html": "<p>Mobile-first layouts across every breakpoint, checked on real devices rather than a browser resize. Colour contrast, touch target sizes, keyboard navigation, and heading hierarchy reviewed against WCAG 2.1 AA — which is also, increasingly, what AI agents read when they parse your page.</p>"
+            },
+            {
+              "title": "Build-Ready Handoff",
+              "html": "<p>Whether we build the site or your team does, you get an organised Figma file, a documented design system, defined component states, and specs for interactions and breakpoints. Nobody has to ask the designer what a screen is supposed to do.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "How a UI/UX project runs",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Discovery &amp; Structure",
+              "html": "<p>Brief, competitor review, information architecture, sitemap. We agree what each page has to do before anything is drawn.</p>",
+              "meta": "Week 1"
+            },
+            {
+              "title": "Wireframes &amp; Flows",
+              "html": "<p>Low-fidelity layouts for key pages and the flows between them. Structure gets approved here, not three weeks later.</p>",
+              "meta": "Week 1 – 2"
+            },
+            {
+              "title": "UI Design &amp; System",
+              "html": "<p>Visual design, component library, states, prototype. Weekly reviews — no month-long silence followed by a big reveal.</p>",
+              "meta": "Week 2 – 4"
+            },
+            {
+              "title": "Build",
+              "html": "<p>We build it in Framer, Webflow, or WordPress. Or hand off a documented file if your team builds.</p>",
+              "meta": "Week 4+"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "Who this is for",
+      "title": "Who this is right for",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "Startups and founders launching a first real site",
+              "html": "<p>You have a product and a rough brand direction, and you need a site that looks like a company people pay. Design and build together means one timeline and one point of contact.</p>"
+            },
+            {
+              "title": "Agencies and studios needing a design partner",
+              "html": "<p>You own the client relationship and the strategy, and you need someone who designs well and can also ship it. We work white-label.</p>"
+            },
+            {
+              "title": "Service businesses whose site is the first sales conversation",
+              "html": "<p>Law firms, consultancies, medical practices, creative studios. Where trust is decided before anyone picks up the phone, structure and clarity matter more than decoration.</p>"
+            },
+            {
+              "title": "Businesses redesigning a site that looks fine and converts badly",
+              "html": "<p>Often the problem is not the visuals. It is the order of information, the clarity of the offer, and what the page asks the visitor to do next.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "Why choose <span class=\"hl\">Tarasovs for UI/UX</span>",
+      "blocks": [
+        {
+          "type": "cards",
+          "items": [
+            {
+              "title": "We build what we design",
+              "html": "<p>Every design we deliver, we can also ship. That constraint makes the design better: nothing gets specified that cannot be built, and nothing gets quietly simplified in development because the intent was unclear.</p>"
+            },
+            {
+              "title": "One person owns the project",
+              "html": "<p>Yurii Tarasov, a recognized Framer Expert with 15+ years of experience, leads every project personally. No handoff to a junior team after the sales call, and no telephone game between account manager, designer, and developer.</p>"
+            },
+            {
+              "title": "Design decisions are traceable to reasons",
+              "html": "<p>Every structural and visual choice comes back to a user need, a competitor gap, or a business goal. When you ask why a section sits where it does, there is an answer that is not “it looked better there”.</p>"
+            },
+            {
+              "title": "Search and AI visibility planned during design",
+              "html": "<p>Heading hierarchy, content structure, and schema are decided while the pages are being designed, not retrofitted afterwards. Retrofitting is how sites end up with forty H6 tags, no real heading structure, and content that AI models cannot parse.</p>"
+            },
+            {
+              "title": "You own everything",
+              "html": "<p>An organised Figma file, a documented design system, and a CMS your team can actually update. No dependency on us after launch, and no hostage situation over your own assets.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eyebrow": "",
+      "title": "UI/UX design packages",
+      "blocks": [
+        {
+          "type": "pricing",
+          "plans": [
+            {
+              "name": "Landing Page Design",
+              "period": "per project",
+              "price": "$900",
+              "tag": "",
+              "details": "Best for: a single high-converting page or campaign",
+              "features": [
+                "Discovery call and competitor review",
+                "Information architecture for one page",
+                "Wireframe and approved structure",
+                "Full UI design in Figma",
+                "Mobile, tablet and desktop layouts",
+                "Component states and interaction specs",
+                "2 rounds of revisions",
+                "Typical timeline: 2 weeks"
+              ],
+              "action": {
+                "label": "Get a quote",
+                "href": "/contact-us/#CForm"
+              }
+            },
+            {
+              "name": "Website Design",
+              "period": "per project",
+              "price": "$1750",
+              "tag": "",
+              "details": "Best for: a full marketing site of 5–10 pages",
+              "features": [
+                "Everything in Landing Page Design",
+                "UX research and user flows",
+                "Sitemap and full information architecture",
+                "Wireframes for all key page types",
+                "Reusable component library",
+                "Interactive prototype",
+                "Accessibility review (WCAG 2.1 AA)",
+                "SEO structure — headings, hierarchy, metadata",
+                "3 rounds of revisions",
+                "Typical timeline: 4–6 weeks"
+              ],
+              "action": {
+                "label": "Get a quote",
+                "href": "/contact-us/#CForm"
+              }
+            },
+            {
+              "name": "Design & Build",
+              "period": "per project",
+              "price": "$2500",
+              "tag": "",
+              "details": "Best for: design and development in one engagement",
+              "features": [
+                "Everything in Website Design",
+                "Full build in Framer, Webflow or WordPress",
+                "CMS setup your team can manage",
+                "Responsive testing on real devices",
+                "Core Web Vitals optimization",
+                "Schema markup implementation",
+                "Analytics and Search Console setup",
+                "30 days post-launch support",
+                "Documentation and handover session",
+                "Typical timeline: 6–10 weeks"
+              ],
+              "action": {
+                "label": "Get a quote",
+                "href": "/contact-us/#CForm"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faq": {
+    "eyebrow": "",
+    "title": "Frequently asked questions about UI/UX design",
+    "items": [
+      {
+        "q": "What's the difference between UI and UX design?",
+        "a": "<p>UX is the structure and logic — how someone moves through your site and whether they find what they came for. UI is the visual layer: typography, colour, spacing, and components. We do both, because splitting them across two vendors is where most projects lose their original intent.</p>"
+      },
+      {
+        "q": "Do you only design, or do you build the site too?",
+        "a": "<p>Both. Every project we design, we can also build — in Framer, Webflow, or WordPress. You get one team from wireframe to live site, and nothing is lost in handoff.</p>"
+      },
+      {
+        "q": "Do you deliver the Figma files?",
+        "a": "<p>Yes. You own the Figma file with organised components and a documented design system, whether or not we build the site.</p>"
+      },
+      {
+        "q": "Can you work from our existing brand guidelines?",
+        "a": "<p>Yes. If you have a brand system, we design within it. If you don't, establishing the visual direction is part of the project.</p>"
+      },
+      {
+        "q": "How long does a UI/UX project take?",
+        "a": "<p>A landing page takes around 2 weeks. A full marketing site typically takes 4 to 6 weeks from discovery to design approval, with build running immediately after or alongside.</p>"
+      },
+      {
+        "q": "Can you redesign an existing site without starting over?",
+        "a": "<p>Yes. We audit what's working, keep what converts, and rebuild what doesn't. A full redesign is not always the right answer, and we'll say so if it isn't.</p>"
+      },
+      {
+        "q": "Do you design mobile-first?",
+        "a": "<p>Yes. Most traffic arrives on mobile, and layouts designed for desktop first tend to lose their structure when they're squeezed down.</p>"
+      },
+      {
+        "q": "Do you work with clients outside Europe?",
+        "a": "<p>Yes. We work remotely with clients across the United States, United Kingdom, and Europe, with support hours Monday to Friday, 6 am to 8 pm EST.</p>"
+      },
+      {
+        "q": "What do you need from us to start?",
+        "a": "<p>A short brief on what you're building and who it's for, any existing brand assets, and access to analytics if the site already exists. We'll take it from there.</p>"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Let’s Collaborate",
+    "title": "Ready to design <span class=\"hl\">something that actually ships?</span>",
+    "text": "Tell us what you're building. We'll come back with a clear scope, timeline and price — no vague estimates, no hard sell.",
+    "action": {
+      "label": "Start a project",
+      "href": "/contact-us/#CForm"
+    }
+  },
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Services",
+      "path": "/services/"
+    }
+  ]
+}
