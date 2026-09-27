@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 export const CATEGORY_LABELS: Record<string, string> = {
   cannabis: 'Cannabis',
   framer: 'Framer',
+  webflow: 'Webflow',
   'seo-and-ai-visibility': 'SEO and AI Visibility',
   wordpress: 'WordPress',
 };
