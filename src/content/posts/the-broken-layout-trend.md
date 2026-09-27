@@ -5,6 +5,7 @@ pubDate: "2020-04-06T21:31:15Z"
 updatedDate: "2026-08-21T17:46:43Z"
 excerpt: "Quick Answer Broken layout web design is a controlled use of asymmetry,…"
 categories: ["insights"]
+tags: ["web-design","ui-ux-design"]
 seo:
   title: "The BROKEN Layout Trend - Tarasovs Digital Agency"
   canonical: "/the-broken-layout-trend/"

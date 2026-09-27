@@ -5,6 +5,7 @@ pubDate: "2026-08-16T19:51:25Z"
 updatedDate: "2026-08-16T20:55:21Z"
 excerpt: "Quick Answer No. Licensed cannabis dispensaries cannot advertise on Google Ads, and…"
 categories: ["insights"]
+tags: ["dispensary-marketing","cannabis"]
 cover:
   src: "/wp-content/uploads/2026/08/cannabis-advertising-compliance-new-york.webp"
   width: 1672

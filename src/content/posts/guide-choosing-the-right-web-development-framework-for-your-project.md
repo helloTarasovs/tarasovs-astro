@@ -5,6 +5,7 @@ pubDate: "2024-03-26T13:53:35Z"
 updatedDate: "2026-08-21T17:10:31Z"
 excerpt: "Selecting the right web development framework is crucial for the success of…"
 categories: ["insights"]
+tags: ["web-development"]
 cover:
   src: "/wp-content/uploads/2024/03/pexels-christina-morillo-1181467.jpg"
   width: 1920

@@ -5,6 +5,7 @@ pubDate: "2024-04-03T20:45:13Z"
 updatedDate: "2026-06-06T13:42:50Z"
 excerpt: "Wix has been a dominant force in the website building industry, offering…"
 categories: ["insights"]
+tags: ["website-builders","wix"]
 cover:
   src: "/wp-content/uploads/2024/04/wix-adi-wrapper.jpg"
   alt: "Wix ADI review"

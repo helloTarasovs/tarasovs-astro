@@ -1,5 +1,6 @@
 ---
 // Blog index list + pagination, shared by /category/insights/ and /category/insights/page/N/
+import { postTags } from '../lib/posts';
 interface Props {
   posts: any[];
   currentPage: number;
@@ -19,6 +20,9 @@ const pageUrl = (n: number) => (n === 1 ? '/category/insights/' : `/category/ins
       </a>
       <time datetime={p.data.pubDate.toISOString()}>{p.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</time>
       {p.data.excerpt && <p>{p.data.excerpt}</p>}
+      {postTags(p.data).length > 0 && (
+        <ul class="tags" aria-label="Tags">{postTags(p.data).map((t) => <li>{t}</li>)}</ul>
+      )}
     </li>
   ))}
 </ul>
@@ -36,10 +40,12 @@ const pageUrl = (n: number) => (n === 1 ? '/category/insights/' : `/category/ins
   .post-card { display: flex; flex-direction: column; gap: var(--space-2); }
   .post-card a { color: var(--color-heading); text-decoration: none; }
   .post-card a:hover h2 { color: var(--color-link); }
-  .post-card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--radius-md); background: var(--color-surface-2); }
+  .post-card img { width: 100%; aspect-ratio: 4 / 3; /* 20% taller than the earlier 16:10 */ object-fit: cover; border-radius: var(--radius-md); background: var(--color-surface-2); }
   .post-card h2 { margin-top: var(--space-4); font-size: var(--text-h4); transition: color var(--dur) var(--ease); }
   .post-card time { color: var(--color-text-muted); font-size: var(--text-xs); }
   .post-card p { color: var(--color-text-muted); font-size: var(--text-sm); }
+  .tags { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-1); padding: 0; list-style: none; }
+  .tags li { padding: 0.15rem 0.6rem; border-radius: var(--radius-pill); background: var(--color-surface-2); color: var(--color-text); font-size: var(--text-xs); }
   .pagination { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-8); padding-top: var(--space-5); border-top: 1px solid var(--color-border); }
   .pagination a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
   .pagination span { color: var(--color-text-muted); font-size: var(--text-sm); }
