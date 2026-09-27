@@ -18,6 +18,9 @@ const title = d.seo?.title ?? `${d.title} - Tarasovs Digital Agency`;
 const image = d.seo?.ogImage ?? d.cover?.src;
 // Most project bodies are empty; the case study lives in summary / task / details / gallery.
 const hasBody = !!project.body?.trim();
+// Defaults guard against a stale content cache (e.g. a dev server started before the schema change)
+const details = d.details ?? [];
+const gallery = d.gallery ?? [];
 
 const jsonld = [
   ...withFallbackArticle(d.jsonld, articleSchema({ path, title: d.title, description: d.seo?.description, image, published: d.pubDate, modified: d.updatedDate })),
@@ -48,13 +51,13 @@ const jsonld = [
       </figure>
     )}
 
-    {(d.summary || hasBody || d.task || d.details.length > 0) && (
+    {(d.summary || hasBody || d.task || details.length > 0) && (
       <div class="project-info container">
         <div class="project-text">
           {d.summary && <div class="summary prose" set:html={d.summary} />}
           {hasBody && <div class="post-body prose"><Content /></div>}
         </div>
-        {(d.task || d.details.length > 0) && (
+        {(d.task || details.length > 0) && (
           <aside class="project-facts" aria-label="Project details">
             {d.task && (
               <div class="task">
@@ -62,9 +65,9 @@ const jsonld = [
                 <p set:html={d.task} />
               </div>
             )}
-            {d.details.length > 0 && (
+            {details.length > 0 && (
               <dl class="details">
-                {d.details.map((x) => <div><dt>{x.label}</dt><dd set:html={x.value} /></div>)}
+                {details.map((x) => <div><dt>{x.label}</dt><dd set:html={x.value} /></div>)}
               </dl>
             )}
           </aside>
@@ -72,9 +75,9 @@ const jsonld = [
       </div>
     )}
 
-    {d.gallery.length > 0 && (
+    {gallery.length > 0 && (
       <section class="gallery container" aria-label="Project screenshots">
-        {d.gallery.map((g) => (
+        {gallery.map((g) => (
           <figure class="reveal">
             <img src={g.src} alt={g.alt} width={g.width} height={g.height} loading="lazy" decoding="async" />
           </figure>
