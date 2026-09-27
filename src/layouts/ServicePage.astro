@@ -44,19 +44,21 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
       </div>
     </header>
 
-    {data.sections.map((s) => {
+    {data.sections.map((s, i) => {
+      // First section after the hero can sit on the first screen: never animated
+      const reveal = i > 0;
       const id = s.id ?? (s.title ? slugify(s.title) : undefined);
       return (
         <section class:list={['section', s.tone && `tone-${s.tone}`]} id={id} aria-labelledby={s.title ? `${id}-title` : undefined}>
           <div class="container">
             {(s.eyebrow || s.title || s.intro) && (
-              <div class="section-head">
+              <div class:list={['section-head', { reveal }]}>
                 {s.eyebrow && <p class="eyebrow">{s.eyebrow}</p>}
                 {s.title && <h2 id={`${id}-title`} class:list={{ 'visually-hidden': s.titleHidden }} set:html={s.title} />}
                 {s.intro && <div class="section-intro" set:html={s.intro} />}
               </div>
             )}
-            <Blocks blocks={s.blocks} formSubject={data.formSubject} />
+            <Blocks blocks={s.blocks} formSubject={data.formSubject} reveal={reveal} />
           </div>
         </section>
       );
@@ -65,11 +67,11 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
     {data.faq && data.faq.items.length > 0 && (
       <section class="section" id="faq" aria-labelledby="faq-title">
         <div class="container"><div class="faq-wrap">
-          <div class="section-head">
+          <div class="section-head reveal">
             {data.faq.eyebrow && <p class="eyebrow">{data.faq.eyebrow}</p>}
             <h2 id="faq-title" set:html={data.faq.title} />
           </div>
-          <Faq items={data.faq.items} />
+          <Faq items={data.faq.items} reveal />
           {data.faq.note && <p class="faq-note" set:html={data.faq.note} />}
         </div></div>
       </section>
@@ -78,7 +80,7 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
     {data.cta && (
       <section class="section" aria-labelledby="cta-title">
         <div class="container">
-          <div class="cta">
+          <div class="cta reveal">
             {data.cta.eyebrow && <p class="eyebrow">{data.cta.eyebrow}</p>}
             <h2 id="cta-title" set:html={data.cta.title} />
             {data.cta.text && <p class="cta-text">{data.cta.text}</p>}

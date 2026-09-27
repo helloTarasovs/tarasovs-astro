@@ -70,7 +70,7 @@ const reasons = [
     <section class="container" aria-label="Tarasovs in numbers">
       <ul class="stats">
         {stats.map((s) => (
-          <li>
+          <li class="reveal">
             <span class="stat-value">{s.value}</span>
             <span class="stat-label">{s.label} <span class="hl">{s.hl}</span></span>
           </li>
@@ -78,7 +78,7 @@ const reasons = [
       </ul>
     </section>
 
-    <section class="section container founder" aria-labelledby="founder">
+    <section class="section container founder reveal" aria-labelledby="founder">
       <div class="founder-photo">
         <img src="/wp-content/uploads/2026/07/tarasovs-portfolio-400x400-1.webp" alt="Yurii Tarasov Founder & Web Designer" width="400" height="400" loading="lazy" decoding="async" />
       </div>
@@ -98,7 +98,7 @@ const reasons = [
       <h2 id="beliefs">What we believe</h2>
       <div class="cards cards--3">
         {beliefs.map((b) => (
-          <article class="card">
+          <article class="card reveal">
             <h3>{b.title}</h3>
             <p>{b.text}</p>
           </article>
@@ -117,7 +117,7 @@ const reasons = [
       </div>
       <div class="cards cards--3">
         {services.map((s) => (
-          <article class="card">
+          <article class="card reveal">
             <h3>{s.title}</h3>
             <p>{s.text}</p>
           </article>
@@ -125,7 +125,7 @@ const reasons = [
       </div>
       <picture>
         <source type="image/webp" srcset="/wp-content/uploads/2026/05/copilot_graph-768x432.webp 768w, /wp-content/uploads/2026/05/copilot_graph.webp 1672w" sizes="(min-width: 1400px) 1344px, calc(100vw - 2rem)" />
-        <img class="graph" src="/wp-content/uploads/2026/05/copilot_graph.png" alt="Built for Google and AI Search" width="1672" height="941" loading="lazy" decoding="async" />
+        <img class="graph reveal" src="/wp-content/uploads/2026/05/copilot_graph.png" alt="Built for Google and AI Search" width="1672" height="941" loading="lazy" decoding="async" />
       </picture>
     </section>
 
@@ -136,7 +136,7 @@ const reasons = [
       </div>
       <div class="cards cards--4">
         {clients.map((c) => (
-          <article class="card">
+          <article class="card reveal">
             <h3>{c.title} <span class="hl">{c.hl}</span></h3>
             <p>{c.text}</p>
           </article>
@@ -148,7 +148,7 @@ const reasons = [
       <h2 id="why">Why clients choose us — and stay</h2>
       <div class="cards cards--2">
         {reasons.map((r) => (
-          <article class="card">
+          <article class="card reveal">
             <h3>{r.title}</h3>
             <p>{r.text}</p>
           </article>
@@ -163,7 +163,7 @@ const reasons = [
         <h2 id="faq">Questions we get a lot.</h2>
         <div class="faq">
           {faqItems.map((f) => (
-            <details>
+            <details class="reveal">
               <summary><h3>{f.q}</h3></summary>
               <p set:html={linkEmail(f.a)} />
             </details>
@@ -175,7 +175,7 @@ const reasons = [
     )}
 
     <section class="section container" aria-labelledby="cta">
-      <div class="cta">
+      <div class="cta reveal">
         <p class="eyebrow">Let’s Collaborate</p>
         <h2 id="cta">Ready to <span class="hl">work together?</span></h2>
         <p class="cta-text">Whether you need a new website, stronger search rankings, or AI search visibility — or all three — we’d like to hear about your project.</p>

@@ -131,13 +131,13 @@ const stats = [
   </section>
 
   <section class="section container" aria-labelledby="studio-title">
-    <div class="head">
+    <div class="head reveal">
       <h2 id="studio-title">A Europe-Based Digital Studio for Websites, SEO and AI Search</h2>
       <p class="intro">Tarasovs Digital Agency helps businesses in the US and Europe create modern websites that look premium, communicate clearly, convert visitors, and support long-term visibility in Google and AI-powered search.</p>
     </div>
     <ul class="features">
       {features.map((f) => (
-        <li>
+        <li class="reveal">
           <span class="feature-icon" aria-hidden="true">
             {f.icon === 'framer'
               ? <svg width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M4 0h16v8h-8zM4 8h8l8 8H4zM4 16h8v8z" /></svg>
@@ -150,7 +150,7 @@ const stats = [
   </section>
 
   <section class="section container" aria-labelledby="build-title">
-    <div class="head">
+    <div class="head reveal">
       <h2 id="build-title">What We Help You Build</h2>
       <p class="intro">A website should do more than look good. It should explain your offer, build trust, guide visitors, support SEO, and help your brand become easier to discover across modern search platforms.</p>
     </div>
@@ -160,7 +160,7 @@ const stats = [
         <div class:list={['build-row', { reverse: row === 1 }]}>
           <div class="build-cards">
             {pair.map((c) => (
-              <article class="build-card">
+              <article class="build-card reveal">
                 <p class="build-meta">{c.meta}</p>
                 <h3 set:html={c.title} />
                 <div class="muted" set:html={c.html} />
@@ -168,23 +168,23 @@ const stats = [
               </article>
             ))}
           </div>
-          <img class="build-img" src={img.src} alt={img.alt} width={img.width} height={img.height} loading="lazy" decoding="async" />
+          <img class="build-img reveal" src={img.src} alt={img.alt} width={img.width} height={img.height} loading="lazy" decoding="async" />
         </div>
       );
     })}
   </section>
 
   <section class="section container" aria-labelledby="future-title">
-    <div class="head">
+    <div class="head reveal">
       <h2 id="future-title">Prepare Your Website for the Future of Search</h2>
       <p class="intro">Traditional SEO is still important, but it is no longer the only way people discover businesses online. More users now rely on AI-powered platforms to compare services, ask for recommendations, and make decisions faster. That means your website needs clear content, structured information, strong trust signals, helpful service pages, FAQ sections, schema markup, and a logical content hierarchy. Our AI search optimization approach helps your website become easier for search engines and AI platforms to understand, summarize, and reference.</p>
     </div>
     <div class="future">
-      <div class="panel">
+      <div class="panel reveal">
         <h3>What We Improve</h3>
         <Checklist items={improve} />
       </div>
-      <div class="panel">
+      <div class="panel reveal">
         <h3>Optimized for fast loading.</h3>
         <p class="muted">High-performance Framer or Webflow architecture optimized for speed and search engine visibility.</p>
         {SHOW_PAGESPEED_CLAIM && (
@@ -195,7 +195,7 @@ const stats = [
         )}
         <a class="button" href="/services/geo-ai-search-optimization/">Make Your Website AI-Ready</a>
       </div>
-      <div class="panel">
+      <div class="panel reveal">
         <h3>SEO Foundation for Long-Term Growth</h3>
         <p class="muted">We strengthen your website’s SEO foundation by improving its structure, content, technical setup, internal linking, schema markup, and performance — helping search engines better understand your business and support long-term organic growth.</p>
         <ul class="assistants">
@@ -211,7 +211,7 @@ const stats = [
     <h2 id="reviews-title" class="visually-hidden">What clients say</h2>
     <ul class="testimonials">
       {testimonials.map((t) => (
-        <li>
+        <li class="reveal">
           <figure>
             <p class="t-tag"><span>{t.year}</span> {t.tag}</p>
             <blockquote>{t.quote.map((q) => <p>{q}</p>)}</blockquote>
@@ -223,19 +223,19 @@ const stats = [
   </section>
 
   <section class="section container" aria-labelledby="why-title">
-    <div class="head">
+    <div class="head reveal">
       <h2 id="why-title">Why Businesses Choose <span class="hl">Tarasovs Digital Agency</span></h2>
       <p class="intro">We do not build websites as isolated design projects. We build digital assets that support your brand, visibility, and business growth. Our work combines creative design, technical development, SEO thinking, and a practical understanding of how users search for services today.</p>
     </div>
-    <Cards items={why} columns={3} />
+    <Cards items={why} columns={3} reveal />
     <picture>
       <source type="image/webp" srcset={`${U}/2026/05/copilot_graph-768x432.webp 768w, ${U}/2026/05/copilot_graph.webp 1672w`} sizes="(min-width: 1400px) 1344px, calc(100vw - 2rem)" />
-      <img class="graph" src={`${U}/2026/05/copilot_graph.png`} alt="Built for Google and AI Search" width="1672" height="941" loading="lazy" decoding="async" />
+      <img class="graph reveal" src={`${U}/2026/05/copilot_graph.png`} alt="Built for Google and AI Search" width="1672" height="941" loading="lazy" decoding="async" />
     </picture>
   </section>
 
   <section class="section container" aria-labelledby="founder-title">
-    <div class="founder">
+    <div class="founder reveal">
       <div>
         <h2 id="founder-title">A Founder-Led Digital Studio for International Clients</h2>
         <p class="intro">We work with startups, service businesses, agencies, and growing brands across the United States, Europe, and international markets. Every project is personally led by <a href="/about/">Yurii Tarasov</a>, combining 15+ years of web design and development experience with a modern approach to Framer, SEO, and AI-powered search visibility. You get direct communication, clear project structure, attention to detail, and the quality of an agency without unnecessary layers or communication gaps.</p>
@@ -253,7 +253,7 @@ const stats = [
   </section>
 
   <section class="section container" aria-labelledby="contact-title">
-    <div class="contact">
+    <div class="contact reveal">
       <div>
         <p class="eyebrow">Say hello</p>
         <h2 id="contact-title">Got a project? Let’s talk.</h2>
@@ -265,8 +265,8 @@ const stats = [
   <section class="section container" aria-labelledby="faq-title">
     <div class="faq-wrap">
       <p class="eyebrow">Still have Qs?</p>
-      <h2 id="faq-title">Questions we get a lot.</h2>
-      <Faq items={faqItems} />
+      <h2 id="faq-title" class="reveal">Questions we get a lot.</h2>
+      <Faq items={faqItems} reveal />
       <p class="faq-more">Still have questions? <a href="/contact-us/#CForm">Contact Us</a></p>
     </div>
   </section>

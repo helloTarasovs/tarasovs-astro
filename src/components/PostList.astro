@@ -9,8 +9,8 @@ const { posts, currentPage, lastPage } = Astro.props;
 const pageUrl = (n: number) => (n === 1 ? '/category/insights/' : `/category/insights/page/${n}/`);
 ---
 <ul class="post-list">
-  {posts.map((p) => (
-    <li class="post-card">
+  {posts.map((p, i) => (
+    <li class:list={['post-card', { reveal: i >= 6 }]}>
       <a href={`/${p.data.slug}/`}>
         {p.data.cover
           ? <img src={p.data.cover.src} alt={p.data.cover.alt} width={p.data.cover.width} height={p.data.cover.height} loading="lazy" decoding="async" />
@@ -24,7 +24,7 @@ const pageUrl = (n: number) => (n === 1 ? '/category/insights/' : `/category/ins
 </ul>
 
 {lastPage > 1 && (
-  <nav class="pagination" aria-label="Pagination">
+  <nav class="pagination reveal" aria-label="Pagination">
     {currentPage > 1 && <a href={pageUrl(currentPage - 1)} rel="prev">Newer posts</a>}
     <span>Page {currentPage} of {lastPage}</span>
     {currentPage < lastPage && <a href={pageUrl(currentPage + 1)} rel="next">Older posts</a>}

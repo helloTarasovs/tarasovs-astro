@@ -120,7 +120,7 @@ const jsonld = [
           <section class="section" aria-labelledby="prompts-title">
             <h2 id="prompts-title">All 10 recorded prompts</h2>
             <p class="muted">Each prompt was entered in a separate ChatGPT Temporary Chat. “Named instead” lists the dispensaries ChatGPT recommended in that response.</p>
-            <div class="table-wrap" tabindex="0" role="region" aria-label="Recorded prompts">
+            <div class="table-wrap reveal" tabindex="0" role="region" aria-label="Recorded prompts">
               <table>
                 <thead><tr><th scope="col">Prompt</th><th scope="col">Market</th><th scope="col">Result</th><th scope="col">Named instead</th></tr></thead>
                 <tbody>
@@ -142,7 +142,7 @@ const jsonld = [
 
     <section class="section" aria-labelledby="about-title">
       <h2 id="about-title" class="visually-hidden">About this profile</h2>
-      <div class="aside">
+      <div class="aside reveal">
         {d.website_url && (
           <p>Website: <a href={d.website_url} rel="nofollow noopener" target="_blank">{d.domain ?? d.website_url}<span class="visually-hidden"> (opens in a new tab)</span></a></p>
         )}

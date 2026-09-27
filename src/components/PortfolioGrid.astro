@@ -10,8 +10,9 @@ interface Props {
   headingLevel?: 'h2' | 'h3';
   priorityFirst?: boolean;
   label?: string;
+  revealFrom?: number; // fade in cards from this index on (earlier ones may be on the first screen)
 }
-const { projects, headingLevel = 'h3', priorityFirst = false, label = 'Filter projects by category' } = Astro.props;
+const { projects, headingLevel = 'h3', priorityFirst = false, label = 'Filter projects by category', revealFrom } = Astro.props;
 const cats = Object.keys(CATEGORY_LABELS)
   .map((slug) => ({ slug, count: projects.filter((p) => p.data.categories.includes(slug)).length }))
   .filter((c) => c.count > 0);
@@ -28,7 +29,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
   <p class="visually-hidden" aria-live="polite" data-status></p>
   <ul class="grid">
     {projects.map((p, i) => (
-      <li data-cats={p.data.categories.join(' ')}>
+      <li data-cats={p.data.categories.join(' ')} class:list={{ reveal: revealFrom != null && i >= revealFrom }}>
         <ProjectCard project={p} headingLevel={headingLevel} priority={priorityFirst && i === 0} />
       </li>
     ))}

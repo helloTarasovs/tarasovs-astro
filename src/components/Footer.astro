@@ -6,12 +6,12 @@ import { CONTACT, SOCIAL, LEGAL } from '../lib/nav';
 <footer class="site-footer">
   <div class="container">
     <div class="footer-card">
-      <div class="footer-brand">
+      <div class="footer-brand reveal">
         <a class="footer-logo" href="/" rel="home"><Logo /></a>
         <p class="footer-tagline">Disrupting the ordinary in brand &amp; digital design.</p>
       </div>
 
-      <div class="footer-col">
+      <div class="footer-col reveal">
         <p class="footer-label">Office</p>
         <address>
           str. Narcisei,<br /> Bloc 64, 307220,<br />
@@ -22,7 +22,7 @@ import { CONTACT, SOCIAL, LEGAL } from '../lib/nav';
         <p><a href={CONTACT.phoneHref}>{CONTACT.phone}</a></p>
       </div>
 
-      <div class="footer-col">
+      <div class="footer-col reveal">
         <p class="footer-label">General questions</p>
         <p>Remote-first agency serving <strong>New York and US clients</strong></p>
         <p><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
@@ -34,7 +34,7 @@ import { CONTACT, SOCIAL, LEGAL } from '../lib/nav';
         </ul>
       </div>
 
-      <div class="footer-col footer-cta">
+      <div class="footer-col footer-cta reveal">
         <p class="footer-cta-text">Want a no-obligation to-hire estimate?</p>
         <a class="button button--highlight" href="/contact-us/#CForm">
           Get a quote
@@ -42,7 +42,7 @@ import { CONTACT, SOCIAL, LEGAL } from '../lib/nav';
         </a>
       </div>
 
-      <div class="footer-bottom">
+      <div class="footer-bottom reveal">
         <ul class="footer-legal">
           {LEGAL.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
         </ul>

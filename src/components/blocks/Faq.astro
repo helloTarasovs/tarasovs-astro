@@ -1,11 +1,11 @@
 ---
 // FAQ as native <details>. Items must match the page's FAQPage schema (checked in ServicePage).
-interface Props { items: { q: string; a: string }[] }
-const { items } = Astro.props;
+interface Props { items: { q: string; a: string }[]; reveal?: boolean }
+const { items, reveal = false } = Astro.props;
 ---
 <div class="faq">
   {items.map((f) => (
-    <details>
+    <details class:list={{ reveal }}>
       <summary><h3>{f.q}</h3></summary>
       <div class="answer" set:html={f.a} />
     </details>

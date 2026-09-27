@@ -1,12 +1,12 @@
 ---
 // Numbered process steps. Numbers are visual only (the <ol> carries the order).
 import type { Card } from '../../lib/service-page';
-interface Props { items: Card[] }
-const { items } = Astro.props;
+interface Props { items: Card[]; reveal?: boolean }
+const { items, reveal = false } = Astro.props;
 ---
 <ol class="steps" style={`--n:${items.length}`}>
   {items.map((s, i) => (
-    <li class="step">
+    <li class:list={['step', { reveal }]}>
       <p class="step-top" aria-hidden="true">
         <span class="step-num">{String(i + 1).padStart(2, '0')}</span>
         {s.meta && <span class="step-meta">{s.meta}</span>}

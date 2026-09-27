@@ -10,22 +10,22 @@ import Checklist from './Checklist.astro';
 import Projects from './Projects.astro';
 import ContactForm from '../ContactForm.astro';
 
-interface Props { blocks: Block[]; formSubject?: string }
-const { blocks, formSubject } = Astro.props;
+interface Props { blocks: Block[]; formSubject?: string; reveal?: boolean } // reveal: fade in items (below the first screen only)
+const { blocks, formSubject, reveal = false } = Astro.props;
 ---
 {blocks.map((b) => (
   <div class:list={['block', `block-${b.type}`]}>
     {b.type === 'prose' && <div class="prose" set:html={b.html} />}
-    {b.type === 'cards' && <Cards items={b.items} columns={b.columns} />}
-    {b.type === 'steps' && <Steps items={b.items} />}
-    {b.type === 'stats' && <Stats items={b.items} />}
-    {b.type === 'pricing' && <Pricing plans={b.plans} />}
-    {b.type === 'table' && <Table caption={b.caption} head={b.head} rows={b.rows} highlight={b.highlight} />}
-    {b.type === 'checklist' && <Checklist items={b.items} />}
-    {b.type === 'projects' && <Projects items={b.items} />}
+    {b.type === 'cards' && <Cards items={b.items} columns={b.columns} reveal={reveal} />}
+    {b.type === 'steps' && <Steps items={b.items} reveal={reveal} />}
+    {b.type === 'stats' && <Stats items={b.items} reveal={reveal} />}
+    {b.type === 'pricing' && <Pricing plans={b.plans} reveal={reveal} />}
+    {b.type === 'table' && <Table caption={b.caption} head={b.head} rows={b.rows} highlight={b.highlight} reveal={reveal} />}
+    {b.type === 'checklist' && <Checklist items={b.items} reveal={reveal} />}
+    {b.type === 'projects' && <Projects items={b.items} reveal={reveal} />}
     {b.type === 'tags' && <ul class="tags">{b.items.map((t) => <li>{t}</li>)}</ul>}
     {b.type === 'image' && (
-      <img class="image" src={b.src} alt={b.alt} width={b.width} height={b.height} loading="lazy" decoding="async" />
+      <img class:list={['image', { reveal }]} src={b.src} alt={b.alt} width={b.width} height={b.height} loading="lazy" decoding="async" />
     )}
     {b.type === 'actions' && (
       <p class="actions">
@@ -33,7 +33,7 @@ const { blocks, formSubject } = Astro.props;
       </p>
     )}
     {b.type === 'callout' && (
-      <div class="callout">
+      <div class:list={['callout', { reveal }]}>
         {b.eyebrow && <p class="eyebrow">{b.eyebrow}</p>}
         <p class="callout-title" set:html={b.title} />
         {b.text && <p class="callout-text">{b.text}</p>}
@@ -41,7 +41,7 @@ const { blocks, formSubject } = Astro.props;
       </div>
     )}
     {b.type === 'form' && (
-      <div class="form-card">
+      <div class:list={['form-card', { reveal }]}>
         {b.title && <p class="form-title">{b.title}</p>}
         <ContactForm subject={formSubject} />
       </div>

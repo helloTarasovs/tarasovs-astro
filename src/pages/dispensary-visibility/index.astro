@@ -130,7 +130,7 @@ const citationUrl = abs('/dispensary-visibility/');
     </section>
 
     <section class="section container" aria-labelledby="why-title">
-      <div class="split">
+      <div class="split reveal">
         <div>
           <p class="eyebrow">Why this exists</p>
           <h2 id="why-title">AI does not rank you lower. It leaves you out of the answer.</h2>
@@ -144,19 +144,19 @@ const citationUrl = abs('/dispensary-visibility/');
     </section>
 
     <section class="section container" aria-labelledby="findings-title">
-      <div class="head">
+      <div class="head reveal">
         <p class="eyebrow">First 100 profiles</p>
         <h2 id="findings-title">What 1,000 recorded prompts show</h2>
         <p class="intro">Every figure below comes from the profiles published on this page. Recorded as of 17 August 2026, across the first 100 New York dispensaries to complete the benchmark.</p>
       </div>
       <ul class="kpis kpis--4">
-        <li><strong>31</strong> scored under 40 out of 100</li>
-        <li><strong>9</strong> were not named in any of their 10 prompts</li>
-        <li><strong>50</strong> scored 70 or higher</li>
-        <li><strong>19</strong> landed anywhere in between</li>
+        <li class="reveal"><strong>31</strong> scored under 40 out of 100</li>
+        <li class="reveal"><strong>9</strong> were not named in any of their 10 prompts</li>
+        <li class="reveal"><strong>50</strong> scored 70 or higher</li>
+        <li class="reveal"><strong>19</strong> landed anywhere in between</li>
       </ul>
       <div class="findings">
-        <article>
+        <article class="reveal">
           <h3>The result is not a bell curve</h3>
           <p>Half the dispensaries measured are visible. Roughly a third are close to invisible. The middle is thin. ChatGPT is not ranking these businesses along a gradient, it is sorting most of them into recommended or not recommended.</p>
           <figure class="bars" aria-label="Score distribution of the first 100 profiles">
@@ -166,12 +166,12 @@ const citationUrl = abs('/dispensary-visibility/');
             <figcaption>Composite score band → number of dispensaries (first 100 profiles).</figcaption>
           </figure>
         </article>
-        <article>
+        <article class="reveal">
           <h3>Manhattan is the weakest market we have measured</h3>
           <p>Across 18 measured Manhattan dispensaries the median composite is 36. Across the rest of the state it is 70. Manhattan also holds the highest scores in the entire Index, which is the point: a handful of well-known names absorb the recommendations and the rest are not named at all.</p>
           <p>Density appears to concentrate visibility rather than spread it. Boroughs with fewer than ten measured profiles are not compared here, because the samples are too small to say anything.</p>
         </article>
-        <article>
+        <article class="reveal">
           <h3>Being first at home is not the same as being visible</h3>
           <p>Eleven dispensaries scored exactly 70: first in all six prompts in their own market, absent from all four prompts covering the surrounding and wider markets. On a single number that reads as healthy visibility. In practice it means only customers who already name the neighbourhood ever see them.</p>
           <p>This is why every profile carries a visibility pattern alongside the composite.</p>
@@ -265,7 +265,7 @@ const citationUrl = abs('/dispensary-visibility/');
 
       <p class="small note">{rows.length} profiles published so far — new verified benchmarks are being added in controlled batches. New York has 705 licensed dispensaries open as of August 2026, and the Index is being built out across the state. <a href="#full-report">Add my dispensary</a></p>
 
-      <div class="definitions" id="definitions">
+      <div class="definitions reveal" id="definitions">
         <h3>How to interpret the ranking</h3>
         <dl>
           <div><dt>ChatGPT Visibility score</dt><dd>A 0–100 composite based on the observed prominence of a dispensary across three geographic market levels.</dd></div>
@@ -283,7 +283,7 @@ const citationUrl = abs('/dispensary-visibility/');
         <h2 id="geo-title">A statewide view, not only New York City</h2>
         <p class="intro">The index includes eligible published profiles from New York City and from regions across the state. Regional comparisons become more useful as coverage grows; a region with fewer published profiles should not be interpreted as stronger or weaker solely from its sample size.</p>
       </div>
-      <div class="table-wrap" role="region" aria-label="Visibility by region" tabindex="0">
+      <div class="table-wrap reveal" role="region" aria-label="Visibility by region" tabindex="0">
         <table class="geo">
           <caption class="visually-hidden">ChatGPT visibility by New York region (published READY profiles)</caption>
           <thead><tr><th scope="col">Region</th><th scope="col">Area</th><th scope="col">Profiles</th><th scope="col">Median score</th><th scope="col">Strong (70+)</th><th scope="col">Invisible</th></tr></thead>
@@ -303,7 +303,7 @@ const citationUrl = abs('/dispensary-visibility/');
       </div>
       <p class="small note">Calculated from the {stats.count} published profiles on <time datetime={iso(lastUpdated)}>{fmtDate(lastUpdated)}</time>. “Invisible” = zero mentions across all 10 prompts.</p>
 
-      <div class="example">
+      <div class="example reveal">
         <h3>Visibility changes with the size of the search area</h3>
         <p>A dispensary can dominate ChatGPT recommendations on its own block and disappear entirely once the question widens to the borough. Averaging those into one number would hide the thing that matters most.</p>
         <ul class="levels">
@@ -323,24 +323,24 @@ const citationUrl = abs('/dispensary-visibility/');
       </div>
 
       <ul class="measures">
-        {measures.map((m) => <li><h3>{m.t}</h3><p>{m.d}</p></li>)}
+        {measures.map((m) => <li class="reveal"><h3>{m.t}</h3><p>{m.d}</p></li>)}
       </ul>
 
       <div class="method-grid">
-        <div class="panel">
+        <div class="panel reveal">
           <h3>Recommendation-position scoring</h3>
           <table class="mini">
             <thead><tr><th scope="col">Recommendation result</th><th scope="col">Points</th></tr></thead>
             <tbody>{points.map(([r, p]) => <tr><td>{r}</td><td>{p}</td></tr>)}</tbody>
           </table>
         </div>
-        <div class="panel">
+        <div class="panel reveal">
           <h3>Market weighting</h3>
           <p>Each market level is scored as the average of its own prompts, then the three level scores are combined by weight. This gives the greatest weight to the market where the dispensary most directly competes for customers.</p>
           <p class="formula">Composite = Primary Market × 70% + Secondary Market × 20% + Regional Market × 10%</p>
           <p class="small">Six prompts test the primary market, two the secondary market and two the regional or wider market.</p>
         </div>
-        <div class="panel">
+        <div class="panel reveal">
           <h3>We require 10/10 valid results</h3>
           <p>A dispensary does not receive a public score from a partial scan. The benchmark is marked ready only after all 10 standardized prompts return a valid result. If a request times out, fails, or cannot be validated, the profile stays Pending until the missing check completes successfully.</p>
         </div>
@@ -367,7 +367,7 @@ const citationUrl = abs('/dispensary-visibility/');
     </section>
 
     <section class="section container" id="how-to-cite" aria-labelledby="cite-title">
-      <div class="cite">
+      <div class="cite reveal">
         <p class="eyebrow">For journalists and researchers</p>
         <h2 id="cite-title">How to cite this index</h2>
         <p>When quoting a statewide statistic, include the dataset name, publisher, canonical URL and access date. The statistics update as eligible profiles are added or remeasured. When citing a dispensary score, link to the individual profile and include the “Measured” date displayed on that profile. Do not describe the measured sample as every licensed dispensary in New York State.</p>
@@ -385,13 +385,13 @@ const citationUrl = abs('/dispensary-visibility/');
       <h2 id="related-title">Related research</h2>
       <ul class="related">
         {related.map((r) => (
-          <li><a href={r.url}><span class="r-title">{r.title}</span>{r.excerpt && <span class="r-ex">{r.excerpt}</span>}</a></li>
+          <li class="reveal"><a href={r.url}><span class="r-title">{r.title}</span>{r.excerpt && <span class="r-ex">{r.excerpt}</span>}</a></li>
         ))}
       </ul>
     </section>
 
     <section class="section container" id="full-report" aria-labelledby="report-title">
-      <div class="report">
+      <div class="report reveal">
         <div>
           <p class="eyebrow">Full Visibility Report</p>
           <h2 id="report-title">Get the Full Visibility Report</h2>
@@ -423,12 +423,12 @@ const citationUrl = abs('/dispensary-visibility/');
       <div class="faq-wrap">
         <p class="eyebrow">FAQ</p>
         <h2 id="faq-title">Frequently asked questions</h2>
-        <Faq items={faqItems} />
+        <Faq items={faqItems} reveal />
       </div>
     </section>
 
     <section class="section container" aria-labelledby="missing-title">
-      <div class="cta">
+      <div class="cta reveal">
         <h2 id="missing-title">Missing from ChatGPT recommendations?</h2>
         <p>The Index shows where the gap is. Tarasovs helps New York dispensaries improve organic search, local SEO, technical menu SEO and AI discoverability.</p>
         <a class="button button--highlight" href="/dispensary-seo-new-york/">Explore dispensary SEO services</a>

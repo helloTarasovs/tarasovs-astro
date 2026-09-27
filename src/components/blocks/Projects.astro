@@ -2,8 +2,8 @@
 // Case-study cards from the projects collection (by /project/<slug>/ URL).
 import { getCollection } from 'astro:content';
 import ProjectCard from '../ProjectCard.astro';
-interface Props { items: string[] }
-const { items } = Astro.props;
+interface Props { items: string[]; reveal?: boolean }
+const { items, reveal = false } = Astro.props;
 const all = await getCollection('projects');
 const projects = items.map((href) => {
   const slug = href.replace(/^\/project\//, '').replace(/\/$/, '');
@@ -13,7 +13,7 @@ const projects = items.map((href) => {
 });
 ---
 <ul class="projects">
-  {projects.map((p) => <li><ProjectCard project={p} /></li>)}
+  {projects.map((p) => <li class:list={{ reveal }}><ProjectCard project={p} /></li>)}
 </ul>
 
 <style>

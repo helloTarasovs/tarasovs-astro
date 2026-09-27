@@ -1,13 +1,13 @@
 ---
 // Grid of cards (features, reasons, audiences, case links). Titles are <h3> under the section <h2>.
 import type { Card } from '../../lib/service-page';
-interface Props { items: Card[]; columns?: 2 | 3 | 4 }
-const { items, columns } = Astro.props;
+interface Props { items: Card[]; columns?: 2 | 3 | 4; reveal?: boolean }
+const { items, columns, reveal = false } = Astro.props;
 const cols = columns ?? (items.length % 3 === 0 || items.length > 4 ? 3 : items.length === 4 ? 4 : 2);
 ---
 <ul class:list={['cards', `cols-${cols}`]}>
   {items.map((c) => (
-    <li class="card">
+    <li class:list={['card', { reveal }]}>
       {c.img && <img class="card-img" src={c.img.src} alt={c.img.alt} width={c.img.width} height={c.img.height} loading="lazy" decoding="async" />}
       {(c.num || c.meta) && (
         <p class="card-top">

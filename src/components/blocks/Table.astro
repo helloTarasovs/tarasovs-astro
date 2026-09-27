@@ -1,9 +1,9 @@
 ---
 // Comparison table. First cell of each row is a row header; `highlight` marks our column.
-interface Props { caption?: string; head: string[]; rows: string[][]; highlight?: number }
-const { caption, head, rows, highlight } = Astro.props;
+interface Props { caption?: string; head: string[]; rows: string[][]; highlight?: number; reveal?: boolean }
+const { caption, head, rows, highlight, reveal = false } = Astro.props;
 ---
-<div class="table-wrap" role="region" aria-label={caption || 'Comparison'} tabindex="0">
+<div class:list={['table-wrap', { reveal }]} role="region" aria-label={caption || 'Comparison'} tabindex="0">
   <table>
     {caption && <caption class="visually-hidden">{caption}</caption>}
     <thead>

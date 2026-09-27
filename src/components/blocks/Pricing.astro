@@ -1,12 +1,12 @@
 ---
 import type { Plan } from '../../lib/service-page';
-interface Props { plans: Plan[] }
-const { plans } = Astro.props;
+interface Props { plans: Plan[]; reveal?: boolean }
+const { plans, reveal = false } = Astro.props;
 const featured = plans.length === 3 ? 1 : -1;
 ---
 <ul class="plans">
   {plans.map((p, i) => (
-    <li class:list={['plan', { 'is-featured': i === featured }]}>
+    <li class:list={['plan', { 'is-featured': i === featured, reveal }]}>
       <h3>{p.name}</h3>
       {p.details && <p class="details">{p.details}</p>}
       <p class="price"><strong>{p.price}</strong>{p.period && <span> {p.period}</span>}</p>
