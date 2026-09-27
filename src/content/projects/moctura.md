@@ -7,7 +7,7 @@ cover:
   src: "/wp-content/uploads/2026/09/moctura-cover.webp"
   alt: "Moctura Webflow website — hero, projects and services screens"
   width: 2400
-  height: 1600
+  height: 1800
 seo:
   title: "Moctura — Webflow Website - Tarasovs Digital Agency"
   description: "Moctura is a concept website for a contemporary digital studio, designed and developed in Webflow with oversized typography and scroll-driven motion."
