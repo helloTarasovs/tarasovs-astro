@@ -1,235 +1,453 @@
 ---
 // Dispensary profiles: /dispensary-visibility/<slug>/  (data from the tdv plugin export)
+// Markup, copy and classes follow the tdv plugin's public profile template 1:1 (styles in tdv-profile.css).
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { breadcrumbSchema } from '../../lib/schema';
 import { abs } from '../../lib/site';
-import { dispensaryRows, bandFor } from '../../lib/dispensaries';
+import patterns from '../../data/dispensary-patterns.json';
+import '../../styles/tdv-profile.css';
 
 export async function getStaticPaths() {
   const profiles = await getCollection('profiles');
-  const rows = await dispensaryRows();
-  const ranked = rows.filter((r) => r.rank != null).length;
-  return profiles.map((profile) => ({
-    params: { slug: profile.data.slug },
-    props: { profile, row: rows.find((r) => r.slug === profile.data.slug)!, ranked },
-  }));
+  return profiles.map((profile) => ({ params: { slug: profile.data.slug }, props: { profile } }));
 }
 
-const { profile, row, ranked } = Astro.props;
+const { profile } = Astro.props;
 const d = profile.data as any;
 const path = `/dispensary-visibility/${d.slug}/`;
-const place = [d.city, d.state].filter(Boolean).join(', ');
-const title = d.seo?.title ?? `${d.name} ChatGPT Visibility${place ? ` - ${place}` : ''} - Tarasovs Digital Agency`;
 const items: any[] = d.ai_breakdown?.items ?? [];
-const score = row.rounded;
-const band = row.score != null ? bandFor(row.score) : null;
-const fmt = (date: Date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+const competitors: string[] = d.ai_breakdown?.competitors ?? [];
+const pattern = (patterns as Record<string, string>)[d.slug];
+const prompts = Number(d.ai_valid_prompts ?? 10);
+const score = Math.round(Number(d.ai_score ?? 0));
+const mentions = Number(d.ai_mentions ?? 0);
+const top3 = Number(d.ai_top3_count ?? 0);
+const checked = d.ai_scanned_at ? new Date(d.ai_scanned_at.replace(' ', 'T') + 'Z') : null;
+const fmt = (date: Date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
 
+// Plugin SEO: its own title/description, not the Yoast fields.
+const title = `${d.name} — ChatGPT Visibility Score | ${d.primary_market}, ${d.state}`;
+const description = `Explore ${d.name} in ${d.primary_market}, ${d.state}. See its ${score}/100 ChatGPT Visibility score, ${prompts} recorded prompts, market reach and competitors.`;
+const heading = `${d.name} ChatGPT Visibility — ${d.primary_market}, ${d.state}`;
+const place = d.primary_market && d.primary_market !== d.city ? `${d.primary_market}, ${d.city}, ${d.state}` : `${d.city}, ${d.state}`;
+
+const band = (v: number) => (v >= 85 ? 'Excellent' : v >= 70 ? 'Strong' : v >= 55 ? 'Moderate' : v >= 40 ? 'Weak' : 'Very weak');
 const markets = [
-  { level: 'Primary market', weight: '70%', prompts: 6, label: d.primary_market, score: d.ai_primary_score },
-  { level: 'Secondary market', weight: '20%', prompts: 2, label: d.secondary_market_1, score: d.ai_secondary1_score },
-  { level: 'Regional market', weight: '10%', prompts: 2, label: d.secondary_market_2, score: d.ai_secondary2_score },
-].filter((m) => m.label);
-const scopeLabel: Record<string, string> = { primary: 'Primary', secondary_1: 'Secondary', secondary_2: 'Regional' };
-const resultTone = (r: string) => (/#1|#2/.test(r) ? 'top' : /Recommended|Mentioned/.test(r) ? 'mid' : 'none');
+  { scope: 'Primary market', method: 'Primary market', count: '6 prompts · 70%', name: d.primary_market, score: Number(d.ai_primary_score ?? 0) },
+  { scope: 'Secondary market', method: 'Secondary market', count: '2 prompts · 20%', name: d.secondary_market_1, score: Number(d.ai_secondary1_score ?? 0) },
+  { scope: 'Wider market', method: 'Regional market', count: '2 prompts · 10%', name: d.secondary_market_2, score: Number(d.ai_secondary2_score ?? 0) },
+];
+const scopeLabel: Record<string, string> = { primary: 'Primary market', secondary_1: 'Secondary market', secondary_2: 'Wider market' };
+const pill = (it: any) =>
+  it.position && it.position <= 3
+    ? { tone: 'top', text: `#${it.position}` }
+    : it.position
+      ? { tone: 'ranked', text: `#${it.position}` }
+      : it.mentioned
+        ? { tone: 'mentioned', text: 'Mentioned / unranked' }
+        : { tone: 'missing', text: 'Not mentioned' };
 
+const bands = [
+  ['Hyperlocal only', 'Strong primary-market visibility with little or no visibility at broader levels.'],
+  ['Local-led visibility', 'Visibility is concentrated in the primary market, with some broader reach.'],
+  ['Broad visibility', 'Meaningful visibility across all three geographic levels.'],
+  ['Evenly distributed', 'Similar visibility across the three market levels.'],
+  ['Wider-market visibility', 'A surrounding or wider market outperforms the primary market.'],
+  ['Limited visibility', 'Low visibility across all three market levels.'],
+  ['Mixed visibility', 'The three scores do not form one of the defined geographic patterns.'],
+];
+const scoring = [['#1', '100 pts'], ['#2', '85 pts'], ['#3', '70 pts'], ['#4–5', '55 pts'], ['Mentioned / unranked', '40 pts'], ['Not mentioned', '0 pts']];
+const gated = [
+  ['Google Organic', 'See where the website appears for high-intent, non-branded local searches.'],
+  ['Google Maps', 'Understand visibility across Google Maps and Local Pack searches.'],
+  ['Menu SEO', 'Review crawlability, product/category URLs, metadata and internal linking.'],
+  ['Additional AI visibility', 'Additional provider benchmarks can be analyzed as reliable datasets become available.'],
+];
+
+const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? '';
 const jsonld = [
   {
     '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `${abs(path)}#webpage`,
-    name: title,
-    description: d.seo?.description,
+    '@type': 'ProfilePage',
+    '@id': `${abs(path)}#profile`,
     url: abs(path),
-    about: { '@type': 'Store', name: d.name, url: d.website_url, address: place ? { '@type': 'PostalAddress', addressLocality: d.city, addressRegion: d.state } : undefined },
-    dateModified: d.updatedDate ? new Date(d.updatedDate).toISOString() : undefined,
+    name: title,
+    description,
+    dateModified: d.updatedDate ? new Date(d.updatedDate).toISOString().replace('.000Z', '+00:00') : undefined,
+    mainEntity: {
+      '@type': 'Organization',
+      name: d.name,
+      url: d.website_url,
+      address: { '@type': 'PostalAddress', addressLocality: d.city, addressRegion: d.state, addressCountry: 'US' },
+    },
+    isPartOf: { '@type': 'WebSite', name: 'Tarasovs Digital Agency', url: abs('/') },
   },
   breadcrumbSchema([
     { name: 'Home', path: '/' },
-    { name: 'NY Dispensary Visibility Index', path: '/dispensary-visibility/' },
+    { name: 'New York Dispensary Visibility Index', path: '/dispensary-visibility/' },
     { name: d.name, path },
   ]),
 ];
 ---
-<Base title={title} description={d.seo?.description} canonical={d.seo?.canonical ?? path} robots={d.seo?.robots} ogImage={d.seo?.ogImage} jsonld={jsonld}>
-  <article class="profile container">
-    <nav class="crumbs" aria-label="Breadcrumb">
-      <ol>
-        <li><a href="/">Home</a></li>
-        <li><a href="/dispensary-visibility/">NY Dispensary Visibility Index</a></li>
-        <li><span aria-current="page">{d.name}</span></li>
-      </ol>
-    </nav>
+<Base title={title} description={description} canonical={d.seo?.canonical ?? path} robots={d.seo?.robots} ogImage={d.seo?.ogImage} jsonld={jsonld}>
+  <div class="tdv-profile-page">
+    <article class="tdv-public-profile">
+      <nav class="tdv-profile-breadcrumb" aria-label="Breadcrumb">
+        <a href="/dispensary-visibility/">New York Dispensary Visibility Index</a>
+        <span aria-hidden="true">/</span>
+        <span>{d.name}</span>
+      </nav>
 
-    <header class="profile-head">
-      <p class="eyebrow">ChatGPT visibility profile</p>
-      <h1 class="profile-title">{d.name}</h1>
-      <p class="profile-place">{row.location}</p>
-    </header>
-
-    {row.score == null ? (
-      <div class="pending">
-        <p><strong>Benchmark Pending.</strong> A public score is published only once all 10 standardized prompts return a valid result. This profile will be scored when the missing checks complete.</p>
-        <p><a href="/dispensary-visibility/#full-report">Request a Full Visibility Report</a></p>
-      </div>
-    ) : (
-      <>
-        <section class="scorecard" aria-labelledby="score-title">
-          <h2 id="score-title" class="visually-hidden">ChatGPT Visibility score</h2>
-          <div class="score-main">
-            <p class="score"><strong>{score}</strong><span>/100</span></p>
-            <p class="score-label">Composite ChatGPT Visibility</p>
-            <div class="meter" aria-hidden="true"><span style={`width:${score}%`}></span></div>
-            <p class="chips">
-              <span class:list={['band', `band--${band!.id}`]}>{band!.label}</span>
-              {row.rank && <span class="chip">Rank #{row.rank} of {ranked}</span>}
-            </p>
+      <header class="tdv-profile-hero tdv-profile-hero--chatgpt">
+        <div class="tdv-profile-hero__copy">
+          <div class="tdv-card__eyebrow">New York Dispensary Visibility Index</div>
+          <h1>{heading}</h1>
+          <p>See how {d.name} appeared in {prompts} recorded, non-branded ChatGPT recommendation prompts across its local and surrounding markets.</p>
+          <div class="tdv-card__meta">
+            <span>{place}</span>
+            {d.website_url && <a href={d.website_url} target="_blank" rel="noopener noreferrer nofollow">{d.domain}<span class="visually-hidden"> (opens in a new tab)</span></a>}
+            {checked && <span>Last checked: {fmt(checked)}</span>}
           </div>
-          <dl class="score-facts">
-            {d.ai_mentions != null && <div><dt>Mentioned in</dt><dd>{d.ai_mentions}/{d.ai_valid_prompts} prompts</dd></div>}
-            {d.ai_top3_count != null && <div><dt>Top-3 placements</dt><dd>{d.ai_top3_count}/{d.ai_valid_prompts} prompts</dd></div>}
-            {row.measured && <div><dt>Measured</dt><dd><time datetime={row.measured.toISOString().slice(0, 10)}>{fmt(row.measured)}</time></dd></div>}
-            <div><dt>Platform</dt><dd>ChatGPT Temporary Chat</dd></div>
-          </dl>
-        </section>
-
-        {markets.length > 0 && (
-          <section class="section" aria-labelledby="markets-title">
-            <h2 id="markets-title">Visibility by market level</h2>
-            <p class="muted">Each market level is averaged separately, then combined: primary 70%, secondary 20%, regional 10%.</p>
-            <ul class="markets">
-              {markets.map((m) => {
-                const v = Math.round(Number(m.score ?? 0));
-                return (
-                  <li>
-                    <p class="market-level">{m.level} <span>· {m.prompts} prompts · weight {m.weight}</span></p>
-                    <p class="market-name">{m.label}</p>
-                    <div class="market-row">
-                      <span class="market-bar" aria-hidden="true"><span style={`width:${v}%`}></span></span>
-                      <span class="market-score">{v}/100</span>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
-          </section>
-        )}
-
-        {items.length > 0 && (
-          <section class="section" aria-labelledby="prompts-title">
-            <h2 id="prompts-title">All 10 recorded prompts</h2>
-            <p class="muted">Each prompt was entered in a separate ChatGPT Temporary Chat. “Named instead” lists the dispensaries ChatGPT recommended in that response.</p>
-            <div class="table-wrap reveal" tabindex="0" role="region" aria-label="Recorded prompts">
-              <table>
-                <thead><tr><th scope="col">Prompt</th><th scope="col">Market</th><th scope="col">Result</th><th scope="col">Named instead</th></tr></thead>
-                <tbody>
-                  {items.map((it) => (
-                    <tr>
-                      <td class="q">{it.query_text}</td>
-                      <td data-label="Market"><span><span class="scope">{scopeLabel[it.market_scope] ?? it.market_scope}</span> {it.market_value}</span></td>
-                      <td data-label="Result"><span class:list={['result', `result--${resultTone(it.result_class)}`]}>{it.result_class}</span></td>
-                      <td data-label="Named instead" class="competitors"><span>{it.competitors?.length ? it.competitors.join(', ') : '—'}</span></td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+        </div>
+        <div class="tdv-profile-hero__side">
+          <div class="tdv-profile-hero__score">
+            <strong>{score}/100</strong>
+            <span>Composite ChatGPT Visibility</span>
+            {pattern && <small class="tdv-profile-score-pattern">Pattern: {pattern}</small>}
+            <div class="tdv-profile-hero__mini-stats">
+              <span><b>{mentions}/{prompts}</b> mentioned</span>
+              <span><b>{top3}/{prompts}</b> top-3</span>
             </div>
-          </section>
-        )}
-      </>
-    )}
+            <div class="tdv-profile-hero__full-gate">
+              <span>Full Visibility Report</span>
+              <small class="tdv-profile-hero__request-badge">By request</small>
+            </div>
+          </div>
+          <a class="tdv-card__cta tdv-card__cta--top tdv-report-modal-trigger" href="#tdv-full-report" data-tdv-report-open>Get the Full Visibility Report</a>
+          <div class="tdv-card__cta-note">Google Organic, Google Maps, Menu SEO and additional provider analysis are available by request.</div>
+        </div>
+      </header>
 
-    <section class="section" aria-labelledby="about-title">
-      <h2 id="about-title" class="visually-hidden">About this profile</h2>
-      <div class="aside reveal">
-        {d.website_url && (
-          <p>Website: <a href={d.website_url} rel="nofollow noopener" target="_blank">{d.domain ?? d.website_url}<span class="visually-hidden"> (opens in a new tab)</span></a></p>
-        )}
-        <p class="small">Benchmark note: these are standardized Temporary Chat checks, not a prediction of what every user will see. ChatGPT responses vary by date, model, location, available sources and wording. Read this profile as a dated snapshot. When citing this score, link to this page and include the measured date.</p>
-        <p class="links">
-          <a class="button" href="/dispensary-visibility/#full-report">Get the Full Visibility Report</a>
-          <a class="button button--ghost" href="/dispensary-visibility/#directory">Back to the Index</a>
+      <section class="tdv-profile-section" aria-labelledby="tdv-performance">
+        <div class="tdv-profile-section__heading">
+          <div><span class="tdv-profile-kicker">ChatGPT benchmark</span><h2 id="tdv-performance">ChatGPT recommendation performance</h2></div>
+          <p>The composite score supports comparison, while the geographic pattern and three market scores show where that visibility is concentrated.</p>
+        </div>
+        <div class="tdv-profile-performance-grid">
+          <div class="tdv-profile-stat-card">
+            <span>Composite visibility</span>
+            <strong>{score}/100</strong>
+            {pattern && <small>Pattern: {pattern}</small>}
+          </div>
+          <div class="tdv-profile-stat-card">
+            <span>Prompts mentioned</span>
+            <strong>{mentions}/{prompts}</strong>
+            <small>{Math.round((mentions / prompts) * 100)}% mention rate</small>
+          </div>
+          <div class="tdv-profile-stat-card">
+            <span>Top-3 recommendations</span>
+            <strong>{top3}/{prompts}</strong>
+            <small>Across standardized prompts</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="tdv-profile-section tdv-profile-section--market-scores" aria-labelledby="tdv-market-visibility">
+        <div class="tdv-profile-section__heading">
+          <div><span class="tdv-profile-kicker">Geographic reach</span><h2 id="tdv-market-visibility">ChatGPT visibility by market</h2></div>
+          <p>A dispensary can be highly visible in its immediate neighborhood and disappear as the recommendation area expands.</p>
+        </div>
+        <div class="tdv-profile-market-grid">
+          {markets.map((m) => (
+            <div class="tdv-profile-market-card">
+              <span class="tdv-profile-market-card__scope">{m.scope}</span>
+              <strong class="tdv-profile-market-card__name">{m.name}</strong>
+              <div class="tdv-profile-market-card__score">{Math.round(m.score)}/100</div>
+              <small>{band(m.score)}</small>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="tdv-profile-section" aria-labelledby="tdv-chatgpt-checks">
+        <div class="tdv-profile-section__heading">
+          <div><span class="tdv-profile-kicker">Recommendation checks</span><h2 id="tdv-chatgpt-checks">{items.length} recorded ChatGPT recommendation checks</h2></div>
+          <p>Exact non-branded prompts entered in separate Temporary Chats across the mapped markets.</p>
+        </div>
+        <div class="tdv-breakdown tdv-breakdown--ai tdv-profile-prompt-list">
+          {items.map((it, i) => {
+            const p = pill(it);
+            return (
+              <div class="tdv-breakdown__row tdv-breakdown__row--ai">
+                <div class="tdv-breakdown__copy">
+                  <div class="tdv-ai-prompt-line">
+                    <span class="tdv-ai-prompt-number">{i + 1}</span>
+                    <div class="tdv-breakdown__label">{it.query_text}</div>
+                  </div>
+                  <div class="tdv-breakdown__explain">{it.market_value} · {scopeLabel[it.market_scope]}</div>
+                </div>
+                <div class="tdv-breakdown__result">
+                  <span class:list={['tdv-profile-result-pill', `tdv-profile-result-pill--${p.tone}`]}>{p.text}</span>
+                  <span class="tdv-breakdown__points">{it.points}/100</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <p class="tdv-card__breakdown-note tdv-card__breakdown-note--source">
+          Method: ChatGPT Temporary Chat · {items.length} standardized recommendation checks
+          {checked && <> · Checked {fmt(checked)}</>}
         </p>
+      </section>
+
+      {competitors.length > 0 && (
+        <section class="tdv-profile-section" aria-labelledby="tdv-competitors">
+          <div class="tdv-profile-section__heading">
+            <div><span class="tdv-profile-kicker">Competitor intelligence</span><h2 id="tdv-competitors">Who appeared in the recorded ChatGPT responses?</h2></div>
+            <p>These businesses appeared as competing recommendations in the same recorded benchmark responses.</p>
+          </div>
+          <div class="tdv-profile-competitors">
+            {competitors.map((c) => <span class="tdv-profile-competitor">{c}</span>)}
+          </div>
+        </section>
+      )}
+
+      <section class="tdv-profile-section tdv-profile-full-report" aria-labelledby="tdv-full-report-heading">
+        <div class="tdv-profile-section__heading">
+          <div><span class="tdv-profile-kicker">Deeper analysis</span><h2 id="tdv-full-report-heading">Want the complete search visibility picture?</h2></div>
+          <p>The public profile shows ChatGPT recommendation visibility. Additional channels are available in the Full Visibility Report.</p>
+        </div>
+        <div class="tdv-profile-gated-grid">
+          {gated.map(([name, text]) => (
+            <div class="tdv-profile-gated-card">
+              <div class="tdv-profile-gated-card__top"><strong>{name}</strong><span>By request</span></div>
+              <p>{text}</p>
+            </div>
+          ))}
+        </div>
+        <div class="tdv-profile-full-report__action">
+          <a class="tdv-card__cta tdv-report-modal-trigger" href="#tdv-full-report" data-tdv-report-open>Get the Full Visibility Report</a>
+        </div>
+      </section>
+
+      <section class="tdv-profile-section tdv-profile-methodology" aria-labelledby="tdv-methodology">
+        <div class="tdv-profile-section__heading">
+          <div><span class="tdv-profile-kicker">Methodology</span><h2 id="tdv-methodology">How we measure ChatGPT Visibility</h2></div>
+          <p>ChatGPT Visibility measures how prominently {d.name} appeared in {prompts} recorded, non-branded ChatGPT recommendation checks across three geographic market levels.</p>
+        </div>
+        <div class="tdv-methodology-flow" aria-label="Benchmark process">
+          <div><strong>10</strong><span>standardized checks</span></div>
+          <span aria-hidden="true">→</span>
+          <div><strong>3</strong><span>market levels</span></div>
+          <span aria-hidden="true">→</span>
+          <div><strong>70/20/10</strong><span>market weighting</span></div>
+          <span aria-hidden="true">→</span>
+          <div><strong>0–100</strong><span>visibility score</span></div>
+        </div>
+        <div class="tdv-methodology-subsection">
+          <div class="tdv-methodology-subsection__heading">
+            <h3>10 standardized recommendation checks</h3>
+            <p>Six prompts test the primary market, two test the secondary market and two test the regional market. The three market scores are combined using the original TDV first-method weighting: 70% / 20% / 10%.</p>
+          </div>
+          <div class="tdv-methodology-market-grid">
+            {markets.map((m) => (
+              <div>
+                <span class="tdv-methodology-count">{m.count}</span>
+                <strong>{m.method}</strong>
+                <p>{m.name}</p>
+              </div>
+            ))}
+          </div>
+          <p class="tdv-methodology-market-example"><strong>Market hierarchy for this profile:</strong> {markets.map((m) => m.name).join(' → ')}</p>
+        </div>
+        <div class="tdv-methodology-two-col">
+          <div class="tdv-methodology-info-card">
+            <span class="tdv-profile-kicker">Independent queries</span>
+            <h3>Each prompt is tested independently</h3>
+            <p>Each standardized prompt is entered in a separate new Temporary Chat with no previous benchmark conversation history.</p>
+            <p>For each prompt we record the returned response, observed recommendation position, market being tested and competing dispensaries surfaced in that response.</p>
+          </div>
+          <div class="tdv-methodology-info-card">
+            <span class="tdv-profile-kicker">Strict validation</span>
+            <h3>We require 10/10 valid results</h3>
+            <p>A public score is not calculated from a partial benchmark. The benchmark is READY only when all 10 standardized checks have a documented result.</p>
+            <p>If any recorded response is missing or cannot be classified, the profile remains <strong>Pending</strong> until the full 10-check benchmark is complete.</p>
+          </div>
+        </div>
+        <div class="tdv-methodology-subsection">
+          <div class="tdv-methodology-subsection__heading">
+            <h3>How the score is calculated</h3>
+            <p>Each result receives points based on recommendation prominence. We first calculate a score for each market, then combine the three market scores: <strong>Primary 70% + Secondary 20% + Regional 10%</strong>.</p>
+          </div>
+          <div class="tdv-profile-scoring-grid" aria-label="ChatGPT recommendation scoring">
+            {scoring.map(([k, v]) => <div><strong>{k}</strong><span>{v}</span></div>)}
+          </div>
+        </div>
+        <div class="tdv-methodology-two-col tdv-methodology-two-col--compact">
+          <div class="tdv-methodology-info-card">
+            <span class="tdv-profile-kicker">Benchmark source</span>
+            <h3>Only complete 10/10 benchmarks count</h3>
+            <p>This profile uses <strong>directly observed Temporary Chat results</strong>: 10 separately recorded responses and the original 70% / 20% / 10% geographic weighting. Web results and directories are not used to reconstruct the recorded ChatGPT positions.</p>
+          </div>
+          <div class="tdv-methodology-info-card">
+            <span class="tdv-profile-kicker">Scope</span>
+            <h3>What this score does — and does not — measure</h3>
+            <p>The public score measures ChatGPT recommendation visibility only. Google Organic, Google Maps, Menu SEO, Gemini and other provider analysis are separate and available in the Full Visibility Report.</p>
+          </div>
+        </div>
+        <div class="tdv-methodology-subsection tdv-methodology-bands-section">
+          <div class="tdv-methodology-subsection__heading">
+            <h3>How to read the composite score</h3>
+            <p>The composite supports comparison, but it does not describe geographic reach by itself. Read it together with the three market scores and the visibility pattern.</p>
+          </div>
+          <div class="tdv-methodology-bands" aria-label="ChatGPT Visibility patterns">
+            {bands.map(([k, v]) => <div><strong>{k}</strong><span>{v}</span></div>)}
+          </div>
+        </div>
+        <p class="tdv-profile-disclaimer"><strong>Benchmark note:</strong> This profile records standardized Temporary Chat checks rather than predicting what every user will see. ChatGPT responses can vary by date, model, location, available sources and wording. The score does not represent overall business quality, product quality, customer satisfaction or revenue performance.</p>
+      </section>
+
+      <aside class="tdv-profile-cta">
+        <div>
+          <span class="tdv-profile-kicker">Full visibility report</span>
+          <h2>See where {d.name} is losing search visibility.</h2>
+          <p>Request deeper Organic, Maps, Menu SEO and additional visibility analysis beyond the public ChatGPT benchmark.</p>
+        </div>
+        <a class="tdv-report-modal-trigger" href="#tdv-full-report" data-tdv-report-open>Get the Full Visibility Report</a>
+      </aside>
+
+      <div id="tdv-full-report" class="tdv-report-modal" hidden aria-hidden="true">
+        <div class="tdv-report-modal__backdrop" data-tdv-report-close></div>
+        <div class="tdv-report-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="tdv-report-form-title" tabindex="-1">
+          <button class="tdv-report-modal__close" type="button" aria-label="Close report request form" data-tdv-report-close>
+            <span aria-hidden="true">×</span>
+          </button>
+          <div class="tdv-profile-report-form">
+            <div class="tdv-report-modal__form" data-tdv-report-form>
+              <form class="tdv-report-form" action="https://api.web3forms.com/submit" method="POST" data-tdv-form>
+                <input type="hidden" name="access_key" value={accessKey} />
+                <input type="hidden" name="subject" value={`Full Visibility Report request: ${d.name}`} />
+                <input type="hidden" name="from_name" value="tarasovs.me" />
+                <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+                <input type="hidden" name="dispensary_name" value={d.name} />
+                <input type="hidden" name="dispensary_id" value={d.dispensary_key} />
+                <input type="hidden" name="dispensary_website" value={d.website_url} />
+                <input type="hidden" name="profile_url" value={abs(path)} />
+                <input type="hidden" name="ai_score" value={String(score)} />
+                <input type="hidden" name="lead_source" value="dispensary_visibility_profile" />
+                <div class="tdv-report-form__header">
+                  <h3 id="tdv-report-form-title">Get the Full Visibility Report</h3>
+                  <p><br />Request the complete search visibility analysis, including<br />Google Organic, Google Maps, AI Search and Menu SEO findings.</p>
+                </div>
+                <div class="tdv-report-form__grid">
+                  <div class="tdv-report-form__field">
+                    <p><label for="tdv-name">Your name</label><input id="tdv-name" type="text" name="name" autocomplete="name" required maxlength="400" placeholder="Your name" /></p>
+                  </div>
+                  <div class="tdv-report-form__field">
+                    <p><label for="tdv-email">Work email</label><input id="tdv-email" type="email" name="email" autocomplete="email" required maxlength="400" placeholder="you@company.com" /></p>
+                  </div>
+                </div>
+                <div class="tdv-report-form__field tdv-report-form__field--full">
+                  <p><label for="tdv-message"><br />Anything specific you want us to check?<br /><span>(optional)</span><br /></label><textarea id="tdv-message" name="message" rows="4" maxlength="2000" placeholder="For example: Google Maps rankings, AI visibility, menu SEO..."></textarea></p>
+                </div>
+                <div class="tdv-report-form__submit">
+                  <p><br /><input type="submit" value="Send My Full Visibility Report" data-tdv-submit /></p>
+                </div>
+                <p class="tdv-report-form__privacy"><br />No spam. We'll use your details only to respond to this visibility report request.</p>
+                <p class="tdv-report-form__error" role="status" aria-live="polite" data-tdv-status></p>
+              </form>
+            </div>
+            <div class="tdv-report-success" data-tdv-report-success hidden>
+              <div class="tdv-report-success__icon" aria-hidden="true">✓</div>
+              <span class="tdv-profile-kicker">Request received</span>
+              <h2 id="tdv-report-modal-title" tabindex="-1">Your Full Visibility Report request is in.</h2>
+              <p>We’ll review the available search visibility data and send the report to your work email.</p>
+              <button type="button" class="tdv-report-success__button" data-tdv-report-close>Back to visibility profile</button>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
-  </article>
+    </article>
+  </div>
 </Base>
 
-<style>
-  .profile { max-width: calc(1040px + 2 * var(--gutter)); padding-block: var(--space-6) var(--space-8); }
-  .crumbs ol { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-2); padding: 0; list-style: none; font-size: var(--text-xs); color: var(--color-text-muted); }
-  .crumbs li + li::before { content: '/'; margin-right: var(--space-2); opacity: 0.6; }
-  .crumbs a { color: inherit; text-decoration: none; }
-  .crumbs a:hover { color: var(--color-link); text-decoration: underline; }
-  .profile-head { margin-top: var(--space-6); }
-  .profile-title { margin-top: var(--space-3); font-size: var(--text-h2); }
-  .profile-place { margin-top: var(--space-2); color: var(--color-text-muted); font-size: var(--text-lg); }
-  .pending { margin-top: var(--space-6); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
-  .pending p + p { margin-top: var(--space-3); }
+<script>
+  // Full Visibility Report modal (same behaviour as the plugin's tdv-profile-modal.js) + Web3Forms submit.
+  const modal = document.getElementById('tdv-full-report');
+  if (modal) {
+    if (modal.parentNode !== document.body) document.body.appendChild(modal);
+    const dialog = modal.querySelector<HTMLElement>('.tdv-report-modal__dialog')!;
+    const formWrap = modal.querySelector<HTMLElement>('[data-tdv-report-form]')!;
+    const success = modal.querySelector<HTMLElement>('[data-tdv-report-success]')!;
+    const form = modal.querySelector<HTMLFormElement>('[data-tdv-form]')!;
+    const submit = form.querySelector<HTMLInputElement>('[data-tdv-submit]')!;
+    const status = form.querySelector<HTMLElement>('[data-tdv-status]')!;
+    let lastFocus: HTMLElement | null = null;
 
-  .scorecard { display: grid; gap: var(--space-5); margin-top: var(--space-6); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); }
-  .score { display: flex; align-items: baseline; gap: var(--space-1); font-family: var(--font-title); }
-  .score strong { font-size: clamp(3.2rem, 2.4rem + 3vw, 4.8rem); line-height: 1; font-weight: 600; color: var(--color-heading); }
-  .score span { font-size: var(--text-lg); color: var(--color-text-muted); }
-  .score-label { margin-top: var(--space-1); color: var(--color-text-muted); font-size: var(--text-sm); }
-  .meter { height: 10px; margin-top: var(--space-4); border-radius: var(--radius-pill); background: var(--color-surface-2); overflow: hidden; }
-  .meter span { display: block; height: 100%; border-radius: inherit; background: var(--brand-violet); }
-  .chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-4); }
-  .band, .chip { padding: 0.15rem 0.65rem; border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 600; }
-  .chip { border: 1px solid var(--color-border); }
-  .band--strong { background: color-mix(in srgb, #16a34a 16%, transparent); }
-  .band--limited { background: color-mix(in srgb, var(--brand-yellow) 26%, transparent); }
-  .band--low { background: color-mix(in srgb, #f97316 18%, transparent); }
-  .band--almost-invisible { background: color-mix(in srgb, #dc2626 16%, transparent); }
-  .score-facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); margin: 0; }
-  .score-facts dt { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
-  .score-facts dd { margin: var(--space-1) 0 0; font-weight: 600; }
+    const open = (e?: Event) => {
+      e?.preventDefault();
+      lastFocus = document.activeElement as HTMLElement;
+      modal.hidden = false;
+      modal.setAttribute('aria-hidden', 'false');
+      document.documentElement.classList.add('tdv-modal-open');
+      document.body.classList.add('tdv-modal-open');
+      requestAnimationFrame(() => {
+        modal.classList.add('is-open');
+        dialog.focus({ preventScroll: true });
+      });
+    };
+    const close = (e?: Event) => {
+      e?.preventDefault();
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.documentElement.classList.remove('tdv-modal-open');
+      document.body.classList.remove('tdv-modal-open');
+      setTimeout(() => {
+        modal.hidden = true;
+        lastFocus?.focus({ preventScroll: true });
+      }, 180);
+    };
+    document.querySelectorAll('[data-tdv-report-open]').forEach((t) => t.addEventListener('click', open));
+    modal.querySelectorAll('[data-tdv-report-close]').forEach((c) => c.addEventListener('click', close));
+    document.addEventListener('keydown', (e) => {
+      if (modal.hidden) return;
+      if (e.key === 'Escape') return close(e);
+      if (e.key !== 'Tab') return;
+      const focusable = [...dialog.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), input:not([type="hidden"]):not(.hp):not([disabled]), textarea:not([disabled])')].filter((el) => el.offsetParent);
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) (e.preventDefault(), last.focus());
+      else if (!e.shiftKey && document.activeElement === last) (e.preventDefault(), first.focus());
+    });
 
-  .section { margin-top: var(--space-8); }
-  .section h2 { font-size: var(--text-h3); }
-  .muted { margin-block: var(--space-2) var(--space-5); color: var(--color-text-muted); font-size: var(--text-sm); max-width: 60ch; }
-  .markets { display: grid; gap: var(--space-3); padding: 0; list-style: none; }
-  .markets li { padding: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
-  .market-level { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-muted); }
-  .market-level span { text-transform: none; letter-spacing: 0; }
-  .market-name { margin-top: var(--space-1); font-weight: 600; }
-  .market-row { display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-3); }
-  .market-bar { flex: 1; height: 8px; border-radius: var(--radius-pill); background: var(--color-surface-2); overflow: hidden; }
-  .market-bar span { display: block; height: 100%; border-radius: inherit; background: var(--brand-violet); }
-  .market-score { font-variant-numeric: tabular-nums; font-size: var(--text-sm); }
-
-  .table-wrap { overflow-x: auto; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
-  table { width: 100%; min-width: 680px; font-size: var(--text-sm); }
-  th, td { padding: var(--space-3) var(--space-4); text-align: left; vertical-align: top; border-bottom: 1px solid var(--color-border); }
-  th { font-weight: 600; color: var(--color-text-muted); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.06em; background: var(--color-surface-2); }
-  tbody tr:last-child td { border-bottom: 0; }
-  .scope { display: inline-block; margin-right: var(--space-1); padding: 0 0.4rem; border-radius: 4px; background: var(--color-surface-2); font-size: var(--text-xs); }
-  .result { white-space: nowrap; padding: 0.1rem 0.5rem; border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 600; }
-  .result--top { background: color-mix(in srgb, #16a34a 16%, transparent); }
-  .result--mid { background: color-mix(in srgb, var(--brand-yellow) 26%, transparent); }
-  .result--none { background: color-mix(in srgb, #dc2626 12%, transparent); }
-  .competitors { color: var(--color-text-muted); font-size: var(--text-xs); }
-
-  .aside { padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); }
-  .aside p + p { margin-top: var(--space-4); }
-  .small { font-size: var(--text-xs); color: var(--color-text-muted); }
-  .links { display: flex; flex-wrap: wrap; gap: var(--space-3); }
-
-  /* Phones: each prompt becomes a stacked card instead of a sideways-scrolling table */
-  @media (max-width: 39.99em) {
-    .table-wrap { overflow: visible; border: 0; background: none; }
-    table { min-width: 0; }
-    thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-    tbody { display: grid; gap: var(--space-3); }
-    tbody tr { display: grid; gap: var(--space-2); padding: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
-    tbody td { display: grid; grid-template-columns: 7.5rem 1fr; gap: var(--space-3); padding: 0; border: 0; }
-    tbody td.q { display: block; font-weight: 600; }
-    tbody td[data-label]::before { content: attr(data-label); font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
-    .result { justify-self: start; }
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const label = submit.value;
+      submit.disabled = true;
+      submit.value = 'Sending…';
+      status.textContent = '';
+      try {
+        const res = await fetch(form.action, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data.success) throw new Error(data.message || `HTTP ${res.status}`);
+        form.reset();
+        formWrap.hidden = true;
+        success.hidden = false;
+        success.querySelector<HTMLElement>('h2')?.focus({ preventScroll: true });
+      } catch {
+        status.textContent = 'Sorry, the request could not be sent. Please try again or email hello@tarasovs.me.';
+      } finally {
+        submit.disabled = false;
+        submit.value = label;
+      }
+    });
   }
-  @media (min-width: 40em) {
-    .scorecard { grid-template-columns: 1.1fr 1fr; align-items: center; gap: var(--space-7); padding: var(--space-6); }
-    .markets { grid-template-columns: repeat(3, 1fr); }
-  }
+</script>
+
+<style is:global>
+  .tdv-report-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .tdv-report-form__error:empty { display: none; }
+  .tdv-report-form__error { margin-top: 10px; color: #a94335; font-size: 13px; }
 </style>
