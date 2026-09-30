@@ -1,34 +1,128 @@
 ---
-// GA4 (Google tag) + Microsoft Clarity. Nothing loads until the visitor first interacts
-// (pointer, key, scroll, touch), and only on the production host, so PageSpeed/test URLs stay clean.
 import { ANALYTICS } from '../lib/site';
 const { googleTagId, clarityId, hosts } = ANALYTICS;
 ---
+<aside class="analytics-consent" id="analytics-consent" aria-labelledby="analytics-consent-title" hidden>
+  <div>
+    <h2 id="analytics-consent-title">Analytics cookies</h2>
+    <p>May we use Google Analytics and Microsoft Clarity to understand how people use this site? They load only if you agree. <a href="/privacy-cookie-policy-tarasovs-digital-agency/">Privacy policy</a></p>
+  </div>
+  <div class="analytics-consent-actions">
+    <button type="button" data-analytics-choice="denied">Reject</button>
+    <button type="button" data-analytics-choice="granted">Accept analytics</button>
+  </div>
+</aside>
+
 <script is:inline define:vars={{ googleTagId, clarityId, hosts }}>
   (function () {
-    if (hosts.indexOf(location.hostname) === -1) return;
+    var isProduction = hosts.indexOf(location.hostname) !== -1;
+    var isLocalPreview = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+    if (!isProduction && !isLocalPreview) return;
+
+    var banner = document.getElementById('analytics-consent');
+    var settings = document.querySelector('[data-analytics-settings]');
+    var storageKey = 'tarasovs-analytics-consent';
+    var choice;
     var loaded = false;
-    var events = ['pointerdown', 'keydown', 'scroll', 'touchstart'];
-    function load() {
-      if (loaded) return;
+
+    try { choice = localStorage.getItem(storageKey); } catch (e) {}
+
+    function loadAnalytics() {
+      if (loaded || !isProduction) return;
       loaded = true;
-      events.forEach(function (e) { removeEventListener(e, load, true); });
-      // Google tag
+
       window.dataLayer = window.dataLayer || [];
-      window.gtag = function () { dataLayer.push(arguments); };
-      gtag('js', new Date());
-      gtag('config', googleTagId);
-      var g = document.createElement('script');
-      g.async = true;
-      g.src = 'https://www.googletagmanager.com/gtag/js?id=' + googleTagId;
-      document.head.appendChild(g);
-      // Microsoft Clarity
-      (function (c, l, a, r, i, t, y) {
-        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
-        t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
-        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-      })(window, document, 'clarity', 'script', clarityId);
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+      window.gtag('js', new Date());
+      window.gtag('consent', 'update', { analytics_storage: 'granted' });
+      window.gtag('config', googleTagId);
+      var google = document.createElement('script');
+      google.async = true;
+      google.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(googleTagId);
+      document.head.appendChild(google);
+
+      window.clarity = window.clarity || function () {
+        (window.clarity.q = window.clarity.q || []).push(arguments);
+      };
+      window.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: 'granted' });
+      var clarity = document.createElement('script');
+      clarity.async = true;
+      clarity.src = 'https://www.clarity.ms/tag/' + encodeURIComponent(clarityId);
+      document.head.appendChild(clarity);
     }
-    events.forEach(function (e) { addEventListener(e, load, { capture: true, passive: true, once: true }); });
+
+    if (settings) {
+      settings.hidden = false;
+      settings.addEventListener('click', function () {
+        banner.hidden = false;
+        banner.querySelector('button').focus();
+      });
+    }
+
+    if (choice === 'granted') loadAnalytics();
+    else if (choice !== 'denied') banner.hidden = false;
+
+    banner.addEventListener('click', function (event) {
+      var button = event.target.closest('[data-analytics-choice]');
+      if (!button) return;
+      choice = button.getAttribute('data-analytics-choice');
+      try { localStorage.setItem(storageKey, choice); } catch (e) {}
+      banner.hidden = true;
+      if (choice === 'granted') {
+        loadAnalytics();
+      } else if (loaded) {
+        window.gtag('consent', 'update', { analytics_storage: 'denied' });
+        window.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: 'denied' });
+        location.reload();
+      }
+    });
   })();
 </script>
+
+<style>
+  .analytics-consent[hidden] { display: none; }
+  .analytics-consent {
+    position: fixed;
+    z-index: 1000;
+    right: var(--space-4);
+    bottom: var(--space-4);
+    left: var(--space-4);
+    display: grid;
+    gap: var(--space-4);
+    max-width: 46rem;
+    margin-inline: auto;
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-md);
+    color: var(--color-text);
+  }
+  .analytics-consent h2 { font-size: var(--text-lg); }
+  .analytics-consent p { margin-top: var(--space-1); font-size: var(--text-sm); }
+  .analytics-consent-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  .analytics-consent button {
+    min-height: 44px;
+    padding: 0.55rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    color: var(--color-heading);
+    font-weight: 600;
+  }
+  .analytics-consent button[data-analytics-choice='granted'] {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+  @media (min-width: 40em) {
+    .analytics-consent { grid-template-columns: 1fr auto; align-items: center; }
+    .analytics-consent-actions { flex-wrap: nowrap; }
+  }
+</style>

@@ -115,7 +115,7 @@ const stats = [
 
   <section class="hero container" aria-labelledby="hero-title">
     <p class="hero-badge"><a href="/services/geo-ai-search-optimization/"><span>New</span> GEO AI Search Optimization</a></p>
-    <h1 id="hero-title">We build websites that get found <span class="hl">on Google and in AI</span></h1>
+    <h1 id="hero-title">We build websites that get found <span class="hl">on Google and in <span class="visually-hidden">ChatGPT, Gemini, and Claude</span><span class="hero-ai-name" aria-hidden="true"><span data-ai-name>ChatGPT</span></span></span></h1>
     <p class="hero-lead">Based in Europe. Serving clients in the US, UK, EU, and beyond</p>
     <p class="actions">
       <a class="button" href="/contact-us/#CForm">Start a Project</a>
@@ -270,6 +270,41 @@ const stats = [
       <p class="faq-more">Still have questions? <a href="/contact-us/#CForm">Contact Us</a></p>
     </div>
   </section>
+<script>
+  const name = document.querySelector<HTMLElement>('[data-ai-name]');
+  if (name && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const names = ['ChatGPT', 'Gemini', 'Claude'];
+    name.parentElement?.classList.add('is-typing');
+    let index = 0;
+    let length = names[0].length;
+    let deleting = true;
+
+    const tick = () => {
+      if (deleting) {
+        length--;
+        name.textContent = names[index].slice(0, length);
+        if (length === 0) {
+          index = (index + 1) % names.length;
+          deleting = false;
+          window.setTimeout(tick, 250);
+        } else {
+          window.setTimeout(tick, 70);
+        }
+      } else {
+        length++;
+        name.textContent = names[index].slice(0, length);
+        if (length === names[index].length) {
+          deleting = true;
+          window.setTimeout(tick, 1700);
+        } else {
+          window.setTimeout(tick, 110);
+        }
+      }
+    };
+
+    window.setTimeout(tick, 1700);
+  }
+</script>
 </Base>
 
 <style>
@@ -290,6 +325,26 @@ const stats = [
   .hero-badge a:hover { border-color: var(--brand-violet); }
   .hero-badge span { padding: 0.15rem 0.6rem; border-radius: var(--radius-pill); background: var(--color-highlight); color: var(--color-on-highlight); font-size: var(--text-xs); font-weight: 600; }
   .hero h1 { margin-top: var(--space-5); max-width: 16ch; font-size: clamp(2.5rem, 1.6rem + 4vw, 5rem); }
+  .hero h1 .hl {
+    background-image: linear-gradient(#812442, #812442), linear-gradient(rgb(124 58 237 / 0.35), rgb(124 58 237 / 0.35));
+    background-size: 100% 0%, 100% 0.35em;
+    background-position: 0 100%, 0 88%;
+    transition: background-size 420ms var(--ease);
+  }
+  .hero-ai-name { display: inline-block; min-width: 8ch; white-space: nowrap; }
+  .hero-ai-name.is-typing [data-ai-name]::after {
+    content: '|';
+    margin-left: 0.02em;
+    font-weight: 400;
+    animation: hero-caret 0.9s steps(1, end) infinite;
+  }
+  @keyframes hero-caret { 50% { opacity: 0; } }
+  @media (hover: hover) {
+    .hero h1:hover .hl {
+      background-size: 100% 0%, 100% 1.1em;
+      transition-delay: 500ms;
+    }
+  }
   .hero-lead { margin-top: var(--space-5); color: var(--color-text-muted); font-size: var(--text-lg); }
   .actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
 

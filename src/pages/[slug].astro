@@ -53,11 +53,6 @@ const jsonld = [
         )}
       </p>
     </header>
-    {d.cover && (
-      <figure class="post-cover container">
-        <img src={d.cover.src} alt={d.cover.alt ?? ''} width={d.cover.width} height={d.cover.height} fetchpriority="high" decoding="async" />
-      </figure>
-    )}
     <div class="post-body prose container container-prose">
       <Content />
     </div>
@@ -78,8 +73,6 @@ const jsonld = [
     text-wrap: balance;
   }
   .post-meta { margin-top: var(--space-4); color: var(--color-text-muted); font-size: var(--text-sm); }
-  .post-cover { max-width: calc(1040px + 2 * var(--gutter)); margin-bottom: var(--space-7); }
-  .post-cover img { width: 100%; max-height: 640px; object-fit: cover; border-radius: var(--radius-lg); }
   /* Posts built with ta- components were laid out for a wider Elementor column */
   .post-body:has(.ta-post) { max-width: calc(960px + 2 * var(--gutter)); }
   article:has(.ta-post) > header { max-width: calc(960px + 2 * var(--gutter)); }

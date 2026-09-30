@@ -12,10 +12,10 @@ export const POSTS_PER_PAGE = 12; // WordPress Settings > Reading (verified on t
 
 export const abs = (path: string) => new URL(path, SITE.url).href;
 
-// Analytics (loaded after the first user interaction, production host only).
-// GA: the live WordPress site loads Google tag GT-TWDLC4K (via Site Kit); swap in the G- measurement ID if preferred.
+// Analytics loads only after consent and only on the production host (the banner is previewable locally).
+// GA4 measurement ID from the live site's Google tag GT-TWDLC4K (Site Kit).
 export const ANALYTICS = {
-  googleTagId: 'GT-TWDLC4K',
+  googleTagId: 'G-388XNVWWFV',
   clarityId: 'y24o0f1krl',
   hosts: ['tarasovs.me', 'www.tarasovs.me'],
 };

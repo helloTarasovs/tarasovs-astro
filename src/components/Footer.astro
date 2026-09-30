@@ -45,6 +45,7 @@ import { CONTACT, SOCIAL, LEGAL } from '../lib/nav';
       <div class="footer-bottom reveal">
         <ul class="footer-legal">
           {LEGAL.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+          <li><button type="button" data-analytics-settings aria-controls="analytics-consent" hidden>Cookie settings</button></li>
         </ul>
         <p>&copy; {new Date().getFullYear()} Tarasovs Digital Agency</p>
       </div>
@@ -91,7 +92,10 @@ import { CONTACT, SOCIAL, LEGAL } from '../lib/nav';
   .footer-card .footer-label:not(:first-child) { margin-top: var(--space-5); }
   .footer-social, .footer-legal { list-style: none; padding: 0; }
   .footer-social { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4); margin-top: var(--space-2); }
-  .footer-social a, .footer-legal a { display: inline-block; padding-block: var(--space-1); }
+  .footer-social a, .footer-legal a, .footer-legal button { display: inline-block; padding-block: var(--space-1); }
+  .footer-legal button { border: 0; background: none; color: var(--color-footer-muted); font: inherit; text-align: left; text-decoration: none; }
+  .footer-legal button[hidden] { display: none; }
+  .footer-legal button:hover { color: var(--color-footer-text); text-decoration: underline; }
   .footer-cta-text { font-size: var(--text-lg); max-width: 22ch; margin-bottom: var(--space-4); text-wrap: balance; }
   .footer-card .footer-cta .button { color: var(--color-on-highlight); }
   .footer-card .footer-cta .button:hover { text-decoration: none; }
