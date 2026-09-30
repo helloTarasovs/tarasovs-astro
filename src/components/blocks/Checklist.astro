@@ -8,7 +8,7 @@ const { items, reveal = false } = Astro.props;
 
 <style>
   .checklist { display: grid; gap: var(--space-1); padding: 0; list-style: none; font-size: var(--text-sm); }
-  li { position: relative; padding: var(--space-1) var(--space-4) var(--space-1) calc(var(--space-4) + 1.6em); border-radius: var(--radius-sm); background: var(--color-surface); border: 1px solid var(--color-border); }
+  li { position: relative; padding: var(--space-1) var(--space-4) var(--space-1) calc(var(--space-4) + 1.6em); border-radius: var(--radius-sm); background: var(--color-surface); }
   li::before {
     content: '';
     position: absolute;
@@ -16,8 +16,8 @@ const { items, reveal = false } = Astro.props;
     top: 0.75em;
     width: 0.9em;
     height: 0.5em;
-    border-left: 2px solid var(--brand-violet);
-    border-bottom: 2px solid var(--brand-violet);
+    border-left: 2px solid #ecc700;
+    border-bottom: 2px solid #ecc700;
     transform: rotate(-45deg);
   }
   @media (min-width: 40em) { .checklist { grid-template-columns: repeat(2, 1fr); } }
