@@ -41,7 +41,7 @@
   --gutter: clamp(1rem, 4vw, 2rem);
 
   /* Layout */
-  --container: 1344px;
+  --container: 1206px;
   --container-prose: 760px;
   --header-h: 72px;
 

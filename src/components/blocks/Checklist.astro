@@ -7,13 +7,13 @@ const { items, reveal = false } = Astro.props;
 </ul>
 
 <style>
-  .checklist { display: grid; gap: var(--space-3); padding: 0; list-style: none; }
-  li { position: relative; padding: var(--space-3) var(--space-4) var(--space-3) calc(var(--space-4) + 1.6em); border-radius: var(--radius-sm); background: var(--color-surface); border: 1px solid var(--color-border); }
+  .checklist { display: grid; gap: var(--space-1); padding: 0; list-style: none; font-size: var(--text-sm); }
+  li { position: relative; padding: var(--space-1) var(--space-4) var(--space-1) calc(var(--space-4) + 1.6em); border-radius: var(--radius-sm); background: var(--color-surface); border: 1px solid var(--color-border); }
   li::before {
     content: '';
     position: absolute;
     left: calc(var(--space-4) + 0.15em);
-    top: 1.15em;
+    top: 0.75em;
     width: 0.9em;
     height: 0.5em;
     border-left: 2px solid var(--brand-violet);

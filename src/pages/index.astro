@@ -3,6 +3,7 @@
 // SEO fields from pages.json; FAQPage JSON-LD from the live page (src/content/home-faq.json).
 import Base from '../layouts/Base.astro';
 import PortfolioGrid from '../components/PortfolioGrid.astro';
+import Marquee from '../components/Marquee.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Cards from '../components/blocks/Cards.astro';
 import Faq from '../components/blocks/Faq.astro';
@@ -114,20 +115,22 @@ const stats = [
 <Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld}>
 
   <section class="hero container" aria-labelledby="hero-title">
-    <p class="hero-badge"><a href="/services/geo-ai-search-optimization/"><span>New</span> GEO AI Search Optimization</a></p>
-    <h1 id="hero-title" aria-label="We build websites that get found on Google and in AI">We build websites that get found <span class="hl">on Google and in <span class="hero-ai-name"><span data-ai-name>AI</span></span></span></h1>
-    <p class="hero-lead">Based in Europe. Serving clients in the US, UK, EU, and beyond</p>
-    <p class="actions">
-      <a class="button" href="/contact-us/#CForm">Start a Project</a>
-      <a class="button button--ghost" href="/case-studies/">View Our Work</a>
-    </p>
+    <div class="hero-panel">
+      <p class="hero-badge"><a href="/services/geo-ai-search-optimization/"><span>New</span> GEO AI Search Optimization <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6" /></svg></a></p>
+      <h1 id="hero-title" aria-label="We build websites that get found on Google and in AI">We build websites that get found <span class="hl">on Google and in <span class="hero-ai-name"><span data-ai-name>AI</span></span></span></h1>
+      <p class="hero-lead">Based in Europe. Serving clients in the US, UK, EU, and beyond</p>
+      <p class="actions">
+        <a class="button" href="/contact-us/#CForm">Start a Project</a>
+        <a class="button button--ghost" href="/case-studies/">View Our Work</a>
+      </p>
+    </div>
   </section>
 
   <section class="section container" aria-labelledby="work-title">
     <h2 id="work-title" class="visually-hidden">Selected work</h2>
     {/* LCP on home is the h1 at every width (measured), so no image preload here */}
-    <PortfolioGrid projects={projects} />
-    <p class="more"><a class="button button--ghost" href="/case-studies/">View All Work</a></p>
+    <PortfolioGrid projects={projects} variant="overlay" />
+    <p class="more"><a class="button" href="/case-studies/"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5" /><path d="M9 15 15 9M10 9h5v5" /></svg> View All Work</a></p>
   </section>
 
   <section class="section container" aria-labelledby="studio-title">
@@ -148,6 +151,8 @@ const stats = [
       ))}
     </ul>
   </section>
+
+  <div class="container"><Marquee words={['Scale', 'AI Citation', 'Keyword Research', 'Showcase', 'Unlock', 'Connect']} /></div>
 
   <section class="section container" aria-labelledby="build-title">
     <div class="head reveal">
@@ -208,7 +213,7 @@ const stats = [
   </section>
 
   <section class="section container" aria-labelledby="reviews-title">
-    <h2 id="reviews-title" class="visually-hidden">What clients say</h2>
+    <div class="head reveal"><h2 id="reviews-title">What our clients say about us</h2></div>
     <ul class="testimonials">
       {testimonials.map((t) => (
         <li class="reveal">
@@ -236,19 +241,19 @@ const stats = [
 
   <section class="section container" aria-labelledby="founder-title">
     <div class="founder reveal">
-      <div>
+      <div class="founder-head">
         <h2 id="founder-title">A Founder-Led Digital Studio for International Clients</h2>
         <p class="intro">We work with startups, service businesses, agencies, and growing brands across the United States, Europe, and international markets. Every project is personally led by <a href="/about/">Yurii Tarasov</a>, combining 15+ years of web design and development experience with a modern approach to Framer, SEO, and AI-powered search visibility. You get direct communication, clear project structure, attention to detail, and the quality of an agency without unnecessary layers or communication gaps.</p>
       </div>
-      <div class="founder-stats">
-        <p class="worldwide">
-          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-2.9a15.7 15.7 0 0 0-1.4-3.6A8 8 0 0 1 18.9 8ZM12 4a13.9 13.9 0 0 1 1.9 4h-3.8A13.9 13.9 0 0 1 12 4ZM4.3 14a8.2 8.2 0 0 1 0-4h3.4a16.5 16.5 0 0 0 0 4H4.3Zm.8 2h2.9a15.7 15.7 0 0 0 1.4 3.6A8 8 0 0 1 5.1 16ZM8 8H5.1a8 8 0 0 1 4.3-3.6A15.7 15.7 0 0 0 8 8Zm4 12a13.9 13.9 0 0 1-1.9-4h3.8A13.9 13.9 0 0 1 12 20Zm2.3-6H9.7a14.6 14.6 0 0 1 0-4h4.6a14.6 14.6 0 0 1 0 4Zm.3 5.6a15.7 15.7 0 0 0 1.4-3.6h2.9a8 8 0 0 1-4.3 3.6Zm1.7-5.6a16.5 16.5 0 0 0 0-4h3.4a8.2 8.2 0 0 1 0 4h-3.4Z" /></svg>
-          Europe-based, <span class="hl">working worldwide</span>
-        </p>
-        <ul class="stats">
-          {stats.map((s) => <li><span class="value">{s.value}</span><span class="label" set:html={s.label} /></li>)}
-        </ul>
-      </div>
+      <ul class="founder-cards">
+        <li class="fcard">
+          <span class="fcard-icon" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-2.9a15.7 15.7 0 0 0-1.4-3.6A8 8 0 0 1 18.9 8ZM12 4a13.9 13.9 0 0 1 1.9 4h-3.8A13.9 13.9 0 0 1 12 4ZM4.3 14a8.2 8.2 0 0 1 0-4h3.4a16.5 16.5 0 0 0 0 4H4.3Zm.8 2h2.9a15.7 15.7 0 0 0 1.4 3.6A8 8 0 0 1 5.1 16ZM8 8H5.1a8 8 0 0 1 4.3-3.6A15.7 15.7 0 0 0 8 8Zm4 12a13.9 13.9 0 0 1-1.9-4h3.8A13.9 13.9 0 0 1 12 20Zm2.3-6H9.7a14.6 14.6 0 0 1 0-4h4.6a14.6 14.6 0 0 1 0 4Zm.3 5.6a15.7 15.7 0 0 0 1.4-3.6h2.9a8 8 0 0 1-4.3 3.6Zm1.7-5.6a16.5 16.5 0 0 0 0-4h3.4a8.2 8.2 0 0 1 0 4h-3.4Z" /></svg>
+          </span>
+          <p class="flabel">Europe-based, <span class="hl">working worldwide</span></p>
+        </li>
+        {stats.map((s) => <li class="fcard"><span class="fvalue">{s.value}</span><span class="flabel" set:html={s.label} /></li>)}
+      </ul>
     </div>
   </section>
 
@@ -311,29 +316,48 @@ const stats = [
 </Base>
 
 <style>
-  .hero { padding-block: var(--space-8) var(--space-7); }
+  /* Hero panel: lilac card like the live page (#d1bcf5 light, #331d58 dark) */
+  .hero { padding-block: var(--space-6) var(--space-5); }
+  .hero-panel {
+    --hp-bg: #d1bcf5;
+    --hp-text: #111013;
+    --hp-line: #7c3aed;
+    --hp-chip: rgb(17 16 19 / 0.08);
+    padding: 3.4rem var(--space-5) 4.5rem;
+    border-radius: var(--radius-md);
+    background: var(--hp-bg);
+    color: var(--hp-text);
+    text-align: center;
+  }
+  :global(:root[data-theme='dark']) .hero-panel { --hp-bg: #331d58; --hp-text: #ffffff; --hp-line: #ffffff; --hp-chip: rgb(255 255 255 / 0.12); }
+  @media (prefers-color-scheme: dark) {
+    :global(:root:not([data-theme='light'])) .hero-panel { --hp-bg: #331d58; --hp-text: #ffffff; --hp-line: #ffffff; --hp-chip: rgb(255 255 255 / 0.12); }
+  }
   .hero-badge a {
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
     min-height: 36px;
-    padding: 0.3rem 0.9rem 0.3rem 0.3rem;
-    border: 1px solid var(--color-border);
+    padding: 0.3rem 0.7rem 0.3rem 0.3rem;
     border-radius: var(--radius-pill);
-    background: var(--color-surface);
-    color: var(--color-text);
+    background: var(--hp-chip);
+    color: var(--hp-text);
     font-size: var(--text-sm);
     text-decoration: none;
   }
-  .hero-badge a:hover { border-color: var(--brand-violet); }
+  .hero-badge a:hover { color: var(--hp-text); box-shadow: 0 0 0 2px var(--hp-line) inset; }
   .hero-badge span { padding: 0.15rem 0.6rem; border-radius: var(--radius-pill); background: var(--color-highlight); color: var(--color-on-highlight); font-size: var(--text-xs); font-weight: 600; }
-  .hero h1 { margin-top: var(--space-5); max-width: 16ch; font-size: clamp(2.5rem, 1.6rem + 4vw, 5rem); }
-  .hero h1 .hl {
-    background-image: linear-gradient(#812442, #812442), linear-gradient(rgb(124 58 237 / 0.35), rgb(124 58 237 / 0.35));
-    background-size: 100% 0%, 100% 0.35em;
-    background-position: 0 100%, 0 88%;
-    transition: background-size 420ms var(--ease);
+  .hero-badge svg { flex: none; }
+  .hero h1 {
+    margin: var(--space-4) auto 0;
+    max-width: 13.5em;
+    color: var(--hp-text);
+    font-size: clamp(2.4rem, 1.5rem + 3.2vw, 4.05rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.045em;
   }
+  .hero h1 .hl { background: none; }
   .hero-ai-name { white-space: nowrap; }
   .hero-ai-name.is-typing { display: inline-block; min-width: 8ch; }
   .hero-ai-name.is-typing [data-ai-name]::after {
@@ -343,19 +367,24 @@ const stats = [
     animation: hero-caret 0.9s steps(1, end) infinite;
   }
   @keyframes hero-caret { 50% { opacity: 0; } }
-  @media (hover: hover) {
-    .hero h1:hover .hl {
-      background-size: 100% 0%, 100% 1.1em;
-      transition-delay: 500ms;
-    }
+  .hero-lead { margin-top: var(--space-4); color: var(--hp-text); font-size: 1.09rem; font-weight: 600; letter-spacing: -0.01em; }
+  :global(:root[data-theme='dark']) .hero-lead { opacity: 0.85; }
+  .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-3); margin-top: var(--space-5); }
+  .hero .actions { margin-top: 2.1rem; }
+  .hero-panel .button { min-height: 52px; padding-inline: 1.5rem; }
+  .hero .hero-panel .button.button--ghost { border: 1px solid var(--hp-line); background: transparent; color: var(--hp-line); opacity: 1; }
+  .hero .hero-panel .button.button--ghost:hover { background: var(--hp-line); color: var(--hp-bg); }
+  :global(:root[data-theme='dark']) .hero-panel .button:not(.button--ghost) { background: #48484a; color: #fff; }
+  @media (max-width: 40em) {
+    .hero-panel { padding-block: 3rem 3.5rem; }
+    .hero .actions { flex-direction: column; align-items: center; }
   }
-  .hero-lead { margin-top: var(--space-5); color: var(--color-text-muted); font-size: var(--text-lg); }
-  .actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
 
   .section { padding-block: var(--space-8); }
   .head { max-width: 50rem; margin-bottom: var(--space-6); }
-  .intro { margin-top: var(--space-4); color: var(--color-text-muted); font-size: var(--text-lg); }
+  .intro { margin-top: var(--space-4); color: var(--color-text-muted); font-size: var(--text-sm); }
   .more { margin-top: var(--space-7); text-align: center; }
+  .more .button { gap: var(--space-2); }
   .muted { color: var(--color-text-muted); font-size: var(--text-sm); }
 
   .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); padding: 0; list-style: none; }
@@ -395,12 +424,22 @@ const stats = [
   figcaption span { color: var(--color-text-muted); font-size: var(--text-xs); }
   .graph { width: 100%; margin-top: var(--space-6); border-radius: var(--radius-lg); }
 
-  .founder { display: grid; gap: var(--space-7); }
-  .worldwide { display: flex; align-items: center; gap: var(--space-3); font-family: var(--font-title); font-size: var(--text-h4); font-weight: 500; color: var(--color-heading); }
-  .stats { display: grid; gap: var(--space-4); margin-top: var(--space-5); padding: 0; list-style: none; }
-  .stats li { display: flex; flex-direction: column; gap: var(--space-1); padding-top: var(--space-4); border-top: 1px solid var(--color-border); }
-  .value { font-family: var(--font-title); font-size: var(--text-h1); font-weight: 500; line-height: 1; color: var(--color-heading); }
-  .label { color: var(--color-text-muted); font-size: var(--text-sm); }
+  /* Founder block: centered intro + four stat cards, like the live page */
+  .founder { display: grid; gap: var(--space-7); --gold: #a07f00; }
+  :global(:root[data-theme='dark']) .founder { --gold: #ecc700; }
+  @media (prefers-color-scheme: dark) { :global(:root:not([data-theme='light'])) .founder { --gold: #ecc700; } }
+  .founder-head { max-width: 58rem; margin-inline: auto; text-align: center; }
+  .founder-head h2 { max-width: 18em; margin-inline: auto; font-size: clamp(2rem, 1.4rem + 2vw, 3.06rem); line-height: 1.05; }
+  .founder-head .intro { margin-top: var(--space-4); }
+  .founder-cards { display: grid; gap: var(--space-4); padding: 0; list-style: none; }
+  .fcard { display: flex; flex-direction: column; gap: var(--space-3); padding: 1.8rem; border: 1px solid rgb(136 136 137 / 0.1); border-radius: var(--radius-lg); background: rgb(136 136 137 / 0.04); }
+  .fcard-icon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: var(--radius-md); background: var(--brand-violet); color: #fff; }
+  .fvalue { color: var(--brand-violet); font-family: var(--font-title); font-size: clamp(2.4rem, 2rem + 1.2vw, 2.8rem); font-weight: 600; line-height: 1; letter-spacing: -0.02em; }
+  :global(:root[data-theme='dark']) .fvalue { color: #a78bfa; }
+  @media (prefers-color-scheme: dark) { :global(:root:not([data-theme='light'])) .fvalue { color: #a78bfa; } }
+  .flabel { margin: 0; color: var(--color-heading); font-family: var(--font-title); font-size: clamp(1.35rem, 1.1rem + 0.8vw, 1.65rem); font-weight: 600; line-height: 1.25; letter-spacing: -0.01em; }
+  .fcard .flabel:first-child, .fcard-icon + .flabel { margin-top: auto; }
+  .flabel :global(.hl), .fcard :global(.hl) { color: var(--gold); background: none; }
 
   .contact { display: grid; gap: var(--space-6); padding: var(--space-6) var(--space-5); border-radius: var(--radius-lg); background: var(--brand-navy); }
   .contact h2 { margin-top: var(--space-2); color: #fff; max-width: 12ch; }
@@ -413,7 +452,8 @@ const stats = [
 
   @media (min-width: 40em) {
     .features { grid-template-columns: repeat(3, 1fr); }
-    .stats { grid-template-columns: repeat(3, 1fr); }
+    .founder-cards { grid-template-columns: repeat(2, 1fr); }
+    .fcard { min-height: 13.7rem; }
   }
   @media (min-width: 64em) {
     .hero { padding-block: var(--space-9) var(--space-8); }
@@ -426,7 +466,7 @@ const stats = [
     .build-card { padding: var(--space-6); }
     .future { grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
     .testimonials { grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
-    .founder { grid-template-columns: 1.2fr 1fr; gap: var(--space-8); align-items: end; }
+    .founder-cards { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
     .contact { grid-template-columns: 1fr 1.3fr; gap: var(--space-8); padding: var(--space-8); align-items: start; }
     .form-card { padding: var(--space-6); }
   }

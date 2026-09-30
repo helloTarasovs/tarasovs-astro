@@ -7,8 +7,9 @@ interface Props {
   project: CollectionEntry<'projects'>;
   priority?: boolean; // LCP candidate: eager + fetchpriority=high
   headingLevel?: 'h2' | 'h3';
+  variant?: 'default' | 'overlay'; // overlay: title + categories over the image (home grid)
 }
-const { project, priority = false, headingLevel = 'h3' } = Astro.props;
+const { project, priority = false, headingLevel = 'h3', variant = 'default' } = Astro.props;
 const d = project.data;
 const Heading = headingLevel;
 const v = d.cover ? coverSrcset(d.cover.src, d.cover.width) : undefined;
@@ -18,7 +19,7 @@ const decode = (t: string) =>
 const words = decode((d.summary ?? '').replace(/<\/(p|li|h[1-6]|div)>/g, ' ').replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim().split(' ').filter(Boolean);
 const excerpt = words.length > 24 ? `${words.slice(0, 24).join(' ')}…` : words.join(' ');
 ---
-<article class="project-card">
+<article class:list={['project-card', `project-card--${variant}`]}>
   <div class="media">
     {d.cover && (
       <img
@@ -34,9 +35,18 @@ const excerpt = words.length > 24 ? `${words.slice(0, 24).join(' ')}…` : words
       />
     )}
   </div>
-  <Heading class="title"><a href={`/project/${d.slug}/`}>{d.title}</a></Heading>
-  {d.categories.length > 0 && <p class="cats">{d.categories.map(categoryLabel).join(' · ')}</p>}
-  {excerpt && <p class="excerpt">{excerpt}</p>}
+  {variant === 'overlay' ? (
+    <div class="overlay">
+      <Heading class="title"><a href={`/project/${d.slug}/`}>{d.title}</a></Heading>
+      {d.categories.length > 0 && <p class="cats">{d.categories.map(categoryLabel).join(', ')}</p>}
+    </div>
+  ) : (
+    <>
+      <Heading class="title"><a href={`/project/${d.slug}/`}>{d.title}</a></Heading>
+      {d.categories.length > 0 && <p class="cats">{d.categories.map(categoryLabel).join(' · ')}</p>}
+      {excerpt && <p class="excerpt">{excerpt}</p>}
+    </>
+  )}
 </article>
 
 <style>
@@ -52,4 +62,21 @@ const excerpt = words.length > 24 ? `${words.slice(0, 24).join(' ')}…` : words
   .project-card:has(.title a:focus-visible) { outline: 2px solid var(--color-focus); outline-offset: 6px; border-radius: var(--radius-md); }
   .excerpt { margin-top: var(--space-2); color: var(--color-text-muted); font-size: var(--text-sm); line-height: 1.5; }
   .cats { margin-top: var(--space-1); color: var(--color-text-muted); font-size: var(--text-xs); }
+
+  /* Overlay variant (home): natural image ratio, white title + categories on a bottom gradient, like the live page */
+  .project-card--overlay .media { aspect-ratio: auto; border-radius: var(--radius-md); }
+  .project-card--overlay img { height: auto; }
+  .project-card--overlay .overlay {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; justify-content: flex-end; gap: var(--space-1);
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+    background: linear-gradient(to top, rgb(0 0 0 / 0.62), rgb(0 0 0 / 0.2) 45%, transparent 70%);
+    color: #fff;
+    pointer-events: none;
+  }
+  .project-card--overlay .title { margin: 0; color: #fff; font-size: clamp(1.25rem, 1.05rem + 0.5vw, 1.6rem); font-weight: 500; line-height: 1.2; text-shadow: 0 1px 12px rgb(0 0 0 / 0.35); }
+  .project-card--overlay .title a { color: #fff; pointer-events: auto; }
+  .project-card--overlay .title a:hover { color: #fff; }
+  .project-card--overlay .cats { margin: 0; color: rgb(255 255 255 / 0.92); font-size: var(--text-sm); text-shadow: 0 1px 10px rgb(0 0 0 / 0.35); }
 </style>

@@ -1,0 +1,49 @@
+---
+// Decorative running line (home). Pure CSS: two identical halves, the track slides by half its width forever.
+// Moves left to right at ~33px/s like the live page; paused for reduced motion. Hidden from assistive tech (keywords only).
+interface Props {
+  words: string[];
+  speed?: number; // px per second
+}
+const { words, speed = 33 } = Astro.props;
+// One half = the word list repeated enough times to be wider than any viewport (≈ 1725px per pass at 46px type).
+const pass = [...words, ...words];
+---
+<div class="marquee" aria-hidden="true" style={`--marquee-speed:${speed}`}>
+  <div class="track">
+    {[0, 1].map(() => (
+      <div class="half">
+        {pass.map((w) => (
+          <span class="item">
+            {w}
+            <svg class="star" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5.41081 14L6.05405 8.6383L1.74054 11.9149L0 8.89894L4.9946 6.92553L0.037838 4.98936L1.66487 2.12234L6.09189 5.3617L5.37297 0H8.74054L7.98378 5.3617L12.4108 2.12234L14 4.95213L9.00541 6.96277L14 8.93617L12.3351 11.8777L7.98378 8.6383L8.7027 14H5.41081Z" fill="currentColor" /></svg>
+          </span>
+        ))}
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .marquee {
+    overflow: hidden;
+    padding-block: var(--space-4);
+    color: var(--brand-violet);
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 1.2rem + 2.6vw, 2.9rem);
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  :global(:root[data-theme='dark']) .marquee { color: #c4b5fd; }
+  @media (prefers-color-scheme: dark) { :global(:root:not([data-theme='light'])) .marquee { color: #c4b5fd; } }
+  .track { display: flex; width: max-content; animation: marquee-slide calc(var(--half-w, 3450) / var(--marquee-speed) * 1s) linear infinite reverse; }
+  .half { display: flex; flex: none; }
+  .item { display: inline-flex; align-items: center; gap: 0.7em; padding-right: 0.7em; }
+  .star { flex: none; animation: marquee-spin 4s linear infinite; }
+  @keyframes marquee-slide { to { transform: translateX(-50%); } }
+  @keyframes marquee-spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) {
+    .track, .star { animation: none; }
+  }
+</style>

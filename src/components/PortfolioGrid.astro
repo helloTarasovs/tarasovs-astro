@@ -11,14 +11,15 @@ interface Props {
   priorityFirst?: boolean;
   label?: string;
   revealFrom?: number; // fade in cards from this index on (earlier ones may be on the first screen)
+  variant?: 'default' | 'overlay'; // overlay: live-site look (masonry, title over image, text filter)
 }
-const { projects, headingLevel = 'h3', priorityFirst = false, label = 'Filter projects by category', revealFrom } = Astro.props;
+const { projects, headingLevel = 'h3', priorityFirst = false, label = 'Filter projects by category', revealFrom, variant = 'default' } = Astro.props;
 const cats = Object.keys(CATEGORY_LABELS)
   .map((slug) => ({ slug, count: projects.filter((p) => p.data.categories.includes(slug)).length }))
   .filter((c) => c.count > 0);
 const pad = (n: number) => String(n).padStart(2, '0');
 ---
-<div class="portfolio" data-portfolio>
+<div class:list={['portfolio', `portfolio--${variant}`]} data-portfolio>
   <div class="filter" role="group" aria-label={label}>
     <span class="filter-label" aria-hidden="true">Filter by</span>
     <button type="button" aria-pressed="true" data-filter="all">All <span class="count">{pad(projects.length)}</span></button>
@@ -27,13 +28,51 @@ const pad = (n: number) => String(n).padStart(2, '0');
     ))}
   </div>
   <p class="visually-hidden" aria-live="polite" data-status></p>
-  <ul class="grid">
+  <ul class="grid" data-grid>
     {projects.map((p, i) => (
-      <li data-cats={p.data.categories.join(' ')} class:list={{ reveal: revealFrom != null && i >= revealFrom }}>
-        <ProjectCard project={p} headingLevel={headingLevel} priority={priorityFirst && i === 0} />
+      <li
+        data-cats={p.data.categories.join(' ')}
+        data-ar={p.data.cover?.width && p.data.cover?.height ? p.data.cover.height / p.data.cover.width : 0.75}
+        class:list={{ reveal: revealFrom != null && i >= revealFrom }}
+      >
+        <ProjectCard project={p} headingLevel={headingLevel} priority={priorityFirst && i === 0} variant={variant} />
       </li>
     ))}
   </ul>
+  {variant === 'overlay' && (
+    <script is:inline>
+      // Masonry without a library: a card's height is known from its cover's width/height, so the layout is
+      // computed before first paint (no shift). Without JS the list stays a plain grid.
+      (function () {
+        var root = document.currentScript.closest('[data-portfolio]');
+        var ul = root.querySelector('[data-grid]');
+        var GAP = 32;
+        function layout() {
+          var items = Array.prototype.filter.call(ul.children, function (li) { return !li.hidden; });
+          var w = ul.clientWidth;
+          if (!w) return;
+          var cols = w >= 900 ? 3 : w >= 600 ? 2 : 1;
+          var colW = (w - GAP * (cols - 1)) / cols;
+          var heights = [];
+          for (var c = 0; c < cols; c++) heights.push(0);
+          items.forEach(function (li) {
+            var col = heights.indexOf(Math.min.apply(null, heights));
+            var h = colW * parseFloat(li.dataset.ar || '0.75');
+            li.style.width = colW + 'px';
+            li.style.height = h + 'px';
+            li.style.transform = 'translate(' + col * (colW + GAP) + 'px,' + heights[col] + 'px)';
+            heights[col] += h + GAP;
+          });
+          ul.style.height = Math.max.apply(null, heights) - GAP + 'px';
+        }
+        ul.classList.add('is-masonry');
+        layout();
+        root.addEventListener('portfolio:filtered', layout);
+        if ('ResizeObserver' in window) new ResizeObserver(layout).observe(ul);
+        else window.addEventListener('resize', layout);
+      })();
+    </script>
+  )}
 </div>
 
 <style>
@@ -56,6 +95,21 @@ const pad = (n: number) => String(n).padStart(2, '0');
   .grid > [hidden] { display: none; }
   @media (min-width: 40em) { .grid { grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 64em) { .grid { grid-template-columns: repeat(3, 1fr); } }
+
+  /* Overlay variant: text filter, masonry */
+  .portfolio--overlay .filter { justify-content: center; gap: 0; margin-bottom: var(--space-5); font-size: var(--text-base); }
+  .portfolio--overlay .filter-label { margin-right: 0.6em; color: var(--color-text); font-size: inherit; text-transform: none; letter-spacing: 0; }
+  .portfolio--overlay .filter button {
+    min-height: 0; padding: 0.25rem 0; border: 0; border-radius: 0; background: none; color: var(--color-text); font-size: inherit;
+  }
+  .portfolio--overlay .filter button + button::before { content: '/'; display: inline-block; margin-inline: 0.7em; color: var(--color-text); }
+  .portfolio--overlay .filter button:hover, .portfolio--overlay .filter button[aria-pressed='true'] { background: none; color: var(--color-link); }
+  .portfolio--overlay .count { position: relative; top: -0.65em; margin-left: 0.2em; font-size: 0.6em; opacity: 1; }
+  .portfolio--overlay .grid.is-masonry { position: relative; display: block; }
+  .portfolio--overlay .grid.is-masonry > li { position: absolute; top: 0; left: 0; }
+  .portfolio--overlay .grid { gap: var(--space-6); }
+  @media (min-width: 40em) { .portfolio--overlay .grid:not(.is-masonry) { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 56em) { .portfolio--overlay .grid:not(.is-masonry) { grid-template-columns: repeat(3, 1fr); align-items: start; } }
 </style>
 
 <script>
@@ -74,6 +128,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
           if (on) shown++;
         });
         status.textContent = `${shown} project${shown === 1 ? '' : 's'} shown`;
+        root.dispatchEvent(new CustomEvent('portfolio:filtered'));
       }),
     );
   });
