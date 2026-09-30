@@ -63,7 +63,7 @@ export interface ServicePageData {
   breadcrumb: { name: string; path: string }[]; // without the page itself
   hero: { eyebrow?: string; title: string; crumb?: string; chips?: string[]; byline?: string; lead?: string; actions?: Action[] };
   sections: Section[];
-  faq?: { eyebrow?: string; title: string; items: { q: string; a: string }[]; note?: string } | null;
+  faq?: { eyebrow?: string; title: string; intro?: string; items: { q: string; a: string }[]; note?: string } | null;
   cta?: { eyebrow?: string; title: string; text?: string; action?: Action | null } | null;
   formSubject?: string;
 }

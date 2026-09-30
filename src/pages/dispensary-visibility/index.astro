@@ -78,7 +78,7 @@ const measures = [
   { t: 'Prompt-level detail', d: 'Each of the ten prompts is published with its own result, so the score can be checked rather than taken on trust.' },
   { t: 'Change over time', d: 'Profiles carry a check date and are re-run periodically, because AI recommendations shift.' },
 ];
-const points = [['#1 recommendation', '100'], ['#2', '85'], ['#3', '70'], ['#4–5', '55'], ['Mentioned / unranked', '40'], ['Not mentioned', '0']];
+const points = [['#1 recommendation', '100'], ['#2 recommendation', '85'], ['#3 recommendation', '70'], ['#4–5 recommendation', '55'], ['Mentioned but unranked', '40'], ['Not mentioned', '0']];
 const patterns = [
   ['Hyperlocal only', 'Strong primary-market visibility with little or no visibility at broader levels.'],
   ['Local-led visibility', 'Visibility is concentrated in the primary market, with some broader reach.'],
@@ -99,6 +99,7 @@ const citationUrl = abs('/dispensary-visibility/');
       </nav>
       <p class="eyebrow">Live statewide research dataset</p>
       <h1>New York Dispensary <span class="hl">ChatGPT Visibility Index</span></h1>
+      <p class="lead">A citation-ready ranking of New York cannabis dispensaries based on how often and how prominently they appeared in 10 recorded, non-branded ChatGPT recommendation prompts.</p>
       <p class="lead"><strong>Is ChatGPT recommending your dispensary?</strong> See how your dispensary appeared across 10 recorded ChatGPT prompts, including recommendation position, geographic visibility and the competitors surfaced instead.</p>
       <p class="meta-line">10 recorded prompts · Directly observed ChatGPT responses · Every prompt published</p>
       <p class="actions">
@@ -119,13 +120,14 @@ const citationUrl = abs('/dispensary-visibility/');
       <div class="quick">
         <h2 id="qa-title" class="eyebrow-h">Quick answer</h2>
         <p>The New York Dispensary ChatGPT Visibility Index measures whether a dispensary becomes part of ChatGPT’s answer when a user asks for a local cannabis recommendation. Every published score comes from 10 non-branded prompts entered in 10 separate Temporary Chats. A dispensary with zero mentions across all 10 recorded responses is classified as invisible.</p>
+        <p>The live cards below report the current sample size, invisibility rate, average Share of Model score, highest score and every eligible published profile. Each profile links to its dated prompt-level evidence.</p>
       </div>
       <ul class="kpis">
         <li><strong>{stats.count}</strong> dispensaries are included in the current measured sample.</li>
         <li><strong>{stats.invisiblePct}%</strong> of measured dispensaries received zero ChatGPT mentions across 10 prompts.</li>
-        <li><strong>{stats.average}/100</strong> is the average ChatGPT Share of Model score across the measured sample.</li>
+        <li>The average ChatGPT Share of Model score is <strong>{stats.average}/100</strong> across the measured sample.</li>
         <li><strong>{stats.strongPct}%</strong> of measured dispensaries have strong visibility at 70/100 or higher.</li>
-        <li><strong>{stats.highest}/100</strong> is the highest current ChatGPT Share of Model score.</li>
+        <li>The highest current ChatGPT Share of Model score is <strong>{stats.highest}/100</strong>.</li>
       </ul>
     </section>
 
@@ -190,7 +192,7 @@ const citationUrl = abs('/dispensary-visibility/');
       <div class="dir" data-dir>
         <div class="controls" id="search">
           <div class="control control--search">
-            <label for="dir-q">Search</label>
+            <label for="dir-q">Search<span class="visually-hidden"> by dispensary name or city</span></label>
             <input id="dir-q" type="search" placeholder="Dispensary name or city…" autocomplete="off" data-q />
           </div>
           <div class="control" role="group" aria-label="Area">
@@ -273,7 +275,8 @@ const citationUrl = abs('/dispensary-visibility/');
           <div><dt>Invisible in ChatGPT</dt><dd>A dispensary with zero recorded mentions across the complete standardized 10-prompt benchmark.</dd></div>
           <div><dt>READY profile</dt><dd>A public profile with a documented result for all 10 required checks. Partial benchmarks remain Pending and are excluded.</dd></div>
         </dl>
-        <p class="small">This is a recommendation-discovery benchmark, not a traditional search-results ranking. The statewide order uses the current composite score. Ties are ordered alphabetically. The measured date on each profile identifies when that dispensary’s latest benchmark was recorded.</p>
+        <p class="small"><strong>This is a recommendation-discovery benchmark, not a traditional search-results ranking.</strong> A dispensary with no measured mentions is absent from the tested answers rather than merely appearing lower on a conventional results page.</p>
+        <p class="small">The statewide order uses the current composite score. Ties are ordered alphabetically. The measured date on each card identifies when that dispensary’s latest benchmark was recorded.</p>
       </div>
     </section>
 
@@ -281,7 +284,8 @@ const citationUrl = abs('/dispensary-visibility/');
       <div class="head">
         <p class="eyebrow">Geographic coverage</p>
         <h2 id="geo-title">A statewide view, not only New York City</h2>
-        <p class="intro">The index includes eligible published profiles from New York City and from regions across the state. Regional comparisons become more useful as coverage grows; a region with fewer published profiles should not be interpreted as stronger or weaker solely from its sample size.</p>
+        <p class="intro">The index includes eligible published profiles from New York City and from regions across the state. The geography controls are generated from the same live profile set as the ranking: NYC and Upstate appear only when those areas have matching profiles, and the Region menu lists only regions represented in the current published sample.</p>
+        <p class="intro">Use the All NY, NYC, Upstate and Region controls to narrow the results without changing the underlying benchmark. Regional comparisons become more useful as coverage grows; a region with fewer published profiles should not be interpreted as stronger or weaker solely from its sample size.</p>
       </div>
       <div class="table-wrap reveal" role="region" aria-label="Visibility by region" tabindex="0">
         <table class="geo">
@@ -320,6 +324,7 @@ const citationUrl = abs('/dispensary-visibility/');
         <p class="eyebrow">Research design</p>
         <h2 id="method-title">How the ChatGPT Visibility score works</h2>
         <p class="intro">The Index tests whether ChatGPT recommends a dispensary when users ask common non-branded local discovery questions — the kind a customer actually types before deciding where to shop. 10 recorded prompts. 3 market levels. 1 composite score.</p>
+        <p class="intro">ChatGPT Visibility measures how prominently each dispensary appeared in 10 recorded, non-branded ChatGPT recommendation checks across three geographic market levels.</p>
       </div>
 
       <ul class="measures">
@@ -330,19 +335,22 @@ const citationUrl = abs('/dispensary-visibility/');
         <div class="panel reveal">
           <h3>Recommendation-position scoring</h3>
           <table class="mini">
-            <thead><tr><th scope="col">Recommendation result</th><th scope="col">Points</th></tr></thead>
+            <thead><tr><th scope="col">Recorded result</th><th scope="col">Points</th></tr></thead>
             <tbody>{points.map(([r, p]) => <tr><td>{r}</td><td>{p}</td></tr>)}</tbody>
           </table>
         </div>
         <div class="panel reveal">
           <h3>Market weighting</h3>
           <p>Each market level is scored as the average of its own prompts, then the three level scores are combined by weight. This gives the greatest weight to the market where the dispensary most directly competes for customers.</p>
-          <p class="formula">Composite = Primary Market × 70% + Secondary Market × 20% + Regional Market × 10%</p>
+          <p>The benchmark first calculates a score for each market level. The composite score then combines those three results using a fixed geographic weighting.</p>
+          <p class="formula">Composite score = Primary market 70% + Secondary market 20% + Regional/wider market 10%</p>
           <p class="small">Six prompts test the primary market, two the secondary market and two the regional or wider market.</p>
         </div>
         <div class="panel reveal">
           <h3>We require 10/10 valid results</h3>
           <p>A dispensary does not receive a public score from a partial scan. The benchmark is marked ready only after all 10 standardized prompts return a valid result. If a request times out, fails, or cannot be validated, the profile stays Pending until the missing check completes successfully.</p>
+          <p>A public score is not calculated from a partial benchmark. The benchmark is READY only when all 10 standardized checks have a documented result. If any recorded response is missing or cannot be classified, the profile remains Pending until the full 10-check benchmark is complete.</p>
+          <p>The statistics and ranking include only published READY profiles. Drafts, incomplete benchmarks and profiles without a qualifying public result are excluded.</p>
         </div>
       </div>
 
@@ -357,12 +365,15 @@ const citationUrl = abs('/dispensary-visibility/');
 
       <h3 class="sub">Protocol and limitations</h3>
       <ul class="bullets">
-        <li>Each of the 10 non-branded prompts is entered in a separate new ChatGPT Temporary Chat with no previous benchmark conversation history. For every prompt we record the returned response, the observed recommendation position, the market being tested and the competing dispensaries named in that same response.</li>
+        <li>Each standardized prompt is entered in a separate new ChatGPT Temporary Chat with no previous benchmark conversation history.</li>
+        <li>The returned response, observed recommendation position, market being tested and competing dispensaries surfaced in that response are recorded.</li>
+        <li>Six prompts test the primary market, two prompts test the secondary market and two prompts test the regional or wider market.</li>
+        <li>A public score is calculated only after all 10 standardized checks have a documented result.</li>
+        <li>This index uses directly observed Temporary Chat results: 10 separately recorded responses per published profile and the fixed 70% / 20% / 10% geographic weighting. Web results and directories are not used to reconstruct or estimate the recorded ChatGPT positions.</li>
         <li>Scores come from directly observed Temporary Chat results. Web results, directories and our own judgment are not used to reconstruct or estimate a recorded position. If a response was not captured, the profile stays Pending rather than being filled in.</li>
         <li>A ranked position is only assigned when it is clearly identifiable in the response. Where a dispensary is mentioned but no clear Top-5 order can be identified, it is scored as mentioned / unranked rather than guessed at.</li>
-        <li>A high composite score does not represent business quality, product quality, customer satisfaction or revenue.</li>
-        <li>Google Search, Google Maps, Gemini and other AI platforms are not included in the public composite score.</li>
-        <li><strong>Benchmark note:</strong> These are standardized Temporary Chat checks, not a prediction of what every user will see. ChatGPT responses vary by date, model, location, available sources and wording. Read a profile as a dated snapshot, not a permanent ranking.</li>
+        <li><strong>Benchmark note:</strong> The index records standardized Temporary Chat checks rather than predicting what every user will see. ChatGPT responses can vary by date, model, location, available sources and wording. The score does not represent overall business quality, product quality, customer satisfaction or revenue performance. Read a profile as a dated snapshot, not a permanent ranking.</li>
+        <li><strong>Scope:</strong> This edition measures ChatGPT only. It does not combine ChatGPT results with Google Maps, Google organic search, Perplexity, Gemini or Google AI Overviews.</li>
       </ul>
     </section>
 
@@ -372,7 +383,7 @@ const citationUrl = abs('/dispensary-visibility/');
         <h2 id="cite-title">How to cite this index</h2>
         <p>When quoting a statewide statistic, include the dataset name, publisher, canonical URL and access date. The statistics update as eligible profiles are added or remeasured. When citing a dispensary score, link to the individual profile and include the “Measured” date displayed on that profile. Do not describe the measured sample as every licensed dispensary in New York State.</p>
         <figure class="citation">
-          <figcaption>Suggested citation</figcaption>
+          <figcaption>Suggested dataset citation</figcaption>
           <p data-citation>Tarasovs Digital Agency. “New York Dispensary ChatGPT Visibility Index.” {citationUrl} (accessed <span data-today>{fmtDate(new Date())}</span>).</p>
           <button type="button" class="button button--ghost" data-copy>Copy citation</button>
         </figure>
@@ -429,9 +440,13 @@ const citationUrl = abs('/dispensary-visibility/');
 
     <section class="section container" aria-labelledby="missing-title">
       <div class="cta reveal">
-        <h2 id="missing-title">Missing from ChatGPT recommendations?</h2>
-        <p>The Index shows where the gap is. Tarasovs helps New York dispensaries improve organic search, local SEO, technical menu SEO and AI discoverability.</p>
-        <a class="button button--highlight" href="/dispensary-seo-new-york/">Explore dispensary SEO services</a>
+        <p class="eyebrow">Tarasovs Digital Agency</p>
+        <h2 id="missing-title">Is your dispensary visible in ChatGPT?</h2>
+        <p>Request a visibility check to see whether your dispensary appears across the same standardized local-intent benchmark.</p>
+        <p class="actions">
+          <a class="button button--highlight" href="/contact-us/">Request a visibility check →</a>
+          <a class="button button--ghost" href="/dispensary-seo-new-york/">Explore dispensary SEO services</a>
+        </p>
       </div>
     </section>
   </div>

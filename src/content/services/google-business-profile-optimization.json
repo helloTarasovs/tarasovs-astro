@@ -205,7 +205,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>We’ll review how your profile is set up against Google’s 2026 rules, flag anything that risks suppression or suspension, benchmark your Map visibility, and show the fastest optimization wins — then send a prioritized plan.</p>"
+          "html": "<p>We’ll review how your profile is set up against Google’s 2026 rules, flag anything that risks suppression or suspension, benchmark your Map visibility, and show the fastest optimization wins — then send a prioritized plan.</p><p>Tarasovs Agency — SEO, GEO &amp; Dutchie migration support for licensed cannabis dispensaries.</p>"
         },
         {
           "type": "form"
@@ -247,7 +247,8 @@
         "q": "How does my Google Business Profile connect to Map Pack and AI search?",
         "a": "<p>It's the core local signal both use. A complete, fresh, compliant profile is what makes you eligible for the Map Pack and for AI assistants recommending a dispensary nearby — the two places high-intent local customers now look.</p>"
       }
-    ]
+    ],
+    "note": "Still have questions? <a href=\"/contact-us/#CForm\">Get in touch</a> and we’ll walk you through it."
   },
   "cta": null,
   "breadcrumb": [

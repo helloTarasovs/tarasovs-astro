@@ -70,6 +70,7 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
           <div class="section-head reveal">
             {data.faq.eyebrow && <p class="eyebrow">{data.faq.eyebrow}</p>}
             <h2 id="faq-title" set:html={data.faq.title} />
+            {data.faq.intro && <p class="lead" set:html={data.faq.intro} />}
           </div>
           <Faq items={data.faq.items} reveal />
           {data.faq.note && <p class="faq-note" set:html={data.faq.note} />}

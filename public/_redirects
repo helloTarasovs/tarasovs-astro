@@ -21,6 +21,9 @@
 /services/insights-analytics    /services/                301
 /services/insights-analytics/   /services/                301
 
+# --- Архіви категорій портфоліо (Ohio): у GSC, у Astro їх немає ---
+/portfolio-category/*           /case-studies/            301
+
 # --- Блог: канонічна адреса /category/insights/, як зараз ---
 /insights                       /category/insights/       301
 /insights/                      /category/insights/       301
@@ -30,6 +33,7 @@
 
 # --- Системні адреси WordPress ---
 /sitemap_index.xml              /sitemap-index.xml        301
+/sitemap.xml                    /sitemap-index.xml        301
 /post-sitemap.xml               /sitemap-index.xml        301
 /page-sitemap.xml               /sitemap-index.xml        301
 /tdv_profile-sitemap.xml        /sitemap-index.xml        301

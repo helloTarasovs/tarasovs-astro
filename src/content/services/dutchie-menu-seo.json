@@ -218,7 +218,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>We’ll check how your Dutchie menu is configured, how much of it Google has actually indexed, whether your product pages carry schema, and where the fastest local and AI-search wins are — then send a prioritized menu SEO plan.</p>"
+          "html": "<p>We’ll check how your Dutchie menu is configured, how much of it Google has actually indexed, whether your product pages carry schema, and where the fastest local and AI-search wins are — then send a prioritized menu SEO plan.</p><p>Tarasovs Agency — SEO, GEO &amp; Dutchie migration support for licensed cannabis dispensaries.</p>"
         },
         {
           "type": "form"
@@ -260,7 +260,8 @@
         "q": "How does menu SEO help with AI search?",
         "a": "<p>AI assistants recommend and cite from clear, crawlable, structured pages. Indexable product pages with schema are what make your inventory eligible to be the answer when someone asks an assistant for a product near them.</p>"
       }
-    ]
+    ],
+    "note": "Still have questions? <a href=\"/contact-us/#CForm\">Get in touch</a> and we’ll walk you through it."
   },
   "cta": null,
   "breadcrumb": [

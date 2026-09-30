@@ -12,6 +12,11 @@ const { project, priority = false, headingLevel = 'h3' } = Astro.props;
 const d = project.data;
 const Heading = headingLevel;
 const v = d.cover ? coverSrcset(d.cover.src, d.cover.width) : undefined;
+// Same excerpt the WordPress archive shows under each card: summary text, first 24 words, "…" when trimmed.
+const decode = (t: string) =>
+  t.replace(/&nbsp;/g, ' ').replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n)).replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16))).replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+const words = decode((d.summary ?? '').replace(/<\/(p|li|h[1-6]|div)>/g, ' ').replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim().split(' ').filter(Boolean);
+const excerpt = words.length > 24 ? `${words.slice(0, 24).join(' ')}…` : words.join(' ');
 ---
 <article class="project-card">
   <div class="media">
@@ -31,6 +36,7 @@ const v = d.cover ? coverSrcset(d.cover.src, d.cover.width) : undefined;
   </div>
   <Heading class="title"><a href={`/project/${d.slug}/`}>{d.title}</a></Heading>
   {d.categories.length > 0 && <p class="cats">{d.categories.map(categoryLabel).join(' · ')}</p>}
+  {excerpt && <p class="excerpt">{excerpt}</p>}
 </article>
 
 <style>
@@ -44,5 +50,6 @@ const v = d.cover ? coverSrcset(d.cover.src, d.cover.width) : undefined;
   .title a:hover { color: var(--color-link); }
   .title a:focus-visible { outline: none; }
   .project-card:has(.title a:focus-visible) { outline: 2px solid var(--color-focus); outline-offset: 6px; border-radius: var(--radius-md); }
+  .excerpt { margin-top: var(--space-2); color: var(--color-text-muted); font-size: var(--text-sm); line-height: 1.5; }
   .cats { margin-top: var(--space-1); color: var(--color-text-muted); font-size: var(--text-xs); }
 </style>

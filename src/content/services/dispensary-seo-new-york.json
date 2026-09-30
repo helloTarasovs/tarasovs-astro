@@ -282,7 +282,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>We’ll review your Google Business Profile, local rankings in your market, Dutchie menu setup, Search Console visibility, and AI search presence — then send a practical list of what to fix first.</p>"
+          "html": "<p>We’ll review your Google Business Profile, local rankings in your market, Dutchie menu setup, Search Console visibility, and AI search presence — then send a practical list of what to fix first.</p><p>Tarasovs Agency — SEO, GEO &amp; Dutchie migration support for licensed cannabis dispensaries across New York State.</p>"
         },
         {
           "type": "form"
@@ -340,7 +340,8 @@
         "q": "What does it cost?",
         "a": "<p>Engagements are monthly programs scoped to your market and number of locations. The best place to start is the free visibility audit - it shows what's needed before you commit to anything.</p>"
       }
-    ]
+    ],
+    "note": "Still have questions? <a href=\"/contact-us/#CForm\">Get in touch</a> and we’ll walk you through it."
   },
   "cta": null,
   "breadcrumb": [

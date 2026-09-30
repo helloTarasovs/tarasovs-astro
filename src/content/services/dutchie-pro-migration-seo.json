@@ -197,7 +197,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>We’ll check whether you’re on Plus or the iFrame, how many product URLs are actually indexed, what would break at cutover, and where the fastest local and AI-search wins are — then send a practical, prioritized migration plan.</p>"
+          "html": "<p>We’ll check whether you’re on Plus or the iFrame, how many product URLs are actually indexed, what would break at cutover, and where the fastest local and AI-search wins are — then send a practical, prioritized migration plan.</p><p>Tarasovs Agency — SEO, GEO &amp; Dutchie migration support for licensed cannabis dispensaries.</p>"
         },
         {
           "type": "form"
@@ -239,7 +239,8 @@
         "q": "What does a Dutchie Pro migration cost?",
         "a": "<p>Engagements are scoped to your setup — how many URLs are indexed, whether you're on Plus or the iFrame, and how much local and content work you want alongside the technical migration. The honest starting point is the free audit; it shows what's actually needed before you commit.</p>"
       }
-    ]
+    ],
+    "note": "Still have questions? <a href=\"/contact-us/#CForm\">Get in touch</a> and we’ll walk you through it."
   },
   "cta": null,
   "breadcrumb": [

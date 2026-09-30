@@ -39,6 +39,8 @@ const {
 } = Astro.props;
 
 const canonicalUrl = abs(canonical ?? Astro.url.pathname);
+// Drop byte-identical JSON-LD blocks (some WordPress entries carry the same block twice).
+const jsonldBlocks = [...new Set(jsonld.map((block) => (typeof block === 'string' ? JSON.stringify(JSON.parse(block)) : JSON.stringify(block))))];
 const ogImageUrl = abs(ogImage);
 const robotsFull = robots.includes('index') && !robots.includes('noindex')
   ? `${robots}, max-image-preview:large, max-snippet:-1, max-video-preview:-1`
@@ -87,9 +89,7 @@ const robotsFull = robots.includes('index') && !robots.includes('noindex')
     <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
 
     <script type="application/ld+json" set:html={JSON.stringify(siteGraph())} />
-    {jsonld.map((block) => (
-      <script type="application/ld+json" set:html={typeof block === 'string' ? block : JSON.stringify(block)} />
-    ))}
+    {jsonldBlocks.map((block) => <script type="application/ld+json" set:html={block} />)}
     <slot name="head" />
   </head>
   <body>

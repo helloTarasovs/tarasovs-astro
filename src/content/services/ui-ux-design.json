@@ -13,7 +13,8 @@
         "href": "/case-studies/"
       }
     ],
-    "crumb": "UI/UX Design"
+    "crumb": "UI/UX Design",
+    "eyebrow": "Design and build in one studio"
   },
   "sections": [
     {
@@ -363,7 +364,8 @@
         "q": "What do you need from us to start?",
         "a": "<p>A short brief on what you're building and who it's for, any existing brand assets, and access to analytics if the site already exists. We'll take it from there.</p>"
       }
-    ]
+    ],
+    "intro": "Everything clients ask before starting a design project. If yours isn't here, just ask."
   },
   "cta": {
     "eyebrow": "Let’s Collaborate",

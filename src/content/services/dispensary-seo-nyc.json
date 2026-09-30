@@ -222,7 +222,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>We’ll review your Dutchie menu setup, Google Business Profile, local rankings, Search Console visibility, and AI search presence — then send a practical list of next steps.</p>"
+          "html": "<p>We’ll review your Dutchie menu setup, Google Business Profile, local rankings, Search Console visibility, and AI search presence — then send a practical list of next steps.</p><p>Tarasovs Agency — SEO, GEO &amp; Dutchie migration support for licensed cannabis dispensaries.</p>"
         },
         {
           "type": "form"
@@ -276,7 +276,8 @@
         "q": "What does dispensary SEO cost?",
         "a": "<p>The scope depends on your market, website, Dutchie setup, number of locations and growth goals. We begin with a visibility review and then recommend a focused project or monthly program based on the work actually required.</p>"
       }
-    ]
+    ],
+    "note": "Still have questions? <a href=\"/contact-us/#CForm\">Get in touch</a> and we’ll walk you through it."
   },
   "cta": null,
   "breadcrumb": [

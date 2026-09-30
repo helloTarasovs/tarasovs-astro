@@ -209,7 +209,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>We’ll check your Map Pack rankings by neighborhood, audit your Google Business Profile against Google’s 2026 rules, review citations and reviews, and show where the fastest local wins are — then send a prioritized plan.</p>"
+          "html": "<p>We’ll check your Map Pack rankings by neighborhood, audit your Google Business Profile against Google’s 2026 rules, review citations and reviews, and show where the fastest local wins are — then send a prioritized plan.</p><p>Tarasovs Agency — SEO, GEO &amp; Dutchie migration support for licensed cannabis dispensaries.</p>"
         },
         {
           "type": "form"
@@ -251,7 +251,8 @@
         "q": "How does local SEO connect to AI search?",
         "a": "<p>AI assistants build local recommendations from the same signals as Google — a complete profile, reviews, fresh photos, and crawlable location pages. Strong local SEO is what makes your dispensary eligible to be the name an assistant recommends nearby.</p>"
       }
-    ]
+    ],
+    "note": "Still have questions? <a href=\"/contact-us/#CForm\">Get in touch</a> and we’ll walk you through it."
   },
   "cta": null,
   "breadcrumb": [
