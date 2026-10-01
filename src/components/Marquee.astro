@@ -4,12 +4,16 @@
 interface Props {
   words: string[];
   speed?: number; // px per second
+  variant?: 'display' | 'plain'; // display: big violet (home); plain: body-size dark text (service pages)
 }
-const { words, speed = 33 } = Astro.props;
-// One half = the word list repeated enough times to be wider than any viewport (≈ 1725px per pass at 46px type).
+const { words, speed = 33, variant = 'display' } = Astro.props;
+// One half = the word list repeated enough times to be wider than any viewport.
 const pass = [...words, ...words];
+// Rough width of one half, to turn px/s into a duration (type size × ~0.55em per character + star and gaps per word).
+const fontPx = variant === 'plain' ? 16.8 : 46;
+const halfPx = pass.reduce((n, w) => n + w.length * fontPx * 0.55 + 14 + fontPx * 1.4, 0);
 ---
-<div class="marquee" aria-hidden="true" style={`--marquee-speed:${speed}`}>
+<div class:list={['marquee', `marquee--${variant}`]} aria-hidden="true" style={`--marquee-speed:${speed};--half-w:${Math.round(halfPx)}`}>
   <div class="track">
     {[0, 1].map(() => (
       <div class="half">
@@ -35,8 +39,8 @@ const pass = [...words, ...words];
     line-height: 1.2;
     white-space: nowrap;
   }
-  :global(:root[data-theme='dark']) .marquee { color: #c4b5fd; }
-  @media (prefers-color-scheme: dark) { :global(:root:not([data-theme='light'])) .marquee { color: #c4b5fd; } }
+  :global(:root[data-theme='dark']) .marquee--display { color: #c4b5fd; }
+  @media (prefers-color-scheme: dark) { :global(:root:not([data-theme='light'])) .marquee--display { color: #c4b5fd; } }
   .track { display: flex; width: max-content; animation: marquee-slide calc(var(--half-w, 3450) / var(--marquee-speed) * 1s) linear infinite reverse; }
   .half { display: flex; flex: none; }
   .item { display: inline-flex; align-items: center; gap: 0.7em; padding-right: 0.7em; }
@@ -46,4 +50,8 @@ const pass = [...words, ...words];
   @media (prefers-reduced-motion: reduce) {
     .track, .star { animation: none; }
   }
+
+  /* plain: the small dark line on service pages */
+  .marquee--plain { padding-block: var(--space-3); color: var(--color-text); font-family: var(--font-text); font-size: var(--text-base); font-weight: 400; letter-spacing: var(--tracking-text); }
+  .marquee--plain .item { gap: 1.1em; padding-right: 1.1em; }
 </style>

@@ -3,6 +3,7 @@
 import Base from './Base.astro';
 import Blocks from '../components/blocks/Blocks.astro';
 import Faq from '../components/blocks/Faq.astro';
+import Marquee from '../components/Marquee.astro';
 import { wpPage } from '../lib/pages';
 import { breadcrumbSchema } from '../lib/schema';
 import { assertFaqMatchesSchema, dedupeJsonld, type ServicePageData } from '../lib/service-page';
@@ -20,7 +21,7 @@ const jsonld = hasBreadcrumbLd ? pageJsonld : [...pageJsonld, breadcrumbSchema(c
 const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/&[a-z#0-9]+;/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
 ---
 <Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld}>
-  <article class="service">
+  <article class:list={['service', { 'service--center': center }]}>
     <header class:list={['hero', { 'hero--center': center }]}>
       <div class="container">
         <nav class="crumbs" aria-label="Breadcrumb">
@@ -50,7 +51,7 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
           )}
         </div>
         {center && data.hero.chips && data.hero.chips.length > 0 && (
-          <ul class="hero-chips">{data.hero.chips.map((c) => <li>{c}</li>)}</ul>
+          <div class="hero-marquee"><Marquee words={data.hero.chips} variant="plain" speed={40} /></div>
         )}
       </div>
     </header>
@@ -182,10 +183,17 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
   .hero--center .hero-lead :global(p + p) { margin-top: 1.1em; }
   .hero--center .hero-lead :global(strong) { font-weight: 700; }
   .hero--center .hero-actions { justify-content: center; margin-top: 3rem; }
+  .hero-marquee { margin-top: var(--space-5); }
   .hero--center .hero-actions .button { min-height: 44px; padding-inline: 1.25rem; }
   .hero--center .hero-actions .button--ghost { border: 2px solid var(--brand-violet); background: transparent; color: var(--brand-violet); }
   .hero--center .hero-actions .button--ghost:hover { background: var(--brand-violet); color: #fff; }
   :global(:root[data-theme='dark']) .hero--center .hero-actions .button--ghost { border-color: #c4b5fd; color: #c4b5fd; }
   @media (prefers-color-scheme: dark) { :global(:root:not([data-theme='light'])) .hero--center .hero-actions .button--ghost { border-color: #c4b5fd; color: #c4b5fd; } }
   @media (max-width: 40em) { .hero--center .hero-panel { padding-block: 3rem 3.5rem; } .hero--center .hero-actions { flex-direction: column; align-items: center; } }
+
+  /* centered variant: section headings and prose centered (cards, panels, FAQ, form get their own rules) */
+  .service--center .section-head { max-width: none; margin-bottom: 2.6rem; text-align: center; }
+  .service--center .section-head h2 { max-width: 18em; margin: 0 auto; font-size: clamp(2rem, 1.4rem + 2vw, 3.06rem); font-weight: 500; line-height: 1.05; letter-spacing: -0.04em; }
+  .service--center .section :global(.prose) { max-width: 53rem; margin-inline: auto; text-align: center; color: var(--color-text); }
+  .service--center .section :global(.prose p + p) { margin-top: 1.1em; }
 </style>
