@@ -338,7 +338,7 @@ border: none !important; outline: none !important;
 <tbody>
 <tr><td><a href="https://www.figma.com/pricing/" target="_blank" rel="noopener">Figma</a></td><td>150 AI credits/day</td><td>$16/seat/mo (Professional, annual)</td><td>$90/seat/mo (Enterprise)</td></tr>
 <tr><td><a href="https://www.framer.com/pricing" target="_blank" rel="noopener">Framer</a></td><td>500 credits to try</td><td>$10/mo per site (Basic)</td><td>$30/mo per site (Pro), Enterprise custom</td></tr>
-<tr><td>Google Stitch</td><td>350 generations/mo</td><td class="is-good">No paid plan yet</td><td>—</td></tr>
+<tr><td>Google Stitch</td><td>350 generations/mo</td><td class="is-good">No paid plan yet</td><td> - </td></tr>
 <tr><td><a href="https://uxpilot.ai/pricing" target="_blank" rel="noopener">UX Pilot</a></td><td>45 credits</td><td>$12/mo (~70 screens, annual)</td><td>$22/mo (1,200 credits, annual)</td></tr>
 <tr><td><a href="https://uizard.io/pricing/" target="_blank" rel="noopener">Uizard</a></td><td>3 AI generations/mo</td><td>$12/mo (500 generations, annual)</td><td>$39/mo (5,000 generations); Enterprise unlimited</td></tr>
 <tr><td><a href="https://www.visily.ai/pricing/" target="_blank" rel="noopener">Visily</a></td><td>300 AI credits/mo, watermarked</td><td>$11/editor/mo (Pro, annual)</td><td>$29/editor/mo (Business, annual)</td></tr>

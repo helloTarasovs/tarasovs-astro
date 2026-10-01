@@ -11,12 +11,12 @@ cover:
   height: 1254
 seo:
   title: "How to Appear in Google AI Overviews (2026) - Tarasovs Digital Agency"
-  description: "Ranking #1 no longer earns the citation — only 38% of AI Overview sources rank top 10. Here's how Google picks sources and how to become one in 2026."
+  description: "Ranking #1 no longer earns the citation - only 38% of AI Overview sources rank top 10. Here's how Google picks sources and how to become one in 2026."
   canonical: "/how-to-appear-in-google-ai-overviews/"
   robots: "index, follow"
   ogImage: "/wp-content/uploads/2026/07/how-to-appear-in-google-ai-overviews-future.webp"
 jsonld:
-  - {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I have to rank on page 1 to appear in an AI Overview?","acceptedAnswer":{"@type":"Answer","text":"No. As of 2026, only about 38% of AI Overview citations also rank in the top 10 for the query — down from 76% seven months earlier. You still need to be crawlable and indexed, but a top ranking no longer guarantees the citation, and pages ranking lower can be cited if they answer a sub-question better."}},{"@type":"Question","name":"What is query fan-out?","acceptedAnswer":{"@type":"Answer","text":"Query fan-out is how Google decomposes a single search into multiple sub-questions, runs each one, and draws citations from across all of those results. It's why most AI Overviews cite three or more sources, and why comprehensive pages that cover a topic from several angles get cited more than narrow ones."}},{"@type":"Question","name":"Does schema markup guarantee an AI Overview citation?","acceptedAnswer":{"@type":"Answer","text":"No, but it helps. Structured data like FAQPage and Article schema improves clarity and eligibility and shows a measurable lift in selection rate, but it is one signal among many. Content quality, topical authority, and clean structure matter more — schema amplifies a page that already deserves to be cited."}},{"@type":"Question","name":"How is optimizing for AI Overviews different from ranking in Google?","acceptedAnswer":{"@type":"Answer","text":"Classic SEO optimizes to rank a page in the list of results. AI Overview optimization is about supplying the cleanest, most trustworthy passage for a specific sub-question so Google extracts it into a generated answer. Ranking gets you into the candidate pool; structure, trust, and directness earn the citation."}},{"@type":"Question","name":"How do I know if I'm appearing in AI Overviews?","acceptedAnswer":{"@type":"Answer","text":"Standard rank trackers don't show it. Watch Google Search Console for rising impressions with flat or falling clicks on informational queries, and use dedicated AI-visibility tracking that checks your target queries and logs whether your domain is cited. Manual spot-checks of key queries also work."}},{"@type":"Question","name":"Is optimizing for AI Overviews worth it if it reduces clicks?","acceptedAnswer":{"@type":"Answer","text":"Yes. Overviews already appear on a large and growing share of searches, so the choice isn't 'Overview or clicks' — it's 'cited or invisible.' Being the cited source keeps your brand in front of the user at the decision moment and drives high-intent visits and brand recall, even when total clicks fall."}}]}
+  - {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I have to rank on page 1 to appear in an AI Overview?","acceptedAnswer":{"@type":"Answer","text":"No. As of 2026, only about 38% of AI Overview citations also rank in the top 10 for the query - down from 76% seven months earlier. You still need to be crawlable and indexed, but a top ranking no longer guarantees the citation, and pages ranking lower can be cited if they answer a sub-question better."}},{"@type":"Question","name":"What is query fan-out?","acceptedAnswer":{"@type":"Answer","text":"Query fan-out is how Google decomposes a single search into multiple sub-questions, runs each one, and draws citations from across all of those results. It's why most AI Overviews cite three or more sources, and why comprehensive pages that cover a topic from several angles get cited more than narrow ones."}},{"@type":"Question","name":"Does schema markup guarantee an AI Overview citation?","acceptedAnswer":{"@type":"Answer","text":"No, but it helps. Structured data like FAQPage and Article schema improves clarity and eligibility and shows a measurable lift in selection rate, but it is one signal among many. Content quality, topical authority, and clean structure matter more - schema amplifies a page that already deserves to be cited."}},{"@type":"Question","name":"How is optimizing for AI Overviews different from ranking in Google?","acceptedAnswer":{"@type":"Answer","text":"Classic SEO optimizes to rank a page in the list of results. AI Overview optimization is about supplying the cleanest, most trustworthy passage for a specific sub-question so Google extracts it into a generated answer. Ranking gets you into the candidate pool; structure, trust, and directness earn the citation."}},{"@type":"Question","name":"How do I know if I'm appearing in AI Overviews?","acceptedAnswer":{"@type":"Answer","text":"Standard rank trackers don't show it. Watch Google Search Console for rising impressions with flat or falling clicks on informational queries, and use dedicated AI-visibility tracking that checks your target queries and logs whether your domain is cited. Manual spot-checks of key queries also work."}},{"@type":"Question","name":"Is optimizing for AI Overviews worth it if it reduces clicks?","acceptedAnswer":{"@type":"Answer","text":"Yes. Overviews already appear on a large and growing share of searches, so the choice isn't 'Overview or clicks' - it's 'cited or invisible.' Being the cited source keeps your brand in front of the user at the decision moment and drives high-intent visits and brand recall, even when total clicks fall."}}]}
 wpId: 229500
 legacyUrl: "/how-to-appear-in-google-ai-overviews/"
 ---
@@ -120,18 +120,18 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <div class="ta-post">
 <div class="ta-qa">
 <div class="ta-qa-label">Quick Answer</div>
-<p><strong>To appear in Google AI Overviews in 2026, you need to answer the specific sub-questions Google breaks a query into, be a trusted source on the topic, and structure each section so a passage can be lifted cleanly. Ranking #1 alone is no longer enough — only 38% of AI Overview citations now come from pages that also rank in the top 10.</strong></p>
+<p><strong>To appear in Google AI Overviews in 2026, you need to answer the specific sub-questions Google breaks a query into, be a trusted source on the topic, and structure each section so a passage can be lifted cleanly. Ranking #1 alone is no longer enough - only 38% of AI Overview citations now come from pages that also rank in the top 10.</strong></p>
 <p>The winning formula is: strong topical authority + E-E-A-T signals + self-contained, directly-answered sections + FAQ and structured data + freshness. Get cited and you capture visibility above the blue links, even when you don't hold position 1.</p>
 </div>
-<div class="ta-img"><img src="/wp-content/uploads/2026/07/how-to-appear-in-google-ai-overviews-hero.webp" alt="How to appear in Google AI Overviews in 2026 — Tarasovs Digital Agency" loading="lazy" style="width:100%;height:auto;border-radius:16px;display:block;margin-bottom:32px;"></div>
+<div class="ta-img"><img src="/wp-content/uploads/2026/07/how-to-appear-in-google-ai-overviews-hero.webp" alt="How to appear in Google AI Overviews in 2026 - Tarasovs Digital Agency" loading="lazy" style="width:100%;height:auto;border-radius:16px;display:block;margin-bottom:32px;"></div>
 <div class="ta-stats">
 <div class="ta-stat">
 <div class="ta-stat-num">1 in 5</div>
-<div class="ta-stat-label">Google searches already returned an AI summary in 2025 — and rising, higher for informational queries (Pew)</div>
+<div class="ta-stat-label">Google searches already returned an AI summary in 2025 - and rising, higher for informational queries (Pew)</div>
 </div>
 <div class="ta-stat">
 <div class="ta-stat-num">38%</div>
-<div class="ta-stat-label">of AI Overview citations also rank in the top 10 — down from 76% seven months earlier (Ahrefs)</div>
+<div class="ta-stat-label">of AI Overview citations also rank in the top 10 - down from 76% seven months earlier (Ahrefs)</div>
 </div>
 <div class="ta-stat">
 <div class="ta-stat-num">88%</div>
@@ -158,13 +158,13 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </ol>
 </div>
 <div class="ta-body">
-<p>Google AI Overviews now sit at the top of a fast-growing share of searches — <a href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/">around one in five as of early 2025</a>, and higher for informational queries. The AI-generated summary above the blue links answers the query directly and cites a handful of sources. Being one of those cited sources is the single most valuable position in Google search in 2026, and the rules for earning it are not the same as classic ranking. This guide covers exactly how Overviews choose sources and what to do to become one.</p>
+<p>Google AI Overviews now sit at the top of a fast-growing share of searches - <a href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/">around one in five as of early 2025</a>, and higher for informational queries. The AI-generated summary above the blue links answers the query directly and cites a handful of sources. Being one of those cited sources is the single most valuable position in Google search in 2026, and the rules for earning it are not the same as classic ranking. This guide covers exactly how Overviews choose sources and what to do to become one.</p>
 <p>This is the engine-specific companion to our broader work on <a href="/what-is-geo-generative-engine-optimization/">what GEO is</a> and <a href="/geo-vs-seo-vs-aeo/">how GEO, AEO and SEO fit together</a>. Here we go deep on one surface: Google AI Overviews.</p>
 <h2 id="what">What a Google AI Overview Actually Is</h2>
-<p>An AI Overview is a generated answer, not a ranked list. Google's systems read across a small set of pages they trust for a query, synthesize a direct answer in a few sentences or bullets, and cite the pages they drew from with links. The user often gets what they need without clicking — which is why appearing <em>as a cited source</em> matters more than ever, and why the top organic result <a href="https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/">loses roughly 58% of its clicks</a> when an Overview appears above it.</p>
+<p>An AI Overview is a generated answer, not a ranked list. Google's systems read across a small set of pages they trust for a query, synthesize a direct answer in a few sentences or bullets, and cite the pages they drew from with links. The user often gets what they need without clicking - which is why appearing <em>as a cited source</em> matters more than ever, and why the top organic result <a href="https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/">loses roughly 58% of its clicks</a> when an Overview appears above it.</p>
 <p>Critically, an Overview is powered by Gemini and behaves like a retrieval-augmented system: it pulls short, factual passages from trusted sources and stitches them together. That means your job is not to “rank a page” but to supply the cleanest, most trustworthy passage for a specific question.</p>
 <h2 id="how">How Google Picks Its Sources (Query Fan-Out)</h2>
-<p>The most important thing to understand in 2026 is <strong>query fan-out</strong>. Google doesn't answer your query with one search — it decomposes it into several sub-questions, runs those, and pulls citations from across all of those sub-query results. Under Gemini 3, this fan-out plays a bigger role in source selection than in any earlier version. That is why <a href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/">88% of Overviews cite three or more sources</a>: each source often answers a different slice of the question.</p>
+<p>The most important thing to understand in 2026 is <strong>query fan-out</strong>. Google doesn't answer your query with one search - it decomposes it into several sub-questions, runs those, and pulls citations from across all of those sub-query results. Under Gemini 3, this fan-out plays a bigger role in source selection than in any earlier version. That is why <a href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/">88% of Overviews cite three or more sources</a>: each source often answers a different slice of the question.</p>
 <div class="ta-img" style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px;margin:24px 0 32px;overflow:hidden;">
 <svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;" role="img" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
 <title>Query fan-out: one query splits into sub-questions, each answered by a different cited source</title>
@@ -199,7 +199,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <rect x="560" y="262" width="176" height="48" rx="9" fill="#1C1535" stroke="#5B21B6" stroke-width="1.2"></rect>
 <text x="648" y="291" font-size="11.5" font-weight="600" fill="#C4B5FD" text-anchor="middle">Source C cited</text>
 <!-- footer -->
-<text x="380" y="344" font-size="12" fill="#7B7399" text-anchor="middle">Gemini synthesizes one Overview and cites the best source for each sub-question — usually 3+.</text>
+<text x="380" y="344" font-size="12" fill="#7B7399" text-anchor="middle">Gemini synthesizes one Overview and cites the best source for each sub-question - usually 3+.</text>
 </svg>
 </div>
 <div class="ta-stages">
@@ -221,12 +221,12 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <div class="ta-stage">
 <div class="ta-stage-num">Step 4</div>
 <div class="ta-stage-title">Cite</div>
-<p>It links the pages it used — usually 3+ sources, each covering a different part.</p>
+<p>It links the pages it used - usually 3+ sources, each covering a different part.</p>
 </div>
 </div>
 <p>The practical takeaway: don't just target the head keyword. Map the sub-questions a searcher (and therefore Google) would branch into, and make sure a clean, self-contained passage on your page answers each one. Comprehensive pages that cover a topic from multiple angles win far more citations than narrow ones.</p>
 <h2 id="rank1">Why Ranking #1 Is No Longer Enough</h2>
-<p>This is the finding every SEO needs to internalize. An <a href="https://ahrefs.com/blog/ai-overview-citations-top-10/">Ahrefs study of 863,000 keywords</a> and roughly 4 million AI Overview URLs found that <strong>only 38% of pages cited in AI Overviews also rank in the top 10</strong> for that query — down sharply from 76% just seven months earlier. The link between classic ranking and AI citation is weakening fast.</p>
+<p>This is the finding every SEO needs to internalize. An <a href="https://ahrefs.com/blog/ai-overview-citations-top-10/">Ahrefs study of 863,000 keywords</a> and roughly 4 million AI Overview URLs found that <strong>only 38% of pages cited in AI Overviews also rank in the top 10</strong> for that query - down sharply from 76% just seven months earlier. The link between classic ranking and AI citation is weakening fast.</p>
 <div class="ta-img" style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px;margin:24px 0 32px;overflow:hidden;">
 <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;" role="img" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
 <title>Share of AI Overview citations that also rank in the top 10: 76% in mid-2025, 38% in 2026</title>
@@ -250,7 +250,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </div>
 <p>That cuts both ways. If you rank #1 but your content isn't structured to be extracted, you can be left out of the Overview entirely. And if you rank #15 but you answer a sub-question better than anyone, you can be cited above pages that outrank you. Classic SEO gets you into the candidate pool; it no longer guarantees the citation. For the full three-layer picture, see <a href="/geo-vs-seo-vs-aeo/">GEO vs SEO vs AEO</a>.</p>
 <div class="ta-note">
-<p><strong>Bottom line:</strong> keep your SEO foundation — you still need to be crawlable and in the index — but stop assuming a good ranking earns the citation. The citation is earned by structure, trust, and answering the exact sub-question.</p>
+<p><strong>Bottom line:</strong> keep your SEO foundation - you still need to be crawlable and in the index - but stop assuming a good ranking earns the citation. The citation is earned by structure, trust, and answering the exact sub-question.</p>
 </div>
 <h2 id="factors">The Factors That Actually Drive Citation</h2>
 <p>Recent 2026 studies converge on a consistent set of signals behind AI Overview citations. These are the levers worth your time.</p>
@@ -265,7 +265,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <tbody>
 <tr>
 <td class="row-label">Topical authority</td>
-<td>Depth across a whole topic cluster — pillar + supporting pages — signals you're a dependable source, not a one-off.</td>
+<td>Depth across a whole topic cluster - pillar + supporting pages - signals you're a dependable source, not a one-off.</td>
 </tr>
 <tr>
 <td class="row-label">E-E-A-T signals</td>
@@ -281,7 +281,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </tr>
 <tr>
 <td class="row-label">Structured data</td>
-<td>Schema (FAQPage, Article, Organization) improves clarity and eligibility — it doesn't guarantee inclusion but measurably helps.</td>
+<td>Schema (FAQPage, Article, Organization) improves clarity and eligibility - it doesn't guarantee inclusion but measurably helps.</td>
 </tr>
 <tr>
 <td class="row-label">Entity clarity</td>
@@ -295,17 +295,17 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </table>
 </div>
 <h2 id="structure">How to Structure a Page to Get Pulled In</h2>
-<p>The formatting principle behind AI Overviews is simple: Google flips the traditional order — it wants the answer first, context second. Build every page so a machine can extract a clean answer from any section.</p>
+<p>The formatting principle behind AI Overviews is simple: Google flips the traditional order - it wants the answer first, context second. Build every page so a machine can extract a clean answer from any section.</p>
 <ul>
-<li><strong>Answer first, in the opening 150 words.</strong> Lead with a direct, self-contained answer to the page's main question — the Quick Answer pattern — before you elaborate.</li>
+<li><strong>Answer first, in the opening 150 words.</strong> Lead with a direct, self-contained answer to the page's main question - the Quick Answer pattern - before you elaborate.</li>
 <li><strong>Make every section standalone.</strong> Each H2/H3 section should read as a complete answer on its own, because Google extracts sections, not whole pages.</li>
 <li><strong>Use question-shaped headings.</strong> Mirror the sub-questions people actually ask, so your headings map onto Google's query fan-out.</li>
-<li><strong>Add a real FAQ section.</strong> FAQs are one of the most frequently cited elements in Overviews — write genuine questions with complete, quotable answers.</li>
+<li><strong>Add a real FAQ section.</strong> FAQs are one of the most frequently cited elements in Overviews - write genuine questions with complete, quotable answers.</li>
 <li><strong>Support claims with data.</strong> Verifiable statistics, sources and clear authorship raise both trust and extraction odds.</li>
 </ul>
-<p>None of this is Google-specific trickery — the same structure helps you get cited in ChatGPT and Perplexity too, as we cover in <a href="/how-to-get-your-business-cited-in-chatgpt-answers/">how to get cited in ChatGPT answers</a>.</p>
+<p>None of this is Google-specific trickery - the same structure helps you get cited in ChatGPT and Perplexity too, as we cover in <a href="/how-to-get-your-business-cited-in-chatgpt-answers/">how to get cited in ChatGPT answers</a>.</p>
 <h2 id="schema">The Schema That Helps</h2>
-<p>Structured data doesn't guarantee an Overview citation, but it improves clarity and eligibility, and the studies show a meaningful lift in selection rate for pages with explicit schema. Prioritize <strong>FAQPage</strong> (marks your Q&amp;A pairs as machine-readable), <strong>Article</strong> (content type, author, dates for freshness), and <strong>Organization</strong> (entity signals about who you are). On service or product pages, add the relevant <strong>Service</strong> or <strong>Product</strong> schema. Keep the markup in sync with what's visible on the page — mismatches hurt trust.</p>
+<p>Structured data doesn't guarantee an Overview citation, but it improves clarity and eligibility, and the studies show a meaningful lift in selection rate for pages with explicit schema. Prioritize <strong>FAQPage</strong> (marks your Q&amp;A pairs as machine-readable), <strong>Article</strong> (content type, author, dates for freshness), and <strong>Organization</strong> (entity signals about who you are). On service or product pages, add the relevant <strong>Service</strong> or <strong>Product</strong> schema. Keep the markup in sync with what's visible on the page - mismatches hurt trust.</p>
 <h2 id="checklist">The AI Overview Checklist</h2>
 <p>Everything above, turned into an action list.</p>
 <div class="ta-actions">
@@ -347,16 +347,16 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </div>
 </div>
 <h2 id="measure">How to Track Whether You Appear</h2>
-<p>You can't manage what you don't measure — and AI Overview presence doesn't show up in a normal rank tracker. Watch for it in two ways. First, Google Search Console: rising impressions with flat or falling clicks on informational queries is the classic fingerprint of being shown in (or losing clicks to) an Overview. Second, dedicated AI-visibility tracking that checks your target queries and records whether your domain is cited. We built the full methodology in <a href="/ai-search-visibility-tracking/">AI search visibility tracking</a> and the brand-level metric in <a href="/share-of-model-ai-search-visibility/">Share of Model</a>.</p>
+<p>You can't manage what you don't measure - and AI Overview presence doesn't show up in a normal rank tracker. Watch for it in two ways. First, Google Search Console: rising impressions with flat or falling clicks on informational queries is the classic fingerprint of being shown in (or losing clicks to) an Overview. Second, dedicated AI-visibility tracking that checks your target queries and records whether your domain is cited. We built the full methodology in <a href="/ai-search-visibility-tracking/">AI search visibility tracking</a> and the brand-level metric in <a href="/share-of-model-ai-search-visibility/">Share of Model</a>.</p>
 <h2 id="why-not">Why You're Not Appearing</h2>
-<p>If you're absent from Overviews where competitors show up, it's almost always one of these: your content answers the head term but not the specific sub-questions Google fans out to; your sections aren't self-contained, so there's no clean passage to lift; you have thin E-E-A-T signals (no named author, no authority footprint); your page lacks structured data and a real FAQ; your information looks stale; or — the fatal one — your key content is rendered client-side in JavaScript that Google's systems don't fully process. A structured <a href="/services/geo-ai-search-optimization/">GEO audit</a> identifies which of these apply and prioritizes the fixes by impact.</p>
+<p>If you're absent from Overviews where competitors show up, it's almost always one of these: your content answers the head term but not the specific sub-questions Google fans out to; your sections aren't self-contained, so there's no clean passage to lift; you have thin E-E-A-T signals (no named author, no authority footprint); your page lacks structured data and a real FAQ; your information looks stale; or - the fatal one - your key content is rendered client-side in JavaScript that Google's systems don't fully process. A structured <a href="/services/geo-ai-search-optimization/">GEO audit</a> identifies which of these apply and prioritizes the fixes by impact.</p>
 </div>
 <div class="ta-faq" id="faq">
 <h2>Frequently Asked Questions</h2>
 <div class="ta-faq-list">
 <div class="ta-faq-item">
 <p class="ta-faq-q">Do I have to rank on page 1 to appear in an AI Overview?</p>
-<p class="ta-faq-a">No. As of 2026, only about 38% of AI Overview citations also rank in the top 10 for the query — down from 76% seven months earlier. You still need to be crawlable and indexed, but a top ranking no longer guarantees the citation, and pages ranking lower can be cited if they answer a sub-question better.</p>
+<p class="ta-faq-a">No. As of 2026, only about 38% of AI Overview citations also rank in the top 10 for the query - down from 76% seven months earlier. You still need to be crawlable and indexed, but a top ranking no longer guarantees the citation, and pages ranking lower can be cited if they answer a sub-question better.</p>
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-q">What is query fan-out?</p>
@@ -364,7 +364,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-q">Does schema markup guarantee an AI Overview citation?</p>
-<p class="ta-faq-a">No, but it helps. Structured data like FAQPage and Article schema improves clarity and eligibility and shows a measurable lift in selection rate, but it is one signal among many. Content quality, topical authority, and clean structure matter more — schema amplifies a page that already deserves to be cited.</p>
+<p class="ta-faq-a">No, but it helps. Structured data like FAQPage and Article schema improves clarity and eligibility and shows a measurable lift in selection rate, but it is one signal among many. Content quality, topical authority, and clean structure matter more - schema amplifies a page that already deserves to be cited.</p>
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-q">How is optimizing for AI Overviews different from ranking in Google?</p>
@@ -376,22 +376,22 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-q">Is optimizing for AI Overviews worth it if it reduces clicks?</p>
-<p class="ta-faq-a">Yes. Overviews already appear on a large and growing share of searches, so the choice isn't “Overview or clicks” — it's “cited or invisible.” Being the cited source keeps your brand in front of the user at the decision moment and drives high-intent visits and brand recall, even when total clicks fall.</p>
+<p class="ta-faq-a">Yes. Overviews already appear on a large and growing share of searches, so the choice isn't “Overview or clicks” - it's “cited or invisible.” Being the cited source keeps your brand in front of the user at the decision moment and drives high-intent visits and brand recall, even when total clicks fall.</p>
 </div>
 </div>
 </div>
 <div class="ta-body" style="margin-top:40px;">
 <h2 id="sources">Sources</h2>
 <ul>
-<li>Ahrefs — <a href="https://ahrefs.com/blog/ai-overview-citations-top-10/">Update: 38% of AI Overview citations pull from the top 10</a> (863,000 keywords; down from 76%).</li>
-<li>Ahrefs — <a href="https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/">AI Overviews reduce clicks for top-ranking pages by ~58%</a>.</li>
-<li>Pew Research Center — <a href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/">Google users are less likely to click when an AI summary appears</a> (~1 in 5 searches; 88% of summaries cite 3+ sources).</li>
+<li>Ahrefs - <a href="https://ahrefs.com/blog/ai-overview-citations-top-10/">Update: 38% of AI Overview citations pull from the top 10</a> (863,000 keywords; down from 76%).</li>
+<li>Ahrefs - <a href="https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/">AI Overviews reduce clicks for top-ranking pages by ~58%</a>.</li>
+<li>Pew Research Center - <a href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/">Google users are less likely to click when an AI summary appears</a> (~1 in 5 searches; 88% of summaries cite 3+ sources).</li>
 </ul>
 </div>
 <div class="ta-cta">
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Want to be the source Google's AI Overview cites?</h3>
-<p class="ta-cta-text">We audit your pages against how AI Overviews actually pick sources — query coverage, structure, authority, and schema — and build the fixes that get you cited. Start with a free AI visibility snapshot.</p>
+<p class="ta-cta-text">We audit your pages against how AI Overviews actually pick sources - query coverage, structure, authority, and schema - and build the fixes that get you cited. Start with a free AI visibility snapshot.</p>
 <a href="/contact-us/#CForm" class="ohio-widget button ta-cta-btn">Get a free AI visibility audit →</a>
 </div>
 </div>

@@ -16,7 +16,7 @@ legacyUrl: "/the-broken-layout-trend/"
 ---
 <style>
 /* ============================================================
-Tarasovs Digital Agency — Blog Post Style (WP + Elementor + Ohio)
+Tarasovs Digital Agency - Blog Post Style (WP + Elementor + Ohio)
 Post title: The Broken Layout Trend: How to Use Asymmetry Without Breaking UX
 SEO title: Broken Layout Web Design: Asymmetry Without Bad UX
 Slug: /the-broken-layout-trend/
@@ -264,7 +264,7 @@ line-height: 1.5;
 position: absolute;
 left: 0;
 color: var(--accent-soft);
-content: '—';
+content: ' - ';
 }
 .ta-faq {
 margin-top: var(--s-2xl);

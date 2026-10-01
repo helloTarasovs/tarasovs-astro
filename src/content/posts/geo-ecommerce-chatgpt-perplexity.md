@@ -158,7 +158,7 @@ border: none !important; box-shadow: none; transition: background 0.2s, box-shad
 </figure>
 <div class="ta-qa">
 <div class="ta-qa-label">Quick Answer</div>
-<p><strong>GEO for e-commerce means structuring your product pages, feeds, and reviews so ChatGPT, Perplexity, and other AI tools name your products directly in their answers, not just link to your site.</strong> The two levers that matter most are clean Schema.org Product markup (price, availability, reviews, GTIN) that AI crawlers can actually parse, and third-party trust signals — Reddit threads, Trustpilot reviews, comparison articles — that these models use to validate a recommendation before making it.</p>
+<p><strong>GEO for e-commerce means structuring your product pages, feeds, and reviews so ChatGPT, Perplexity, and other AI tools name your products directly in their answers, not just link to your site.</strong> The two levers that matter most are clean Schema.org Product markup (price, availability, reviews, GTIN) that AI crawlers can actually parse, and third-party trust signals - Reddit threads, Trustpilot reviews, comparison articles - that these models use to validate a recommendation before making it.</p>
 <p>The catch: ChatGPT and Perplexity don't source products the same way. ChatGPT can pull from several channels, including OpenAI's own product feed spec, the Agentic Commerce Protocol, Shopify's catalog, and public product pages, not just Google Merchant Center. Perplexity crawls your site directly rather than ingesting a feed at all. Get either wrong and you're invisible in a growing share of shopping research, no matter how good your SEO is.</p>
 </div>
 <div class="ta-stats">

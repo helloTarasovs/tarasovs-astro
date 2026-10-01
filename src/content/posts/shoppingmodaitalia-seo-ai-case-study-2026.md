@@ -154,7 +154,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <div class="ta-qa">
 <div class="ta-qa-label">Quick Answer</div>
 <p><strong>In June 2026 we rebuilt shoppingmodaitalia.com end to end: a new homepage, a current WordPress theme replacing one that was roughly ten years old, a full English-language version, and a sitewide keyword optimization pass.</strong></p>
-<p>The relaunch landed right at the end of June 2026, so this case study documents a baseline plus the first post-launch signals — not a finished before/after. The standout early signal: Google Analytics shows a brand-new “AI Assistant” traffic channel that didn’t exist before, with 17 users, all inside June. Bing Webmaster Tools confirms the technical foundation is solid but flags the clear next priority — inbound links from high-quality domains.</p>
+<p>The relaunch landed right at the end of June 2026, so this case study documents a baseline plus the first post-launch signals - not a finished before/after. The standout early signal: Google Analytics shows a brand-new “AI Assistant” traffic channel that didn’t exist before, with 17 users, all inside June. Bing Webmaster Tools confirms the technical foundation is solid but flags the clear next priority - inbound links from high-quality domains.</p>
 </div>
 <div class="ta-stats">
 <div class="ta-stat"><div class="ta-stat-num">17</div><div class="ta-stat-label">users from the new "AI Assistant" channel, all within June 2026</div></div>
@@ -169,7 +169,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <li><a href="#what-changed">What Changed in June 2026</a></li>
 <li><a href="#english">Why English Localization Matters for an Italian Fashion Retailer</a></li>
 <li><a href="#ga-data">What Google Analytics Shows So Far</a></li>
-<li><a href="#ai-assistant">The New "AI Assistant" Channel — What It Means</a></li>
+<li><a href="#ai-assistant">The New "AI Assistant" Channel - What It Means</a></li>
 <li><a href="#bing-data">What Bing Webmaster Tools Reveals</a></li>
 <li><a href="#gap">The Gap: Backlinks and Brand Authority</a></li>
 <li><a href="#next">What’s Next</a></li>
@@ -177,7 +177,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </ol>
 </nav>
 <div class="ta-body">
-<p>Before this project, shoppingmodaitalia.com was running on a WordPress theme that had been in place for roughly ten years. A theme that old usually means outdated markup, no real mobile-first structure, slow page weight, and — critically for SEO — none of the technical hygiene newer themes handle by default. The site also had no English version, capping its addressable audience to Italian-speaking search traffic only, despite selling Italian fashion brands with obvious international demand.</p>
+<p>Before this project, shoppingmodaitalia.com was running on a WordPress theme that had been in place for roughly ten years. A theme that old usually means outdated markup, no real mobile-first structure, slow page weight, and - critically for SEO - none of the technical hygiene newer themes handle by default. The site also had no English version, capping its addressable audience to Italian-speaking search traffic only, despite selling Italian fashion brands with obvious international demand.</p>
 <style>
 .ta-img-diagram { text-align: center; margin: auto; }
 .ta-img-diagram img {margin: auto;  width: 70%; height: auto; }
@@ -185,9 +185,9 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 .ta-img-diagram img { width: 100%; }
 }
 </style>
-<div class="ta-img ta-img-diagram"><img src="/wp-content/uploads/2026/06/shoppingmodaitalia-channels-diagram.webp" alt="shoppingmodaitalia.com SEO and AI visibility progress infographic — traffic channels, AI Assistant growth, organic loyalty, and Bing performance" loading="lazy"></div>
+<div class="ta-img ta-img-diagram"><img src="/wp-content/uploads/2026/06/shoppingmodaitalia-channels-diagram.webp" alt="shoppingmodaitalia.com SEO and AI visibility progress infographic - traffic channels, AI Assistant growth, organic loyalty, and Bing performance" loading="lazy"></div>
 <h2 id="starting-point">The Starting Point: a 10-Year-Old Theme</h2>
-<p>A decade-old theme accumulates debt in ways that are easy to underestimate: heading structure that doesn’t match modern SEO practice, page weight that hurts Core Web Vitals, and a homepage layout designed for a search and shopping experience that no longer matches how buyers browse in 2026. None of that is fixable with content alone — it requires rebuilding the foundation first.</p>
+<p>A decade-old theme accumulates debt in ways that are easy to underestimate: heading structure that doesn’t match modern SEO practice, page weight that hurts Core Web Vitals, and a homepage layout designed for a search and shopping experience that no longer matches how buyers browse in 2026. None of that is fixable with content alone - it requires rebuilding the foundation first.</p>
 <p>See the full before-and-after on the <a href="/project/shoppingmodaitalia-com-seo-and-ai-visibility-optimization/">shoppingmodaitalia.com project page</a>, including homepage screenshots and project details.</p>
 <h2 id="what-changed">What Changed in June 2026</h2>
 <p>The rebuild, completed at the end of June 2026, covered four areas at once as part of a broader <a href="/services/seo-services/">SEO optimization</a> engagement:</p>
@@ -198,7 +198,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <div class="ta-stage"><div class="ta-stage-num">04</div><div class="ta-stage-title">Keyword optimization</div><p>Titles, headings, and on-page content reworked sitewide around the terms buyers actually search.</p></div>
 </div>
 <h2 id="english">Why English Localization Matters for an Italian Fashion Retailer</h2>
-<p>Italian fashion brands — Max Mara, Brioni, and similar names that already show up in the site’s own Bing keyword data — are searched for globally, overwhelmingly in English. A boutique selling these brands but publishing only in Italian is, by definition, invisible to that demand. Adding an English version doesn’t just translate existing pages; it makes the site eligible to rank and to be cited at all for the English-language queries that represent the largest available audience for this kind of inventory.</p>
+<p>Italian fashion brands - Max Mara, Brioni, and similar names that already show up in the site’s own Bing keyword data - are searched for globally, overwhelmingly in English. A boutique selling these brands but publishing only in Italian is, by definition, invisible to that demand. Adding an English version doesn’t just translate existing pages; it makes the site eligible to rank and to be cited at all for the English-language queries that represent the largest available audience for this kind of inventory.</p>
 <h2 id="ga-data">What Google Analytics Shows So Far</h2>
 <div class="ta-table-wrap">
 <table class="ta-table">
@@ -214,20 +214,20 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </tbody>
 </table>
 </div>
-<p>Total users over 90 days: 9,443 (9,389 new, 157 returning). Referral and Organic Search together account for nearly 87% of all traffic, and Organic Search punches above its weight on loyalty: of the 157 returning users in the 90-day window, 127 — 80.89% — came in originally through Organic Search, even though organic accounts for under 39% of users overall. Organic visitors come back; most other channels don’t.</p>
-<p>The detail worth pausing on: the 28-day AI Assistant figure (17 users) is identical to the 90-day figure. Every single AI Assistant user this site has ever recorded in Analytics arrived within the last month — right around the relaunch.</p>
-<h2 id="ai-assistant">The New "AI Assistant" Channel — What It Means</h2>
-<p>Google Analytics’ "AI Assistant" channel groups traffic referred from AI chat and answer engines — the kind of referral a visitor generates by asking ChatGPT, Perplexity, or a similar tool a question and clicking through to a cited source. Before this rebuild, shoppingmodaitalia.com had none. The fact that 17 users have now arrived through that channel, all in the same window as the relaunch, is a small number in absolute terms but a meaningful first signal: the site has started getting picked up and referenced somewhere in the AI-search layer, which it was not doing before.</p>
-<p>It’s too early to say <strong>why</strong> with certainty — it could be the English content giving AI engines something to cite for English-language queries, the new homepage structure being easier to parse, or simply early traffic tied to the launch itself. The honest takeaway is that this is a baseline worth tracking monthly from here, not a result to declare a win on yet. This is exactly the layer our <a href="/services/geo-ai-search-optimization/">GEO — AI search optimization</a> work targets, and it’s worth comparing against the metrics covered in our guide on <a href="/ai-search-visibility-tracking/">AI search visibility tracking</a>.</p>
+<p>Total users over 90 days: 9,443 (9,389 new, 157 returning). Referral and Organic Search together account for nearly 87% of all traffic, and Organic Search punches above its weight on loyalty: of the 157 returning users in the 90-day window, 127 - 80.89% - came in originally through Organic Search, even though organic accounts for under 39% of users overall. Organic visitors come back; most other channels don’t.</p>
+<p>The detail worth pausing on: the 28-day AI Assistant figure (17 users) is identical to the 90-day figure. Every single AI Assistant user this site has ever recorded in Analytics arrived within the last month - right around the relaunch.</p>
+<h2 id="ai-assistant">The New "AI Assistant" Channel - What It Means</h2>
+<p>Google Analytics’ "AI Assistant" channel groups traffic referred from AI chat and answer engines - the kind of referral a visitor generates by asking ChatGPT, Perplexity, or a similar tool a question and clicking through to a cited source. Before this rebuild, shoppingmodaitalia.com had none. The fact that 17 users have now arrived through that channel, all in the same window as the relaunch, is a small number in absolute terms but a meaningful first signal: the site has started getting picked up and referenced somewhere in the AI-search layer, which it was not doing before.</p>
+<p>It’s too early to say <strong>why</strong> with certainty - it could be the English content giving AI engines something to cite for English-language queries, the new homepage structure being easier to parse, or simply early traffic tied to the launch itself. The honest takeaway is that this is a baseline worth tracking monthly from here, not a result to declare a win on yet. This is exactly the layer our <a href="/services/geo-ai-search-optimization/">GEO - AI search optimization</a> work targets, and it’s worth comparing against the metrics covered in our guide on <a href="/ai-search-visibility-tracking/">AI search visibility tracking</a>.</p>
 <h2 id="bing-data">What Bing Webmaster Tools Reveals</h2>
-<p>Bing’s Search Performance report for the site shows 9 total clicks against 592 impressions over the last three months — a 1.52% average CTR. The keyword table behind those numbers is informative: the site is already getting impressions for valuable, high-intent terms ("max mara italy," "brioni milano," "rome shoes," queries about where to buy authentic Italian leather goods), often in respectable positions, but converting very few of those impressions into clicks. Most keywords sit at 0% CTR; a few show real movement — one keyword ("large size shops milano") sits at position 1 with a 50% CTR, and another ("where to buy authentic leather shoes in rome") converted its single impression into a click.</p>
+<p>Bing’s Search Performance report for the site shows 9 total clicks against 592 impressions over the last three months - a 1.52% average CTR. The keyword table behind those numbers is informative: the site is already getting impressions for valuable, high-intent terms ("max mara italy," "brioni milano," "rome shoes," queries about where to buy authentic Italian leather goods), often in respectable positions, but converting very few of those impressions into clicks. Most keywords sit at 0% CTR; a few show real movement - one keyword ("large size shops milano") sits at position 1 with a 50% CTR, and another ("where to buy authentic leather shoes in rome") converted its single impression into a click.</p>
 <p>Bing’s own Recommendations panel flags the likely reason behind the impression-to-click gap directly: the site does not have enough inbound links from high-quality domains. Showing up in results for the right terms is the first half of the problem; not having enough third-party authority backing the site up is what’s likely capping click-through and rankings on the more competitive terms.</p>
 <div class="ta-img"><img src="/wp-content/uploads/2026/06/AI-Performance-Bing-Webmaster-Tools-06-29-2026_09_21_PM-1-scaled.webp" alt="Bing Webmaster Tools AI Performance report for shoppingmodaitalia.com" loading="lazy"></div>
 <h2 id="gap">The Gap: Backlinks and Brand Authority</h2>
-<p>The pattern across both data sources points to the same conclusion. The technical and content foundation — theme, homepage, English version, keyword targeting — just shipped, and it’s already surfacing the site for relevant, high-value search terms in Bing and producing a first AI-search referral signal in GA. What’s still missing is off-site authority: high-quality backlinks, the kind of link-building work covered under our <a href="/services/seo-services/">SEO services</a>, that would lift rankings on competitive terms, increase the CTR on existing impressions, and very likely improve how confidently AI engines cite the site as a source.</p>
+<p>The pattern across both data sources points to the same conclusion. The technical and content foundation - theme, homepage, English version, keyword targeting - just shipped, and it’s already surfacing the site for relevant, high-value search terms in Bing and producing a first AI-search referral signal in GA. What’s still missing is off-site authority: high-quality backlinks, the kind of link-building work covered under our <a href="/services/seo-services/">SEO services</a>, that would lift rankings on competitive terms, increase the CTR on existing impressions, and very likely improve how confidently AI engines cite the site as a source.</p>
 <h2 id="next">What’s Next</h2>
 <div class="ta-stages">
-<div class="ta-stage"><div class="ta-stage-num">Step 1</div><div class="ta-stage-title">Build backlinks</div><p>Target fashion, lifestyle, and Italy-travel publications and directories — for SEO authority and AI-citation trust signals alike.</p></div>
+<div class="ta-stage"><div class="ta-stage-num">Step 1</div><div class="ta-stage-title">Build backlinks</div><p>Target fashion, lifestyle, and Italy-travel publications and directories - for SEO authority and AI-citation trust signals alike.</p></div>
 <div class="ta-stage"><div class="ta-stage-num">Step 2</div><div class="ta-stage-title">Track AI Assistant monthly</div><p>17 users is the start of a baseline, not a trend. The next 2–3 months will show whether it’s growing.</p></div>
 <div class="ta-stage"><div class="ta-stage-num">Step 3</div><div class="ta-stage-title">Fix zero-CTR keywords</div><p>Several high-position, zero-click keywords likely need rewritten meta titles and descriptions to convert impressions into clicks.</p></div>
 <div class="ta-stage"><div class="ta-stage-num">Step 4</div><div class="ta-stage-title">Re-measure at 60–90 days</div><p>Re-pull GA and Bing data once the new site has been fully re-crawled and re-indexed to measure real before/after impact.</p></div>
@@ -238,11 +238,11 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <div class="ta-faq-list">
 <div class="ta-faq-item">
 <p class="ta-faq-q">Is it too early to call this a successful SEO case study?</p>
-<p class="ta-faq-a">Yes, and this case study says so directly — the rebuild only completed at the end of June 2026. What’s documented here is the baseline and the very first post-launch signals, with a clear plan to re-measure at 60 and 90 days.</p>
+<p class="ta-faq-a">Yes, and this case study says so directly - the rebuild only completed at the end of June 2026. What’s documented here is the baseline and the very first post-launch signals, with a clear plan to re-measure at 60 and 90 days.</p>
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-q">Why does Organic Search have a higher returning-user share than total-user share?</p>
-<p class="ta-faq-a">Visitors who find a site through organic search tend to be more intentional searchers — they typically come back at a higher rate than visitors from one-off referral links or social shares, exactly the pattern seen here: 38.98% of all users but 80.89% of returning users.</p>
+<p class="ta-faq-a">Visitors who find a site through organic search tend to be more intentional searchers - they typically come back at a higher rate than visitors from one-off referral links or social shares, exactly the pattern seen here: 38.98% of all users but 80.89% of returning users.</p>
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-q">What is the "AI Assistant" channel in Google Analytics?</p>
@@ -254,14 +254,14 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-q">What’s the single highest-priority fix from this data?</p>
-<p class="ta-faq-a">Backlinks. Bing’s own recommendation and the impression-to-click gap both point to the same gap — the content and technical work are in place, and inbound authority is what’s missing next.</p>
+<p class="ta-faq-a">Backlinks. Bing’s own recommendation and the impression-to-click gap both point to the same gap - the content and technical work are in place, and inbound authority is what’s missing next.</p>
 </div>
 </div>
 </section>
 <div class="ta-cta">
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Want an SEO and AI-visibility audit for your e-commerce store?</h3>
-<p class="ta-cta-text">We rebuild outdated WordPress sites, add international-ready localization, and track real Google Analytics and Bing Webmaster signals from launch day onward — not just promises.</p>
+<p class="ta-cta-text">We rebuild outdated WordPress sites, add international-ready localization, and track real Google Analytics and Bing Webmaster signals from launch day onward - not just promises.</p>
 <a href="/contact-us/#CForm" class="ohio-widget button ta-cta-btn">Get your free SEO audit →</a>
 </div>
 </div>

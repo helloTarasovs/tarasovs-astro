@@ -11,7 +11,7 @@ cover:
   height: 1254
 seo:
   title: "How Scroll-Scrubbed Video Works in Framer - Tarasovs Digital Agency"
-  description: "Learn how scroll-scrubbed video works in Framer—from currentTime and sticky sections to encoding, mobile fallbacks, accessibility, and performance."
+  description: "Learn how scroll-scrubbed video works in Framer - from currentTime and sticky sections to encoding, mobile fallbacks, accessibility, and performance."
   canonical: "/how-scroll-scrubbed-video-works-in-framer/"
   robots: "index, follow"
   ogImage: "/wp-content/uploads/2026/09/How-Scroll-Scrubbed-Video-Works-in-Framer.webp"
@@ -707,32 +707,32 @@ targetTime = progress * video.duration
 <h2 id="breaks">Six things that commonly break scroll-scrubbed video</h2>
 <div class="ta-risks">
 <div class="ta-risk">
-<div class="ta-risk__number">01 — Encoding</div>
+<div class="ta-risk__number">01 - Encoding</div>
 <div class="ta-risk__title">The GOP is too long</div>
 <p>Seeking normally begins from a preceding keyframe. If keyframes are far apart, the browser may need to decode many intermediate frames before it can display the requested moment.</p>
 </div>
 <div class="ta-risk">
-<div class="ta-risk__number">02 — Readiness</div>
+<div class="ta-risk__number">02 - Readiness</div>
 <div class="ta-risk__title">Time is assigned too early</div>
 <p>Before <code>loadedmetadata</code>, duration may not be usable. A component should not calculate or assign a target time until the media is ready.</p>
 </div>
 <div class="ta-risk">
-<div class="ta-risk__number">03 — Seeking</div>
+<div class="ta-risk__number">03 - Seeking</div>
 <div class="ta-risk__title">A new seek interrupts the last one</div>
 <p>Rapidly assigning a new time while <code>video.seeking</code> is true can make the visual response inconsistent and keep the decoder permanently behind the scroll.</p>
 </div>
 <div class="ta-risk">
-<div class="ta-risk__number">04 — iOS</div>
+<div class="ta-risk__number">04 - iOS</div>
 <div class="ta-risk__title">The media element never unlocks</div>
 <p>Mobile Safari can require a user gesture before a video reliably decodes and paints frames. A muted inline element and a tested gesture-based fallback are still necessary.</p>
 </div>
 <div class="ta-risk">
-<div class="ta-risk__number">05 — Viewport</div>
+<div class="ta-risk__number">05 - Viewport</div>
 <div class="ta-risk__title">The mobile URL bar creates resize noise</div>
 <p>On touch devices the browser chrome can change viewport height during scroll. Treating every height-only change as a full layout resize can introduce visible jitter.</p>
 </div>
 <div class="ta-risk">
-<div class="ta-risk__number">06 — Delivery</div>
+<div class="ta-risk__number">06 - Delivery</div>
 <div class="ta-risk__title">The full file is too heavy</div>
 <p>Blob-first delivery trades streaming flexibility for predictable local seeking. If the encode is large, the visitor pays the entire bandwidth and memory cost before the first video frame appears.</p>
 </div>
@@ -797,7 +797,7 @@ targetTime = progress * video.duration
 <p>Build every headline or CTA as a separate Framer component, remove its opaque Fill, and connect the instances to the <strong>Scenes</strong> array in display order.</p>
 </div>
 </div>
-<div class="ta-callout"><strong>Eight scenes across a 10-second clip</strong>The component divides normalized scroll progress equally between connected scenes. With eight items, each scene owns 12.5% of the scroll range—roughly 1.25 seconds of a 10-second clip. This remains consistent across a mouse, trackpad, and touch screen because it does not depend on the number of wheel gestures.</div>
+<div class="ta-callout"><strong>Eight scenes across a 10-second clip</strong>The component divides normalized scroll progress equally between connected scenes. With eight items, each scene owns 12.5% of the scroll range - roughly 1.25 seconds of a 10-second clip. This remains consistent across a mouse, trackpad, and touch screen because it does not depend on the number of wheel gestures.</div>
 <h3>Recommended starting settings</h3>
 <div class="ta-table-wrap">
 <table class="ta-table">
@@ -927,7 +927,7 @@ if (near &amp;&amp; !video) load()</code></pre><p>While the first request was st
 -show_entries frame=best_effort_timestamp_time \
 -of csv=p=0 \
 "scroll-scrub-video.mp4"</code></pre><p>A correctly prepared 24 fps file should report times close to <code>0.00</code>, <code>0.25</code>, <code>0.50</code>, <code>0.75</code>, and so on. If the command returns only <code>0.00</code>, the file still has only its initial keyframe and should be re-encoded before it is uploaded to Framer.</p>
-<div class="ta-callout"><strong>Result from our Kling test clip</strong>The original 10.08-second, 1916 × 1080 export was 14.66 MB and contained one keyframe. Our desktop scroll-scrub encode was 6.53 MB and contained 41 keyframes—one approximately every 0.25 seconds. File size will vary by source, but the keyframe count is easy to verify instead of assuming the export is suitable.</div>
+<div class="ta-callout"><strong>Result from our Kling test clip</strong>The original 10.08-second, 1916 × 1080 export was 14.66 MB and contained one keyframe. Our desktop scroll-scrub encode was 6.53 MB and contained 41 keyframes - one approximately every 0.25 seconds. File size will vary by source, but the keyframe count is easy to verify instead of assuming the export is suitable.</div>
 <p>Use the optimized desktop file for <strong>Clip</strong> and a lighter 720p encode for <strong>Mobile clip</strong>. Keep one continuous video for the complete sequence; splitting eight scenes into eight files adds requests and creates more opportunities for visible transitions. You can see the optimized media running in the <a href="https://scrollscrubvideo.framer.website/" target="_blank" rel="noopener noreferrer">live Framer scroll-scrub demo</a>.</p>
 <h3>What to measure besides file size</h3>
 <p>Subjective smoothness matters, but it should not be the only result. For each encode, record:</p>

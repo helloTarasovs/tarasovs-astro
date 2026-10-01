@@ -352,7 +352,7 @@ padding-left: 14px;
 position: relative;
 }
 .ta-action li::before {
-content: '—';
+content: ' - ';
 position: absolute;
 left: 0;
 color: var(--accent-soft);
@@ -565,7 +565,7 @@ text-shadow: none !important;
 <li><a href="#ta-how-we-kept-seo-intact">How we kept SEO intact</a></li>
 <li><a href="#ta-the-cutover-checks-that-prevented-an-seo">The cutover checks that prevented an SEO mistake</a></li>
 <li><a href="#ta-what-we-moved-and-what-we-left-behind">What we moved and what we left behind</a></li>
-<li><a href="#ta-what-became-simpler-and-what-did-not">What became simpler — and what did not</a></li>
+<li><a href="#ta-what-became-simpler-and-what-did-not">What became simpler - and what did not</a></li>
 <li><a href="#ta-what-we-are-monitoring-after-launch">What we are monitoring after launch</a></li>
 <li><a href="#ta-limits-of-these-numbers">Limits of these numbers</a></li>
 <li><a href="#ta-should-you-do-the-same">Should you do the same?</a></li>
@@ -702,7 +702,7 @@ These checks are now part of the deployment checklist, not one-time launch tasks
 We used Claude Code for most of the build and wrote the export and check scripts with it. We planned the migration for two days. It took five, mostly because the service pages and the dispensary directory needed to be rebuilt by hand.
 
 
-<h2 id="ta-what-became-simpler-and-what-did-not">What became simpler — and what did not</h2>
+<h2 id="ta-what-became-simpler-and-what-did-not">What became simpler - and what did not</h2>
 
 
 The new site has no PHP runtime, database, plugin dashboard or public login endpoint. Content changes are versioned in Git, a failed build does not replace the live site, and a previous deployment can be restored without recovering a database backup.

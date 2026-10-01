@@ -12,18 +12,18 @@ cover:
   height: 1254
 seo:
   title: "Framer vs Webflow in 2026: Honest Comparison from an Agency That Uses Both"
-  description: "We build on both Framer and Webflow. Here's our honest, no-fluff comparison for 2026 — covering performance, SEO, design freedom, CMS, pricing, and which platform actually fits your project."
+  description: "We build on both Framer and Webflow. Here's our honest, no-fluff comparison for 2026 - covering performance, SEO, design freedom, CMS, pricing, and which platform actually fits your project."
   canonical: "/framer-vs-webflow-2026/"
   robots: "index, follow"
   ogImage: "/wp-content/uploads/2026/06/framer-vs-webflow-2026.webp"
 jsonld:
-  - {"@context":"https://schema.org","@type":"Article","@id":"https://tarasovs.me/framer-vs-webflow-2026/#article","headline":"Framer vs Webflow in 2026: Honest Agency Comparison (We Use Both)","description":"We build on both Framer and Webflow. Here's our honest comparison for 2026 — covering performance, SEO, design freedom, CMS, pricing, and which platform actually fits your project.","url":"https://tarasovs.me/framer-vs-webflow-2026/","datePublished":"2026-06-04","dateModified":"2026-06-04","inLanguage":"en-US","keywords":["Framer","Webflow","Framer vs Webflow","web design platform","no-code website builder","Framer 2026","Webflow 2026"],"image":{"@type":"ImageObject","url":"https://tarasovs.me/wp-content/uploads/2026/06/framer-vs-webflow-2026.webp","width":1536,"height":1024},"author":{"@type":"Person","name":"Yurii Tarasov","url":"https://tarasovs.me/about/","jobTitle":"Founder & Web Design Director","worksFor":{"@type":"Organization","@id":"https://tarasovs.me/#organization","name":"Tarasovs Digital Agency"}},"publisher":{"@type":"Organization","@id":"https://tarasovs.me/#organization","name":"Tarasovs Digital Agency","url":"https://tarasovs.me","logo":{"@type":"ImageObject","url":"https://tarasovs.me/wp-content/uploads/2024/05/cropped-logo_new5-270x270.png"}}}
-  - {"@context":"https://schema.org","@type":"FAQPage","@id":"https://tarasovs.me/framer-vs-webflow-2026/#faq","mainEntity":[{"@type":"Question","name":"Is Framer better than Webflow in 2026?","acceptedAnswer":{"@type":"Answer","text":"Framer is better than Webflow for design-heavy, animation-rich sites, agency portfolios, and projects where performance and visual quality are the primary goals. Framer sites consistently score 90+ on PageSpeed, and its animation system is easier to use than Webflow's Interactions. However, Webflow is better for content-heavy sites with complex CMS structures, high-volume blogs, and multi-page SEO at scale."}},{"@type":"Question","name":"What is Framer better at than Webflow?","acceptedAnswer":{"@type":"Answer","text":"Framer is better than Webflow at design freedom and visual quality, animation and motion design, page load performance and Core Web Vitals, and integration with React for custom code components. Framer is also easier to learn for designers coming from Figma, making it faster to launch high-quality sites."}},{"@type":"Question","name":"What is Webflow better at than Framer?","acceptedAnswer":{"@type":"Answer","text":"Webflow is better than Framer at managing large volumes of CMS content, complex relational data structures, multi-reference fields, and collection-level SEO settings. Webflow is also better for e-commerce integration, bulk redirect management, and hreflang for multilingual sites. Its Editor mode makes it easier for non-technical clients to manage content independently."}},{"@type":"Question","name":"Which platform is better for SEO — Framer or Webflow?","acceptedAnswer":{"@type":"Answer","text":"Both Framer and Webflow support solid on-page SEO — custom meta tags, canonical URLs, sitemaps, redirects, and schema markup via code embeds. For SEO at scale (100+ pages, complex redirect management, collection-level SEO settings), Webflow has a slight advantage. For most marketing sites and service businesses, Framer's SEO capabilities are fully sufficient."}},{"@type":"Question","name":"How much does Framer cost compared to Webflow?","acceptedAnswer":{"@type":"Answer","text":"Framer and Webflow are broadly comparable in price for standard projects. Framer's mid-tier plan (Plus) is approximately $30/month, while Webflow's CMS plan is approximately $29/month. Both offer free plans with subdomain hosting. Framer can be slightly more cost-effective for design-heavy sites with moderate CMS needs, while Webflow becomes more expensive at the enterprise and e-commerce tier."}},{"@type":"Question","name":"Is Framer good for SEO?","acceptedAnswer":{"@type":"Answer","text":"Yes, Framer is good for SEO. Framer supports custom meta titles and descriptions, Open Graph tags, canonical URLs, 301 redirects, automatic sitemaps, and robots.txt control. Schema markup can be added via code embeds. Framer's static HTML output and global CDN also contribute to fast page load times, which positively affects Core Web Vitals and search rankings. For most marketing sites and service businesses, Framer's SEO tools are fully sufficient."}},{"@type":"Question","name":"Which is easier to learn — Framer or Webflow?","acceptedAnswer":{"@type":"Answer","text":"Framer is significantly easier to learn for designers, especially those coming from Figma. The mental model is similar — frames, components, and auto-layout — and a designer with Figma experience can build a production-quality Framer site within a few weeks of practice. Webflow has a steeper learning curve: the Classes system, box model, and Interactions panel typically require 1–3 months of regular practice before a designer builds efficiently."}},{"@type":"Question","name":"Can Framer handle e-commerce?","acceptedAnswer":{"@type":"Answer","text":"Framer does not have a native e-commerce system in 2026. E-commerce functionality on Framer requires third-party integrations such as Stripe, Lemon Squeezy, or embedding Shopify Buy Button components. For full e-commerce sites with product catalogs, cart functionality, and checkout, Webflow Commerce or a dedicated platform like Shopify is a better choice."}}]}
+  - {"@context":"https://schema.org","@type":"Article","@id":"https://tarasovs.me/framer-vs-webflow-2026/#article","headline":"Framer vs Webflow in 2026: Honest Agency Comparison (We Use Both)","description":"We build on both Framer and Webflow. Here's our honest comparison for 2026 - covering performance, SEO, design freedom, CMS, pricing, and which platform actually fits your project.","url":"https://tarasovs.me/framer-vs-webflow-2026/","datePublished":"2026-06-04","dateModified":"2026-06-04","inLanguage":"en-US","keywords":["Framer","Webflow","Framer vs Webflow","web design platform","no-code website builder","Framer 2026","Webflow 2026"],"image":{"@type":"ImageObject","url":"https://tarasovs.me/wp-content/uploads/2026/06/framer-vs-webflow-2026.webp","width":1536,"height":1024},"author":{"@type":"Person","name":"Yurii Tarasov","url":"https://tarasovs.me/about/","jobTitle":"Founder & Web Design Director","worksFor":{"@type":"Organization","@id":"https://tarasovs.me/#organization","name":"Tarasovs Digital Agency"}},"publisher":{"@type":"Organization","@id":"https://tarasovs.me/#organization","name":"Tarasovs Digital Agency","url":"https://tarasovs.me","logo":{"@type":"ImageObject","url":"https://tarasovs.me/wp-content/uploads/2024/05/cropped-logo_new5-270x270.png"}}}
+  - {"@context":"https://schema.org","@type":"FAQPage","@id":"https://tarasovs.me/framer-vs-webflow-2026/#faq","mainEntity":[{"@type":"Question","name":"Is Framer better than Webflow in 2026?","acceptedAnswer":{"@type":"Answer","text":"Framer is better than Webflow for design-heavy, animation-rich sites, agency portfolios, and projects where performance and visual quality are the primary goals. Framer sites consistently score 90+ on PageSpeed, and its animation system is easier to use than Webflow's Interactions. However, Webflow is better for content-heavy sites with complex CMS structures, high-volume blogs, and multi-page SEO at scale."}},{"@type":"Question","name":"What is Framer better at than Webflow?","acceptedAnswer":{"@type":"Answer","text":"Framer is better than Webflow at design freedom and visual quality, animation and motion design, page load performance and Core Web Vitals, and integration with React for custom code components. Framer is also easier to learn for designers coming from Figma, making it faster to launch high-quality sites."}},{"@type":"Question","name":"What is Webflow better at than Framer?","acceptedAnswer":{"@type":"Answer","text":"Webflow is better than Framer at managing large volumes of CMS content, complex relational data structures, multi-reference fields, and collection-level SEO settings. Webflow is also better for e-commerce integration, bulk redirect management, and hreflang for multilingual sites. Its Editor mode makes it easier for non-technical clients to manage content independently."}},{"@type":"Question","name":"Which platform is better for SEO - Framer or Webflow?","acceptedAnswer":{"@type":"Answer","text":"Both Framer and Webflow support solid on-page SEO - custom meta tags, canonical URLs, sitemaps, redirects, and schema markup via code embeds. For SEO at scale (100+ pages, complex redirect management, collection-level SEO settings), Webflow has a slight advantage. For most marketing sites and service businesses, Framer's SEO capabilities are fully sufficient."}},{"@type":"Question","name":"How much does Framer cost compared to Webflow?","acceptedAnswer":{"@type":"Answer","text":"Framer and Webflow are broadly comparable in price for standard projects. Framer's mid-tier plan (Plus) is approximately $30/month, while Webflow's CMS plan is approximately $29/month. Both offer free plans with subdomain hosting. Framer can be slightly more cost-effective for design-heavy sites with moderate CMS needs, while Webflow becomes more expensive at the enterprise and e-commerce tier."}},{"@type":"Question","name":"Is Framer good for SEO?","acceptedAnswer":{"@type":"Answer","text":"Yes, Framer is good for SEO. Framer supports custom meta titles and descriptions, Open Graph tags, canonical URLs, 301 redirects, automatic sitemaps, and robots.txt control. Schema markup can be added via code embeds. Framer's static HTML output and global CDN also contribute to fast page load times, which positively affects Core Web Vitals and search rankings. For most marketing sites and service businesses, Framer's SEO tools are fully sufficient."}},{"@type":"Question","name":"Which is easier to learn - Framer or Webflow?","acceptedAnswer":{"@type":"Answer","text":"Framer is significantly easier to learn for designers, especially those coming from Figma. The mental model is similar - frames, components, and auto-layout - and a designer with Figma experience can build a production-quality Framer site within a few weeks of practice. Webflow has a steeper learning curve: the Classes system, box model, and Interactions panel typically require 1–3 months of regular practice before a designer builds efficiently."}},{"@type":"Question","name":"Can Framer handle e-commerce?","acceptedAnswer":{"@type":"Answer","text":"Framer does not have a native e-commerce system in 2026. E-commerce functionality on Framer requires third-party integrations such as Stripe, Lemon Squeezy, or embedding Shopify Buy Button components. For full e-commerce sites with product catalogs, cart functionality, and checkout, Webflow Commerce or a dedicated platform like Shopify is a better choice."}}]}
 wpId: 228654
 legacyUrl: "/framer-vs-webflow-2026/"
 ---
 <!-- ============================================================ -->
-<!-- Tarasovs HTML Design — Elementor-ready                      -->
+<!-- Tarasovs HTML Design - Elementor-ready                      -->
 <!-- Post: Framer vs Webflow in 2026                              -->
 <!-- Paste into Elementor HTML widget. No wrapper needed.        -->
 <!-- ============================================================ -->
@@ -325,7 +325,7 @@ padding-left: 16px;
 position: relative;
 }
 .ta-post .ta-choose-card li::before {
-content: '—';
+content: ' - ';
 position: absolute;
 left: 0;
 color: var(--accent-soft);
@@ -405,7 +405,7 @@ display: block;
 <div class="ta-qa">
 <div class="ta-qa-label">Quick Answer</div>
 <p><strong>Framer leads on design quality, animation, and performance. Webflow leads on CMS depth and SEO at scale.</strong></p>
-<p>Neither is universally better — the right platform depends on your project type, team skills, and content requirements. This article gives you the framework to choose.</p>
+<p>Neither is universally better - the right platform depends on your project type, team skills, and content requirements. This article gives you the framework to choose.</p>
 </div>
 <!-- STATS -->
 <div class="ta-stats">
@@ -446,21 +446,21 @@ display: block;
 <!-- INTRO PROSE -->
 <div class="ta-body">
 <p>We have built production websites on both Framer and Webflow. Not demos. Not personal portfolios. Client projects with real traffic, real SEO requirements, and real business outcomes tied to how fast the site loads and how well it converts.</p>
-<p>So when clients ask us "Framer or Webflow?" — we don't have a default answer. We have a framework. This article is that framework.</p>
+<p>So when clients ask us "Framer or Webflow?" - we don't have a default answer. We have a framework. This article is that framework.</p>
 </div>
 <!-- IMAGE 1 -->
-<img class="ta-img" src="/wp-content/uploads/2026/06/d8b9bc84-2352-4234-a3b3-883f50391c47.webp" alt="Framer vs Webflow 2026 — split comparison of design freedom and CMS power from an agency that builds on both">
+<img class="ta-img" src="/wp-content/uploads/2026/06/d8b9bc84-2352-4234-a3b3-883f50391c47.webp" alt="Framer vs Webflow 2026 - split comparison of design freedom and CMS power from an agency that builds on both">
 <!-- BODY -->
 <div class="ta-body">
 <h2 id="why-2026">Why This Comparison Is Different in 2026</h2>
 <p>The Framer vs Webflow debate looked different two years ago. Framer was still seen as a prototyping tool that had evolved into something bigger. Webflow was the established choice for complex marketing sites and content-heavy builds.</p>
-<p>In 2026, the gap has narrowed significantly — and in some areas, reversed. Framer has matured rapidly: its CMS has improved, SEO capabilities have expanded, and its animation system is genuinely difficult to match on other platforms without writing custom code. Webflow, meanwhile, has deepened its enterprise and e-commerce focus, added Webflow Logic for workflow automation, and maintained its lead in editorial and multi-page CMS projects.</p>
+<p>In 2026, the gap has narrowed significantly - and in some areas, reversed. Framer has matured rapidly: its CMS has improved, SEO capabilities have expanded, and its animation system is genuinely difficult to match on other platforms without writing custom code. Webflow, meanwhile, has deepened its enterprise and e-commerce focus, added Webflow Logic for workflow automation, and maintained its lead in editorial and multi-page CMS projects.</p>
 <p><strong>Both platforms are serious tools.</strong> The question is which one is the right tool for your specific project.</p>
 <h2 id="design">Design Freedom and Animation</h2>
-<p>This is where Framer's identity is clearest. Framer was built with motion as a first-class feature. Its animation system — based on the Framer Motion library — is intuitive for designers and produces results that are genuinely difficult to replicate without writing custom code elsewhere. Scroll-based animations, entrance effects, hover states, interactive components: these are native in Framer's interface, not workarounds.</p>
+<p>This is where Framer's identity is clearest. Framer was built with motion as a first-class feature. Its animation system - based on the Framer Motion library - is intuitive for designers and produces results that are genuinely difficult to replicate without writing custom code elsewhere. Scroll-based animations, entrance effects, hover states, interactive components: these are native in Framer's interface, not workarounds.</p>
 <p>If your brief includes phrases like "smooth," "modern," "premium feel," or "like the sites you see on Awwwards," Framer is almost always the faster path to that result.</p>
 <p>Webflow's animation system (Interactions 2.0) is capable, but requires more setup time and has a steeper learning curve to produce the same quality of motion that Framer delivers with less effort.</p>
-<div class="ta-verdict"><strong>Verdict:</strong> On pure visual output, Framer has the edge in 2026 — especially for agency-quality sites where design is a differentiator.</div>
+<div class="ta-verdict"><strong>Verdict:</strong> On pure visual output, Framer has the edge in 2026 - especially for agency-quality sites where design is a differentiator.</div>
 <h2 id="performance">Performance and Core Web Vitals</h2>
 <p><strong>Framer</strong> generates clean, static HTML output hosted on a global CDN. Pages load fast by default. Our Framer projects consistently score 90+ on Google PageSpeed Insights without significant optimization work. The platform handles image optimization, lazy loading, and code splitting automatically.</p>
 <p>One caveat: heavy use of animations can affect performance if not managed carefully. We've seen well-designed Framer sites drop to the mid-70s on mobile PageSpeed when animation load isn't managed. The fix is usually straightforward, but it requires attention.</p>
@@ -493,15 +493,15 @@ display: block;
 </table>
 </div>
 <div class="ta-body">
-<p>For <a href="/services/geo-ai-search-optimization/">GEO (Generative Engine Optimization)</a> — structuring content to be cited by ChatGPT, Perplexity, and Google AI Overviews — both platforms allow the necessary implementations. Neither has a native GEO advantage; it depends entirely on how the content is written and structured.</p>
+<p>For <a href="/services/geo-ai-search-optimization/">GEO (Generative Engine Optimization)</a> - structuring content to be cited by ChatGPT, Perplexity, and Google AI Overviews - both platforms allow the necessary implementations. Neither has a native GEO advantage; it depends entirely on how the content is written and structured.</p>
 <div class="ta-verdict"><strong>Verdict:</strong> Webflow has a slight edge for SEO at scale (100+ pages, complex redirects). Framer is sufficient for most projects and improving fast.</div>
 <h2 id="cms">CMS and Content Management</h2>
-<p><strong>Webflow CMS</strong> is one of the most powerful no-code content management systems available. It supports complex relational data structures, multi-reference fields, rich text, nested collections, and conditional visibility based on CMS data. For content-heavy sites — blogs, directories, case study libraries, e-commerce catalogs — Webflow CMS is genuinely excellent.</p>
-<p>The Editor mode allows non-technical clients to update content directly on the live site without touching the design system — a significant practical advantage at project handoff.</p>
-<p><strong>Framer CMS</strong> has improved substantially but remains simpler. It handles standard content types well — blog posts, team pages, project galleries — but lacks the relational depth of Webflow. Multi-reference fields, conditional filtering, and complex data relationships require workarounds or third-party integrations.</p>
+<p><strong>Webflow CMS</strong> is one of the most powerful no-code content management systems available. It supports complex relational data structures, multi-reference fields, rich text, nested collections, and conditional visibility based on CMS data. For content-heavy sites - blogs, directories, case study libraries, e-commerce catalogs - Webflow CMS is genuinely excellent.</p>
+<p>The Editor mode allows non-technical clients to update content directly on the live site without touching the design system - a significant practical advantage at project handoff.</p>
+<p><strong>Framer CMS</strong> has improved substantially but remains simpler. It handles standard content types well - blog posts, team pages, project galleries - but lacks the relational depth of Webflow. Multi-reference fields, conditional filtering, and complex data relationships require workarounds or third-party integrations.</p>
 <div class="ta-verdict"><strong>Verdict:</strong> Webflow leads on CMS depth. Framer is sufficient for most marketing sites with moderate content needs.</div>
 <h2 id="devs">Developer Handoff and Custom Code</h2>
-<p><strong>Framer</strong> is built on React. Developers comfortable with React can create fully custom components and integrate them natively into Framer projects. Framer's code components are first-class citizens in the design system — they receive props from the visual editor, respond to CMS data, and participate in the layout like any other element.</p>
+<p><strong>Framer</strong> is built on React. Developers comfortable with React can create fully custom components and integrate them natively into Framer projects. Framer's code components are first-class citizens in the design system - they receive props from the visual editor, respond to CMS data, and participate in the layout like any other element.</p>
 <p><strong>Webflow</strong> supports custom code through embed blocks and page-level scripts. It's flexible but less integrated. Webflow also has a large ecosystem of third-party developers building integrations (Finsweet being the most prominent), which extends what's possible significantly.</p>
 <div class="ta-verdict"><strong>Verdict:</strong> Framer has an edge for teams with React developers. Webflow has a broader ecosystem of no-code extensions.</div>
 <h2 id="pricing">Pricing</h2>
@@ -530,16 +530,16 @@ display: block;
 <div class="ta-verdict"><strong>Verdict:</strong> Roughly comparable for standard projects. Framer can be more cost-effective for design-heavy sites with moderate CMS needs.</div>
 <h2 id="learning">Learning Curve and Team Fit</h2>
 <p><strong>Framer</strong> is significantly easier to learn for designers coming from Figma. The mental model is similar: frames, components, auto-layout. A designer with strong Figma experience can build a production-quality Framer site within a few weeks of practice.</p>
-<p><strong>Webflow</strong> has a steeper initial learning curve. The box model, the Classes system, and the Interactions panel all require dedicated study time. Most designers need 1–3 months of regular practice before they can build efficiently in Webflow. Once fluent, Webflow designers can build almost anything — but the upfront investment is real.</p>
+<p><strong>Webflow</strong> has a steeper initial learning curve. The box model, the Classes system, and the Interactions panel all require dedicated study time. Most designers need 1–3 months of regular practice before they can build efficiently in Webflow. Once fluent, Webflow designers can build almost anything - but the upfront investment is real.</p>
 <div class="ta-highlight">
-<p><strong>For agencies:</strong> if your team is primarily designers, Framer's learning curve is lower and output quality is high from early on. If your team has both designers and developers, Webflow's depth and Framer's React integration are both viable paths — it depends on existing skill sets.</p>
+<p><strong>For agencies:</strong> if your team is primarily designers, Framer's learning curve is lower and output quality is high from early on. If your team has both designers and developers, Webflow's depth and Framer's React integration are both viable paths - it depends on existing skill sets.</p>
 </div>
 <h2 id="when-framer">When to Choose Each Platform</h2>
 </div>
 <!-- CHOOSE GRID -->
 <div class="ta-choose">
 <div class="ta-choose-card">
-<div class="ta-choose-title">Framer — Best for</div>
+<div class="ta-choose-title">Framer - Best for</div>
 <ul>
 <li>Design is the primary deliverable</li>
 <li>Agency portfolios, brand launches, creative sites</li>
@@ -550,7 +550,7 @@ display: block;
 </ul>
 </div>
 <div class="ta-choose-card">
-<div class="ta-choose-title">Webflow — Best for</div>
+<div class="ta-choose-title">Webflow - Best for</div>
 <ul>
 <li>High content volume (100+ posts)</li>
 <li>Complex relational CMS data</li>
@@ -562,7 +562,7 @@ display: block;
 </div>
 </div>
 <!-- IMAGE 2 -->
-<img class="ta-img" src="/wp-content/uploads/2026/06/90c097d0-f3c2-403a-b53a-ecea999684c8.webp" alt="Framer vs Webflow 2026 scorecard — agency comparison of design, performance, SEO, CMS, pricing and learning curve">
+<img class="ta-img" src="/wp-content/uploads/2026/06/90c097d0-f3c2-403a-b53a-ecea999684c8.webp" alt="Framer vs Webflow 2026 scorecard - agency comparison of design, performance, SEO, CMS, pricing and learning curve">
 <!-- SUMMARY TABLE -->
 <div class="ta-body">
 <h2 id="summary">Summary: Framer vs Webflow 2026</h2>
@@ -627,17 +627,17 @@ display: block;
 </div>
 <div class="ta-body">
 <h2>The Platform We're Building More On in 2026</h2>
-<p>Across our project mix in 2026, we're building more on Framer than Webflow — but not because Webflow is declining. It's because the project types we're taking on — brand-forward marketing sites, agency portfolios, SaaS landing pages, and <a href="/services/geo-ai-search-optimization/">GEO-optimized service pages</a> — are better suited to Framer's strengths.</p>
+<p>Across our project mix in 2026, we're building more on Framer than Webflow - but not because Webflow is declining. It's because the project types we're taking on - brand-forward marketing sites, agency portfolios, SaaS landing pages, and <a href="/services/geo-ai-search-optimization/">GEO-optimized service pages</a> - are better suited to Framer's strengths.</p>
 <p>When clients come to us with content-heavy editorial requirements or complex data structures, we still recommend Webflow without hesitation.</p>
 <div class="ta-highlight">
-<p><strong>The honest answer:</strong> there is no universally better platform. There's the right platform for the project, the client, and the team. If you're working on a brand-forward marketing site — Framer is likely the right call. If you're building a content platform or a site where the client will manage a significant volume of pages — Webflow is likely stronger.</p>
+<p><strong>The honest answer:</strong> there is no universally better platform. There's the right platform for the project, the client, and the team. If you're working on a brand-forward marketing site - Framer is likely the right call. If you're building a content platform or a site where the client will manage a significant volume of pages - Webflow is likely stronger.</p>
 </div>
 </div>
 <!-- CTA -->
 <div class="ta-cta">
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3>Not sure which platform fits your project?</h3>
-<p>We work with both Framer and Webflow — and recommend based on what's actually right for your goals, not what's easiest for us.</p>
+<p>We work with both Framer and Webflow - and recommend based on what's actually right for your goals, not what's easiest for us.</p>
 <a href="/contact-us/#CForm" class="ohio-widget button ta-cta-btn">Talk to us about your project →</a>
 </div>
 </div><!-- /ta-post -->

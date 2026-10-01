@@ -309,7 +309,7 @@ border: none !important; outline: none !important;
 <p>This report separates AI traffic by assistant and landing page.</p>
 <h3>Step 1: Create a Free Form exploration</h3>
 <p>Open <code>Explore → Blank</code>. GA4 will create a Free Form exploration. Name it something clear, such as:</p>
-<div class="ta-code">AI Assistant Traffic — Sources and Landing Pages</div>
+<div class="ta-code">AI Assistant Traffic - Sources and Landing Pages</div>
 <h3>Step 2: Import the dimensions</h3>
 <p>Under Variables → Dimensions, click the plus icon and import:</p>
 <ul>

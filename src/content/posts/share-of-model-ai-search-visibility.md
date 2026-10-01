@@ -305,7 +305,7 @@ font-weight: 600;
 color: var(--text-2) !important;
 white-space: nowrap;
 }
-/* Mobile Table Fix — Ohio/WordPress збільшує висоту рядків на мобільному */
+/* Mobile Table Fix - Ohio/WordPress збільшує висоту рядків на мобільному */
 @media (max-width: 768px) {
 .ta-post .ta-table th,
 .ta-post table.ta-table th {
@@ -369,7 +369,7 @@ max-width: 560px;
 margin: 0 auto var(--sp-lg);
 line-height: 1.7;
 }
-/* Ohio перебиває стилі кнопки — використовуй ohio-widget button ta-cta-btn */
+/* Ohio перебиває стилі кнопки - використовуй ohio-widget button ta-cta-btn */
 .ta-cta-btn,
 a.ohio-widget.button.ta-cta-btn {
 display: inline-block;
@@ -397,7 +397,7 @@ transform: translateY(-1px);
 <div class="ta-qa">
 <div class="ta-qa-label">Quick Answer</div>
 <p><strong>Share of Model (SoM) measures how often, how prominently, and how favorably an AI assistant mentions your brand when someone asks a relevant question in your category.</strong></p>
-<p>It is the AI-era successor to share of voice — and the most important new visibility metric for businesses that want to be recommended by ChatGPT, Perplexity, Gemini, and Claude. Unlike a Google ranking, SoM is probabilistic and must be measured as a rate across many query runs, not a single check.</p>
+<p>It is the AI-era successor to share of voice - and the most important new visibility metric for businesses that want to be recommended by ChatGPT, Perplexity, Gemini, and Claude. Unlike a Google ranking, SoM is probabilistic and must be measured as a rate across many query runs, not a single check.</p>
 </div>
 <!-- STATS -->
 <div class="ta-stats">
@@ -411,7 +411,7 @@ transform: translateY(-1px);
 </div>
 <div class="ta-stat">
 <div class="ta-stat-num">2–3</div>
-<div class="ta-stat-lbl">brands named in a typical AI answer — vs 10 links on Google</div>
+<div class="ta-stat-lbl">brands named in a typical AI answer - vs 10 links on Google</div>
 </div>
 <div class="ta-stat">
 <div class="ta-stat-num">2025</div>
@@ -432,20 +432,20 @@ transform: translateY(-1px);
 </nav>
 <!-- BODY: What Is SoM -->
 <div class="ta-body">
-<p>For two decades, the question every business owner asked their marketing team was simple: "Where do we rank on Google?" That question is quietly becoming obsolete. Your next customer is increasingly skipping the search results page entirely — asking ChatGPT, Perplexity, Gemini, or Claude a question in plain language and acting on whatever the AI tells them.</p>
+<p>For two decades, the question every business owner asked their marketing team was simple: "Where do we rank on Google?" That question is quietly becoming obsolete. Your next customer is increasingly skipping the search results page entirely - asking ChatGPT, Perplexity, Gemini, or Claude a question in plain language and acting on whatever the AI tells them.</p>
 <p>This shift has created an uncomfortable blind spot. You can track your Google ranking down to the keyword, but do you have any idea whether an AI assistant recommends your business when a buyer asks for "the best option" in your category? For most companies, the honest answer is no. And what you can't measure, you can't improve.</p>
 <h2 id="what-is-som">What Is Share of Model?</h2>
 <p>Share of Model measures how often, how prominently, and how favorably an AI assistant mentions your brand when someone asks a relevant question in your category. The term was formally introduced by researchers at INSEAD in mid-2025, and it spread quickly because it answers a question traditional SEO metrics simply cannot.</p>
 <p>Think of it as the AI-era successor to "share of voice." Share of voice asked: of all the advertising and media attention in your market, how much belongs to you? Share of Model asks something more pointed: of all the times an AI could recommend a business like yours, how often does it recommend <em>you</em> specifically?</p>
 <p>The concept is easiest to grasp with an example. Imagine you run an organic skincare brand. A potential customer opens ChatGPT and types, "What are the best organic skincare brands for sensitive skin?" If your brand appears in that answer 8 times out of every 10 you run the query, your Share of Model for that prompt is roughly <strong>80%</strong>. If a competitor appears only twice, theirs is 20%. Multiply this across hundreds of buyer questions, and you have a clear picture of who owns mindshare inside the AI.</p>
 <h2 id="som-vs-google">Why SoM Is Different From a Google Ranking</h2>
-<p>It is tempting to treat Share of Model as "the new SEO ranking," but the two behave very differently — and understanding the difference is what separates businesses that adapt from those that get left behind.</p>
-<p>A Google ranking is essentially static and binary. On any given day, you are either position three or position seven for a keyword, and everyone searching that term sees the same page. Share of Model is <strong>probabilistic</strong>. Ask an AI the same question ten times and you may get ten slightly different answers, because language models generate responses rather than retrieving a fixed list. SoM captures this as a percentage rather than a fixed position — which is why it has to be measured as a rate across many runs, not a single check.</p>
-<p>There is a second crucial difference: AI answers often skip the click entirely. In traditional search, the goal was to earn the click that brought a visitor to your site. In AI search, the assistant frequently summarizes everything the buyer needs and recommends a brand directly inside the conversation. The "win" is no longer always a visit to your website — it's being <strong>the name the AI says out loud</strong>. This is why a business can have strong Google rankings and still be nearly invisible inside AI, or vice versa. Our guide to <a href="/what-is-geo-generative-engine-optimization/">What is GEO (Generative Engine Optimization)</a> explains the optimization layer designed to close that gap.</p>
+<p>It is tempting to treat Share of Model as "the new SEO ranking," but the two behave very differently - and understanding the difference is what separates businesses that adapt from those that get left behind.</p>
+<p>A Google ranking is essentially static and binary. On any given day, you are either position three or position seven for a keyword, and everyone searching that term sees the same page. Share of Model is <strong>probabilistic</strong>. Ask an AI the same question ten times and you may get ten slightly different answers, because language models generate responses rather than retrieving a fixed list. SoM captures this as a percentage rather than a fixed position - which is why it has to be measured as a rate across many runs, not a single check.</p>
+<p>There is a second crucial difference: AI answers often skip the click entirely. In traditional search, the goal was to earn the click that brought a visitor to your site. In AI search, the assistant frequently summarizes everything the buyer needs and recommends a brand directly inside the conversation. The "win" is no longer always a visit to your website - it's being <strong>the name the AI says out loud</strong>. This is why a business can have strong Google rankings and still be nearly invisible inside AI, or vice versa. Our guide to <a href="/what-is-geo-generative-engine-optimization/">What is GEO (Generative Engine Optimization)</a> explains the optimization layer designed to close that gap.</p>
 <h2 id="why-matters">Why Share of Model Matters for Your Business</h2>
 <p>If this still sounds like a marketing curiosity rather than a priority, consider how buyer behavior is actually shifting.</p>
-<p>Roughly 30% of buyers now research products and services through AI systems rather than starting with a traditional search engine — and that share is climbing every quarter. More importantly for revenue, traffic referred from AI assistants tends to convert at a noticeably higher rate than traffic from conventional SEO or paid social, by some measures in the range of 30–40%. The reason is intuitive: by the time an AI recommends you, it has already pre-qualified the buyer's need and positioned you as a credible answer.</p>
-<p>There is also a winner-take-most dynamic at play. A Google results page shows ten links, giving several businesses a fair shot at attention. <strong>An AI answer often names just two or three brands.</strong> If you are not one of them, you are effectively invisible for that query — there is no "page two" of an AI conversation where a curious buyer might still find you.</p>
+<p>Roughly 30% of buyers now research products and services through AI systems rather than starting with a traditional search engine - and that share is climbing every quarter. More importantly for revenue, traffic referred from AI assistants tends to convert at a noticeably higher rate than traffic from conventional SEO or paid social, by some measures in the range of 30–40%. The reason is intuitive: by the time an AI recommends you, it has already pre-qualified the buyer's need and positioned you as a credible answer.</p>
+<p>There is also a winner-take-most dynamic at play. A Google results page shows ten links, giving several businesses a fair shot at attention. <strong>An AI answer often names just two or three brands.</strong> If you are not one of them, you are effectively invisible for that query - there is no "page two" of an AI conversation where a curious buyer might still find you.</p>
 <p>Finally, SoM gives you something Google's black box never did: a category-level scoreboard. By measuring how often AI recommends you versus your competitors across hundreds of buying questions, you get an honest, quantified read on your true market position inside the channel where decisions are increasingly being made.</p>
 <h2 id="how-to-measure">How to Measure Your Share of Model: A Step-by-Step Method</h2>
 <p>The good news is that measuring Share of Model does not require a data science team. The leading approach borrows its logic from election polling: you can't ask every voter, but a well-chosen, representative sample tells you what the whole population thinks. Here is how to run it.</p>
@@ -455,34 +455,34 @@ transform: translateY(-1px);
 <div class="ta-stage">
 <div class="ta-stage-num">Step 01</div>
 <div class="ta-stage-title">Build your query set</div>
-<p>Define the questions your potential customers actually ask AI assistants — high-intent, category-level questions like "What's the best accounting software for a small restaurant?" Aim for 250–500 questions covering comparisons, recommendations, problem-led questions, and local variations. Even 30–50 focused buying questions give you a meaningful first read.</p>
+<p>Define the questions your potential customers actually ask AI assistants - high-intent, category-level questions like "What's the best accounting software for a small restaurant?" Aim for 250–500 questions covering comparisons, recommendations, problem-led questions, and local variations. Even 30–50 focused buying questions give you a meaningful first read.</p>
 </div>
 <div class="ta-stage">
 <div class="ta-stage-num">Step 02</div>
 <div class="ta-stage-title">Run across multiple AI assistants</div>
-<p>Submit each question to ChatGPT, Perplexity, Google AI Mode/Overviews, Gemini, and Claude. Because answers vary from run to run, you cannot ask once and call it data. Run each core question 10–100 times per platform to calculate a stable mention rate. Each platform behaves differently — Perplexity cites 5–12 sources per answer, while ChatGPT typically cites just 2–4.</p>
+<p>Submit each question to ChatGPT, Perplexity, Google AI Mode/Overviews, Gemini, and Claude. Because answers vary from run to run, you cannot ask once and call it data. Run each core question 10–100 times per platform to calculate a stable mention rate. Each platform behaves differently - Perplexity cites 5–12 sources per answer, while ChatGPT typically cites just 2–4.</p>
 </div>
 <div class="ta-stage">
 <div class="ta-stage-num">Step 03</div>
 <div class="ta-stage-title">Record presence, prominence &amp; sentiment</div>
-<p>For every response, capture more than a yes/no. Record <strong>presence</strong> (did your brand appear?), <strong>prominence</strong> (were you named first or buried?), and <strong>sentiment</strong> (positive, neutral, or hedged?). Also log which competitors appeared and which sources the AI cited — those citations are the breadcrumbs that tell you where the AI is learning about your category.</p>
+<p>For every response, capture more than a yes/no. Record <strong>presence</strong> (did your brand appear?), <strong>prominence</strong> (were you named first or buried?), and <strong>sentiment</strong> (positive, neutral, or hedged?). Also log which competitors appeared and which sources the AI cited - those citations are the breadcrumbs that tell you where the AI is learning about your category.</p>
 </div>
 </div>
 <div class="ta-stages">
 <div class="ta-stage">
 <div class="ta-stage-num">Step 04</div>
 <div class="ta-stage-title">Calculate your Share of Model</div>
-<p>With the data collected, the core calculation is straightforward. Divide your brand's mentions by total brand mentions across the query set, then multiply by 100. Run the same math for each competitor and you have an instant category leaderboard. Slice further by platform, question type, or sentiment to see exactly where you win — and where you're being left out.</p>
+<p>With the data collected, the core calculation is straightforward. Divide your brand's mentions by total brand mentions across the query set, then multiply by 100. Run the same math for each competitor and you have an instant category leaderboard. Slice further by platform, question type, or sentiment to see exactly where you win - and where you're being left out.</p>
 </div>
 <div class="ta-stage">
 <div class="ta-stage-num">Step 05</div>
 <div class="ta-stage-title">Track it over time</div>
-<p>A single measurement is a snapshot; the real value is in the trend. Re-run your query set monthly so you can see whether your Share of Model is rising or falling, catch a competitor surging, and tie movements back to the content and PR work you're doing. Visibility in AI shifts as models update — treating SoM as an ongoing dashboard is what turns it into a genuine growth lever.</p>
+<p>A single measurement is a snapshot; the real value is in the trend. Re-run your query set monthly so you can see whether your Share of Model is rising or falling, catch a competitor surging, and tie movements back to the content and PR work you're doing. Visibility in AI shifts as models update - treating SoM as an ongoing dashboard is what turns it into a genuine growth lever.</p>
 </div>
 <div class="ta-stage" style="border-color: var(--border-a);">
 <div class="ta-stage-num">The formula</div>
 <div class="ta-stage-title">SoM = ?</div>
-<p><strong>Share of Model = (your brand's mentions ÷ total brand mentions across the query set) × 100</strong><br><br>Example: 180 brand mentions out of 1,000 total = <strong>18% Share of Model</strong>. Run the same math for every competitor — instant category leaderboard.</p>
+<p><strong>Share of Model = (your brand's mentions ÷ total brand mentions across the query set) × 100</strong><br><br>Example: 180 brand mentions out of 1,000 total = <strong>18% Share of Model</strong>. Run the same math for every competitor - instant category leaderboard.</p>
 </div>
 </div>
 <!-- TOOLS SECTION -->
@@ -535,25 +535,25 @@ transform: translateY(-1px);
 </table>
 </div>
 <div class="ta-body">
-<p>These tools handle the querying, run the repetitions, and present your Share of Model on a dashboard. They are a real time-saver, but not a prerequisite. If you want to validate the concept before committing budget, you can absolutely start with a focused manual sample and a spreadsheet — the methodology is the same, just done by hand.</p>
+<p>These tools handle the querying, run the repetitions, and present your Share of Model on a dashboard. They are a real time-saver, but not a prerequisite. If you want to validate the concept before committing budget, you can absolutely start with a focused manual sample and a spreadsheet - the methodology is the same, just done by hand.</p>
 <h2 id="how-to-improve">How to Improve Your Share of Model</h2>
 <p>Measurement is only useful if it leads to action, and the encouraging news is that improving your Share of Model overlaps with smart marketing you may already be doing. AI assistants build their recommendations from the content they can find and trust, so the levers are largely familiar ones aimed at a new audience.</p>
 <ul>
-<li><strong>Create clear, intent-resolving content</strong> that directly answers the buying questions in your query set — AI models favor content that resolves intent cleanly.</li>
+<li><strong>Create clear, intent-resolving content</strong> that directly answers the buying questions in your query set - AI models favor content that resolves intent cleanly.</li>
 <li><a href="/how-to-get-your-business-cited-in-chatgpt-answers/"><strong>Earn third-party mentions and reviews</strong></a> on the sources assistants lean on: review platforms, reputable industry publications, and community sites, since AI often cites these rather than your own website.</li>
 <li><strong>Keep your factual presence consistent</strong> and accurate across the web, so the model has reliable signals about what you do and who you serve.</li>
-<li><strong>Structure your own pages for easy parsing</strong> — straightforward headings and concise answers rather than dense marketing copy.</li>
+<li><strong>Structure your own pages for easy parsing</strong> - straightforward headings and concise answers rather than dense marketing copy.</li>
 </ul>
-<p>This emerging discipline — sometimes called <strong>answer engine optimization</strong> or <a href="/services/geo-ai-search-optimization/"><strong>generative engine optimization (GEO)</strong></a> — is essentially SEO reoriented toward being quoted by an AI rather than clicked in a list. For a clearer breakdown of where the disciplines overlap and differ, see <a href="/geo-vs-seo-vs-aeo/">GEO vs SEO vs AEO explained</a>.</p>
+<p>This emerging discipline - sometimes called <strong>answer engine optimization</strong> or <a href="/services/geo-ai-search-optimization/"><strong>generative engine optimization (GEO)</strong></a> - is essentially SEO reoriented toward being quoted by an AI rather than clicked in a list. For a clearer breakdown of where the disciplines overlap and differ, see <a href="/geo-vs-seo-vs-aeo/">GEO vs SEO vs AEO explained</a>.</p>
 <h2>The Bottom Line</h2>
-<p>Search is not disappearing, but the way people find and choose businesses is splitting in two — and a growing share of that decision now happens inside an AI conversation you currently can't see into. Share of Model turns that invisible channel into something you can measure, benchmark against competitors, and improve.</p>
-<p>Start small: pick the twenty or thirty questions your best customers would ask an AI, run them, and see whether you show up. That first measurement is often a wake-up call — and it's the first step toward making sure that when a buyer asks an AI for a recommendation in your category, your name is the one it gives.</p>
+<p>Search is not disappearing, but the way people find and choose businesses is splitting in two - and a growing share of that decision now happens inside an AI conversation you currently can't see into. Share of Model turns that invisible channel into something you can measure, benchmark against competitors, and improve.</p>
+<p>Start small: pick the twenty or thirty questions your best customers would ask an AI, run them, and see whether you show up. That first measurement is often a wake-up call - and it's the first step toward making sure that when a buyer asks an AI for a recommendation in your category, your name is the one it gives.</p>
 </div>
 <!-- CTA -->
 <div class="ta-cta">
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3>Ready to find out where your brand stands in AI search?</h3>
-<p>We'll map your buyer questions and benchmark your Share of Model across ChatGPT, Perplexity, Gemini, and Claude — so you know exactly where you're winning and where you're invisible.</p>
+<p>We'll map your buyer questions and benchmark your Share of Model across ChatGPT, Perplexity, Gemini, and Claude - so you know exactly where you're winning and where you're invisible.</p>
 <a href="/contact-us/" class="ohio-widget button ta-cta-btn">Get in touch with Tarasovs →</a>
 </div>
 </div>

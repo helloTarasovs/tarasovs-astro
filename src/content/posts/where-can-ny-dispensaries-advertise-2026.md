@@ -12,7 +12,7 @@ cover:
   height: 941
 seo:
   title: "Where Can NY Dispensaries Advertise? 2026 Rules - Tarasovs Digital Agency"
-  description: "Google Ads, Meta, billboards and transit ads are largely closed to New York dispensaries. See what Part 129 allows in 2026—and how age gates can hurt SEO"
+  description: "Google Ads, Meta, billboards and transit ads are largely closed to New York dispensaries. See what Part 129 allows in 2026 - and how age gates can hurt SEO"
   canonical: "/where-can-ny-dispensaries-advertise-2026/"
   robots: "index, follow"
   ogImage: "/wp-content/uploads/2026/08/cannabis-advertising-compliance-new-york.webp"

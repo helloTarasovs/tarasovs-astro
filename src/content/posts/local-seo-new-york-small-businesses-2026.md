@@ -13,20 +13,20 @@ cover:
   height: 1254
 seo:
   title: "Local SEO for New York Small Businesses: The Complete 2026 Guide"
-  description: "Rank higher on Google Maps and local search in NYC. A step-by-step local SEO guide for New York small businesses — GBP, citations, reviews"
+  description: "Rank higher on Google Maps and local search in NYC. A step-by-step local SEO guide for New York small businesses - GBP, citations, reviews"
   canonical: "/local-seo-new-york-small-businesses-2026/"
   robots: "index, follow"
   ogImage: "/wp-content/uploads/2026/06/Local-SEO-for-New-York-Small-Businesses-The-Complete-2026-Guide.webp"
 jsonld:
-  - {"@context":"https://schema.org","@type":"Article","@id":"https://tarasovs.me/local-seo-new-york-small-businesses-2026/#article","headline":"Local SEO for New York Small Businesses: The Complete 2026 Guide","description":"Rank higher on Google Maps and local search in NYC. A step-by-step local SEO guide for New York small businesses — GBP, citations, reviews, and more.","url":"https://tarasovs.me/local-seo-new-york-small-businesses-2026/","datePublished":"2026-06-12","dateModified":"2026-06-12","inLanguage":"en-US","keywords":["local SEO New York","local SEO NYC","Google Business Profile NYC","Google Maps ranking","small business SEO New York","local search 2026"],"author":{"@type":"Person","name":"Yurii Tarasov","url":"https://tarasovs.me/about/","jobTitle":"Founder & Web Design Director","worksFor":{"@type":"Organization","@id":"https://tarasovs.me/#organization","name":"Tarasovs Digital Agency"}},"publisher":{"@type":"Organization","@id":"https://tarasovs.me/#organization","name":"Tarasovs Digital Agency","url":"https://tarasovs.me","logo":{"@type":"ImageObject","url":"https://tarasovs.me/wp-content/uploads/2024/05/cropped-logo_new5-270x270.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tarasovs.me/local-seo-new-york-small-businesses-2026/"},"articleSection":"Insights","about":[{"@type":"Thing","name":"Local SEO","sameAs":"https://en.wikipedia.org/wiki/Local_search_(Internet)"},{"@type":"Place","name":"New York City","sameAs":"https://en.wikipedia.org/wiki/New_York_City"}]}
-  - {"@context":"https://schema.org","@type":"FAQPage","@id":"https://tarasovs.me/local-seo-new-york-small-businesses-2026/#faq","mainEntity":[{"@type":"Question","name":"Does my physical address in New York affect my local rankings?","acceptedAnswer":{"@type":"Answer","text":"Yes, significantly. Google maps the geographic center of the searches you want to appear for against your business location. A business physically located in Midtown Manhattan will rank better for Midtown searches than for searches in Staten Island, regardless of how well-optimized everything else is."}},{"@type":"Question","name":"Can I rank in multiple NYC boroughs without a physical location in each?","acceptedAnswer":{"@type":"Answer","text":"For Google Maps specifically, it is very difficult to rank prominently in a borough where you have no physical presence. For service-area businesses (plumbers, cleaners, consultants), add all boroughs you serve as your service area in Google Business Profile, and create borough-specific landing pages on your website targeting the organic results rather than the map pack."}},{"@type":"Question","name":"How important are Yelp reviews compared to Google reviews for NYC businesses?","acceptedAnswer":{"@type":"Answer","text":"Both matter but for different reasons. Google reviews directly influence your Google local pack ranking. Yelp reviews influence your Yelp ranking, and Yelp remains a dominant discovery platform in NYC — especially for restaurants, bars, and personal services. Many New Yorkers check Yelp alongside Google. Prioritize Google reviews for ranking, but don't neglect Yelp."}},{"@type":"Question","name":"How many Google reviews do I need to rank in the NYC local pack?","acceptedAnswer":{"@type":"Answer","text":"There is no fixed number — it varies by category and neighborhood. A specialty service in a quiet Brooklyn neighborhood might rank in the top three with 40–50 reviews. A restaurant in Midtown Manhattan might need 300+. Research the current top three listings in your specific category and area to understand the benchmark you are competing against."}},{"@type":"Question","name":"Should I use a virtual office to rank in a different NYC neighborhood?","acceptedAnswer":{"@type":"Answer","text":"No. Google explicitly prohibits using virtual offices or P.O. boxes as your Google Business Profile address, and doing so risks suspension of your entire listing. Use service-area settings and location-specific website pages instead — those are the legitimate path to multi-borough visibility."}},{"@type":"Question","name":"How long does local SEO take to work in New York?","acceptedAnswer":{"@type":"Answer","text":"For moderately competitive terms, expect to see movement in 3–4 months after completing the foundational work (Google Business Profile, citations, reviews, schema). For highly competitive categories in core Manhattan neighborhoods, 6–12 months of consistent effort is a realistic timeline."}}]}
+  - {"@context":"https://schema.org","@type":"Article","@id":"https://tarasovs.me/local-seo-new-york-small-businesses-2026/#article","headline":"Local SEO for New York Small Businesses: The Complete 2026 Guide","description":"Rank higher on Google Maps and local search in NYC. A step-by-step local SEO guide for New York small businesses - GBP, citations, reviews, and more.","url":"https://tarasovs.me/local-seo-new-york-small-businesses-2026/","datePublished":"2026-06-12","dateModified":"2026-06-12","inLanguage":"en-US","keywords":["local SEO New York","local SEO NYC","Google Business Profile NYC","Google Maps ranking","small business SEO New York","local search 2026"],"author":{"@type":"Person","name":"Yurii Tarasov","url":"https://tarasovs.me/about/","jobTitle":"Founder & Web Design Director","worksFor":{"@type":"Organization","@id":"https://tarasovs.me/#organization","name":"Tarasovs Digital Agency"}},"publisher":{"@type":"Organization","@id":"https://tarasovs.me/#organization","name":"Tarasovs Digital Agency","url":"https://tarasovs.me","logo":{"@type":"ImageObject","url":"https://tarasovs.me/wp-content/uploads/2024/05/cropped-logo_new5-270x270.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tarasovs.me/local-seo-new-york-small-businesses-2026/"},"articleSection":"Insights","about":[{"@type":"Thing","name":"Local SEO","sameAs":"https://en.wikipedia.org/wiki/Local_search_(Internet)"},{"@type":"Place","name":"New York City","sameAs":"https://en.wikipedia.org/wiki/New_York_City"}]}
+  - {"@context":"https://schema.org","@type":"FAQPage","@id":"https://tarasovs.me/local-seo-new-york-small-businesses-2026/#faq","mainEntity":[{"@type":"Question","name":"Does my physical address in New York affect my local rankings?","acceptedAnswer":{"@type":"Answer","text":"Yes, significantly. Google maps the geographic center of the searches you want to appear for against your business location. A business physically located in Midtown Manhattan will rank better for Midtown searches than for searches in Staten Island, regardless of how well-optimized everything else is."}},{"@type":"Question","name":"Can I rank in multiple NYC boroughs without a physical location in each?","acceptedAnswer":{"@type":"Answer","text":"For Google Maps specifically, it is very difficult to rank prominently in a borough where you have no physical presence. For service-area businesses (plumbers, cleaners, consultants), add all boroughs you serve as your service area in Google Business Profile, and create borough-specific landing pages on your website targeting the organic results rather than the map pack."}},{"@type":"Question","name":"How important are Yelp reviews compared to Google reviews for NYC businesses?","acceptedAnswer":{"@type":"Answer","text":"Both matter but for different reasons. Google reviews directly influence your Google local pack ranking. Yelp reviews influence your Yelp ranking, and Yelp remains a dominant discovery platform in NYC - especially for restaurants, bars, and personal services. Many New Yorkers check Yelp alongside Google. Prioritize Google reviews for ranking, but don't neglect Yelp."}},{"@type":"Question","name":"How many Google reviews do I need to rank in the NYC local pack?","acceptedAnswer":{"@type":"Answer","text":"There is no fixed number - it varies by category and neighborhood. A specialty service in a quiet Brooklyn neighborhood might rank in the top three with 40–50 reviews. A restaurant in Midtown Manhattan might need 300+. Research the current top three listings in your specific category and area to understand the benchmark you are competing against."}},{"@type":"Question","name":"Should I use a virtual office to rank in a different NYC neighborhood?","acceptedAnswer":{"@type":"Answer","text":"No. Google explicitly prohibits using virtual offices or P.O. boxes as your Google Business Profile address, and doing so risks suspension of your entire listing. Use service-area settings and location-specific website pages instead - those are the legitimate path to multi-borough visibility."}},{"@type":"Question","name":"How long does local SEO take to work in New York?","acceptedAnswer":{"@type":"Answer","text":"For moderately competitive terms, expect to see movement in 3–4 months after completing the foundational work (Google Business Profile, citations, reviews, schema). For highly competitive categories in core Manhattan neighborhoods, 6–12 months of consistent effort is a realistic timeline."}}]}
   - {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tarasovs.me/"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://tarasovs.me/category/insights/"},{"@type":"ListItem","position":3,"name":"Local SEO for New York Small Businesses: The Complete 2026 Guide","item":"https://tarasovs.me/local-seo-new-york-small-businesses-2026/"}]}
 wpId: 228837
 legacyUrl: "/local-seo-new-york-small-businesses-2026/"
 ---
 <style>
-/* ── Tarasovs HTML Design — Local SEO NY 2026 ── */
-/* Elementor HTML widget — no html/head/body wrappers */
+/* ── Tarasovs HTML Design - Local SEO NY 2026 ── */
+/* Elementor HTML widget - no html/head/body wrappers */
 .ta-post {
 --accent-primary: #7C3AED;
 --accent-bright:  #A855F7;
@@ -380,7 +380,7 @@ padding-left: 14px;
 position: relative;
 }
 .ta-post .action-card li::before {
-content: '—';
+content: ' - ';
 position: absolute;
 left: 0;
 color: var(--accent-soft);
@@ -555,7 +555,7 @@ border: 1px solid var(--border);
 <!-- QUICK ANSWER -->
 <div class="quick-answer">
 <div class="quick-answer-label">Quick Answer</div>
-<p><strong>Local SEO for New York small businesses means ranking in Google's local pack — the map + top 3 listings — for searches in your area.</strong></p>
+<p><strong>Local SEO for New York small businesses means ranking in Google's local pack - the map + top 3 listings - for searches in your area.</strong></p>
 <p>The six core levers are: a fully optimized Google Business Profile, consistent NAP citations, a real review generation strategy, location-specific website content, local links, and AI search visibility. Done right, it delivers a steady flow of high-intent NYC customers at no cost per click.</p>
 </div>
 <img src="/wp-content/uploads/2026/06/dc3608c8-35ea-4491-8953-cded99a4c76d.webp" alt="Local SEO for New York Small Businesses: The Complete 2026 Guide" width="70%" height="auto" style="padding:20px; ">
@@ -585,26 +585,26 @@ border: 1px solid var(--border);
 <ol class="toc-list">
 <li><a href="#why-local-seo">Why Local SEO Matters More Than Ever in NYC</a></li>
 <li><a href="#3-factors">The 3 Factors Google Uses to Rank Local Businesses</a></li>
-<li><a href="#gbp">Step 1 — Optimize Your Google Business Profile</a></li>
-<li><a href="#citations">Step 2 — Build and Clean Up Local Citations</a></li>
-<li><a href="#reviews">Step 3 — Generate and Manage Google Reviews</a></li>
-<li><a href="#website">Step 4 — Optimize Your Website for Local Search</a></li>
-<li><a href="#links">Step 5 — Build Local Links and NYC Press Mentions</a></li>
-<li><a href="#ai">Step 6 — Optimize for AI Search in 2026</a></li>
+<li><a href="#gbp">Step 1 - Optimize Your Google Business Profile</a></li>
+<li><a href="#citations">Step 2 - Build and Clean Up Local Citations</a></li>
+<li><a href="#reviews">Step 3 - Generate and Manage Google Reviews</a></li>
+<li><a href="#website">Step 4 - Optimize Your Website for Local Search</a></li>
+<li><a href="#links">Step 5 - Build Local Links and NYC Press Mentions</a></li>
+<li><a href="#ai">Step 6 - Optimize for AI Search in 2026</a></li>
 <li><a href="#timeline">A Realistic Local SEO Timeline</a></li>
 <li><a href="#faq">Frequently Asked Questions</a></li>
 </ol>
 </nav>
 <!-- BODY -->
 <div class="post-body">
-<h2 id="why-local-seo">What Is Local SEO — and Why Does It Matter More Than Ever in NYC?</h2>
-<p>Local SEO is the practice of optimizing your online presence so your business appears in searches that have local intent — "best coffee shop near me," "plumber in Brooklyn," "NYC web design agency." These searches trigger Google's <strong>local pack</strong>: a map with three business listings shown above the regular organic results.</p>
-<p>Winning that local pack placement is enormously valuable. The top three Google Maps results capture the large majority of clicks for local searches. On mobile — which accounts for over 70% of local searches — the map pack often fills the entire screen before a user scrolls at all.</p>
+<h2 id="why-local-seo">What Is Local SEO - and Why Does It Matter More Than Ever in NYC?</h2>
+<p>Local SEO is the practice of optimizing your online presence so your business appears in searches that have local intent - "best coffee shop near me," "plumber in Brooklyn," "NYC web design agency." These searches trigger Google's <strong>local pack</strong>: a map with three business listings shown above the regular organic results.</p>
+<p>Winning that local pack placement is enormously valuable. The top three Google Maps results capture the large majority of clicks for local searches. On mobile - which accounts for over 70% of local searches - the map pack often fills the entire screen before a user scrolls at all.</p>
 <p>For New York businesses, local SEO is especially high-stakes: millions of daily local searches, more businesses per square mile than almost anywhere else in the world, and NYC consumers who are decisive, time-pressed, and highly reliant on Google Maps. If you're not actively investing in <a href="/services/seo-services/">local SEO</a>, you're handing your most valuable leads to competitors who are.</p>
 <h2 id="3-factors">The 3 Factors Google Uses to Rank Local Businesses</h2>
 <p>Before jumping into tactics, it helps to understand what Google is optimizing for. Three core factors determine who gets those top spots:</p>
 </div><!-- end post-body before stages -->
-<!-- RANKING FACTORS — 3 stage cards -->
+<!-- RANKING FACTORS - 3 stage cards -->
 <div class="process-stages">
 <div class="stage-card">
 <div class="stage-number">Factor 1</div>
@@ -614,17 +614,17 @@ border: 1px solid var(--border);
 <div class="stage-card">
 <div class="stage-number">Factor 2</div>
 <div class="stage-title">Distance</div>
-<p>How far your business is from the searcher or the queried location. You can't fully control this — but distance is less dominant than most business owners think when your other signals are strong.</p>
+<p>How far your business is from the searcher or the queried location. You can't fully control this - but distance is less dominant than most business owners think when your other signals are strong.</p>
 </div>
 <div class="stage-card">
 <div class="stage-number">Factor 3</div>
 <div class="stage-title">Prominence</div>
-<p>How well-known and trusted Google believes your business to be. Influenced by review count and quality, third-party mentions, and website authority. This is where most small businesses have the biggest gap — and the biggest opportunity.</p>
+<p>How well-known and trusted Google believes your business to be. Influenced by review count and quality, third-party mentions, and website authority. This is where most small businesses have the biggest gap - and the biggest opportunity.</p>
 </div>
 </div>
 <div class="post-body">
 <h2 id="gbp">Step 1: Claim and Fully Optimize Your Google Business Profile</h2>
-<p>Your Google Business Profile (GBP) is the single most important asset in local SEO. It's what appears on Google Maps and in the local pack — and what most customers see before they ever visit your website. A poorly maintained or unclaimed profile is the #1 reason small businesses lose local rankings they should be winning.</p>
+<p>Your Google Business Profile (GBP) is the single most important asset in local SEO. It's what appears on Google Maps and in the local pack - and what most customers see before they ever visit your website. A poorly maintained or unclaimed profile is the #1 reason small businesses lose local rankings they should be winning.</p>
 </div>
 <!-- GBP STEPS -->
 <div class="step-list">
@@ -632,7 +632,7 @@ border: 1px solid var(--border);
 <div class="step-num">1</div>
 <div class="step-body">
 <div class="step-title">Claim or verify your listing</div>
-<p class="step-desc">Go to business.google.com and search for your business. If it exists, claim it. If not, create it. Google verifies ownership via postcard, phone, or video — this step cannot be skipped.</p>
+<p class="step-desc">Go to business.google.com and search for your business. If it exists, claim it. If not, create it. Google verifies ownership via postcard, phone, or video - this step cannot be skipped.</p>
 </div>
 </div>
 <div class="step-item">
@@ -660,7 +660,7 @@ border: 1px solid var(--border);
 <div class="step-num">5</div>
 <div class="step-body">
 <div class="step-title">Post to Google regularly</div>
-<p class="step-desc">GBP's "Updates" feature lets you post offers, events, and news directly to your listing — appearing in your profile and influencing impressions. Aim for at least one post every two weeks using natural language that includes your target keywords.</p>
+<p class="step-desc">GBP's "Updates" feature lets you post offers, events, and news directly to your listing - appearing in your profile and influencing impressions. Aim for at least one post every two weeks using natural language that includes your target keywords.</p>
 </div>
 </div>
 </div>
@@ -677,9 +677,9 @@ border: 1px solid var(--border);
 <h2 id="reviews">Step 3: Generate and Manage Google Reviews Relentlessly</h2>
 <p>Reviews are arguably the most powerful local SEO signal small businesses ignore. Businesses in the top three local positions typically have significantly more reviews and a higher average rating than those ranked below. Beyond rankings, reviews directly influence click-through: 4.8 stars from 200 reviews versus 4.2 from 12 reviews makes a real difference when a buyer decides in seconds.</p>
 <h3>Ask every time</h3>
-<p>The best moment to ask is immediately after a successful service. Have a QR code at your register, in your email signature, or on a printed card that goes directly to your Google review page — remove every friction point, since even one extra click reduces conversion significantly.</p>
+<p>The best moment to ask is immediately after a successful service. Have a QR code at your register, in your email signature, or on a printed card that goes directly to your Google review page - remove every friction point, since even one extra click reduces conversion significantly.</p>
 <h3>Respond to every review</h3>
-<p>Google has confirmed this improves local ranking signals. Responding to negative reviews professionally shows potential customers how you handle problems — and can actually strengthen trust more than having zero negatives. Respond within 48 hours. Never buy fake reviews: Google's detection is sophisticated in 2026 and listing suspension is not worth it.</p>
+<p>Google has confirmed this improves local ranking signals. Responding to negative reviews professionally shows potential customers how you handle problems - and can actually strengthen trust more than having zero negatives. Respond within 48 hours. Never buy fake reviews: Google's detection is sophisticated in 2026 and listing suspension is not worth it.</p>
 <h2 id="website">Step 4: Optimize Your Website for Local Search</h2>
 <p>Your GBP and website work together. GBP handles the map pack; your website handles the organic results below it. Both matter, and they reinforce each other.</p>
 </div>
@@ -689,21 +689,21 @@ border: 1px solid var(--border);
 <div class="step-num">1</div>
 <div class="step-body">
 <div class="step-title">Create location-specific landing pages</div>
-<p class="step-desc">Serve multiple NYC neighborhoods or boroughs? Build a dedicated page for each — "Web Design in Brooklyn," "Web Design in Manhattan" — with unique, genuine content. Thin duplicate pages hurt more than they help.</p>
+<p class="step-desc">Serve multiple NYC neighborhoods or boroughs? Build a dedicated page for each - "Web Design in Brooklyn," "Web Design in Manhattan" - with unique, genuine content. Thin duplicate pages hurt more than they help.</p>
 </div>
 </div>
 <div class="step-item">
 <div class="step-num">2</div>
 <div class="step-body">
 <div class="step-title">Put your NAP on every page</div>
-<p class="step-desc">Business name, address, and phone should appear in your footer as consistent text (not an image — Google needs to read it). This reinforces NAP signals across all your citations.</p>
+<p class="step-desc">Business name, address, and phone should appear in your footer as consistent text (not an image - Google needs to read it). This reinforces NAP signals across all your citations.</p>
 </div>
 </div>
 <div class="step-item">
 <div class="step-num">3</div>
 <div class="step-body">
 <div class="step-title">Add LocalBusiness schema markup</div>
-<p class="step-desc">Schema tells Google precisely what you do, where you are, and your contact info in structured format machines can read without ambiguity — especially valuable in dense NYC. Add via Yoast SEO or WPCode.</p>
+<p class="step-desc">Schema tells Google precisely what you do, where you are, and your contact info in structured format machines can read without ambiguity - especially valuable in dense NYC. Add via Yoast SEO or WPCode.</p>
 </div>
 </div>
 <div class="step-item">
@@ -723,9 +723,9 @@ border: 1px solid var(--border);
 </div>
 <div class="post-body">
 <h2 id="links">Step 5: Build Local Links and NYC Press Mentions</h2>
-<p>Links from credible local websites — a New York business journal, a neighborhood blog, the NYC Chamber of Commerce, a local news outlet — are among the most powerful ranking signals you can earn. They tell Google that trusted local sources consider your business worth mentioning.</p>
+<p>Links from credible local websites - a New York business journal, a neighborhood blog, the NYC Chamber of Commerce, a local news outlet - are among the most powerful ranking signals you can earn. They tell Google that trusted local sources consider your business worth mentioning.</p>
 </div>
-<!-- LOCAL LINK TACTICS — 4 action cards -->
+<!-- LOCAL LINK TACTICS - 4 action cards -->
 <div class="action-cards">
 <div class="action-card">
 <div class="action-card-title">.edu and .gov pages</div>
@@ -761,10 +761,10 @@ border: 1px solid var(--border);
 </div>
 </div>
 <div class="post-body">
-<h2 id="ai">Step 6: Optimize for AI Search — Local SoM in 2026</h2>
-<p>A growing share of New Yorkers now ask ChatGPT, Perplexity, or Google's AI Mode for local recommendations: "What's the best Italian restaurant in the West Village?" or "Who are the best web designers for small businesses in NYC?" This creates a new dimension of local visibility — <strong><a href="/share-of-model-ai-search-visibility/">Share of Model</a> for local queries</strong>.</p>
-<p>The same tactics that improve your Google ranking also help AI visibility: consistent NAP, strong reviews, mentions on trusted third-party sites, and clear location-specific content. Accurate listings on platforms AI assistants frequently cite — Yelp, TripAdvisor, industry publications — are increasingly important.</p>
-<p>Businesses that win local AI recommendations tend to have clear positioning (not "we do everything"), specific service and location language, and genuine third-party validation from credible NYC sources. This is not a separate strategy — it's the same local SEO fundamentals extended to a new channel. See how our <a href="/services/geo-ai-search-optimization/">GEO and AI search optimization service</a> approaches this for local businesses.</p>
+<h2 id="ai">Step 6: Optimize for AI Search - Local SoM in 2026</h2>
+<p>A growing share of New Yorkers now ask ChatGPT, Perplexity, or Google's AI Mode for local recommendations: "What's the best Italian restaurant in the West Village?" or "Who are the best web designers for small businesses in NYC?" This creates a new dimension of local visibility - <strong><a href="/share-of-model-ai-search-visibility/">Share of Model</a> for local queries</strong>.</p>
+<p>The same tactics that improve your Google ranking also help AI visibility: consistent NAP, strong reviews, mentions on trusted third-party sites, and clear location-specific content. Accurate listings on platforms AI assistants frequently cite - Yelp, TripAdvisor, industry publications - are increasingly important.</p>
+<p>Businesses that win local AI recommendations tend to have clear positioning (not "we do everything"), specific service and location language, and genuine third-party validation from credible NYC sources. This is not a separate strategy - it's the same local SEO fundamentals extended to a new channel. See how our <a href="/services/geo-ai-search-optimization/">GEO and AI search optimization service</a> approaches this for local businesses.</p>
 <hr class="divider">
 <h2 id="timeline">A Realistic Local SEO Timeline for New York Businesses</h2>
 <p>Local SEO is not instant. In New York's competitive market, it takes longer than in smaller cities. Here's what to expect:</p>
@@ -773,22 +773,22 @@ border: 1px solid var(--border);
 <div class="timeline">
 <div class="tl-item">
 <div class="tl-dot"></div>
-<div class="tl-period">Weeks 1–4 — Foundation</div>
-<p class="tl-text">Claim and fully optimize GBP. Fix NAP consistency across all major directories. Add LocalBusiness schema to your website. This is foundational — nothing else performs well without it.</p>
+<div class="tl-period">Weeks 1–4 - Foundation</div>
+<p class="tl-text">Claim and fully optimize GBP. Fix NAP consistency across all major directories. Add LocalBusiness schema to your website. This is foundational - nothing else performs well without it.</p>
 </div>
 <div class="tl-item">
 <div class="tl-dot"></div>
-<div class="tl-period">Months 2–3 — Build</div>
+<div class="tl-period">Months 2–3 - Build</div>
 <p class="tl-text">Begin actively generating reviews. Publish location-specific content. Build 20–30 quality citations. Start outreach for local links and press mentions.</p>
 </div>
 <div class="tl-item">
 <div class="tl-dot"></div>
-<div class="tl-period">Months 4–6 — Traction</div>
+<div class="tl-period">Months 4–6 - Traction</div>
 <p class="tl-text">For moderately competitive keywords, expect to start seeing movement in local pack rankings. For highly competitive terms, sustained work over 6–12 months is realistic.</p>
 </div>
 <div class="tl-item">
 <div class="tl-dot"></div>
-<div class="tl-period">Ongoing — Maintain</div>
+<div class="tl-period">Ongoing - Maintain</div>
 <p class="tl-text">Review generation, GBP posting, content publishing, and link building are ongoing activities. The businesses that consistently outrank competitors treat local SEO as a regular operating expense, not a one-time project.</p>
 </div>
 </div>
@@ -806,15 +806,15 @@ border: 1px solid var(--border);
 </div>
 <div class="faq-item">
 <p class="faq-question">How important are Yelp reviews compared to Google reviews for NYC businesses?</p>
-<p class="faq-answer">Both matter, but for different reasons. Google reviews directly influence your Google local pack ranking. Yelp remains dominant in NYC — especially for restaurants, bars, and personal services — and many New Yorkers check Yelp alongside Google. Prioritize Google reviews for ranking, but don't neglect Yelp.</p>
+<p class="faq-answer">Both matter, but for different reasons. Google reviews directly influence your Google local pack ranking. Yelp remains dominant in NYC - especially for restaurants, bars, and personal services - and many New Yorkers check Yelp alongside Google. Prioritize Google reviews for ranking, but don't neglect Yelp.</p>
 </div>
 <div class="faq-item">
 <p class="faq-question">How many Google reviews do I need to rank in the NYC local pack?</p>
-<p class="faq-answer">There is no fixed number — it varies by category and neighborhood. A specialty service in a quiet Brooklyn neighborhood might rank in the top three with 40–50 reviews. A restaurant in Midtown Manhattan might need 300+. Research the current top three listings in your specific category and area to understand the benchmark you're competing against.</p>
+<p class="faq-answer">There is no fixed number - it varies by category and neighborhood. A specialty service in a quiet Brooklyn neighborhood might rank in the top three with 40–50 reviews. A restaurant in Midtown Manhattan might need 300+. Research the current top three listings in your specific category and area to understand the benchmark you're competing against.</p>
 </div>
 <div class="faq-item">
 <p class="faq-question">Should I use a virtual office to rank in a different NYC neighborhood?</p>
-<p class="faq-answer">No. Google explicitly prohibits using virtual offices or P.O. boxes as your GBP address, and doing so risks suspension of your entire listing. Use service-area settings and location-specific website pages instead — those are the legitimate path to multi-borough visibility.</p>
+<p class="faq-answer">No. Google explicitly prohibits using virtual offices or P.O. boxes as your GBP address, and doing so risks suspension of your entire listing. Use service-area settings and location-specific website pages instead - those are the legitimate path to multi-borough visibility.</p>
 </div>
 <div class="faq-item">
 <p class="faq-question">How long does local SEO take to work in New York?</p>
@@ -826,7 +826,7 @@ border: 1px solid var(--border);
 <div class="cta-box">
 <div class="cta-label">Tarasovs Digital Agency</div>
 <h3 class="cta-title">Ready to rank in New York?</h3>
-<p class="cta-text">We build and manage local SEO campaigns for small businesses in NYC and across the US — from GBP setup to review strategy to location-specific content.</p>
+<p class="cta-text">We build and manage local SEO campaigns for small businesses in NYC and across the US - from GBP setup to review strategy to location-specific content.</p>
 <a href="/contact/" class="ohio-widget button ta-cta-btn">Get a free local SEO audit →</a>
 </div>
 </div><!-- end .ta-post -->

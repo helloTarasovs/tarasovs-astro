@@ -11,7 +11,7 @@ cover:
   height: 1254
 seo:
   title: "Building a Framer Website with ChatGPT + Codex: My Real 2026 Workflow"
-  description: "A real 2026 workflow for designing and building a premium Framer website with ChatGPT, Codex and Framer Agent — including prototypes, native Framer, React, QA and what actually worked."
+  description: "A real 2026 workflow for designing and building a premium Framer website with ChatGPT, Codex and Framer Agent - including prototypes, native Framer, React, QA and what actually worked."
   canonical: "/framer-chatgpt-codex-workflow/"
   robots: "index, follow"
   ogImage: "/wp-content/uploads/2026/08/framer-chatgpt-codex-workflow-future-image.webp"
@@ -536,10 +536,10 @@ animation-duration: .01ms !important;
 <figcaption>The current Hero: “Framer, pushed further.” paired with an interactive exploded system that exposes the layers behind the build.</figcaption>
 </figure>
 <div class="ta-stats" aria-label="Portfolio structure">
-<div class="ta-stat"><div class="ta-stat-number">01</div><div class="ta-stat-label">Hero — interactive system showing the layers behind a Framer build.</div></div>
-<div class="ta-stat"><div class="ta-stat-number">02</div><div class="ta-stat-label">Selected Work — cinematic project presentation rather than a conventional card grid.</div></div>
-<div class="ta-stat"><div class="ta-stat-number">03</div><div class="ta-stat-label">Beyond the Canvas — Framer extending into React, APIs, CMS, Motion and Search.</div></div>
-<div class="ta-stat"><div class="ta-stat-number">04</div><div class="ta-stat-label">Framer in Practice — experience and credibility without another generic agency section.</div></div>
+<div class="ta-stat"><div class="ta-stat-number">01</div><div class="ta-stat-label">Hero - interactive system showing the layers behind a Framer build.</div></div>
+<div class="ta-stat"><div class="ta-stat-number">02</div><div class="ta-stat-label">Selected Work - cinematic project presentation rather than a conventional card grid.</div></div>
+<div class="ta-stat"><div class="ta-stat-number">03</div><div class="ta-stat-label">Beyond the Canvas - Framer extending into React, APIs, CMS, Motion and Search.</div></div>
+<div class="ta-stat"><div class="ta-stat-number">04</div><div class="ta-stat-label">Framer in Practice - experience and credibility without another generic agency section.</div></div>
 </div>
 <p>The structure has changed several times while I have been designing it. That is important. This has never been a <strong>prompt → website → publish</strong> process.</p>
 <blockquote>Generate → compare → reject → refine → prototype → implement → inspect again.</blockquote>
@@ -549,7 +549,7 @@ animation-duration: .01ms !important;
 <p>The same thing happened with Selected Work. The original version used a large project image on the left and four selectable projects on the right. It worked. It was clean. It was also noticeably weaker than the Hero.</p>
 <figure class="ta-figure">
 <img loading="lazy" src="/wp-content/uploads/2026/08/1-selected-work.webp" alt="Original Selected Work section in Yurii Tarasov Framer portfolio" width="1600" height="946">
-<figcaption>The earlier Selected Work direction: functional and clean, but visually weaker than the Hero — which is why I went back to the section concept instead of just polishing it.</figcaption>
+<figcaption>The earlier Selected Work direction: functional and clean, but visually weaker than the Hero - which is why I went back to the section concept instead of just polishing it.</figcaption>
 </figure>
 <p>Instead of polishing a weak concept indefinitely, I went back to the section architecture and started exploring fullscreen, scroll-driven project presentations where the work itself dominates the viewport.</p>
 <blockquote>AI makes producing alternatives cheap. Choosing the right alternative still requires taste.</blockquote>
@@ -577,7 +577,7 @@ animation-duration: .01ms !important;
 <p>The next stage is where the workflow becomes more useful than screenshot-to-code generation. I connected Codex to the real Framer project and asked it to perform a read-only inspection before implementing a section.</p>
 <p>The audit identified the actual production structure: Home, the design-system page, breakpoints, shared navigation, Selected Work, labels, buttons, CMS collections and the custom Hero code component.</p>
 <div class="ta-actions" aria-label="What the Framer project audit covered">
-<div class="ta-action"><div class="ta-action-title">Pages</div><ul><li>Home</li><li>00 — Design System</li></ul></div>
+<div class="ta-action"><div class="ta-action-title">Pages</div><ul><li>Home</li><li>00 - Design System</li></ul></div>
 <div class="ta-action"><div class="ta-action-title">Breakpoints</div><ul><li>Desktop</li><li>Laptop</li><li>Tablet</li><li>Phone</li></ul></div>
 <div class="ta-action"><div class="ta-action-title">CMS</div><ul><li>Projects</li><li>Services</li><li>Featured / order fields</li><li>Project detail content</li></ul></div>
 <div class="ta-action"><div class="ta-action-title">Code &amp; components</div><ul><li>ExplodedSystem.tsx</li><li>Selected Work</li><li>Header / navigation</li><li>Buttons and labels</li></ul></div>
@@ -639,16 +639,16 @@ Do not publish.</pre><p>The tighter the project context becomes, the more import
 <tr><th>Task</th><th>ChatGPT</th><th>Codex</th><th>Native Framer</th><th>React / TS</th></tr>
 </thead>
 <tbody>
-<tr><td class="ta-row-label">Art direction</td><td><span class="ta-check">✓</span></td><td><span class="ta-dash">—</span></td><td><span class="ta-dash">—</span></td><td><span class="ta-dash">—</span></td></tr>
-<tr><td class="ta-row-label">UX / hierarchy</td><td><span class="ta-check">✓</span></td><td><span class="ta-dash">—</span></td><td><span class="ta-dash">—</span></td><td><span class="ta-dash">—</span></td></tr>
-<tr><td class="ta-row-label">Browser prototype</td><td><span class="ta-check">✓</span></td><td><span class="ta-dash">—</span></td><td><span class="ta-dash">—</span></td><td><span class="ta-dash">—</span></td></tr>
-<tr><td class="ta-row-label">Project audit</td><td><span class="ta-dash">—</span></td><td><span class="ta-check">✓</span></td><td><span class="ta-dash">—</span></td><td><span class="ta-dash">—</span></td></tr>
-<tr><td class="ta-row-label">Stack / Grid layout</td><td><span class="ta-dash">—</span></td><td><span class="ta-check">✓</span></td><td><span class="ta-check">✓</span></td><td><span class="ta-dash">—</span></td></tr>
-<tr><td class="ta-row-label">CMS structure</td><td><span class="ta-dash">—</span></td><td><span class="ta-check">✓</span></td><td><span class="ta-check">✓</span></td><td><span class="ta-dash">—</span></td></tr>
-<tr><td class="ta-row-label">Variants / hover</td><td><span class="ta-dash">—</span></td><td><span class="ta-dash">—</span></td><td><span class="ta-check">✓</span></td><td><span class="ta-dash">—</span></td></tr>
-<tr><td class="ta-row-label">Scroll Transform</td><td><span class="ta-dash">—</span></td><td><span class="ta-dash">—</span></td><td><span class="ta-check">✓</span></td><td><span class="ta-dash">—</span></td></tr>
-<tr><td class="ta-row-label">Complex pointer state</td><td><span class="ta-dash">—</span></td><td><span class="ta-check">✓</span></td><td>Sometimes</td><td><span class="ta-check">✓</span></td></tr>
-<tr><td class="ta-row-label">APIs / custom data</td><td><span class="ta-dash">—</span></td><td><span class="ta-check">✓</span></td><td>Sometimes</td><td><span class="ta-check">✓</span></td></tr>
+<tr><td class="ta-row-label">Art direction</td><td><span class="ta-check">✓</span></td><td><span class="ta-dash"> - </span></td><td><span class="ta-dash"> - </span></td><td><span class="ta-dash"> - </span></td></tr>
+<tr><td class="ta-row-label">UX / hierarchy</td><td><span class="ta-check">✓</span></td><td><span class="ta-dash"> - </span></td><td><span class="ta-dash"> - </span></td><td><span class="ta-dash"> - </span></td></tr>
+<tr><td class="ta-row-label">Browser prototype</td><td><span class="ta-check">✓</span></td><td><span class="ta-dash"> - </span></td><td><span class="ta-dash"> - </span></td><td><span class="ta-dash"> - </span></td></tr>
+<tr><td class="ta-row-label">Project audit</td><td><span class="ta-dash"> - </span></td><td><span class="ta-check">✓</span></td><td><span class="ta-dash"> - </span></td><td><span class="ta-dash"> - </span></td></tr>
+<tr><td class="ta-row-label">Stack / Grid layout</td><td><span class="ta-dash"> - </span></td><td><span class="ta-check">✓</span></td><td><span class="ta-check">✓</span></td><td><span class="ta-dash"> - </span></td></tr>
+<tr><td class="ta-row-label">CMS structure</td><td><span class="ta-dash"> - </span></td><td><span class="ta-check">✓</span></td><td><span class="ta-check">✓</span></td><td><span class="ta-dash"> - </span></td></tr>
+<tr><td class="ta-row-label">Variants / hover</td><td><span class="ta-dash"> - </span></td><td><span class="ta-dash"> - </span></td><td><span class="ta-check">✓</span></td><td><span class="ta-dash"> - </span></td></tr>
+<tr><td class="ta-row-label">Scroll Transform</td><td><span class="ta-dash"> - </span></td><td><span class="ta-dash"> - </span></td><td><span class="ta-check">✓</span></td><td><span class="ta-dash"> - </span></td></tr>
+<tr><td class="ta-row-label">Complex pointer state</td><td><span class="ta-dash"> - </span></td><td><span class="ta-check">✓</span></td><td>Sometimes</td><td><span class="ta-check">✓</span></td></tr>
+<tr><td class="ta-row-label">APIs / custom data</td><td><span class="ta-dash"> - </span></td><td><span class="ta-check">✓</span></td><td>Sometimes</td><td><span class="ta-check">✓</span></td></tr>
 <tr><td class="ta-row-label">Final visual QA</td><td><strong>Human</strong></td><td><strong>Human</strong></td><td><strong>Human</strong></td><td><strong>Human</strong></td></tr>
 </tbody>
 </table>
@@ -666,9 +666,9 @@ Do not publish.</pre><p>The tighter the project context becomes, the more import
 <p>A count-up animation for experience metrics such as “30+” or “15+”, for example, immediately pushed the section toward a familiar agency-template pattern. A quieter mask reveal with a line draw and restrained stagger felt more deliberate.</p>
 <p>I also do not want every Home section to use the same interaction model. The current direction gives each major section a different job:</p>
 <ul>
-<li><strong>Hero:</strong> interaction-led — pointer depth and the custom exploded system;</li>
-<li><strong>Selected Work:</strong> scroll-presentation-led — large project scenes replacing a conventional project list;</li>
-<li><strong>Beyond the Canvas:</strong> system-animation-led — a technical trajectory that becomes interactive.</li>
+<li><strong>Hero:</strong> interaction-led - pointer depth and the custom exploded system;</li>
+<li><strong>Selected Work:</strong> scroll-presentation-led - large project scenes replacing a conventional project list;</li>
+<li><strong>Beyond the Canvas:</strong> system-animation-led - a technical trajectory that becomes interactive.</li>
 </ul>
 <p>The goal is not to make the site a motion demo reel. The goal is to make each interaction reinforce the story of the section.</p>
 <h2 id="ta-roles">10. What ChatGPT does vs what Codex does vs what Framer does</h2>
@@ -764,7 +764,7 @@ Do not publish.</pre><p>The tighter the project context becomes, the more import
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-q">Does AI remove the need for a designer or developer?</p>
-<p class="ta-faq-a">Not in this workflow. It removes some mechanical friction between idea, prototype and implementation. The difficult decisions — hierarchy, restraint, trade-offs, architecture and what to remove — still require experienced judgment.</p>
+<p class="ta-faq-a">Not in this workflow. It removes some mechanical friction between idea, prototype and implementation. The difficult decisions - hierarchy, restraint, trade-offs, architecture and what to remove - still require experienced judgment.</p>
 </div>
 </div>
 </section>

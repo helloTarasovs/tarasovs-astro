@@ -518,7 +518,7 @@ transform: translateY(-1px);
 </ul>
 </div>
 <div class="ta-body">
-<p>This gives you a baseline. In GEO, this is often called <strong>Share of Model</strong> — the percentage of relevant AI answers where your brand appears.</p>
+<p>This gives you a baseline. In GEO, this is often called <strong>Share of Model</strong> - the percentage of relevant AI answers where your brand appears.</p>
 <p>If your business does not appear at all, that does not always mean your website is bad. It may mean AI systems do not yet have enough structured, verifiable, and authoritative information to confidently cite you.</p>
 <hr class="ta-divider">
 <!-- STEP 2 -->
@@ -557,7 +557,7 @@ Sitemap: https://yourdomain.com/sitemap.xml</code></div>
 <p>That means your service pages need to be specific. A generic "Services" page is not enough. Each important service should have its own page with a clear title, direct explanation, use cases, process, deliverables, pricing guidance where appropriate, FAQs, and trust signals.</p>
 <p>For example, Tarasovs has separate service pages for:</p>
 <ul>
-<li><a href="/services/geo-ai-search-optimization/">GEO — AI Search Optimization</a></li>
+<li><a href="/services/geo-ai-search-optimization/">GEO - AI Search Optimization</a></li>
 <li><a href="/services/seo-services/">SEO Services</a></li>
 <li><a href="/services/website-design-services/">Website Design Services</a></li>
 <li><a href="/services/framer-development/">Framer Design &amp; Development</a></li>
@@ -654,7 +654,7 @@ Sitemap: https://yourdomain.com/sitemap.xml</code></div>
 <li>Press mentions</li>
 <li>Niche community discussions</li>
 </ul>
-<p>For local businesses, consistent NAP information — name, address, phone number — is still important. For agencies and consultants, consistent positioning across the web is equally important.</p>
+<p>For local businesses, consistent NAP information - name, address, phone number - is still important. For agencies and consultants, consistent positioning across the web is equally important.</p>
 <p>If your website says you are a "GEO and SEO agency," your LinkedIn, directory profiles, author bios, guest posts, and case studies should reinforce the same idea.</p>
 <hr class="ta-divider">
 <!-- STEP 8 -->
@@ -695,7 +695,7 @@ Sitemap: https://yourdomain.com/sitemap.xml</code></div>
 <p>For this topic, your internal linking structure should look like a cluster:</p>
 <ul>
 <li>Main guide: <a href="/what-is-geo-generative-engine-optimization/">What Is GEO?</a></li>
-<li>Main service page: <a href="/services/geo-ai-search-optimization/">GEO — AI Search Optimization</a></li>
+<li>Main service page: <a href="/services/geo-ai-search-optimization/">GEO - AI Search Optimization</a></li>
 <li>Supporting service: <a href="/services/seo-services/">SEO Services</a></li>
 <li>Supporting service: <a href="/services/website-design-services/">Website Design Services</a></li>
 <li>Supporting service: <a href="/services/framer-development/">Framer Development</a></li>
@@ -758,7 +758,7 @@ Sitemap: https://yourdomain.com/sitemap.xml</code></div>
 <p>Getting cited in ChatGPT answers is not about finding a shortcut. It is about making your business easier for AI systems to access, understand, verify, and recommend.</p>
 <p>Traditional SEO still matters. Google rankings still matter. But search behavior is changing. More users now ask AI assistants for recommendations before they ever visit a website. If your business is not part of those answers, you may be invisible during the decision-making stage.</p>
 <p>The companies that act early will build an advantage. They will have stronger content, clearer entity signals, better third-party authority, and a larger footprint across AI search platforms.</p>
-<p>To understand the full strategy, read our complete guide to <a href="/what-is-geo-generative-engine-optimization/">Generative Engine Optimization</a>. To apply it to your website, explore our <a href="/services/geo-ai-search-optimization/">GEO — AI Search Optimization service</a>.</p>
+<p>To understand the full strategy, read our complete guide to <a href="/what-is-geo-generative-engine-optimization/">Generative Engine Optimization</a>. To apply it to your website, explore our <a href="/services/geo-ai-search-optimization/">GEO - AI Search Optimization service</a>.</p>
 </div>
 <!-- FAQ -->
 <section class="ta-faq">
@@ -786,7 +786,7 @@ Sitemap: https://yourdomain.com/sitemap.xml</code></div>
 <div class="ta-cta">
 <div class="ta-cta__label">Tarasovs Digital Agency</div>
 <h2>Want Your Business to Appear in ChatGPT Answers?</h2>
-<p>Tarasovs Digital Agency helps businesses build websites that are not only beautiful and fast, but also structured for the future of search — Google, ChatGPT, Perplexity, and AI-powered discovery.</p>
+<p>Tarasovs Digital Agency helps businesses build websites that are not only beautiful and fast, but also structured for the future of search - Google, ChatGPT, Perplexity, and AI-powered discovery.</p>
 <a class="ohio-widget button ta-cta-btn ta-cta__btn ta-cta__btn" href="/contact-us/">Start Your AI Visibility Audit →</a>
 </div>
 </div><!-- /.ta-post -->

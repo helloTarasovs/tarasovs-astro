@@ -351,7 +351,7 @@ padding-left: 14px;
 position: relative;
 }
 .ta-action li::before {
-content: '—';
+content: ' - ';
 position: absolute;
 left: 0;
 color: var(--accent-soft);
@@ -903,7 +903,7 @@ https://yourstore.com/llms-full.txt</code></pre><p>For most stores, the default 
 <div class="ta-cta">
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <div class="ta-cta-title">Want to know what is actually blocking your AI visibility?</div>
-<p class="ta-cta-text">We audit the complete path from crawler access and content structure to authority signals, AI citations, and measurement—then separate low-effort experiments from the changes most likely to improve discoverability and qualified traffic.</p>
+<p class="ta-cta-text">We audit the complete path from crawler access and content structure to authority signals, AI citations, and measurement - then separate low-effort experiments from the changes most likely to improve discoverability and qualified traffic.</p>
 <a href="/contact-us/" class="ohio-widget button ta-cta-btn">Get your AI visibility audit →</a>
 </div>
 </div>

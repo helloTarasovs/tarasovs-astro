@@ -12,12 +12,12 @@ cover:
   height: 1254
 seo:
   title: "Dutchie iFrame to Dutchie Pro: Verdi Cannabis SEO Case Study - Tarasovs Digital Agency"
-  description: "We migrated Verdi Cannabis off Dutchie's iFrame to Dutchie Pro without losing rankings — organic visibility grew substantially in 6 months."
+  description: "We migrated Verdi Cannabis off Dutchie's iFrame to Dutchie Pro without losing rankings - organic visibility grew substantially in 6 months."
   canonical: "/verdi-cannabis-dutchie-pro-case-study/"
   robots: "index, follow"
   ogImage: "/wp-content/uploads/2026/07/tarasovs-verdi-cannabis-case-study-DutchiePro-migration.webp"
 jsonld:
-  - {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Dutchie iFrame and Dutchie Pro?","acceptedAnswer":{"@type":"Answer","text":"Dutchie's default iFrame embeds the product menu from a separate domain inside a frame on your site — search engines struggle to index that content as real pages. Dutchie Pro instead serves store and product pages as standalone, crawlable URLs on your own domain, so each one can be found and ranked individually."}},{"@type":"Question","name":"Does migrating off Dutchie's iFrame risk losing existing rankings?","acceptedAnswer":{"@type":"Answer","text":"It can, if the URL structure changes without proper redirects. We mapped every existing indexed URL before migration and preserved the structure wherever possible, with 301 redirects covering anything that had to change — which is why Verdi's rankings grew through the migration instead of dropping."}},{"@type":"Question","name":"Why did CTR drop if clicks and impressions both grew?","acceptedAnswer":{"@type":"Answer","text":"Ranking for new, broader, non-branded queries naturally lowers average CTR, since those searches convert to clicks less often than someone searching your exact brand name. Total clicks still grew substantially in the period — the drop reflects healthy expansion into new search territory, not declining performance."}},{"@type":"Question","name":"How long does a Dutchie Pro migration take to show results?","acceptedAnswer":{"@type":"Answer","text":"Indexing of the newly crawlable pages typically begins within the first few weeks. Meaningful ranking and traffic gains build over 3–6 months as Google gains confidence in the new URLs — which matches the 6-month window in these results."}}]}
+  - {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Dutchie iFrame and Dutchie Pro?","acceptedAnswer":{"@type":"Answer","text":"Dutchie's default iFrame embeds the product menu from a separate domain inside a frame on your site - search engines struggle to index that content as real pages. Dutchie Pro instead serves store and product pages as standalone, crawlable URLs on your own domain, so each one can be found and ranked individually."}},{"@type":"Question","name":"Does migrating off Dutchie's iFrame risk losing existing rankings?","acceptedAnswer":{"@type":"Answer","text":"It can, if the URL structure changes without proper redirects. We mapped every existing indexed URL before migration and preserved the structure wherever possible, with 301 redirects covering anything that had to change - which is why Verdi's rankings grew through the migration instead of dropping."}},{"@type":"Question","name":"Why did CTR drop if clicks and impressions both grew?","acceptedAnswer":{"@type":"Answer","text":"Ranking for new, broader, non-branded queries naturally lowers average CTR, since those searches convert to clicks less often than someone searching your exact brand name. Total clicks still grew substantially in the period - the drop reflects healthy expansion into new search territory, not declining performance."}},{"@type":"Question","name":"How long does a Dutchie Pro migration take to show results?","acceptedAnswer":{"@type":"Answer","text":"Indexing of the newly crawlable pages typically begins within the first few weeks. Meaningful ranking and traffic gains build over 3–6 months as Google gains confidence in the new URLs - which matches the 6-month window in these results."}}]}
 wpId: 229103
 legacyUrl: "/verdi-cannabis-dutchie-pro-case-study/"
 ---
@@ -240,13 +240,13 @@ box-shadow: var(--glow-strong);
 <div class="ta-post">
 <div class="ta-qa">
 <div class="ta-qa-label">Quick Answer</div>
-<p><strong>We migrated Verdi Cannabis's product menu from Dutchie's default iFrame embed to Dutchie Pro — preserving the existing URL and link structure — and built dedicated blog and podcast templates on their WordPress site.</strong></p>
-<p>Over the following 6 months, organic impressions nearly doubled, organic clicks grew by double digits, and the site's average Google ranking position climbed more than 7 spots — with the majority of top-traffic pages being ones that had little to no visibility in the previous period.</p>
+<p><strong>We migrated Verdi Cannabis's product menu from Dutchie's default iFrame embed to Dutchie Pro - preserving the existing URL and link structure - and built dedicated blog and podcast templates on their WordPress site.</strong></p>
+<p>Over the following 6 months, organic impressions nearly doubled, organic clicks grew by double digits, and the site's average Google ranking position climbed more than 7 spots - with the majority of top-traffic pages being ones that had little to no visibility in the previous period.</p>
 </div>
 <div class="ta-stats">
 <div class="ta-stat-card"><div class="ta-stat-number">+93.5%</div><div class="ta-stat-label">Growth in organic impressions</div></div>
 <div class="ta-stat-card"><div class="ta-stat-number">+17%</div><div class="ta-stat-label">Growth in organic clicks</div></div>
-<div class="ta-stat-card"><div class="ta-stat-number">+7</div><div class="ta-stat-label">Average position gain — bottom of page 2 → top of page 1</div></div>
+<div class="ta-stat-card"><div class="ta-stat-number">+7</div><div class="ta-stat-label">Average position gain - bottom of page 2 → top of page 1</div></div>
 <div class="ta-stat-card"><div class="ta-stat-number">7/10</div><div class="ta-stat-label">Top traffic pages are newly ranking</div></div>
 </div>
 <figure class="ta-image ta-hero-image">
@@ -266,11 +266,11 @@ box-shadow: var(--glow-strong);
 </nav>
 <div class="ta-body">
 <h2 id="challenge">The Challenge: A Menu Google Couldn't See</h2>
-<p>Like most licensed dispensaries, Verdi Cannabis's product menu ran on Dutchie — but through the default iFrame embed. iFrames are notoriously difficult for search engines to index properly: the menu content technically lives on a separate domain inside a frame, so Google often sees a mostly empty shell instead of individual, crawlable product pages.</p>
-<p>In practice, that meant every flower, edible, vape, and accessory Verdi carried was close to invisible in organic search. All of that product-level search demand — real people searching for specific products by name — was going to competitors instead.</p>
+<p>Like most licensed dispensaries, Verdi Cannabis's product menu ran on Dutchie - but through the default iFrame embed. iFrames are notoriously difficult for search engines to index properly: the menu content technically lives on a separate domain inside a frame, so Google often sees a mostly empty shell instead of individual, crawlable product pages.</p>
+<p>In practice, that meant every flower, edible, vape, and accessory Verdi carried was close to invisible in organic search. All of that product-level search demand - real people searching for specific products by name - was going to competitors instead.</p>
 <p>This is one of the most common technical issues we see in <a href="/dispensary-seo-nyc/">dispensary SEO and AI search optimization</a>: the products exist, but search engines and AI systems cannot reliably access them as standalone pages.</p>
 <h2 id="fix">The Fix: Migrating to Dutchie Pro Without Losing SEO Equity</h2>
-<p>We <a href="/dutchie-pro-migration-seo/">migrated Verdi's menu from the Dutchie iFrame to Dutchie Pro</a>, which serves store and product pages as real, indexable URLs on Verdi's own domain instead of an embedded frame. The technical SEO risk wasn't the migration itself — it was doing it without losing the search equity the site had already built on its existing URLs.</p>
+<p>We <a href="/dutchie-pro-migration-seo/">migrated Verdi's menu from the Dutchie iFrame to Dutchie Pro</a>, which serves store and product pages as real, indexable URLs on Verdi's own domain instead of an embedded frame. The technical SEO risk wasn't the migration itself - it was doing it without losing the search equity the site had already built on its existing URLs.</p>
 <div class="ta-stages">
 <div class="ta-stage-card">
 <div class="ta-stage-number">Stage 1</div>
@@ -289,9 +289,9 @@ box-shadow: var(--glow-strong);
 </div>
 </div>
 <h2 id="templates">New Infrastructure: Blog &amp; Podcast Templates</h2>
-<p>Alongside the migration, we built dedicated WordPress templates as part of a broader <a href="/services/website-development/">SEO-ready website development</a> workflow — giving Verdi's blog and podcast content a consistent, on-brand layout instead of the theme's default post design, and making it easy for their team to keep publishing new content on their own without a designer involved every time.</p>
+<p>Alongside the migration, we built dedicated WordPress templates as part of a broader <a href="/services/website-development/">SEO-ready website development</a> workflow - giving Verdi's blog and podcast content a consistent, on-brand layout instead of the theme's default post design, and making it easy for their team to keep publishing new content on their own without a designer involved every time.</p>
 <h2 id="results">The Results: 6 Months of Organic Growth</h2>
-<p>Comparing the six months after the migration to the six months before, across every core Search Console metric, the pattern is consistent growth across the whole site — the compounding result of the <a href="/services/seo-services/">technical SEO</a> work behind the migration, not one lucky spike on a single page.</p>
+<p>Comparing the six months after the migration to the six months before, across every core Search Console metric, the pattern is consistent growth across the whole site - the compounding result of the <a href="/services/seo-services/">technical SEO</a> work behind the migration, not one lucky spike on a single page.</p>
 <div class="ta-table-wrap">
 <table class="ta-table">
 <thead><tr><th>Metric</th><th>Change</th></tr></thead>
@@ -302,25 +302,25 @@ box-shadow: var(--glow-strong);
 <tr><td class="ta-row-label">Average CTR</td><td>Declined slightly*</td></tr>
 </tbody>
 </table>
-<div class="ta-table-caption">*See note below — a CTR dip here is a healthy sign, not a red flag.</div>
+<div class="ta-table-caption">*See note below - a CTR dip here is a healthy sign, not a red flag.</div>
 </div>
-<p>The position jump alone is worth sitting with: climbing more than <strong>7 spots on average</strong> is the difference between the bottom of page 2 and the top of page 1 on Google — for the site's average ranking across every query it appears for, not just its best-performing ones.</p>
+<p>The position jump alone is worth sitting with: climbing more than <strong>7 spots on average</strong> is the difference between the bottom of page 2 and the top of page 1 on Google - for the site's average ranking across every query it appears for, not just its best-performing ones.</p>
 <h3>Where the growth is coming from</h3>
-<p>Branded searches for Verdi's own name still account for a meaningful share of clicks, as expected for an established local brand. What's more telling for an SEO engagement is the growth in <strong>non-branded, competitive category terms</strong> — searches from people who didn't already know Verdi's name. The site now holds strong, page-1 positions for high-intent phrases like "dispensary near me" and neighborhood-specific searches like "park slope dispensary" — the kind of category-level demand that used to go entirely to competitors.</p>
+<p>Branded searches for Verdi's own name still account for a meaningful share of clicks, as expected for an established local brand. What's more telling for an SEO engagement is the growth in <strong>non-branded, competitive category terms</strong> - searches from people who didn't already know Verdi's name. The site now holds strong, page-1 positions for high-intent phrases like "dispensary near me" and neighborhood-specific searches like "park slope dispensary" - the kind of category-level demand that used to go entirely to competitors.</p>
 <p>This kind of non-branded visibility is also the foundation for <a href="/services/geo-ai-search-optimization/">GEO and AI search optimization</a>, where assistants need clear, crawlable, trustworthy pages to cite.</p>
 <h3>New pages are carrying real weight</h3>
-<p>The majority of the site's highest-traffic pages today had little to no visibility in the previous six months. Individual store-location pages and a growing set of individual product pages — covering vape hardware, batteries, and accessories — are now ranking and driving traffic on their own, instead of funneling everything through the homepage. These are exactly the pages the old iFrame setup made invisible.</p>
+<p>The majority of the site's highest-traffic pages today had little to no visibility in the previous six months. Individual store-location pages and a growing set of individual product pages - covering vape hardware, batteries, and accessories - are now ranking and driving traffic on their own, instead of funneling everything through the homepage. These are exactly the pages the old iFrame setup made invisible.</p>
 <h2 id="drivers">What Actually Drove the Growth</h2>
 <p>Three things compounded together, rather than any single fix:</p>
 <ul>
-<li><strong>Indexable store and product pages.</strong> Once the Dutchie Pro migration was live, the store and product URLs were finally crawlable — and started ranking independently instead of contributing nothing.</li>
+<li><strong>Indexable store and product pages.</strong> Once the Dutchie Pro migration was live, the store and product URLs were finally crawlable - and started ranking independently instead of contributing nothing.</li>
 <li><strong>Semantic expansion.</strong> The site moved from ranking almost entirely for its own brand name to appearing across a wide range of non-branded search queries it never used to show up for at all.</li>
 <li><strong>A rising average position.</strong> A 7+ spot improvement across the board points to on-page and technical SEO improvements compounding over the period, not a one-off spike from a single page.</li>
 </ul>
 <div class="ta-note">
-<strong>Why did CTR drop if traffic grew?</strong> When a site expands from mostly branded queries into new, broad, non-branded ones, average CTR naturally falls — broad category terms like "weed dispensary" get clicked less often per impression than someone searching your exact brand name. Total clicks still grew substantially over the period. A falling CTR alongside rising impressions and clicks is a sign of healthy expansion, not a problem to fix.
+<strong>Why did CTR drop if traffic grew?</strong> When a site expands from mostly branded queries into new, broad, non-branded ones, average CTR naturally falls - broad category terms like "weed dispensary" get clicked less often per impression than someone searching your exact brand name. Total clicks still grew substantially over the period. A falling CTR alongside rising impressions and clicks is a sign of healthy expansion, not a problem to fix.
 </div>
-<p>One area we're keeping an eye on going forward: a couple of legacy pages saw softer visibility during the transition — a normal part of any migration, and something we continue to monitor and refine post-launch.</p>
+<p>One area we're keeping an eye on going forward: a couple of legacy pages saw softer visibility during the transition - a normal part of any migration, and something we continue to monitor and refine post-launch.</p>
 <p>If you run a licensed dispensary and your Dutchie or Shopify menu is still embedded in a way search engines can't read, see our <a href="/dispensary-seo-nyc/">SEO and AI search service for licensed dispensaries</a>.</p>
 </div>
 <section class="ta-faq" id="faq">
@@ -328,26 +328,26 @@ box-shadow: var(--glow-strong);
 <div class="ta-faq-list">
 <div class="ta-faq-item">
 <p class="ta-faq-question">What's the difference between Dutchie iFrame and Dutchie Pro?</p>
-<p class="ta-faq-answer">Dutchie's default iFrame embeds the product menu from a separate domain inside a frame on your site — search engines struggle to index that content as real pages. Dutchie Pro instead serves store and product pages as standalone, crawlable URLs on your own domain, so each one can be found and ranked individually.</p>
+<p class="ta-faq-answer">Dutchie's default iFrame embeds the product menu from a separate domain inside a frame on your site - search engines struggle to index that content as real pages. Dutchie Pro instead serves store and product pages as standalone, crawlable URLs on your own domain, so each one can be found and ranked individually.</p>
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-question">Does migrating off Dutchie's iFrame risk losing existing rankings?</p>
-<p class="ta-faq-answer">It can, if the URL structure changes without proper redirects. We mapped every existing indexed URL before migration and preserved the structure wherever possible, with 301 redirects covering anything that had to change — which is why Verdi's rankings grew through the migration instead of dropping.</p>
+<p class="ta-faq-answer">It can, if the URL structure changes without proper redirects. We mapped every existing indexed URL before migration and preserved the structure wherever possible, with 301 redirects covering anything that had to change - which is why Verdi's rankings grew through the migration instead of dropping.</p>
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-question">Why did CTR drop if clicks and impressions both grew?</p>
-<p class="ta-faq-answer">Ranking for new, broader, non-branded queries naturally lowers average CTR, since those searches convert to clicks less often than someone searching your exact brand name. Total clicks still grew substantially in the period — the drop reflects healthy expansion into new search territory, not declining performance.</p>
+<p class="ta-faq-answer">Ranking for new, broader, non-branded queries naturally lowers average CTR, since those searches convert to clicks less often than someone searching your exact brand name. Total clicks still grew substantially in the period - the drop reflects healthy expansion into new search territory, not declining performance.</p>
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-question">How long does a Dutchie Pro migration take to show results?</p>
-<p class="ta-faq-answer">Indexing of the newly crawlable pages typically begins within the first few weeks. Meaningful ranking and traffic gains build over 3–6 months as Google gains confidence in the new URLs — which matches the 6-month window in these results.</p>
+<p class="ta-faq-answer">Indexing of the newly crawlable pages typically begins within the first few weeks. Meaningful ranking and traffic gains build over 3–6 months as Google gains confidence in the new URLs - which matches the 6-month window in these results.</p>
 </div>
 </div>
 </section>
 <div class="ta-cta">
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Still running your menu on Dutchie's default iFrame?</h3>
-<p class="ta-cta-text">If your product pages aren't indexable, you're invisible for exactly the searches that convert best — and increasingly invisible to AI search tools too. We'll show you exactly what's blocking your menu from ranking, free.</p>
+<p class="ta-cta-text">If your product pages aren't indexable, you're invisible for exactly the searches that convert best - and increasingly invisible to AI search tools too. We'll show you exactly what's blocking your menu from ranking, free.</p>
 <a href="/contact-us/" class="ohio-widget button ta-cta-btn">Get your free technical SEO audit →</a>
 </div>
 </div>

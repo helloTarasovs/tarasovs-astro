@@ -161,11 +161,11 @@ color:var(--acc);margin-bottom:var(--sp-xs);}
 </nav>
 <div class="ta-body">
 <h2 id="why-now">Why we're tracking this now</h2>
-<p>Licensed cannabis retailers can't run Google Ads or Meta ads for recreational THC. Organic search and, increasingly, AI-generated answers are the only channels available to reach a new customer who doesn't already know your name. That makes AI visibility a bigger deal for dispensaries than for almost any other retail category — there's no paid shortcut around it.</p>
+<p>Licensed cannabis retailers can't run Google Ads or Meta ads for recreational THC. Organic search and, increasingly, AI-generated answers are the only channels available to reach a new customer who doesn't already know your name. That makes AI visibility a bigger deal for dispensaries than for almost any other retail category - there's no paid shortcut around it.</p>
 <p>When someone asks ChatGPT "what's the best dispensary near me," it names two or three businesses, not a page of ten blue links. The dispensaries in that shortlist get considered. Everyone else doesn't exist in that conversation, no matter how strong their Google Maps listing looks.</p>
 <p>According to <a href="https://www.soci.ai/news/in-ai-driven-discovery-few-brands-are-chosen-most-disappear/">SOCi's 2026 Local Visibility Index</a>, ChatGPT recommended just 1.2% of the brand locations in its cross-industry study, compared with a 35.9% appearance rate in Google's local 3-Pack. The SOCi dataset covers multi-location brands across industries rather than New York cannabis specifically, but it shows how selective AI-driven local discovery can be. The gap this Index is built to close is more specific: giving individual New York dispensaries a repeatable, public way to see where they stand in ChatGPT local recommendations.</p>
 <h2 id="how-it-works">How the composite ChatGPT Visibility score works</h2>
-<p>Each dispensary is benchmarked against the same 10 non-branded, local-discovery prompts — the kind of question a real customer would actually type, like "what's the best cannabis dispensary near [neighborhood], New York." Six prompts test the dispensary's Primary Market, two test its Secondary Market, and two test its Regional Market. Every prompt is run against ChatGPT, and the response is recorded — whether the dispensary appeared, its recommendation position when identifiable, and which competitors ChatGPT surfaced in the same answer.</p>
+<p>Each dispensary is benchmarked against the same 10 non-branded, local-discovery prompts - the kind of question a real customer would actually type, like "what's the best cannabis dispensary near [neighborhood], New York." Six prompts test the dispensary's Primary Market, two test its Secondary Market, and two test its Regional Market. Every prompt is run against ChatGPT, and the response is recorded - whether the dispensary appeared, its recommendation position when identifiable, and which competitors ChatGPT surfaced in the same answer.</p>
 <p>Each result is scored by recommendation position, then combined into one composite using the weighting below, since a dispensary's immediate neighborhood matters more to its business than a market three towns over. Because a single number cannot describe three markets at once, every profile also carries a visibility pattern, such as Hyperlocal only or Broad visibility, next to the composite.</p>
 <div class="ta-table-wrap">
 <table class="ta-table">
@@ -177,14 +177,14 @@ color:var(--acc);margin-bottom:var(--sp-xs);}
 </tbody>
 </table>
 </div>
-<p>We don't infer a ChatGPT ranking from Google results, directories, or our own judgment. The score is calculated only from the recorded benchmark responses, and a public score is withheld until all 10 prompts return a valid result — we call this the 10/10 rule. Full scoring detail, including the points table and the visibility patterns, is public on the Index page itself.</p>
+<p>We don't infer a ChatGPT ranking from Google results, directories, or our own judgment. The score is calculated only from the recorded benchmark responses, and a public score is withheld until all 10 prompts return a valid result - we call this the 10/10 rule. Full scoring detail, including the points table and the visibility patterns, is public on the Index page itself.</p>
 <div class="ta-note">A high composite score doesn't measure product quality, customer service, or revenue. It measures one thing: how often and how prominently ChatGPT surfaces a dispensary when someone asks a neutral, local discovery question.</div>
 <h2 id="why-different">Why this comparison database is different</h2>
 <p>AI-visibility research for cannabis already exists, so we don't claim to have invented the category. For example, <a href="https://www.5wpr.com/ai-visibility-index/cannabis-ai-visibility-index-2026">5W's Cannabis AI Visibility Index 2026</a> ranks 25 major U.S. cannabis brands by citation share across ChatGPT, Claude, Perplexity, Gemini and Google AI Overviews. SOCi's Local Visibility Index takes a different broad approach, benchmarking thousands of multi-location brands across industries and measuring how often their locations appear in AI recommendations.</p>
 <p><strong>What we could not identify, after reviewing publicly available tools and studies as of August 11, 2026, is another public benchmark that publishes like-for-like ChatGPT local recommendation scores for individual licensed dispensaries across New York State using a standardized, non-branded prompt set.</strong> That creates a comparison dataset we could not find elsewhere publicly: every completed dispensary is tested with the same 10-prompt framework, making it possible to compare local AI visibility against peers using the same methodology rather than a national brand-level citation ranking.</p>
 <h2 id="live-today">What's live today</h2>
 <p><strong>The first 100 New York dispensary profiles are live</strong> on the <a href="/dispensary-visibility/">New York Dispensary Visibility Index</a>. Every one of those profiles has a completed 10/10 ChatGPT benchmark, a composite score, a visibility pattern, market-level breakdowns, and the competitors ChatGPT surfaced in the recorded responses.</p>
-<p>Coverage already spans New York State, not just the five boroughs — from Manhattan and Brooklyn to Buffalo, Rochester, Syracuse, Albany, and the Hudson Valley. Each published profile shows the full 10-prompt result set, so a dispensary owner can see exactly which prompts they're winning, which they're missing, and who ChatGPT recommends instead.</p>
+<p>Coverage already spans New York State, not just the five boroughs - from Manhattan and Brooklyn to Buffalo, Rochester, Syracuse, Albany, and the Hudson Valley. Each published profile shows the full 10-prompt result set, so a dispensary owner can see exactly which prompts they're winning, which they're missing, and who ChatGPT recommends instead.</p>
 <div class="ta-bridge">
 <div class="ta-bridge-label">The findings</div>
 <h3>What did the first 100 benchmarks show?</h3>
@@ -193,7 +193,7 @@ color:var(--acc);margin-bottom:var(--sp-xs);}
 </div>
 <h2 id="whats-next">What's next: Gemini and Claude</h2>
 <p>This is Part 1. ChatGPT is where we started because it's the AI product most people already default to when they ask a local recommendation question conversationally. The same standardized benchmark methodology is built to extend to other AI platforms. Gemini and Claude are the next candidates, followed by a combined Share of Model view, so a dispensary can see not just "does ChatGPT recommend me" but "which AI platforms recommend me, and where am I actually losing ground." Each is added when its data is reliable enough to publish under the same 10/10 rule rather than to a fixed date.</p>
-<p>We'll publish each platform as its own benchmark, the same way ChatGPT Visibility works today — standardized prompts, recorded responses, a public 10/10 rule before any score goes live. No inferred rankings, on any platform.</p>
+<p>We'll publish each platform as its own benchmark, the same way ChatGPT Visibility works today - standardized prompts, recorded responses, a public 10/10 rule before any score goes live. No inferred rankings, on any platform.</p>
 </div>
 <section class="ta-faq" id="faq">
 <h2>Frequently asked questions</h2>
@@ -208,7 +208,7 @@ color:var(--acc);margin-bottom:var(--sp-xs);}
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-q">Is the Index only for New York City dispensaries?</p>
-<p class="ta-faq-a">No. It covers licensed dispensaries statewide — New York City, Long Island, the Hudson Valley, the Capital Region, Western New York and the Southern Tier are all in scope, not just the five boroughs.</p>
+<p class="ta-faq-a">No. It covers licensed dispensaries statewide - New York City, Long Island, the Hudson Valley, the Capital Region, Western New York and the Southern Tier are all in scope, not just the five boroughs.</p>
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-q">Is this the first cannabis AI visibility index?</p>
@@ -219,7 +219,7 @@ color:var(--acc);margin-bottom:var(--sp-xs);}
 <p class="ta-faq-a">Each benchmark is a dated snapshot, since ChatGPT recommendations can shift as models, search results and available web information change. Dispensary owners can request a recheck of their profile at any time.</p>
 </div>
 <div class="ta-faq-item">
-<p class="ta-faq-q">My dispensary isn't listed yet — can I get added?</p>
+<p class="ta-faq-q">My dispensary isn't listed yet - can I get added?</p>
 <p class="ta-faq-a">Yes. Reach out through the Index page and we'll queue your dispensary for the next benchmark round.</p>
 </div>
 </div>

@@ -7,7 +7,7 @@ excerpt: "Quick Answer Generative Engine Optimization (GEO) is the practice of i
 categories: ["geo-ai-search-optimization","insights","marketing","seo"]
 cover:
   src: "/wp-content/uploads/2026/09/GEO_Glossary_2026.webp"
-  alt: "GEO Glossary 2026 — AI search terms explained"
+  alt: "GEO Glossary 2026 - AI search terms explained"
   width: 1254
   height: 1254
 seo:
@@ -345,7 +345,7 @@ color: #fff !important;
 <div class="ta-post">
 <section class="ta-qa" aria-labelledby="ta-quick-answer">
 <div class="ta-qa-label" id="ta-quick-answer">Quick Answer</div>
-<p><strong>Generative Engine Optimization (GEO) is the practice of improving how a brand, product, or source is found, understood, mentioned, and cited in AI-generated answers.</strong> It builds on SEO, but measures visibility inside synthesized answers—not only rankings and clicks.</p>
+<p><strong>Generative Engine Optimization (GEO) is the practice of improving how a brand, product, or source is found, understood, mentioned, and cited in AI-generated answers.</strong> It builds on SEO, but measures visibility inside synthesized answers - not only rankings and clicks.</p>
 <p>GEO terminology is not fully standardized. When comparing tools or reports, check the exact definition, denominator, prompt set, platform, location, and test date behind every metric.</p>
 </section>
 <nav class="ta-toc" aria-label="GEO glossary sections">
@@ -434,13 +434,13 @@ color: #fff !important;
 <h3>Citation Share</h3>
 <p>The percentage of all source citations in a measured answer set that point to a specific domain, page, or brand-owned property. Reports should state whether repeated links count more than once and whether third-party pages mentioning the brand are included.</p>
 <h3>Prominence / Position</h3>
-<p>How visibly a brand appears inside an answer—for example, first recommendation, later alternative, comparison-table entry, or passing reference. Position is useful context, but AI responses are not stable ranked lists, so it should be measured across repeated runs.</p>
+<p>How visibly a brand appears inside an answer - for example, first recommendation, later alternative, comparison-table entry, or passing reference. Position is useful context, but AI responses are not stable ranked lists, so it should be measured across repeated runs.</p>
 <h3>Sentiment</h3>
 <p>The tone or framing attached to a brand mention: positive, neutral, mixed, or negative. Sentiment is most useful when reported with the exact answer excerpt and a consistent scoring rubric; automated sentiment labels alone can miss nuance.</p>
 <h3>Answer Accuracy</h3>
 <p>The percentage of evaluated brand claims that are correct according to a documented source of truth. Accuracy audits often check services, location, pricing, credentials, policies, and product availability separately from visibility.</p>
 <h3>AI Visibility Score</h3>
-<p>A composite score that may combine mentions, citations, prominence, sentiment, or accuracy. There is no universal formula, so scores from different tools—or from different methodologies—are not directly comparable.</p>
+<p>A composite score that may combine mentions, citations, prominence, sentiment, or accuracy. There is no universal formula, so scores from different tools - or from different methodologies - are not directly comparable.</p>
 <h3>AI Referral Traffic</h3>
 <p>Website visits attributed to links clicked from AI assistants. It captures only measurable clicks, not zero-click brand exposure or visits whose referrer is missing. Our <a href="/track-ai-assistant-traffic-ga4/">GA4 guide to AI assistant traffic</a> explains how to report it separately.</p>
 <h3>Zero-Click Search</h3>
@@ -457,15 +457,15 @@ color: #fff !important;
 <h3>robots.txt</h3>
 <p>A file that communicates crawl preferences to compliant automated agents. Rules apply to the named user agent, which is why blocking GPTBot does not automatically block OAI-SearchBot. A robots.txt rule is not access control: private content still requires authentication or another security layer.</p>
 <h3>Google-Extended</h3>
-<p>A robots.txt product token—not a separate HTTP crawler—that controls certain uses of Google-crawled content for Gemini model development and grounding. It does not determine eligibility for Google Search features such as AI Overviews, which rely on Google's Search systems and controls.</p>
+<p>A robots.txt product token - not a separate HTTP crawler - that controls certain uses of Google-crawled content for Gemini model development and grounding. It does not determine eligibility for Google Search features such as AI Overviews, which rely on Google's Search systems and controls.</p>
 <h3><code>llms.txt</code></h3>
-<p>A proposed Markdown file that gives AI agents a curated map of a website's most useful content. It is best treated as an optional navigation layer—not a ranking factor, crawler permission file, or guaranteed citation tactic. See the <a href="/llms-txt-guide/">complete llms.txt implementation guide</a>.</p>
+<p>A proposed Markdown file that gives AI agents a curated map of a website's most useful content. It is best treated as an optional navigation layer - not a ranking factor, crawler permission file, or guaranteed citation tactic. See the <a href="/llms-txt-guide/">complete llms.txt implementation guide</a>.</p>
 <h3><code>llms-full.txt</code></h3>
 <p>A companion convention that consolidates larger amounts of page content into one LLM-readable file. It can help a known consumer ingest documentation or a knowledge base, but it creates duplication and freshness risks. Build it only when there is a clear use case and maintenance process.</p>
 <h3><code>AGENTS.md</code></h3>
 <p>A repository instruction file used by coding agents to understand project-specific commands, conventions, and constraints. It is not an alternative to <code>llms.txt</code> for general website discovery and is not a known AI search ranking signal.</p>
 <h3>Structured Data / Schema Markup</h3>
-<p>Machine-readable markup—commonly JSON-LD—that describes entities and page content using a shared vocabulary such as Schema.org. Google uses supported structured data to understand pages and enable eligible search features. Schema can reduce ambiguity, but it does not guarantee ranking, extraction, or citation across AI platforms.</p>
+<p>Machine-readable markup - commonly JSON-LD - that describes entities and page content using a shared vocabulary such as Schema.org. Google uses supported structured data to understand pages and enable eligible search features. Schema can reduce ambiguity, but it does not guarantee ranking, extraction, or citation across AI platforms.</p>
 <h3>Semantic HTML</h3>
 <p>HTML that uses meaningful elements and a logical heading structure to communicate the role of content. Clear headings, lists, tables, navigation, and article sections make pages easier for browsers, assistive technology, search engines, and retrieval systems to parse.</p>
 <h2 id="content-authority">Content and Authority</h2>
@@ -482,7 +482,7 @@ color: #fff !important;
 <h3>Source of Truth</h3>
 <p>The authoritative page or system that owns a specific fact, such as an address, price, credential, service name, or policy. Other pages should remain consistent with it and link back where appropriate to reduce conflicting information.</p>
 <h3>Third-Party Corroboration</h3>
-<p>Independent sources that confirm a brand claim—for example, official registries, reputable directories, professional profiles, press coverage, reviews, and partner pages. Corroboration makes claims easier to verify, but the quality and relevance of sources matter more than raw mention volume.</p>
+<p>Independent sources that confirm a brand claim - for example, official registries, reputable directories, professional profiles, press coverage, reviews, and partner pages. Corroboration makes claims easier to verify, but the quality and relevance of sources matter more than raw mention volume.</p>
 <h3>Original / First-Party Data</h3>
 <p>Research, measurements, benchmarks, case-study results, or observations produced directly by the publisher. Clear methodology, dates, sample sizes, and limitations make first-party data more trustworthy and more useful as a citable source.</p>
 <h3>Hallucination</h3>
@@ -492,7 +492,7 @@ color: #fff !important;
 <h2 id="ta-sources-title">Primary References</h2>
 <p>These definitions are based on provider documentation and the original GEO research, with uncertain or vendor-specific terms labeled accordingly.</p>
 <ul>
-<li><a href="https://dl.acm.org/doi/10.1145/3637528.3671900">ACM: GEO—Generative Engine Optimization</a></li>
+<li><a href="https://dl.acm.org/doi/10.1145/3637528.3671900">ACM: GEO - Generative Engine Optimization</a></li>
 <li><a href="https://developers.openai.com/api/docs/bots">OpenAI: Overview of OpenAI Crawlers</a></li>
 <li><a href="https://developers.google.com/search/docs/appearance/ai-features">Google Search Central: AI Features and Your Website</a></li>
 <li><a href="https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler">Anthropic: Web Crawlers and Site Controls</a></li>
@@ -536,7 +536,7 @@ color: #fff !important;
 </section>
 <div class="ta-cta">
 <div class="ta-cta-label">AI Visibility Audit</div>
-<h3 class="ta-cta-title">Do AI assistants recommend your brand—or your competitors?</h3>
+<h3 class="ta-cta-title">Do AI assistants recommend your brand - or your competitors?</h3>
 <p class="ta-cta-text">We test a fixed set of buyer-intent prompts across ChatGPT, Perplexity, Google AI Overviews, and Copilot, separate mentions from citations, compare competitors, and turn the findings into prioritized actions.</p>
 <a href="/contact-us/" class="ohio-widget button ta-cta-btn">Request your free GEO audit →</a>
 </div>
