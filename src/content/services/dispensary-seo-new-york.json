@@ -179,7 +179,8 @@
           "type": "prose",
           "html": "<p><a href=\"/dispensary-seo-2026/\">Complete dispensary SEO guide for 2026</a></p>"
         }
-      ]
+      ],
+      "tone": "white"
     },
     {
       "eyebrow": "",
@@ -223,7 +224,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>When someone asks an AI assistant for a dispensary recommendation, it names two or three — not a full page of links. Those spots are getting locked in right now, and almost no dispensary in New York is optimized for AI search.</p><p>Being early here means owning the recommendation before your competitors even know it’s happening.</p>"
+          "html": "<p>When someone asks an AI assistant for a dispensary recommendation, it names two or three — not a full page of links. Those spots are getting locked in right now, and almost no dispensary in New York is optimized for AI search.</p><p><strong>Being early here means owning the recommendation before your competitors even know it’s happening.</strong></p>"
         },
         {
           "type": "actions",
@@ -238,7 +239,8 @@
           "type": "prose",
           "html": "<p>We’ll check your Google Business Profile, local rankings in your market, Dutchie menu setup, Search Console visibility, and AI search presence.</p>"
         }
-      ]
+      ],
+      "tone": "white"
     },
     {
       "eyebrow": "",
@@ -290,7 +292,7 @@
         }
       ],
       "id": "form",
-      "tone": "surface"
+      "tone": "lilac"
     }
   ],
   "faq": {
@@ -299,7 +301,7 @@
     "items": [
       {
         "q": "Do you only work with dispensaries in New York City?",
-        "a": "<p>No. We work with licensed dispensaries across New York State - Long Island, the Hudson Valley, the Capital Region, Western New York, Rochester, Syracuse, and the Southern Tier. If you are in the five boroughs, our NYC dispensary SEO page covers that market specifically.</p>"
+        "a": "<p>No. We work with licensed dispensaries across New York State - Long Island, the Hudson Valley, the Capital Region, Western New York, Rochester, Syracuse, and the Southern Tier. If you are in the five boroughs, our <a href=\"/dispensary-seo-nyc/\">NYC dispensary SEO page</a> covers that market specifically.</p>"
       },
       {
         "q": "Is SEO for an upstate dispensary different from NYC?",
@@ -323,11 +325,11 @@
       },
       {
         "q": "Can you optimize our Dutchie menu for SEO?",
-        "a": "<p>Yes. We audit how your Dutchie menu connects to your website, whether menu, category, and product pages are crawlable and indexed, and how they support local and organic search. We also handle Dutchie Pro migrations without losing rankings.</p>"
+        "a": "<p>Yes. We audit how your Dutchie menu connects to your website, whether menu, category, and product pages are crawlable and indexed, and how they support local and organic search. We also handle <a href=\"/dutchie-pro-migration-seo/\">Dutchie Pro migrations</a> without losing rankings.</p>"
       },
       {
         "q": "What is GEO / AI search optimization?",
-        "a": "<p>GEO (Generative Engine Optimization) is structuring your content and data so AI assistants - ChatGPT, Perplexity, Google's AI - cite and recommend your dispensary when people ask. Those answers name two or three businesses rather than ten links, and almost no dispensary in New York is optimized for it yet.</p>"
+        "a": "<p>GEO (Generative Engine Optimization) is structuring your content and data so AI assistants - ChatGPT, Perplexity, Google's AI - cite and recommend your dispensary when people ask. Those answers name two or three businesses rather than ten links, and almost no dispensary in New York is optimized for it yet. <a href=\"/services/geo-ai-search-optimization/\">More on GEO services</a>.</p>"
       },
       {
         "q": "How fast will I see results?",

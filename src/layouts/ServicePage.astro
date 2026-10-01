@@ -18,6 +18,17 @@ assertFaqMatchesSchema(data, pageJsonld);
 const crumbs = [...data.breadcrumb, { name: data.hero.crumb ?? data.hero.title.replace(/<[^>]+>/g, ''), path: data.url }];
 const hasBreadcrumbLd = pageJsonld.some((b: any) => b?.['@type'] === 'BreadcrumbList');
 const jsonld = hasBreadcrumbLd ? pageJsonld : [...pageJsonld, breadcrumbSchema(crumbs)];
+// Centered variant: the section holding the form goes after the FAQ (as on the live page).
+const formIdx = center ? data.sections.findIndex((x) => x.blocks.some((b) => b.type === 'form')) : -1;
+const bodySections = formIdx >= 0 ? data.sections.filter((_, i) => i !== formIdx) : data.sections;
+const formSection = formIdx >= 0 ? data.sections[formIdx] : null;
+type Item = { kind: 'section'; section: (typeof data.sections)[number] } | { kind: 'faq'; section?: undefined };
+const hasFaq = !!(data.faq && data.faq.items.length > 0);
+const items: Item[] = [
+  ...bodySections.map((section): Item => ({ kind: 'section', section })),
+  ...(hasFaq ? [{ kind: 'faq' } as Item] : []),
+  ...(formSection ? [{ kind: 'section', section: formSection } as Item] : []),
+];
 const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/&[a-z#0-9]+;/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
 ---
 <Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld}>
@@ -56,39 +67,62 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
       </div>
     </header>
 
-    {data.sections.map((s, i) => {
+    {items.map((it, i) => {
+      if (it.kind === 'faq') {
+        const faq = data.faq!;
+        return center ? (
+          <section class="section tone-grey" id="faq" aria-labelledby="faq-title">
+            <div class="container">
+              <div class="section-inner faq-panel">
+                <h2 id="faq-title" set:html={faq.title} />
+                {faq.intro && <p class="faq-intro" set:html={faq.intro} />}
+                <div class="qa-list">
+                  {faq.items.map((f) => (
+                    <div class="qa">
+                      <h3>{f.q}</h3>
+                      <div class="answer" set:html={f.a} />
+                    </div>
+                  ))}
+                </div>
+                {faq.note && <p class="faq-note" set:html={faq.note} />}
+              </div>
+            </div>
+          </section>
+        ) : (
+          <section class="section" id="faq" aria-labelledby="faq-title">
+            <div class="container"><div class="faq-wrap">
+              <div class="section-head reveal">
+                {faq.eyebrow && <p class="eyebrow">{faq.eyebrow}</p>}
+                <h2 id="faq-title" set:html={faq.title} />
+                {faq.intro && <p class="lead" set:html={faq.intro} />}
+              </div>
+              <Faq items={faq.items} reveal />
+              {faq.note && <p class="faq-note" set:html={faq.note} />}
+            </div></div>
+          </section>
+        );
+      }
+      const sec = it.section!;
       // First section after the hero can sit on the first screen: never animated
       const reveal = i > 0;
-      const id = s.id ?? (s.title ? slugify(s.title) : undefined);
+      const id = sec.id ?? (sec.title ? slugify(sec.title) : undefined);
       return (
-        <section class:list={['section', s.tone && `tone-${s.tone}`]} id={id} aria-labelledby={s.title ? `${id}-title` : undefined}>
+        <section class:list={['section', sec.tone && `tone-${sec.tone}`]} id={id} aria-labelledby={sec.title ? `${id}-title` : undefined}>
           <div class="container">
-            {(s.eyebrow || s.title || s.intro) && (
-              <div class:list={['section-head', { reveal }]}>
-                {s.eyebrow && <p class="eyebrow">{s.eyebrow}</p>}
-                {s.title && <h2 id={`${id}-title`} class:list={{ 'visually-hidden': s.titleHidden }} set:html={s.title} />}
-                {s.intro && <div class="section-intro" set:html={s.intro} />}
-              </div>
-            )}
-            <Blocks blocks={s.blocks} formSubject={data.formSubject} reveal={reveal} />
+            <div class="section-inner">
+              {(sec.eyebrow || sec.title || sec.intro) && (
+                <div class:list={['section-head', { reveal }]}>
+                  {sec.eyebrow && <p class="eyebrow">{sec.eyebrow}</p>}
+                  {sec.title && <h2 id={`${id}-title`} class:list={{ 'visually-hidden': sec.titleHidden }} set:html={sec.title} />}
+                  {sec.intro && <div class="section-intro" set:html={sec.intro} />}
+                </div>
+              )}
+              <Blocks blocks={sec.blocks} formSubject={data.formSubject} reveal={reveal} />
+            </div>
           </div>
         </section>
       );
     })}
-
-    {data.faq && data.faq.items.length > 0 && (
-      <section class="section" id="faq" aria-labelledby="faq-title">
-        <div class="container"><div class="faq-wrap">
-          <div class="section-head reveal">
-            {data.faq.eyebrow && <p class="eyebrow">{data.faq.eyebrow}</p>}
-            <h2 id="faq-title" set:html={data.faq.title} />
-            {data.faq.intro && <p class="lead" set:html={data.faq.intro} />}
-          </div>
-          <Faq items={data.faq.items} reveal />
-          {data.faq.note && <p class="faq-note" set:html={data.faq.note} />}
-        </div></div>
-      </section>
-    )}
 
     {data.cta && (
       <section class="section" aria-labelledby="cta-title">
@@ -196,4 +230,64 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
   .service--center .section-head h2 { max-width: 18em; margin: 0 auto; font-size: clamp(2rem, 1.4rem + 2vw, 3.06rem); font-weight: 500; line-height: 1.05; letter-spacing: -0.04em; }
   .service--center .section :global(.prose) { max-width: 53rem; margin-inline: auto; text-align: center; color: var(--color-text); }
   .service--center .section :global(.prose p + p) { margin-top: 1.1em; }
+
+  /* ---- Centered variant: panels (white / grey / lilac) ---- */
+  .service--center .tone-white .section-inner,
+  .service--center .tone-grey .section-inner {
+    padding: 3.6rem var(--space-6);
+    border: 1px solid rgb(136 136 137 / 0.2);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+  .service--center .tone-grey .section-inner { background: rgb(136 136 137 / 0.05); border-radius: 20px; padding: 1.8rem; }
+  /* single card inside a panel: no box, centered h3 + body + button (Dutchie Pro migration support) */
+  .service--center .tone-white :global(.cards) { display: block; }
+  .service--center .tone-white :global(.card) { align-items: center; padding: 0; border: 0; background: none; text-align: center; }
+  .service--center .tone-white :global(.card h3) { margin-top: var(--space-5); font-size: clamp(1.7rem, 1.3rem + 1.2vw, 2.08rem); font-weight: 600; line-height: 1.15; letter-spacing: -0.035em; }
+  .service--center .tone-white :global(.card-body) { max-width: 52rem; color: var(--color-text); font-size: 1.05rem; }
+  .service--center .tone-white :global(.card-link) {
+    display: inline-flex; align-items: center; justify-content: center; min-height: 52px; margin-top: var(--space-4); padding: 0 1.5rem;
+    border-radius: var(--radius-button); background: var(--brand-violet); color: #fff;
+    font-family: var(--font-title); font-size: 0.9975rem; font-weight: 600; text-decoration: none;
+  }
+  .service--center .tone-white :global(.card-link:hover) { background: #6d28d9; color: #fff; }
+  .service--center .tone-white :global(.card-link > span[aria-hidden]) { display: none; }
+  .service--center .tone-white :global(.actions) { justify-content: center; }
+  .service--center .section :global(.actions .button) { min-height: 52px; padding-inline: 1.5rem; }
+  .service--center .tone-white :global(.prose strong) { font-weight: 600; }
+
+  /* FAQ: everything open, grey panel */
+  .faq-panel h2 { max-width: none; margin: 0; font-size: clamp(1.7rem, 1.3rem + 1.1vw, 2.25rem); font-weight: 500; line-height: 1.05; letter-spacing: -0.04em; text-align: left; }
+  .faq-intro { margin-top: var(--space-3); }
+  .qa-list { margin-top: var(--space-4); }
+  .qa { padding-block: 1.7rem; border-bottom: 1px solid rgb(136 136 137 / 0.25); }
+  .qa:first-child { padding-top: var(--space-4); }
+  .qa h3 { margin: 0 0 0.75rem; font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.45rem); font-weight: 700; line-height: 1.35; letter-spacing: -0.035em; }
+  .qa .answer { color: var(--color-text); font-size: 1.02rem; line-height: 1.75; }
+  .qa .answer :global(a) { text-decoration: underline; }
+  .qa:last-child { border-bottom: 0; padding-bottom: var(--space-3); }
+  .faq-panel .faq-note { margin-top: var(--space-3); color: var(--color-text); font-size: var(--text-base); }
+
+  /* Form: lilac panel (light #a375f1 with dark text, dark theme deep violet with white text) */
+  .service--center .tone-lilac .section-inner {
+    --lilac-bg: #a375f1; --lilac-text: #111013; --lilac-line: rgb(17 16 19 / 0.5);
+    max-width: 917px; margin-inline: auto; padding: 2.7rem;
+    border-radius: 20px; background: var(--lilac-bg); color: var(--lilac-text);
+  }
+  :global(:root[data-theme='dark']) .service--center .tone-lilac .section-inner { --lilac-bg: #4a2d86; --lilac-text: #fff; --lilac-line: rgb(255 255 255 / 0.5); }
+  @media (prefers-color-scheme: dark) { :global(:root:not([data-theme='light'])) .service--center .tone-lilac .section-inner { --lilac-bg: #4a2d86; --lilac-text: #fff; --lilac-line: rgb(255 255 255 / 0.5); } }
+  .service--center .tone-lilac .section-head { margin-bottom: var(--space-4); text-align: left; }
+  .service--center .tone-lilac .section-head h2 { margin: 0; color: var(--lilac-text); font-size: clamp(1.7rem, 1.3rem + 1.1vw, 2.25rem); }
+  .service--center .tone-lilac :global(.prose) { max-width: none; margin: 0; text-align: left; color: var(--lilac-text); }
+  .service--center .tone-lilac :global(.form-card) { max-width: none; padding: 0; border: 0; background: none; }
+  .service--center .tone-lilac :global(.contact-form label), .service--center .tone-lilac :global(.contact-form .req), .service--center .tone-lilac :global(.contact-form .consent), .service--center .tone-lilac :global(.contact-form .status) { color: var(--lilac-text); }
+  .service--center .tone-lilac :global(.contact-form a) { color: var(--lilac-text); font-weight: 600; }
+  .service--center .tone-lilac :global(.contact-form input:not([type='hidden']):not(.hp)), .service--center .tone-lilac :global(.contact-form textarea) {
+    min-height: 44px; border: 2px solid var(--lilac-line); border-radius: 14px; background: transparent; color: var(--lilac-text);
+  }
+  .service--center .tone-lilac :global(.contact-form input::placeholder), .service--center .tone-lilac :global(.contact-form textarea::placeholder) { color: var(--lilac-text); opacity: 0.7; }
+  .service--center .tone-lilac :global(.contact-form input:focus-visible), .service--center .tone-lilac :global(.contact-form textarea:focus-visible) { border-color: var(--lilac-text); outline: 3px solid var(--lilac-text); outline-offset: 2px; }
+  .service--center .tone-lilac :global(.contact-form .button) { min-height: 52px; border-radius: var(--radius-button); background: #f2efe4; color: #2f332e; border-color: transparent; }
+  .service--center .tone-lilac :global(.contact-form .button:hover) { background: #fff; color: #111013; }
+  @media (max-width: 40em) { .service--center .tone-white .section-inner { padding: 2.2rem var(--space-4); } .service--center .tone-lilac .section-inner { padding: 1.6rem var(--space-4); } }
 </style>
