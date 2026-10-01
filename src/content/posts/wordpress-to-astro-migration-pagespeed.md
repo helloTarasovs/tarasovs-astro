@@ -6,11 +6,17 @@ updatedDate: "2026-10-01T08:00:00Z"
 excerpt: "Real before-and-after data from migrating tarasovs.me from WordPress and Elementor to Astro on Cloudflare: page weight down by 87–91%, mobile LCP down from 8.3–17.6 seconds to 1.4–2.0 seconds, and the SEO checks behind the cutover."
 categories: ["insights"]
 tags: ["astro", "wordpress", "cloudflare", "core-web-vitals", "site-migration"]
+cover:
+  src: "/wp-content/uploads/2026/10/wordpress-to-astro-migration.webp"
+  alt: "Illustration of a WordPress site tangled in plugins and cables migrating to a clean, fast Astro site on a global edge network"
+  width: 1254
+  height: 1254
 seo:
   title: "WordPress to Astro Migration: PageSpeed 57 to 99"
   description: "We migrated tarasovs.me from WordPress and Elementor to Astro on Cloudflare. Mobile PageSpeed rose from 57 to 99 and page weight fell about 90%."
   canonical: "/wordpress-to-astro-migration-pagespeed/"
   robots: "index, follow"
+  ogImage: "/wp-content/uploads/2026/10/wordpress-to-astro-migration.webp"
 jsonld:
   - {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much faster did the site get after moving from WordPress to Astro?","acceptedAnswer":{"@type":"Answer","text":"Across four mobile tests, Lighthouse performance moved from 57–66 on WordPress to 99–100 on Astro. Mobile LCP dropped from 8.3–17.6 seconds to 1.4–2.0 seconds, and page weight fell by 87–91%."}},{"@type":"Question","name":"Did the migration change any URLs?","acceptedAnswer":{"@type":"Answer","text":"Every URL was accounted for. The production sitemap had 211 URLs and the Astro sitemap had 212. Of those, 206 matched exactly; five legacy addresses received intentional 301 redirects, and six new archive or project URLs were added."}},{"@type":"Question","name":"Will the faster Lighthouse scores improve Google rankings?","acceptedAnswer":{"@type":"Answer","text":"The Lighthouse results are lab data and do not prove a ranking change. Google reports Core Web Vitals from real-user field data, and tarasovs.me does not currently have enough CrUX data to measure that impact. The immediate gains are speed, reliability and a better visitor experience."}},{"@type":"Question","name":"Why was the WordPress site slow if Cloudflare already cached it?","acceptedAnswer":{"@type":"Answer","text":"Cached HTML was delivered quickly, but the browser still waited on render-blocking theme CSS, jQuery, Elementor scripts and icon fonts. Requests that missed the cache reached a strained origin server: real-user TTFB at the 75th percentile was 754 ms and 8.5% of responses over 30 days were 5xx errors."}}]}
 ---
