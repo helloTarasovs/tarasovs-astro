@@ -1010,7 +1010,8 @@
     "title": "Terms of Service — Tarasovs Digital Agency",
     "updatedDate": "2026-06-06T13:52:37Z",
     "seo": {
-      "title": "Terms of Service — Tarasovs Digital Agency - Tarasovs Digital Agency",
+      "title": "Terms of Service — Tarasovs Digital Agency",
+      "description": "Terms of Service for using tarasovs.me and working with Tarasovs Digital Agency.",
       "canonical": "/terms-of-service-tarasovs-digital-agency/",
       "robots": "index, follow",
       "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
@@ -1023,7 +1024,8 @@
     "title": "Privacy & Cookie Policy — Tarasovs Digital Agency",
     "updatedDate": "2026-06-06T13:52:55Z",
     "seo": {
-      "title": "Privacy &amp; Cookie Policy — Tarasovs Digital Agency - Tarasovs Digital Agency",
+      "title": "Privacy &amp; Cookie Policy — Tarasovs Digital Agency",
+      "description": "How Tarasovs Digital Agency collects and uses data on tarasovs.me, including cookies and analytics.",
       "canonical": "/privacy-cookie-policy-tarasovs-digital-agency/",
       "robots": "index, follow",
       "ogImage": "/wp-content/uploads/2024/05/photo_2024-04-13_14-27-07.jpg"
@@ -1488,6 +1490,7 @@
     "updatedDate": "2026-06-01T21:08:58Z",
     "seo": {
       "title": "Expert Web Design & SEO Services in Staten Island - Tarasovs Digital Agency",
+      "description": "Custom web design and local SEO for Staten Island businesses from Tarasovs Digital Agency. See our services and how to get started.",
       "canonical": "/expert-web-design-seo-services-in-staten-island/",
       "robots": "index, follow",
       "ogImage": "/wp-content/uploads/2024/09/a_stock_image_of_a_professional_digital_agency_team.jpg"

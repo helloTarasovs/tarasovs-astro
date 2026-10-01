@@ -10,6 +10,7 @@ cover:
   width: 1254
   height: 1254
 seo:
+  description: "Learn how to monitor whether ChatGPT, Perplexity and Google AI Overviews mention your brand, and what to measure and fix first."
   title: "AI Search Visibility Tracking - Tarasovs Digital Agency"
   canonical: "/ai-search-visibility-tracking/"
   robots: "index, follow"

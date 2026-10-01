@@ -9,6 +9,7 @@ cover:
   width: 1254
   height: 1254
 seo:
+  description: "Case study: a modern, scalable website for SmartPost.us with parcel tracking and customer engagement features."
   title: "SmartPost.us - Tarasovs Digital Agency"
   canonical: "/project/smartpost/"
   robots: "index, follow"

@@ -11,6 +11,7 @@ cover:
   width: 1254
   height: 1254
 seo:
+  description: "A practical guide to llms.txt in 2026: what the file does, what it cannot do, how to write it and how to check if AI agents read it."
   title: "llms.txt: Complete Implementation Guide for 2026 - Tarasovs Digital Agency"
   canonical: "/llms-txt-guide/"
   robots: "index, follow"

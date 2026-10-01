@@ -9,6 +9,7 @@ cover:
   width: 1402
   height: 1122
 seo:
+  description: "Case study: a website for Automatic Group, an engineering company building industrial process automation across four countries."
   title: "Automatic Group - engineering company - Tarasovs Digital Agency"
   canonical: "/project/automatic-group-engineering-company/"
   robots: "index, follow"

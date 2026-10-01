@@ -7,6 +7,7 @@ excerpt: "Quick Answer Broken layout web design is a controlled use of asymmetry
 categories: ["insights"]
 tags: ["web-design","ui-ux-design"]
 seo:
+  description: "How to use asymmetry and broken-grid layouts in web design without hurting usability, accessibility or conversions."
   title: "The BROKEN Layout Trend - Tarasovs Digital Agency"
   canonical: "/the-broken-layout-trend/"
   robots: "index, follow"

@@ -10,6 +10,7 @@ cover:
   width: 1254
   height: 1254
 seo:
+  description: "Seven UX issues that quietly kill leads on your website, and how conversion-focused design fixes them."
   title: "Conversion-focused design: 7 UX issues killing your leads - Tarasovs Digital Agency"
   canonical: "/conversion-focused-design-7-ux-issues-killing-your-leads/"
   robots: "index, follow"
