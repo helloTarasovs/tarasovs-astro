@@ -406,11 +406,11 @@ transform: translateY(-1px);
 <div class="ta-stat-lbl">of buyers now research via AI instead of traditional search</div>
 </div>
 <div class="ta-stat">
-<div class="ta-stat-num">30–40%</div>
+<div class="ta-stat-num">30-40%</div>
 <div class="ta-stat-lbl">higher conversion rate for AI-referred traffic vs SEO</div>
 </div>
 <div class="ta-stat">
-<div class="ta-stat-num">2–3</div>
+<div class="ta-stat-num">2-3</div>
 <div class="ta-stat-lbl">brands named in a typical AI answer - vs 10 links on Google</div>
 </div>
 <div class="ta-stat">
@@ -444,7 +444,7 @@ transform: translateY(-1px);
 <p>There is a second crucial difference: AI answers often skip the click entirely. In traditional search, the goal was to earn the click that brought a visitor to your site. In AI search, the assistant frequently summarizes everything the buyer needs and recommends a brand directly inside the conversation. The "win" is no longer always a visit to your website - it's being <strong>the name the AI says out loud</strong>. This is why a business can have strong Google rankings and still be nearly invisible inside AI, or vice versa. Our guide to <a href="/what-is-geo-generative-engine-optimization/">What is GEO (Generative Engine Optimization)</a> explains the optimization layer designed to close that gap.</p>
 <h2 id="why-matters">Why Share of Model Matters for Your Business</h2>
 <p>If this still sounds like a marketing curiosity rather than a priority, consider how buyer behavior is actually shifting.</p>
-<p>Roughly 30% of buyers now research products and services through AI systems rather than starting with a traditional search engine - and that share is climbing every quarter. More importantly for revenue, traffic referred from AI assistants tends to convert at a noticeably higher rate than traffic from conventional SEO or paid social, by some measures in the range of 30–40%. The reason is intuitive: by the time an AI recommends you, it has already pre-qualified the buyer's need and positioned you as a credible answer.</p>
+<p>Roughly 30% of buyers now research products and services through AI systems rather than starting with a traditional search engine - and that share is climbing every quarter. More importantly for revenue, traffic referred from AI assistants tends to convert at a noticeably higher rate than traffic from conventional SEO or paid social, by some measures in the range of 30-40%. The reason is intuitive: by the time an AI recommends you, it has already pre-qualified the buyer's need and positioned you as a credible answer.</p>
 <p>There is also a winner-take-most dynamic at play. A Google results page shows ten links, giving several businesses a fair shot at attention. <strong>An AI answer often names just two or three brands.</strong> If you are not one of them, you are effectively invisible for that query - there is no "page two" of an AI conversation where a curious buyer might still find you.</p>
 <p>Finally, SoM gives you something Google's black box never did: a category-level scoreboard. By measuring how often AI recommends you versus your competitors across hundreds of buying questions, you get an honest, quantified read on your true market position inside the channel where decisions are increasingly being made.</p>
 <h2 id="how-to-measure">How to Measure Your Share of Model: A Step-by-Step Method</h2>
@@ -455,12 +455,12 @@ transform: translateY(-1px);
 <div class="ta-stage">
 <div class="ta-stage-num">Step 01</div>
 <div class="ta-stage-title">Build your query set</div>
-<p>Define the questions your potential customers actually ask AI assistants - high-intent, category-level questions like "What's the best accounting software for a small restaurant?" Aim for 250–500 questions covering comparisons, recommendations, problem-led questions, and local variations. Even 30–50 focused buying questions give you a meaningful first read.</p>
+<p>Define the questions your potential customers actually ask AI assistants - high-intent, category-level questions like "What's the best accounting software for a small restaurant?" Aim for 250-500 questions covering comparisons, recommendations, problem-led questions, and local variations. Even 30-50 focused buying questions give you a meaningful first read.</p>
 </div>
 <div class="ta-stage">
 <div class="ta-stage-num">Step 02</div>
 <div class="ta-stage-title">Run across multiple AI assistants</div>
-<p>Submit each question to ChatGPT, Perplexity, Google AI Mode/Overviews, Gemini, and Claude. Because answers vary from run to run, you cannot ask once and call it data. Run each core question 10–100 times per platform to calculate a stable mention rate. Each platform behaves differently - Perplexity cites 5–12 sources per answer, while ChatGPT typically cites just 2–4.</p>
+<p>Submit each question to ChatGPT, Perplexity, Google AI Mode/Overviews, Gemini, and Claude. Because answers vary from run to run, you cannot ask once and call it data. Run each core question 10-100 times per platform to calculate a stable mention rate. Each platform behaves differently - Perplexity cites 5-12 sources per answer, while ChatGPT typically cites just 2-4.</p>
 </div>
 <div class="ta-stage">
 <div class="ta-stage-num">Step 03</div>

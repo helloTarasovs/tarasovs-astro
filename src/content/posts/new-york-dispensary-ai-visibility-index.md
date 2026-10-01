@@ -124,7 +124,7 @@ color:var(--acc);margin-bottom:var(--sp-xs);}
 <div class="ta-qa">
 <div class="ta-qa-label">Quick Answer</div>
 <p><strong>The New York Dispensary AI Visibility Index is a public benchmark from Tarasovs Digital Agency that tracks how licensed New York cannabis dispensaries appear in ChatGPT's local recommendation results. The first 100 dispensaries are live, each with a completed 10/10 benchmark.</strong></p>
-<p>Every completed dispensary gets a composite ChatGPT Visibility score from 0–100, shown alongside a visibility pattern that describes where that visibility sits geographically. Both come from the same 10 standardized, non-branded local discovery prompts run across three market levels. A score is only published once all 10 prompts return a valid, recorded result. This page explains how the benchmark works; for what the first 100 results showed, see the <a href="/ny-dispensary-chatgpt-visibility-study/">100-dispensary study</a>.</p>
+<p>Every completed dispensary gets a composite ChatGPT Visibility score from 0-100, shown alongside a visibility pattern that describes where that visibility sits geographically. Both come from the same 10 standardized, non-branded local discovery prompts run across three market levels. A score is only published once all 10 prompts return a valid, recorded result. This page explains how the benchmark works; for what the first 100 results showed, see the <a href="/ny-dispensary-chatgpt-visibility-study/">100-dispensary study</a>.</p>
 </div>
 <div class="ta-stats">
 <div class="ta-stat-card"><div class="ta-stat-num">100</div><div class="ta-stat-label">dispensaries with completed 10/10 ChatGPT benchmarks published so far</div></div>
@@ -200,7 +200,7 @@ color:var(--acc);margin-bottom:var(--sp-xs);}
 <div class="ta-faq-list">
 <div class="ta-faq-item">
 <p class="ta-faq-q">What is the composite ChatGPT Visibility score?</p>
-<p class="ta-faq-a">A 0–100 score showing how often and how prominently ChatGPT recommends a licensed New York dispensary across 10 standardized, non-branded local discovery prompts. It's calculated from real, recorded ChatGPT responses, weighted 70% Primary Market, 20% Secondary Market and 10% Regional Market. Each profile also shows a visibility pattern, because one number cannot describe three markets at once.</p>
+<p class="ta-faq-a">A 0-100 score showing how often and how prominently ChatGPT recommends a licensed New York dispensary across 10 standardized, non-branded local discovery prompts. It's calculated from real, recorded ChatGPT responses, weighted 70% Primary Market, 20% Secondary Market and 10% Regional Market. Each profile also shows a visibility pattern, because one number cannot describe three markets at once.</p>
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-q">How is this different from ranking on Google?</p>

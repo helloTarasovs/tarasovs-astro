@@ -653,7 +653,7 @@ transform: translateY(-1px);
 <div class="ta-step-num">4</div>
 <div class="ta-step-body">
 <div class="ta-step-title">Prepare a Fable 5 query set for when the model returns</div>
-<p class="ta-step-text">When Fable 5 comes back, there will be value in running a clean baseline immediately. Write 20–30 representative buyer queries in your category now. That way you can deploy them the same day access is restored and start tracking your Fable 5 SoM from day one.</p>
+<p class="ta-step-text">When Fable 5 comes back, there will be value in running a clean baseline immediately. Write 20-30 representative buyer queries in your category now. That way you can deploy them the same day access is restored and start tracking your Fable 5 SoM from day one.</p>
 </div>
 </div>
 <div class="ta-step">

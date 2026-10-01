@@ -241,11 +241,11 @@ color: var(--text); font-variant-numeric: tabular-nums; min-width: 62px; text-al
 <h2 id="shape">The shape of the results</h2>
 <p>Here is the distribution across all 100, by visibility band.</p>
 <div class="ta-dist" role="img" aria-label="Distribution of composite scores: 15 dispensaries scored 85 to 100, 35 scored 70 to 84, 14 scored 55 to 69, 5 scored 40 to 54, and 31 scored 0 to 39.">
-<div class="ta-dist__row"><span>85–100</span><span class="ta-dist__track"><span class="ta-dist__fill" style="width:15%"></span></span><span class="ta-dist__val">15</span></div>
-<div class="ta-dist__row"><span>70–84</span><span class="ta-dist__track"><span class="ta-dist__fill" style="width:35%"></span></span><span class="ta-dist__val">35</span></div>
-<div class="ta-dist__row"><span>55–69</span><span class="ta-dist__track"><span class="ta-dist__fill is-mute" style="width:14%"></span></span><span class="ta-dist__val">14</span></div>
-<div class="ta-dist__row"><span>40–54</span><span class="ta-dist__track"><span class="ta-dist__fill is-mute" style="width:5%"></span></span><span class="ta-dist__val">5</span></div>
-<div class="ta-dist__row"><span>0–39</span><span class="ta-dist__track"><span class="ta-dist__fill is-mute" style="width:31%"></span></span><span class="ta-dist__val">31</span></div>
+<div class="ta-dist__row"><span>85-100</span><span class="ta-dist__track"><span class="ta-dist__fill" style="width:15%"></span></span><span class="ta-dist__val">15</span></div>
+<div class="ta-dist__row"><span>70-84</span><span class="ta-dist__track"><span class="ta-dist__fill" style="width:35%"></span></span><span class="ta-dist__val">35</span></div>
+<div class="ta-dist__row"><span>55-69</span><span class="ta-dist__track"><span class="ta-dist__fill is-mute" style="width:14%"></span></span><span class="ta-dist__val">14</span></div>
+<div class="ta-dist__row"><span>40-54</span><span class="ta-dist__track"><span class="ta-dist__fill is-mute" style="width:5%"></span></span><span class="ta-dist__val">5</span></div>
+<div class="ta-dist__row"><span>0-39</span><span class="ta-dist__track"><span class="ta-dist__fill is-mute" style="width:31%"></span></span><span class="ta-dist__val">31</span></div>
 </div>
 <p>Fifty dispensaries at 70 or above. Thirty-one under 40. Nineteen in the entire middle range between them. The mean is 55.0 and the median is 69.5, and the gap between those two numbers is itself a signal: a long tail of very low scores is dragging the average well below the typical result.</p>
 <p>A ranking spread across a hundred businesses would normally put most results near the middle with thinner tails at each end. These results do the opposite: the two ends are heavy and the middle is hollow. We have not run a formal test of normality, and with a non-random sample of 100 that would not settle much anyway. What can be said is descriptive and still useful: the scores do not cluster around the middle.</p>

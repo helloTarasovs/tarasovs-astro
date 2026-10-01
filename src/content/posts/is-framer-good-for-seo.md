@@ -296,7 +296,7 @@ box-shadow: 0 0 30px rgba(168,85,247,0.4); transform: translateY(-1px);
 </table>
 </div>
 <p>The metadata controls are the day-to-day workhorse: every static page and every CMS template can carry a unique title, description, and Open Graph image. For CMS collections you map these to fields, so each blog post or case study generates its own metadata automatically.</p>
-<p>One practical warning on URLs: Framer auto-generates slugs from page or item titles, which frequently produces long, keyword-stuffed paths like <code>/blog/the-complete-guide-to-framer-seo-and-how-to-rank-in-2026</code>. Always override the auto-slug to something short (3–6 words), hyphenated, and built around the primary keyword. If you change a slug after publishing, set a 301 in Framer's Redirects panel so inbound links and existing rankings survive.</p>
+<p>One practical warning on URLs: Framer auto-generates slugs from page or item titles, which frequently produces long, keyword-stuffed paths like <code>/blog/the-complete-guide-to-framer-seo-and-how-to-rank-in-2026</code>. Always override the auto-slug to something short (3-6 words), hyphenated, and built around the primary keyword. If you change a slug after publishing, set a 301 in Framer's Redirects panel so inbound links and existing rankings survive.</p>
 <h2 id="performance">Performance and Core Web Vitals</h2>
 <p>Framer sites generally perform well on Core Web Vitals, and most clean builds hit 90+ on PageSpeed Insights without manual tuning. Independent audits in 2026 put roughly 63% of Framer sites at passing Core Web Vitals - a strong baseline relative to the wider web, though it also means a meaningful share of real-world builds slip below the line.</p>
 <h3>PageSpeed Insights score is not a ranking factor</h3>

@@ -716,7 +716,7 @@ Last updated: 2026-09-01
 &#10;- [Customer stories](https://example.com/customers): Selected outcomes.</code></pre><h3>What should you include?</h3>
 <p>For a service business, prioritize company and About pages, current services, relevant locations, public pricing or process information, two to five strong case studies, research or methodology, authoritative guides, and contact pages.</p>
 <p>For ecommerce, use canonical collections and decision-support content rather than listing every SKU. For documentation, organize links by task rather than copying the visual navigation.</p>
-<p>There is no official link limit. For a typical business website, 10–30 carefully described links is a practical starting point. The goal is curation, not completeness.</p>
+<p>There is no official link limit. For a typical business website, 10-30 carefully described links is a practical starting point. The goal is curation, not completeness.</p>
 <div class="ta-note">Avoid vague marketing copy. “Custom Framer and WordPress development for service businesses in the US and Europe” is more useful than “Award-winning solutions that transform brands.”</div>
 <h2 id="ta-example">A Real Tarasovs Example</h2>
 <p>We maintain a live <a href="/llms.txt">Tarasovs Digital Agency llms.txt</a> and a separate <a href="/llms-full.txt">llms-full.txt reference</a>. A shortened version looks like this:</p><pre class="ta-code"><code># Tarasovs Digital Agency
@@ -865,7 +865,7 @@ https://yourstore.com/llms-full.txt</code></pre><p>For most stores, the default 
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-question">How long should it be?</p>
-<p class="ta-faq-answer">The proposal has no fixed size or link limit. Keep it concise enough to function as an index. Around 10–30 curated links is a practical starting point for a typical business site.</p>
+<p class="ta-faq-answer">The proposal has no fixed size or link limit. Keep it concise enough to function as an index. Around 10-30 curated links is a practical starting point for a typical business site.</p>
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-question">Should it be noindex?</p>

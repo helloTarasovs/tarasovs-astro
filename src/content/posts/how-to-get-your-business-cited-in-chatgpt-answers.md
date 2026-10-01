@@ -584,7 +584,7 @@ Sitemap: https://yourdomain.com/sitemap.xml</code></div>
 <div class="ta-card">
 <h3>A good Quick Answer block should be:</h3>
 <ul>
-<li>50–120 words</li>
+<li>50-120 words</li>
 <li>Direct</li>
 <li>Self-contained</li>
 <li>Written in plain language</li>
@@ -614,7 +614,7 @@ Sitemap: https://yourdomain.com/sitemap.xml</code></div>
 <li>How do you measure AI visibility?</li>
 <li>Is GEO useful for small businesses?</li>
 </ul>
-<p>Each answer should be complete but concise. A useful FAQ answer is usually 80–150 words.</p>
+<p>Each answer should be complete but concise. A useful FAQ answer is usually 80-150 words.</p>
 <p>You can also build entire blog posts around question-based search behavior. Instead of writing only "AI Search Optimization Services," create supporting posts like "How to Get Your Business Cited in ChatGPT Answers," "Why Your Website Is Not Showing Up in AI Search," and "GEO vs SEO: What Is the Difference?"</p>
 <hr class="ta-divider">
 <!-- STEP 6 -->

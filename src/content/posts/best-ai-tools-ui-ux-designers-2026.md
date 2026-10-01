@@ -245,7 +245,7 @@ border: none !important; outline: none !important;
 </div>
 <div class="ta-stats">
 <div class="ta-stats__item"><div class="ta-stats__num">8</div><div class="ta-stats__label">tools we'd recommend right now, shortlisted from dozens reviewed</div></div>
-<div class="ta-stats__item"><div class="ta-stats__num">$0–$100</div><div class="ta-stats__label">monthly price range across today's top picks</div></div>
+<div class="ta-stats__item"><div class="ta-stats__num">$0-$100</div><div class="ta-stats__label">monthly price range across today's top picks</div></div>
 <div class="ta-stats__item"><div class="ta-stats__num">6</div><div class="ta-stats__label">design-specific AI tools shut down or acquired since early 2025</div></div>
 <div class="ta-stats__item"><div class="ta-stats__num">Aug 2026</div><div class="ta-stats__label">date every price here was checked against official pricing pages</div></div>
 </div>
@@ -268,7 +268,7 @@ border: none !important; outline: none !important;
 <div class="ta-tool">
 <div class="ta-tool__head">
 <h3 class="ta-tool__name">Figma (with Figma Make and Weave)</h3>
-<span class="ta-tool__price">$0–$90/mo</span>
+<span class="ta-tool__price">$0-$90/mo</span>
 </div>
 <p>Still the default place most design work happens. AI features (Make for prompt-to-prototype, Weave for the newer generative tooling announced at Config 2026) are now bundled into paid plans rather than sold separately, so if your team already pays for Figma Professional, you already have this.</p>
 <p class="ta-tool__take">The catch is credits, not price. Professional includes 3,000 AI credits a month; heavy generation use drains that fast, and extra credits are a paid add-on on every tier.</p>
@@ -276,7 +276,7 @@ border: none !important; outline: none !important;
 <div class="ta-tool">
 <div class="ta-tool__head">
 <h3 class="ta-tool__name">Framer</h3>
-<span class="ta-tool__price">$0–$30/mo</span>
+<span class="ta-tool__price">$0-$30/mo</span>
 </div>
 <p>The one tool on this list that takes you from AI-assisted design straight to a live, hosted site, no handoff to a developer required. We've used it directly for client work; see our <a href="/connect-claude-to-framer/">Connect Claude to Framer</a> and <a href="/higgsfield-claude-framer-ai-video/">Higgsfield AI video in Framer</a> pieces for what that actually looks like in practice, including what breaks.</p>
 <p class="ta-tool__take">Billing is per site, so five client sites means five separate subscriptions. Extra editors are $20 each on top. Framer's Pro Expert programme does offer discounts, including free editor access on client projects, if you qualify.</p>
@@ -292,7 +292,7 @@ border: none !important; outline: none !important;
 <div class="ta-tool">
 <div class="ta-tool__head">
 <h3 class="ta-tool__name">UX Pilot</h3>
-<span class="ta-tool__price">$0–$22/mo</span>
+<span class="ta-tool__price">$0-$22/mo</span>
 </div>
 <p>Leans into UX structure rather than visual polish: wireframes, multi-screen flows, and usability reasoning from a prompt, with export to Figma. Useful earlier in a project than most of the tools here, when you're still figuring out the flow rather than the look.</p>
 <p class="ta-tool__take">Pricing is credit-metered. The $12/month plan gets you roughly 70 screens a month; go over and you're buying more credits or waiting for the reset.</p>
@@ -300,7 +300,7 @@ border: none !important; outline: none !important;
 <div class="ta-tool">
 <div class="ta-tool__head">
 <h3 class="ta-tool__name">Uizard</h3>
-<span class="ta-tool__price">$0–$39/mo</span>
+<span class="ta-tool__price">$0-$39/mo</span>
 </div>
 <p>One of the few tools that made our 2024 list and is still recognizably the same product two years later: prompt-to-UI, screenshot-to-editable-mockup, drag-and-drop editing on top. That kind of stability is rare enough in this market to count as a point in its favor.</p>
 <p class="ta-tool__take">The free plan is thin: three AI generations a month on the older Autodesigner 1.5 engine, so you'll hit the paywall almost immediately if you're evaluating it seriously. Truly unlimited generation is Enterprise-only; the $39 Business tier caps at 5,000 a month.</p>
@@ -308,7 +308,7 @@ border: none !important; outline: none !important;
 <div class="ta-tool">
 <div class="ta-tool__head">
 <h3 class="ta-tool__name">Visily</h3>
-<span class="ta-tool__price">$0–$29/mo</span>
+<span class="ta-tool__price">$0-$29/mo</span>
 </div>
 <p>Built for teams where not everyone is a designer: no learning curve, prebuilt templates, and AI that turns a text prompt, screenshot, or sketch into an editable wireframe. Viewer seats are free, only editors count toward your bill, which matters if you have a lot of stakeholders who just need to comment.</p>
 <p class="ta-tool__take">The free tier watermarks every export, so it's a trial, not a real free plan for shipping anything.</p>
@@ -316,7 +316,7 @@ border: none !important; outline: none !important;
 <div class="ta-tool">
 <div class="ta-tool__head">
 <h3 class="ta-tool__name">v0 by Vercel</h3>
-<span class="ta-tool__price">$0–$100/mo</span>
+<span class="ta-tool__price">$0-$100/mo</span>
 </div>
 <p>Sits on the design/dev border more than any other tool here: prompt in, working React and Tailwind components out, deployable straight to Vercel. Billing is token-based rather than a flat per-generation credit, so cost depends on prompt complexity and which model you use.</p>
 <p class="ta-tool__take">This is a tool for teams that want to skip the design file entirely and go straight to code. If your workflow still needs a Figma handoff step, it's the wrong tool.</p>

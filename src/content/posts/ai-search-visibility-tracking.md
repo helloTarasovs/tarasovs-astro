@@ -205,12 +205,12 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <h2 id="manual">Manual Tracking: A Free Method That Actually Works</h2>
 <p>Before paying for a platform, it’s worth running a manual audit - it costs nothing but time and gives you a baseline.</p>
 <div class="ta-stages">
-<div class="ta-stage"><div class="ta-stage-num">Step 1</div><div class="ta-stage-title">Build a prompt list</div><p>Pull 15–30 real questions your buyers would plausibly ask an AI assistant - direct, indirect, and comparison prompts.</p></div>
+<div class="ta-stage"><div class="ta-stage-num">Step 1</div><div class="ta-stage-title">Build a prompt list</div><p>Pull 15-30 real questions your buyers would plausibly ask an AI assistant - direct, indirect, and comparison prompts.</p></div>
 <div class="ta-stage"><div class="ta-stage-num">Step 2</div><div class="ta-stage-title">Run across engines</div><p>Test each prompt on ChatGPT, Perplexity, and Google at minimum. Add Gemini and Claude for technical or enterprise audiences.</p></div>
 <div class="ta-stage"><div class="ta-stage-num">Step 3</div><div class="ta-stage-title">Log the results</div><p>Track prompt, engine, mentioned, cited, competitors mentioned, sentiment, and date in a simple spreadsheet.</p></div>
 <div class="ta-stage"><div class="ta-stage-num">Step 4</div><div class="ta-stage-title">Repeat monthly</div><p>AI outputs shift as models update. A single snapshot is a data point; a monthly cadence is a trend.</p></div>
 </div>
-<p>This manual process scales poorly past 30–40 prompts or beyond monthly checks - which is exactly the gap dedicated tools are built to close.</p>
+<p>This manual process scales poorly past 30-40 prompts or beyond monthly checks - which is exactly the gap dedicated tools are built to close.</p>
 <h2 id="tools">AI Visibility Tools Compared (2026)</h2>
 <div class="ta-img"><img src="/wp-content/uploads/2026/06/AI-Search-Visibility-Tracking2.webp" alt="Comparison of AI visibility tracking platforms" loading="lazy"></div>
 <div class="ta-table-wrap">
@@ -223,15 +223,15 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <tr><td class="row-label">SE Ranking AI Search Toolkit</td><td>Add-on to existing plan</td><td>ChatGPT, Perplexity, Gemini, AI Mode, AI Overviews</td><td>Teams already using SE Ranking for classic SEO</td></tr>
 <tr><td class="row-label">Visiblie</td><td>~€60/mo</td><td>Up to 8 models incl. ChatGPT, Gemini, Perplexity, Claude, Grok</td><td>Mid-market brands wanting broad model coverage</td></tr>
 <tr><td class="row-label">Indexly</td><td>$49/mo</td><td>ChatGPT, Perplexity, AI Overviews</td><td>Budget-conscious teams wanting a Profound alternative</td></tr>
-<tr><td class="row-label">Profound</td><td>~$299–500+/mo</td><td>ChatGPT, Perplexity, Gemini, AI Overviews</td><td>Enterprise brands needing deep reporting and API access</td></tr>
+<tr><td class="row-label">Profound</td><td>~$299-500+/mo</td><td>ChatGPT, Perplexity, Gemini, AI Overviews</td><td>Enterprise brands needing deep reporting and API access</td></tr>
 <tr><td class="row-label">Evertune</td><td>Custom / enterprise</td><td>Multi-model, custom prompt sets</td><td>Large brands with dedicated AI-search budgets</td></tr>
 </tbody>
 </table>
 </div>
 <p>Pricing and feature sets in this category move fast - confirm current tiers directly with each vendor before committing, especially at the entry-level tiers where free trials and limits change frequently.</p>
 <h2 id="choosing">How to Choose a Tool for Your Budget</h2>
-<p>For a solo operator or small agency, start with the cheapest tool that covers ChatGPT, Perplexity, and Google AI Overviews - that combination covers the large majority of AI-search traffic for most industries. Otterly.AI or Indexly at the $29–49/month tier is enough to establish a monthly tracking habit without a meaningful budget commitment.</p>
-<p>For a mid-market brand running its own marketing, the jump to Visiblie or a similar multi-model platform makes sense once you need Gemini or Claude coverage, or once a single person can no longer manually log results across more than 40–50 prompts a month.</p>
+<p>For a solo operator or small agency, start with the cheapest tool that covers ChatGPT, Perplexity, and Google AI Overviews - that combination covers the large majority of AI-search traffic for most industries. Otterly.AI or Indexly at the $29-49/month tier is enough to establish a monthly tracking habit without a meaningful budget commitment.</p>
+<p>For a mid-market brand running its own marketing, the jump to Visiblie or a similar multi-model platform makes sense once you need Gemini or Claude coverage, or once a single person can no longer manually log results across more than 40-50 prompts a month.</p>
 <p>For an enterprise brand, or an agency managing AI visibility for multiple client brands, Profound or Evertune-tier platforms justify their price with API access, white-label reporting, and prompt sets that scale into the hundreds - at that point the tool is replacing a part-time analyst’s job, not just adding a dashboard.</p>
 <h2 id="decisions">Turning Tracking Data Into Content Decisions</h2>
 <p>Tracking without action is just a report nobody reads. The point of the data is to change what gets written and how it’s structured:</p>
@@ -246,8 +246,8 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <p><strong>Skipping competitor prompts.</strong> Tracking only your own brand’s prompts means you never learn who’s winning the queries you’re not appearing in at all - which is usually the more actionable half of the data.</p>
 <h2 id="workflow">A 30-Day Starter Workflow</h2>
 <div class="ta-stages">
-<div class="ta-stage"><div class="ta-stage-num">Week 1</div><div class="ta-stage-title">Baseline</div><p>Build a 20–30 prompt list and log results manually across ChatGPT, Perplexity, and Google.</p></div>
-<div class="ta-stage"><div class="ta-stage-num">Week 2</div><div class="ta-stage-title">Diagnose</div><p>Identify the 3–5 worst-performing prompts and audit the page that should be answering them.</p></div>
+<div class="ta-stage"><div class="ta-stage-num">Week 1</div><div class="ta-stage-title">Baseline</div><p>Build a 20-30 prompt list and log results manually across ChatGPT, Perplexity, and Google.</p></div>
+<div class="ta-stage"><div class="ta-stage-num">Week 2</div><div class="ta-stage-title">Diagnose</div><p>Identify the 3-5 worst-performing prompts and audit the page that should be answering them.</p></div>
 <div class="ta-stage"><div class="ta-stage-num">Week 3</div><div class="ta-stage-title">Fix</div><p>Rewrite or create content - lead with a direct answer, add FAQ and schema, and publish.</p></div>
 <div class="ta-stage"><div class="ta-stage-num">Week 4</div><div class="ta-stage-title">Re-measure</div><p>Re-run the same prompts and compare. Decide if a paid tool is worth it from here.</p></div>
 </div>
@@ -265,7 +265,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-q">Can I do this without paying for a tool?</p>
-<p class="ta-faq-a">Yes, for small prompt sets. A manual spreadsheet tracking 20–30 prompts monthly across 3 engines is a legitimate, free starting point and is exactly what most paid tools are automating at scale.</p>
+<p class="ta-faq-a">Yes, for small prompt sets. A manual spreadsheet tracking 20-30 prompts monthly across 3 engines is a legitimate, free starting point and is exactly what most paid tools are automating at scale.</p>
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-q">How often should I re-check visibility?</p>

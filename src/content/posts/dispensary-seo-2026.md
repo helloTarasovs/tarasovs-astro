@@ -304,7 +304,7 @@ box-shadow: 0 0 30px rgba(168,85,247,0.4); transform: translateY(-1px);
 <figcaption>Default iframe menu vs crawlable menu: zero indexed products on the left, hundreds of ranking URLs on the right.</figcaption>
 </figure>
 <h3>What crawlable menus unlock</h3>
-<p>The fix is a menu architecture that renders real, indexable URLs on your root domain - either a proxy configuration (Dutchie's E-Commerce Pro + Proxy makes the menu appear as part of your domain to search engines) or a third-party integration that generates true product pages. The difference is dramatic: a single-location dispensary that adds around 300 indexable product URLs and starts surfacing in Map Pack carousels typically sees <strong>1,500–3,000 incremental organic sessions per month within 60 days</strong>. One multi-state operator reported that organic search rose to 54% of online revenue after replacing embedded iframe menus with crawlable product pages.</p>
+<p>The fix is a menu architecture that renders real, indexable URLs on your root domain - either a proxy configuration (Dutchie's E-Commerce Pro + Proxy makes the menu appear as part of your domain to search engines) or a third-party integration that generates true product pages. The difference is dramatic: a single-location dispensary that adds around 300 indexable product URLs and starts surfacing in Map Pack carousels typically sees <strong>1,500-3,000 incremental organic sessions per month within 60 days</strong>. One multi-state operator reported that organic search rose to 54% of online revenue after replacing embedded iframe menus with crawlable product pages.</p>
 <div class="ta-table-wrap">
 <table class="ta-table">
 <thead>
@@ -377,7 +377,7 @@ box-shadow: 0 0 30px rgba(168,85,247,0.4); transform: translateY(-1px);
 <p>Order matters. Fix the foundation before chasing content, and layer AI optimization on top of a crawlable, well-structured site - not a broken one.</p>
 <div class="ta-actions">
 <div class="ta-action">
-<div class="ta-action-title">Weeks 1–2 · Local</div>
+<div class="ta-action-title">Weeks 1-2 · Local</div>
 <ul>
 <li>Verify storefront GBP</li>
 <li>Set "Cannabis store" primary category</li>
@@ -386,7 +386,7 @@ box-shadow: 0 0 30px rgba(168,85,247,0.4); transform: translateY(-1px);
 </ul>
 </div>
 <div class="ta-action">
-<div class="ta-action-title">Weeks 2–5 · Technical</div>
+<div class="ta-action-title">Weeks 2-5 · Technical</div>
 <ul>
 <li>Replace iframe menu with crawlable / proxy pages</li>
 <li>Add Product + LocalBusiness schema</li>
@@ -395,7 +395,7 @@ box-shadow: 0 0 30px rgba(168,85,247,0.4); transform: translateY(-1px);
 </ul>
 </div>
 <div class="ta-action">
-<div class="ta-action-title">Weeks 4–9 · Content</div>
+<div class="ta-action-title">Weeks 4-9 · Content</div>
 <ul>
 <li>Local buying guides per location</li>
 <li>Compliance-safe product education</li>
@@ -404,7 +404,7 @@ box-shadow: 0 0 30px rgba(168,85,247,0.4); transform: translateY(-1px);
 </ul>
 </div>
 <div class="ta-action">
-<div class="ta-action-title">Weeks 6–12 · GEO</div>
+<div class="ta-action-title">Weeks 6-12 · GEO</div>
 <ul>
 <li>Unblock AI crawlers in robots.txt</li>
 <li>Add FAQPage schema + Quick Answers</li>
@@ -433,7 +433,7 @@ box-shadow: 0 0 30px rgba(168,85,247,0.4); transform: translateY(-1px);
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-q">How long does dispensary SEO take to work?</p>
-<p class="ta-faq-a">Local Pack improvements from GBP optimization can show within weeks. The bigger lift comes from fixing the menu: stores that move from iframe to crawlable product pages commonly see 1,500–3,000 incremental organic sessions per month within about 60 days, as hundreds of new URLs enter the index.</p>
+<p class="ta-faq-a">Local Pack improvements from GBP optimization can show within weeks. The bigger lift comes from fixing the menu: stores that move from iframe to crawlable product pages commonly see 1,500-3,000 incremental organic sessions per month within about 60 days, as hundreds of new URLs enter the index.</p>
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-q">What is GEO and why does it matter for a dispensary?</p>

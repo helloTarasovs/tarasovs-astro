@@ -203,7 +203,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <div class="ta-table-wrap">
 <table class="ta-table">
 <thead>
-<tr><th>Channel</th><th>Last 90 Days (31 Mar–28 Jun)</th><th>Last 28 Days (1–28 Jun)</th></tr>
+<tr><th>Channel</th><th>Last 90 Days (31 Mar-28 Jun)</th><th>Last 28 Days (1-28 Jun)</th></tr>
 </thead>
 <tbody>
 <tr><td class="row-label">Referral</td><td>4,502 users (47.68%)</td><td>1,288 users (49.67%)</td></tr>
@@ -228,9 +228,9 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <h2 id="next">What’s Next</h2>
 <div class="ta-stages">
 <div class="ta-stage"><div class="ta-stage-num">Step 1</div><div class="ta-stage-title">Build backlinks</div><p>Target fashion, lifestyle, and Italy-travel publications and directories - for SEO authority and AI-citation trust signals alike.</p></div>
-<div class="ta-stage"><div class="ta-stage-num">Step 2</div><div class="ta-stage-title">Track AI Assistant monthly</div><p>17 users is the start of a baseline, not a trend. The next 2–3 months will show whether it’s growing.</p></div>
+<div class="ta-stage"><div class="ta-stage-num">Step 2</div><div class="ta-stage-title">Track AI Assistant monthly</div><p>17 users is the start of a baseline, not a trend. The next 2-3 months will show whether it’s growing.</p></div>
 <div class="ta-stage"><div class="ta-stage-num">Step 3</div><div class="ta-stage-title">Fix zero-CTR keywords</div><p>Several high-position, zero-click keywords likely need rewritten meta titles and descriptions to convert impressions into clicks.</p></div>
-<div class="ta-stage"><div class="ta-stage-num">Step 4</div><div class="ta-stage-title">Re-measure at 60–90 days</div><p>Re-pull GA and Bing data once the new site has been fully re-crawled and re-indexed to measure real before/after impact.</p></div>
+<div class="ta-stage"><div class="ta-stage-num">Step 4</div><div class="ta-stage-title">Re-measure at 60-90 days</div><p>Re-pull GA and Bing data once the new site has been fully re-crawled and re-indexed to measure real before/after impact.</p></div>
 </div>
 </div>
 <section class="ta-faq" id="faq">

@@ -281,14 +281,14 @@ body.dark-scheme .ta-post {
 <div class="step-num">1</div>
 <div class="step-body">
 <div class="step-title">Build a representative query set</div>
-<p class="step-desc">Write 20–30 questions a real buyer in your category would ask Claude. Include comparison queries ("best [service] for [customer type]"), recommendation queries ("who should I hire for [problem]"), and problem-led queries. Avoid branded queries - you want to see what Claude says to someone who hasn't heard of you yet.</p>
+<p class="step-desc">Write 20-30 questions a real buyer in your category would ask Claude. Include comparison queries ("best [service] for [customer type]"), recommendation queries ("who should I hire for [problem]"), and problem-led queries. Avoid branded queries - you want to see what Claude says to someone who hasn't heard of you yet.</p>
 </div>
 </div>
 <div class="step-item">
 <div class="step-num">2</div>
 <div class="step-body">
 <div class="step-title">Run each query in a fresh Claude.ai conversation</div>
-<p class="step-desc">Use Claude Fable 5 with no prior context about your business. Run each query 3–5 times on different days to account for response variation. Copy each response verbatim - patterns emerge across multiple runs, not single queries.</p>
+<p class="step-desc">Use Claude Fable 5 with no prior context about your business. Run each query 3-5 times on different days to account for response variation. Copy each response verbatim - patterns emerge across multiple runs, not single queries.</p>
 </div>
 </div>
 <div class="step-item">
@@ -309,7 +309,7 @@ body.dark-scheme .ta-post {
 <div class="step-num">5</div>
 <div class="step-body">
 <div class="step-title">Identify the pattern and build your roadmap</div>
-<p class="step-desc">Find query types where you consistently appear versus consistently don't. That gap is your GEO roadmap - the content and citation work that will shift recommendations in your favor. For a rigorous baseline, scale to 100–250 queries across Claude, ChatGPT, Perplexity, and Gemini.</p>
+<p class="step-desc">Find query types where you consistently appear versus consistently don't. That gap is your GEO roadmap - the content and citation work that will shift recommendations in your favor. For a rigorous baseline, scale to 100-250 queries across Claude, ChatGPT, Perplexity, and Gemini.</p>
 </div>
 </div>
 </div>
@@ -335,7 +335,7 @@ body.dark-scheme .ta-post {
 </tr>
 <tr>
 <td class="row-label">Citation depth</td>
-<td>2–4 sources, brief recommendations</td>
+<td>2-4 sources, brief recommendations</td>
 <td>More detailed, more brand mentions per response</td>
 </tr>
 <tr>

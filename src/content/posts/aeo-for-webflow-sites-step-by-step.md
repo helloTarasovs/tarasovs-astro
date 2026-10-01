@@ -177,7 +177,7 @@ white-space: normal !important; overflow-wrap: normal; word-break: normal; borde
 <strong>Don't confuse "native tooling" with "automatic results."</strong> Turning on Webflow AEO is closer to installing Google Search Console than installing an SEO plugin that rewrites your pages - it's visibility into a problem, not a fix for it.
 </div>
 <h2 id="setup-steps">Step-by-Step Setup</h2>
-<p>These five steps are the order we actually run them in for client Webflow sites. Skipping ahead to step 4 without steps 1–3 in place is the most common way teams end up with a visibility dashboard full of zeros.</p>
+<p>These five steps are the order we actually run them in for client Webflow sites. Skipping ahead to step 4 without steps 1-3 in place is the most common way teams end up with a visibility dashboard full of zeros.</p>
 <div class="ta-stages">
 <div class="ta-stage-card">
 <div class="ta-stage-number">Step 1</div>
@@ -187,7 +187,7 @@ white-space: normal !important; overflow-wrap: normal; word-break: normal; borde
 <div class="ta-stage-card">
 <div class="ta-stage-number">Step 2</div>
 <div class="ta-stage-title">Add a Quick Answer block to priority pages</div>
-<p>Service pages, comparison pages, and your top blog posts each need a direct, self-contained answer in the first 150–200 words - written so it makes sense pulled out of context, because that's exactly how an LLM will use it.</p>
+<p>Service pages, comparison pages, and your top blog posts each need a direct, self-contained answer in the first 150-200 words - written so it makes sense pulled out of context, because that's exactly how an LLM will use it.</p>
 </div>
 <div class="ta-stage-card">
 <div class="ta-stage-number">Step 3</div>
@@ -234,7 +234,7 @@ white-space: normal !important; overflow-wrap: normal; word-break: normal; borde
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-question">How is this different from doing AEO on a Framer site?</p>
-<p class="ta-faq-answer">Framer can publish clean, extractable, AEO-friendly pages, but it has no dedicated answer-engine product yet - the equivalent of steps 1–3 here have to be done manually with no built-in audit or tracking layer. See our <a href="/framer-vs-webflow-2026/">Framer vs Webflow comparison</a> for the full breakdown.</p>
+<p class="ta-faq-answer">Framer can publish clean, extractable, AEO-friendly pages, but it has no dedicated answer-engine product yet - the equivalent of steps 1-3 here have to be done manually with no built-in audit or tracking layer. See our <a href="/framer-vs-webflow-2026/">Framer vs Webflow comparison</a> for the full breakdown.</p>
 </div>
 </div>
 </section>

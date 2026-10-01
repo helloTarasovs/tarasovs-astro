@@ -114,7 +114,7 @@ white-space: normal !important; overflow-wrap: normal; word-break: normal; borde
 <div class="ta-post">
 <div class="ta-qa">
 <div class="ta-qa-label">Quick Answer</div>
-<p><strong>Agencies are switching to Framer because it collapses design and development into one tool - what used to take a designer, a developer, and two weeks of handoff now takes one person and a few days.</strong> Studios that used to quote clients 6–8 weeks for a marketing site are shipping in 2–3, without touching a line of custom code for standard layouts.</p>
+<p><strong>Agencies are switching to Framer because it collapses design and development into one tool - what used to take a designer, a developer, and two weeks of handoff now takes one person and a few days.</strong> Studios that used to quote clients 6-8 weeks for a marketing site are shipping in 2-3, without touching a line of custom code for standard layouts.</p>
 <p>That doesn't mean Framer replaces developers on every project - but for agency-style marketing sites, landing pages, and client portfolios, it removes the single biggest bottleneck: the gap between what design shows and what code ships.</p>
 </div>
 <figure class="ta-image ta-hero-image">

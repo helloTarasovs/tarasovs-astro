@@ -3,7 +3,7 @@ title: "We Moved Our Agency Site From WordPress to Astro. Mobile PageSpeed Went 
 slug: "wordpress-to-astro-migration-pagespeed"
 pubDate: "2026-10-01T08:00:00Z"
 updatedDate: "2026-10-01T08:00:00Z"
-excerpt: "Real before-and-after data from migrating tarasovs.me from WordPress and Elementor to Astro on Cloudflare: page weight down by 87–91%, mobile LCP down from 8.3–17.6 seconds to 1.4–2.0 seconds, and the SEO checks behind the cutover."
+excerpt: "Real before-and-after data from migrating tarasovs.me from WordPress and Elementor to Astro on Cloudflare: page weight down by 87-91%, mobile LCP down from 8.3-17.6 seconds to 1.4-2.0 seconds, and the SEO checks behind the cutover."
 categories: ["insights"]
 tags: ["astro", "wordpress", "cloudflare", "core-web-vitals", "site-migration"]
 cover:
@@ -18,7 +18,7 @@ seo:
   robots: "index, follow"
   ogImage: "/wp-content/uploads/2026/10/wordpress-to-astro-migration.webp"
 jsonld:
-  - {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much faster did the site get after moving from WordPress to Astro?","acceptedAnswer":{"@type":"Answer","text":"Across four mobile tests, Lighthouse performance moved from 57–66 on WordPress to 99–100 on Astro. Mobile LCP dropped from 8.3–17.6 seconds to 1.4–2.0 seconds, and page weight fell by 87–91%."}},{"@type":"Question","name":"Did the migration change any URLs?","acceptedAnswer":{"@type":"Answer","text":"Every URL was accounted for. The production sitemap had 211 URLs and the Astro sitemap had 212. Of those, 206 matched exactly; five legacy addresses received intentional 301 redirects, and six new archive or project URLs were added."}},{"@type":"Question","name":"Will the faster Lighthouse scores improve Google rankings?","acceptedAnswer":{"@type":"Answer","text":"The Lighthouse results are lab data and do not prove a ranking change. Google reports Core Web Vitals from real-user field data, and tarasovs.me does not currently have enough CrUX data to measure that impact. The immediate gains are speed, reliability and a better visitor experience."}},{"@type":"Question","name":"Why was the WordPress site slow if Cloudflare already cached it?","acceptedAnswer":{"@type":"Answer","text":"Cached HTML was delivered quickly, but the browser still waited on render-blocking theme CSS, jQuery, Elementor scripts and icon fonts. Requests that missed the cache reached a strained origin server: real-user TTFB at the 75th percentile was 754 ms and 8.5% of responses over 30 days were 5xx errors."}}]}
+  - {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much faster did the site get after moving from WordPress to Astro?","acceptedAnswer":{"@type":"Answer","text":"Across four mobile tests, Lighthouse performance moved from 57-66 on WordPress to 99-100 on Astro. Mobile LCP dropped from 8.3-17.6 seconds to 1.4-2.0 seconds, and page weight fell by 87-91%."}},{"@type":"Question","name":"Did the migration change any URLs?","acceptedAnswer":{"@type":"Answer","text":"Every URL was accounted for. The production sitemap had 211 URLs and the Astro sitemap had 212. Of those, 206 matched exactly; five legacy addresses received intentional 301 redirects, and six new archive or project URLs were added."}},{"@type":"Question","name":"Will the faster Lighthouse scores improve Google rankings?","acceptedAnswer":{"@type":"Answer","text":"The Lighthouse results are lab data and do not prove a ranking change. Google reports Core Web Vitals from real-user field data, and tarasovs.me does not currently have enough CrUX data to measure that impact. The immediate gains are speed, reliability and a better visitor experience."}},{"@type":"Question","name":"Why was the WordPress site slow if Cloudflare already cached it?","acceptedAnswer":{"@type":"Answer","text":"Cached HTML was delivered quickly, but the browser still waited on render-blocking theme CSS, jQuery, Elementor scripts and icon fonts. Requests that missed the cache reached a strained origin server: real-user TTFB at the 75th percentile was 754 ms and 8.5% of responses over 30 days were 5xx errors."}}]}
 ---
 <style>
 .ta-post {
@@ -501,7 +501,7 @@ text-shadow: none !important;
 <div class="ta-post">
 <div class="ta-qa">
 <div class="ta-qa-label">Quick Answer</div>
-<p>We rebuilt tarasovs.me on Astro and moved it from WordPress hosting to Cloudflare Workers. On the same four pages, measured the same morning, mobile Lighthouse performance rose from <strong>57 to 99</strong> on the home page and to <strong>100</strong> on the other three. Mobile LCP dropped from <strong>8.3–17.6 seconds</strong> to <strong>1.4–2.0 seconds</strong>, and page weight fell by <strong>87–91%</strong>. Every existing URL was either preserved exactly or assigned an intentional 301 redirect.</p>
+<p>We rebuilt tarasovs.me on Astro and moved it from WordPress hosting to Cloudflare Workers. On the same four pages, measured the same morning, mobile Lighthouse performance rose from <strong>57 to 99</strong> on the home page and to <strong>100</strong> on the other three. Mobile LCP dropped from <strong>8.3-17.6 seconds</strong> to <strong>1.4-2.0 seconds</strong>, and page weight fell by <strong>87-91%</strong>. Every existing URL was either preserved exactly or assigned an intentional 301 redirect.</p>
 <p>This post shows the raw numbers, what caused the old site to be slow, how we kept SEO intact, and what the lab tests cannot tell you yet.</p>
 </div>
 
@@ -540,20 +540,20 @@ text-shadow: none !important;
 
 <div class="ta-stats">
 <div class="ta-stat">
-<div class="ta-stat-number">99–100</div>
-<div class="ta-stat-label">mobile Lighthouse performance across four pages, up from 57–66</div>
+<div class="ta-stat-number">99-100</div>
+<div class="ta-stat-label">mobile Lighthouse performance across four pages, up from 57-66</div>
 </div>
 <div class="ta-stat">
-<div class="ta-stat-number">87–91%</div>
+<div class="ta-stat-number">87-91%</div>
 <div class="ta-stat-label">lower page weight on mobile</div>
 </div>
 <div class="ta-stat">
-<div class="ta-stat-number">1.4–2.0 s</div>
-<div class="ta-stat-label">mobile LCP, down from 8.3–17.6 s</div>
+<div class="ta-stat-number">1.4-2.0 s</div>
+<div class="ta-stat-label">mobile LCP, down from 8.3-17.6 s</div>
 </div>
 <div class="ta-stat">
 <div class="ta-stat-number">0 ms</div>
-<div class="ta-stat-label">mobile Total Blocking Time, down from 50–170 ms</div>
+<div class="ta-stat-label">mobile Total Blocking Time, down from 50-170 ms</div>
 </div>
 </div>
 <nav class="ta-toc" aria-label="Table of contents">
@@ -749,7 +749,7 @@ If you are not sure which group you are in, start with the measurements. Run Pag
 <div class="ta-faq-list">
 <div class="ta-faq-item">
 <p class="ta-faq-question">How much faster did the site get after moving from WordPress to Astro?</p>
-<p class="ta-faq-answer">Across four mobile tests, Lighthouse performance moved from 57–66 on WordPress to 99–100 on Astro. Mobile LCP dropped from 8.3–17.6 seconds to 1.4–2.0 seconds, and page weight fell by 87–91%.</p>
+<p class="ta-faq-answer">Across four mobile tests, Lighthouse performance moved from 57-66 on WordPress to 99-100 on Astro. Mobile LCP dropped from 8.3-17.6 seconds to 1.4-2.0 seconds, and page weight fell by 87-91%.</p>
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-question">Did the migration change any URLs?</p>

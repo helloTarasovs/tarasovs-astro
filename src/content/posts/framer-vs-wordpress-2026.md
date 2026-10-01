@@ -223,10 +223,10 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <p>If performance is a primary concern and you don’t want to manage it: Framer. If you’re willing to invest in a proper WordPress hosting and optimization stack, the gap is fully closeable.</p>
 <h2 id="cms">Content Management and Scalability</h2>
 <p>WordPress is the stronger CMS, and it isn’t close. It was designed for content at scale, and 20+ years of development show: post types, custom taxonomies, multi-author workflows, editorial scheduling, revision history, bulk operations, and an admin interface that non-technical users can navigate without training.</p>
-<p>Framer’s CMS handles structured content well - portfolio items, case studies, product cards, team members. For a site with 5–50 content items that change occasionally, Framer CMS is perfectly adequate. For a blog publishing three articles per week with an editorial team, it isn’t. There’s no bulk scheduling, no author-level permissions, no native revision comparison, and the item limits on lower-tier plans become a real constraint quickly.</p>
+<p>Framer’s CMS handles structured content well - portfolio items, case studies, product cards, team members. For a site with 5-50 content items that change occasionally, Framer CMS is perfectly adequate. For a blog publishing three articles per week with an editorial team, it isn’t. There’s no bulk scheduling, no author-level permissions, no native revision comparison, and the item limits on lower-tier plans become a real constraint quickly.</p>
 <p>If your client will be managing their own content, publishing regularly, or operating at any meaningful scale: WordPress.</p>
 <h3>Multi-language and localization</h3>
-<p>Framer has native localization built into the platform - you create localized versions of pages and CMS collections inside the same project, no plugins required. For marketing sites targeting 2–4 languages this is genuinely easier to manage than any WordPress solution.</p>
+<p>Framer has native localization built into the platform - you create localized versions of pages and CMS collections inside the same project, no plugins required. For marketing sites targeting 2-4 languages this is genuinely easier to manage than any WordPress solution.</p>
 <p>WordPress handles multi-language via plugins: WPML (~$99/year) or Polylang (free/premium). Both are mature and handle complex scenarios - string translations across themes and plugins, hreflang tags, language switchers, and per-language SEO settings. If you need precise control over every translated string in a large multilingual site, WordPress + WPML is still the more complete solution.</p>
 <h2 id="ecosystem">Plugins, E-Commerce, and Ecosystem</h2>
 <p>WordPress has 60,000+ plugins. That number is both its strength and its liability - the ecosystem is enormous, but plugin quality varies widely, conflicts are common, and security vulnerabilities in third-party plugins are the most common vector for WordPress site compromises.</p>
@@ -234,7 +234,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <p>Framer has no plugin ecosystem in the traditional sense. It supports embedding external services via iframes and custom code blocks, and its integration with Zapier and Make handles many automation needs - but if you need something that doesn’t exist as a native Framer feature, your options are limited to custom code or rethinking the requirement.</p>
 <p><strong>E-commerce:</strong> Framer is not viable for serious stores. Framer supports Lemon Squeezy embeds and basic checkout flows, but there’s no native inventory management, order dashboard, or shipping integration. For anything beyond a simple digital product sale: WordPress + WooCommerce is the standard answer.</p>
 <h3>Security and maintenance overhead</h3>
-<p>This is the most underrated practical difference between the two platforms. WordPress security vulnerabilities come almost exclusively from outdated or poorly maintained third-party plugins - and with 60,000+ plugins of varying quality in the ecosystem, exposure is constant. A site with 10–15 active plugins needs weekly monitoring: core updates, plugin updates, security scans, backups. Miss a cycle and you’re vulnerable.</p>
+<p>This is the most underrated practical difference between the two platforms. WordPress security vulnerabilities come almost exclusively from outdated or poorly maintained third-party plugins - and with 60,000+ plugins of varying quality in the ecosystem, exposure is constant. A site with 10-15 active plugins needs weekly monitoring: core updates, plugin updates, security scans, backups. Miss a cycle and you’re vulnerable.</p>
 <p>Framer handles patching automatically. You never touch server configuration, plugin versions, or security certificates. That’s not a small convenience - for small teams or agencies managing multiple client sites, the maintenance burden of WordPress can consume more time than the actual design and content work. If you’re running Framer, that time goes elsewhere.</p>
 <p>The tradeoff: Framer doesn’t let you export your site’s code. You’re on their infrastructure and their pricing permanently. WordPress is fully self-hosted - move hosts, fork the code, take your data anywhere. For clients who need platform independence, this matters.</p>
 <h3>Publishing and client handoff</h3>
@@ -254,7 +254,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <tr>
 <td class="row-label">Entry cost</td>
 <td>Free (with Framer branding)</td>
-<td>Free software, ~$3–$10/mo hosting</td>
+<td>Free software, ~$3-$10/mo hosting</td>
 </tr>
 <tr>
 <td class="row-label">Custom domain</td>
@@ -269,7 +269,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <tr>
 <td class="row-label">SEO tools</td>
 <td>Built-in (no extra cost)</td>
-<td>~$79–$129/yr (Yoast or RankMath Pro)</td>
+<td>~$79-$129/yr (Yoast or RankMath Pro)</td>
 </tr>
 <tr>
 <td class="row-label">Page builder</td>
@@ -279,12 +279,12 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <tr>
 <td class="row-label">Performance stack</td>
 <td>Included (CDN, image opt.)</td>
-<td>~$50–$200/yr (WP Rocket + Cloudflare)</td>
+<td>~$50-$200/yr (WP Rocket + Cloudflare)</td>
 </tr>
 <tr>
 <td class="row-label">Realistic annual cost</td>
-<td>~$180–$360/yr</td>
-<td>~$200–$600/yr (professional setup)</td>
+<td>~$180-$360/yr</td>
+<td>~$200-$600/yr (professional setup)</td>
 </tr>
 </tbody>
 </table>
@@ -305,17 +305,17 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <tr>
 <td class="row-label">Platform / hosting</td>
 <td>~$1,080 (subscription, CDN &amp; hosting included)</td>
-<td>~$540–$1,800 (managed hosting, e.g. Kinsta / WP Engine)</td>
+<td>~$540-$1,800 (managed hosting, e.g. Kinsta / WP Engine)</td>
 </tr>
 <tr>
 <td class="row-label">Premium plugins</td>
 <td>$0 (SEO, performance, builder all built-in)</td>
-<td>~$400–$700 (Elementor Pro + Yoast/RankMath + WP Rocket)</td>
+<td>~$400-$700 (Elementor Pro + Yoast/RankMath + WP Rocket)</td>
 </tr>
 <tr>
 <td class="row-label">Maintenance &amp; updates</td>
 <td>~$0 (patching fully managed)</td>
-<td>~$1,500–$5,400 (updates, security, backups - agency or in-house time)</td>
+<td>~$1,500-$5,400 (updates, security, backups - agency or in-house time)</td>
 </tr>
 <tr>
 <td class="row-label">Security incident risk</td>
@@ -324,8 +324,8 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </tr>
 <tr>
 <td class="row-label">Realistic 3-year total</td>
-<td>~$1,100–$1,400</td>
-<td>~$2,400–$7,900</td>
+<td>~$1,100-$1,400</td>
+<td>~$2,400-$7,900</td>
 </tr>
 </tbody>
 </table>
@@ -404,9 +404,9 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <text x="20" y="505" font-size="11" font-weight="600" fill="#9490A8" letter-spacing="0.06em">PRICING</text>
 <text x="20" y="523" font-size="13" fill="#E2DCFF">Annual (realistic)</text>
 <rect x="285" y="492" width="160" height="28" rx="6" fill="#4C1D95"></rect>
-<text x="365" y="511" font-size="13" font-weight="600" fill="#C4B5FD" text-anchor="middle">$180–$360 / yr</text>
+<text x="365" y="511" font-size="13" font-weight="600" fill="#C4B5FD" text-anchor="middle">$180-$360 / yr</text>
 <rect x="493" y="492" width="180" height="28" rx="6" fill="#1C1535"></rect>
-<text x="583" y="511" font-size="13" fill="#7B7399" text-anchor="middle">$200–$600 / yr</text>
+<text x="583" y="511" font-size="13" fill="#7B7399" text-anchor="middle">$200-$600 / yr</text>
 <!-- Ownership -->
 <rect x="0" y="546" width="760" height="74" fill="#0D0A1E"></rect>
 <text x="20" y="575" font-size="11" font-weight="600" fill="#9490A8" letter-spacing="0.06em">OWNERSHIP</text>
@@ -513,7 +513,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-q">What about multi-language sites?</p>
-<p class="ta-faq-a">Framer has native localization built in - create localized versions of pages and CMS collections inside the same project, with hreflang handled automatically. Works well for 2–5 languages on a marketing site. WordPress handles multi-language via WPML or Polylang, which are more powerful for complex scenarios: large content volumes, plugin-level string translations, per-language SEO settings. For a mid-size multilingual site: Framer is simpler. For a large multilingual content operation: WordPress + WPML is more complete.</p>
+<p class="ta-faq-a">Framer has native localization built in - create localized versions of pages and CMS collections inside the same project, with hreflang handled automatically. Works well for 2-5 languages on a marketing site. WordPress handles multi-language via WPML or Polylang, which are more powerful for complex scenarios: large content volumes, plugin-level string translations, per-language SEO settings. For a mid-size multilingual site: Framer is simpler. For a large multilingual content operation: WordPress + WPML is more complete.</p>
 </div>
 </div>
 </div>
