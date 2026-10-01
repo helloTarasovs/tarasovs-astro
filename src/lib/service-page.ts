@@ -60,6 +60,7 @@ export interface Section {
 
 export interface ServicePageData {
   url: string;
+  variant?: 'center'; // centered dispensary-page look (panel hero, centered sections)
   breadcrumb: { name: string; path: string }[]; // without the page itself
   hero: { eyebrow?: string; title: string; crumb?: string; chips?: string[]; byline?: string; lead?: string; actions?: Action[] };
   sections: Section[];

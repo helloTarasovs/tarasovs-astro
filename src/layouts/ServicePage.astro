@@ -9,6 +9,7 @@ import { assertFaqMatchesSchema, dedupeJsonld, type ServicePageData } from '../l
 
 interface Props { data: ServicePageData }
 const { data } = Astro.props;
+const center = data.variant === 'center';
 const page = wpPage(data.url);
 const pageJsonld = dedupeJsonld(page.jsonld);
 assertFaqMatchesSchema(data, pageJsonld);
@@ -20,7 +21,7 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
 ---
 <Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld}>
   <article class="service">
-    <header class="hero">
+    <header class:list={['hero', { 'hero--center': center }]}>
       <div class="container">
         <nav class="crumbs" aria-label="Breadcrumb">
           <ol>
@@ -29,17 +30,27 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
             ))}
           </ol>
         </nav>
-        {data.hero.eyebrow && <p class="eyebrow" set:html={data.hero.eyebrow} />}
-        <h1 set:html={data.hero.title} />
-        {data.hero.byline && <p class="hero-byline" set:html={data.hero.byline} />}
-        {data.hero.lead && <div class="hero-lead" set:html={data.hero.lead} />}
-        {data.hero.chips && data.hero.chips.length > 0 && (
+        <div class="hero-panel">
+          {data.hero.eyebrow && (
+            <p class="eyebrow">
+              <span set:html={data.hero.eyebrow} />
+              {center && <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6" /></svg>}
+            </p>
+          )}
+          <h1 set:html={data.hero.title} />
+          {data.hero.byline && <p class="hero-byline" set:html={data.hero.byline} />}
+          {data.hero.lead && <div class="hero-lead" set:html={data.hero.lead} />}
+          {!center && data.hero.chips && data.hero.chips.length > 0 && (
+            <ul class="hero-chips">{data.hero.chips.map((c) => <li>{c}</li>)}</ul>
+          )}
+          {data.hero.actions && data.hero.actions.length > 0 && (
+            <p class="hero-actions">
+              {data.hero.actions.map((a, i) => <a class:list={['button', { 'button--ghost': i > 0 }]} href={a.href}>{a.label}</a>)}
+            </p>
+          )}
+        </div>
+        {center && data.hero.chips && data.hero.chips.length > 0 && (
           <ul class="hero-chips">{data.hero.chips.map((c) => <li>{c}</li>)}</ul>
-        )}
-        {data.hero.actions && data.hero.actions.length > 0 && (
-          <p class="hero-actions">
-            {data.hero.actions.map((a, i) => <a class:list={['button', { 'button--ghost': i > 0 }]} href={a.href}>{a.label}</a>)}
-          </p>
         )}
       </div>
     </header>
@@ -141,4 +152,40 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
     .section { padding-block: var(--space-9); }
     .cta { padding: var(--space-8); }
   }
+
+  /* ---- Centered variant (dispensary pages): panel hero like the live site ---- */
+  .hero--center { padding-block: var(--space-5) var(--space-6); }
+  .hero--center .crumbs ol { font-size: var(--text-sm); color: var(--color-text); }
+  .hero--center .crumbs li + li::before { content: '›'; margin-right: var(--space-2); opacity: 1; }
+  .hero--center .crumbs a { font-weight: 500; }
+  .hero--center .crumbs { margin-bottom: var(--space-4); }
+  .hero--center .hero-panel {
+    --hp-bg: #e4f4dd; --hp-chip: #d1decb;
+    padding: 3.4rem var(--space-5) 4.5rem;
+    border-radius: var(--radius-md);
+    background: var(--hp-bg);
+    text-align: center;
+  }
+  :global(:root[data-theme='dark']) .hero--center .hero-panel { --hp-bg: #162510; --hp-chip: #283423; }
+  @media (prefers-color-scheme: dark) { :global(:root:not([data-theme='light'])) .hero--center .hero-panel { --hp-bg: #162510; --hp-chip: #283423; } }
+  .hero--center .hero .eyebrow, .hero--center .hero-panel .eyebrow {
+    display: inline-flex; align-items: center; gap: var(--space-2);
+    margin: 0; padding: 0.4rem 0.9rem; border-radius: var(--radius-pill);
+    background: var(--hp-chip); color: var(--color-text);
+    font-size: var(--text-sm); font-weight: 500; letter-spacing: 0; text-transform: none; line-height: 1.3;
+  }
+  .hero--center .hero-panel h1 {
+    max-width: 14em; margin: var(--space-4) auto 0;
+    font-size: clamp(2.4rem, 1.5rem + 3.2vw, 4.05rem); font-weight: 500; line-height: 1; letter-spacing: -0.045em;
+  }
+  .hero--center .hero-lead { max-width: 56rem; margin: 2.2rem auto 0; color: var(--color-text); font-size: 1.05rem; line-height: 1.3; }
+  .hero--center .hero-lead :global(p + p) { margin-top: 1.1em; }
+  .hero--center .hero-lead :global(strong) { font-weight: 700; }
+  .hero--center .hero-actions { justify-content: center; margin-top: 3rem; }
+  .hero--center .hero-actions .button { min-height: 44px; padding-inline: 1.25rem; }
+  .hero--center .hero-actions .button--ghost { border: 2px solid var(--brand-violet); background: transparent; color: var(--brand-violet); }
+  .hero--center .hero-actions .button--ghost:hover { background: var(--brand-violet); color: #fff; }
+  :global(:root[data-theme='dark']) .hero--center .hero-actions .button--ghost { border-color: #c4b5fd; color: #c4b5fd; }
+  @media (prefers-color-scheme: dark) { :global(:root:not([data-theme='light'])) .hero--center .hero-actions .button--ghost { border-color: #c4b5fd; color: #c4b5fd; } }
+  @media (max-width: 40em) { .hero--center .hero-panel { padding-block: 3rem 3.5rem; } .hero--center .hero-actions { flex-direction: column; align-items: center; } }
 </style>

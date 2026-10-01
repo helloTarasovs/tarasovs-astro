@@ -1,8 +1,9 @@
 {
   "url": "/dispensary-seo-new-york/",
+  "variant": "center",
   "hero": {
     "title": "Cannabis Dispensary SEO Across New York State",
-    "lead": "<p>We help licensed dispensaries from Manhattan to Buffalo get found in Google Maps, organic search, Dutchie menu results, and AI assistants like ChatGPT.</p><p>Every New York market works differently. We build the local pages, menu indexing, Google Business Profile signals, and compliant content that fit the market you actually operate in. +93.5% organic impressions after a Dutchie Pro migration</p>",
+    "lead": "<p>We help licensed dispensaries from Manhattan to Buffalo get found in Google Maps, organic search, Dutchie menu results, and AI assistants like ChatGPT.</p><p>Every New York market works differently. We build the local pages, menu indexing, Google Business Profile signals, and compliant content that fit the market you actually operate in.</p><p><strong>+93.5% organic impressions after a Dutchie Pro migration</strong></p>",
     "actions": [
       {
         "label": "Get a Free Visibility Audit",
@@ -13,7 +14,7 @@
         "href": "/dispensary-seo-nyc/"
       }
     ],
-    "crumb": "Dispensary SEO",
+    "crumb": "Cannabis Dispensary SEO in New York State",
     "eyebrow": "New York State SEO",
     "chips": [
       "Local “Near Me” SEO",
@@ -348,10 +349,6 @@
     {
       "name": "Home",
       "path": "/"
-    },
-    {
-      "name": "Services",
-      "path": "/services/"
     }
   ],
   "formSubject": "New audit request: Cannabis Dispensary SEO Across New York State"
