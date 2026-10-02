@@ -1,9 +1,11 @@
 {
   "url": "/dutchie-pro-migration-seo/",
   "variant": "center",
+  "partner": true,
+  "dateModified": "2026-10-02",
   "hero": {
     "title": "Dutchie Pro Migration Without Losing Your Rankings",
-    "lead": "<p>Dutchie is sunsetting the legacy Dutchie Plus platform through the end of 2026, and the default Dutchie iFrame was never indexable to begin with. We migrate licensed dispensaries to Dutchie Pro without losing rankings, menu indexation, or online orders — proven on a live NYC dispensary.</p>",
+    "lead": "<p>Dutchie is sunsetting the legacy Dutchie Plus platform through the end of 2026, and the default Dutchie iFrame was never indexable to begin with. As a {{PARTNER_STATUS}}, we migrate licensed dispensaries to Dutchie Pro without losing rankings, menu indexation, or online orders. Proven on a live NYC dispensary.</p>",
     "actions": [
       {
         "label": "Get a Free Migration Audit",
@@ -16,7 +18,7 @@
     ],
     "crumb": "Dutchie Pro Migration SEO",
     "eyebrow": "Dutchie Pro Migration",
-    "byline": "By <a href=\"https://www.linkedin.com/in/yurii-tarasov/?skipRedirect=true\">Tarasov Yurii</a>, Founder &amp; SEO/GEO Strategist, Tarasovs Agency. Last updated August 29, 2026",
+    "byline": "By <a href=\"https://www.linkedin.com/in/yurii-tarasov/?skipRedirect=true\">Tarasov Yurii</a>, Founder &amp; SEO/GEO Strategist, Tarasovs Agency. Last updated October 2, 2026",
     "chips": [
       "Dutchie Pro Migration",
       "301 Redirects",
@@ -26,7 +28,8 @@
       "Dutchie Plus Sunset",
       "AI Search",
       "NYC Dispensary"
-    ]
+    ],
+    "badge": "{{PARTNER_STATUS}}"
   },
   "sections": [
     {
@@ -112,7 +115,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>We’ve carried a licensed NYC dispensary from an invisible iFrame menu to page-1 rankings — and can show the Search Console proof. Migration is a technical, local, and content problem at once, and we handle all three.</p>"
+          "html": "<p>We’ve carried a licensed NYC dispensary from an invisible iFrame menu to page-1 rankings — and can show the Search Console proof. Migration is a technical, local, and content problem at once, and we handle all three.</p><p>We work directly with Dutchie as a certified partner. That gives our clients a direct line to the Dutchie team during migration, and one agency that handles the platform, the SEO, and the content.</p>"
         },
         {
           "type": "projects",
@@ -208,7 +211,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>We’ll check whether you’re on Plus or the iFrame, how many product URLs are actually indexed, what would break at cutover, and where the fastest local and AI-search wins are — then send a practical, prioritized migration plan.</p><p>Tarasovs Agency — SEO, GEO &amp; Dutchie migration support for licensed cannabis dispensaries.</p>"
+          "html": "<p>We’ll check whether you’re on Plus or the iFrame, how many product URLs are actually indexed, what would break at cutover, and where the fastest local and AI-search wins are — then send a practical, prioritized migration plan.</p><p>Tarasovs Agency — SEO, GEO &amp; Dutchie migration support for licensed cannabis dispensaries.</p><p class=\"partner-note\">Tarasovs Agency is an independent {{PARTNER_STATUS}}. Dutchie is a trademark of its respective owner.</p>"
         },
         {
           "type": "form"
@@ -222,6 +225,10 @@
     "eyebrow": "",
     "title": "Dutchie Pro migration FAQ",
     "items": [
+      {
+        "q": "Are you an official Dutchie partner?",
+        "a": "Yes. Tarasovs Agency is a {{PARTNER_STATUS}} under a signed partner agreement with Dutchie. We are an independent agency and build Dutchie Pro storefronts for licensed dispensaries."
+      },
       {
         "q": "When is Dutchie Plus being sunset?",
         "a": "Dutchie has said it will support legacy Dutchie Plus customers through the end of 2026. Exact end-of-life dates are tier-dependent, so request a written timeline from your Dutchie account manager and plan to complete migration well before the API stops responding.We checked Dutchie's own Help Center, release notes, and product pages before publishing this — none of them list a public cutoff date or deprecation schedule. The end-of-2026 date and any specific timeline you see quoted elsewhere comes from account-level communication, not a published company announcement. Treat it as unconfirmed until your account manager puts a date in writing"

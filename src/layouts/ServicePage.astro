@@ -6,14 +6,17 @@ import Faq from '../components/blocks/Faq.astro';
 import Marquee from '../components/Marquee.astro';
 import { wpPage } from '../lib/pages';
 import { breadcrumbSchema } from '../lib/schema';
-import { assertFaqMatchesSchema, dedupeJsonld, type ServicePageData } from '../lib/service-page';
+import { dedupeJsonld, faqSchema, fillTokens, partnerOrganization, type ServicePageData } from '../lib/service-page';
 
 interface Props { data: ServicePageData }
-const { data } = Astro.props;
+const data = fillTokens(Astro.props.data);
 const center = data.variant === 'center';
 const page = wpPage(data.url);
-const pageJsonld = dedupeJsonld(page.jsonld);
-assertFaqMatchesSchema(data, pageJsonld);
+// FAQPage comes from the visible FAQ (single source); any FAQPage in the WordPress export is dropped.
+const faqLd = faqSchema(data);
+const pageJsonld = dedupeJsonld(page.jsonld).filter((b: any) => !(faqLd && b?.['@type'] === 'FAQPage'));
+if (faqLd) pageJsonld.push(faqLd);
+if (data.partner) pageJsonld.push(partnerOrganization());
 
 const crumbs = [...data.breadcrumb, { name: data.hero.crumb ?? data.hero.title.replace(/<[^>]+>/g, ''), path: data.url }];
 const hasBreadcrumbLd = pageJsonld.some((b: any) => b?.['@type'] === 'BreadcrumbList');
@@ -51,6 +54,7 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
           )}
           <h1 set:html={data.hero.title} />
           {data.hero.byline && <p class="hero-byline" set:html={data.hero.byline} />}
+          {data.hero.badge && <p class="hero-badge">{data.hero.badge}</p>}
           {data.hero.lead && <div class="hero-lead" set:html={data.hero.lead} />}
           {!center && data.hero.chips && data.hero.chips.length > 0 && (
             <ul class="hero-chips">{data.hero.chips.map((c) => <li>{c}</li>)}</ul>
@@ -156,6 +160,8 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
   .hero .eyebrow + h1 { margin-top: var(--space-3); }
   .hero-lead { margin-top: var(--space-5); max-width: 62ch; font-size: var(--text-lg); color: var(--color-text-muted); }
   .hero-lead :global(* + *) { margin-top: 0.8em; }
+  .hero-badge { display: inline-block; margin-top: var(--space-3); padding: 0.3rem 0.8rem; border: 1px solid var(--color-border); border-radius: var(--radius-pill); background: #3d7d1f; color: #fff; font-size: var(--text-xs); font-weight: 600; }
+  .service :global(.partner-note) { font-size: var(--text-xs); opacity: 0.8; }
   .hero-byline { margin-top: var(--space-4); color: var(--color-text-muted); font-size: var(--text-xs); }
   .hero-chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-5); padding: 0; list-style: none; }
   .hero-chips li { padding: 0.3rem 0.8rem; border: 1px solid var(--color-border); border-radius: var(--radius-pill); font-size: var(--text-xs); color: var(--color-text-muted); }

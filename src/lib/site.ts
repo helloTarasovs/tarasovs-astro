@@ -7,6 +7,9 @@ export const SITE = {
   twitterCard: 'summary_large_image',
 };
 
+// Dutchie partner status, exact wording from the partner agreement. Reference it, never retype it.
+export const PARTNER_STATUS = 'Certified Dutchie Pro Partner';
+
 // Must match WordPress Settings > Reading so /category/insights/page/N/ keeps the same posts.
 export const POSTS_PER_PAGE = 12; // WordPress Settings > Reading (verified on the live archive: 12 per page)
 

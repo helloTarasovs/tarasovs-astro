@@ -1,3 +1,5 @@
+import { PARTNER_STATUS, SITE } from './site';
+
 // Data model for hand-built service pages (src/content/services/*.json), rendered by layouts/ServicePage.astro.
 // Copy comes from the WordPress export; SEO + JSON-LD come from _wp-export/pages.json via wpPage().
 
@@ -60,32 +62,53 @@ export interface Section {
 
 export interface ServicePageData {
   url: string;
+  dateModified?: string; // ISO date, goes to the generated FAQPage schema
+  partner?: boolean; // adds the Dutchie partner membership to the Organization schema
   variant?: 'center'; // centered dispensary-page look (panel hero, centered sections)
   breadcrumb: { name: string; path: string }[]; // without the page itself
-  hero: { eyebrow?: string; title: string; crumb?: string; chips?: string[]; byline?: string; lead?: string; actions?: Action[] };
+  hero: { eyebrow?: string; title: string; crumb?: string; chips?: string[]; byline?: string; badge?: string; lead?: string; actions?: Action[] };
   sections: Section[];
   faq?: { eyebrow?: string; title: string; intro?: string; items: { q: string; a: string }[]; note?: string } | null;
   cta?: { eyebrow?: string; title: string; text?: string; action?: Action | null } | null;
   formSubject?: string;
 }
 
-const norm = (s: string) => s.toLowerCase().replace(/&[a-z#0-9]+;/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
+const stripTags = (s: string) => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
 
-/** Visible FAQ must match the FAQPage schema question for question (Google requires it). */
-export function assertFaqMatchesSchema(data: ServicePageData, jsonld: any[]) {
-  const schemaQs = jsonld
-    .flatMap((b) => (b?.['@graph'] ?? [b]))
-    .filter((b) => b?.['@type'] === 'FAQPage')
-    .flatMap((b) => b.mainEntity.map((e: any) => norm(e.name)));
-  const visible = (data.faq?.items ?? []).map((i) => norm(i.q));
-  const missing = [...new Set(schemaQs)].filter((q) => !visible.includes(q));
-  const extra = visible.filter((q) => !schemaQs.includes(q));
-  if (missing.length || extra.length) {
-    throw new Error(`${data.url}: FAQ does not match FAQPage schema. Missing: ${missing.join(' | ')} Extra: ${extra.join(' | ')}`);
-  }
+/** Replaces {{PARTNER_STATUS}} in every string of the page data, so the status lives in one place (lib/site.ts). */
+export function fillTokens<T>(value: T): T {
+  if (typeof value === 'string') return value.replaceAll('{{PARTNER_STATUS}}', PARTNER_STATUS) as T;
+  if (Array.isArray(value)) return value.map(fillTokens) as T;
+  if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, fillTokens(v)])) as T;
+  return value;
 }
 
-/** Drop repeated JSON-LD blocks (ui-ux-design had its FAQPage and Service twice) and keep one FAQPage. */
+/** FAQPage schema built from the visible FAQ, so schema and page can never drift apart. */
+export function faqSchema(data: ServicePageData) {
+  const items = data.faq?.items ?? [];
+  if (items.length === 0) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    ...(data.dateModified ? { dateModified: data.dateModified } : {}),
+    mainEntity: items.map((i) => ({ '@type': 'Question', name: stripTags(i.q), acceptedAnswer: { '@type': 'Answer', text: i.a } })),
+  };
+}
+
+/** Same @id as the site-wide Organization, so Google merges it into one entity. */
+export function partnerOrganization() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${SITE.url}/#organization`,
+    memberOf: {
+      '@type': 'ProgramMembership',
+      programName: PARTNER_STATUS,
+      hostingOrganization: { '@type': 'Organization', name: 'Dutchie', url: 'https://dutchie.com' },
+    },
+  };
+}
+
 export function dedupeJsonld(jsonld: any[]) {
   const seen = new Set<string>();
   let seenFaq = false;
