@@ -1,5 +1,6 @@
 {
   "url": "/dispensary-seo-nyc/",
+  "variant": "center",
   "hero": {
     "title": "Cannabis Dispensary SEO Services in NYC",
     "lead": "<p>We help licensed cannabis dispensaries in Manhattan and Brooklyn get found in Google Maps, organic search, Dutchie menu results, and AI assistants like ChatGPT.</p><p>From Google Business Profile optimization to Dutchie Pro migration and compliant SEO content, we build search systems that drive foot traffic, online orders, and local visibility.</p>",
@@ -32,7 +33,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>For licensed dispensaries in NYC, customers usually discover stores through Google Maps, “near me” searches, product/menu searches, delivery queries, and now AI recommendations. The problem: many dispensary websites and Dutchie menus are not structured to capture that demand. We fix the technical, local, and content signals that help your dispensary show up where customers are already searching.</p><p>Most dispensaries aren’t optimized for any of it.<br>That’s a problem — and an opening.</p><p>Operate outside the five boroughs? Explore our<a href=\"/dispensary-seo-new-york/\">dispensary SEO across New York State</a>for upstate, suburban and multi-location markets.</p><p><a href=\"/dispensary-seo-2026/\">2026 dispensary SEO guide</a></p>"
+          "html": "<p>For licensed dispensaries in NYC, customers usually discover stores through Google Maps, “near me” searches, product/menu searches, delivery queries, and now AI recommendations. The problem: many dispensary websites and Dutchie menus are not structured to capture that demand. We fix the technical, local, and content signals that help your dispensary show up where customers are already searching.</p><p>Most dispensaries aren’t optimized for any of it.<br>That’s a problem — and an opening.</p><p>Operate outside the five boroughs? Explore our <a href=\"/dispensary-seo-new-york/\">dispensary SEO across New York State</a> for upstate, suburban and multi-location markets.</p><p><a href=\"/dispensary-seo-2026/\">2026 dispensary SEO guide</a></p>"
         }
       ]
     },
@@ -229,7 +230,7 @@
         }
       ],
       "id": "form",
-      "tone": "surface"
+      "tone": "mint"
     }
   ],
   "faq": {

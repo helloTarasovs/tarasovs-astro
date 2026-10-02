@@ -62,4 +62,8 @@ const cols = columns ?? (items.length % 3 === 0 || items.length > 4 ? 3 : items.
     .cards { gap: var(--space-5); }
     .card { padding: var(--space-6); }
   }
+  /* a lone card is not stretched over empty columns: one centered column, 60% wide (24rem minimum) */
+  @media (min-width: 40em) {
+    .cards:has(> .card:only-child) { grid-template-columns: minmax(0, max(60%, 24rem)); justify-content: center; }
+  }
 </style>

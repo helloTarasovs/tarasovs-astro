@@ -1,5 +1,6 @@
 {
   "url": "/dutchie-pro-migration-seo/",
+  "variant": "center",
   "hero": {
     "title": "Dutchie Pro Migration Without Losing Your Rankings",
     "lead": "<p>Dutchie is sunsetting the legacy Dutchie Plus platform through the end of 2026, and the default Dutchie iFrame was never indexable to begin with. We migrate licensed dispensaries to Dutchie Pro without losing rankings, menu indexation, or online orders — proven on a live NYC dispensary.</p>",
@@ -15,7 +16,17 @@
     ],
     "crumb": "Dutchie Pro Migration SEO",
     "eyebrow": "Dutchie Pro Migration",
-    "byline": "By <a href=\"https://www.linkedin.com/in/yurii-tarasov/?skipRedirect=true\">Tarasov Yurii</a>, Founder &amp; SEO/GEO Strategist, Tarasovs Agency. Last updated August 29, 2026"
+    "byline": "By <a href=\"https://www.linkedin.com/in/yurii-tarasov/?skipRedirect=true\">Tarasov Yurii</a>, Founder &amp; SEO/GEO Strategist, Tarasovs Agency. Last updated August 29, 2026",
+    "chips": [
+      "Dutchie Pro Migration",
+      "301 Redirects",
+      "Menu Indexation",
+      "Online Orders",
+      "Rankings Protection",
+      "Dutchie Plus Sunset",
+      "AI Search",
+      "NYC Dispensary"
+    ]
   },
   "sections": [
     {
@@ -204,7 +215,7 @@
         }
       ],
       "id": "form",
-      "tone": "surface"
+      "tone": "mint"
     }
   ],
   "faq": {

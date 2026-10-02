@@ -1,5 +1,6 @@
 {
   "url": "/local-seo-manhattan-brooklyn/",
+  "variant": "center",
   "hero": {
     "title": "Local SEO That Puts Your Dispensary on the Map — Literally",
     "lead": "<p>In NYC, customers find dispensaries through Google Maps, “near me” searches, and neighborhood queries — and with cannabis ads off the table, that local visibility is your storefront. We get licensed dispensaries in Manhattan and Brooklyn into the Map Pack, ranking for the searches that walk real customers through your door.</p>",
@@ -189,7 +190,7 @@
         },
         {
           "type": "prose",
-          "html": "<p>For a deeper explanation of how local SEO, crawlable menus<br>and AI visibility work together, read our<a href=\"/dispensary-seo-2026/\">2026 dispensary SEO guide</a>.</p>"
+          "html": "<p>For a deeper explanation of how local SEO, crawlable menus<br>and AI visibility work together, read our <a href=\"/dispensary-seo-2026/\">2026 dispensary SEO guide</a>.</p>"
         }
       ]
     },
@@ -216,7 +217,7 @@
         }
       ],
       "id": "form",
-      "tone": "surface"
+      "tone": "mint"
     }
   ],
   "faq": {

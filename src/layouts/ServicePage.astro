@@ -252,7 +252,7 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
   }
   .service--center .tone-white :global(.card-link:hover) { background: #6d28d9; color: #fff; }
   .service--center .tone-white :global(.card-link > span[aria-hidden]) { display: none; }
-  .service--center .tone-white :global(.actions) { justify-content: center; }
+  .service--center .section :global(.actions) { justify-content: center; }
   .service--center .section :global(.actions .button) { min-height: 52px; padding-inline: 1.5rem; }
   .service--center .tone-white :global(.prose strong) { font-weight: 600; }
 
@@ -269,25 +269,31 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
   .faq-panel .faq-note { margin-top: var(--space-3); color: var(--color-text); font-size: var(--text-base); }
 
   /* Form: lilac panel (light #a375f1 with dark text, dark theme deep violet with white text) */
-  .service--center .tone-lilac .section-inner {
+  .service--center :is(.tone-lilac, .tone-mint) .section-inner {
     --lilac-bg: #a375f1; --lilac-text: #111013; --lilac-line: rgb(17 16 19 / 0.5);
     max-width: 917px; margin-inline: auto; padding: 2.7rem;
     border-radius: 20px; background: var(--lilac-bg); color: var(--lilac-text);
   }
-  :global(:root[data-theme='dark']) .service--center .tone-lilac .section-inner { --lilac-bg: #4a2d86; --lilac-text: #fff; --lilac-line: rgb(255 255 255 / 0.5); }
-  @media (prefers-color-scheme: dark) { :global(:root:not([data-theme='light'])) .service--center .tone-lilac .section-inner { --lilac-bg: #4a2d86; --lilac-text: #fff; --lilac-line: rgb(255 255 255 / 0.5); } }
-  .service--center .tone-lilac .section-head { margin-bottom: var(--space-4); text-align: left; }
-  .service--center .tone-lilac .section-head h2 { margin: 0; color: var(--lilac-text); font-size: clamp(1.7rem, 1.3rem + 1.1vw, 2.25rem); }
-  .service--center .tone-lilac :global(.prose) { max-width: none; margin: 0; text-align: left; color: var(--lilac-text); }
-  .service--center .tone-lilac :global(.form-card) { max-width: none; padding: 0; border: 0; background: none; }
-  .service--center .tone-lilac :global(.contact-form label), .service--center .tone-lilac :global(.contact-form .req), .service--center .tone-lilac :global(.contact-form .consent), .service--center .tone-lilac :global(.contact-form .status) { color: var(--lilac-text); }
-  .service--center .tone-lilac :global(.contact-form a) { color: var(--lilac-text); font-weight: 600; }
-  .service--center .tone-lilac :global(.contact-form input:not([type='hidden']):not(.hp)), .service--center .tone-lilac :global(.contact-form textarea) {
+  :global(:root[data-theme='dark']) .service--center :is(.tone-lilac, .tone-mint) .section-inner { --lilac-bg: #4a2d86; --lilac-text: #fff; --lilac-line: rgb(255 255 255 / 0.5); }
+  @media (prefers-color-scheme: dark) { :global(:root:not([data-theme='light'])) .service--center :is(.tone-lilac, .tone-mint) .section-inner { --lilac-bg: #4a2d86; --lilac-text: #fff; --lilac-line: rgb(255 255 255 / 0.5); } }
+  /* Mint variant of the form panel (#e4f4dd with dark text, dark theme deep green with white text) */
+  .service--center .tone-mint .section-inner { --lilac-bg: #e4f4dd; }
+  :global(:root[data-theme='dark']) .service--center .tone-mint .section-inner { --lilac-bg: #1f3a18; }
+  @media (prefers-color-scheme: dark) { :global(:root:not([data-theme='light'])) .service--center .tone-mint .section-inner { --lilac-bg: #1f3a18; } }
+  .service--center :is(.tone-lilac, .tone-mint) .section-head { margin-bottom: var(--space-4); text-align: left; }
+  .service--center :is(.tone-lilac, .tone-mint) .section-head h2 { margin: 0; color: var(--lilac-text); font-size: clamp(1.7rem, 1.3rem + 1.1vw, 2.25rem); }
+  .service--center :is(.tone-lilac, .tone-mint) :global(.prose) { max-width: none; margin: 0; text-align: left; color: var(--lilac-text); }
+  .service--center :is(.tone-lilac, .tone-mint) :global(.form-card) { max-width: none; padding: 0; border: 0; background: none; }
+  .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form label), .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form .req), .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form .consent), .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form .status) { color: var(--lilac-text); }
+  .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form a) { color: var(--lilac-text); font-weight: 600; }
+  .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form input:not([type='hidden']):not(.hp)), .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form textarea) {
     min-height: 44px; border: 2px solid var(--lilac-line); border-radius: 14px; background: transparent; color: var(--lilac-text);
   }
-  .service--center .tone-lilac :global(.contact-form input::placeholder), .service--center .tone-lilac :global(.contact-form textarea::placeholder) { color: var(--lilac-text); opacity: 0.7; }
-  .service--center .tone-lilac :global(.contact-form input:focus-visible), .service--center .tone-lilac :global(.contact-form textarea:focus-visible) { border-color: var(--lilac-text); outline: 3px solid var(--lilac-text); outline-offset: 2px; }
-  .service--center .tone-lilac :global(.contact-form .button) { min-height: 52px; border-radius: var(--radius-button); background: #f2efe4; color: #2f332e; border-color: transparent; }
-  .service--center .tone-lilac :global(.contact-form .button:hover) { background: #fff; color: #111013; }
-  @media (max-width: 40em) { .service--center .tone-white .section-inner { padding: 2.2rem var(--space-4); } .service--center .tone-lilac .section-inner { padding: 1.6rem var(--space-4); } }
+  .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form input::placeholder), .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form textarea::placeholder) { color: var(--lilac-text); opacity: 0.7; }
+  .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form input:focus-visible), .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form textarea:focus-visible) { border-color: var(--lilac-text); outline: 3px solid var(--lilac-text); outline-offset: 2px; }
+  .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form .button) { min-height: 52px; border-radius: var(--radius-button); background: #f2efe4; color: #2f332e; border-color: transparent; }
+  .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form .button:hover) { background: #fff; color: #111013; }
+  .service--center .tone-mint :global(.contact-form .button) { background: #7c3aed; color: #fff; }
+  .service--center .tone-mint :global(.contact-form .button:hover) { background: #6d28d9; color: #fff; }
+  @media (max-width: 40em) { .service--center .tone-white .section-inner { padding: 2.2rem var(--space-4); } .service--center :is(.tone-lilac, .tone-mint) .section-inner { padding: 1.6rem var(--space-4); } }
 </style>

@@ -1,5 +1,6 @@
 {
   "url": "/dutchie-menu-seo/",
+  "variant": "center",
   "hero": {
     "title": "Dutchie Menu SEO That Actually Gets Your Products Ranked",
     "lead": "<p>Your Dutchie menu holds every product a customer could search for — but if it’s embedded, poorly structured, or disconnected from your domain, Google barely sees it. We make your Dutchie menu, categories, and product pages crawlable, indexable, and connected to your main SEO — so your inventory starts driving organic orders instead of sitting invisible.</p>",
@@ -225,7 +226,7 @@
         }
       ],
       "id": "form",
-      "tone": "surface"
+      "tone": "mint"
     }
   ],
   "faq": {
