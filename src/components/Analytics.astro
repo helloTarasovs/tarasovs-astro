@@ -5,7 +5,7 @@ const { googleTagId, clarityId, hosts } = ANALYTICS;
 <aside class="analytics-consent" id="analytics-consent" aria-labelledby="analytics-consent-title" hidden>
   <div>
     <h2 id="analytics-consent-title">Analytics cookies</h2>
-    <p>May we use Google Analytics and Microsoft Clarity to understand how people use this site? They load only if you agree. <a href="/privacy-cookie-policy-tarasovs-digital-agency/">Privacy policy</a></p>
+    <p>Google Analytics counts visits without cookies until you accept. Analytics cookies and Microsoft Clarity load only if you agree. <a href="/privacy-cookie-policy-tarasovs-digital-agency/">Privacy policy</a></p>
   </div>
   <div class="analytics-consent-actions">
     <button type="button" data-analytics-choice="denied">Reject</button>
@@ -23,14 +23,16 @@ const { googleTagId, clarityId, hosts } = ANALYTICS;
     var settings = document.querySelector('[data-analytics-settings]');
     var storageKey = 'tarasovs-analytics-consent';
     var choice;
-    var loaded = false;
+    var googleLoaded = false;
+    var clarityLoaded = false;
 
     try { choice = localStorage.getItem(storageKey); } catch (e) {}
 
-    function loadAnalytics() {
-      if (loaded || !isProduction) return;
-      loaded = true;
-
+    // GA4 always loads on the production host, in Google Consent Mode: no cookies (everything denied)
+    // until the visitor accepts, then analytics_storage is granted.
+    function loadGoogle(granted) {
+      if (googleLoaded || !isProduction) return;
+      googleLoaded = true;
       window.dataLayer = window.dataLayer || [];
       window.gtag = function () { window.dataLayer.push(arguments); };
       window.gtag('consent', 'default', {
@@ -39,14 +41,19 @@ const { googleTagId, clarityId, hosts } = ANALYTICS;
         ad_user_data: 'denied',
         ad_personalization: 'denied'
       });
+      if (granted) window.gtag('consent', 'update', { analytics_storage: 'granted' });
       window.gtag('js', new Date());
-      window.gtag('consent', 'update', { analytics_storage: 'granted' });
       window.gtag('config', googleTagId);
       var google = document.createElement('script');
       google.async = true;
       google.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(googleTagId);
       document.head.appendChild(google);
+    }
 
+    // Clarity sets cookies and records sessions, so it only loads after Accept.
+    function loadClarity() {
+      if (clarityLoaded || !isProduction) return;
+      clarityLoaded = true;
       window.clarity = window.clarity || function () {
         (window.clarity.q = window.clarity.q || []).push(arguments);
       };
@@ -57,6 +64,9 @@ const { googleTagId, clarityId, hosts } = ANALYTICS;
       document.head.appendChild(clarity);
     }
 
+    loadGoogle(choice === 'granted');
+    if (choice === 'granted') loadClarity();
+
     if (settings) {
       settings.hidden = false;
       settings.addEventListener('click', function () {
@@ -65,8 +75,7 @@ const { googleTagId, clarityId, hosts } = ANALYTICS;
       });
     }
 
-    if (choice === 'granted') loadAnalytics();
-    else if (choice !== 'denied') banner.hidden = false;
+    if (choice !== 'granted' && choice !== 'denied') banner.hidden = false;
 
     banner.addEventListener('click', function (event) {
       var button = event.target.closest('[data-analytics-choice]');
@@ -75,11 +84,14 @@ const { googleTagId, clarityId, hosts } = ANALYTICS;
       try { localStorage.setItem(storageKey, choice); } catch (e) {}
       banner.hidden = true;
       if (choice === 'granted') {
-        loadAnalytics();
-      } else if (loaded) {
-        window.gtag('consent', 'update', { analytics_storage: 'denied' });
-        window.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: 'denied' });
-        location.reload();
+        if (googleLoaded) window.gtag('consent', 'update', { analytics_storage: 'granted' });
+        loadClarity();
+      } else {
+        if (googleLoaded) window.gtag('consent', 'update', { analytics_storage: 'denied' });
+        if (clarityLoaded) {
+          window.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: 'denied' });
+          location.reload();
+        }
       }
     });
   })();
