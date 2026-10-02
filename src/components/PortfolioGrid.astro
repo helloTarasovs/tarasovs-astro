@@ -12,15 +12,17 @@ interface Props {
   label?: string;
   revealFrom?: number; // fade in cards from this index on (earlier ones may be on the first screen)
   variant?: 'default' | 'overlay'; // overlay: live-site look (masonry, title over image, text filter)
+  textFilter?: boolean; // centered text filter ("Filter by All / SEO / ..."); always on for overlay
 }
-const { projects, headingLevel = 'h3', priorityFirst = false, label = 'Filter projects by category', revealFrom, variant = 'default' } = Astro.props;
+const { projects, headingLevel = 'h3', priorityFirst = false, label = 'Filter projects by category', revealFrom, variant = 'default', textFilter = false } = Astro.props;
+const textFilterOn = textFilter || variant === 'overlay';
 const cats = Object.keys(CATEGORY_LABELS)
   .map((slug) => ({ slug, count: projects.filter((p) => p.data.categories.includes(slug)).length }))
   .filter((c) => c.count > 0);
 const pad = (n: number) => String(n).padStart(2, '0');
 ---
 <div class:list={['portfolio', `portfolio--${variant}`]} data-portfolio>
-  <div class="filter" role="group" aria-label={label}>
+  <div class:list={['filter', { 'filter--text': textFilterOn }]} role="group" aria-label={label}>
     <span class="filter-label" aria-hidden="true">Filter by</span>
     <button type="button" aria-pressed="true" data-filter="all">All <span class="count">{pad(projects.length)}</span></button>
     {cats.map((c) => (
@@ -96,15 +98,16 @@ const pad = (n: number) => String(n).padStart(2, '0');
   @media (min-width: 40em) { .grid { grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 64em) { .grid { grid-template-columns: repeat(3, 1fr); } }
 
-  /* Overlay variant: text filter, masonry */
-  .portfolio--overlay .filter { justify-content: center; gap: 0; margin-bottom: var(--space-5); font-size: var(--text-base); }
-  .portfolio--overlay .filter-label { margin-right: 0.6em; color: var(--color-text); font-size: inherit; text-transform: none; letter-spacing: 0; }
-  .portfolio--overlay .filter button {
+  /* Text filter (home, case studies) */
+  /* Overlay variant: masonry */
+  .filter--text { justify-content: center; gap: 0; margin-bottom: var(--space-5); font-size: var(--text-base); }
+  .filter--text .filter-label { margin-right: 0.6em; color: var(--color-text); font-size: inherit; text-transform: none; letter-spacing: 0; }
+  .filter--text button {
     min-height: 0; padding: 0.25rem 0; border: 0; border-radius: 0; background: none; color: var(--color-text); font-size: inherit;
   }
-  .portfolio--overlay .filter button + button::before { content: '/'; display: inline-block; margin-inline: 0.7em; color: var(--color-text); }
-  .portfolio--overlay .filter button:hover, .portfolio--overlay .filter button[aria-pressed='true'] { background: none; color: var(--color-link); }
-  .portfolio--overlay .count { position: relative; top: -0.65em; margin-left: 0.2em; font-size: 0.6em; opacity: 1; }
+  .filter--text button + button::before { content: '/'; display: inline-block; margin-inline: 0.7em; color: var(--color-text); }
+  .filter--text button:hover, .filter--text button[aria-pressed='true'] { background: none; color: var(--color-link); }
+  .filter--text .count { position: relative; top: -0.65em; margin-left: 0.2em; font-size: 0.6em; opacity: 1; }
   .portfolio--overlay .grid.is-masonry { position: relative; display: block; }
   .portfolio--overlay .grid.is-masonry > li { position: absolute; top: 0; left: 0; }
   .portfolio--overlay .grid { gap: var(--space-6); }
