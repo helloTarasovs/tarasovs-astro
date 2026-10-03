@@ -639,6 +639,10 @@ alts: [...document.images].map(i =&gt; i.alt)
 </div>
 </section>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/framer-chatgpt-codex-workflow/">Building a Framer Website with ChatGPT + Codex: My Real 2026 Workflow</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">The agent built it. Who checked it?</h3>
 <p class="ta-cta-text">An agent can build a Framer site in eighteen minutes. It will also report alt text as done while every product image carries a broken binding string. We audit Framer builds for search and AI visibility - metadata, bindings, schema, crawlability, and whether AI platforms cite you at all. See our <a href="/services/framer-development/">Framer development</a> and <a href="/services/geo-ai-search-optimization/">GEO AI search optimization</a> services.</p>

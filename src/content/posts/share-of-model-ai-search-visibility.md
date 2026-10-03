@@ -551,6 +551,14 @@ transform: translateY(-1px);
 </div>
 <!-- CTA -->
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/geo-ecommerce-chatgpt-perplexity/">GEO for E-commerce: Get Cited by ChatGPT &amp; Perplexity</a></li>
+<li><a href="/geo-glossary/">GEO Glossary 2026: 35+ AI Search Terms Explained</a></li>
+<li><a href="/track-ai-assistant-traffic-ga4/">How to Track AI Assistant Traffic in GA4</a></li>
+<li><a href="/new-york-dispensary-ai-visibility-index/">New York Dispensary AI Visibility Index: Methodology &amp; Scoring</a></li>
+<li><a href="/ai-search-visibility-tracking/">AI Search Visibility Tracking</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3>Ready to find out where your brand stands in AI search?</h3>
 <p>We'll map your buyer questions and benchmark your Share of Model across ChatGPT, Perplexity, Gemini, and Claude - so you know exactly where you're winning and where you're invisible.</p>

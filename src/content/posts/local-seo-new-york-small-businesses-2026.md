@@ -827,8 +827,12 @@ border: 1px solid var(--border);
 <div class="cta-label">Tarasovs Digital Agency</div>
 <h3 class="cta-title">Ready to rank in New York?</h3>
 <p class="cta-text">We build and manage local SEO campaigns for small businesses in NYC and across the US - from GBP setup to review strategy to location-specific content.</p>
-<a href="/contact/" class="ohio-widget button ta-cta-btn">Get a free local SEO audit →</a>
+<a href="/contact-us/" class="ohio-widget button ta-cta-btn">Get a free local SEO audit →</a>
 </div>
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/new-york-dispensary-ai-visibility-index/">New York Dispensary AI Visibility Index: Methodology &amp; Scoring</a></li>
+</ul>
 </div><!-- end .ta-post -->
 <!-- ============================================================ -->
 <!-- Schema for: /local-seo-new-york-small-businesses-2026/      -->

@@ -411,6 +411,12 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </div>
 </div>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/geo-ecommerce-chatgpt-perplexity/">GEO for E-commerce: Get Cited by ChatGPT &amp; Perplexity</a></li>
+<li><a href="/geo-glossary/">GEO Glossary 2026: 35+ AI Search Terms Explained</a></li>
+<li><a href="/track-ai-assistant-traffic-ga4/">How to Track AI Assistant Traffic in GA4</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Not sure which layer your site is missing?</h3>
 <p class="ta-cta-text">We run SEO, AEO, and GEO together - and we’ll show you exactly where your visibility breaks down and what to fix first, across classic search, answer boxes, and AI assistants.</p>

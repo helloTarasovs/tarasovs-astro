@@ -522,6 +522,10 @@ ai-assistant</div>
 </ol>
 <p>The most important limitation is also the simplest: GA4 shows the click, not the entire AI answer. Treat it as the behaviour and conversion layer of GEO measurement, not as a complete AI visibility score.</p>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/geo-glossary/">GEO Glossary 2026: 35+ AI Search Terms Explained</a></li>
+</ul>
 <div class="ta-cta__label">Tarasovs Digital Agency</div>
 <h3>Want to know how your brand appears in AI search?</h3>
 <p>We combine AI referral analysis, citation tracking, technical SEO, content optimization, and controlled prompt benchmarks to show where a brand is visible, and where competitors are being recommended instead.</p>

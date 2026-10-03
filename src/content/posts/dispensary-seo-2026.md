@@ -446,6 +446,10 @@ box-shadow: 0 0 30px rgba(168,85,247,0.4); transform: translateY(-1px);
 </div>
 </section>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/new-york-dispensary-ai-visibility-index/">New York Dispensary AI Visibility Index: Methodology &amp; Scoring</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Make your dispensary visible on Maps, Google, and AI search</h3>
 <p class="ta-cta-text">We build crawlable menus, storefront-grade local SEO, and AI visibility for licensed dispensaries - no ad budget required. Start with a free audit: we'll show you exactly where your menu, Local Pack, and Share of Model stand today.</p>

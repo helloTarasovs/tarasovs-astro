@@ -352,6 +352,11 @@ border: none !important; box-shadow: none; transition: background 0.2s, box-shad
 </div>
 </section>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/geo-glossary/">GEO Glossary 2026: 35+ AI Search Terms Explained</a></li>
+<li><a href="/llms-txt-guide/">llms.txt: Complete Implementation Guide for 2026</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Want to know if ChatGPT and Perplexity are already recommending your products?</h3>
 <p class="ta-cta-text">We'll run your top products through 20 real shopping queries across ChatGPT, Perplexity, and Google AI Overviews, then show you exactly where your feed, schema, or trust signals are costing you citations.</p>

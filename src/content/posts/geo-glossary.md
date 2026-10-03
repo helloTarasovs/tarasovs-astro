@@ -535,6 +535,11 @@ color: #fff !important;
 </div>
 </section>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/claude-fable-5-geo-ai-search-visibility/">Claude Fable 5 and GEO: How Anthropic’s New Model Changes AI Search Visibility</a></li>
+<li><a href="/claude-fable-5-shutdown-export-controls-explained/">Why Claude Fable 5 Was Shut Down Globally: US Export Controls, AI Jailbreaks, and What Your Business Should Do</a></li>
+</ul>
 <div class="ta-cta-label">AI Visibility Audit</div>
 <h3 class="ta-cta-title">Do AI assistants recommend your brand - or your competitors?</h3>
 <p class="ta-cta-text">We test a fixed set of buyer-intent prompts across ChatGPT, Perplexity, Google AI Overviews, and Copilot, separate mentions from citations, compare competitors, and turn the findings into prioritized actions.</p>

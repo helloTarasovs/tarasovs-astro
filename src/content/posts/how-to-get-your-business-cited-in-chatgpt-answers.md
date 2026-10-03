@@ -784,6 +784,14 @@ Sitemap: https://yourdomain.com/sitemap.xml</code></div>
 </section>
 <!-- CTA -->
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/geo-ecommerce-chatgpt-perplexity/">GEO for E-commerce: Get Cited by ChatGPT &amp; Perplexity</a></li>
+<li><a href="/geo-glossary/">GEO Glossary 2026: 35+ AI Search Terms Explained</a></li>
+<li><a href="/track-ai-assistant-traffic-ga4/">How to Track AI Assistant Traffic in GA4</a></li>
+<li><a href="/shoppingmodaitalia-seo-ai-case-study-2026/">Case Study 2026 SEO &amp; AI Search optimisation for Shoppingmodaitalia.com</a></li>
+<li><a href="/verdi-cannabis-dutchie-pro-case-study/">Dutchie iFrame to Dutchie Pro: Verdi Cannabis SEO Case Study</a></li>
+</ul>
 <div class="ta-cta__label">Tarasovs Digital Agency</div>
 <h2>Want Your Business to Appear in ChatGPT Answers?</h2>
 <p>Tarasovs Digital Agency helps businesses build websites that are not only beautiful and fast, but also structured for the future of search - Google, ChatGPT, Perplexity, and AI-powered discovery.</p>

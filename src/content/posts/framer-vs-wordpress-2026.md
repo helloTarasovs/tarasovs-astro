@@ -518,6 +518,12 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </div>
 </div>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/wordpress-to-astro-migration-pagespeed/">We Moved Our Agency Site From WordPress to Astro. Mobile PageSpeed Went From 57 to 99.</a></li>
+<li><a href="/is-framer-good-for-seo/">Is Framer Good for SEO? Complete Technical Analysis 2026</a></li>
+<li><a href="/framer-for-agencies-why-studios-are-switching/">Framer for agencies: why studios are switching</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Not sure which platform is right for your next project?</h3>
 <p class="ta-cta-text">We build on both Framer and WordPress - and we’ll tell you straight which one fits your goals, budget, and content plans before writing a single line of code.</p>

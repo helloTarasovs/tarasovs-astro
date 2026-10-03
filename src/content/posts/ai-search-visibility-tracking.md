@@ -278,6 +278,14 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </div>
 </section>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/geo-glossary/">GEO Glossary 2026: 35+ AI Search Terms Explained</a></li>
+<li><a href="/llms-txt-guide/">llms.txt: Complete Implementation Guide for 2026</a></li>
+<li><a href="/track-ai-assistant-traffic-ga4/">How to Track AI Assistant Traffic in GA4</a></li>
+<li><a href="/share-of-model-ai-search-visibility/">Share of Model (SoM): How to Measure AI Search Visibility</a></li>
+<li><a href="/ny-dispensary-chatgpt-visibility-study/">We Benchmarked 100 NY Dispensaries in ChatGPT. 31 Are Invisible</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Want to know where your brand stands in ChatGPT, Perplexity, and Google AI Overviews?</h3>
 <p class="ta-cta-text">Start with a free AI visibility audit. We'll test your brand across 20 real-world prompts on the major AI platforms and show you exactly where you're cited - and where a competitor is winning instead.</p>

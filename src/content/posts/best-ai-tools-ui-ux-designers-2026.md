@@ -421,6 +421,11 @@ border: none !important; outline: none !important;
 </div>
 </div>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/framer-chatgpt-codex-workflow/">Building a Framer Website with ChatGPT + Codex: My Real 2026 Workflow</a></li>
+<li><a href="/how-scroll-scrubbed-video-works-in-framer/">How Scroll-Scrubbed Video Works in Framer</a></li>
+</ul>
 <div class="ta-cta__label">Tarasovs Digital Agency</div>
 <h3>Building with AI design tools? We'll make sure the output actually ships.</h3>
 <p>Generating a screen is the easy part. We turn AI-assisted design into a real, performant, accessible site, on Framer, WordPress, or Webflow, and keep it working after the tool you used to build it changes.</p>

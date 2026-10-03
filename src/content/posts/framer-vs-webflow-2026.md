@@ -635,6 +635,14 @@ display: block;
 </div>
 <!-- CTA -->
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/wordpress-to-astro-migration-pagespeed/">We Moved Our Agency Site From WordPress to Astro. Mobile PageSpeed Went From 57 to 99.</a></li>
+<li><a href="/framer-chatgpt-codex-workflow/">Building a Framer Website with ChatGPT + Codex: My Real 2026 Workflow</a></li>
+<li><a href="/is-framer-good-for-seo/">Is Framer Good for SEO? Complete Technical Analysis 2026</a></li>
+<li><a href="/aeo-for-webflow-sites-step-by-step/">AEO for Webflow Sites: Step-by-Step</a></li>
+<li><a href="/framer-for-agencies-why-studios-are-switching/">Framer for agencies: why studios are switching</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3>Not sure which platform fits your project?</h3>
 <p>We work with both Framer and Webflow - and recommend based on what's actually right for your goals, not what's easiest for us.</p>

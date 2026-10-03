@@ -591,6 +591,12 @@ transform: translateY(-1px);
 </div>
 </section>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/how-scroll-scrubbed-video-works-in-framer/">How Scroll-Scrubbed Video Works in Framer</a></li>
+<li><a href="/why-framer-is-the-future-of-design/">Why Framer is the Future of Design</a></li>
+<li><a href="/higgsfield-claude-framer-ai-video/">Higgsfield + Claude + Framer: Adding AI Video to a Website</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Want a bold website that still works clearly?</h3>
 <p class="ta-cta-text">We design and build distinctive websites around real user behavior, responsive performance, and a clear path to conversion.</p>

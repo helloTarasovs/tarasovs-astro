@@ -184,6 +184,10 @@ white-space: normal !important; overflow-wrap: normal; word-break: normal; borde
 </div>
 </div>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/how-scroll-scrubbed-video-works-in-framer/">How Scroll-Scrubbed Video Works in Framer</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Considering Framer for your next client project?</h3>
 <p class="ta-cta-text">We build and hand off Framer sites for agencies and businesses across the US and Europe - from first wireframe to a live, editable site. Let's talk about whether it fits your next build.</p>

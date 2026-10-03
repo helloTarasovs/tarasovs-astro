@@ -201,6 +201,12 @@ white-space: normal !important; overflow-wrap: normal; word-break: normal; borde
 </div>
 </section>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/wordpress-to-astro-migration-pagespeed/">We Moved Our Agency Site From WordPress to Astro. Mobile PageSpeed Went From 57 to 99.</a></li>
+<li><a href="/how-scroll-scrubbed-video-works-in-framer/">How Scroll-Scrubbed Video Works in Framer</a></li>
+<li><a href="/how-to-choose-a-web-designer-in-europe/">How to Choose a Web Designer in Europe: A Smart Guide for 2025</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Turn your site into a lead engine</h3>
 <p class="ta-cta-text">If your traffic is healthy but your leads are not, the problem is usually in the experience. We audit and rebuild sites around conversion, from speed to message to the moment of decision.</p>

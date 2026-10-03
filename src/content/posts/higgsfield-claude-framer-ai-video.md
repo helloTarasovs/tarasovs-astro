@@ -387,6 +387,10 @@ font-weight: 600; color: var(--text); white-space: nowrap;
 </div>
 </div>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/framer-chatgpt-codex-workflow/">Building a Framer Website with ChatGPT + Codex: My Real 2026 Workflow</a></li>
+</ul>
 <div class="ta-cta__label">Tarasovs Digital Agency</div>
 <h3>Adding AI video to your site? We'll check what it actually costs you.</h3>
 <p>Generation and drag-and-drop are the easy part. We audit Framer and WordPress builds for the part that isn't: file weight, accessibility, Core Web Vitals, and whether what shipped matches what the tool claimed.</p>

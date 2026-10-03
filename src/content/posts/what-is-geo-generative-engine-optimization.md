@@ -434,6 +434,15 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </div>
 </div>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/geo-ecommerce-chatgpt-perplexity/">GEO for E-commerce: Get Cited by ChatGPT &amp; Perplexity</a></li>
+<li><a href="/claude-fable-5-geo-ai-search-visibility/">Claude Fable 5 and GEO: How Anthropic’s New Model Changes AI Search Visibility</a></li>
+<li><a href="/claude-fable-5-shutdown-export-controls-explained/">Why Claude Fable 5 Was Shut Down Globally: US Export Controls, AI Jailbreaks, and What Your Business Should Do</a></li>
+<li><a href="/geo-glossary/">GEO Glossary 2026: 35+ AI Search Terms Explained</a></li>
+<li><a href="/llms-txt-guide/">llms.txt: Complete Implementation Guide for 2026</a></li>
+<li><a href="/how-to-get-your-business-cited-in-chatgpt-answers/">How to Get Your Business Cited in ChatGPT Answers</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Ready to appear in ChatGPT, Perplexity, and Google AI Overviews?</h3>
 <p class="ta-cta-text">Start with a free AI visibility audit. We'll test your brand across 20 queries on all major AI platforms and show you exactly where you stand - and what it would take to get cited.</p>

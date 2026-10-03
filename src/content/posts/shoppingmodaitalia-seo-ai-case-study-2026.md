@@ -259,6 +259,10 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </div>
 </section>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/geo-ecommerce-chatgpt-perplexity/">GEO for E-commerce: Get Cited by ChatGPT &amp; Perplexity</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Want an SEO and AI-visibility audit for your e-commerce store?</h3>
 <p class="ta-cta-text">We rebuild outdated WordPress sites, add international-ready localization, and track real Google Analytics and Bing Webmaster signals from launch day onward - not just promises.</p>

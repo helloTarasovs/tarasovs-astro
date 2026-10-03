@@ -738,6 +738,10 @@ transform: translateY(-1px);
 </section>
 <!-- CTA -->
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/claude-fable-5-geo-ai-search-visibility/">Claude Fable 5 and GEO: How Anthropic’s New Model Changes AI Search Visibility</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Track your brand's visibility across all AI platforms - including when one goes down</h3>
 <p class="ta-cta-text">We run Share of Model audits across Claude, ChatGPT, Perplexity, and Gemini in parallel - so platform disruptions like the Fable 5 suspension don't leave you flying blind. Get a baseline that's resilient by design.</p>

@@ -345,6 +345,12 @@ box-shadow: var(--glow-strong);
 </div>
 </section>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/dispensary-seo-2026/">Cannabis Dispensary SEO in 2026: Local, Dutchie &amp; AI Search</a></li>
+<li><a href="/ny-dispensary-chatgpt-visibility-study/">We Benchmarked 100 NY Dispensaries in ChatGPT. 31 Are Invisible</a></li>
+<li><a href="/where-can-ny-dispensaries-advertise-2026/">Where Can NY Dispensaries Advertise? 2026 Rules</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Still running your menu on Dutchie's default iFrame?</h3>
 <p class="ta-cta-text">If your product pages aren't indexable, you're invisible for exactly the searches that convert best - and increasingly invisible to AI search tools too. We'll show you exactly what's blocking your menu from ranking, free.</p>

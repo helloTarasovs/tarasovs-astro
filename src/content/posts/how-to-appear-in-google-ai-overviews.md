@@ -389,6 +389,15 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 </ul>
 </div>
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/claude-fable-5-geo-ai-search-visibility/">Claude Fable 5 and GEO: How Anthropic’s New Model Changes AI Search Visibility</a></li>
+<li><a href="/geo-glossary/">GEO Glossary 2026: 35+ AI Search Terms Explained</a></li>
+<li><a href="/llms-txt-guide/">llms.txt: Complete Implementation Guide for 2026</a></li>
+<li><a href="/track-ai-assistant-traffic-ga4/">How to Track AI Assistant Traffic in GA4</a></li>
+<li><a href="/shoppingmodaitalia-seo-ai-case-study-2026/">Case Study 2026 SEO &amp; AI Search optimisation for Shoppingmodaitalia.com</a></li>
+<li><a href="/verdi-cannabis-dutchie-pro-case-study/">Dutchie iFrame to Dutchie Pro: Verdi Cannabis SEO Case Study</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Want to be the source Google's AI Overview cites?</h3>
 <p class="ta-cta-text">We audit your pages against how AI Overviews actually pick sources - query coverage, structure, authority, and schema - and build the fixes that get you cited. Start with a free AI visibility snapshot.</p>

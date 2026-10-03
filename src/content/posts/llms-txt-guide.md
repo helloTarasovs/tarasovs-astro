@@ -902,6 +902,11 @@ https://yourstore.com/llms-full.txt</code></pre><p>For most stores, the default 
 </div>
 <div class="ta-cta">
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/geo-ecommerce-chatgpt-perplexity/">GEO for E-commerce: Get Cited by ChatGPT &amp; Perplexity</a></li>
+<li><a href="/geo-glossary/">GEO Glossary 2026: 35+ AI Search Terms Explained</a></li>
+</ul>
 <div class="ta-cta-title">Want to know what is actually blocking your AI visibility?</div>
 <p class="ta-cta-text">We audit the complete path from crawler access and content structure to authority signals, AI citations, and measurement - then separate low-effort experiments from the changes most likely to improve discoverability and qualified traffic.</p>
 <a href="/contact-us/" class="ohio-widget button ta-cta-btn">Get your AI visibility audit →</a>

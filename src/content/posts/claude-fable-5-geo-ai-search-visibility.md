@@ -461,6 +461,10 @@ body.dark-scheme .ta-post {
 <p class="cta-text">We run Share of Model audits across all major AI platforms - including a dedicated Claude Fable 5 benchmark - and show you exactly what the model says about your business and what it would take to get cited.</p>
 <a href="/contact-us/" class="ohio-widget button ta-cta-btn">Get your free GEO audit →</a>
 </div>
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/claude-fable-5-shutdown-export-controls-explained/">Why Claude Fable 5 Was Shut Down Globally: US Export Controls, AI Jailbreaks, and What Your Business Should Do</a></li>
+</ul>
 </div><!-- end .ta-post -->
 <!-- ============================================================ -->
 <!-- Schema for: /claude-fable-5-geo-ai-search-visibility/       -->

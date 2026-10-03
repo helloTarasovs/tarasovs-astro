@@ -361,7 +361,7 @@ box-shadow: 0 0 30px rgba(168,85,247,0.4); transform: translateY(-1px);
 </tbody>
 </table>
 </div>
-<p>The short version: Framer matches Webflow on the technical foundation and beats most WordPress installs on speed and clean output. WordPress wins decisively when your strategy depends on content volume, publishing velocity, and a deep plugin ecosystem. Framer is strongest where speed, design quality, and a clean technical base matter most - and where the content footprint is moderate rather than sprawling. For a full head-to-head, see our <a href="/framer-vs-webflow-2026">Framer vs Webflow 2026 comparison</a>, along with the earlier <a href="/framer-vs-webflow-comparing-top-website-builders-2024/">2024 breakdown</a>.</p>
+<p>The short version: Framer matches Webflow on the technical foundation and beats most WordPress installs on speed and clean output. WordPress wins decisively when your strategy depends on content volume, publishing velocity, and a deep plugin ecosystem. Framer is strongest where speed, design quality, and a clean technical base matter most - and where the content footprint is moderate rather than sprawling. For a full head-to-head, see our <a href="/framer-vs-webflow-2026/">Framer vs Webflow 2026 comparison</a>, along with the earlier <a href="/framer-vs-webflow-2026/">2024 breakdown</a>.</p>
 <p>If Webflow is a better fit for your content strategy or internal workflow, the same AI visibility principles still apply, although the implementation is different. Our step-by-step guide to <a href="/aeo-for-webflow-sites-step-by-step/">AEO for Webflow sites</a> explains how to structure content, schema, and technical signals so that both traditional search engines and AI answer platforms can understand and cite the website.</p>
 <h2 id="who-should">Who Should (and Shouldn't) Use Framer for SEO</h2>
 <h3>Framer is a strong choice for</h3>
@@ -453,6 +453,12 @@ At Tarasovs Digital Agency we usually recommend Framer for service websites, Saa
 </div>
 <!-- CTA -->
 <div class="ta-cta">
+<h2 id="related-reading">Related reading</h2>
+<ul>
+<li><a href="/wordpress-to-astro-migration-pagespeed/">We Moved Our Agency Site From WordPress to Astro. Mobile PageSpeed Went From 57 to 99.</a></li>
+<li><a href="/llms-txt-guide/">llms.txt: Complete Implementation Guide for 2026</a></li>
+<li><a href="/how-scroll-scrubbed-video-works-in-framer/">How Scroll-Scrubbed Video Works in Framer</a></li>
+</ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Building or migrating to Framer? Get a free SEO &amp; GEO audit.</h3>
 <p class="ta-cta-text">We'll review your Framer site's technical foundation, schema, and AI visibility across major answer engines - then show you exactly what it takes to rank and get cited.</p>
