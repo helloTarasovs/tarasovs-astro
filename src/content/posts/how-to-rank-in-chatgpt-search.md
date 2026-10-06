@@ -569,7 +569,7 @@ Disallow: /</code></pre>
 <ul>
 <li><strong>Answer density.</strong> Pages that lead with a direct answer to the page's main question are cited far more than pages that build to an answer over 500 words. ChatGPT pulls passages, not whole articles.</li>
 <li><strong>Topical authority.</strong> One well-written post rarely earns consistent citations. Sites with a content cluster — multiple related pages with clear internal links — signal that the domain knows the topic. A single page in isolation looks thin.</li>
-<li><strong>Verifiable claims with sources.</strong> ChatGPT cites pages with sourced statistics and linked evidence more than pages with unsupported assertions. "Dispensary SEO increases organic traffic" is ignored. "Organic traffic increased 45% in 60 days following Dutchie Pro migration (Tarasovs case study, 2026)" gets cited.</li>
+<li><strong>Verifiable claims with sources.</strong> ChatGPT cites pages with sourced statistics and linked evidence more than pages with unsupported assertions. "Dispensary SEO increases organic traffic" is ignored. "9 of 100 NY dispensaries were never mentioned in 1,000 ChatGPT queries — despite being Google-indexed (<a href="/new-york-dispensary-ai-visibility-index/">Tarasovs AI Visibility Index</a>, 2026)" gets cited.</li>
 <li><strong>Entity clarity.</strong> A clear Organization schema, a detailed About page, consistent NAP data, and a named author with credentials all help ChatGPT trust and correctly attribute your content.</li>
 <li><strong>Freshness.</strong> ChatGPT Search favors content that looks current. Stale publication dates, outdated statistics, and expired information erode citation probability on time-sensitive queries.</li>
 </ul>
