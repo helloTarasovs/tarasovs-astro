@@ -525,6 +525,7 @@ ai-assistant</div>
 <h2 id="related-reading">Related reading</h2>
 <ul>
 <li><a href="/geo-glossary/">GEO Glossary 2026: 35+ AI Search Terms Explained</a></li>
+<li><a href="/how-to-rank-in-chatgpt-search/">How to Rank in ChatGPT Search: The 2026 Guide</a></li>
 </ul>
 <div class="ta-cta__label">Tarasovs Digital Agency</div>
 <h3>Want to know how your brand appears in AI search?</h3>

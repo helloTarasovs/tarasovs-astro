@@ -440,6 +440,7 @@ color: var(--text); font-variant-numeric: tabular-nums; min-width: 62px; text-al
 <li><a href="/track-ai-assistant-traffic-ga4/">How to Track AI Assistant Traffic in GA4</a></li>
 <li><a href="/dispensary-seo-2026/">Cannabis Dispensary SEO in 2026: Local, Dutchie &amp; AI Search</a></li>
 <li><a href="/verdi-cannabis-dutchie-pro-case-study/">Dutchie iFrame to Dutchie Pro: Verdi Cannabis SEO Case Study</a></li>
+<li><a href="/how-to-rank-in-chatgpt-search/">How to Rank in ChatGPT Search: The 2026 Guide</a></li>
 </ul>
 <div class="ta-cta__label">Dispensary SEO</div>
 <h3>Find out which side of the line your dispensary is on.</h3>

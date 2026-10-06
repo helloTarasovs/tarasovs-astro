@@ -442,6 +442,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <li><a href="/geo-glossary/">GEO Glossary 2026: 35+ AI Search Terms Explained</a></li>
 <li><a href="/llms-txt-guide/">llms.txt: Complete Implementation Guide for 2026</a></li>
 <li><a href="/how-to-get-your-business-cited-in-chatgpt-answers/">How to Get Your Business Cited in ChatGPT Answers</a></li>
+<li><a href="/how-to-rank-in-chatgpt-search/">How to Rank in ChatGPT Search: The 2026 Guide</a></li>
 </ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Ready to appear in ChatGPT, Perplexity, and Google AI Overviews?</h3>
