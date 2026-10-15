@@ -558,6 +558,7 @@ transform: translateY(-1px);
 <li><a href="/track-ai-assistant-traffic-ga4/">How to Track AI Assistant Traffic in GA4</a></li>
 <li><a href="/new-york-dispensary-ai-visibility-index/">New York Dispensary AI Visibility Index: Methodology &amp; Scoring</a></li>
 <li><a href="/ai-search-visibility-tracking/">AI Search Visibility Tracking</a></li>
+<li><a href="/ai-overviews-branded-searches/">Google's AI Now Answers Most Brand Searches. Here's How to Check What It Says About You</a></li>
 </ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3>Ready to find out where your brand stands in AI search?</h3>

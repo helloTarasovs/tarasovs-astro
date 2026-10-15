@@ -286,6 +286,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <li><a href="/share-of-model-ai-search-visibility/">Share of Model (SoM): How to Measure AI Search Visibility</a></li>
 <li><a href="/ny-dispensary-chatgpt-visibility-study/">We Benchmarked 100 NY Dispensaries in ChatGPT. 31 Are Invisible</a></li>
 <li><a href="/how-to-rank-in-chatgpt-search/">How to Rank in ChatGPT Search: The 2026 Guide</a></li>
+<li><a href="/ai-overviews-branded-searches/">Google's AI Now Answers Most Brand Searches. Here's How to Check What It Says About You</a></li>
 </ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Want to know where your brand stands in ChatGPT, Perplexity, and Google AI Overviews?</h3>

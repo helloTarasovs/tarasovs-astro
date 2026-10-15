@@ -398,6 +398,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <li><a href="/shoppingmodaitalia-seo-ai-case-study-2026/">Case Study 2026 SEO &amp; AI Search optimisation for Shoppingmodaitalia.com</a></li>
 <li><a href="/verdi-cannabis-dutchie-pro-case-study/">Dutchie iFrame to Dutchie Pro: Verdi Cannabis SEO Case Study</a></li>
 <li><a href="/how-to-rank-in-chatgpt-search/">How to Rank in ChatGPT Search: The 2026 Guide</a></li>
+<li><a href="/ai-overviews-branded-searches/">Google's AI Now Answers Most Brand Searches. Here's How to Check What It Says About You</a></li>
 </ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Want to be the source Google's AI Overview cites?</h3>

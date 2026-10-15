@@ -539,6 +539,7 @@ color: #fff !important;
 <ul>
 <li><a href="/claude-fable-5-geo-ai-search-visibility/">Claude Fable 5 and GEO: How Anthropic’s New Model Changes AI Search Visibility</a></li>
 <li><a href="/claude-fable-5-shutdown-export-controls-explained/">Why Claude Fable 5 Was Shut Down Globally: US Export Controls, AI Jailbreaks, and What Your Business Should Do</a></li>
+<li><a href="/ai-overviews-branded-searches/">Google's AI Now Answers Most Brand Searches. Here's How to Check What It Says About You</a></li>
 </ul>
 <div class="ta-cta-label">AI Visibility Audit</div>
 <h3 class="ta-cta-title">Do AI assistants recommend your brand - or your competitors?</h3>

@@ -417,6 +417,7 @@ font-size: 15px; padding: 13px 30px; border-radius: 10px; text-decoration: none;
 <li><a href="/geo-glossary/">GEO Glossary 2026: 35+ AI Search Terms Explained</a></li>
 <li><a href="/track-ai-assistant-traffic-ga4/">How to Track AI Assistant Traffic in GA4</a></li>
 <li><a href="/how-to-rank-in-chatgpt-search/">How to Rank in ChatGPT Search: The 2026 Guide</a></li>
+<li><a href="/ai-overviews-branded-searches/">Google's AI Now Answers Most Brand Searches. Here's How to Check What It Says About You</a></li>
 </ul>
 <div class="ta-cta-label">Tarasovs Digital Agency</div>
 <h3 class="ta-cta-title">Not sure which layer your site is missing?</h3>
