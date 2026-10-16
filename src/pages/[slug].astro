@@ -3,6 +3,7 @@
 // Static pages in src/pages (about.astro, contact-us.astro, ...) take priority over this route.
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import ShareButtons from '../components/ShareButtons.astro';
 import { articleSchema, breadcrumbSchema, withFallbackArticle } from '../lib/schema';
 
 export async function getStaticPaths() {
@@ -64,6 +65,9 @@ const jsonld = [
     <div class="post-body prose container container-prose">
       <Content />
     </div>
+    <footer class="post-footer container container-prose">
+      <ShareButtons path={path} title={d.title} />
+    </footer>
   </article>
 </Base>
 
@@ -90,5 +94,7 @@ const jsonld = [
   .post-meta { margin-top: var(--space-4); color: var(--color-text-muted); font-size: var(--text-sm); }
   /* Posts built with ta- components were laid out for a wider Elementor column */
   .post-body:has(.ta-post) { max-width: calc(960px + 2 * var(--gutter)); }
-  article:has(.ta-post) > header { max-width: calc(960px + 2 * var(--gutter)); }
+  .post-footer { margin-top: var(--space-7); }
+  article:has(.ta-post) > header,
+  article:has(.ta-post) > footer { max-width: calc(960px + 2 * var(--gutter)); }
 </style>

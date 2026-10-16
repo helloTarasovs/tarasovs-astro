@@ -1,0 +1,140 @@
+---
+// Share links for a post. Plain links work without JS; JS only adds "Copy link"
+// feedback and the native share sheet where the browser supports it.
+interface Props {
+  path: string;
+  title: string;
+}
+
+const { path, title } = Astro.props;
+const url = new URL(path, Astro.site).href;
+const u = encodeURIComponent(url);
+const t = encodeURIComponent(title);
+
+const links = [
+  {
+    name: 'LinkedIn',
+    href: `https://www.linkedin.com/sharing/share-offsite/?url=${u}`,
+    icon: 'M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z',
+  },
+  {
+    name: 'X',
+    href: `https://x.com/intent/post?url=${u}&text=${t}`,
+    icon: 'M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.25 6.93 6.06-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41Z',
+  },
+  {
+    name: 'Facebook',
+    href: `https://www.facebook.com/sharer/sharer.php?u=${u}`,
+    icon: 'M9.1 23.69v-7.98H6.63v-3.67H9.1v-1.58c0-4.09 1.85-5.98 5.86-5.98.4 0 .96.04 1.47.1.38.04.76.11 1.14.2v3.32c-.22-.02-.44-.03-.65-.04-.25 0-.5-.01-.73-.01-.71 0-1.26.1-1.68.31-.28.14-.52.36-.68.62-.26.42-.37 1-.37 1.75v1.3h3.92l-.39 2.1-.29 1.57h-3.25v8.24C19.4 23.24 24 18.18 24 12.04c0-6.63-5.37-12-12-12S0 5.41 0 12.04c0 5.63 3.87 10.35 9.1 11.65Z',
+  },
+];
+const mailHref = `mailto:?subject=${t}&body=${u}`;
+---
+<div class="share" data-share data-url={url} data-title={title}>
+  <p class="share-label" id="share-label">Share this article</p>
+  <ul class="share-list" aria-labelledby="share-label">
+    {links.map((l) => (
+      <li>
+        <a class="share-btn" href={l.href} target="_blank" rel="noopener noreferrer" aria-label={`Share on ${l.name} (opens in a new tab)`} title={`Share on ${l.name}`}>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d={l.icon} /></svg>
+        </a>
+      </li>
+    ))}
+    <li>
+      <a class="share-btn" href={mailHref} aria-label="Share by email" title="Share by email">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+      </a>
+    </li>
+    <li>
+      <button type="button" class="share-btn" data-copy aria-label="Copy link" title="Copy link">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5" /><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5" /></svg>
+      </button>
+    </li>
+    <li hidden data-native>
+      <button type="button" class="share-btn" data-native-btn aria-label="More sharing options" title="More sharing options">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12" /><path d="m7 8 5-5 5 5" /><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" /></svg>
+      </button>
+    </li>
+  </ul>
+  <p class="share-status" role="status" aria-live="polite" data-status></p>
+</div>
+
+<script is:inline>
+  document.querySelectorAll('[data-share]').forEach((box) => {
+    const url = box.dataset.url;
+    const title = box.dataset.title;
+    const status = box.querySelector('[data-status]');
+    const say = (msg) => {
+      status.textContent = msg;
+      clearTimeout(box._t);
+      box._t = setTimeout(() => (status.textContent = ''), 2500);
+    };
+    box.querySelector('[data-copy]').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(url);
+        say('Link copied');
+      } catch {
+        say('Copy failed. Use the address bar.');
+      }
+    });
+    if (navigator.share) {
+      box.querySelector('[data-native]').hidden = false;
+      box.querySelector('[data-native-btn]').addEventListener('click', () => {
+        navigator.share({ title, url }).catch(() => {});
+      });
+    }
+  });
+</script>
+
+<style>
+  .share {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3) var(--space-4);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-border);
+  }
+  .share-label {
+    margin: 0;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  .share-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .share-btn {
+    display: inline-grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    background: var(--color-surface);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+  }
+  .share-btn:hover {
+    color: var(--color-on-accent);
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+  .share-btn:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+  .share-status {
+    margin: 0;
+    min-height: 1.5em;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+  .share-status:empty { display: none; }
+</style>
