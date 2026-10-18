@@ -2,6 +2,8 @@
 // Every page goes through this layout. It owns <head>: title, description, canonical, robots, OG, Twitter, JSON-LD.
 import { SITE, abs } from '../lib/site';
 import { siteGraph } from '../lib/schema';
+import { LANGS, UI, langFromPath, alternatesFor } from '../lib/i18n';
+import { pageExists } from '../lib/ua-pages';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Analytics from '../components/Analytics.astro';
@@ -13,6 +15,7 @@ import '../styles/motion.css';
 // Same files the @font-face rules point to, so the preload is reused (latin subset only).
 import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
 import dmSansLatin from '@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2?url';
+import interCyrillic from '@fontsource-variable/inter/files/inter-cyrillic-wght-normal.woff2?url';
 
 interface Props {
   title: string;
@@ -24,6 +27,7 @@ interface Props {
   publishedTime?: Date;
   modifiedTime?: Date;
   jsonld?: unknown[];
+  mainClass?: string; // page-level layout hook, e.g. 'home' for src/styles/home.css
 }
 
 const {
@@ -36,9 +40,14 @@ const {
   publishedTime,
   modifiedTime,
   jsonld = [],
+  mainClass,
 } = Astro.props;
 
 const canonicalUrl = abs(canonical ?? Astro.url.pathname);
+// /ua/ pages are Ukrainian (lang uk). hreflang only for EN/UA pairs where both pages are built.
+const lang = langFromPath(Astro.url.pathname);
+const alternates = alternatesFor(Astro.url.pathname, pageExists);
+const ogAltLocale = alternates.length ? LANGS[lang === 'en' ? 'uk' : 'en'].ogLocale : undefined;
 // Drop byte-identical JSON-LD blocks (some WordPress entries carry the same block twice).
 const jsonldBlocks = [...new Set(jsonld.map((block) => (typeof block === 'string' ? JSON.stringify(JSON.parse(block)) : JSON.stringify(block))))];
 const ogImageUrl = abs(ogImage);
@@ -47,7 +56,7 @@ const robotsFull = robots.includes('index') && !robots.includes('noindex')
   : robots;
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -61,15 +70,18 @@ const robotsFull = robots.includes('index') && !robots.includes('noindex')
       })();
     </script>
     <link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={dmSansLatin} as="font" type="font/woff2" crossorigin />
+    {/* /ua/ pages set headings in Inter (DM Sans has no Cyrillic), so they need Inter Cyrillic instead */}
+    <link rel="preload" href={lang === 'uk' ? interCyrillic : dmSansLatin} as="font" type="font/woff2" crossorigin />
     <meta name="theme-color" content="#f9f9f9" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#111013" media="(prefers-color-scheme: dark)" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
     <meta name="robots" content={robotsFull} />
     <link rel="canonical" href={canonicalUrl} />
+    {alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={abs(a.path)} />)}
 
-    <meta property="og:locale" content={SITE.locale} />
+    <meta property="og:locale" content={LANGS[lang].ogLocale} />
+    {ogAltLocale && <meta property="og:locale:alternate" content={ogAltLocale} />}
     <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
@@ -88,7 +100,7 @@ const robotsFull = robots.includes('index') && !robots.includes('noindex')
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
 
-    <script type="application/ld+json" set:html={JSON.stringify(siteGraph())} />
+    <script type="application/ld+json" set:html={JSON.stringify(siteGraph(lang))} />
     {jsonldBlocks.map((block) => <script type="application/ld+json" set:html={block} />)}
     <slot name="head" />
   </head>
@@ -97,9 +109,9 @@ const robotsFull = robots.includes('index') && !robots.includes('noindex')
       // Post bodies (Ohio theme era) style dark mode against body.dark-scheme
       if (document.documentElement.dataset.theme === 'dark') document.body.classList.add('dark-scheme');
     </script>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">{UI[lang].skip}</a>
     <slot name="header"><Header /></slot>
-    <main id="main" tabindex="-1">
+    <main id="main" class={mainClass} tabindex="-1">
       <slot />
     </main>
     <slot name="footer"><Footer /></slot>

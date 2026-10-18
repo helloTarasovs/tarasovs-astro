@@ -1,5 +1,6 @@
 // Case studies: newest first (same order as the WordPress portfolio), category labels for the filter.
 import { getCollection } from 'astro:content';
+import { PORTFOLIO_UI, type Lang } from './i18n';
 
 export const CATEGORY_LABELS: Record<string, string> = {
   cannabis: 'Cannabis',
@@ -9,7 +10,8 @@ export const CATEGORY_LABELS: Record<string, string> = {
   wordpress: 'WordPress',
 };
 
-export const categoryLabel = (slug: string) => CATEGORY_LABELS[slug] ?? slug.replace(/-/g, ' ');
+export const categoryLabel = (slug: string, lang: Lang = 'en') =>
+  PORTFOLIO_UI[lang].categories[slug] ?? CATEGORY_LABELS[slug] ?? slug.replace(/-/g, ' ');
 
 export async function sortedProjects() {
   const all = await getCollection('projects');

@@ -10,6 +10,9 @@ export const SITE = {
 // Dutchie partner status, exact wording from the partner agreement. Reference it, never retype it.
 export const PARTNER_STATUS = 'Certified Dutchie Pro Partner';
 
+// Every CTA button on /ua/ pages: the Ukrainian contact form (src/pages/ua/kontakty.astro).
+export const UA_CTA_URL = '/ua/kontakty/#CForm';
+
 // Must match WordPress Settings > Reading so /category/insights/page/N/ keeps the same posts.
 export const POSTS_PER_PAGE = 12; // WordPress Settings > Reading (verified on the live archive: 12 per page)
 

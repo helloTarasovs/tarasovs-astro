@@ -1,31 +1,42 @@
 ---
 // Site header: logo, main menu (Services dropdown), Get Started CTA, theme toggle, mobile menu.
 import Logo from './Logo.astro';
-import { MAIN_NAV, type NavItem } from '../lib/nav';
+import { MAIN_NAV, MAIN_NAV_UK, type NavItem } from '../lib/nav';
+import { LANGS, UI, langFromPath, switchHref, type Lang } from '../lib/i18n';
+import { pageExists, hasUaSite } from '../lib/ua-pages';
+import { UA_CTA_URL } from '../lib/site';
 
 const path = Astro.url.pathname;
+const lang = langFromPath(path);
+const t = UI[lang];
+const nav = lang === 'uk' ? MAIN_NAV_UK : MAIN_NAV;
+const home = lang === 'uk' ? '/ua/' : '/';
+const ctaHref = lang === 'uk' ? UA_CTA_URL : '/contact-us/';
+// EN / UA switcher: links to the paired page, else the other home. Hidden until /ua/ is built.
+const otherLang: Lang = lang === 'en' ? 'uk' : 'en';
+const otherHref = switchHref(path, pageExists);
 const isCurrent = (href: string) => href === path;
 const inSection = (item: NavItem): boolean =>
   isCurrent(item.href) || (item.children ?? []).some(inSection);
 ---
 <header class="site-header" data-site-header>
   <div class="container header-inner">
-    <a class="brand" href="/" rel="home" aria-current={isCurrent('/') ? 'page' : undefined}>
+    <a class="brand" href={home} rel="home" aria-current={isCurrent(home) ? 'page' : undefined}>
       <Logo class="brand-logo" />
     </a>
 
-    <nav id="site-nav" class="site-nav" aria-label="Main">
+    <nav id="site-nav" class="site-nav" aria-label={t.nav}>
       <ul class="nav-list">
-        {MAIN_NAV.map((item) => item.children ? (
+        {nav.map((item) => item.children ? (
           <li class="nav-item has-sub">
             <div class="nav-row">
               <a class:list={['nav-link', { 'is-active': inSection(item) }]} href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
               <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="sub-services" data-sub-toggle>
-                <span class="visually-hidden">{item.label} submenu</span>
+                <span class="visually-hidden">{item.label} {t.submenu}</span>
                 <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M0 7.33l2.83-2.83 9.17 9.34 9.17-9.34L24 7.33 12 19.5z" /></svg>
               </button>
             </div>
-            <ul id="sub-services" class="sub-menu">
+            <ul id="sub-services" class:list={['sub-menu', { 'sub-menu--short': item.children.length <= 4 }]}>
               {item.children.map((child) => (
                 <li class:list={['sub-item', { 'has-children': child.children }]}>
                   <a class="sub-link" href={child.href} aria-current={isCurrent(child.href) ? 'page' : undefined}>{child.label}</a>
@@ -46,17 +57,26 @@ const inSection = (item: NavItem): boolean =>
           </li>
         ))}
       </ul>
-      <a class="button nav-cta" href="/contact-us/">Get Started</a>
+      <a class="button nav-cta" href={ctaHref}>{t.cta}</a>
     </nav>
 
     <div class="header-tools">
+      {hasUaSite && (
+        <nav class="lang-switch" aria-label={t.language}>
+          {(['en', 'uk'] as Lang[]).map((l) => l === lang ? (
+            <span class="lang-link" aria-current="true" lang={l}>{LANGS[l].label}<span class="visually-hidden">, {LANGS[l].name}</span></span>
+          ) : (
+            <a class="lang-link" href={otherHref} hreflang={l} lang={l}>{LANGS[otherLang].label}<span class="visually-hidden">, {LANGS[otherLang].name}</span></a>
+          ))}
+        </nav>
+      )}
       <button class="icon-button theme-toggle" type="button" aria-pressed="false" data-theme-toggle>
-        <span class="visually-hidden">Dark theme</span>
+        <span class="visually-hidden">{t.darkTheme}</span>
         <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.3 22a10 10 0 0 1-2.1-19.8 1 1 0 0 1 1.1 1.4A7.5 7.5 0 0 0 20.4 12.7a1 1 0 0 1 1.4 1.1A10 10 0 0 1 12.3 22Z" /></svg>
         <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10ZM11 1h2v3h-2V1Zm0 19h2v3h-2v-3ZM3.5 4.9l1.4-1.4 2.1 2.1-1.4 1.4-2.1-2.1Zm13.4 13.4 1.4-1.4 2.1 2.1-1.4 1.4-2.1-2.1ZM19.1 3.5l1.4 1.4-2.1 2.1-1.4-1.4 2.1-2.1ZM5.6 17l1.4 1.4-2.1 2.1-1.4-1.4L5.6 17ZM23 11v2h-3v-2h3ZM4 11v2H1v-2h3Z" /></svg>
       </button>
       <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
-        <span class="visually-hidden">Menu</span>
+        <span class="visually-hidden">{t.menu}</span>
         <span class="burger" aria-hidden="true"><span></span></span>
       </button>
     </div>
@@ -103,6 +123,33 @@ const inSection = (item: NavItem): boolean =>
     color: var(--color-heading);
   }
   .icon-button:hover { background: var(--color-surface-2); }
+
+  .lang-switch { display: flex; align-items: center; margin-right: var(--space-1); }
+  .lang-link {
+    display: inline-grid;
+    place-items: center;
+    min-width: 44px;
+    height: 44px;
+    padding-inline: var(--space-2);
+    border-radius: var(--radius-pill);
+    font-family: var(--font-title);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-heading);
+    text-decoration: none;
+  }
+  .lang-link + .lang-link { position: relative; }
+  .lang-link + .lang-link::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 14px;
+    bottom: 14px;
+    width: 1px;
+    background: var(--color-border);
+  }
+  a.lang-link:hover { background: var(--color-surface-2); color: var(--color-link); }
+  .lang-link[aria-current] { color: var(--color-link); font-weight: 700; }
 
   .theme-toggle .icon-sun { display: none; }
   :global([data-theme='dark']) .theme-toggle .icon-sun { display: block; }
@@ -208,6 +255,7 @@ const inSection = (item: NavItem): boolean =>
       transition-delay: 0s;
     }
     .has-sub.is-closed .sub-menu { opacity: 0; visibility: hidden; }
+    .sub-menu--short { columns: 1; } /* UA menu: three services, one column */
     .sub-item { break-inside: avoid; min-width: 240px; }
     .sub-link { font-size: var(--text-sm); padding-block: 0.45rem; }
     .sub-item.has-children > .sub-link { font-weight: 600; }
@@ -237,6 +285,8 @@ const inSection = (item: NavItem): boolean =>
   };
 
   menuBtn.addEventListener('click', () => setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'));
+  // In-page links (UA menu: /ua/#roboty etc.) don't reload the page, so close the full-screen menu ourselves
+  header.querySelectorAll('.site-nav a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
   subToggles.forEach((btn) => {
     btn.addEventListener('click', () => setSub(btn, btn.getAttribute('aria-expanded') !== 'true'));
     btn.closest('.has-sub')?.addEventListener('mouseleave', () => btn.closest('.has-sub')?.classList.remove('is-closed'));

@@ -1,0 +1,42 @@
+---
+// Typing effect for the home hero h1 (EN and UA). Renders nothing; the script is inlined like the header script.
+---
+<script>
+  // Home hero (EN and UA). The static headline holds the real text (what crawlers and no-JS/reduced-motion
+  // visitors get); with motion allowed, that word is swapped for the names in data-ai-names in turn
+  // (default ChatGPT / Gemini / Claude, as on the EN home).
+  const name = document.querySelector<HTMLElement>('[data-ai-name]');
+  if (name && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const names = name.dataset.aiNames?.split(',') ?? ['ChatGPT', 'Gemini', 'Claude'];
+    name.parentElement?.classList.add('is-typing');
+    let text = name.textContent ?? 'AI';
+    let index = 0;
+    let deleting = true;
+
+    const tick = () => {
+      if (deleting) {
+        text = text.slice(0, -1);
+        name.textContent = text;
+        if (text.length === 0) {
+          deleting = false;
+          window.setTimeout(tick, 250);
+        } else {
+          window.setTimeout(tick, 70);
+        }
+      } else {
+        const target = names[index];
+        text = target.slice(0, text.length + 1);
+        name.textContent = text;
+        if (text.length === target.length) {
+          index = (index + 1) % names.length;
+          deleting = true;
+          window.setTimeout(tick, 1700);
+        } else {
+          window.setTimeout(tick, 110);
+        }
+      }
+    };
+
+    window.setTimeout(tick, 1700);
+  }
+</script>

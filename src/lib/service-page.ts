@@ -1,4 +1,4 @@
-import { PARTNER_STATUS, SITE } from './site';
+import { PARTNER_STATUS, SITE, UA_CTA_URL, abs } from './site';
 
 // Data model for hand-built service pages (src/content/services/*.json), rendered by layouts/ServicePage.astro.
 // Copy comes from the WordPress export; SEO + JSON-LD come from _wp-export/pages.json via wpPage().
@@ -62,10 +62,13 @@ export interface Section {
 
 export interface ServicePageData {
   url: string;
+  lang?: 'uk'; // /ua/ pages: SEO comes from `seo` below, not from _wp-export/pages.json
+  seo?: { title: string; description: string };
+  service?: { name: string }; // adds a Service node (used by /ua/ pages; EN pages carry theirs in pages.json)
   dateModified?: string; // ISO date, goes to the generated FAQPage schema
   partner?: boolean; // adds the Dutchie partner membership to the Organization schema
   variant?: 'center'; // centered dispensary-page look (panel hero, centered sections)
-  breadcrumb: { name: string; path: string }[]; // without the page itself
+  breadcrumb: { name: string; path: string }[]; // without the page itself; empty = no breadcrumb (home pages)
   hero: { eyebrow?: string; title: string; crumb?: string; chips?: string[]; byline?: string; badge?: string; lead?: string; actions?: Action[] };
   sections: Section[];
   faq?: { eyebrow?: string; title: string; intro?: string; items: { q: string; a: string }[]; note?: string } | null;
@@ -75,9 +78,9 @@ export interface ServicePageData {
 
 const stripTags = (s: string) => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
 
-/** Replaces {{PARTNER_STATUS}} in every string of the page data, so the status lives in one place (lib/site.ts). */
+/** Replaces {{PARTNER_STATUS}} and {{UA_CTA_URL}} in every string of the page data, so they live in one place (lib/site.ts). */
 export function fillTokens<T>(value: T): T {
-  if (typeof value === 'string') return value.replaceAll('{{PARTNER_STATUS}}', PARTNER_STATUS) as T;
+  if (typeof value === 'string') return value.replaceAll('{{PARTNER_STATUS}}', PARTNER_STATUS).replaceAll('{{UA_CTA_URL}}', UA_CTA_URL) as T;
   if (Array.isArray(value)) return value.map(fillTokens) as T;
   if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, fillTokens(v)])) as T;
   return value;
@@ -121,4 +124,37 @@ export function dedupeJsonld(jsonld: any[]) {
     seenFaq = true;
     return true;
   });
+}
+
+// Draft placeholders from the UA texts ([ВСТАВИТИ: ...], [ПЕРЕВІРИТИ: ...]) are marked in the JSON as
+// <mark data-todo>...</mark> (inline) or <p data-todo>...</p> (whole paragraph). `astro dev` shows them;
+// `astro build` removes them and logs a warning per page, so they never reach production unnoticed.
+const TODO_RE = /\s*<(p|mark) data-todo>[\s\S]*?<\/\1>/g;
+
+export const countTodos = (data: unknown) => (JSON.stringify(data).match(/<(?:p|mark) data-todo>/g) ?? []).length;
+
+export function stripTodos<T>(value: T): T {
+  if (typeof value === 'string') return value.replace(TODO_RE, '') as T;
+  if (Array.isArray(value)) {
+    // drop prose blocks that held nothing but a placeholder
+    return value.map(stripTodos).filter((v: any) => !(v?.type === 'prose' && !v.html.trim())) as T;
+  }
+  if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, stripTodos(v)])) as T;
+  return value;
+}
+
+/** Service node for /ua/ service pages; provider is the site-wide Organization. */
+export function serviceSchema(data: ServicePageData) {
+  if (!data.service) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${abs(data.url)}#service`,
+    name: data.service.name,
+    description: data.seo?.description,
+    url: abs(data.url),
+    inLanguage: data.lang ?? 'en',
+    provider: { '@id': `${SITE.url}/#organization` },
+    areaServed: { '@type': 'Country', name: 'Україна' },
+  };
 }

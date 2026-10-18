@@ -1,0 +1,177 @@
+---
+// UA home (/ua/). Copy: docs/ua-content/hub.md (word for word). Layout: the EN home's sections and
+// src/styles/home.css; EN-only blocks (testimonials, stats, contact form) are left out, there is no UA copy for them.
+// JSON-LD: Organization + WebSite come from Base (siteGraph, lang uk), FAQPage is built from the visible FAQ below.
+import Base from '../../layouts/Base.astro';
+import PortfolioGrid from '../../components/PortfolioGrid.astro';
+import Marquee from '../../components/Marquee.astro';
+import HeroTyping from '../../components/HeroTyping.astro';
+import Cards from '../../components/blocks/Cards.astro';
+import Faq from '../../components/blocks/Faq.astro';
+import Checklist from '../../components/blocks/Checklist.astro';
+import { sortedProjects } from '../../lib/projects';
+import { UA_CTA_URL } from '../../lib/site';
+import '../../styles/home.css';
+
+const seo = {
+  title: 'Сайти, SEO та AI-видимість для бізнесу | Tarasovs',
+  description: 'Створюємо сайти, просуваємо їх у Google і перевіряємо, чи згадують ваш бізнес у ChatGPT. Безкоштовний міні-аудит сайту. Команда з Сум і Тімішоари.',
+};
+
+// Draft placeholders: shown by `astro dev` only (see TODO_RE in lib/service-page.ts for the service pages).
+const DRAFT = import.meta.env.DEV;
+const TODOS = [
+  '[ВСТАВИТИ: фото та 2 речення про досвід; кейс українського клієнта за його згодою].',
+];
+if (!DRAFT) console.warn(`[draft] /ua/: ${TODOS.length} placeholder(s) hidden in the build, fill them in src/pages/ua/index.astro`);
+
+// No cannabis case studies on the Ukrainian site.
+const projects = (await sortedProjects()).filter((p) => !p.data.categories.includes('cannabis')).slice(0, 7);
+const U = '/wp-content/uploads';
+
+// "Що ми робимо": same card + image rows as "What We Help You Build" on the EN home.
+const services = [
+  {
+    title: 'Створення сайтів',
+    html: '<p>Сайт, який швидко працює на телефоні, зрозуміло пояснює, чим ви займаєтесь, і приводить звернення. Працюємо на Framer, Webflow і WordPress.</p>',
+    href: '/ua/stvorennia-saitiv/',
+  },
+  {
+    title: 'Просування сайтів',
+    html: '<p>Технічний аудит, ключові слова, контент і локальне SEO. Щомісяця показуємо, що змінилось і що робимо далі.</p>',
+    href: '/ua/prosuvannia-saitiv/',
+  },
+  {
+    title: 'AI-видимість',
+    html: '<p>Перевіряємо, що відповідають ChatGPT та інші AI на запити ваших клієнтів, і виправляємо те, що заважає згадувати ваш бізнес.</p>',
+    href: '/ua/ai-vydymist/',
+  },
+];
+const rows = [
+  { cards: services.slice(0, 2), img: { src: `${U}/2026/05/tarasovs-home-2.webp`, alt: 'Процес дизайну й розробки сайту', width: 1424, height: 976 } },
+  { cards: services.slice(2), img: { src: `${U}/2026/06/tarasovs-ui-optimisation-for-ai-seo.webp`, alt: 'AI-видимість сайту', width: 1536, height: 1024 } },
+];
+
+const audit = [
+  'Швидкість сайту на телефоні.',
+  'Чи зрозуміла головна дія на першому екрані.',
+  'Профіль компанії в Google Maps.',
+  'Що відповідає ChatGPT на запити клієнтів у вашій ніші.',
+  'Контакти й структура сайту.',
+];
+
+const steps = [
+  { num: '01', title: 'Міні-аудит', html: '<p>Показуємо, що бачимо на вашому сайті й у видачі.</p>' },
+  { num: '02', title: 'План', html: '<p>Домовляємось, що виправляти першим і що це дасть.</p>' },
+  { num: '03', title: 'Робота', html: '<p>Робимо, показуємо результат і міряємо його щомісяця.</p>' },
+];
+
+const faqItems = [
+  { q: 'Що входить у безкоштовний міні-аудит?', a: "<p>П'ять перевірок зі списку вище. Ви отримуєте короткий висновок і те, з чого почати.</p>" },
+  { q: 'Скільки коштує сайт або просування?', a: '<p>Залежить від обсягу: кількості сторінок, функцій і конкуренції у вашій ніші. Після короткої розмови або міні-аудиту надішлемо пропозицію.</p>' },
+  { q: 'З якими платформами ви працюєте?', a: '<p>З Framer, Webflow і WordPress. Підкажемо, яка підійде вашому бізнесу.</p>' },
+  { q: 'Чи працюєте ви з бізнесом з усієї України?', a: '<p>Так, дистанційно. Зустрічі й показ результатів проходять онлайн.</p>' },
+  { q: 'Чи гарантуєте ви позиції або появу у відповідях ChatGPT?', a: '<p>Ні. Чесно гарантувати це неможливо. Ми показуємо, що змінилось, і міряємо динаміку.</p>' },
+];
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Base title={seo.title} description={seo.description} jsonld={[faqLd]} mainClass="home">
+
+  <section class="hero container" aria-labelledby="hero-title">
+    <div class="hero-panel">
+      <p class="hero-badge"><a href="/ua/ai-vydymist/"><span>GEO</span> AI-видимість <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6" /></svg></a></p>
+      <h1 id="hero-title" aria-label="Сайти, які знаходять у Google і в ChatGPT">Сайти, які знаходять <span class="hl">у Google і в <span class="hero-ai-name"><span data-ai-name data-ai-names="Gemini,Claude,ChatGPT">ChatGPT</span></span></span></h1>
+      <p class="hero-lead">Ми створюємо сайти для малого й середнього бізнесу, просуваємо їх у Google і перевіряємо, чи згадують вас AI-асистенти. Починаємо з безкоштовного міні-аудиту вашого сайту.</p>
+      <p class="actions">
+        <a class="button" href={UA_CTA_URL}>Отримати міні-аудит</a>
+        <a class="button button--ghost" href="/case-studies/">Наші роботи</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section container" id="roboty" aria-labelledby="work-title">
+    <h2 id="work-title" class="visually-hidden">Наші роботи</h2>
+    <PortfolioGrid projects={projects} variant="overlay" lang="uk" />
+    <p class="more"><a class="button" href="/case-studies/"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5" /><path d="M9 15 15 9M10 9h5v5" /></svg> Усі роботи</a></p>
+  </section>
+
+  <div class="container"><Marquee words={['Сайти', 'SEO', 'AI-видимість', 'Framer', 'Webflow', 'WordPress']} /></div>
+
+  <section class="section container" id="posluhy" aria-labelledby="services-title">
+    <div class="head reveal">
+      <h2 id="services-title">Що ми робимо</h2>
+    </div>
+    {rows.map((row, i) => (
+      <div class:list={['build-row', { reverse: i === 1, single: row.cards.length === 1 }]}>
+        <div class="build-cards">
+          {row.cards.map((c) => (
+            <article class="build-card reveal">
+              <h3>{c.title}</h3>
+              <div class="muted" set:html={c.html} />
+              <a class="build-link" href={c.href}>Детальніше<span class="visually-hidden">: {c.title}</span><span aria-hidden="true"> →</span></a>
+            </article>
+          ))}
+        </div>
+        <img class="build-img reveal" src={row.img.src} alt={row.img.alt} width={row.img.width} height={row.img.height} loading="lazy" decoding="async" />
+      </div>
+    ))}
+  </section>
+
+  <section class="section container" id="mini-audyt" aria-labelledby="audit-title">
+    <div class="head reveal">
+      <h2 id="audit-title">Безкоштовний міні-аудит</h2>
+      <p class="intro">Надішліть назву сайту й місто. Ми подивимось і напишемо, що бачимо. Без дзвінків і без зобов'язань. У міні-аудит входить:</p>
+    </div>
+    <div class="panel audit reveal">
+      <Checklist items={audit} />
+      <p class="audit-terms">Формат відповіді: звіт на ваш емейл. Термін: протягом 24 годин.</p>
+      <a class="button" href={UA_CTA_URL}>Отримати міні-аудит</a>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="process-title">
+    <div class="head reveal">
+      <h2 id="process-title">Як ми працюємо</h2>
+    </div>
+    <Cards items={steps} columns={3} reveal />
+  </section>
+
+  <section class="section container" aria-labelledby="founder-title">
+    <div class="founder reveal">
+      <div class="founder-head">
+        <h2 id="founder-title">Хто за цим стоїть</h2>
+        <p class="intro">Проєкти веде <a href="/about/" hreflang="en">Юрій Тарасов</a>, засновник і GEO-стратег. Команда працює з Тімішоари та Сум.{DRAFT && <> <mark data-todo>{TODOS[0]}</mark></>}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <h2 id="faq-title" class="reveal">Питання й відповіді</h2>
+      <Faq items={faqItems} reveal />
+    </div>
+  </section>
+
+<HeroTyping />
+</Base>
+
+<style>
+  /* The UA lead is two sentences (EN: one short line), so lighter weight and a readable measure */
+  .hero-panel .hero-lead { max-width: 46rem; margin-inline: auto; font-weight: 500; }
+  /* "ChatGPT" fills the 8ch typing box; where it shares a line with "в" (measured: from ~415px) keep it next
+     to "в" instead of centred in the box. Narrower, it wraps to its own centred line, so the box stays centred. */
+  @media (min-width: 26.5em) { .hero-panel :global(.hero-ai-name.is-typing) { text-align: left; } }
+  /* Mini-audit: one full-width panel (home.css .panel) instead of the EN three-panel grid; list in two columns on desktop */
+  .audit-terms { color: var(--color-heading); font-weight: 600; }
+  @media (min-width: 64em) {
+    .panel.audit :global(.checklist) { grid-template-columns: 1fr 1fr; }
+    /* Single-card row ("AI-видимість"): the image sets a shorter row, the card text sits in the middle */
+    .build-row.single { grid-template-columns: 1fr 1fr; }
+    .build-row.single .build-img { max-height: 20rem; }
+    .build-row.single .build-card { justify-content: center; }
+  }
+</style>

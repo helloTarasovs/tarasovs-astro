@@ -122,3 +122,9 @@
   --shadow-md: 0 12px 32px -12px rgb(0 0 0 / 0.6);
   --color-footer-bg: #1c1535;
 }
+
+/* Ukrainian pages: DM Sans has no Cyrillic, so headings would mix DM Sans (Latin words) with
+   Inter (Cyrillic). Use Inter for headings too. */
+:root[lang='uk'] {
+  --font-title: var(--font-text);
+}

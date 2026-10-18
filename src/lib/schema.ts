@@ -1,5 +1,6 @@
 // Fallback JSON-LD when an entry has none of its own.
 import { SITE, abs } from './site';
+import type { Lang } from './i18n';
 
 export const organizationRef = { '@type': 'Organization', '@id': `${SITE.url}/#organization`, name: SITE.name, url: SITE.url };
 
@@ -46,20 +47,34 @@ export function withFallbackArticle(jsonld: any[], fallback: object) {
 
 // Site-wide WebSite + Organization (same data as the Yoast graph on the WordPress site).
 // SearchAction is left out: the static site has no ?s= search.
-export function siteGraph() {
+// On /ua/ pages the WebSite node is the Ukrainian site (/ua/, inLanguage uk); Organization is the same entity.
+// TODO(ua): add the Ukrainian WebSite description from docs/ua-content/hub.md once it exists.
+export function siteGraph(lang: Lang = 'en') {
+  const website =
+    lang === 'uk'
+      ? {
+          '@type': 'WebSite',
+          '@id': `${SITE.url}/ua/#website`,
+          url: `${SITE.url}/ua/`,
+          name: SITE.name,
+          alternateName: SITE.name,
+          publisher: { '@id': `${SITE.url}/#organization` },
+          inLanguage: 'uk',
+        }
+      : {
+          '@type': 'WebSite',
+          '@id': `${SITE.url}/#website`,
+          url: `${SITE.url}/`,
+          name: SITE.name,
+          alternateName: SITE.name,
+          description: 'Website design, Digital marketing, Web development, Online stores',
+          publisher: { '@id': `${SITE.url}/#organization` },
+          inLanguage: 'en-US',
+        };
   return {
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'WebSite',
-        '@id': `${SITE.url}/#website`,
-        url: `${SITE.url}/`,
-        name: SITE.name,
-        alternateName: SITE.name,
-        description: 'Website design, Digital marketing, Web development, Online stores',
-        publisher: { '@id': `${SITE.url}/#organization` },
-        inLanguage: 'en-US',
-      },
+      website,
       {
         '@type': 'Organization',
         '@id': `${SITE.url}/#organization`,

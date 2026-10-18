@@ -1,7 +1,10 @@
 ---
 // Contact form -> Web3Forms. Works without JS (plain POST); with JS it submits via fetch
 // and shows success / error in place. Other pages link to /contact-us/#CForm, keep the id.
+import { FORM_UI } from '../lib/i18n';
+
 interface Props {
+  lang?: 'en' | 'uk'; // uk: Ukrainian labels and messages (EN uses the defaults below)
   subject?: string;
   submitLabel?: string;
   id?: string; // anchor id; field ids are derived from it so two forms can share a page
@@ -12,22 +15,23 @@ interface Props {
   note?: string;
   successText?: string;
 }
+const ua = Astro.props.lang === 'uk' ? FORM_UI.uk : undefined;
 const {
   subject = 'New inquiry from tarasovs.me',
   submitLabel = 'Get a Quote',
   id = 'CForm',
-  emailLabel = 'Email',
-  messageLabel = 'Message',
+  emailLabel = ua?.email ?? 'Email',
+  messageLabel = ua?.message ?? 'Message',
   messagePlaceholder = 'Brief project details',
   dispensaries,
   note,
-  successText = 'Thank you! Your message has been sent. We will get back to you soon.',
+  successText = ua?.success ?? 'Thank you! Your message has been sent. We will get back to you soon.',
 } = Astro.props;
 const f = (name: string) => `${id.toLowerCase()}-${name}`;
 const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? '';
 if (!accessKey && !(globalThis as any).__w3fWarned) (globalThis as any).__w3fWarned = true, console.warn('[ContactForm] PUBLIC_WEB3FORMS_KEY is not set: the form will show an error on submit.');
 ---
-<form id={id} class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-contact-form data-success={successText}>
+<form id={id} class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-contact-form data-success={successText} data-sending={ua?.sending} data-error={ua?.error}>
   <input type="hidden" name="access_key" value={accessKey} />
   <input type="hidden" name="subject" value={subject} />
   <input type="hidden" name="from_name" value="tarasovs.me" />
@@ -35,12 +39,12 @@ if (!accessKey && !(globalThis as any).__w3fWarned) (globalThis as any).__w3fWar
   <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
   <div class="field">
-    <label for={f('name')}>Name <span class="req">(required)</span></label>
-    <input id={f('name')} name="name" type="text" autocomplete="name" required maxlength="400" placeholder="Your name" />
+    <label for={f('name')}>{ua?.name ?? 'Name'} <span class="req">{ua?.required ?? '(required)'}</span></label>
+    <input id={f('name')} name="name" type="text" autocomplete="name" required maxlength="400" placeholder={ua?.namePlaceholder ?? 'Your name'} />
   </div>
   <div class="field">
-    <label for={f('email')}>{emailLabel} <span class="req">(required)</span></label>
-    <input id={f('email')} name="email" type="email" autocomplete="email" required maxlength="400" placeholder="Your working email" />
+    <label for={f('email')}>{emailLabel} <span class="req">{ua?.required ?? '(required)'}</span></label>
+    <input id={f('email')} name="email" type="email" autocomplete="email" required maxlength="400" placeholder={ua?.emailPlaceholder ?? 'Your working email'} />
   </div>
   {dispensaries && (
     <div class="field">
@@ -54,9 +58,15 @@ if (!accessKey && !(globalThis as any).__w3fWarned) (globalThis as any).__w3fWar
     <textarea id={f('message')} name="message" rows="6" maxlength="2000" placeholder={messagePlaceholder}></textarea>
   </div>
 
-  <p class="consent">
-    By submitting this form, I agree to the <a href="/terms-of-service-tarasovs-digital-agency/">terms &amp; conditions</a> and <a href="/privacy-cookie-policy-tarasovs-digital-agency/">privacy policy</a>.
-  </p>
+  {ua ? (
+    <p class="consent">
+      {ua.consent[0]} <a href="/terms-of-service-tarasovs-digital-agency/" hreflang="en">{ua.consent[1]}</a> {ua.consent[2]} <a href="/privacy-cookie-policy-tarasovs-digital-agency/" hreflang="en">{ua.consent[3]}</a> (англійською).
+    </p>
+  ) : (
+    <p class="consent">
+      By submitting this form, I agree to the <a href="/terms-of-service-tarasovs-digital-agency/">terms &amp; conditions</a> and <a href="/privacy-cookie-policy-tarasovs-digital-agency/">privacy policy</a>.
+    </p>
+  )}
 
   <button class="button" type="submit" data-submit>{submitLabel}</button>
   {note && <p class="consent">{note}</p>}
@@ -106,7 +116,7 @@ if (!accessKey && !(globalThis as any).__w3fWarned) (globalThis as any).__w3fWar
       // Native required/email validation has already run: submit only fires for a valid form.
       e.preventDefault();
       submit.disabled = true;
-      submit.textContent = 'Sending…';
+      submit.textContent = form.dataset.sending ?? 'Sending…';
       status.className = 'status';
       status.textContent = '';
       try {
@@ -120,7 +130,7 @@ if (!accessKey && !(globalThis as any).__w3fWarned) (globalThis as any).__w3fWar
         form.reset();
         show('success', form.dataset.success!);
       } catch {
-        show('error', 'Sorry, the message could not be sent. Please try again or email hello@tarasovs.me.');
+        show('error', form.dataset.error ?? 'Sorry, the message could not be sent. Please try again or email hello@tarasovs.me.');
       } finally {
         submit.disabled = false;
         submit.textContent = label;

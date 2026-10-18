@@ -1,0 +1,76 @@
+---
+// /ua/kontakty/  UA pair of /contact-us/. Copy follows the EN page; left out: assistance hours (given in EST),
+// the careers block. The mini-audit lines come from docs/ua-content/hub.md. Layout: src/styles/contact.css.
+import Base from '../../layouts/Base.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import { breadcrumbSchema } from '../../lib/schema';
+import { CONTACT } from '../../lib/nav';
+import { SITE, abs } from '../../lib/site';
+import '../../styles/contact.css';
+
+const seo = {
+  title: 'Контакти | Tarasovs',
+  description: "Зв'яжіться з Tarasovs: форма заявки, емейл і телефон. Замовте безкоштовний міні-аудит сайту, звіт на ваш емейл протягом 24 годин.",
+};
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    '@id': `${abs('/ua/kontakty/')}#webpage`,
+    url: abs('/ua/kontakty/'),
+    name: 'Контакти',
+    inLanguage: 'uk',
+    isPartOf: { '@id': `${SITE.url}/ua/#website` },
+    about: { '@id': `${SITE.url}/#organization` },
+  },
+  breadcrumbSchema([{ name: 'Головна', path: '/ua/' }, { name: 'Контакти', path: '/ua/kontakty/' }]),
+];
+---
+<Base title={seo.title} description={seo.description} jsonld={jsonld} mainClass="contact-page">
+  <div class="contact container">
+    <header class="contact-header">
+      <h1>Контакти</h1>
+    </header>
+
+    <div class="contact-grid">
+      <section class="offices" aria-labelledby="offices-title">
+        <h2 id="offices-title">Наш офіс</h2>
+        <p class="lead">Працюємо дистанційно з бізнесом з усієї України.</p>
+
+        <div class="office">
+          <h3>Тімішоара</h3>
+          <p>Str. Narcisei 64, 307220 Giroc</p>
+          <p><strong>Телефон:</strong><br /><a href={CONTACT.phoneHref}>{CONTACT.phone}</a></p>
+        </div>
+
+        <div class="office">
+          <h3>Загальні питання</h3>
+          <p><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
+        </div>
+      </section>
+
+      <section class="inquiry" aria-labelledby="inquiry-title">
+        <h2 id="inquiry-title">Заявка на міні-аудит або проєкт</h2>
+        <p class="lead">Надішліть назву сайту й місто. Ми подивимось і напишемо, що бачимо. Формат відповіді: звіт на ваш емейл. Термін: протягом 24 годин.</p>
+        <ContactForm
+          lang="uk"
+          subject="Нова заявка з tarasovs.me/ua/"
+          submitLabel="Надіслати"
+          messagePlaceholder="Назва сайту, місто, коротко про задачу"
+        />
+      </section>
+    </div>
+
+    <div class="map reveal">
+      <iframe
+        loading="lazy"
+        src="https://maps.google.com/maps?q=Str.%20Narcisei%2064%2C%20307220%20Giroc&t=m&z=10&output=embed&iwloc=near&hl=uk"
+        title="Карта: Str. Narcisei 64, 307220 Giroc"
+        width="1344"
+        height="420"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</Base>
+

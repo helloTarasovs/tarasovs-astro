@@ -2,14 +2,17 @@
 // One case-study card. Fixed 4:3 frame + explicit sizes so filtering never shifts layout.
 import type { CollectionEntry } from 'astro:content';
 import { categoryLabel, coverSrcset, CARD_SIZES } from '../lib/projects';
+import type { Lang } from '../lib/i18n';
 
 interface Props {
   project: CollectionEntry<'projects'>;
   priority?: boolean; // LCP candidate: eager + fetchpriority=high
   headingLevel?: 'h2' | 'h3';
   variant?: 'default' | 'overlay'; // overlay: title + categories over the image (home grid)
+  lang?: Lang;
 }
-const { project, priority = false, headingLevel = 'h3', variant = 'default' } = Astro.props;
+const { project, priority = false, headingLevel = 'h3', variant = 'default', lang = 'en' } = Astro.props;
+const label = (slug: string) => categoryLabel(slug, lang);
 const d = project.data;
 const Heading = headingLevel;
 const v = d.cover ? coverSrcset(d.cover.src, d.cover.width) : undefined;
@@ -38,12 +41,12 @@ const excerpt = words.length > 24 ? `${words.slice(0, 24).join(' ')}…` : words
   {variant === 'overlay' ? (
     <div class="overlay">
       <Heading class="title"><a href={`/project/${d.slug}/`}>{d.title}</a></Heading>
-      {d.categories.length > 0 && <p class="cats">{d.categories.map(categoryLabel).join(', ')}</p>}
+      {d.categories.length > 0 && <p class="cats">{d.categories.map(label).join(', ')}</p>}
     </div>
   ) : (
     <>
       <Heading class="title"><a href={`/project/${d.slug}/`}>{d.title}</a></Heading>
-      {d.categories.length > 0 && <p class="cats">{d.categories.map(categoryLabel).join(' · ')}</p>}
+      {d.categories.length > 0 && <p class="cats">{d.categories.map(label).join(' · ')}</p>}
       {excerpt && <p class="excerpt">{excerpt}</p>}
     </>
   )}

@@ -1,0 +1,7 @@
+---
+// Ukrainian page. Copy: docs/ua-content/prosuvannia-saitiv.md, data: src/content/ua/prosuvannia-saitiv.json.
+import ServicePage from '../../layouts/ServicePage.astro';
+import data from '../../content/ua/prosuvannia-saitiv.json';
+import type { ServicePageData } from '../../lib/service-page';
+---
+<ServicePage data={data as ServicePageData} />

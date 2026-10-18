@@ -4,6 +4,7 @@
 import type { CollectionEntry } from 'astro:content';
 import ProjectCard from './ProjectCard.astro';
 import { CATEGORY_LABELS, categoryLabel } from '../lib/projects';
+import { PORTFOLIO_UI, type Lang } from '../lib/i18n';
 
 interface Props {
   projects: CollectionEntry<'projects'>[];
@@ -13,8 +14,10 @@ interface Props {
   revealFrom?: number; // fade in cards from this index on (earlier ones may be on the first screen)
   variant?: 'default' | 'overlay'; // overlay: live-site look (masonry, title over image, text filter)
   textFilter?: boolean; // centered text filter ("Filter by All / SEO / ..."); always on for overlay
+  lang?: Lang; // interface strings and category names (project titles stay as published)
 }
-const { projects, headingLevel = 'h3', priorityFirst = false, label = 'Filter projects by category', revealFrom, variant = 'default', textFilter = false } = Astro.props;
+const { projects, headingLevel = 'h3', priorityFirst = false, lang = 'en', label = PORTFOLIO_UI[lang].label, revealFrom, variant = 'default', textFilter = false } = Astro.props;
+const ui = PORTFOLIO_UI[lang];
 const textFilterOn = textFilter || variant === 'overlay';
 const cats = Object.keys(CATEGORY_LABELS)
   .map((slug) => ({ slug, count: projects.filter((p) => p.data.categories.includes(slug)).length }))
@@ -23,13 +26,13 @@ const pad = (n: number) => String(n).padStart(2, '0');
 ---
 <div class:list={['portfolio', `portfolio--${variant}`]} data-portfolio>
   <div class:list={['filter', { 'filter--text': textFilterOn }]} role="group" aria-label={label}>
-    <span class="filter-label" aria-hidden="true">Filter by</span>
-    <button type="button" aria-pressed="true" data-filter="all">All <span class="count">{pad(projects.length)}</span></button>
+    <span class="filter-label" aria-hidden="true">{ui.filterBy}</span>
+    <button type="button" aria-pressed="true" data-filter="all">{ui.all} <span class="count">{pad(projects.length)}</span></button>
     {cats.map((c) => (
-      <button type="button" aria-pressed="false" data-filter={c.slug}>{categoryLabel(c.slug)} <span class="count">{pad(c.count)}</span></button>
+      <button type="button" aria-pressed="false" data-filter={c.slug}>{categoryLabel(c.slug, lang)} <span class="count">{pad(c.count)}</span></button>
     ))}
   </div>
-  <p class="visually-hidden" aria-live="polite" data-status></p>
+  <p class="visually-hidden" aria-live="polite" data-status data-template={ui.status}></p>
   <ul class="grid" data-grid>
     {projects.map((p, i) => (
       <li
@@ -37,7 +40,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
         data-ar={p.data.cover?.width && p.data.cover?.height ? p.data.cover.height / p.data.cover.width : 0.75}
         class:list={{ reveal: revealFrom != null && i >= revealFrom }}
       >
-        <ProjectCard project={p} headingLevel={headingLevel} priority={priorityFirst && i === 0} variant={variant} />
+        <ProjectCard project={p} headingLevel={headingLevel} priority={priorityFirst && i === 0} variant={variant} lang={lang} />
       </li>
     ))}
   </ul>
@@ -130,7 +133,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
           li.hidden = !on;
           if (on) shown++;
         });
-        status.textContent = `${shown} project${shown === 1 ? '' : 's'} shown`;
+        status.textContent = status.dataset.template?.replace('{n}', String(shown)) ?? `${shown} project${shown === 1 ? '' : 's'} shown`;
         root.dispatchEvent(new CustomEvent('portfolio:filtered'));
       }),
     );

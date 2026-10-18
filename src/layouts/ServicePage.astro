@@ -6,21 +6,30 @@ import Faq from '../components/blocks/Faq.astro';
 import Marquee from '../components/Marquee.astro';
 import { wpPage } from '../lib/pages';
 import { breadcrumbSchema } from '../lib/schema';
-import { dedupeJsonld, faqSchema, fillTokens, partnerOrganization, type ServicePageData } from '../lib/service-page';
+import { countTodos, dedupeJsonld, faqSchema, fillTokens, partnerOrganization, serviceSchema, stripTodos, type ServicePageData } from '../lib/service-page';
+import { UI } from '../lib/i18n';
 
 interface Props { data: ServicePageData }
-const data = fillTokens(Astro.props.data);
+const filled = fillTokens(Astro.props.data);
+const todos = countTodos(filled);
+if (import.meta.env.PROD && todos) console.warn(`[draft] ${filled.url}: ${todos} placeholder(s) hidden in the build, fill them in the JSON`);
+const data = import.meta.env.PROD ? stripTodos(filled) : filled;
 const center = data.variant === 'center';
-const page = wpPage(data.url);
+const t = UI[data.lang ?? 'en'];
+// /ua/ pages carry their own SEO fields; EN pages take them from the WordPress export.
+const page = data.seo ? { seo: { ...data.seo, canonical: data.url, robots: undefined, ogImage: undefined }, jsonld: [] as unknown[] } : wpPage(data.url);
 // FAQPage comes from the visible FAQ (single source); any FAQPage in the WordPress export is dropped.
 const faqLd = faqSchema(data);
 const pageJsonld = dedupeJsonld(page.jsonld).filter((b: any) => !(faqLd && b?.['@type'] === 'FAQPage'));
 if (faqLd) pageJsonld.push(faqLd);
 if (data.partner) pageJsonld.push(partnerOrganization());
+const serviceLd = serviceSchema(data);
+if (serviceLd) pageJsonld.unshift(serviceLd);
 
-const crumbs = [...data.breadcrumb, { name: data.hero.crumb ?? data.hero.title.replace(/<[^>]+>/g, ''), path: data.url }];
+// Empty breadcrumb (a language home such as /ua/): no trail and no BreadcrumbList.
+const crumbs = data.breadcrumb.length ? [...data.breadcrumb, { name: data.hero.crumb ?? data.hero.title.replace(/<[^>]+>/g, ''), path: data.url }] : [];
 const hasBreadcrumbLd = pageJsonld.some((b: any) => b?.['@type'] === 'BreadcrumbList');
-const jsonld = hasBreadcrumbLd ? pageJsonld : [...pageJsonld, breadcrumbSchema(crumbs)];
+const jsonld = hasBreadcrumbLd || !crumbs.length ? pageJsonld : [...pageJsonld, breadcrumbSchema(crumbs)];
 // Centered variant: the section holding the form goes after the FAQ (as on the live page).
 const formIdx = center ? data.sections.findIndex((x) => x.blocks.some((b) => b.type === 'form')) : -1;
 const bodySections = formIdx >= 0 ? data.sections.filter((_, i) => i !== formIdx) : data.sections;
@@ -38,13 +47,15 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
   <article class:list={['service', { 'service--center': center }]}>
     <header class:list={['hero', { 'hero--center': center }]}>
       <div class="container">
-        <nav class="crumbs" aria-label="Breadcrumb">
-          <ol>
-            {crumbs.map((c, i) => (
-              <li>{i < crumbs.length - 1 ? <a href={c.path}>{c.name}</a> : <span aria-current="page">{c.name}</span>}</li>
-            ))}
-          </ol>
-        </nav>
+        {crumbs.length > 0 && (
+          <nav class="crumbs" aria-label={t.breadcrumb}>
+            <ol>
+              {crumbs.map((c, i) => (
+                <li>{i < crumbs.length - 1 ? <a href={c.path}>{c.name}</a> : <span aria-current="page">{c.name}</span>}</li>
+              ))}
+            </ol>
+          </nav>
+        )}
         <div class="hero-panel">
           {data.hero.eyebrow && (
             <p class="eyebrow">

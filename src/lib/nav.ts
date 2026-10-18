@@ -41,6 +41,24 @@ export const MAIN_NAV: NavItem[] = [
   { label: 'Contacts', href: '/contact-us/' },
 ];
 
+// Ukrainian pages (/ua/): only Ukrainian pages and hub sections, so a Ukrainian label never leads to an English page.
+// The header CTA ("Обговорити проєкт") goes to UA_CTA_URL (lib/site.ts).
+export const MAIN_NAV_UK: NavItem[] = [
+  { label: 'Головна', href: '/ua/' },
+  {
+    label: 'Послуги',
+    href: '/ua/#posluhy',
+    children: [
+      { label: 'Створення сайтів', href: '/ua/stvorennia-saitiv/' },
+      { label: 'Просування сайтів', href: '/ua/prosuvannia-saitiv/' },
+      { label: 'AI-видимість', href: '/ua/ai-vydymist/' },
+    ],
+  },
+  { label: 'Роботи', href: '/ua/#roboty' },
+  { label: 'Міні-аудит', href: '/ua/#mini-audyt' },
+  { label: 'Контакти', href: '/ua/kontakty/' },
+];
+
 export const CONTACT = {
   email: 'hello@tarasovs.me',
   phone: '+40 748 708 694',
