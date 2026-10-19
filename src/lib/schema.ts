@@ -1,5 +1,6 @@
 // Fallback JSON-LD when an entry has none of its own.
 import { SITE, abs } from './site';
+import { FACEBOOK_UA } from './nav';
 import type { Lang } from './i18n';
 
 export const organizationRef = { '@type': 'Organization', '@id': `${SITE.url}/#organization`, name: SITE.name, url: SITE.url };
@@ -94,6 +95,8 @@ export function siteGraph(lang: Lang = 'en') {
           'https://www.facebook.com/tarasovs.web/',
           'https://www.instagram.com/tarasovs.me/',
           'https://www.linkedin.com/company/tarasovs-digital-agency/',
+          // /ua/ pages also list the Ukrainian Facebook page
+          ...(lang === 'uk' ? [FACEBOOK_UA] : []),
         ],
         description:
           'Europe-based digital agency helping businesses in the US, UK and Europe build websites that rank on Google and get cited by AI-powered search platforms including ChatGPT, Perplexity and Google AI Overviews.',

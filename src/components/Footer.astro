@@ -1,7 +1,7 @@
 ---
 // Site footer: same content as the live footer (address, phone, email, social, CTA, legal links).
 import Logo from './Logo.astro';
-import { CONTACT, SOCIAL, LEGAL } from '../lib/nav';
+import { CONTACT, SOCIAL, LEGAL, FACEBOOK_UA } from '../lib/nav';
 import { FOOTER_UI, langFromPath } from '../lib/i18n';
 import { UA_CTA_URL } from '../lib/site';
 
@@ -9,6 +9,7 @@ const lang = langFromPath(Astro.url.pathname);
 const t = FOOTER_UI[lang];
 const home = lang === 'uk' ? '/ua/' : '/';
 const ctaHref = lang === 'uk' ? UA_CTA_URL : '/contact-us/#CForm';
+const social = lang === 'uk' ? SOCIAL.map((s) => (s.label === 'Facebook' ? { ...s, href: FACEBOOK_UA } : s)) : SOCIAL;
 ---
 <footer class="site-footer">
   <div class="container">
@@ -36,7 +37,7 @@ const ctaHref = lang === 'uk' ? UA_CTA_URL : '/contact-us/#CForm';
         <p><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
         <p class="footer-label">{t.follow}</p>
         <ul class="footer-social">
-          {SOCIAL.map((s) => (
+          {social.map((s) => (
             <li><a href={s.href} target="_blank" rel="noopener me">{s.label}<span class="visually-hidden">{t.newTab}</span></a></li>
           ))}
         </ul>

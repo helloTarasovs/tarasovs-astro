@@ -77,6 +77,9 @@ export const SOCIAL = [
   { label: 'Instagram', href: 'https://www.instagram.com/tarasovs.me/' },
 ];
 
+// Facebook page for the Ukrainian audience: replaces the EN Facebook link in the footer on /ua/ pages.
+export const FACEBOOK_UA = 'https://www.facebook.com/tarasovs.ua/';
+
 export const LEGAL = [
   { label: 'Privacy & Cookie Policy', href: '/privacy-cookie-policy-tarasovs-digital-agency/' },
   { label: 'Terms of Service', href: '/terms-of-service-tarasovs-digital-agency/' },

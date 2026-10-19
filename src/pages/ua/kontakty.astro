@@ -49,14 +49,14 @@ const jsonld = [
         <p class="lead">Працюємо дистанційно з бізнесом з усієї України.</p>
 
         <div class="office">
-          <h3>Тімішоара</h3>
-          <p>Str. Narcisei 64, 307220 Giroc</p>
-          <p><strong>Телефон:</strong><br /><a href={CONTACT.phoneHref}>{CONTACT.phone}</a></p>
+          <h3>Україна</h3>
+          <p><strong>Телефони:</strong><br />{CONTACT.phonesUa.map((p, i) => <>{i > 0 && <br />}<a href={p.href}>{p.label}</a></>)}</p>
         </div>
 
         <div class="office">
-          <h3>Україна</h3>
-          <p><strong>Телефони:</strong><br />{CONTACT.phonesUa.map((p, i) => <>{i > 0 && <br />}<a href={p.href}>{p.label}</a></>)}</p>
+          <h3>Тімішоара</h3>
+          <p>Str. Narcisei 64, 307220 Giroc</p>
+          <p><strong>Телефон:</strong><br /><a href={CONTACT.phoneHref}>{CONTACT.phone}</a></p>
         </div>
 
         <div class="office">
