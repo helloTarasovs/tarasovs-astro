@@ -70,6 +70,70 @@ export const FORM_UI = {
   },
 };
 
+// Footer copy. EN = the live footer; UA follows it, with the UA audience line from /ua/kontakty/.
+// Legal pages exist in English only, hence the "(англ.)" mark.
+export const FOOTER_UI: Record<Lang, {
+  tagline: string; office: string; city: string; directions: string; mapsHint: string; call: string;
+  general: string; audience: string; follow: string; newTab: string; ctaText: string; cta: string;
+  legal: Record<string, string>; legalLang?: string; cookieSettings: string;
+}> = {
+  en: {
+    tagline: 'Disrupting the ordinary in brand &amp; digital design.',
+    office: 'Office',
+    city: 'Timisoara, Romania',
+    directions: 'Get directions',
+    mapsHint: ' (Google Maps, opens in a new tab)',
+    call: 'Call',
+    general: 'General questions',
+    audience: 'Remote-first agency serving <strong>New York and US clients</strong>',
+    follow: 'Follow us',
+    newTab: ' (opens in a new tab)',
+    ctaText: 'Want a no-obligation to-hire estimate?',
+    cta: 'Get a quote',
+    legal: {},
+    cookieSettings: 'Cookie settings',
+  },
+  uk: {
+    tagline: 'Виходимо за межі звичного в бренд- і digital-дизайні.',
+    office: 'Офіс',
+    city: 'Тімішоара, Румунія',
+    directions: 'Прокласти маршрут',
+    mapsHint: ' (Google Maps, відкривається в новій вкладці)',
+    call: 'Телефон',
+    general: 'Загальні питання',
+    audience: 'Працюємо дистанційно з бізнесом <strong>з усієї України</strong>',
+    follow: 'Ми в соцмережах',
+    newTab: ' (відкривається в новій вкладці)',
+    ctaText: "Хочете оцінку проєкту без зобов'язань?",
+    cta: 'Отримати оцінку',
+    legal: {
+      '/privacy-cookie-policy-tarasovs-digital-agency/': 'Політика конфіденційності та cookie (англ.)',
+      '/terms-of-service-tarasovs-digital-agency/': 'Умови використання (англ.)',
+    },
+    legalLang: 'en',
+    cookieSettings: 'Налаштування cookie',
+  },
+};
+
+// Analytics consent banner (components/Analytics.astro). The privacy policy exists in English only.
+export const CONSENT_UI: Record<Lang, { title: string; text: string; policy: string; policyLang?: string; reject: string; accept: string }> = {
+  en: {
+    title: 'Analytics cookies',
+    text: 'Google Analytics counts visits without cookies until you accept. Analytics cookies and Microsoft Clarity load only if you agree.',
+    policy: 'Privacy policy',
+    reject: 'Reject',
+    accept: 'Accept analytics',
+  },
+  uk: {
+    title: 'Аналітичні cookie',
+    text: 'Поки ви не погодитесь, Google Analytics рахує відвідування без cookie. Аналітичні cookie і Microsoft Clarity вмикаються лише з вашої згоди.',
+    policy: 'Політика конфіденційності (англ.)',
+    policyLang: 'en',
+    reject: 'Відхилити',
+    accept: 'Прийняти аналітику',
+  },
+};
+
 // Interface strings in the shared header, layout and footer chrome.
 export const UI: Record<Lang, Record<string, string>> = {
   en: { skip: 'Skip to content', nav: 'Main', menu: 'Menu', darkTheme: 'Dark theme', language: 'Language', cta: 'Get Started', breadcrumb: 'Breadcrumb', submenu: 'submenu' },

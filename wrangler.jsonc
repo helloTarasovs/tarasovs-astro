@@ -1,8 +1,13 @@
 {
   "name": "tarasovs-astro",
   "compatibility_date": "2026-09-26",
+  // Small Worker in front of HTML pages: hides the EN / UA language switcher for visitors from the US.
+  "main": "worker/index.js",
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "404-page"
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // Only page requests go through the Worker; build assets and uploads are served directly (no Worker invocation).
+    "run_worker_first": ["/*", "!/_astro/*", "!/wp-content/*", "!/images/*"]
   }
 }

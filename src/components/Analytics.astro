@@ -1,15 +1,17 @@
 ---
 import { ANALYTICS } from '../lib/site';
+import { CONSENT_UI, langFromPath } from '../lib/i18n';
 const { googleTagId, clarityId, hosts } = ANALYTICS;
+const t = CONSENT_UI[langFromPath(Astro.url.pathname)];
 ---
 <aside class="analytics-consent" id="analytics-consent" aria-labelledby="analytics-consent-title" hidden>
   <div>
-    <h2 id="analytics-consent-title">Analytics cookies</h2>
-    <p>Google Analytics counts visits without cookies until you accept. Analytics cookies and Microsoft Clarity load only if you agree. <a href="/privacy-cookie-policy-tarasovs-digital-agency/">Privacy policy</a></p>
+    <h2 id="analytics-consent-title">{t.title}</h2>
+    <p>{t.text} <a href="/privacy-cookie-policy-tarasovs-digital-agency/" hreflang={t.policyLang}>{t.policy}</a></p>
   </div>
   <div class="analytics-consent-actions">
-    <button type="button" data-analytics-choice="denied">Reject</button>
-    <button type="button" data-analytics-choice="granted">Accept analytics</button>
+    <button type="button" data-analytics-choice="denied">{t.reject}</button>
+    <button type="button" data-analytics-choice="granted">{t.accept}</button>
   </div>
 </aside>
 

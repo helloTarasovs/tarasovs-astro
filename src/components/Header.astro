@@ -256,6 +256,14 @@ const inSection = (item: NavItem): boolean =>
     }
     .has-sub.is-closed .sub-menu { opacity: 0; visibility: hidden; }
     .sub-menu--short { columns: 1; } /* UA menu: three services, one column */
+    .nav-link, .nav-cta { white-space: nowrap; }
+  }
+  /* Narrow desktop (1024–1199px): the EN / UA switcher takes ~100px, so tighten spacing instead of wrapping labels */
+  @media (min-width: 64em) and (max-width: 74.99em) {
+    .header-inner, .site-nav { gap: var(--space-3); }
+    .nav-link { padding-inline: var(--space-2); }
+    .lang-switch { margin-right: 0; }
+    .lang-link { min-width: 36px; padding-inline: var(--space-1); }
     .sub-item { break-inside: avoid; min-width: 240px; }
     .sub-link { font-size: var(--text-sm); padding-block: 0.45rem; }
     .sub-item.has-children > .sub-link { font-weight: 600; }

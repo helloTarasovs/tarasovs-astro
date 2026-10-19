@@ -2,50 +2,57 @@
 // Site footer: same content as the live footer (address, phone, email, social, CTA, legal links).
 import Logo from './Logo.astro';
 import { CONTACT, SOCIAL, LEGAL } from '../lib/nav';
+import { FOOTER_UI, langFromPath } from '../lib/i18n';
+import { UA_CTA_URL } from '../lib/site';
+
+const lang = langFromPath(Astro.url.pathname);
+const t = FOOTER_UI[lang];
+const home = lang === 'uk' ? '/ua/' : '/';
+const ctaHref = lang === 'uk' ? UA_CTA_URL : '/contact-us/#CForm';
 ---
 <footer class="site-footer">
   <div class="container">
     <div class="footer-card">
       <div class="footer-brand reveal">
-        <a class="footer-logo" href="/" rel="home"><Logo /></a>
-        <p class="footer-tagline">Disrupting the ordinary in brand &amp; digital design.</p>
+        <a class="footer-logo" href={home} rel="home"><Logo /></a>
+        <p class="footer-tagline" set:html={t.tagline} />
       </div>
 
       <div class="footer-col reveal">
-        <p class="footer-label">Office</p>
+        <p class="footer-label">{t.office}</p>
         <address>
           str. Narcisei,<br /> Bloc 64, 307220,<br />
-          <strong>Timisoara, Romania</strong>
+          <strong>{t.city}</strong>
         </address>
-        <p><a href={CONTACT.mapsUrl} target="_blank" rel="noopener">Get directions<span class="visually-hidden"> (Google Maps, opens in a new tab)</span></a></p>
-        <p class="footer-label">Call</p>
+        <p><a href={CONTACT.mapsUrl} target="_blank" rel="noopener">{t.directions}<span class="visually-hidden">{t.mapsHint}</span></a></p>
+        <p class="footer-label">{t.call}</p>
         <p><a href={CONTACT.phoneHref}>{CONTACT.phone}</a></p>
       </div>
 
       <div class="footer-col reveal">
-        <p class="footer-label">General questions</p>
-        <p>Remote-first agency serving <strong>New York and US clients</strong></p>
+        <p class="footer-label">{t.general}</p>
+        <p set:html={t.audience} />
         <p><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
-        <p class="footer-label">Follow us</p>
+        <p class="footer-label">{t.follow}</p>
         <ul class="footer-social">
           {SOCIAL.map((s) => (
-            <li><a href={s.href} target="_blank" rel="noopener me">{s.label}<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href={s.href} target="_blank" rel="noopener me">{s.label}<span class="visually-hidden">{t.newTab}</span></a></li>
           ))}
         </ul>
       </div>
 
       <div class="footer-col footer-cta reveal">
-        <p class="footer-cta-text">Want a no-obligation to-hire estimate?</p>
-        <a class="button button--highlight" href="/contact-us/#CForm">
-          Get a quote
+        <p class="footer-cta-text">{t.ctaText}</p>
+        <a class="button button--highlight" href={ctaHref}>
+          {t.cta}
           <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 11h11.6l-5.3-5.3L12.7 4.3 20.4 12l-7.7 7.7-1.4-1.4 5.3-5.3H5z" /></svg>
         </a>
       </div>
 
       <div class="footer-bottom reveal">
         <ul class="footer-legal">
-          {LEGAL.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
-          <li><button type="button" data-analytics-settings aria-controls="analytics-consent" hidden>Cookie settings</button></li>
+          {LEGAL.map((l) => <li><a href={l.href} hreflang={t.legalLang}>{t.legal[l.href] ?? l.label}</a></li>)}
+          <li><button type="button" data-analytics-settings aria-controls="analytics-consent" hidden>{t.cookieSettings}</button></li>
         </ul>
         <p>&copy; {new Date().getFullYear()} Tarasovs Digital Agency</p>
       </div>
