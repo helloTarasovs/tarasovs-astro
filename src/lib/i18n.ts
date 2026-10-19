@@ -99,7 +99,7 @@ export const FOOTER_UI: Record<Lang, {
     city: 'Тімішоара, Румунія',
     directions: 'Прокласти маршрут',
     mapsHint: ' (Google Maps, відкривається в новій вкладці)',
-    call: 'Телефон',
+    call: 'Телефони',
     general: 'Загальні питання',
     audience: 'Працюємо дистанційно з бізнесом <strong>з усієї України</strong>',
     follow: 'Ми в соцмережах',

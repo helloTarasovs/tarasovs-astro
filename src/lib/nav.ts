@@ -64,6 +64,11 @@ export const CONTACT = {
   phone: '+40 748 708 694',
   phoneHref: 'tel:+40748708694',
   mapsUrl: 'https://maps.app.goo.gl/DzNNtXVr1unRUaDn9',
+  // Ukrainian numbers: shown on /ua/ pages only (contacts page and footer)
+  phonesUa: [
+    { label: '+380 50 171 33 39', href: 'tel:+380501713339', e164: '+380501713339' },
+    { label: '+380 50 931 59 79', href: 'tel:+380509315979', e164: '+380509315979' },
+  ],
 };
 
 export const SOCIAL = [

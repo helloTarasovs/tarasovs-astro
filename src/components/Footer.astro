@@ -26,6 +26,7 @@ const ctaHref = lang === 'uk' ? UA_CTA_URL : '/contact-us/#CForm';
         </address>
         <p><a href={CONTACT.mapsUrl} target="_blank" rel="noopener">{t.directions}<span class="visually-hidden">{t.mapsHint}</span></a></p>
         <p class="footer-label">{t.call}</p>
+        {lang === 'uk' && CONTACT.phonesUa.map((p) => <p><a href={p.href}>{p.label}</a></p>)}
         <p><a href={CONTACT.phoneHref}>{CONTACT.phone}</a></p>
       </div>
 

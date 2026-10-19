@@ -22,6 +22,17 @@ const jsonld = [
     inLanguage: 'uk',
     isPartOf: { '@id': `${SITE.url}/ua/#website` },
     about: { '@id': `${SITE.url}/#organization` },
+    mainEntity: {
+      '@type': 'Organization',
+      '@id': `${SITE.url}/#organization`,
+      contactPoint: CONTACT.phonesUa.map((p) => ({
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        telephone: p.e164,
+        areaServed: 'UA',
+        availableLanguage: ['Ukrainian'],
+      })),
+    },
   },
   breadcrumbSchema([{ name: 'Головна', path: '/ua/' }, { name: 'Контакти', path: '/ua/kontakty/' }]),
 ];
@@ -34,13 +45,18 @@ const jsonld = [
 
     <div class="contact-grid">
       <section class="offices" aria-labelledby="offices-title">
-        <h2 id="offices-title">Наш офіс</h2>
+        <h2 id="offices-title">Офіс і телефони</h2>
         <p class="lead">Працюємо дистанційно з бізнесом з усієї України.</p>
 
         <div class="office">
           <h3>Тімішоара</h3>
           <p>Str. Narcisei 64, 307220 Giroc</p>
           <p><strong>Телефон:</strong><br /><a href={CONTACT.phoneHref}>{CONTACT.phone}</a></p>
+        </div>
+
+        <div class="office">
+          <h3>Україна</h3>
+          <p><strong>Телефони:</strong><br />{CONTACT.phonesUa.map((p, i) => <>{i > 0 && <br />}<a href={p.href}>{p.label}</a></>)}</p>
         </div>
 
         <div class="office">
