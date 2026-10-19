@@ -1,8 +1,8 @@
 {
   "url": "/services/ui-ux-design/",
   "hero": {
-    "title": "UI/UX Design Services for Web — Figma to Framer",
-    "lead": "<p>Most studios hand over a Figma file and disappear. We design in Figma and build the site ourselves — in Framer, Webflow, or WordPress. <br>What you approve is what ships.</p>",
+    "title": "UI/UX Design Services for Web – Figma to Framer",
+    "lead": "<p>Most studios hand over a Figma file and disappear. We design in Figma and build the site ourselves – in Framer, Webflow, or WordPress. <br>What you approve is what ships.</p>",
     "actions": [
       {
         "label": "Start a project",
@@ -35,7 +35,7 @@
             },
             {
               "value": "12",
-              "label": "industries served — from legal to cannabis retail"
+              "label": "industries served – from legal to cannabis retail"
             },
             {
               "value": "100%",
@@ -51,7 +51,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>UX is structure and logic: how someone moves through your site, what they understand in the first ten seconds, and whether they find what they came for. UI is the visual layer on top — typography, colour, spacing, states, and the components that hold it all together.</p><p>Split across two vendors, these two layers drift apart. The UX researcher hands over a flow, the visual designer reinterprets it, the developer simplifies both into something buildable. Every handoff loses intent, and the client pays twice: once for the design, once for the fixes.</p><p>We keep research, structure, visual design, and build in one place. Not because it is cheaper, but because it is the only way the thing you approved in Figma is the thing that goes live.</p>"
+          "html": "<p>UX is structure and logic: how someone moves through your site, what they understand in the first ten seconds, and whether they find what they came for. UI is the visual layer on top – typography, colour, spacing, states, and the components that hold it all together.</p><p>Split across two vendors, these two layers drift apart. The UX researcher hands over a flow, the visual designer reinterprets it, the developer simplifies both into something buildable. Every handoff loses intent, and the client pays twice: once for the design, once for the fixes.</p><p>We keep research, structure, visual design, and build in one place. Not because it is cheaper, but because it is the only way the thing you approved in Figma is the thing that goes live.</p>"
         }
       ]
     },
@@ -75,7 +75,7 @@
             ],
             [
               "Who builds it",
-              "Your developer — or one you still need to find",
+              "Your developer – or one you still need to find",
               "We do"
             ],
             [
@@ -96,7 +96,7 @@
             [
               "What breaks",
               "Intent lost between design and code",
-              "Nothing to lose — same team"
+              "Nothing to lose – same team"
             ],
             [
               "Timeline",
@@ -134,7 +134,7 @@
             },
             {
               "title": "UI Design in Figma",
-              "html": "<p>The visual layer: typography scale, colour system, spacing rules, iconography, and imagery direction. Every component gets its states — default, hover, active, disabled, error, empty. Designs that only show the happy path are the ones that fall apart in build.</p>"
+              "html": "<p>The visual layer: typography scale, colour system, spacing rules, iconography, and imagery direction. Every component gets its states – default, hover, active, disabled, error, empty. Designs that only show the happy path are the ones that fall apart in build.</p>"
             },
             {
               "title": "Design System &amp; Components",
@@ -146,7 +146,7 @@
             },
             {
               "title": "Responsive &amp; Accessibility Review",
-              "html": "<p>Mobile-first layouts across every breakpoint, checked on real devices rather than a browser resize. Colour contrast, touch target sizes, keyboard navigation, and heading hierarchy reviewed against WCAG 2.1 AA — which is also, increasingly, what AI agents read when they parse your page.</p>"
+              "html": "<p>Mobile-first layouts across every breakpoint, checked on real devices rather than a browser resize. Colour contrast, touch target sizes, keyboard navigation, and heading hierarchy reviewed against WCAG 2.1 AA – which is also, increasingly, what AI agents read when they parse your page.</p>"
             },
             {
               "title": "Build-Ready Handoff",
@@ -175,7 +175,7 @@
             },
             {
               "title": "UI Design &amp; System",
-              "html": "<p>Visual design, component library, states, prototype. Weekly reviews — no month-long silence followed by a big reveal.</p>",
+              "html": "<p>Visual design, component library, states, prototype. Weekly reviews – no month-long silence followed by a big reveal.</p>",
               "meta": "Week 2 – 4"
             },
             {
@@ -287,7 +287,7 @@
                 "Reusable component library",
                 "Interactive prototype",
                 "Accessibility review (WCAG 2.1 AA)",
-                "SEO structure — headings, hierarchy, metadata",
+                "SEO structure – headings, hierarchy, metadata",
                 "3 rounds of revisions",
                 "Typical timeline: 4–6 weeks"
               ],
@@ -330,11 +330,11 @@
     "items": [
       {
         "q": "What's the difference between UI and UX design?",
-        "a": "<p>UX is the structure and logic — how someone moves through your site and whether they find what they came for. UI is the visual layer: typography, colour, spacing, and components. We do both, because splitting them across two vendors is where most projects lose their original intent.</p>"
+        "a": "<p>UX is the structure and logic – how someone moves through your site and whether they find what they came for. UI is the visual layer: typography, colour, spacing, and components. We do both, because splitting them across two vendors is where most projects lose their original intent.</p>"
       },
       {
         "q": "Do you only design, or do you build the site too?",
-        "a": "<p>Both. Every project we design, we can also build — in Framer, Webflow, or WordPress. You get one team from wireframe to live site, and nothing is lost in handoff.</p>"
+        "a": "<p>Both. Every project we design, we can also build – in Framer, Webflow, or WordPress. You get one team from wireframe to live site, and nothing is lost in handoff.</p>"
       },
       {
         "q": "Do you deliver the Figma files?",
@@ -370,7 +370,7 @@
   "cta": {
     "eyebrow": "Let’s Collaborate",
     "title": "Ready to design <span class=\"hl\">something that actually ships?</span>",
-    "text": "Tell us what you're building. We'll come back with a clear scope, timeline and price — no vague estimates, no hard sell.",
+    "text": "Tell us what you're building. We'll come back with a clear scope, timeline and price – no vague estimates, no hard sell.",
     "action": {
       "label": "Start a project",
       "href": "/contact-us/#CForm"

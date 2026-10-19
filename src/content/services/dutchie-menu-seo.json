@@ -3,7 +3,7 @@
   "variant": "center",
   "hero": {
     "title": "Dutchie Menu SEO That Actually Gets Your Products Ranked",
-    "lead": "<p>Your Dutchie menu holds every product a customer could search for — but if it’s embedded, poorly structured, or disconnected from your domain, Google barely sees it. We make your Dutchie menu, categories, and product pages crawlable, indexable, and connected to your main SEO — so your inventory starts driving organic orders instead of sitting invisible.</p>",
+    "lead": "<p>Your Dutchie menu holds every product a customer could search for – but if it’s embedded, poorly structured, or disconnected from your domain, Google barely sees it. We make your Dutchie menu, categories, and product pages crawlable, indexable, and connected to your main SEO – so your inventory starts driving organic orders instead of sitting invisible.</p>",
     "actions": [
       {
         "label": "Get a Free Menu SEO Audit",
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>Every flower, edible, vape, and accessory you carry is something a real person is searching for by name. That’s product-level demand with high purchase intent — and for most dispensaries it goes straight to competitors, because the menu that holds those products isn’t structured for search.</p><p>The default Dutchie embed drops your menu into a cross-origin iFrame that Google doesn’t crawl as part of your page. No product URLs on your domain, no schema, no local inventory signals. The inventory exists — search engines and AI assistants just can’t reliably see it. That’s the gap we close.</p>"
+          "html": "<p>Every flower, edible, vape, and accessory you carry is something a real person is searching for by name. That’s product-level demand with high purchase intent – and for most dispensaries it goes straight to competitors, because the menu that holds those products isn’t structured for search.</p><p>The default Dutchie embed drops your menu into a cross-origin iFrame that Google doesn’t crawl as part of your page. No product URLs on your domain, no schema, no local inventory signals. The inventory exists – search engines and AI assistants just can’t reliably see it. That’s the gap we close.</p>"
         }
       ]
     },
@@ -51,7 +51,7 @@
             },
             {
               "title": "Category &amp; Product Architecture",
-              "html": "<p>Clean, crawlable URLs for categories and products — no thin, duplicate, or orphaned pages. Category hubs that pass authority down to individual products.</p>",
+              "html": "<p>Clean, crawlable URLs for categories and products – no thin, duplicate, or orphaned pages. Category hubs that pass authority down to individual products.</p>",
               "meta": "Architecture"
             },
             {
@@ -61,7 +61,7 @@
             },
             {
               "title": "Menu-to-Site Connection",
-              "html": "<p>We wire your menu into your main site’s SEO — internal links from blog and local pages, consistent canonicals, and a sitemap that covers your product URLs.</p>",
+              "html": "<p>We wire your menu into your main site’s SEO – internal links from blog and local pages, consistent canonicals, and a sitemap that covers your product URLs.</p>",
               "meta": "Connection"
             },
             {
@@ -71,7 +71,7 @@
             },
             {
               "title": "Compliant Product Copy",
-              "html": "<p>Unique, useful category and product descriptions that avoid health claims and policy violations — content that ranks without putting your listings at risk.</p>",
+              "html": "<p>Unique, useful category and product descriptions that avoid health claims and policy violations – content that ranks without putting your listings at risk.</p>",
               "meta": "Compliant",
               "img": {
                 "type": "img",
@@ -87,22 +87,22 @@
     },
     {
       "eyebrow": "",
-      "title": "The four Dutchie menu setups — and which one actually ranks",
+      "title": "The four Dutchie menu setups – and which one actually ranks",
       "blocks": [
         {
           "type": "cards",
           "items": [
             {
               "title": "Embedded menu (default iFrame):",
-              "html": "<p>only partially indexed by Google. It can drive some traffic, but product URLs and schema don’t live on your domain — a ceiling you’ll hit fast.</p>"
+              "html": "<p>only partially indexed by Google. It can drive some traffic, but product URLs and schema don’t live on your domain – a ceiling you’ll hit fast.</p>"
             },
             {
               "title": "Dutchie Pro + Proxy / Dutchie Pro:",
-              "html": "<p>serves your storefront as part of your root domain, fully crawlable with real product URLs and schema. This is the configuration that ranks — and what we recommend for most dispensaries serious about organic.</p>"
+              "html": "<p>serves your storefront as part of your root domain, fully crawlable with real product URLs and schema. This is the configuration that ranks – and what we recommend for most dispensaries serious about organic.</p>"
             },
             {
               "title": "Subdomain menu:",
-              "html": "<p>fully indexed, but Google treats a subdomain as a separate site — so authority, local relevance, and internal links don’t fully flow to your main domain. We generally avoid it. <strong>Dutchie+:</strong> a fully custom, indexable build for larger MSOs. We help you pick and configure the right one.</p>"
+              "html": "<p>fully indexed, but Google treats a subdomain as a separate site – so authority, local relevance, and internal links don’t fully flow to your main domain. We generally avoid it. <strong>Dutchie+:</strong> a fully custom, indexable build for larger MSOs. We help you pick and configure the right one.</p>"
             }
           ]
         },
@@ -123,7 +123,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>We took Verdi Cannabis’s invisible iFrame menu and turned individual product and store pages into ranking, traffic-driving URLs. This is menu SEO we’ve actually shipped — with the Search Console data to back it.</p>"
+          "html": "<p>We took Verdi Cannabis’s invisible iFrame menu and turned individual product and store pages into ranking, traffic-driving URLs. This is menu SEO we’ve actually shipped – with the Search Console data to back it.</p>"
         },
         {
           "type": "projects",
@@ -136,7 +136,7 @@
     },
     {
       "eyebrow": "",
-      "title": "Menu SEO done the cannabis way — not a generic template.",
+      "title": "Menu SEO done the cannabis way – not a generic template.",
       "blocks": [
         {
           "type": "prose",
@@ -145,21 +145,21 @@
         {
           "type": "checklist",
           "items": [
-            "<strong>Indexable product URLs</strong> — real pages on your domain, not menu content trapped inside a frame.",
-            "<strong>No duplicate or thin pages</strong> — unique category and product content, correct canonicals across multi-location menus.",
-            "<strong>Product schema on your domain</strong> — live Product / Offer / AggregateRating markup eligible for rich results and AI answers.",
-            "<strong>Compliance-safe copy</strong> — no health claims or policy violations that flag listings or trigger takedowns."
+            "<strong>Indexable product URLs</strong> – real pages on your domain, not menu content trapped inside a frame.",
+            "<strong>No duplicate or thin pages</strong> – unique category and product content, correct canonicals across multi-location menus.",
+            "<strong>Product schema on your domain</strong> – live Product / Offer / AggregateRating markup eligible for rich results and AI answers.",
+            "<strong>Compliance-safe copy</strong> – no health claims or policy violations that flag listings or trigger takedowns."
           ]
         }
       ]
     },
     {
       "eyebrow": "",
-      "title": "AI shops your menu too — if it can read it.",
+      "title": "AI shops your menu too – if it can read it.",
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>When a customer asks ChatGPT or Perplexity for “the best gummies near me” or a specific strain, the assistant pulls from clear, crawlable, structured pages. An iFrame menu is invisible to it — the same reason it’s invisible to Googlebot. Structured, indexable product pages are the raw material AI search uses to recommend and cite. Menu SEO isn’t just about blue links anymore; it’s what makes your inventory eligible to be the answer.</p>"
+          "html": "<p>When a customer asks ChatGPT or Perplexity for “the best gummies near me” or a specific strain, the assistant pulls from clear, crawlable, structured pages. An iFrame menu is invisible to it – the same reason it’s invisible to Googlebot. Structured, indexable product pages are the raw material AI search uses to recommend and cite. Menu SEO isn’t just about blue links anymore; it’s what makes your inventory eligible to be the answer.</p>"
         },
         {
           "type": "actions",
@@ -193,7 +193,7 @@
             },
             {
               "title": "Menu-to-Site Connection",
-              "html": "<p>We connect the menu to your main SEO — internal links from blog and local pages, category hubs, canonical handling, and local inventory signals for neighborhood queries.</p>"
+              "html": "<p>We connect the menu to your main SEO – internal links from blog and local pages, category hubs, canonical handling, and local inventory signals for neighborhood queries.</p>"
             },
             {
               "title": "Monitoring &amp; Iteration",
@@ -205,7 +205,7 @@
     },
     {
       "eyebrow": "",
-      "title": "Your menu is the engine — but not the whole system.",
+      "title": "Your menu is the engine – but not the whole system.",
       "blocks": [
         {
           "type": "prose",
@@ -219,7 +219,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>We’ll check how your Dutchie menu is configured, how much of it Google has actually indexed, whether your product pages carry schema, and where the fastest local and AI-search wins are — then send a prioritized menu SEO plan.</p><p>Tarasovs Agency — SEO, GEO &amp; Dutchie migration support for licensed cannabis dispensaries.</p>"
+          "html": "<p>We’ll check how your Dutchie menu is configured, how much of it Google has actually indexed, whether your product pages carry schema, and where the fastest local and AI-search wins are – then send a prioritized menu SEO plan.</p><p>Tarasovs Agency – SEO, GEO &amp; Dutchie migration support for licensed cannabis dispensaries.</p>"
         },
         {
           "type": "form"
@@ -247,7 +247,7 @@
       },
       {
         "q": "Do I need Dutchie Pro to do menu SEO?",
-        "a": "<p>You can win some ground on an embedded menu, but the ceiling is low. Real product-level ranking needs indexable pages on your domain — which is why we often pair menu SEO with a move to Dutchie Pro.</p>"
+        "a": "<p>You can win some ground on an embedded menu, but the ceiling is low. Real product-level ranking needs indexable pages on your domain – which is why we often pair menu SEO with a move to Dutchie Pro.</p>"
       },
       {
         "q": "Will a subdomain menu hurt my SEO?",
@@ -255,7 +255,7 @@
       },
       {
         "q": "Can you optimize product pages for specific strains and products?",
-        "a": "<p>Yes. We give categories and high-value products unique, compliant descriptions, add product schema, and build category hubs — while fixing duplication so similar products don't compete with each other.</p>"
+        "a": "<p>Yes. We give categories and high-value products unique, compliant descriptions, add product schema, and build category hubs – while fixing duplication so similar products don't compete with each other.</p>"
       },
       {
         "q": "How does menu SEO help with AI search?",

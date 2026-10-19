@@ -27,9 +27,9 @@ const checked = d.ai_scanned_at ? new Date(d.ai_scanned_at.replace(' ', 'T') + '
 const fmt = (date: Date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
 
 // Plugin SEO: its own title/description, not the Yoast fields.
-const title = `${d.name} — ChatGPT Visibility Score | ${d.primary_market}, ${d.state}`;
+const title = `${d.name} – ChatGPT Visibility Score | ${d.primary_market}, ${d.state}`;
 const description = `Explore ${d.name} in ${d.primary_market}, ${d.state}. See its ${score}/100 ChatGPT Visibility score, ${prompts} recorded prompts, market reach and competitors.`;
-const heading = `${d.name} ChatGPT Visibility — ${d.primary_market}, ${d.state}`;
+const heading = `${d.name} ChatGPT Visibility – ${d.primary_market}, ${d.state}`;
 const place = d.primary_market && d.primary_market !== d.city ? `${d.primary_market}, ${d.city}, ${d.state}` : `${d.city}, ${d.state}`;
 
 const band = (v: number) => (v >= 85 ? 'Excellent' : v >= 70 ? 'Strong' : v >= 55 ? 'Moderate' : v >= 40 ? 'Weak' : 'Very weak');
@@ -292,7 +292,7 @@ const jsonld = [
           </div>
           <div class="tdv-methodology-info-card">
             <span class="tdv-profile-kicker">Scope</span>
-            <h3>What this score does — and does not — measure</h3>
+            <h3>What this score does – and does not – measure</h3>
             <p>The public score measures ChatGPT recommendation visibility only. Google Organic, Google Maps, Menu SEO, Gemini and other provider analysis are separate and available in the Full Visibility Report.</p>
           </div>
         </div>

@@ -2,7 +2,7 @@
   "url": "/services/website-design-services/",
   "hero": {
     "title": "Website Design Services in New York",
-    "lead": "<p>We design websites for ambitious businesses in New York and Europe — built to rank on Google, perform in AI search, and turn visitors into paying clients.</p>",
+    "lead": "<p>We design websites for ambitious businesses in New York and Europe – built to rank on Google, perform in AI search, and turn visitors into paying clients.</p>",
     "actions": [
       {
         "label": "Start a Project",
@@ -34,11 +34,11 @@
           "items": [
             {
               "title": "Discovery &amp; Strategy",
-              "html": "<p>We start by understanding your business, your competitors, and your customers — not just your color preferences. Every design decision that follows is grounded in research, not guesswork. We define what success looks like before a single pixel is placed.</p>"
+              "html": "<p>We start by understanding your business, your competitors, and your customers – not just your color preferences. Every design decision that follows is grounded in research, not guesswork. We define what success looks like before a single pixel is placed.</p>"
             },
             {
               "title": "Design &amp; Prototyping",
-              "html": "<p>Our designers build wireframes and interactive prototypes before moving to full visual design. You see the structure and logic of your site before it's built — saving time, reducing revisions, and ensuring the final product matches your expectations.</p>"
+              "html": "<p>Our designers build wireframes and interactive prototypes before moving to full visual design. You see the structure and logic of your site before it's built – saving time, reducing revisions, and ensuring the final product matches your expectations.</p>"
             },
             {
               "title": "Development &amp; Launch",
@@ -65,11 +65,11 @@
             },
             {
               "title": "SEO-Ready Architecture",
-              "html": "<p>Clean heading structure, optimized meta tags, fast load times, and semantic HTML — the technical foundation that search engines and AI models rely on to understand and rank your content.</p>"
+              "html": "<p>Clean heading structure, optimized meta tags, fast load times, and semantic HTML – the technical foundation that search engines and AI models rely on to understand and rank your content.</p>"
             },
             {
               "title": "AI Search Optimization (GEO)",
-              "html": "<p>We structure page content — FAQs, definitions, clear answers — so that generative AI platforms like ChatGPT, Perplexity, and Google AI Overviews can cite your business in their responses. This is standard on every project we deliver in 2026.</p>"
+              "html": "<p>We structure page content – FAQs, definitions, clear answers – so that generative AI platforms like ChatGPT, Perplexity, and Google AI Overviews can cite your business in their responses. This is standard on every project we deliver in 2026.</p>"
             },
             {
               "title": "Core Web Vitals Optimization",
@@ -77,7 +77,7 @@
             },
             {
               "title": "CMS Integration &amp; Training",
-              "html": "<p>We build on platforms your team can actually use. Full documentation and a training session are included with every project — you won’t need us every time you need to change a headline</p>"
+              "html": "<p>We build on platforms your team can actually use. Full documentation and a training session are included with every project – you won’t need us every time you need to change a headline</p>"
             }
           ]
         }
@@ -110,7 +110,7 @@
             },
             {
               "title": "Service businesses and agencies",
-              "html": "<p>— consultants, law firms, medical practices, creative studios — that rely on their website to establish authority and capture qualified leads.</p>"
+              "html": "<p>– consultants, law firms, medical practices, creative studios – that rely on their website to establish authority and capture qualified leads.</p>"
             },
             {
               "title": "E-commerce brands",
@@ -129,7 +129,7 @@
           "items": [
             {
               "title": "We design for where search is going, not where it's been.",
-              "html": "<p>Traditional web design agencies optimize for Google 2020. We build for Google 2026 — where AI Overviews, voice search, and generative answers change how your site needs to be structured. Every project includes GEO optimization as standard.</p>"
+              "html": "<p>Traditional web design agencies optimize for Google 2020. We build for Google 2026 – where AI Overviews, voice search, and generative answers change how your site needs to be structured. Every project includes GEO optimization as standard.</p>"
             },
             {
               "title": "Three offices, one standard.",
@@ -137,7 +137,7 @@
             },
             {
               "title": "We measure what matters.",
-              "html": "<p>Traffic, leads, and conversions — not awards. We set up analytics from day one and provide a post-launch report showing exactly how your new site performs against the old one.</p>"
+              "html": "<p>Traffic, leads, and conversions – not awards. We set up analytics from day one and provide a post-launch report showing exactly how your new site performs against the old one.</p>"
             },
             {
               "title": "Senior attention on every project.",
@@ -201,7 +201,7 @@
       },
       {
         "q": "What is GEO and why is it included in your web design projects?",
-        "a": "<p>GEO (Generative Engine Optimization) is the practice of structuring website content so that AI-powered search platforms — ChatGPT, Google AI Overviews, Perplexity — cite your business in their generated answers. We include GEO-ready content structure in every project because AI search is already where a significant portion of user attention goes in 2026.</p>"
+        "a": "<p>GEO (Generative Engine Optimization) is the practice of structuring website content so that AI-powered search platforms – ChatGPT, Google AI Overviews, Perplexity – cite your business in their generated answers. We include GEO-ready content structure in every project because AI search is already where a significant portion of user attention goes in 2026.</p>"
       },
       {
         "q": "Do you provide website maintenance after launch?",
@@ -212,7 +212,7 @@
   "cta": {
     "eyebrow": "Let’s Collaborate",
     "title": "Ready to build a website <span class=\"hl\">that works as hard as you do?</span>",
-    "text": "Tell us about your project. We'll review it and come back with a clear proposal — no vague estimates, no hard sell.",
+    "text": "Tell us about your project. We'll review it and come back with a clear proposal – no vague estimates, no hard sell.",
     "action": {
       "label": "Start your project",
       "href": "mailto:hello@tarasovs.me"

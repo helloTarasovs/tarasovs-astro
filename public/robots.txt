@@ -1,14 +1,14 @@
 User-agent: *
 Allow: /
 
-# OpenAI / ChatGPT — live citation only. GPTBot (training crawler) stays
+# OpenAI / ChatGPT – live citation only. GPTBot (training crawler) stays
 # blocked via Cloudflare AI Crawl Control, do not re-allow it here.
 User-agent: OAI-SearchBot
 Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
-# Anthropic / Claude — live citation only. ClaudeBot (training crawler)
+# Anthropic / Claude – live citation only. ClaudeBot (training crawler)
 # stays blocked via Cloudflare AI Crawl Control, do not re-allow it here.
 User-agent: Claude-User
 Allow: /

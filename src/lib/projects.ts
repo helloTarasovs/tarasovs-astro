@@ -19,7 +19,7 @@ export async function sortedProjects() {
 }
 
 /** Card image variants: 480w/800w WebP next to the original (JPG/PNG up to 800px also get a same-size WebP) (made with cwebp). The original itself
- *  is left out of the card srcset — 800px is plenty for a card, even on a 3x phone. */
+ *  is left out of the card srcset – 800px is plenty for a card, even on a 3x phone. */
 const THUMB_WIDTHS = [480, 800];
 export function coverSrcset(src: string, width?: number) {
   if (!width) return undefined;

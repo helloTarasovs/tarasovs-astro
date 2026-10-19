@@ -729,7 +729,7 @@ Expert with 15+ years of web design and development experience.
 &#10;## Core Services
 &#10;- [SEO Services](https://tarasovs.me/services/seo-services/):
   Technical SEO, content strategy, local visibility, and reporting.
-- [GEO — AI Search Optimization](https://tarasovs.me/services/geo-ai-search-optimization/):
+- [GEO – AI Search Optimization](https://tarasovs.me/services/geo-ai-search-optimization/):
   AI visibility audits, content architecture, and Share of Model tracking.
 - [Framer Development](https://tarasovs.me/services/framer-development/):
   Framer websites with CMS, motion, and an SEO foundation.

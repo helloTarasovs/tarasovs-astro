@@ -2,7 +2,7 @@
   "url": "/services/seo-services/",
   "hero": {
     "title": "SEO Services for Businesses in the US and Europe",
-    "lead": "<p>Search engine optimization is not a one-time task. It is a long-term investment in your website’s ability to attract the right audience, without paying for every click.</p><p>At Tarasovs Digital Agency, we build SEO strategies that combine technical precision, content structure, and authority signals — helping businesses in the United States and Europe rank higher on Google and get discovered across modern search platforms, including AI-powered tools like ChatGPT, Perplexity, and Google AI Overviews.</p><p>Every SEO engagement starts with understanding your business, your audience, and the competitive landscape — not with a generic checklist.</p>",
+    "lead": "<p>Search engine optimization is not a one-time task. It is a long-term investment in your website’s ability to attract the right audience, without paying for every click.</p><p>At Tarasovs Digital Agency, we build SEO strategies that combine technical precision, content structure, and authority signals – helping businesses in the United States and Europe rank higher on Google and get discovered across modern search platforms, including AI-powered tools like ChatGPT, Perplexity, and Google AI Overviews.</p><p>Every SEO engagement starts with understanding your business, your audience, and the competitive landscape – not with a generic checklist.</p>",
     "actions": [
       {
         "label": "Start Your SEO Project",
@@ -20,7 +20,7 @@
           "items": [
             {
               "title": "Technical SEO <span class=\"hl\">Audit &amp; Optimization</span>",
-              "html": "<p>We analyze your site’s technical foundation and fix what holds it back — before building visibility on a shaky base.</p>",
+              "html": "<p>We analyze your site’s technical foundation and fix what holds it back – before building visibility on a shaky base.</p>",
               "tags": [
                 "Crawl & Indexation",
                 "Core Web Vitals",
@@ -30,7 +30,7 @@
             },
             {
               "title": "Keyword Research <span class=\"hl\">Intent Mapping</span>",
-              "html": "<p>We identify the keywords your target audience actually uses — not just high-volume terms, but phrases that signal intent to hire, buy, or engage. We then map those keywords to specific pages and content opportunities across your site.</p>",
+              "html": "<p>We identify the keywords your target audience actually uses – not just high-volume terms, but phrases that signal intent to hire, buy, or engage. We then map those keywords to specific pages and content opportunities across your site.</p>",
               "tags": [
                 "Competitor Gap Analysis",
                 "Long-tail Keywords",
@@ -39,7 +39,7 @@
             },
             {
               "title": "On-Page SEO Optimization",
-              "html": "<p>Every page on your website sends signals to search engines. We optimize those signals systematically — from headings and metadata to internal linking and content structure.</p>",
+              "html": "<p>Every page on your website sends signals to search engines. We optimize those signals systematically – from headings and metadata to internal linking and content structure.</p>",
               "tags": [
                 "Title & Meta Tags",
                 "Heading Hierarchy",
@@ -48,7 +48,7 @@
             },
             {
               "title": "Content Strategy <span class=\"hl\">SEO Copywriting</span>",
-              "html": "<p>We develop a content plan aligned with your keyword strategy — and write or restructure the content itself.</p>",
+              "html": "<p>We develop a content plan aligned with your keyword strategy – and write or restructure the content itself.</p>",
               "tags": [
                 "Service Pages",
                 "Blog Planning",
@@ -58,7 +58,7 @@
             },
             {
               "title": "Link Building <span class=\"hl\">Authority Development</span>",
-              "html": "<p>External links remain one of Google’s strongest ranking signals. We build high-quality backlinks through editorial outreach, digital PR, and strategic partnerships — not through shortcuts that risk penalties.</p>",
+              "html": "<p>External links remain one of Google’s strongest ranking signals. We build high-quality backlinks through editorial outreach, digital PR, and strategic partnerships – not through shortcuts that risk penalties.</p>",
               "tags": [
                 "Editorial Outreach",
                 "Digital PR",
@@ -76,7 +76,7 @@
             },
             {
               "title": "SEO Reporting <span class=\"hl\">Analytics</span>",
-              "html": "<p>We provide clear, monthly reporting on rankings, traffic, and conversions — without inflated metrics or vague summaries. You always know what was done, what changed, and what comes next.</p>",
+              "html": "<p>We provide clear, monthly reporting on rankings, traffic, and conversions – without inflated metrics or vague summaries. You always know what was done, what changed, and what comes next.</p>",
               "tags": [
                 "Keyword Rankings",
                 "Organic Traffic",
@@ -89,7 +89,7 @@
     },
     {
       "eyebrow": "",
-      "title": "How We Work — The Process",
+      "title": "How We Work – The Process",
       "blocks": [
         {
           "type": "steps",
@@ -101,7 +101,7 @@
             },
             {
               "title": "Strategy &amp; Roadmap",
-              "html": "<p>We present a prioritized SEO roadmap — structured by impact and effort. You know exactly what we will work on and why.</p>",
+              "html": "<p>We present a prioritized SEO roadmap – structured by impact and effort. You know exactly what we will work on and why.</p>",
               "meta": "Week 2 – 3"
             },
             {
@@ -152,7 +152,7 @@
               "features": [
                 "Everything in Foundation",
                 "2 SEO articles or page rewrites / month",
-                "Link building — up to 6 backlinks / month",
+                "Link building – up to 6 backlinks / month",
                 "Schema markup implementation",
                 "Local SEO (1 target market)",
                 "Bi-weekly strategy calls"
@@ -171,7 +171,7 @@
               "features": [
                 "Everything in Growth",
                 "4+ content pieces per month",
-                "Aggressive link building — 10+ / month",
+                "Aggressive link building – 10+ / month",
                 "Multi-location or multi-market SEO",
                 "AI search optimization (GEO)",
                 "Priority support &amp; weekly updates"
@@ -187,7 +187,7 @@
           "type": "callout",
           "eyebrow": "Let’s Collaborate",
           "title": "Custom Engagement",
-          "text": "If your needs do not fit a standard package — a one-time audit, a content-only retainer, or a pre-launch SEO setup — we can structure a custom scope.",
+          "text": "If your needs do not fit a standard package – a one-time audit, a content-only retainer, or a pre-launch SEO setup – we can structure a custom scope.",
           "action": {
             "label": "Contact us to discuss your project",
             "href": "/contact-us/#CForm"
@@ -222,11 +222,11 @@
           "items": [
             {
               "title": "SEO + Web Development Combined",
-              "html": "<p>Most agencies hand you a list of fixes. We handle both — so recommendations actually get done, and done correctly.</p>"
+              "html": "<p>Most agencies hand you a list of fixes. We handle both – so recommendations actually get done, and done correctly.</p>"
             },
             {
               "title": "Google and AI Search Optimized",
-              "html": "<p>We structure your content to rank on Google and be cited by ChatGPT, Perplexity, and Google AI Overviews — a growing source of discovery for service businesses.</p>"
+              "html": "<p>We structure your content to rank on Google and be cited by ChatGPT, Perplexity, and Google AI Overviews – a growing source of discovery for service businesses.</p>"
             },
             {
               "title": "US &amp; European Market Expertise",
@@ -234,11 +234,11 @@
             },
             {
               "title": "Founder-Led Every Engagement",
-              "html": "<p>Yurii Tarasov personally leads every SEO project. You work directly with the decision-maker — not a rotating account manager.</p>"
+              "html": "<p>Yurii Tarasov personally leads every SEO project. You work directly with the decision-maker – not a rotating account manager.</p>"
             },
             {
               "title": "Reporting That Actually Matters",
-              "html": "<p>No vanity metrics. Clear data on traffic, rankings, and business impact — every month.</p>"
+              "html": "<p>No vanity metrics. Clear data on traffic, rankings, and business impact – every month.</p>"
             }
           ]
         }
@@ -251,7 +251,7 @@
     "items": [
       {
         "q": "How long does SEO take to show results?",
-        "a": "<p>Most websites start seeing measurable ranking improvements within 3 to 6 months. Competitive niches or websites with significant technical issues may take longer. SEO compounds over time — the earlier you start, the stronger your position becomes.</p>"
+        "a": "<p>Most websites start seeing measurable ranking improvements within 3 to 6 months. Competitive niches or websites with significant technical issues may take longer. SEO compounds over time – the earlier you start, the stronger your position becomes.</p>"
       },
       {
         "q": "Do you work with businesses outside New York?",
@@ -259,7 +259,7 @@
       },
       {
         "q": "What makes your SEO different from other agencies?",
-        "a": "<p>We do not separate SEO from web development. When we identify a technical issue, we fix it. When a page needs better content, we write it. Most agencies stop at recommendations — we execute.</p>"
+        "a": "<p>We do not separate SEO from web development. When we identify a technical issue, we fix it. When a page needs better content, we write it. Most agencies stop at recommendations – we execute.</p>"
       },
       {
         "q": "Do you offer one-time audits?",
@@ -267,7 +267,7 @@
       },
       {
         "q": "Can SEO help me appear in ChatGPT or Google AI answers?",
-        "a": "<p>Yes — this is what we call GEO (Generative Engine Optimization). It requires structured content, strong authority signals, and FAQ schema. We integrate GEO into our SEO process across all packages.</p>"
+        "a": "<p>Yes – this is what we call GEO (Generative Engine Optimization). It requires structured content, strong authority signals, and FAQ schema. We integrate GEO into our SEO process across all packages.</p>"
       },
       {
         "q": "How do you report progress?",
@@ -282,7 +282,7 @@
   "cta": {
     "eyebrow": "Let’s Collaborate",
     "title": "Ready to Build Sustainable <span class=\"hl\">Organic Growth?</span>",
-    "text": "Tell us about your business and your current SEO challenges. We will review your website and come back with an honest assessment and a clear proposal — no vague promises, no hard sell.",
+    "text": "Tell us about your business and your current SEO challenges. We will review your website and come back with an honest assessment and a clear proposal – no vague promises, no hard sell.",
     "action": {
       "label": "Start Your SEO Project",
       "href": "/contact-us/#CForm"

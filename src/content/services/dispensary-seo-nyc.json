@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>For licensed dispensaries in NYC, customers usually discover stores through Google Maps, “near me” searches, product/menu searches, delivery queries, and now AI recommendations. The problem: many dispensary websites and Dutchie menus are not structured to capture that demand. We fix the technical, local, and content signals that help your dispensary show up where customers are already searching.</p><p>Most dispensaries aren’t optimized for any of it.<br>That’s a problem — and an opening.</p><p>Operate outside the five boroughs? Explore our <a href=\"/dispensary-seo-new-york/\">dispensary SEO across New York State</a> for upstate, suburban and multi-location markets.</p><p><a href=\"/dispensary-seo-2026/\">2026 dispensary SEO guide</a></p>"
+          "html": "<p>For licensed dispensaries in NYC, customers usually discover stores through Google Maps, “near me” searches, product/menu searches, delivery queries, and now AI recommendations. The problem: many dispensary websites and Dutchie menus are not structured to capture that demand. We fix the technical, local, and content signals that help your dispensary show up where customers are already searching.</p><p>Most dispensaries aren’t optimized for any of it.<br>That’s a problem – and an opening.</p><p>Operate outside the five boroughs? Explore our <a href=\"/dispensary-seo-new-york/\">dispensary SEO across New York State</a> for upstate, suburban and multi-location markets.</p><p><a href=\"/dispensary-seo-2026/\">2026 dispensary SEO guide</a></p>"
         }
       ]
     },
@@ -82,7 +82,7 @@
             },
             {
               "title": "Be the AI recommendation",
-              "html": "<p>When customers ask ChatGPT, Perplexity, or Google’s AI for the best dispensary nearby, we make sure your name is the one it recommends — not your competitor’s.</p>",
+              "html": "<p>When customers ask ChatGPT, Perplexity, or Google’s AI for the best dispensary nearby, we make sure your name is the one it recommends – not your competitor’s.</p>",
               "meta": "AI Search (GEO)",
               "link": {
                 "label": "Get started",
@@ -104,7 +104,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>Your Dutchie menu is one of your most valuable SEO assets — but if it is embedded, poorly indexed, or disconnected from your main domain, Google may not fully understand your products, categories, and local inventory.<br><br>We help dispensaries audit, optimize, and migrate Dutchie setups so menus can support organic search instead of sitting outside the SEO system.</p>"
+          "html": "<p>Your Dutchie menu is one of your most valuable SEO assets – but if it is embedded, poorly indexed, or disconnected from your main domain, Google may not fully understand your products, categories, and local inventory.<br><br>We help dispensaries audit, optimize, and migrate Dutchie setups so menus can support organic search instead of sitting outside the SEO system.</p>"
         },
         {
           "type": "cards",
@@ -140,19 +140,19 @@
     },
     {
       "eyebrow": "",
-      "title": "We do this for dispensaries specifically — not as a side service.",
+      "title": "We do this for dispensaries specifically – not as a side service.",
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>Cannabis SEO isn’t regular SEO. The compliance rules, the platform restrictions, and the technical quirks are different — and getting them wrong can get your listings suspended. We know the details that generalist agencies miss:</p>"
+          "html": "<p>Cannabis SEO isn’t regular SEO. The compliance rules, the platform restrictions, and the technical quirks are different – and getting them wrong can get your listings suspended. We know the details that generalist agencies miss:</p>"
         },
         {
           "type": "checklist",
           "items": [
-            "<strong>Dispensary-correct schema &amp; local data</strong> — structured the way search engines and AI models expect for licensed retailers.",
-            "<strong>Compliance-first content</strong> — no health claims, no policy violations that trigger penalties or takedowns.",
-            "<strong>Google Business Profile done right</strong> — the cannabis-specific rules on categories, pricing, and promotions that keep your listing safe.",
-            "<strong>Dutchie &amp; Shopify menu indexing</strong> — embedded menus often don’t get indexed; we fix that so your products are actually findable.</p><p><a href=\"/dispensary-seo-2026/\">2026 dispensary SEO guide</a>"
+            "<strong>Dispensary-correct schema &amp; local data</strong> – structured the way search engines and AI models expect for licensed retailers.",
+            "<strong>Compliance-first content</strong> – no health claims, no policy violations that trigger penalties or takedowns.",
+            "<strong>Google Business Profile done right</strong> – the cannabis-specific rules on categories, pricing, and promotions that keep your listing safe.",
+            "<strong>Dutchie &amp; Shopify menu indexing</strong> – embedded menus often don’t get indexed; we fix that so your products are actually findable.</p><p><a href=\"/dispensary-seo-2026/\">2026 dispensary SEO guide</a>"
           ]
         }
       ]
@@ -163,7 +163,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>When someone asks an AI assistant for a dispensary recommendation, it names just a few — not a full page of links. Those few spots are getting locked in right now, while almost no dispensary is optimized for AI search.</p><p>Being early here means owning the recommendation before your competitors even know it’s happening.</p>"
+          "html": "<p>When someone asks an AI assistant for a dispensary recommendation, it names just a few – not a full page of links. Those few spots are getting locked in right now, while almost no dispensary is optimized for AI search.</p><p>Being early here means owning the recommendation before your competitors even know it’s happening.</p>"
         },
         {
           "type": "actions",
@@ -223,7 +223,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>We’ll review your Dutchie menu setup, Google Business Profile, local rankings, Search Console visibility, and AI search presence — then send a practical list of next steps.</p><p>Tarasovs Agency — SEO, GEO &amp; Dutchie migration support for licensed cannabis dispensaries.</p>"
+          "html": "<p>We’ll review your Dutchie menu setup, Google Business Profile, local rankings, Search Console visibility, and AI search presence – then send a practical list of next steps.</p><p>Tarasovs Agency – SEO, GEO &amp; Dutchie migration support for licensed cannabis dispensaries.</p>"
         },
         {
           "type": "form"

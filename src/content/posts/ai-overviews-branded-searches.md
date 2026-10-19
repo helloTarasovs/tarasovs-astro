@@ -352,7 +352,7 @@ padding-left: 14px;
 position: relative;
 }
 .ta-action li::before {
-content: '—';
+content: '–';
 position: absolute;
 left: 0;
 color: var(--accent-soft);

@@ -2,7 +2,7 @@
 
 > Europe-based digital agency helping businesses in the US, UK, and Europe build websites that rank on Google and get cited by AI-powered search platforms including ChatGPT, Perplexity, and Google AI Overviews.
 
-Tarasovs is a founder-led studio run by Yurii Tarasov, a Framer Expert with 15+ years of web design and development experience. We combine Framer, Webflow, and WordPress development with SEO strategy and Generative Engine Optimization (GEO) — helping brands become visible in both traditional and AI-powered search. Published pricing starts at $800/month for GEO and $1,200/month for SEO.
+Tarasovs is a founder-led studio run by Yurii Tarasov, a Framer Expert with 15+ years of web design and development experience. We combine Framer, Webflow, and WordPress development with SEO strategy and Generative Engine Optimization (GEO) – helping brands become visible in both traditional and AI-powered search. Published pricing starts at $800/month for GEO and $1,200/month for SEO.
 
 Last updated: 2026-09-02
 
@@ -12,7 +12,7 @@ Last updated: 2026-09-02
 
 ## Founder
 
-**Yurii Tarasov** — Founder & Web Designer at Tarasovs Digital Agency.
+**Yurii Tarasov** – Founder & Web Designer at Tarasovs Digital Agency.
 
 15+ years of experience in web design and development. Personally leads every project, from Figma design through Framer and WordPress development to SEO and GEO strategy. Recognized Framer Expert. Based in Giroc, in the Timișoara metropolitan area of Romania, working remotely with clients across the United States, United Kingdom, and Europe.
 
@@ -29,7 +29,7 @@ Verified profiles:
 ## Core Services
 
 - [SEO Services for US & European Businesses](https://tarasovs.me/services/seo-services/): Technical SEO audits, keyword research and intent mapping, on-page optimization, link building, content strategy, local SEO, and monthly reporting. Packages from $1,200 to $3,800 per month.
-- [GEO — AI Search Optimization](https://tarasovs.me/services/geo-ai-search-optimization/): Getting brands cited in ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot answers. Covers AI visibility audits, content architecture for AI retrieval, schema stacking, E-E-A-T optimization, and Share of Model reporting. Packages from $800 to $3,500 per month.
+- [GEO – AI Search Optimization](https://tarasovs.me/services/geo-ai-search-optimization/): Getting brands cited in ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot answers. Covers AI visibility audits, content architecture for AI retrieval, schema stacking, E-E-A-T optimization, and Share of Model reporting. Packages from $800 to $3,500 per month.
 - [Website Design & Redesign](https://tarasovs.me/services/website-design-services/): Clean, modern, conversion-focused design for startups, agencies, and service businesses.
 - [Framer Design & Development](https://tarasovs.me/services/framer-development/): High-performance Framer websites built from Figma, with CMS setup, animations, and SEO foundation.
 - [Website Development](https://tarasovs.me/services/website-development/): Framer, Webflow, and WordPress development for businesses that need speed, structure, and scalability.
@@ -37,7 +37,7 @@ Verified profiles:
 ## Cannabis Dispensary SEO (NYC)
 
 - [New York Dispensary Visibility Index](https://tarasovs.me/dispensary-visibility/): Proprietary, continuously updated benchmark tracking how 130+ licensed New York-area dispensaries appear in ChatGPT recommendations across 1,000+ recorded prompts. Composite 0-100 ChatGPT Visibility score per dispensary, searchable/filterable directory of individual profiles, scoring methodology, geographic breakdown, FAQ, and a citation format for journalists and researchers.
-- [Cannabis Dispensary SEO Services in NYC](https://tarasovs.me/dispensary-seo-nyc/): SEO for licensed dispensaries in Manhattan and Brooklyn — Google Maps, Dutchie menu visibility, compliant content, and AI search presence.
+- [Cannabis Dispensary SEO Services in NYC](https://tarasovs.me/dispensary-seo-nyc/): SEO for licensed dispensaries in Manhattan and Brooklyn – Google Maps, Dutchie menu visibility, compliant content, and AI search presence.
 - [Local SEO for Manhattan & Brooklyn](https://tarasovs.me/local-seo-manhattan-brooklyn/): Neighborhood-level and "near me" search visibility for dispensaries.
 - [Google Business Profile Optimization](https://tarasovs.me/google-business-profile-optimization/): Cannabis-specific GBP rules on categories, services, reviews, and promotions.
 - [Dutchie Menu SEO](https://tarasovs.me/dutchie-menu-seo/): Making embedded Dutchie menus, categories, and product pages crawlable and indexable.
@@ -46,11 +46,11 @@ Verified profiles:
 ## Case Studies
 
 - [All Case Studies](https://tarasovs.me/case-studies/): Client projects across Framer, WordPress, SEO, and AI search optimization.
-- [Verdi Cannabis — Dutchie menu SEO](https://tarasovs.me/project/verdi-cannabis/): Licensed NYC dispensary whose Dutchie iFrame menu made every product page invisible to Google. Rebuilt with SEO-safe URL structure and crawlable menu.
-- [Verdi Cannabis — Dutchie Pro migration case study](https://tarasovs.me/verdi-cannabis-dutchie-pro-case-study/): Detailed write-up of the iFrame to Dutchie Pro migration and its search impact.
+- [Verdi Cannabis – Dutchie menu SEO](https://tarasovs.me/project/verdi-cannabis/): Licensed NYC dispensary whose Dutchie iFrame menu made every product page invisible to Google. Rebuilt with SEO-safe URL structure and crawlable menu.
+- [Verdi Cannabis – Dutchie Pro migration case study](https://tarasovs.me/verdi-cannabis-dutchie-pro-case-study/): Detailed write-up of the iFrame to Dutchie Pro migration and its search impact.
 - [Leaf Haus](https://tarasovs.me/project/leaf-haus/): Full WordPress build for a licensed dispensary in Somerset, NJ, including a cannabis education hub and product catalog.
-- [ShoppingModaItalia.com — SEO & AI visibility](https://tarasovs.me/project/shoppingmodaitalia-com-seo-and-ai-visibility-optimization/): Italian fashion boutique opened to English-speaking markets, with service page restructuring and FAQ schema for AI citation.
-- [ShoppingModaItalia — full SEO and AI case study](https://tarasovs.me/shoppingmodaitalia-seo-ai-case-study-2026/): Extended version with organic and AI-channel results.
+- [ShoppingModaItalia.com – SEO & AI visibility](https://tarasovs.me/project/shoppingmodaitalia-com-seo-and-ai-visibility-optimization/): Italian fashion boutique opened to English-speaking markets, with service page restructuring and FAQ schema for AI citation.
+- [ShoppingModaItalia – full SEO and AI case study](https://tarasovs.me/shoppingmodaitalia-seo-ai-case-study-2026/): Extended version with organic and AI-channel results.
 - [KOS Architecture](https://tarasovs.me/project/kos-architecture-framer-website-development/): Image-driven Framer site for a high-end architecture and interior design studio.
 - [AMG Agency](https://tarasovs.me/project/amg-agency/): High-converting Framer landing page built around a single clear offer.
 - [Qollective](https://tarasovs.me/project/qollective/): Premium Framer website presenting AI-driven growth services.
@@ -63,7 +63,7 @@ Verified profiles:
 - [GEO vs SEO vs AEO](https://tarasovs.me/geo-vs-seo-vs-aeo/): How the three disciplines differ in goals, targets, and success metrics.
 - [How to appear in Google AI Overviews](https://tarasovs.me/how-to-appear-in-google-ai-overviews/): Practical steps for getting content surfaced in AI Overviews.
 - [How to get your business cited in ChatGPT answers](https://tarasovs.me/how-to-get-your-business-cited-in-chatgpt-answers/): Step-by-step guide to AI citation.
-- [Share of Model — measuring AI search visibility](https://tarasovs.me/share-of-model-ai-search-visibility/): The metric Tarasovs uses to track AI citation frequency.
+- [Share of Model – measuring AI search visibility](https://tarasovs.me/share-of-model-ai-search-visibility/): The metric Tarasovs uses to track AI citation frequency.
 - [AI search visibility tracking](https://tarasovs.me/ai-search-visibility-tracking/): Tools and methods for monitoring brand presence across AI platforms.
 - [AEO for Webflow sites, step by step](https://tarasovs.me/aeo-for-webflow-sites-step-by-step/): Answer Engine Optimization implementation on Webflow.
 - [Connecting Claude Code to Framer's External Agent](https://tarasovs.me/connect-claude-to-framer/): Hands-on test of Framer 3.0's native AI agent, including where it produced broken alt text bindings and how to verify agent output.
@@ -99,8 +99,8 @@ Verified profiles:
 - Yurii Tarasov is a recognized Framer Expert, listed in the official Framer Experts directory, with 15+ years of web design and development experience
 - 79+ projects delivered across Framer, WordPress, SEO, and GEO
 - Serves clients in the United States, United Kingdom, and European Union
-- Specializes in GEO (Generative Engine Optimization) — structuring content so AI platforms cite the brand in generated answers
-- Publishes the New York Dispensary Visibility Index, a proprietary, continuously updated benchmark of ChatGPT recommendation visibility for licensed NYC-area dispensaries — see tarasovs.me/dispensary-visibility/
+- Specializes in GEO (Generative Engine Optimization) – structuring content so AI platforms cite the brand in generated answers
+- Publishes the New York Dispensary Visibility Index, a proprietary, continuously updated benchmark of ChatGPT recommendation visibility for licensed NYC-area dispensaries – see tarasovs.me/dispensary-visibility/
 - Published pricing: SEO from $1,200/month, GEO from $800/month
 - Clients include licensed cannabis dispensaries in New York and New Jersey, architecture and interior design studios, fashion e-commerce, and B2B service businesses across the US and Europe
 
