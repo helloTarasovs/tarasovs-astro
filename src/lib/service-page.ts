@@ -1,4 +1,4 @@
-import { PARTNER_STATUS, SITE, UA_CTA_URL, abs } from './site';
+import { SITE, UA_CTA_URL, abs } from './site';
 
 // Data model for hand-built service pages (src/content/services/*.json), rendered by layouts/ServicePage.astro.
 // Copy comes from the WordPress export; SEO + JSON-LD come from _wp-export/pages.json via wpPage().
@@ -84,7 +84,6 @@ export interface ServicePageData {
   seo?: { title: string; description: string };
   service?: { name: string }; // adds a Service node (used by /ua/ pages; EN pages carry theirs in pages.json)
   dateModified?: string; // ISO date, goes to the generated FAQPage schema
-  partner?: boolean; // adds the Dutchie partner membership to the Organization schema
   variant?: 'center'; // centered dispensary-page look (panel hero, centered sections)
   headerCta?: string; // header button target on this page, e.g. '#contact' (default: /contact-us/)
   breadcrumb: { name: string; path: string }[]; // without the page itself; empty = no breadcrumb (home pages)
@@ -102,9 +101,9 @@ export interface ServicePageData {
 
 const stripTags = (s: string) => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
 
-/** Replaces {{PARTNER_STATUS}} and {{UA_CTA_URL}} in every string of the page data, so they live in one place (lib/site.ts). */
+/** Replaces {{UA_CTA_URL}} in every string of the page data, so it lives in one place (lib/site.ts). */
 export function fillTokens<T>(value: T): T {
-  if (typeof value === 'string') return value.replaceAll('{{PARTNER_STATUS}}', PARTNER_STATUS).replaceAll('{{UA_CTA_URL}}', UA_CTA_URL) as T;
+  if (typeof value === 'string') return value.replaceAll('{{UA_CTA_URL}}', UA_CTA_URL) as T;
   if (Array.isArray(value)) return value.map(fillTokens) as T;
   if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, fillTokens(v)])) as T;
   return value;
@@ -119,20 +118,6 @@ export function faqSchema(data: ServicePageData) {
     '@type': 'FAQPage',
     ...(data.dateModified ? { dateModified: data.dateModified } : {}),
     mainEntity: items.map((i) => ({ '@type': 'Question', name: stripTags(i.q), acceptedAnswer: { '@type': 'Answer', text: i.a } })),
-  };
-}
-
-/** Same @id as the site-wide Organization, so Google merges it into one entity. */
-export function partnerOrganization() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': `${SITE.url}/#organization`,
-    memberOf: {
-      '@type': 'ProgramMembership',
-      programName: PARTNER_STATUS,
-      hostingOrganization: { '@type': 'Organization', name: 'Dutchie', url: 'https://dutchie.com' },
-    },
   };
 }
 

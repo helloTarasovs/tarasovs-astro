@@ -7,9 +7,6 @@ export const SITE = {
   twitterCard: 'summary_large_image',
 };
 
-// Dutchie partner status, exact wording from the partner agreement. Reference it, never retype it.
-export const PARTNER_STATUS = 'Certified Dutchie Pro Partner';
-
 // Every CTA button on /ua/ pages: the Ukrainian contact form (src/pages/ua/kontakty.astro).
 export const UA_CTA_URL = '/ua/kontakty/#CForm';
 

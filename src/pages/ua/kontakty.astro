@@ -37,7 +37,7 @@ const jsonld = [
   breadcrumbSchema([{ name: 'Головна', path: '/ua/' }, { name: 'Контакти', path: '/ua/kontakty/' }]),
 ];
 ---
-<Base title={seo.title} description={seo.description} jsonld={jsonld} mainClass="contact-page">
+<Base title={seo.title} description={seo.description} jsonld={jsonld} mainClass="contact-page" headerCta="#inquiry">
   <div class="contact container">
     <header class="contact-header">
       <h1>Контакти</h1>
@@ -65,7 +65,7 @@ const jsonld = [
         </div>
       </section>
 
-      <section class="inquiry" aria-labelledby="inquiry-title">
+      <section class="inquiry" id="inquiry" aria-labelledby="inquiry-title">
         <h2 id="inquiry-title">Заявка на міні-аудит або проєкт</h2>
         <p class="lead">Надішліть назву сайту й місто. Ми подивимось і напишемо, що бачимо. Формат відповіді: звіт на ваш емейл. Термін: протягом 24 годин.</p>
         <ContactForm

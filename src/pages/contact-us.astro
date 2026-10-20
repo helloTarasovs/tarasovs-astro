@@ -10,7 +10,7 @@ import '../styles/contact.css';
 const page = wpPage('/contact-us/');
 const jsonld = [...page.jsonld, breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Contacts', path: '/contact-us/' }])];
 ---
-<Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld} mainClass="contact-page">
+<Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld} mainClass="contact-page" headerCta="#inquiry">
   <div class="contact container">
     <header class="contact-header">
       <h1>Contacts</h1>
@@ -35,7 +35,7 @@ const jsonld = [...page.jsonld, breadcrumbSchema([{ name: 'Home', path: '/' }, {
         </div>
       </section>
 
-      <section class="inquiry" aria-labelledby="inquiry-title">
+      <section class="inquiry" id="inquiry" aria-labelledby="inquiry-title">
         <h2 id="inquiry-title">Work inquiries</h2>
         <p class="lead">Fill in this form<br /> with your support inquiry.</p>
         <ContactForm />

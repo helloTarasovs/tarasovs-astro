@@ -6,7 +6,7 @@ import Faq from '../components/blocks/Faq.astro';
 import Marquee from '../components/Marquee.astro';
 import { wpPage } from '../lib/pages';
 import { breadcrumbSchema } from '../lib/schema';
-import { countTodos, dedupeJsonld, faqSchema, fillTokens, partnerOrganization, serviceSchema, stripTodos, type ServicePageData } from '../lib/service-page';
+import { countTodos, dedupeJsonld, faqSchema, fillTokens, serviceSchema, stripTodos, type ServicePageData } from '../lib/service-page';
 import { UI } from '../lib/i18n';
 
 interface Props { data: ServicePageData }
@@ -22,7 +22,6 @@ const page = data.seo ? { seo: { ...data.seo, canonical: data.url, robots: undef
 const faqLd = faqSchema(data);
 const pageJsonld = dedupeJsonld(page.jsonld).filter((b: any) => !(faqLd && b?.['@type'] === 'FAQPage'));
 if (faqLd) pageJsonld.push(faqLd);
-if (data.partner) pageJsonld.push(partnerOrganization());
 const serviceLd = serviceSchema(data);
 if (serviceLd) pageJsonld.unshift(serviceLd);
 
@@ -42,8 +41,11 @@ const items: Item[] = [
   ...(formSection ? [{ kind: 'section', section: formSection } as Item] : []),
 ];
 const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/&[a-z#0-9]+;/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+// Header "Get Started" jumps to this page's own form when it has one (data.headerCta overrides it).
+const formSec = data.sections.find((x) => x.blocks.some((b) => b.type === 'form'));
+const headerCta = data.headerCta ?? (formSec ? `#${formSec.id ?? slugify(formSec.title ?? '')}` : undefined);
 ---
-<Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld} headerCta={data.headerCta}>
+<Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld} headerCta={headerCta}>
   <article class:list={['service', { 'service--center': center }]}>
     <header class:list={['hero', { 'hero--center': center }]}>
       <div class="container">
