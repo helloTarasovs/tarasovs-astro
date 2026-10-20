@@ -14,6 +14,14 @@ interface Props {
   dispensaries?: string[]; // adds an optional "Dispensary" field with suggestions
   note?: string;
   successText?: string;
+  // Optional extras (used by the Dutchie Pro page); without them the form is unchanged:
+  nameLabel?: string;
+  emailPlaceholder?: string;
+  website?: { label: string; placeholder: string }; // required "website" field
+  topic?: { legend: string; options: string[] }; // optional radio group, field name "help_with"
+  messageOptional?: boolean; // shows "(optional)" next to the message label
+  compact?: boolean; // name + email side by side from 40em
+  fullWidthSubmit?: boolean;
 }
 const ua = Astro.props.lang === 'uk' ? FORM_UI.uk : undefined;
 const {
@@ -26,6 +34,13 @@ const {
   dispensaries,
   note,
   successText = ua?.success ?? 'Thank you! Your message has been sent. We will get back to you soon.',
+  nameLabel = ua?.name ?? 'Name',
+  emailPlaceholder = ua?.emailPlaceholder ?? 'Your working email',
+  website,
+  topic,
+  messageOptional = false,
+  compact = false,
+  fullWidthSubmit = false,
 } = Astro.props;
 const f = (name: string) => `${id.toLowerCase()}-${name}`;
 const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? '';
@@ -38,14 +53,30 @@ if (!accessKey && !(globalThis as any).__w3fWarned) (globalThis as any).__w3fWar
   <!-- Honeypot: humans never see it; Web3Forms drops submissions that fill it -->
   <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
-  <div class="field">
-    <label for={f('name')}>{ua?.name ?? 'Name'} <span class="req">{ua?.required ?? '(required)'}</span></label>
-    <input id={f('name')} name="name" type="text" autocomplete="name" required maxlength="400" placeholder={ua?.namePlaceholder ?? 'Your name'} />
+  <div class:list={['field-pair', { 'field-row': compact }]}>
+    <div class="field">
+      <label for={f('name')}>{nameLabel} <span class="req">{ua?.required ?? '(required)'}</span></label>
+      <input id={f('name')} name="name" type="text" autocomplete="name" required maxlength="400" placeholder={ua?.namePlaceholder ?? 'Your name'} />
+    </div>
+    <div class="field">
+      <label for={f('email')}>{emailLabel} <span class="req">{ua?.required ?? '(required)'}</span></label>
+      <input id={f('email')} name="email" type="email" autocomplete="email" required maxlength="400" placeholder={emailPlaceholder} />
+    </div>
   </div>
-  <div class="field">
-    <label for={f('email')}>{emailLabel} <span class="req">{ua?.required ?? '(required)'}</span></label>
-    <input id={f('email')} name="email" type="email" autocomplete="email" required maxlength="400" placeholder={ua?.emailPlaceholder ?? 'Your working email'} />
-  </div>
+  {website && (
+    <div class="field">
+      <label for={f('website')}>{website.label} <span class="req">(required)</span></label>
+      <input id={f('website')} name="website" type="text" inputmode="url" autocomplete="url" required maxlength="300" pattern="\S+\.\S+" title="Enter your website, for example yourdispensary.com" placeholder={website.placeholder} />
+    </div>
+  )}
+  {topic && (
+    <fieldset class="field choices">
+      <legend>{topic.legend}</legend>
+      <div class="choice-list">
+        {topic.options.map((o) => <label class="choice"><input type="radio" name="help_with" value={o} /><span>{o}</span></label>)}
+      </div>
+    </fieldset>
+  )}
   {dispensaries && (
     <div class="field">
       <label for={f('dispensary')}>Dispensary <span class="req">(optional)</span></label>
@@ -54,7 +85,7 @@ if (!accessKey && !(globalThis as any).__w3fWarned) (globalThis as any).__w3fWar
     </div>
   )}
   <div class="field">
-    <label for={f('message')}>{messageLabel}</label>
+    <label for={f('message')}>{messageLabel}{messageOptional && <> <span class="req">(optional)</span></>}</label>
     <textarea id={f('message')} name="message" rows="6" maxlength="2000" placeholder={messagePlaceholder}></textarea>
   </div>
 
@@ -68,7 +99,7 @@ if (!accessKey && !(globalThis as any).__w3fWarned) (globalThis as any).__w3fWar
     </p>
   )}
 
-  <button class="button" type="submit" data-submit>{submitLabel}</button>
+  <button class:list={['button', { 'is-block': fullWidthSubmit }]} type="submit" data-submit>{submitLabel}</button>
   {note && <p class="consent">{note}</p>}
   <p class="status" role="status" aria-live="polite" data-status></p>
 </form>
@@ -78,7 +109,7 @@ if (!accessKey && !(globalThis as any).__w3fWarned) (globalThis as any).__w3fWar
   .field { display: grid; gap: var(--space-2); }
   label { font-weight: 500; font-size: var(--text-sm); }
   .req { color: var(--color-text-muted); font-weight: 400; }
-  input:not([type='hidden']):not(.hp), textarea {
+  input:not([type='hidden']):not([type='radio']):not(.hp), textarea {
     width: 100%;
     min-height: 48px;
     padding: 0.75rem 1rem;
@@ -92,6 +123,18 @@ if (!accessKey && !(globalThis as any).__w3fWarned) (globalThis as any).__w3fWar
   textarea { resize: vertical; min-height: 140px; }
   input::placeholder, textarea::placeholder { color: var(--color-text-muted); opacity: 0.8; }
   input:focus-visible, textarea:focus-visible { border-color: var(--color-focus); outline-offset: 0; }
+  .field-pair { display: contents; } /* wrapper is layout-neutral unless the form is `compact` */
+  .field-row { display: grid; gap: var(--space-4); }
+  @media (min-width: 40em) { .field-row { grid-template-columns: 1fr 1fr; } }
+  .choices { min-width: 0; margin: 0; padding: 0; border: 0; }
+  .choices legend { padding: 0; margin-bottom: var(--space-2); font-weight: 500; font-size: var(--text-sm); }
+  .choice-list { display: grid; gap: var(--space-2); }
+  @media (min-width: 40em) { .choice-list { grid-template-columns: repeat(3, 1fr); } }
+  .choice { display: flex; align-items: center; gap: var(--space-2); min-height: 44px; padding: 0.5rem 0.9rem; border: 2px solid color-mix(in srgb, currentColor 35%, transparent); border-radius: 14px; font-weight: 500; font-size: var(--text-sm); cursor: pointer; }
+  .choice input { flex: none; width: 1.1rem; height: 1.1rem; margin: 0; accent-color: var(--brand-violet); }
+  .choice:has(input:checked) { border-color: currentColor; background: color-mix(in srgb, currentColor 8%, transparent); }
+  .choice:has(input:focus-visible) { outline: 3px solid currentColor; outline-offset: 2px; }
+  .button.is-block { justify-self: stretch; width: 100%; }
   .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
   .consent { color: var(--color-text-muted); font-size: var(--text-xs); }
   .button { justify-self: start; min-width: 160px; }

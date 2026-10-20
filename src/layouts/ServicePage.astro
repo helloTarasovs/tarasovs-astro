@@ -340,7 +340,7 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
   .service--center :is(.tone-lilac, .tone-mint) :global(.form-card) { max-width: none; padding: 0; border: 0; background: none; }
   .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form label), .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form .req), .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form .consent), .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form .status) { color: var(--lilac-text); }
   .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form a) { color: var(--lilac-text); font-weight: 600; }
-  .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form input:not([type='hidden']):not(.hp)), .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form textarea) {
+  .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form input:not([type='hidden']):not([type='radio']):not(.hp)), .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form textarea) {
     min-height: 44px; border: 2px solid var(--lilac-line); border-radius: 14px; background: transparent; color: var(--lilac-text);
   }
   .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form input::placeholder), .service--center :is(.tone-lilac, .tone-mint) :global(.contact-form textarea::placeholder) { color: var(--lilac-text); opacity: 0.7; }

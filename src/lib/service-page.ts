@@ -56,7 +56,7 @@ export type Block =
   | { type: 'tags'; items: string[] }
   | { type: 'image'; src: string; alt: string; width?: number; height?: number }
   | { type: 'callout'; eyebrow?: string; title: string; text?: string; action?: Action }
-  | { type: 'form'; title?: string };
+  | { type: 'form'; title?: string; props?: Record<string, unknown> }; // props: extra ContactForm props
 
 export interface Plan {
   name: string;

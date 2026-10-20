@@ -45,7 +45,7 @@ const { blocks, formSubject, reveal = false } = Astro.props;
     {b.type === 'form' && (
       <div class:list={['form-card', { reveal }]}>
         {b.title && <p class="form-title">{b.title}</p>}
-        <ContactForm subject={formSubject} />
+        <ContactForm subject={formSubject} {...(b.props ?? {})} />
       </div>
     )}
   </div>
