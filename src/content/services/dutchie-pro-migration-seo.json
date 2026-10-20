@@ -5,7 +5,7 @@
   "dateModified": "2026-10-20",
   "hero": {
     "title": "Upgrade Your Dutchie Menu to a Custom <span class=\"nowrap\">E-Commerce</span> Pro Storefront",
-    "lead": "<p>Replace your embedded Dutchie menu with a branded shopping experience on your own domain. We handle custom SDK development, Shopify and WordPress integration, and SEO-focused migration – from setup to launch.</p><p>Trusted experience from two NYC dispensary projects: Verdi Cannabis &amp; Mighty Lucky.</p><p><strong>Same-Domain Storefront · Custom SDK Development · SEO Migration &amp; Redirects</strong></p>",
+    "lead": "<p>Replace your embedded Dutchie menu with a branded shopping experience on your own domain. We handle custom SDK development, Shopify and WordPress integration, and SEO-focused migration – from setup to launch.</p><p>Trusted experience from two NYC dispensary projects: Verdi Cannabis &amp; Mighty Lucky.</p>",
     "actions": [
       {
         "label": "Discuss Your Dutchie Pro Upgrade",
@@ -59,7 +59,8 @@
           }
         }
       ]
-    }
+    },
+    "leadAfterProof": "<p><strong>Same-Domain Storefront · Custom SDK Development · SEO Migration &amp; Redirects</strong></p>"
   },
   "sections": [
     {
