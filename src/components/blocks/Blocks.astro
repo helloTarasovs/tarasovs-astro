@@ -2,6 +2,7 @@
 // Renders a list of typed content blocks (see lib/service-page.ts).
 import type { Block } from '../../lib/service-page';
 import Cards from './Cards.astro';
+import CaseStudies from './CaseStudies.astro';
 import Steps from './Steps.astro';
 import Stats from './Stats.astro';
 import Pricing from './Pricing.astro';
@@ -17,6 +18,7 @@ const { blocks, formSubject, reveal = false } = Astro.props;
   <div class:list={['block', `block-${b.type}`]}>
     {b.type === 'prose' && <div class="prose" set:html={b.html} />}
     {b.type === 'cards' && <Cards items={b.items} columns={b.columns} reveal={reveal} />}
+    {b.type === 'cases' && <CaseStudies items={b.items} reveal={reveal} />}
     {b.type === 'steps' && <Steps items={b.items} reveal={reveal} />}
     {b.type === 'stats' && <Stats items={b.items} reveal={reveal} />}
     {b.type === 'pricing' && <Pricing plans={b.plans} reveal={reveal} />}

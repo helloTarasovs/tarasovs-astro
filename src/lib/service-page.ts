@@ -27,9 +27,25 @@ export interface Card {
   img?: Img;
 }
 
+export interface CaseStudy {
+  label: string; // small uppercase label
+  title: string;
+  html: string; // short description (block HTML)
+  deliverablesTitle?: string; // default "Key deliverables"
+  deliverables: string[]; // inline HTML each
+  resultsTitle: string; // "Results", "Highlights"
+  badge?: string; // check-mark line in the results box ("storefront launched")
+  results?: { value: string; label: string }[];
+  note?: string; // small print under the results
+  img: Img; // storefront screenshot, 16:9
+  link: Action; // live storefront (opens in a new tab)
+  secondary?: Action;
+}
+
 export type Block =
   | { type: 'prose'; html: string }
   | { type: 'cards'; items: Card[]; columns?: 2 | 3 | 4 }
+  | { type: 'cases'; items: CaseStudy[] }
   | { type: 'steps'; items: Card[] }
   | { type: 'stats'; items: { value: string; label: string }[] }
   | { type: 'pricing'; plans: Plan[] }
