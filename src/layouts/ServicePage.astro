@@ -277,7 +277,7 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
   .hero--center .hero-actions .button--ghost:hover { background: var(--brand-violet); color: #fff; }
   :global(:root[data-theme='dark']) .hero--center .hero-actions .button--ghost { border-color: #c4b5fd; color: #c4b5fd; }
   @media (prefers-color-scheme: dark) { :global(:root:not([data-theme='light'])) .hero--center .hero-actions .button--ghost { border-color: #c4b5fd; color: #c4b5fd; } }
-  @media (max-width: 40em) { .hero--center .hero-panel { padding-block: 3rem 3.5rem; } .hero--center .hero-actions { flex-direction: column; align-items: center; } }
+  @media (max-width: 40em) { .hero--center .hero-panel { padding-block: 2rem 3.5rem; } .hero--center .hero-actions { flex-direction: column; align-items: center; } }
 
   /* centered variant: section headings and prose centered (cards, panels, FAQ, form get their own rules) */
   .service--center .section-head { max-width: none; margin-bottom: 2.6rem; text-align: center; }
