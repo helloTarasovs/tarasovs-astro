@@ -215,25 +215,46 @@
     },
     {
       "id": "custom-dutchie-pro-development",
-      "title": "Beyond migration: custom Dutchie Pro development",
-      "intro": "<p>We work directly with the Dutchie E-Commerce Pro SDK to build storefronts that feel like part of your brand, not a generic embedded menu.</p>",
+      "eyebrow": "Custom Dutchie Pro Development",
+      "title": "Beyond Migration. Make Dutchie Pro Feel Like Your Brand.",
+      "intro": "<p>Already using Dutchie E-Commerce Pro? We build custom storefront experiences using the Dutchie Pro SDK – moving beyond default layouts to create a shopping experience that reflects your dispensary's brand.</p>",
       "blocks": [
         {
-          "type": "checklist",
+          "type": "cards",
+          "columns": 2,
           "items": [
-            "Custom branded headers, footers and navigation",
-            "Product cards, category layouts and filtering",
-            "Shopify and WordPress integration",
-            "Cloudflare reverse proxy and same-domain routing",
-            "SEO migration, redirects and post-launch monitoring"
+            {
+              "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 8h18\"/><path d=\"M3 16h18\"/></svg>",
+              "title": "Custom Header &amp; Footer",
+              "html": "<p>Branded navigation, store information, loyalty links, and a consistent experience across your website.</p>"
+            },
+            {
+              "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z\"/><circle cx=\"7.5\" cy=\"7.5\" r=\"1.5\"/></svg>",
+              "title": "Product &amp; Category Design",
+              "html": "<p>Custom product cards, badges, category layouts, and more polished product discovery.</p>"
+            },
+            {
+              "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 6h16\"/><path d=\"M7 12h10\"/><path d=\"M10 18h4\"/></svg>",
+              "title": "Navigation &amp; Filters",
+              "html": "<p>Improved category navigation, product filtering, and mobile shopping usability.</p>"
+            },
+            {
+              "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"13.5\" cy=\"6.5\" r=\"1.2\"/><circle cx=\"17.5\" cy=\"10.5\" r=\"1.2\"/><circle cx=\"8.5\" cy=\"7.5\" r=\"1.2\"/><circle cx=\"6.5\" cy=\"12.5\" r=\"1.2\"/><path d=\"M12 2a10 10 0 0 0 0 20c1 0 1.7-.8 1.7-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.8-1.7 1.7-1.7H16a6 6 0 0 0 6-6c0-4.4-4.5-8.2-10-8.2z\"/></svg>",
+              "title": "Branded UI Components",
+              "html": "<p>Custom typography, colors, promotional sections, and storefront components built with the SDK.</p>"
+            }
           ]
+        },
+        {
+          "type": "prose",
+          "html": "<p class=\"partner-note\">Built within Dutchie Pro SDK capabilities, while retaining Dutchie's core commerce functionality.</p>"
         },
         {
           "type": "actions",
           "items": [
             {
-              "label": "Discuss Your Migration",
-              "href": "/contact-us/#CForm"
+              "label": "Discuss Custom Development",
+              "href": "#CForm"
             }
           ]
         }
