@@ -11,7 +11,8 @@ const lang = langFromPath(path);
 const t = UI[lang];
 const nav = lang === 'uk' ? MAIN_NAV_UK : MAIN_NAV;
 const home = lang === 'uk' ? '/ua/' : '/';
-const ctaHref = lang === 'uk' ? UA_CTA_URL : '/contact-us/';
+// A page can point the header button at its own form (e.g. '#contact'); default: the site contact page
+const ctaHref = Astro.props.ctaHref ?? (lang === 'uk' ? UA_CTA_URL : '/contact-us/');
 // EN / UA switcher: links to the paired page, else the other home. Hidden until /ua/ is built.
 const otherLang: Lang = lang === 'en' ? 'uk' : 'en';
 const otherHref = switchHref(path, pageExists);

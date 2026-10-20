@@ -43,7 +43,7 @@ const items: Item[] = [
 ];
 const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/&[a-z#0-9]+;/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
 ---
-<Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld}>
+<Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld} headerCta={data.headerCta}>
   <article class:list={['service', { 'service--center': center }]}>
     <header class:list={['hero', { 'hero--center': center }]}>
       <div class="container">

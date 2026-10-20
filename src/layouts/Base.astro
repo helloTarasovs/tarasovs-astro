@@ -28,6 +28,7 @@ interface Props {
   modifiedTime?: Date;
   jsonld?: unknown[];
   mainClass?: string; // page-level layout hook, e.g. 'home' for src/styles/home.css
+  headerCta?: string; // header button target (default: the site contact page)
 }
 
 const {
@@ -41,6 +42,7 @@ const {
   modifiedTime,
   jsonld = [],
   mainClass,
+  headerCta,
 } = Astro.props;
 
 const canonicalUrl = abs(canonical ?? Astro.url.pathname);
@@ -110,7 +112,7 @@ const robotsFull = robots.includes('index') && !robots.includes('noindex')
       if (document.documentElement.dataset.theme === 'dark') document.body.classList.add('dark-scheme');
     </script>
     <a class="skip-link" href="#main">{UI[lang].skip}</a>
-    <slot name="header"><Header /></slot>
+    <slot name="header"><Header ctaHref={headerCta} /></slot>
     <main id="main" class={mainClass} tabindex="-1">
       <slot />
     </main>

@@ -86,6 +86,7 @@ export interface ServicePageData {
   dateModified?: string; // ISO date, goes to the generated FAQPage schema
   partner?: boolean; // adds the Dutchie partner membership to the Organization schema
   variant?: 'center'; // centered dispensary-page look (panel hero, centered sections)
+  headerCta?: string; // header button target on this page, e.g. '#contact' (default: /contact-us/)
   breadcrumb: { name: string; path: string }[]; // without the page itself; empty = no breadcrumb (home pages)
   hero: {
     eyebrow?: string; title: string; crumb?: string; chips?: string[]; byline?: string; badge?: string; lead?: string; actions?: Action[];
