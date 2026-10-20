@@ -69,7 +69,11 @@ export interface ServicePageData {
   partner?: boolean; // adds the Dutchie partner membership to the Organization schema
   variant?: 'center'; // centered dispensary-page look (panel hero, centered sections)
   breadcrumb: { name: string; path: string }[]; // without the page itself; empty = no breadcrumb (home pages)
-  hero: { eyebrow?: string; title: string; crumb?: string; chips?: string[]; byline?: string; badge?: string; lead?: string; actions?: Action[] };
+  hero: {
+    eyebrow?: string; title: string; crumb?: string; chips?: string[]; byline?: string; badge?: string; lead?: string; actions?: Action[];
+    // Compact social-proof row under the hero buttons: small thumbnail + name + label + result, linking to the live site
+    proof?: { label: string; items: { name: string; label: string; highlight: string; href: string; img: Img }[] };
+  };
   sections: Section[];
   faq?: { eyebrow?: string; title: string; intro?: string; items: { q: string; a: string }[]; note?: string } | null;
   cta?: { eyebrow?: string; title: string; text?: string; action?: Action | null } | null;

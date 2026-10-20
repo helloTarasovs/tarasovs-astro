@@ -2,23 +2,23 @@
   "url": "/dutchie-pro-migration-seo/",
   "variant": "center",
   "partner": true,
-  "dateModified": "2026-10-19",
+  "dateModified": "2026-10-20",
   "hero": {
-    "title": "Dutchie Pro Migration Without Losing Your Rankings",
-    "lead": "<p>Still on Dutchie Plus or an embedded iFrame menu? We move licensed dispensaries to Dutchie E-Commerce Pro: branded, SEO-friendly storefronts built with the Dutchie Pro SDK, Cloudflare integration, and a migration strategy designed to protect your rankings, menu indexation, and online orders. As a {{PARTNER_STATUS}}, we’ve shipped it for two NYC dispensaries: Verdi Cannabis and Mighty Lucky.</p>",
+    "title": "Upgrade Your Dutchie Menu to a Custom <span class=\"nowrap\">E-Commerce</span> Pro Storefront",
+    "lead": "<p>Replace your embedded Dutchie menu with a branded shopping experience on your own domain. We handle custom SDK development, Shopify and WordPress integration, and SEO-focused migration – from setup to launch.</p><p>Trusted experience from two NYC dispensary projects: Verdi Cannabis &amp; Mighty Lucky.</p><p><strong>Same-Domain Storefront · Custom SDK Development · SEO Migration &amp; Redirects</strong></p>",
     "actions": [
       {
-        "label": "Get a Free Migration Audit",
+        "label": "Discuss Your Dutchie Pro Upgrade",
         "href": "#CForm"
       },
       {
-        "label": "Discuss Your Migration",
-        "href": "/contact-us/#CForm"
+        "label": "See Our Work",
+        "href": "#proof"
       }
     ],
     "crumb": "Dutchie Pro Migration SEO",
-    "eyebrow": "Dutchie Pro Migration",
-    "byline": "By <a href=\"https://www.linkedin.com/in/yurii-tarasov/?skipRedirect=true\">Tarasov Yurii</a>, Founder &amp; SEO/GEO Strategist, Tarasovs Agency. Last updated October 19, 2026",
+    "eyebrow": "Dutchie Pro Migration &amp; Custom Development",
+    "byline": "By <a href=\"https://www.linkedin.com/in/yurii-tarasov/?skipRedirect=true\">Tarasov Yurii</a>, Founder &amp; SEO/GEO Strategist, Tarasovs Agency. Last updated October 20, 2026",
     "chips": [
       "Dutchie Pro Migration",
       "301 Redirects",
@@ -30,7 +30,36 @@
       "AI Search",
       "NYC Dispensary"
     ],
-    "badge": "{{PARTNER_STATUS}}"
+    "badge": "{{PARTNER_STATUS}}",
+    "proof": {
+      "label": "Our Dutchie Pro projects",
+      "items": [
+        {
+          "name": "Verdi Cannabis",
+          "label": "Dutchie Pro Migration + SEO",
+          "highlight": "+93.5% impressions · +17% organic clicks",
+          "href": "https://verdicannabis.com/stores/verdi",
+          "img": {
+            "src": "/wp-content/uploads/2026/10/verdi-cannabis-storefront-thumb.webp",
+            "alt": "",
+            "width": 56,
+            "height": 56
+          }
+        },
+        {
+          "name": "Mighty Lucky",
+          "label": "Custom Dutchie Pro SDK Development",
+          "highlight": "Shopify + Cloudflare + SEO Migration",
+          "href": "https://mighty-lucky.com/stores/mighty-lucky",
+          "img": {
+            "src": "/wp-content/uploads/2026/10/mighty-lucky-storefront-thumb.webp",
+            "alt": "",
+            "width": 56,
+            "height": 56
+          }
+        }
+      ]
+    }
   },
   "sections": [
     {
@@ -112,7 +141,8 @@
           "type": "prose",
           "html": "<p><strong>Mighty Lucky</strong> on the Bowery in Lower Manhattan is a different kind of project: a custom Dutchie Pro storefront built with the Dutchie Pro SDK. We built a custom theme and branded navigation, served the store on the dispensary’s own domain through a Cloudflare reverse proxy, integrated it with their Shopify site, and shipped 301 redirects and a sitemap for the new store. The store is still in its post-launch monitoring period, so this case shows the technical build, not ranking results yet.</p>"
         }
-      ]
+      ],
+      "id": "proof"
     },
     {
       "id": "custom-dutchie-pro-development",

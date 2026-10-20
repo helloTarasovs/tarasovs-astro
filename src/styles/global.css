@@ -259,3 +259,6 @@
 
 /* Draft placeholders from the UA texts ([ВСТАВИТИ: ...]). Only rendered by `astro dev`; the build strips them. */
 mark[data-todo], p[data-todo] { background: #ecc700; color: #130f24; padding: 0 0.2em; }
+
+/* Keep a hyphenated term on one line (e.g. "E-Commerce" in a headline) */
+.nowrap { white-space: nowrap; }
