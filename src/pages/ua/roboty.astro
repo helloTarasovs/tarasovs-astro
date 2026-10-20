@@ -1,0 +1,23 @@
+---
+// /ua/roboty/  UA pair of /case-studies/. Same layout; no cannabis projects on the Ukrainian site (as on /ua/).
+// Project pages themselves are English.
+import CaseStudiesPage from '../../components/CaseStudiesPage.astro';
+import { sortedProjects } from '../../lib/projects';
+import { UA_CTA_URL } from '../../lib/site';
+
+const projects = (await sortedProjects()).filter((p) => !p.data.categories.includes('cannabis'));
+---
+<CaseStudiesPage
+  lang="uk"
+  url="/ua/roboty/"
+  projects={projects}
+  seo={{
+    title: 'Наші роботи: кейси з дизайну, розробки та SEO | Tarasovs',
+    description: 'Кейси Tarasovs Digital Agency з вебдизайну, розробки, SEO та AI-видимості: реальні проєкти та вимірювані результати.',
+  }}
+  home={{ name: 'Головна', path: '/ua/' }}
+  crumbLabel="Навігаційний ланцюжок"
+  title="Наші роботи"
+  lead="Залиште трохи інформації, і ми з вами зв'яжемося."
+  cta={{ label: 'Отримати оцінку', href: UA_CTA_URL }}
+/>

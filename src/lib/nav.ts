@@ -54,7 +54,7 @@ export const MAIN_NAV_UK: NavItem[] = [
       { label: 'AI-видимість', href: '/ua/ai-vydymist/' },
     ],
   },
-  { label: 'Роботи', href: '/ua/#roboty' },
+  { label: 'Роботи', href: '/ua/roboty/' },
   { label: 'Міні-аудит', href: '/ua/#mini-audyt' },
   { label: 'Контакти', href: '/ua/kontakty/' },
 ];
