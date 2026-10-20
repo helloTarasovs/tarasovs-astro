@@ -1,7 +1,6 @@
 {
   "url": "/dutchie-pro-migration-seo/",
   "variant": "center",
-  "partner": true,
   "dateModified": "2026-10-20",
   "hero": {
     "title": "Upgrade Your Dutchie Menu to a Custom <span class=\"nowrap\">E-Commerce</span> Pro Storefront",
@@ -30,7 +29,7 @@
       "AI Search",
       "NYC Dispensary"
     ],
-    "badge": "{{PARTNER_STATUS}}",
+    "badge": "Dutchie Pro SDK Developer",
     "proof": {
       "label": "Our Dutchie Pro projects",
       "items": [
@@ -266,14 +265,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>We’ve carried a licensed NYC dispensary from an invisible iFrame menu to page-1 rankings, and we can show the Search Console proof. Migration is a technical, local, and content problem at once, and we handle all three.</p><p>We work directly with Dutchie as a certified partner. That gives our clients a direct line to the Dutchie team during migration, and one agency that handles the platform, the SEO, and the content.</p>"
-        },
-        {
-          "type": "projects",
-          "items": [
-            "/project/verdi-cannabis/",
-            "/project/leaf-haus/"
-          ]
+          "html": "<p>We’ve carried a licensed NYC dispensary from an invisible iFrame menu to page-1 rankings, and we can show the Search Console proof. Migration is a technical, local, and content problem at once, and we handle all three.</p><p>We work directly with the Dutchie Pro SDK, so the storefront build, the integration with your website, and the SEO migration are handled by one agency.</p>"
         }
       ]
     },
@@ -381,7 +373,8 @@
                 "Dutchie Pro Migration",
                 "Custom Dutchie Pro Development",
                 "Not Sure Yet"
-              ]
+              ],
+              "required": true
             },
             "messageLabel": "Project Details",
             "messageOptional": true,
@@ -394,7 +387,7 @@
         },
         {
           "type": "prose",
-          "html": "<p class=\"partner-note\">Tarasovs Agency is an independent {{PARTNER_STATUS}}. Dutchie is a trademark of its respective owner.</p>"
+          "html": "<p class=\"partner-note\">Tarasovs Agency is an independent agency. Dutchie is a trademark of its respective owner.</p>"
         }
       ]
     }

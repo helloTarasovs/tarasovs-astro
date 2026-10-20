@@ -18,7 +18,7 @@ interface Props {
   nameLabel?: string;
   emailPlaceholder?: string;
   website?: { label: string; placeholder: string }; // required "website" field
-  topic?: { legend: string; options: string[] }; // optional radio group, field name "help_with"
+  topic?: { legend: string; options: string[]; required?: boolean }; // radio group, field name "help_with"
   messageOptional?: boolean; // shows "(optional)" next to the message label
   compact?: boolean; // name + email side by side from 40em
   fullWidthSubmit?: boolean;
@@ -71,9 +71,9 @@ if (!accessKey && !(globalThis as any).__w3fWarned) (globalThis as any).__w3fWar
   )}
   {topic && (
     <fieldset class="field choices">
-      <legend>{topic.legend}</legend>
+      <legend>{topic.legend}{topic.required && <> <span class="req">(required)</span></>}</legend>
       <div class="choice-list">
-        {topic.options.map((o) => <label class="choice"><input type="radio" name="help_with" value={o} /><span>{o}</span></label>)}
+        {topic.options.map((o) => <label class="choice"><input type="radio" name="help_with" value={o} required={topic.required} /><span>{o}</span></label>)}
       </div>
     </fieldset>
   )}
