@@ -21,6 +21,8 @@ export interface Card {
   title: string; // inline HTML
   html?: string; // block HTML
   tags?: string[];
+  tagsLabel?: string; // small label above the tags ("Services")
+  icon?: string; // inline SVG (decorative), shown above the title
   link?: Action;
   img?: Img;
 }

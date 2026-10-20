@@ -15,11 +15,17 @@ const cols = columns ?? (items.length % 3 === 0 || items.length > 4 ? 3 : items.
           {c.meta && <span class="card-meta">{c.meta}</span>}
         </p>
       )}
+      {c.icon && <span class="card-icon" aria-hidden="true" set:html={c.icon} />}
       <h3 set:html={c.title} />
       {c.html && <div class="card-body" set:html={c.html} />}
-      {c.tags && c.tags.length > 0 && (
+      {c.tags && c.tags.length > 0 && (c.tagsLabel ? (
+        <div class="card-foot">
+          <p class="card-tags-label">{c.tagsLabel}</p>
+          <ul class="card-tags">{c.tags.map((t) => <li>{t}</li>)}</ul>
+        </div>
+      ) : (
         <ul class="card-tags">{c.tags.map((t) => <li>{t}</li>)}</ul>
-      )}
+      ))}
       {c.link && (
         <a class="card-link" href={c.link.href}>
           {c.link.label}<span class="visually-hidden">: {c.title.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&')}</span><span aria-hidden="true"> →</span>
@@ -51,6 +57,11 @@ const cols = columns ?? (items.length % 3 === 0 || items.length > 4 ? 3 : items.
   .card-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: auto; padding: var(--space-2) 0 0; list-style: none; }
   .card-tags li { padding: 0.2rem 0.65rem; border-radius: var(--radius-pill); background: var(--color-surface-2); font-size: var(--text-xs); }
   .card-body :global(.best-for) { color: var(--color-text); }
+  .card-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: var(--radius-sm); background: color-mix(in srgb, var(--brand-violet) 12%, transparent); color: var(--color-link); }
+  .card-icon :global(svg) { width: 22px; height: 22px; }
+  .card-foot { margin-top: auto; padding-top: var(--space-2); }
+  .card-foot .card-tags { margin-top: var(--space-2); padding-top: 0; }
+  .card-tags-label { color: var(--color-text-muted); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.06em; }
   .card-link { margin-top: auto; padding-top: var(--space-2); font-weight: 600; font-size: var(--text-sm); text-decoration: none; }
   .card-link:hover { text-decoration: underline; }
   @media (min-width: 40em) {

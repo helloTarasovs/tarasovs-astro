@@ -42,8 +42,8 @@
           "img": {
             "src": "/wp-content/uploads/2026/10/verdi-cannabis-storefront-thumb.webp",
             "alt": "",
-            "width": 56,
-            "height": 56
+            "width": 130,
+            "height": 130
           }
         },
         {
@@ -54,8 +54,8 @@
           "img": {
             "src": "/wp-content/uploads/2026/10/mighty-lucky-storefront-thumb.webp",
             "alt": "",
-            "width": 56,
-            "height": 56
+            "width": 130,
+            "height": 130
           }
         }
       ]
@@ -65,11 +65,38 @@
   "sections": [
     {
       "eyebrow": "",
-      "title": "Two starting points. One destination.",
+      "title": "Two Ways We Can Help Your Dispensary",
+      "intro": "<p>Whether you're upgrading an embedded menu or improving an existing Dutchie Pro storefront, we can help.</p>",
       "blocks": [
         {
-          "type": "prose",
-          "html": "<p>If you’re on Dutchie Plus (headless), you have a custom storefront rendering real, ranked product URLs on a legacy platform. Dutchie has told Plus customers it will support the platform through the end of 2026, but no public end-of-life date has been published, so confirm your timeline with your Dutchie account manager. If a Plus storefront goes offline, its URLs return 404 and the ranking signals behind them go with them. If you’re on the standard Dutchie iFrame, your menu loads from Dutchie’s domain inside a frame, so your products are close to invisible in search today. You’re not losing rankings in a migration; you never had them. Either way the destination is the same: Dutchie E-Commerce Pro, which serves store and product pages as crawlable URLs on your own domain and can be built to look like part of your brand, not an embedded menu.</p>"
+          "type": "cards",
+          "columns": 2,
+          "items": [
+            {
+              "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 9h18\"/><path d=\"m9 15 3-3 3 3\"/><path d=\"M12 12v6\"/></svg>",
+              "title": "Still Using an Embedded Dutchie Menu?",
+              "html": "<p>Upgrade to Dutchie E-Commerce Pro with a branded storefront on your own domain, seamless website integration, and an SEO-focused migration.</p>",
+              "tagsLabel": "Services",
+              "tags": [
+                "Migration",
+                "Redirects",
+                "SEO",
+                "Launch"
+              ]
+            },
+            {
+              "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m8 8-4 4 4 4\"/><path d=\"m16 8 4 4-4 4\"/><path d=\"m13.5 5-3 14\"/></svg>",
+              "title": "Already on Dutchie Pro?",
+              "html": "<p>Go beyond the default Dutchie theme with custom headers, footers, product cards, navigation, and other branded components built with the Dutchie Pro SDK.</p>",
+              "tagsLabel": "Services",
+              "tags": [
+                "Custom Themes",
+                "SDK Development",
+                "UX",
+                "Branding"
+              ]
+            }
+          ]
         }
       ]
     },

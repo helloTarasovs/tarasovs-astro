@@ -72,7 +72,7 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
               {data.hero.proof.items.map((p) => (
                 <li>
                   <a class="proof-item" href={p.href} target="_blank" rel="noopener">
-                    <img src={p.img.src} alt="" width={p.img.width ?? 56} height={p.img.height ?? 56} loading="lazy" decoding="async" />
+                    <img src={p.img.src} alt="" width={p.img.width ?? 130} height={p.img.height ?? 130} loading="lazy" decoding="async" />
                     <span class="proof-text">
                       <span class="proof-name">{p.name}<span class="visually-hidden"> (live storefront, opens in a new tab)</span></span>
                       <span class="proof-label">{p.label}</span>
@@ -200,7 +200,7 @@ const slugify = (s: string) => s.replace(/<[^>]+>/g, '').toLowerCase().replace(/
   .hero-proof li + li { border-top: 1px solid color-mix(in srgb, currentColor 18%, transparent); }
   .hero-proof li { padding-block: var(--space-3); }
   .proof-item { display: flex; align-items: center; gap: var(--space-3); min-height: 44px; color: inherit; text-decoration: none; }
-  .proof-item img { flex: none; width: 56px; height: 56px; border-radius: var(--radius-sm); border: 1px solid color-mix(in srgb, currentColor 15%, transparent); background: #fff; object-fit: cover; }
+  .proof-item img { flex: none; width: 130px; height: 130px; border-radius: var(--radius-sm); border: 1px solid color-mix(in srgb, currentColor 15%, transparent); background: #fff; object-fit: cover; }
   .proof-text { display: grid; gap: 0.1rem; line-height: 1.3; }
   .proof-name { font-family: var(--font-title); font-size: var(--text-base); font-weight: 600; color: var(--color-heading); }
   .proof-label { font-size: var(--text-xs); color: var(--color-text-muted); }
