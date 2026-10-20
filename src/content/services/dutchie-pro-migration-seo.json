@@ -293,16 +293,6 @@
       ]
     },
     {
-      "eyebrow": "",
-      "title": "Which path is right for your dispensary?",
-      "blocks": [
-        {
-          "type": "prose",
-          "html": "<p>There are three honest options if your menu is an unindexed iFrame or an older Dutchie Plus storefront. Falling back to the standard iFrame is cheapest but throws away product URLs and schema, so it’s only sensible for a low-volume store that never indexed products. Switching providers (Jane, Treez, Flowhub) is a much bigger project that only makes sense if you were already leaving Dutchie. For everyone else with traffic to protect or earn, migrating to Dutchie E-Commerce Pro is the default: you can generally keep your POS, staff, and customer accounts and gain indexable pages plus a foundation for local and AI search. Not sure which applies? Run <em>site:yourdomain.com inurl:/products/</em> in Google, then tell us about your setup and we’ll recommend the best path.</p>"
-        }
-      ]
-    },
-    {
       "id": "contact",
       "tone": "mint",
       "eyebrow": "Let's Work Together",
