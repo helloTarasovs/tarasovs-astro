@@ -102,47 +102,32 @@
     },
     {
       "eyebrow": "",
-      "title": "What actually breaks and what we protect",
+      "title": "Upgrade Your Storefront. Protect What You've Built.",
+      "intro": "<p>Moving from an embedded Dutchie menu to E-Commerce Pro involves more than switching platforms. We handle the details that matter for your customers, search visibility, and business.</p>",
       "blocks": [
         {
           "type": "cards",
+          "columns": 2,
           "items": [
             {
-              "title": "Product URLs",
-              "html": "<p>On the iFrame they live on Dutchie’s domain; on Plus they disappear if the storefront goes offline. We map indexed URLs by priority and send every changed URL to its closest equivalent with a 301 redirect.</p>",
-              "meta": "Product URLs"
+              "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7\"/><path d=\"M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7\"/></svg>",
+              "title": "Existing URLs &amp; SEO Traffic",
+              "html": "<p>We audit existing product and category URLs, implement strategic 301 redirects, and update internal links to preserve valuable search signals.</p>"
             },
             {
-              "title": "Menu Crawlability",
-              "html": "<p>iFrame menus are effectively uncrawlable. Dutchie Pro renders store and product pages Googlebot can actually read and index.</p>",
-              "meta": "Crawlability"
+              "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m20 20-3.5-3.5\"/></svg>",
+              "title": "Google Indexing &amp; Visibility",
+              "html": "<p>We verify canonical URLs, XML sitemaps, robots.txt, and structured data to help search engines discover and index your new storefront.</p>"
             },
             {
-              "title": "Product Schema",
-              "html": "<p>Product structured data should come from live menu data, not hardcoded markup. We validate and optimize it where Dutchie’s data and Google’s rules support it.</p>",
-              "meta": "Schema"
+              "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"9\" cy=\"20\" r=\"1.5\"/><circle cx=\"18\" cy=\"20\" r=\"1.5\"/><path d=\"M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 8H6\"/></svg>",
+              "title": "Shopping Experience",
+              "html": "<p>We review navigation, categories, product pages, filters, cart, and mobile usability to ensure a smooth transition for customers.</p>"
             },
             {
-              "title": "Core Web Vitals",
-              "html": "<p>On the iFrame your speed is tied to Dutchie’s render budget. On Pro, page performance is back under your control.</p>",
-              "meta": "Core Web Vitals"
-            },
-            {
-              "title": "Internal Links",
-              "html": "<p>Links from blog posts and local pages must resolve to indexable pages, not a frame or a 404. We verify every one post-cutover.</p>",
-              "meta": "Internal Links"
-            },
-            {
-              "title": "AI Citability",
-              "html": "<p>Assistants can’t cite a menu that isn’t really on your domain. Indexable product pages are the precondition for AI search visibility.</p>",
-              "meta": "AI Citability",
-              "img": {
-                "type": "img",
-                "src": "/wp-content/uploads/2026/07/Dutchie-Pro-Migration-SEO.webp",
-                "alt": "Dutchie Pro Migration Without Losing Your Rankings",
-                "width": "1731",
-                "height": "909"
-              }
+              "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 3v18h18\"/><path d=\"m7 15 4-4 3 3 5-6\"/></svg>",
+              "title": "Analytics &amp; Launch Validation",
+              "html": "<p>We check GA4 and conversion tracking, test critical shopping flows, and monitor technical issues after launch.</p>"
             }
           ]
         }
