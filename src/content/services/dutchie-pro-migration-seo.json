@@ -209,6 +209,10 @@
               }
             }
           ]
+        },
+        {
+          "type": "prose",
+          "html": "<p>We work directly with the Dutchie Pro SDK, so the storefront build, the integration with your website, and the SEO migration are handled by one agency.</p>"
         }
       ]
     },
@@ -256,58 +260,6 @@
               "href": "#contact"
             }
           ]
-        }
-      ]
-    },
-    {
-      "eyebrow": "",
-      "title": "Cannabis migration experience, not guesswork",
-      "blocks": [
-        {
-          "type": "prose",
-          "html": "<p>We’ve carried a licensed NYC dispensary from an invisible iFrame menu to page-1 rankings, and we can show the Search Console proof. Migration is a technical, local, and content problem at once, and we handle all three.</p><p>We work directly with the Dutchie Pro SDK, so the storefront build, the integration with your website, and the SEO migration are handled by one agency.</p>"
-        }
-      ]
-    },
-    {
-      "eyebrow": "",
-      "title": "We migrate dispensaries specifically, not as a side service.",
-      "blocks": [
-        {
-          "type": "prose",
-          "html": "<p>A cannabis migration isn’t a generic rebuild. The compliance rules, the platform quirks, and the SEO stakes are different, and getting them wrong during a cutover is how listings get suspended at the worst possible moment. Here’s what a clean Dutchie Pro migration includes:</p>"
-        },
-        {
-          "type": "checklist",
-          "items": [
-            "<strong>Priority-based URL mapping.</strong> Indexed URLs are crawled and ranked by traffic and links before anything is touched, and each changed URL is mapped to its closest equivalent: product, category, or a relevant fallback page.",
-            "<strong>301 redirects for every changed URL.</strong> Ranking pages and internal links don’t land on a 404.",
-            "<strong>Product structured data.</strong> Generated from live menu data, validated and optimized where Dutchie’s data and Google’s rules support it.",
-            "<strong>30/60/90-day monitoring.</strong> Indexation diffs against baseline, with any page that slips diagnosed and fixed."
-          ]
-        }
-      ]
-    },
-    {
-      "eyebrow": "",
-      "title": "A migration is your entry ticket to AI search.",
-      "blocks": [
-        {
-          "type": "prose",
-          "html": "<p>When someone asks ChatGPT, Perplexity, or Google’s AI for a dispensary recommendation, it names a handful, built on clear, crawlable, trustworthy pages. An iFrame menu is invisible to them for the same reason it’s invisible to Googlebot. A Dutchie Pro migration is the precondition for GEO / AI search visibility: you can’t be the assistant’s pick for “Brooklyn dispensary with X in stock” if your inventory pages don’t exist as real, structured URLs.</p>"
-        },
-        {
-          "type": "actions",
-          "items": [
-            {
-              "label": "See GEO / AI Search Optimization",
-              "href": "/services/geo-ai-search-optimization/"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "html": "<p>Most dispensaries have zero presence here today. Migrate cleanly now and you get to own the AI recommendation before competitors realize it’s a channel.</p>"
         }
       ]
     },
