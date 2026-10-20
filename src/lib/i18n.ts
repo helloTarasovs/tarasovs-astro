@@ -14,6 +14,7 @@ export const PAIRS: Record<Lang, string>[] = [
   { uk: '/ua/prosuvannia-saitiv/', en: '/services/seo-services/' },
   { uk: '/ua/ai-vydymist/', en: '/services/geo-ai-search-optimization/' },
   { uk: '/ua/kontakty/', en: '/contact-us/' },
+  { uk: '/ua/polityka-konfidentsiinosti/', en: '/privacy-cookie-policy-tarasovs-digital-agency/' },
 ];
 
 export const langFromPath = (path: string): Lang => (path === '/ua/' || path.startsWith('/ua/') ? 'uk' : 'en');
@@ -63,7 +64,8 @@ export const FORM_UI = {
     emailPlaceholder: 'Ваш робочий емейл',
     message: 'Повідомлення',
     required: "(обов'язково)",
-    consent: ['Надсилаючи форму, я погоджуюся з', 'умовами використання', 'і', 'політикою конфіденційності'],
+    consent: ['Надсилаючи форму, я погоджуюся з', 'умовами використання (англ.)', 'і', 'політикою конфіденційності'],
+    privacyHref: '/ua/polityka-konfidentsiinosti/',
     sending: 'Надсилаємо…',
     success: 'Дякуємо! Повідомлення надіслано.',
     error: 'Не вдалося надіслати повідомлення. Спробуйте ще раз або напишіть на hello@tarasovs.me.',
@@ -75,7 +77,7 @@ export const FORM_UI = {
 export const FOOTER_UI: Record<Lang, {
   tagline: string; office: string; city: string; directions: string; mapsHint: string; call: string;
   general: string; audience: string; follow: string; newTab: string; ctaText: string; cta: string;
-  legal: Record<string, string>; legalLang?: string; cookieSettings: string;
+  legal: Record<string, { label: string; href?: string; hreflang?: string }>; cookieSettings: string;
 }> = {
   en: {
     tagline: 'Disrupting the ordinary in brand &amp; digital design.',
@@ -107,16 +109,15 @@ export const FOOTER_UI: Record<Lang, {
     ctaText: "Хочете оцінку проєкту без зобов'язань?",
     cta: 'Отримати оцінку',
     legal: {
-      '/privacy-cookie-policy-tarasovs-digital-agency/': 'Політика конфіденційності та cookie (англ.)',
-      '/terms-of-service-tarasovs-digital-agency/': 'Умови використання (англ.)',
+      '/privacy-cookie-policy-tarasovs-digital-agency/': { label: 'Політика конфіденційності та cookie', href: '/ua/polityka-konfidentsiinosti/' },
+      '/terms-of-service-tarasovs-digital-agency/': { label: 'Умови використання (англ.)', hreflang: 'en' },
     },
-    legalLang: 'en',
     cookieSettings: 'Налаштування cookie',
   },
 };
 
 // Analytics consent banner (components/Analytics.astro). The privacy policy exists in English only.
-export const CONSENT_UI: Record<Lang, { title: string; text: string; policy: string; policyLang?: string; reject: string; accept: string }> = {
+export const CONSENT_UI: Record<Lang, { title: string; text: string; policy: string; policyHref?: string; reject: string; accept: string }> = {
   en: {
     title: 'Analytics cookies',
     text: 'Google Analytics counts visits without cookies until you accept. Analytics cookies and Microsoft Clarity load only if you agree.',
@@ -127,8 +128,8 @@ export const CONSENT_UI: Record<Lang, { title: string; text: string; policy: str
   uk: {
     title: 'Аналітичні cookie',
     text: 'Поки ви не погодитесь, Google Analytics рахує відвідування без cookie. Аналітичні cookie і Microsoft Clarity вмикаються лише з вашої згоди.',
-    policy: 'Політика конфіденційності (англ.)',
-    policyLang: 'en',
+    policy: 'Політика конфіденційності',
+    policyHref: '/ua/polityka-konfidentsiinosti/',
     reject: 'Відхилити',
     accept: 'Прийняти аналітику',
   },

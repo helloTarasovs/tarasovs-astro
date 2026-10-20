@@ -60,7 +60,7 @@ if (!accessKey && !(globalThis as any).__w3fWarned) (globalThis as any).__w3fWar
 
   {ua ? (
     <p class="consent">
-      {ua.consent[0]} <a href="/terms-of-service-tarasovs-digital-agency/" hreflang="en">{ua.consent[1]}</a> {ua.consent[2]} <a href="/privacy-cookie-policy-tarasovs-digital-agency/" hreflang="en">{ua.consent[3]}</a> (англійською).
+      {ua.consent[0]} <a href="/terms-of-service-tarasovs-digital-agency/" hreflang="en">{ua.consent[1]}</a> {ua.consent[2]} <a href={ua.privacyHref}>{ua.consent[3]}</a>.
     </p>
   ) : (
     <p class="consent">

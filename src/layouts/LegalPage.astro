@@ -9,15 +9,20 @@ interface Props {
   updated: string; // "Last updated" line as written in the document
   intro: string;
   html: string;
+  // /ua/ translations: own title and SEO fields (EN pages take them from _wp-export/pages.json)
+  uk?: { title: string; seo: { title: string; description: string } };
 }
-const { url, updated, intro, html } = Astro.props;
-const page = wpPage(url);
-const jsonld = [...page.jsonld, breadcrumbSchema([{ name: 'Home', path: '/' }, { name: page.title, path: url }])];
+const { url, updated, intro, html, uk } = Astro.props;
+const page = uk
+  ? { title: uk.title, seo: { ...uk.seo, canonical: url, robots: undefined, ogImage: undefined }, jsonld: [] as unknown[] }
+  : wpPage(url);
+const home = uk ? { name: 'Головна', path: '/ua/' } : { name: 'Home', path: '/' };
+const jsonld = [...page.jsonld, breadcrumbSchema([home, { name: page.title, path: url }])];
 ---
 <Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld}>
   <article class="legal container container-prose">
     <header class="legal-header">
-      <p class="eyebrow">Legal · {updated}</p>
+      <p class="eyebrow">{uk ? 'Юридична інформація' : 'Legal'} · {updated}</p>
       <h1>{page.title}</h1>
       <p class="legal-intro">{intro}</p>
     </header>

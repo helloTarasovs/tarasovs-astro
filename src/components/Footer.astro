@@ -53,7 +53,7 @@ const social = lang === 'uk' ? SOCIAL.map((s) => (s.label === 'Facebook' ? { ...
 
       <div class="footer-bottom reveal">
         <ul class="footer-legal">
-          {LEGAL.map((l) => <li><a href={l.href} hreflang={t.legalLang}>{t.legal[l.href] ?? l.label}</a></li>)}
+          {LEGAL.map((l) => { const o = t.legal[l.href]; return <li><a href={o?.href ?? l.href} hreflang={o?.hreflang}>{o?.label ?? l.label}</a></li>; })}
           <li><button type="button" data-analytics-settings aria-controls="analytics-consent" hidden>{t.cookieSettings}</button></li>
         </ul>
         <p>&copy; {new Date().getFullYear()} Tarasovs Digital Agency</p>

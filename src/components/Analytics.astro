@@ -7,7 +7,7 @@ const t = CONSENT_UI[langFromPath(Astro.url.pathname)];
 <aside class="analytics-consent" id="analytics-consent" aria-labelledby="analytics-consent-title" hidden>
   <div>
     <h2 id="analytics-consent-title">{t.title}</h2>
-    <p>{t.text} <a href="/privacy-cookie-policy-tarasovs-digital-agency/" hreflang={t.policyLang}>{t.policy}</a></p>
+    <p>{t.text} <a href={t.policyHref ?? '/privacy-cookie-policy-tarasovs-digital-agency/'}>{t.policy}</a></p>
   </div>
   <div class="analytics-consent-actions">
     <button type="button" data-analytics-choice="denied">{t.reject}</button>
