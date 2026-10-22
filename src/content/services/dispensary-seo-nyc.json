@@ -26,6 +26,7 @@
       "Dutchie & Dutchie SEO"
     ]
   },
+  "leadSlide": "dispensary-audit",
   "sections": [
     {
       "eyebrow": "",
@@ -135,6 +136,16 @@
             "/project/verdi-cannabis/",
             "/project/leaf-haus/"
           ]
+        }
+      ]
+    },
+    {
+      "id": "free-audit",
+      "title": "",
+      "blocks": [
+        {
+          "type": "leadMagnet",
+          "offer": "dispensary-audit"
         }
       ]
     },

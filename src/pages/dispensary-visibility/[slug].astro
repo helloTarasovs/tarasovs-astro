@@ -3,6 +3,8 @@
 // Markup, copy and classes follow the tdv plugin's public profile template 1:1 (styles in tdv-profile.css).
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import LeadMagnet from '../../components/LeadMagnet.astro';
+import { LEAD_INLINE, LEAD_SLIDES } from '../../lib/lead-magnets';
 import { breadcrumbSchema } from '../../lib/schema';
 import { abs } from '../../lib/site';
 import patterns from '../../data/dispensary-patterns.json';
@@ -213,6 +215,8 @@ const jsonld = [
         </section>
       )}
 
+      <div class="tdv-profile-lm" id="free-audit"><LeadMagnet variant="inline" {...LEAD_INLINE['dispensary-audit']} /></div>
+
       <section class="tdv-profile-section tdv-profile-full-report" aria-labelledby="tdv-full-report-heading">
         <div class="tdv-profile-section__heading">
           <div><span class="tdv-profile-kicker">Deeper analysis</span><h2 id="tdv-full-report-heading">Want the complete search visibility picture?</h2></div>
@@ -370,6 +374,7 @@ const jsonld = [
       </div>
     </article>
   </div>
+  <LeadMagnet variant="slide" {...LEAD_SLIDES['dispensary-audit']} />
 </Base>
 
 <script>
@@ -450,4 +455,5 @@ const jsonld = [
   .tdv-report-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
   .tdv-report-form__error:empty { display: none; }
   .tdv-report-form__error { margin-top: 10px; color: #a94335; font-size: 13px; }
+.tdv-profile-lm { margin-top: 32px; scroll-margin-top: 96px; }
 </style>

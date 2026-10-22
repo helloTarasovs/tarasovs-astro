@@ -1,0 +1,42 @@
+---
+// Shared fetch submit for every [data-contact-form] on the page (ContactForm, LeadMagnet). Astro includes the
+// script once per page however many forms use it. Success is shown only after Web3Forms confirms it.
+---
+<script>
+  document.querySelectorAll<HTMLFormElement>('[data-contact-form]').forEach((form) => {
+    const status = form.querySelector<HTMLElement>('[data-status]')!;
+    const submit = form.querySelector<HTMLButtonElement>('[data-submit]')!;
+    const label = submit.textContent;
+    const show = (kind: 'success' | 'error', text: string) => {
+      status.className = `status is-${kind}`;
+      status.textContent = text;
+    };
+
+    form.addEventListener('submit', async (e) => {
+      // Native required/email validation has already run: submit only fires for a valid form.
+      e.preventDefault();
+      submit.disabled = true;
+      submit.textContent = form.dataset.sending ?? 'Sending…';
+      status.className = 'status';
+      status.textContent = '';
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(form),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data.success) throw new Error(data.message || `HTTP ${res.status}`);
+        form.reset();
+        show('success', form.dataset.success!);
+        // lead magnets listen for this to stop offering the same thing again
+        form.dispatchEvent(new CustomEvent('form:success', { bubbles: true }));
+      } catch {
+        show('error', form.dataset.error ?? 'Sorry, the message could not be sent. Please try again or email hello@tarasovs.me.');
+      } finally {
+        submit.disabled = false;
+        submit.textContent = label;
+      }
+    });
+  });
+</script>

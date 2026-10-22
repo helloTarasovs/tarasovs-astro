@@ -46,6 +46,7 @@ export type Block =
   | { type: 'prose'; html: string }
   | { type: 'cards'; items: Card[]; columns?: 2 | 3 | 4 }
   | { type: 'cases'; items: CaseStudy[] }
+  | { type: 'leadMagnet'; offer?: string; props?: Record<string, unknown> } // inline LeadMagnet: a shared offer (lib/lead-magnets.ts) or its own props
   | { type: 'steps'; items: Card[] }
   | { type: 'stats'; items: { value: string; label: string }[] }
   | { type: 'pricing'; plans: Plan[] }
@@ -85,7 +86,8 @@ export interface ServicePageData {
   service?: { name: string }; // adds a Service node (used by /ua/ pages; EN pages carry theirs in pages.json)
   dateModified?: string; // ISO date, goes to the generated FAQPage schema
   variant?: 'center'; // centered dispensary-page look (panel hero, centered sections)
-  headerCta?: string; // header button target on this page, e.g. '#contact' (default: /contact-us/)
+  headerCta?: string; // header button target on this page, e.g. '#contact' (default: the page's form section)
+  leadSlide?: string | Record<string, unknown>; // slide-in LeadMagnet: an offer name from src/lib/lead-magnets.ts or its own props
   breadcrumb: { name: string; path: string }[]; // without the page itself; empty = no breadcrumb (home pages)
   hero: {
     eyebrow?: string; title: string; crumb?: string; chips?: string[]; byline?: string; badge?: string; lead?: string; actions?: Action[];

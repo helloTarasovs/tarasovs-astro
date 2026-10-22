@@ -6,6 +6,7 @@ import PortfolioGrid from '../components/PortfolioGrid.astro';
 import Marquee from '../components/Marquee.astro';
 import HeroTyping from '../components/HeroTyping.astro';
 import ContactForm from '../components/ContactForm.astro';
+import LeadMagnet from '../components/LeadMagnet.astro';
 import Cards from '../components/blocks/Cards.astro';
 import Faq from '../components/blocks/Faq.astro';
 import Checklist from '../components/blocks/Checklist.astro';
@@ -214,6 +215,22 @@ const stats = [
     </div>
   </section>
 
+  <section class="section container" id="ai-guide">
+    <LeadMagnet
+      id="lm-guide-inline"
+      storageKey="lm-ai-guide"
+      eyebrow="Free guide"
+      title="Is AI Recommending Your Business?"
+      text="Leave your website and email, and we'll send you a step-by-step guide to improving your site's visibility in ChatGPT, Perplexity and Google AI Overviews."
+      submitLabel="Send Me the Guide"
+      nextLabel="Get the Guide"
+      successText="Thanks! We'll email you the guide shortly."
+      subject="Lead magnet: AI visibility guide"
+      leadSource="ai-visibility-guide"
+  limitNote="We add a personal review of your website to 5 requests a week."
+    />
+  </section>
+
   <section class="section container" aria-labelledby="reviews-title">
     <div class="head reveal"><h2 id="reviews-title">What our clients say about us</h2></div>
     <ul class="testimonials">
@@ -278,5 +295,23 @@ const stats = [
     </div>
   </section>
 <HeroTyping />
+<LeadMagnet
+  variant="slide"
+  id="lm-guide-slide"
+  storageKey="lm-ai-guide"
+  title="Free guide: get your website mentioned by AI"
+  text="Send us your website and email, and we'll send you a step-by-step guide to showing up in ChatGPT and Google AI answers."
+  submitLabel="Send Me the Guide"
+  nextLabel="Get the Guide"
+  successText="Thanks! We'll email you the guide shortly."
+  subject="Lead magnet: AI visibility guide"
+  leadSource="ai-visibility-guide"
+  limitNote="We add a personal review of your website to 5 requests a week."
+  scroll={50}
+  delay={40}
+  exitIntent
+  jumpHref="#ai-guide"
+  jumpLabel="Get the Free Guide"
+/>
 </Base>
 

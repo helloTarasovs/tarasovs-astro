@@ -3,6 +3,8 @@
 import type { Block } from '../../lib/service-page';
 import Cards from './Cards.astro';
 import CaseStudies from './CaseStudies.astro';
+import LeadMagnet from '../LeadMagnet.astro';
+import { LEAD_INLINE, type LeadOfferName } from '../../lib/lead-magnets';
 import Steps from './Steps.astro';
 import Stats from './Stats.astro';
 import Pricing from './Pricing.astro';
@@ -19,6 +21,7 @@ const { blocks, formSubject, reveal = false } = Astro.props;
     {b.type === 'prose' && <div class="prose" set:html={b.html} />}
     {b.type === 'cards' && <Cards items={b.items} columns={b.columns} reveal={reveal} />}
     {b.type === 'cases' && <CaseStudies items={b.items} reveal={reveal} />}
+    {b.type === 'leadMagnet' && <LeadMagnet variant="inline" {...((b.offer ? LEAD_INLINE[b.offer as LeadOfferName] : b.props) as any)} />}
     {b.type === 'steps' && <Steps items={b.items} reveal={reveal} />}
     {b.type === 'stats' && <Stats items={b.items} reveal={reveal} />}
     {b.type === 'pricing' && <Pricing plans={b.plans} reveal={reveal} />}

@@ -4,6 +4,8 @@
 // is plain HTML (crawlable) and a small inline script only filters / sorts it.
 // Layout and copy follow the live WordPress page (ta-index + tdv-live-profiles). SEO + JSON-LD from pages.json (the two FAQPage blocks are merged into one).
 import Base from '../../layouts/Base.astro';
+import LeadMagnet from '../../components/LeadMagnet.astro';
+import { LEAD_INLINE, LEAD_SLIDES } from '../../lib/lead-magnets';
 import { wpPage } from '../../lib/pages';
 import { abs } from '../../lib/site';
 import { dispensaryRows, indexStats, REGION_LABELS } from '../../lib/dispensaries';
@@ -196,6 +198,8 @@ const points = [['#1 recommendation', '100'], ['#2 recommendation', '85'], ['#3 
       </section>
     </section>
 
+    <div class="ta-index-lm" id="free-audit"><LeadMagnet variant="inline" {...LEAD_INLINE['dispensary-audit']} /></div>
+
     <section class="ta-index-section" id="definitions" aria-labelledby="ta-definitions-title">
       <p class="ta-index-section-label">Definitions</p>
       <h2 id="ta-definitions-title">How to interpret the ranking</h2>
@@ -271,6 +275,7 @@ const points = [['#1 recommendation', '100'], ['#2 recommendation', '85'], ['#3 
       <a class="ta-index-cta-button" href="/contact-us/">Request a visibility check →</a>
     </section>
   </div>
+  <LeadMagnet variant="slide" {...LEAD_SLIDES['dispensary-audit']} />
 </Base>
 
 <script>
@@ -336,3 +341,7 @@ const points = [['#1 recommendation', '100'], ['#2 recommendation', '85'], ['#3 
     apply();
   });
 </script>
+
+<style>
+  .ta-index-lm { margin-top: 72px; scroll-margin-top: 96px; }
+</style>

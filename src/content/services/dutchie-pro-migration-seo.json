@@ -133,6 +133,27 @@
       ]
     },
     {
+      "id": "free-audit",
+      "title": "",
+      "blocks": [
+        {
+          "type": "leadMagnet",
+          "props": {
+            "storageKey": "lm-dutchie-audit",
+            "subject": "Lead magnet: free Dutchie storefront audit",
+            "leadSource": "dutchie-audit",
+            "submitLabel": "Get My Free Audit",
+            "nextLabel": "Start My Free Audit",
+            "successText": "Thanks! We've received your request and will email you your audit.",
+            "id": "lm-audit-inline",
+            "eyebrow": "Free Audit",
+            "title": "Get a Free Dutchie Storefront Audit",
+            "text": "Send us your website and we'll review your current Dutchie menu setup, which product and category pages Google can index, and what to fix first. You'll get a short audit by email."
+          }
+        }
+      ]
+    },
+    {
       "id": "proof",
       "eyebrow": "",
       "title": "Real Dutchie Pro Projects. Real Results.",

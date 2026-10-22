@@ -4,10 +4,12 @@ import Base from './Base.astro';
 import Blocks from '../components/blocks/Blocks.astro';
 import Faq from '../components/blocks/Faq.astro';
 import Marquee from '../components/Marquee.astro';
+import LeadMagnet from '../components/LeadMagnet.astro';
 import { wpPage } from '../lib/pages';
 import { breadcrumbSchema } from '../lib/schema';
 import { countTodos, dedupeJsonld, faqSchema, fillTokens, serviceSchema, stripTodos, type ServicePageData } from '../lib/service-page';
 import { UI } from '../lib/i18n';
+import { LEAD_SLIDES, type LeadOfferName } from '../lib/lead-magnets';
 
 interface Props { data: ServicePageData }
 const filled = fillTokens(Astro.props.data);
@@ -16,6 +18,7 @@ if (import.meta.env.PROD && todos) console.warn(`[draft] ${filled.url}: ${todos}
 const data = import.meta.env.PROD ? stripTodos(filled) : filled;
 const center = data.variant === 'center';
 const t = UI[data.lang ?? 'en'];
+const leadSlide = typeof data.leadSlide === 'string' ? LEAD_SLIDES[data.leadSlide as LeadOfferName] : data.leadSlide;
 // /ua/ pages carry their own SEO fields; EN pages take them from the WordPress export.
 const page = data.seo ? { seo: { ...data.seo, canonical: data.url, robots: undefined, ogImage: undefined }, jsonld: [] as unknown[] } : wpPage(data.url);
 // FAQPage comes from the visible FAQ (single source); any FAQPage in the WordPress export is dropped.
@@ -176,6 +179,7 @@ const headerCta = data.headerCta ?? (formSec ? `#${formSec.id ?? slugify(formSec
       </section>
     )}
   </article>
+  {leadSlide && <LeadMagnet variant="slide" {...(leadSlide as any)} />}
 </Base>
 
 <style>

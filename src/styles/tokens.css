@@ -74,6 +74,8 @@
   --color-focus: #7c3aed;
   --color-header-bg: rgb(249 249 249 / 0.88);
   --shadow-md: 0 12px 32px -12px rgb(19 15 36 / 0.18);
+  --color-lm-panel: #eadaff;      /* lead magnet block; text 14.4:1, muted 5.7:1 */
+  --color-lm-link: #6d28d9;       /* 5.4:1 on the lm panel (#7c3aed is only 4.3:1) */
 
   /* Footer is navy in both themes */
   --color-footer-bg: #130f24;
@@ -100,6 +102,8 @@
     --color-focus: #c4b5fd;
     --color-header-bg: rgb(17 16 19 / 0.88);
     --shadow-md: 0 12px 32px -12px rgb(0 0 0 / 0.6);
+    --color-lm-panel: #231a42;
+    --color-lm-link: #c4b5fd;
     --color-footer-bg: #1c1535;
   }
 }
@@ -120,6 +124,8 @@
   --color-focus: #c4b5fd;
   --color-header-bg: rgb(17 16 19 / 0.88);
   --shadow-md: 0 12px 32px -12px rgb(0 0 0 / 0.6);
+  --color-lm-panel: #231a42;
+  --color-lm-link: #c4b5fd;
   --color-footer-bg: #1c1535;
 }
 

@@ -2,6 +2,7 @@
 // Contact form -> Web3Forms. Works without JS (plain POST); with JS it submits via fetch
 // and shows success / error in place. Other pages link to /contact-us/#CForm, keep the id.
 import { FORM_UI } from '../lib/i18n';
+import FormSubmit from './FormSubmit.astro';
 
 interface Props {
   lang?: 'en' | 'uk'; // uk: Ukrainian labels and messages (EN uses the defaults below)
@@ -145,39 +146,4 @@ if (!accessKey && !(globalThis as any).__w3fWarned) (globalThis as any).__w3fWar
   .status.is-error { background: color-mix(in srgb, #dc2626 14%, transparent); color: var(--color-text); }
 </style>
 
-<script>
-  document.querySelectorAll<HTMLFormElement>('[data-contact-form]').forEach((form) => {
-    const status = form.querySelector<HTMLElement>('[data-status]')!;
-    const submit = form.querySelector<HTMLButtonElement>('[data-submit]')!;
-    const label = submit.textContent;
-    const show = (kind: 'success' | 'error', text: string) => {
-      status.className = `status is-${kind}`;
-      status.textContent = text;
-    };
-
-    form.addEventListener('submit', async (e) => {
-      // Native required/email validation has already run: submit only fires for a valid form.
-      e.preventDefault();
-      submit.disabled = true;
-      submit.textContent = form.dataset.sending ?? 'Sending…';
-      status.className = 'status';
-      status.textContent = '';
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          headers: { Accept: 'application/json' },
-          body: new FormData(form),
-        });
-        const data = await res.json().catch(() => ({}));
-        if (!res.ok || !data.success) throw new Error(data.message || `HTTP ${res.status}`);
-        form.reset();
-        show('success', form.dataset.success!);
-      } catch {
-        show('error', form.dataset.error ?? 'Sorry, the message could not be sent. Please try again or email hello@tarasovs.me.');
-      } finally {
-        submit.disabled = false;
-        submit.textContent = label;
-      }
-    });
-  });
-</script>
+<FormSubmit />
