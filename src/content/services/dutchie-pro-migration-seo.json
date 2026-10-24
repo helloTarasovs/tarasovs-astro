@@ -4,7 +4,7 @@
   "dateModified": "2026-10-20",
   "hero": {
     "title": "Upgrade Your Dutchie Menu to a Custom <span class=\"nowrap\">E-Commerce</span> Pro Storefront",
-    "lead": "<p>Replace your embedded Dutchie menu with a branded shopping experience on your own domain. We handle custom SDK development, Shopify and WordPress integration, and SEO-focused migration – from setup to launch.</p><p>Trusted experience from two NYC dispensary projects: Verdi Cannabis &amp; Mighty Lucky.</p>",
+    "lead": "<p>Replace your embedded Dutchie menu with a branded shopping experience on your own domain. We handle custom SDK development, Shopify and WordPress integration, and SEO-focused migration – from setup to launch.</p><p>Trusted experience from an NYC dispensary project: Verdi Cannabis.</p>",
     "actions": [
       {
         "label": "Discuss Your Dutchie Pro Upgrade",
@@ -31,7 +31,7 @@
     ],
     "badge": "Dutchie Pro SDK Developer",
     "proof": {
-      "label": "Our Dutchie Pro projects",
+      "label": "Our Dutchie Pro project",
       "items": [
         {
           "name": "Verdi Cannabis",
@@ -40,18 +40,6 @@
           "href": "https://verdicannabis.com/stores/verdi",
           "img": {
             "src": "/wp-content/uploads/2026/10/verdi-cannabis-storefront-thumb.webp",
-            "alt": "",
-            "width": 130,
-            "height": 130
-          }
-        },
-        {
-          "name": "Mighty Lucky",
-          "label": "Custom Dutchie Pro SDK Development",
-          "highlight": "Shopify + Cloudflare + SEO Migration",
-          "href": "https://mighty-lucky.com/stores/mighty-lucky",
-          "img": {
-            "src": "/wp-content/uploads/2026/10/mighty-lucky-storefront-thumb.webp",
             "alt": "",
             "width": 130,
             "height": 130
@@ -156,8 +144,8 @@
     {
       "id": "proof",
       "eyebrow": "",
-      "title": "Real Dutchie Pro Projects. Real Results.",
-      "intro": "<p>We've successfully implemented Dutchie E-Commerce Pro for two New York dispensaries, combining storefront development, website integration, and SEO migration.</p>",
+      "title": "A Real Dutchie Pro Project. Real Results.",
+      "intro": "<p>We've successfully implemented Dutchie E-Commerce Pro for Verdi Cannabis in New York, combining storefront development, website integration, and SEO migration.</p>",
       "blocks": [
         {
           "type": "cases",
@@ -197,36 +185,6 @@
               "secondary": {
                 "label": "Read the full case study",
                 "href": "/verdi-cannabis-dutchie-pro-case-study/"
-              }
-            },
-            {
-              "label": "Custom Dutchie Pro SDK Development",
-              "title": "Mighty Lucky",
-              "html": "<p>Built and launched a custom Dutchie E-Commerce Pro storefront for Mighty Lucky in Manhattan, integrating it with the existing Shopify website under the same domain.</p>",
-              "deliverables": [
-                "Custom storefront theme built with the Dutchie Pro SDK",
-                "Branded UI components, product cards, and navigation",
-                "Shopify + Cloudflare reverse proxy integration",
-                "301 redirects and SEO migration",
-                "XML sitemap, canonical URLs, and Google Search Console validation"
-              ],
-              "resultsTitle": "Highlights",
-              "badge": "Custom Dutchie Pro storefront successfully launched.",
-              "results": [
-                {
-                  "value": "817",
-                  "label": "URLs discovered through the new Dutchie Pro sitemap in Google Search Console at the time of launch validation."
-                }
-              ],
-              "img": {
-                "src": "/wp-content/uploads/2026/10/mighty-lucky-dutchie-pro-storefront.webp",
-                "alt": "Mighty Lucky custom Dutchie Pro storefront: branded header, navigation, menu banner and filters",
-                "width": 1000,
-                "height": 563
-              },
-              "link": {
-                "label": "View Live Storefront",
-                "href": "https://mighty-lucky.com/stores/mighty-lucky"
               }
             }
           ]
@@ -361,7 +319,7 @@
     "items": [
       {
         "q": "Can you upgrade our existing Dutchie embedded menu to E-Commerce Pro?",
-        "a": "<p>Yes. We help dispensaries transition from embedded Dutchie menus to E-Commerce Pro, including storefront setup, website integration, redirects, and SEO validation. We've completed implementations for Verdi Cannabis and Mighty Lucky in New York.</p>"
+        "a": "<p>Yes. We help dispensaries transition from embedded Dutchie menus to E-Commerce Pro, including storefront setup, website integration, redirects, and SEO validation. We've completed an implementation for Verdi Cannabis in New York.</p>"
       },
       {
         "q": "Do we need to rebuild our existing website?",
