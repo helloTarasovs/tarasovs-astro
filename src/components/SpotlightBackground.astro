@@ -9,7 +9,6 @@
  *
  * Mark text that must stay readable with data-spotlight-clear
  * (text lines are measured; use data-spotlight-clear="box" to clear the whole box).
- * Mark buttons that should follow the cursor with data-magnetic.
  *
  * Colors come from CSS custom properties on the hero element:
  *   --spotlight-c1          glow color (default #7C3AED)
@@ -45,9 +44,9 @@ const { gap = 26, radius = 260, class: className = '' } = Astro.props;
     z-index: 0;
     display: block;
     pointer-events: none;
-  }
-  :global([data-magnetic]) {
-    transition: transform 0.25s cubic-bezier(0.2, 0.75, 0.15, 1);
+    /* soft fade into the next section: no hard edge where the glow ends */
+    -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 180px), transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 180px), transparent 100%);
   }
 </style>
 
@@ -89,7 +88,6 @@ const { gap = 26, radius = 260, class: className = '' } = Astro.props;
     const L = { x: 0, y: 0 };
     const target = { x: 0, y: 0 };
     let lastMove = -1e9, raf = 0, last = 0, visible = true;
-    const magnets = Array.from(host.querySelectorAll<HTMLElement>('[data-magnetic]'));
 
     function readColors() {
       const cs = getComputedStyle(host!);
@@ -243,17 +241,9 @@ const { gap = 26, radius = 260, class: className = '' } = Astro.props;
         still();
         return;
       }
-      if (e.pointerType !== 'mouse') return;
-      for (const b of magnets) {
-        const br = b.getBoundingClientRect();
-        const dx = e.clientX - (br.left + br.width / 2);
-        const dy = e.clientY - (br.top + br.height / 2);
-        b.style.transform = Math.hypot(dx, dy) < 120 ? `translate(${(dx * 0.28).toFixed(1)}px, ${(dy * 0.35).toFixed(1)}px)` : '';
-      }
     };
     const onLeave = () => {
       lastMove = -1e9;
-      magnets.forEach((b) => (b.style.transform = ''));
     };
     host.addEventListener('pointermove', onMove, { passive: true });
     host.addEventListener('pointerleave', onLeave);

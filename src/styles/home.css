@@ -25,7 +25,6 @@
   --spotlight-grow: 3;
 }
 .home .hero-panel > :not(canvas) { position: relative; z-index: 1; }
-.home .hero-magnet { display: inline-flex; }
 :root[data-theme='dark'] .home .hero-panel {
   --hp-bg: var(--color-bg); --hp-text: #ffffff; --hp-line: #ffffff; --hp-chip: rgb(255 255 255 / 0.12);
   --spotlight-dot: rgb(168 85 247 / 0.16); --spotlight-dot-soft: rgb(168 85 247 / 0.07);
