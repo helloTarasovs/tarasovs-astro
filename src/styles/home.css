@@ -1,21 +1,42 @@
 /* Home page layout (EN / and UA /ua/). Moved from src/pages/index.astro so both homes share one stylesheet.
    Scoped to <main class="home"> (Base `mainClass`), so it never leaks to other pages or the header/footer. */
-/* Hero panel: lilac card like the live page (#d1bcf5 light, #331d58 dark) */
-.home .hero { padding-block: var(--space-6) var(--space-5); }
+/* Hero panel: no fill, only the SpotlightBackground dot grid on the page background */
+.home .hero { padding-block: 0; }
 .home .hero-panel {
-  --hp-bg: #d1bcf5;
+  --hp-bg: var(--color-bg);
   --hp-text: #111013;
   --hp-line: #7c3aed;
   --hp-chip: rgb(17 16 19 / 0.08);
   padding: 3.4rem var(--space-5) 4.5rem;
   border-radius: var(--radius-md);
-  background: var(--hp-bg);
+  background: transparent; /* only the dot grid, no panel fill */
   color: var(--hp-text);
   text-align: center;
+  /* SpotlightBackground canvas sits under the content */
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  --spotlight-c1: var(--brand-violet);
+  --spotlight-c2: var(--brand-yellow);
+  --spotlight-dot: rgb(19 15 36 / 0.11);
+  --spotlight-dot-soft: rgb(19 15 36 / 0.05);
+  --spotlight-halo-alpha: 0.11;
+  --spotlight-min-alpha: 0.2;
+  --spotlight-grow: 3;
 }
-:root[data-theme='dark'] .home .hero-panel { --hp-bg: #331d58; --hp-text: #ffffff; --hp-line: #ffffff; --hp-chip: rgb(255 255 255 / 0.12); }
+.home .hero-panel > :not(canvas) { position: relative; z-index: 1; }
+.home .hero-magnet { display: inline-flex; }
+:root[data-theme='dark'] .home .hero-panel {
+  --hp-bg: var(--color-bg); --hp-text: #ffffff; --hp-line: #ffffff; --hp-chip: rgb(255 255 255 / 0.12);
+  --spotlight-dot: rgb(168 85 247 / 0.16); --spotlight-dot-soft: rgb(168 85 247 / 0.07);
+  --spotlight-halo-alpha: 0.14; --spotlight-min-alpha: 0.18; --spotlight-grow: 2.4;
+}
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .home .hero-panel { --hp-bg: #331d58; --hp-text: #ffffff; --hp-line: #ffffff; --hp-chip: rgb(255 255 255 / 0.12); }
+  :root:not([data-theme='light']) .home .hero-panel {
+    --hp-bg: var(--color-bg); --hp-text: #ffffff; --hp-line: #ffffff; --hp-chip: rgb(255 255 255 / 0.12);
+    --spotlight-dot: rgb(168 85 247 / 0.16); --spotlight-dot-soft: rgb(168 85 247 / 0.07);
+    --spotlight-halo-alpha: 0.14; --spotlight-min-alpha: 0.18; --spotlight-grow: 2.4;
+  }
 }
 .home .hero-badge a {
   display: inline-flex;
@@ -24,7 +45,8 @@
   min-height: 36px;
   padding: 0.3rem 0.7rem 0.3rem 0.3rem;
   border-radius: var(--radius-pill);
-  background: var(--hp-chip);
+  /* opaque, so the dot grid does not show through the pill */
+  background: color-mix(in srgb, var(--hp-text) 12%, var(--color-bg));
   color: var(--hp-text);
   font-size: var(--text-sm);
   text-decoration: none;
@@ -56,7 +78,7 @@
 .home .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-3); margin-top: var(--space-5); }
 .home .hero .actions { margin-top: 2.1rem; }
 .home .hero-panel .button { min-height: 52px; padding-inline: 1.5rem; }
-.home .hero .hero-panel .button.button--ghost { border: 1px solid var(--hp-line); background: transparent; color: var(--hp-line); opacity: 1; }
+.home .hero .hero-panel .button.button--ghost { border: 1px solid var(--hp-line); background: var(--color-bg); color: var(--hp-line); opacity: 1; }
 .home .hero .hero-panel .button.button--ghost:hover { background: var(--hp-line); color: var(--hp-bg); }
 :root[data-theme='dark'] .home .hero-panel .button:not(.button--ghost) { background: #48484a; color: #fff; }
 @media (max-width: 40em) {
@@ -140,7 +162,7 @@
   .home .fcard { min-height: 13.7rem; }
 }
 @media (min-width: 64em) {
-  .home .hero { padding-block: var(--space-6) var(--space-8); }
+  .home .hero { padding-block: 0; }
   .home .section { padding-block: var(--space-6); }
   .home .features { grid-template-columns: repeat(5, 1fr); }
   .home .build-row { grid-template-columns: 1fr 1fr; gap: var(--space-5); align-items: stretch; }

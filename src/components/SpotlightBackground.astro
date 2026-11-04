@@ -1,0 +1,329 @@
+---
+/**
+ * SpotlightBackground
+ * Animated dot-grid "spotlight" for a hero section. Canvas 2D, no dependencies.
+ *
+ * Place it as the FIRST child of a hero element that has
+ * position: relative; overflow: hidden; isolation: isolate.
+ * Hero content must sit above it (position: relative; z-index: 1).
+ *
+ * Mark text that must stay readable with data-spotlight-clear
+ * (text lines are measured; use data-spotlight-clear="box" to clear the whole box).
+ * Mark buttons that should follow the cursor with data-magnetic.
+ *
+ * Colors come from CSS custom properties on the hero element:
+ *   --spotlight-c1          glow color (default #7C3AED)
+ *   --spotlight-c2          hot centre color (default #ECC700)
+ *   --spotlight-dot         idle dot color
+ *   --spotlight-dot-soft    idle dot color near cleared text
+ *   --spotlight-halo-alpha  soft halo under the light, 0..1
+ *   --spotlight-min-alpha   alpha of the faintest lit dot
+ *   --spotlight-grow        extra radius (px) of the brightest dot
+ */
+interface Props {
+  gap?: number;
+  radius?: number;
+  class?: string;
+}
+const { gap = 26, radius = 260, class: className = '' } = Astro.props;
+---
+
+<canvas
+  class:list={['spotlight-bg', className]}
+  data-spotlight
+  data-gap={gap}
+  data-radius={radius}
+  aria-hidden="true"
+></canvas>
+
+<style>
+  .spotlight-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: block;
+    pointer-events: none;
+  }
+  :global([data-magnetic]) {
+    transition: transform 0.25s cubic-bezier(0.2, 0.75, 0.15, 1);
+  }
+</style>
+
+<script>
+  type RGB = [number, number, number];
+
+  const cleanups = new Set<() => void>();
+  const ready = new WeakSet<HTMLCanvasElement>();
+
+  function toRgb(probe: CanvasRenderingContext2D, color: string, fallback: RGB): RGB {
+    probe.fillStyle = '#000000';
+    probe.fillStyle = color;
+    const v = String(probe.fillStyle);
+    if (v[0] === '#') return [1, 3, 5].map((i) => parseInt(v.slice(i, i + 2), 16)) as RGB;
+    const m = v.match(/[\d.]+/g);
+    return m && m.length >= 3 ? [+m[0], +m[1], +m[2]] : fallback;
+  }
+
+  function setup(canvas: HTMLCanvasElement) {
+    if (ready.has(canvas) || !canvas.isConnected) return;
+    ready.add(canvas);
+    const host = canvas.parentElement;
+    const ctx = canvas.getContext('2d');
+    const probe = document.createElement('canvas').getContext('2d');
+    if (!host || !ctx || !probe) return;
+
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const GAP = Number(canvas.dataset.gap) || 26;
+    const R = Number(canvas.dataset.radius) || 260;
+    const STEPS = 40;
+    const PAD = 12;
+    const FEATHER = 60;
+    const IDLE_MS = 2200;
+
+    let W = 0, H = 0;
+    let dots: number[] = [];
+    let ramp: string[] = [];
+    let base = '', baseSoft = '', halo = '', grow = 3;
+    const L = { x: 0, y: 0 };
+    const target = { x: 0, y: 0 };
+    let lastMove = -1e9, raf = 0, last = 0, visible = true;
+    const magnets = Array.from(host.querySelectorAll<HTMLElement>('[data-magnetic]'));
+
+    function readColors() {
+      const cs = getComputedStyle(host!);
+      const v = (name: string, fallback: string) => cs.getPropertyValue(name).trim() || fallback;
+      const c1 = toRgb(probe!, v('--spotlight-c1', '#7C3AED'), [124, 58, 237]);
+      const c2 = toRgb(probe!, v('--spotlight-c2', '#ECC700'), [236, 199, 0]);
+      base = v('--spotlight-dot', 'rgba(19,15,36,.11)');
+      baseSoft = v('--spotlight-dot-soft', 'rgba(19,15,36,.05)');
+      const haloA = parseFloat(v('--spotlight-halo-alpha', '.11'));
+      const minA = parseFloat(v('--spotlight-min-alpha', '.2'));
+      grow = parseFloat(v('--spotlight-grow', '3'));
+      halo = `rgba(${c1[0]},${c1[1]},${c1[2]},${haloA})`;
+      ramp = [];
+      for (let s = 0; s <= STEPS; s++) {
+        const f = s / STEPS;
+        // short c1 -> c2 transition near the centre, so the two colors never mix into mud
+        const m = Math.min(1, Math.max(0, (f - 0.6) / 0.08));
+        const c = c1.map((x, i) => Math.round(x + (c2[i] - x) * m));
+        ramp.push(`rgba(${c[0]},${c[1]},${c[2]},${Math.min(1, minA + f * 1.1).toFixed(3)})`);
+      }
+    }
+
+    // dots fade out under [data-spotlight-clear] text so it stays readable
+    function buildMask() {
+      if (!dots.length) return;
+      const hr = host!.getBoundingClientRect();
+      const rects: number[][] = [];
+      const add = (r: DOMRect) => {
+        if (r.width && r.height) rects.push([r.left - hr.left, r.top - hr.top, r.right - hr.left, r.bottom - hr.top]);
+      };
+      host!.querySelectorAll('[data-spotlight-clear]').forEach((el) => {
+        if (el.getAttribute('data-spotlight-clear') === 'box') {
+          add(el.getBoundingClientRect());
+          return;
+        }
+        const rg = document.createRange();
+        rg.selectNodeContents(el);
+        Array.from(rg.getClientRects()).forEach(add);
+      });
+      for (let i = 0; i < dots.length; i += 3) {
+        const x = dots[i], y = dots[i + 1];
+        let d = 1e9;
+        for (const q of rects) {
+          const dx = Math.max(q[0] - x, 0, x - q[2]);
+          const dy = Math.max(q[1] - y, 0, y - q[3]);
+          const dd = Math.hypot(dx, dy);
+          if (dd < d) d = dd;
+        }
+        const k = Math.min(1, Math.max(0, (d - PAD) / FEATHER));
+        dots[i + 2] = k * k * (3 - 2 * k);
+      }
+    }
+
+    function build() {
+      const r = host!.getBoundingClientRect();
+      const dpr = Math.min(2, window.devicePixelRatio || 1);
+      W = r.width;
+      H = r.height;
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
+      dots = [];
+      const ox = (W % GAP) / 2, oy = (H % GAP) / 2;
+      for (let y = oy; y < H; y += GAP) for (let x = ox; x < W; x += GAP) dots.push(x, y, 1);
+      buildMask();
+      if (!L.x) {
+        L.x = W * 0.66;
+        L.y = H * 0.72;
+        target.x = L.x;
+        target.y = L.y;
+      }
+    }
+
+    function frame(t: number, dt: number) {
+      const c = ctx!;
+      if (!reduce && t - lastMove > IDLE_MS) {
+        target.x = W / 2 + Math.cos(t * 0.00042) * W * 0.33;
+        target.y = H / 2 + Math.sin(t * 0.00071) * H * 0.32;
+      }
+      const k = Math.min(1, (0.06 * dt) / 16.67);
+      L.x += (target.x - L.x) * k;
+      L.y += (target.y - L.y) * k;
+
+      c.clearRect(0, 0, W, H);
+      const hg = c.createRadialGradient(L.x, L.y, 0, L.x, L.y, R * 1.15);
+      hg.addColorStop(0, halo);
+      hg.addColorStop(1, 'rgba(0,0,0,0)');
+      c.fillStyle = hg;
+      c.fillRect(L.x - R * 1.2, L.y - R * 1.2, R * 2.4, R * 2.4);
+
+      const lit: number[] = [];
+      const full = new Path2D();
+      const soft = new Path2D();
+      for (let i = 0; i < dots.length; i += 3) {
+        const x = dots[i], y = dots[i + 1], m = dots[i + 2];
+        if (m < 0.12) continue;
+        const dx = x - L.x, dy = y - L.y;
+        const d = Math.sqrt(dx * dx + dy * dy);
+        if (d < R) lit.push(x, y, d, m);
+        else {
+          const P = m > 0.5 ? full : soft;
+          P.moveTo(x + 1.2, y);
+          P.arc(x, y, 1.2, 0, 7);
+        }
+      }
+      c.fillStyle = base;
+      c.fill(full);
+      c.fillStyle = baseSoft;
+      c.fill(soft);
+
+      for (let i = 0; i < lit.length; i += 4) {
+        const x = lit[i], y = lit[i + 1], d = lit[i + 2];
+        const f = (1 - d / R) * lit[i + 3];
+        if (f < 0.02) continue;
+        const wave = 0.72 + 0.28 * Math.sin(d * 0.045 - t * 0.004);
+        const s = Math.min(STEPS, Math.max(0, Math.round(f * wave * STEPS)));
+        c.fillStyle = ramp[s];
+        c.beginPath();
+        c.arc(x, y, 1.2 + f * grow, 0, 7);
+        c.fill();
+      }
+    }
+
+    function tick(t: number) {
+      const dt = last ? Math.min(50, t - last) : 16.67;
+      last = t;
+      frame(t, dt);
+      raf = requestAnimationFrame(tick);
+    }
+    function start() {
+      if (reduce || raf || !visible || document.hidden) return;
+      last = 0;
+      raf = requestAnimationFrame(tick);
+    }
+    function stop() {
+      cancelAnimationFrame(raf);
+      raf = 0;
+    }
+    function still() {
+      if (!raf) frame(0, 16.67);
+    }
+
+    const onMove = (e: PointerEvent) => {
+      const r = host.getBoundingClientRect();
+      target.x = e.clientX - r.left;
+      target.y = e.clientY - r.top;
+      lastMove = performance.now();
+      if (reduce) {
+        L.x = target.x;
+        L.y = target.y;
+        still();
+        return;
+      }
+      if (e.pointerType !== 'mouse') return;
+      for (const b of magnets) {
+        const br = b.getBoundingClientRect();
+        const dx = e.clientX - (br.left + br.width / 2);
+        const dy = e.clientY - (br.top + br.height / 2);
+        b.style.transform = Math.hypot(dx, dy) < 120 ? `translate(${(dx * 0.28).toFixed(1)}px, ${(dy * 0.35).toFixed(1)}px)` : '';
+      }
+    };
+    const onLeave = () => {
+      lastMove = -1e9;
+      magnets.forEach((b) => (b.style.transform = ''));
+    };
+    host.addEventListener('pointermove', onMove, { passive: true });
+    host.addEventListener('pointerleave', onLeave);
+
+    const ro = new ResizeObserver(() => {
+      build();
+      still();
+    });
+    ro.observe(host);
+
+    const io = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      if (visible) start();
+      else stop();
+    });
+    io.observe(host);
+
+    const onVis = () => (document.hidden ? stop() : start());
+    document.addEventListener('visibilitychange', onVis);
+
+    // re-read colors when the site theme changes
+    const recolor = () => {
+      readColors();
+      still();
+    };
+    const mo = new MutationObserver(recolor);
+    mo.observe(document.documentElement, { attributes: true, attributeFilter: ['class', 'data-theme'] });
+    const mq = matchMedia('(prefers-color-scheme: dark)');
+    mq.addEventListener('change', recolor);
+
+    // text moves while entrance animations and web fonts settle: re-measure
+    const remask = () => {
+      buildMask();
+      still();
+    };
+    const t1 = setTimeout(remask, 1500);
+    if (document.fonts) document.fonts.ready.then(remask);
+
+    readColors();
+    build();
+    still();
+    start();
+
+    cleanups.add(() => {
+      stop();
+      ro.disconnect();
+      io.disconnect();
+      mo.disconnect();
+      mq.removeEventListener('change', recolor);
+      document.removeEventListener('visibilitychange', onVis);
+      host.removeEventListener('pointermove', onMove);
+      host.removeEventListener('pointerleave', onLeave);
+      clearTimeout(t1);
+      ready.delete(canvas);
+    });
+  }
+
+  function initAll() {
+    document.querySelectorAll<HTMLCanvasElement>('canvas[data-spotlight]').forEach((c) => {
+      const go = () => setup(c);
+      // start after the page has painted, so the canvas never competes with LCP
+      if ('requestIdleCallback' in window) window.requestIdleCallback(go, { timeout: 1200 });
+      else setTimeout(go, 200);
+    });
+  }
+
+  initAll();
+  document.addEventListener('astro:page-load', initAll);
+  document.addEventListener('astro:before-swap', () => {
+    cleanups.forEach((fn) => fn());
+    cleanups.clear();
+  });
+</script>

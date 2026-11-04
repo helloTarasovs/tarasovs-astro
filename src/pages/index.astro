@@ -5,6 +5,7 @@ import Base from '../layouts/Base.astro';
 import PortfolioGrid from '../components/PortfolioGrid.astro';
 import Marquee from '../components/Marquee.astro';
 import HeroTyping from '../components/HeroTyping.astro';
+import SpotlightBackground from '../components/SpotlightBackground.astro';
 import ContactForm from '../components/ContactForm.astro';
 import LeadMagnet from '../components/LeadMagnet.astro';
 import Cards from '../components/blocks/Cards.astro';
@@ -119,12 +120,13 @@ const stats = [
 
   <section class="hero container" aria-labelledby="hero-title">
     <div class="hero-panel">
+      <SpotlightBackground />
       <p class="hero-badge"><a href="/services/geo-ai-search-optimization/"><span>New</span> GEO AI Search Optimization <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6" /></svg></a></p>
       <h1 id="hero-title" aria-label="We build websites that get found on Google and in AI">We build websites that get found <span class="hl">on Google and in <span class="hero-ai-name"><span data-ai-name>AI</span></span></span></h1>
-      <p class="hero-lead">Based in Europe. Serving clients in the US, UK, EU, and beyond</p>
+      <p class="hero-lead" data-spotlight-clear>Based in Europe. Serving clients in the US, UK, EU, and beyond</p>
       <p class="actions">
-        <a class="button" href="/contact-us/#CForm">Start a Project</a>
-        <a class="button button--ghost" href="/case-studies/">View Our Work</a>
+        <span class="hero-magnet" data-magnetic><a class="button" href="/contact-us/#CForm">Start a Project</a></span>
+        <span class="hero-magnet" data-magnetic><a class="button button--ghost" href="/case-studies/">View Our Work</a></span>
       </p>
     </div>
   </section>
