@@ -1,14 +1,14 @@
 /* Home page layout (EN / and UA /ua/). Moved from src/pages/index.astro so both homes share one stylesheet.
    Scoped to <main class="home"> (Base `mainClass`), so it never leaks to other pages or the header/footer. */
 /* Hero panel: no fill, only the SpotlightBackground dot grid on the page background */
-.home .hero { padding-block: 0; }
+.home .hero { padding-block: 0; max-width: none; padding-inline: 0; } /* full-bleed: edge to edge of the window */
 .home .hero-panel {
   --hp-bg: var(--color-bg);
   --hp-text: #111013;
   --hp-line: #7c3aed;
   --hp-chip: rgb(17 16 19 / 0.08);
   padding: 3.4rem var(--space-5) 4.5rem;
-  border-radius: var(--radius-md);
+  border-radius: 0;
   background: transparent; /* only the dot grid, no panel fill */
   color: var(--hp-text);
   text-align: center;
