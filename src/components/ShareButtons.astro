@@ -4,9 +4,13 @@
 interface Props {
   path: string;
   title: string;
+  lang?: 'en' | 'uk';
 }
 
-const { path, title } = Astro.props;
+const { path, title, lang = 'en' } = Astro.props;
+const L = lang === 'uk'
+  ? { label: 'Поділитися статтею', on: (n: string) => `Поділитися в ${n} (відкриється в новій вкладці)`, onShort: (n: string) => `Поділитися в ${n}`, mail: 'Поділитися електронною поштою', copy: 'Скопіювати посилання', more: 'Інші способи поділитися', copied: 'Посилання скопійовано', failed: 'Не вдалося скопіювати. Скористайтеся адресним рядком.' }
+  : { label: 'Share this article', on: (n: string) => `Share on ${n} (opens in a new tab)`, onShort: (n: string) => `Share on ${n}`, mail: 'Share by email', copy: 'Copy link', more: 'More sharing options', copied: 'Link copied', failed: 'Copy failed. Use the address bar.' };
 const url = new URL(path, Astro.site).href;
 const u = encodeURIComponent(url);
 const t = encodeURIComponent(title);
@@ -30,28 +34,28 @@ const links = [
 ];
 const mailHref = `mailto:?subject=${t}&body=${u}`;
 ---
-<div class="share" data-share data-url={url} data-title={title}>
-  <p class="share-label" id="share-label">Share this article</p>
+<div class="share" data-share data-url={url} data-title={title} data-copied={L.copied} data-failed={L.failed}>
+  <p class="share-label" id="share-label">{L.label}</p>
   <ul class="share-list" aria-labelledby="share-label">
     {links.map((l) => (
       <li>
-        <a class="share-btn" href={l.href} target="_blank" rel="noopener noreferrer" aria-label={`Share on ${l.name} (opens in a new tab)`} title={`Share on ${l.name}`}>
+        <a class="share-btn" href={l.href} target="_blank" rel="noopener noreferrer" aria-label={L.on(l.name)} title={L.onShort(l.name)}>
           <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d={l.icon} /></svg>
         </a>
       </li>
     ))}
     <li>
-      <a class="share-btn" href={mailHref} aria-label="Share by email" title="Share by email">
+      <a class="share-btn" href={mailHref} aria-label={L.mail} title={L.mail}>
         <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
       </a>
     </li>
     <li>
-      <button type="button" class="share-btn" data-copy aria-label="Copy link" title="Copy link">
+      <button type="button" class="share-btn" data-copy aria-label={L.copy} title={L.copy}>
         <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5" /><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5" /></svg>
       </button>
     </li>
     <li hidden data-native>
-      <button type="button" class="share-btn" data-native-btn aria-label="More sharing options" title="More sharing options">
+      <button type="button" class="share-btn" data-native-btn aria-label={L.more} title={L.more}>
         <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12" /><path d="m7 8 5-5 5 5" /><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" /></svg>
       </button>
     </li>
@@ -72,9 +76,9 @@ const mailHref = `mailto:?subject=${t}&body=${u}`;
     box.querySelector('[data-copy]').addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText(url);
-        say('Link copied');
+        say(box.dataset.copied);
       } catch {
-        say('Copy failed. Use the address bar.');
+        say(box.dataset.failed);
       }
     });
     if (navigator.share) {

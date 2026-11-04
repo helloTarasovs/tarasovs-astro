@@ -50,11 +50,13 @@ export const MAIN_NAV_UK: NavItem[] = [
     href: '/ua/#posluhy',
     children: [
       { label: 'Створення сайтів', href: '/ua/stvorennia-saitiv/' },
+      { label: 'Дизайн сайтів', href: '/ua/dyzain-saitiv/' },
       { label: 'Просування сайтів', href: '/ua/prosuvannia-saitiv/' },
       { label: 'AI-видимість', href: '/ua/ai-vydymist/' },
     ],
   },
   { label: 'Роботи', href: '/ua/roboty/' },
+  { label: 'Блог', href: '/ua/blog/' },
   { label: 'Міні-аудит', href: '/ua/#mini-audyt' },
   { label: 'Контакти', href: '/ua/kontakty/' },
 ];

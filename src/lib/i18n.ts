@@ -13,9 +13,27 @@ export const PAIRS: Record<Lang, string>[] = [
   { uk: '/ua/stvorennia-saitiv/', en: '/services/website-development/' },
   { uk: '/ua/prosuvannia-saitiv/', en: '/services/seo-services/' },
   { uk: '/ua/ai-vydymist/', en: '/services/geo-ai-search-optimization/' },
+  { uk: '/ua/dyzain-saitiv/', en: '/services/website-design-services/' },
   { uk: '/ua/kontakty/', en: '/contact-us/' },
   { uk: '/ua/roboty/', en: '/case-studies/' },
   { uk: '/ua/polityka-konfidentsiinosti/', en: '/privacy-cookie-policy-tarasovs-digital-agency/' },
+  // Translated blog posts (src/content/ua-posts/<name>.md)
+  { uk: '/ua/blog/', en: '/category/insights/' },
+  { uk: '/ua/blog/shcho-take-geo/', en: '/what-is-geo-generative-engine-optimization/' },
+  { uk: '/ua/blog/geo-slovnyk/', en: '/geo-glossary/' },
+  { uk: '/ua/blog/ai-vidpovidi-pro-brendovi-zapyty/', en: '/ai-overviews-branded-searches/' },
+  { uk: '/ua/blog/geo-dlia-internet-mahazyniv/', en: '/geo-ecommerce-chatgpt-perplexity/' },
+  { uk: '/ua/blog/claude-fable-5-vymknennia-eksportni-obmezhennia/', en: '/claude-fable-5-shutdown-export-controls-explained/' },
+  { uk: '/ua/blog/keis-shoppingmodaitalia-seo-ai-2026/', en: '/shoppingmodaitalia-seo-ai-case-study-2026/' },
+  { uk: '/ua/blog/claude-fable-5-ta-geo/', en: '/claude-fable-5-geo-ai-search-visibility/' },
+  { uk: '/ua/blog/vidstezhennia-ai-vydymosti/', en: '/ai-search-visibility-tracking/' },
+  { uk: '/ua/blog/share-of-model/', en: '/share-of-model-ai-search-visibility/' },
+  { uk: '/ua/blog/yak-potrapyty-v-google-ai-overviews/', en: '/how-to-appear-in-google-ai-overviews/' },
+  { uk: '/ua/blog/trafik-vid-ai-asystentiv-ga4/', en: '/track-ai-assistant-traffic-ga4/' },
+  { uk: '/ua/blog/geo-seo-aeo/', en: '/geo-vs-seo-vs-aeo/' },
+  { uk: '/ua/blog/llms-txt-posibnyk/', en: '/llms-txt-guide/' },
+  { uk: '/ua/blog/yak-ranzhuvatysia-v-chatgpt-search/', en: '/how-to-rank-in-chatgpt-search/' },
+  { uk: '/ua/blog/yak-potrapyty-v-tsytaty-chatgpt/', en: '/how-to-get-your-business-cited-in-chatgpt-answers/' },
 ];
 
 export const langFromPath = (path: string): Lang => (path === '/ua/' || path.startsWith('/ua/') ? 'uk' : 'en');

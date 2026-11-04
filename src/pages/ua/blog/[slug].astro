@@ -1,0 +1,100 @@
+---
+// Ukrainian translations of posts: src/content/ua-posts/<slug>.md -> /ua/blog/<slug>/.
+// Same template as src/pages/[slug].astro; the English original is the hreflang pair (PAIRS in lib/i18n.ts).
+import { getCollection, render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import ShareButtons from '../../../components/ShareButtons.astro';
+import { articleSchema, breadcrumbSchema, withFallbackArticle } from '../../../lib/schema';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('uaPosts');
+  return posts.map((post) => ({ params: { slug: post.data.slug }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const d = post.data;
+const path = `/ua/blog/${d.slug}/`;
+const title = d.seo?.title ?? `${d.title} - Tarasovs Digital Agency`;
+// Only the Yoast description: WordPress had none on some posts, and the excerpt is not a usable fallback.
+const description = d.seo?.description;
+const image = d.seo?.ogImage ?? d.cover?.src;
+// A few WordPress bodies start with their own <h1>; then the template title must not add a second one.
+const bodyHasH1 = /<h1[\s>]/i.test(post.body ?? '');
+const fmt = (date: Date) => date.toLocaleDateString('uk-UA', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const crumbs = [
+  { name: 'Головна', path: '/ua/' },
+  { name: 'Блог', path: '/ua/blog/' },
+  { name: d.title, path },
+];
+
+const jsonld = [
+  ...withFallbackArticle(d.jsonld, articleSchema({ path, title: d.title, description, image, published: d.pubDate, modified: d.updatedDate })),
+  breadcrumbSchema(crumbs),
+];
+---
+<Base
+  title={title}
+  description={description}
+  canonical={d.seo?.canonical ?? path}
+  robots={d.seo?.robots}
+  ogImage={image}
+  ogType="article"
+  publishedTime={d.pubDate}
+  modifiedTime={d.updatedDate}
+  jsonld={jsonld}
+>
+  <article class="post">
+    <header class="post-header container container-prose">
+      <nav class="crumbs" aria-label="Навігаційний ланцюжок">
+        <ol>
+          {crumbs.map((c, i) => (
+            <li>{i < crumbs.length - 1 ? <a href={c.path}>{c.name}</a> : <span aria-current="page">{c.name}</span>}</li>
+          ))}
+        </ol>
+      </nav>
+      {!bodyHasH1 && <h1 class="post-title">{d.title}</h1>}
+      <p class="post-meta">
+        <time datetime={d.pubDate.toISOString()}>{fmt(d.pubDate)}</time>
+        {d.updatedDate && d.updatedDate > d.pubDate && (
+          <> · Оновлено <time datetime={d.updatedDate.toISOString()}>{fmt(d.updatedDate)}</time></>
+        )}
+      </p>
+    </header>
+    <div class="post-body prose container container-prose">
+      <Content />
+    </div>
+    <footer class="post-footer container container-prose">
+      <ShareButtons path={path} title={d.title} lang="uk" />
+    </footer>
+  </article>
+</Base>
+
+<style>
+  .post { padding-block: var(--space-7) var(--space-8); }
+  .post-header { margin-bottom: var(--space-6); }
+  .crumbs ol { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-2); padding: 0; list-style: none; font-size: var(--text-xs); color: var(--color-text-muted); }
+  .crumbs li { display: inline-flex; align-items: center; min-height: 24px; min-width: 0; }
+  .crumbs li + li::before { content: '/'; margin-right: var(--space-2); opacity: 0.6; }
+  .crumbs li:last-child { flex: 1 1 12rem; }
+  .crumbs li:last-child span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .crumbs a { color: inherit; text-decoration: none; }
+  .crumbs a:hover { color: var(--color-link); text-decoration: underline; }
+  .post-title {
+    margin-top: var(--space-3);
+    font-family: var(--font-title);
+    font-size: var(--text-h1);
+    font-weight: 500;
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-title);
+    color: var(--color-heading);
+    text-wrap: balance;
+  }
+  .post-meta { margin-top: var(--space-4); color: var(--color-text-muted); font-size: var(--text-sm); }
+  /* Posts built with ta- components were laid out for a wider Elementor column */
+  .post-body:has(.ta-post) { max-width: calc(960px + 2 * var(--gutter)); }
+  .post-footer { margin-top: var(--space-7); }
+  article:has(.ta-post) > header,
+  article:has(.ta-post) > footer { max-width: calc(960px + 2 * var(--gutter)); }
+</style>

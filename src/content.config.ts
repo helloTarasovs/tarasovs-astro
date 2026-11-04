@@ -41,6 +41,12 @@ const posts = defineCollection({
   schema: z.object({ ...base, excerpt: z.string().optional() }),
 });
 
+// Ukrainian translations of posts: /ua/blog/<file name>/. `enSlug` is the English original (hreflang pair).
+const uaPosts = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/ua-posts' }),
+  schema: z.object({ ...base, excerpt: z.string().optional(), enSlug: z.string() }),
+});
+
 const projects = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/projects' }),
   // summary / task / details / gallery come from the Ohio portfolio fields on the live pages
@@ -79,4 +85,4 @@ const profiles = defineCollection({
     .passthrough(),
 });
 
-export const collections = { posts, projects, profiles };
+export const collections = { posts, uaPosts, projects, profiles };

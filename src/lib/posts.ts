@@ -14,9 +14,20 @@ export function pageSlice<T>(all: T[], page: number) {
 // Card tags: the post's WordPress tags, else its categories (without the generic "insights").
 const WORDS: Record<string, string> = {
   geo: 'GEO', seo: 'SEO', aeo: 'AEO', ai: 'AI', ui: 'UI', ux: 'UX', chatgpt: 'ChatGPT', wordpress: 'WordPress',
-  webflow: 'Webflow', framer: 'Framer', wix: 'Wix', claude: 'Claude', google: 'Google', perplexity: 'Perplexity', ny: 'NY',
+  webflow: 'Webflow', ga4: 'GA4', llms: 'llms.txt', ecommerce: 'E-commerce', framer: 'Framer', wix: 'Wix', claude: 'Claude', google: 'Google', perplexity: 'Perplexity', ny: 'NY',
+};
+// Long WordPress category slugs folded into short labels (several slugs can share one label).
+const ALIAS: Record<string, string> = {
+  'geo-ai-search-optimization': 'GEO',
+  'ai-search-optimization': 'GEO',
+  'generative-engine-optimization': 'GEO',
+  'chatgpt-seo': 'ChatGPT',
+  'web-designer': 'Web Design',
+  'web-design': 'Web Design',
+  'ui-ux-design': 'UI/UX',
 };
 export const tagLabel = (slug: string) =>
+  ALIAS[slug.toLowerCase()] ??
   slug
     .split('-')
     .map((w) => WORDS[w] ?? (/^\d/.test(w) ? w : w.charAt(0).toUpperCase() + w.slice(1)))
@@ -25,5 +36,5 @@ export const tagLabel = (slug: string) =>
 
 export function postTags(data: { tags?: string[]; categories?: string[] }, max = 3) {
   const list = data.tags?.length ? data.tags : (data.categories ?? []).filter((c) => c !== 'insights');
-  return [...new Set(list)].slice(0, max).map(tagLabel);
+  return [...new Set(list.map(tagLabel))].slice(0, max);
 }

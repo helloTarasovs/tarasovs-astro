@@ -1,39 +1,154 @@
 ---
-// Blog index list + pagination, shared by /category/insights/ and /category/insights/page/N/
+// Blog index list + pagination, shared by /category/insights/ (+ /page/N/) and /ua/blog/.
+// Tag filter: `allPosts` (EN, paginated) lets the filter search every post and show matches from a JSON
+// copy; without it (UA, one page) the cards on the page are hidden/shown.
 import { postTags } from '../lib/posts';
 interface Props {
   posts: any[];
   currentPage: number;
   lastPage: number;
+  lang?: 'en' | 'uk';
+  filterable?: boolean;
+  allPosts?: any[];
 }
-const { posts, currentPage, lastPage } = Astro.props;
+const { posts, currentPage, lastPage, lang = 'en', filterable = false, allPosts } = Astro.props;
+const source = allPosts ?? posts;
+// tags shared by 2+ posts keep the bar short
+const counts = new Map<string, number>();
+source.forEach((p) => postTags(p.data, 99).forEach((t) => counts.set(t, (counts.get(t) ?? 0) + 1)));
+const allTags = [...counts.entries()].filter(([, n]) => n >= 2).sort((a, b) => b[1] - a[1]).map(([t]) => t);
+const ui = lang === 'uk' ? { all: 'Усі', label: 'Фільтр за темою', status: 'Показано постів: {n}', tags: 'Теги' } : { all: 'All', label: 'Filter by topic', status: 'Showing {n} posts', tags: 'Tags' };
+const base = lang === 'uk' ? '/ua/blog/' : '/';
+const locale = lang === 'uk' ? 'uk-UA' : 'en-US';
+const fmt = (d: Date) => d.toLocaleDateString(locale, { year: 'numeric', month: 'short', day: 'numeric' });
 const pageUrl = (n: number) => (n === 1 ? '/category/insights/' : `/category/insights/page/${n}/`);
+const json = allPosts
+  ? JSON.stringify(allPosts.map((p) => ({
+      href: `${base}${p.data.slug}/`,
+      img: p.data.cover ? { src: p.data.cover.src, alt: p.data.cover.alt, w: p.data.cover.width, h: p.data.cover.height } : null,
+      title: p.data.title,
+      iso: p.data.pubDate.toISOString(),
+      date: fmt(p.data.pubDate),
+      excerpt: p.data.excerpt ?? '',
+      tags: postTags(p.data, 99),
+      chips: postTags(p.data, 3),
+    }))).replace(/</g, '\\u003c')
+  : '';
 ---
-<ul class="post-list">
+{filterable && allTags.length > 1 && (
+  <div class="tag-filter" data-tag-filter hidden role="group" aria-label={ui.label}>
+    <button type="button" class="tag-btn" data-tag="" aria-pressed="true">{ui.all}</button>
+    {allTags.map((t) => <button type="button" class="tag-btn" data-tag={t} aria-pressed="false">{t}</button>)}
+  </div>
+)}
+{filterable && <p class="visually-hidden" role="status" aria-live="polite" data-tag-status></p>}
+<ul class="post-list" data-post-list>
   {posts.map((p, i) => (
-    <li class:list={['post-card', { reveal: i >= 6 }]}>
-      <a href={`/${p.data.slug}/`}>
+    <li class:list={['post-card', { reveal: i >= 6 && !filterable }]} data-tags={postTags(p.data, 99).join('|')}>
+      <a href={`${base}${p.data.slug}/`}>
         {p.data.cover
           ? <img src={p.data.cover.src} alt={p.data.cover.alt} width={p.data.cover.width} height={p.data.cover.height} loading="lazy" decoding="async" />
           : <img src="/og-default.jpg" alt="" width="1200" height="630" loading="lazy" decoding="async" />}
         <h2>{p.data.title}</h2>
       </a>
-      <time datetime={p.data.pubDate.toISOString()}>{p.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</time>
+      <time datetime={p.data.pubDate.toISOString()}>{fmt(p.data.pubDate)}</time>
       {p.data.excerpt && <p>{p.data.excerpt}</p>}
-      {postTags(p.data).length > 0 && (
-        <ul class="tags" aria-label="Tags">{postTags(p.data).map((t) => <li>{t}</li>)}</ul>
+      {postTags(p.data, 3).length > 0 && (
+        <ul class="tags" aria-label={ui.tags}>{postTags(p.data, 3).map((t) => <li data-tag-chip={t}>{t}</li>)}</ul>
       )}
     </li>
   ))}
 </ul>
+{allPosts && filterable && (
+  <>
+    <script type="application/json" data-all-posts set:html={json}></script>
+    <template data-card-tpl>
+      <li class="post-card" data-tags="">
+        <a href="#"><img src="/og-default.jpg" alt="" width="1200" height="630" loading="lazy" decoding="async" /><h2></h2></a>
+        <time></time>
+        <p></p>
+        <ul class="tags" aria-label={ui.tags}></ul>
+      </li>
+    </template>
+  </>
+)}
 
 {lastPage > 1 && (
-  <nav class="pagination reveal" aria-label="Pagination">
+  <nav class="pagination reveal" aria-label="Pagination" data-pagination>
     {currentPage > 1 && <a href={pageUrl(currentPage - 1)} rel="prev">Newer posts</a>}
     <span>Page {currentPage} of {lastPage}</span>
     {currentPage < lastPage && <a href={pageUrl(currentPage + 1)} rel="next">Older posts</a>}
   </nav>
 )}
+
+<script define:vars={{ statusTpl: ui.status }}>
+  const bar = document.querySelector('[data-tag-filter]');
+  if (bar) {
+    bar.hidden = false;
+    const list = document.querySelector('[data-post-list]');
+    const status = document.querySelector('[data-tag-status]');
+    const pag = document.querySelector('[data-pagination]');
+    const btns = [...bar.querySelectorAll('[data-tag]')];
+    const dataEl = document.querySelector('[data-all-posts]');
+    const all = dataEl ? JSON.parse(dataEl.textContent) : null;
+    const tpl = document.querySelector('[data-card-tpl]');
+    const original = list.innerHTML;
+    let current = '';
+    const upgrade = (root) => {
+      root.querySelectorAll('[data-tag-chip]').forEach((li) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'tag-btn tag-btn--chip';
+        b.textContent = li.dataset.tagChip;
+        li.textContent = '';
+        li.appendChild(b);
+      });
+    };
+    const card = (p) => {
+      const c = tpl.content.firstElementChild.cloneNode(true);
+      c.dataset.tags = p.tags.join('|');
+      c.querySelector('a').href = p.href;
+      const img = c.querySelector('img');
+      if (p.img) { img.src = p.img.src; img.alt = p.img.alt || ''; if (p.img.w) img.width = p.img.w; if (p.img.h) img.height = p.img.h; }
+      c.querySelector('h2').textContent = p.title;
+      const t = c.querySelector('time'); t.dateTime = p.iso; t.textContent = p.date;
+      const ex = c.querySelector('p'); if (p.excerpt) ex.textContent = p.excerpt; else ex.remove();
+      const ul = c.querySelector('ul.tags');
+      if (p.chips.length) p.chips.forEach((tag) => { const li = document.createElement('li'); li.dataset.tagChip = tag; li.textContent = tag; ul.appendChild(li); }); else ul.remove();
+      return c;
+    };
+    const apply = (tag) => {
+      current = tag;
+      let n;
+      if (all) {
+        if (!tag) { list.innerHTML = original; n = list.children.length; }
+        else {
+          const hit = all.filter((p) => p.tags.includes(tag));
+          list.replaceChildren(...hit.map(card));
+          n = hit.length;
+        }
+        upgrade(list);
+        if (pag) pag.hidden = !!tag;
+      } else {
+        n = 0;
+        [...list.children].forEach((c) => {
+          const show = !tag || c.dataset.tags.split('|').includes(tag);
+          c.hidden = !show;
+          c.classList.remove('reveal');
+          if (show) n++;
+        });
+      }
+      btns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.tag === tag)));
+      if (status) status.textContent = statusTpl.replace('{n}', n);
+    };
+    upgrade(list);
+    list.addEventListener('click', (e) => {
+      const b = e.target.closest('.tag-btn--chip');
+      if (b) { apply(b.textContent); bar.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
+    });
+    btns.forEach((b) => b.addEventListener('click', () => apply(b.dataset.tag)));
+  }
+</script>
 
 <style>
   .post-list { display: grid; gap: var(--space-6); padding: 0; list-style: none; }
@@ -49,6 +164,13 @@ const pageUrl = (n: number) => (n === 1 ? '/category/insights/' : `/category/ins
   .pagination { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-8); padding-top: var(--space-5); border-top: 1px solid var(--color-border); }
   .pagination a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
   .pagination span { color: var(--color-text-muted); font-size: var(--text-sm); }
+  .tag-filter { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-6); }
+  :global(.tag-btn) { min-height: 44px; padding: 0.4rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-pill); background: var(--color-surface-2); color: var(--color-text); font: inherit; font-size: var(--text-sm); cursor: pointer; }
+  :global(.tag-btn:hover) { border-color: var(--color-link); color: var(--color-link); }
+  :global(.tag-btn[aria-pressed='true']) { background: var(--color-link); border-color: var(--color-link); color: #fff; }
+  :global(.tag-btn--chip) { min-height: 24px; padding: 0.15rem 0.6rem; font-size: var(--text-xs); background: var(--color-surface-2); }
+  .tags li:has(> .tag-btn) { padding: 0; background: none; }
+  .post-card[hidden] { display: none; }
   @media (min-width: 40em) { .post-list { grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 64em) { .post-list { grid-template-columns: repeat(3, 1fr); gap: var(--space-7) var(--space-6); } }
 </style>

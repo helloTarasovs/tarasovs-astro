@@ -11,7 +11,8 @@ export async function getStaticPaths() {
 }
 
 const page = Number(Astro.params.page);
-const { items, lastPage } = pageSlice(await sortedPosts(), page);
+const allPosts = await sortedPosts();
+const { items, lastPage } = pageSlice(allPosts, page);
 ---
 <Base
   title={`Insights Archives - Page ${page} of ${lastPage} - Tarasovs Digital Agency`}
@@ -20,6 +21,6 @@ const { items, lastPage } = pageSlice(await sortedPosts(), page);
 >
   <div class="page container">
     <h1>Insights <span>Page {page}</span></h1>
-    <PostList posts={items} currentPage={page} lastPage={lastPage} />
+    <PostList posts={items} currentPage={page} lastPage={lastPage} filterable allPosts={allPosts} />
   </div>
 </Base>

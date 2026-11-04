@@ -1,0 +1,20 @@
+---
+// Ukrainian blog index: only the posts that have a translation (src/content/ua-posts/).
+import Base from '../../../layouts/Base.astro';
+import PostList from '../../../components/PostList.astro';
+import { getCollection } from 'astro:content';
+import { breadcrumbSchema } from '../../../lib/schema';
+
+const posts = (await getCollection('uaPosts')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<Base
+  title="Блог про GEO та AI-пошук - Tarasovs Digital Agency"
+  description="Статті про GEO, AEO та видимість бізнесу в ChatGPT, Perplexity і Google AI Overviews від Tarasovs Digital Agency."
+  canonical="/ua/blog/"
+  jsonld={[breadcrumbSchema([{ name: 'Головна', path: '/ua/' }, { name: 'Блог', path: '/ua/blog/' }])]}
+>
+  <div class="page container">
+    <h1>Блог</h1>
+    <PostList posts={posts} currentPage={1} lastPage={1} lang="uk" filterable />
+  </div>
+</Base>

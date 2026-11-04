@@ -5,7 +5,8 @@ import PostList from '../../../components/PostList.astro';
 import { sortedPosts, pageSlice } from '../../../lib/posts';
 import { breadcrumbSchema } from '../../../lib/schema';
 
-const { items, lastPage } = pageSlice(await sortedPosts(), 1);
+const allPosts = await sortedPosts();
+const { items, lastPage } = pageSlice(allPosts, 1);
 ---
 <Base
   title="Insights Archives - Tarasovs Digital Agency"
@@ -15,6 +16,6 @@ const { items, lastPage } = pageSlice(await sortedPosts(), 1);
 >
   <div class="page container">
     <h1>Insights</h1>
-    <PostList posts={items} currentPage={1} lastPage={lastPage} />
+    <PostList posts={items} currentPage={1} lastPage={lastPage} filterable allPosts={allPosts} />
   </div>
 </Base>
