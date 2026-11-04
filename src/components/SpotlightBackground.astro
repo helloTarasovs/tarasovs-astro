@@ -239,7 +239,6 @@ const { gap = 26, radius = 260, class: className = '' } = Astro.props;
         L.x = target.x;
         L.y = target.y;
         still();
-        return;
       }
     };
     const onLeave = () => {
@@ -276,6 +275,7 @@ const { gap = 26, radius = 260, class: className = '' } = Astro.props;
 
     // text moves while entrance animations and web fonts settle: re-measure
     const remask = () => {
+      if (!canvas.isConnected) return;
       buildMask();
       still();
     };
