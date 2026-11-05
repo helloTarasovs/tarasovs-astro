@@ -36,7 +36,7 @@
         {
           "name": "Verdi Cannabis",
           "label": "Dutchie Pro Migration + SEO",
-          "highlight": "+93.5% impressions · +17% organic clicks",
+          "highlight": "+64% organic clicks · 4× search impressions",
           "href": "https://verdicannabis.com/stores/verdi",
           "img": {
             "src": "/wp-content/uploads/2026/10/verdi-cannabis-storefront-thumb.webp",
@@ -163,15 +163,19 @@
               "resultsTitle": "Results",
               "results": [
                 {
-                  "value": "+93.5%",
+                  "value": "+64%",
+                  "label": "organic clicks from Google"
+                },
+                {
+                  "value": "4×",
                   "label": "Google Search impressions"
                 },
                 {
-                  "value": "+17%",
-                  "label": "organic clicks"
+                  "value": "~900",
+                  "label": "product pages now indexed in Google"
                 }
               ],
-              "note": "Six-month organic search performance comparison.",
+              "note": "Google Search Console, third month after the February 2026 migration vs. the 90 days before.",
               "img": {
                 "src": "/wp-content/uploads/2026/10/verdi-cannabis-dutchie-pro-storefront.webp",
                 "alt": "Verdi Cannabis website with the Dutchie Pro storefront: category navigation and delivery banner",

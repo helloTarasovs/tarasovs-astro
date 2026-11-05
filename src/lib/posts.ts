@@ -34,7 +34,15 @@ export const tagLabel = (slug: string) =>
     .join(' ')
     .replace('UI UX', 'UI/UX');
 
-export function postTags(data: { tags?: string[]; categories?: string[] }, max = 3) {
+// Topic tag that has no WordPress category: posts whose slug is about dispensaries or cannabis.
+const DISPENSARY_SLUG = /dispensar|cannabis/;
+
+export function postTags(data: { tags?: string[]; categories?: string[]; slug?: string }, max = 3) {
   const list = data.tags?.length ? data.tags : (data.categories ?? []).filter((c) => c !== 'insights');
-  return [...new Set(list.map(tagLabel))].slice(0, max);
+  const labels = list.map(tagLabel);
+  if (data.slug && DISPENSARY_SLUG.test(data.slug)) {
+    // 'Dispensary Marketing' would repeat the new tag, so it is folded into it
+    return [...new Set(['Dispensary', ...labels.filter((l) => l !== 'Dispensary Marketing')])].slice(0, max);
+  }
+  return [...new Set(labels)].slice(0, max);
 }

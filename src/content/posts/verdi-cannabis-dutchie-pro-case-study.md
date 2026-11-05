@@ -12,12 +12,12 @@ cover:
   height: 1254
 seo:
   title: "Dutchie iFrame to Dutchie Pro: Verdi Cannabis SEO Case Study - Tarasovs Digital Agency"
-  description: "We migrated Verdi Cannabis off Dutchie's iFrame to Dutchie Pro without losing rankings - organic visibility grew substantially in 6 months."
+  description: "We migrated Verdi Cannabis off Dutchie's iFrame to Dutchie Pro without losing rankings - organic clicks grew 64% and impressions 4x by the third month."
   canonical: "/verdi-cannabis-dutchie-pro-case-study/"
   robots: "index, follow"
   ogImage: "/wp-content/uploads/2026/07/tarasovs-verdi-cannabis-case-study-DutchiePro-migration.webp"
 jsonld:
-  - {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Dutchie iFrame and Dutchie Pro?","acceptedAnswer":{"@type":"Answer","text":"Dutchie's default iFrame embeds the product menu from a separate domain inside a frame on your site - search engines struggle to index that content as real pages. Dutchie Pro instead serves store and product pages as standalone, crawlable URLs on your own domain, so each one can be found and ranked individually."}},{"@type":"Question","name":"Does migrating off Dutchie's iFrame risk losing existing rankings?","acceptedAnswer":{"@type":"Answer","text":"It can, if the URL structure changes without proper redirects. We mapped every existing indexed URL before migration and preserved the structure wherever possible, with 301 redirects covering anything that had to change - which is why Verdi's rankings grew through the migration instead of dropping."}},{"@type":"Question","name":"Why did CTR drop if clicks and impressions both grew?","acceptedAnswer":{"@type":"Answer","text":"Ranking for new, broader, non-branded queries naturally lowers average CTR, since those searches convert to clicks less often than someone searching your exact brand name. Total clicks still grew substantially in the period - the drop reflects healthy expansion into new search territory, not declining performance."}},{"@type":"Question","name":"How long does a Dutchie Pro migration take to show results?","acceptedAnswer":{"@type":"Answer","text":"Indexing of the newly crawlable pages typically begins within the first few weeks. Meaningful ranking and traffic gains build over 3-6 months as Google gains confidence in the new URLs - which matches the 6-month window in these results."}}]}
+  - {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Dutchie iFrame and Dutchie Pro?","acceptedAnswer":{"@type":"Answer","text":"Dutchie's default iFrame embeds the product menu from a separate domain inside a frame on your site - search engines struggle to index that content as real pages. Dutchie Pro instead serves store and product pages as standalone, crawlable URLs on your own domain, so each one can be found and ranked individually."}},{"@type":"Question","name":"Does migrating off Dutchie's iFrame risk losing existing rankings?","acceptedAnswer":{"@type":"Answer","text":"It can, if the URL structure changes without proper redirects. We mapped every existing indexed URL before migration and preserved the structure wherever possible, with 301 redirects covering anything that had to change - which is why Verdi's rankings grew through the migration instead of dropping."}},{"@type":"Question","name":"Why did CTR drop if clicks and impressions both grew?","acceptedAnswer":{"@type":"Answer","text":"Ranking for new, broader, non-branded queries naturally lowers average CTR, since those searches convert to clicks less often than someone searching your exact brand name. Total clicks still grew substantially in the period - the drop reflects healthy expansion into new search territory, not declining performance."}},{"@type":"Question","name":"How long does a Dutchie Pro migration take to show results?","acceptedAnswer":{"@type":"Answer","text":"Indexing of the newly crawlable pages typically begins within the first few weeks. Meaningful ranking and traffic gains build over the first 3-6 months as Google gains confidence in the new URLs - and Verdi's results, measured in the third month after launch, fit that timeline."}}]}
 wpId: 229103
 legacyUrl: "/verdi-cannabis-dutchie-pro-case-study/"
 ---
@@ -57,6 +57,9 @@ border-radius: var(--radius-md); padding: var(--space-lg); margin-bottom: var(--
 /* Stats */
 .ta-post .ta-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-sm); margin-bottom: var(--space-xl); }
 @media (max-width: 768px) { .ta-post .ta-stats { grid-template-columns: repeat(2, 1fr); } }
+.ta-post .ta-stats--3 { grid-template-columns: repeat(3, 1fr); margin-bottom: var(--space-sm); }
+@media (max-width: 600px) { .ta-post .ta-stats--3 { grid-template-columns: 1fr; } }
+.ta-post .ta-stats-note { font-size: var(--text-xs); color: var(--text-secondary); margin: 0 0 var(--space-xl); }
 .ta-post .ta-stat-card { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-md); text-align: center; transition: border-color .2s, box-shadow .2s; }
 .ta-post .ta-stat-card:hover { border-color: var(--border-accent); box-shadow: var(--glow-accent); }
 .ta-post .ta-stat-number { font-size: var(--text-stat); font-weight: 800; color: var(--stat-number); line-height: 1; margin-bottom: 8px; letter-spacing: -0.02em; }
@@ -241,14 +244,14 @@ box-shadow: var(--glow-strong);
 <div class="ta-qa">
 <div class="ta-qa-label">Quick Answer</div>
 <p><strong>We migrated Verdi Cannabis's product menu from Dutchie's default iFrame embed to Dutchie Pro - preserving the existing URL and link structure - and built dedicated blog and podcast templates on their WordPress site.</strong></p>
-<p>Over the following 6 months, organic impressions nearly doubled, organic clicks grew by double digits, and the site's average Google ranking position climbed more than 7 spots - with the majority of top-traffic pages being ones that had little to no visibility in the previous period.</p>
+<p>Verdi moved from an embedded Dutchie menu to Dutchie E-Commerce Pro in February 2026. The new storefront put nearly 900 product pages on Verdi’s own domain, where Google could index them for the first time. By the third month after launch, organic clicks from Google were up 64% and search impressions had grown fourfold compared with the 90 days before the migration.</p>
 </div>
-<div class="ta-stats">
-<div class="ta-stat-card"><div class="ta-stat-number">+93.5%</div><div class="ta-stat-label">Growth in organic impressions</div></div>
-<div class="ta-stat-card"><div class="ta-stat-number">+17%</div><div class="ta-stat-label">Growth in organic clicks</div></div>
-<div class="ta-stat-card"><div class="ta-stat-number">+7</div><div class="ta-stat-label">Average position gain - bottom of page 2 → top of page 1</div></div>
-<div class="ta-stat-card"><div class="ta-stat-number">7/10</div><div class="ta-stat-label">Top traffic pages are newly ranking</div></div>
+<div class="ta-stats ta-stats--3">
+<div class="ta-stat-card"><div class="ta-stat-number">+64%</div><div class="ta-stat-label">organic clicks from Google</div></div>
+<div class="ta-stat-card"><div class="ta-stat-number">4×</div><div class="ta-stat-label">Google Search impressions</div></div>
+<div class="ta-stat-card"><div class="ta-stat-number">~900</div><div class="ta-stat-label">product pages now indexed in Google</div></div>
 </div>
+<p class="ta-stats-note">Google Search Console, third month after the February 2026 migration vs. the 90 days before.</p>
 <figure class="ta-image ta-hero-image">
 <img src="/wp-content/uploads/2026/07/Dutchie-iFrame-to-Dutchie-Pro-Verdi-Cannabis-SEO-Case-Study.webp" alt="Verdi Cannabis case study hero showing Dutchie Pro product pages, SEO growth, and an indexed cannabis menu structure" fetchpriority="high">
 </figure>
@@ -259,7 +262,7 @@ box-shadow: var(--glow-strong);
 <li><a href="#challenge">The Challenge: A Menu Google Couldn't See</a></li>
 <li><a href="#fix">The Fix: Migrating to Dutchie Pro Without Losing SEO Equity</a></li>
 <li><a href="#templates">New Infrastructure: Blog &amp; Podcast Templates</a></li>
-<li><a href="#results">The Results: 6 Months of Organic Growth</a></li>
+<li><a href="#results">The Results: Third Month After Migration</a></li>
 <li><a href="#drivers">What Actually Drove the Growth</a></li>
 <li><a href="#faq">FAQ</a></li>
 </ol>
@@ -290,32 +293,30 @@ box-shadow: var(--glow-strong);
 </div>
 <h2 id="templates">New Infrastructure: Blog &amp; Podcast Templates</h2>
 <p>Alongside the migration, we built dedicated WordPress templates as part of a broader <a href="/services/website-development/">SEO-ready website development</a> workflow - giving Verdi's blog and podcast content a consistent, on-brand layout instead of the theme's default post design, and making it easy for their team to keep publishing new content on their own without a designer involved every time.</p>
-<h2 id="results">The Results: 6 Months of Organic Growth</h2>
-<p>Comparing the six months after the migration to the six months before, across every core Search Console metric, the pattern is consistent growth across the whole site - the compounding result of the <a href="/services/seo-services/">technical SEO</a> work behind the migration, not one lucky spike on a single page.</p>
+<h2 id="results">The Results: Third Month After Migration</h2>
+<p>Verdi moved from an embedded Dutchie menu to Dutchie E-Commerce Pro in February 2026. The new storefront put nearly 900 product pages on Verdi’s own domain, where Google could index them for the first time. By the third month after launch, organic clicks from Google were up 64% and search impressions had grown fourfold compared with the 90 days before the migration.</p>
 <div class="ta-table-wrap">
 <table class="ta-table">
 <thead><tr><th>Metric</th><th>Change</th></tr></thead>
 <tbody>
-<tr><td class="ta-row-label">Organic clicks</td><td class="ta-up">+17%</td></tr>
-<tr><td class="ta-row-label">Organic impressions</td><td class="ta-up">+93.5%</td></tr>
-<tr><td class="ta-row-label">Average position</td><td class="ta-up">+7 spots</td></tr>
-<tr><td class="ta-row-label">Average CTR</td><td>Declined slightly*</td></tr>
+<tr><td class="ta-row-label">Organic clicks from Google</td><td class="ta-up">+64%</td></tr>
+<tr><td class="ta-row-label">Google Search impressions</td><td class="ta-up">4×</td></tr>
+<tr><td class="ta-row-label">Product pages indexed in Google</td><td class="ta-up">~900</td></tr>
 </tbody>
 </table>
-<div class="ta-table-caption">*See note below - a CTR dip here is a healthy sign, not a red flag.</div>
+<div class="ta-table-caption">Google Search Console, third month after the February 2026 migration vs. the 90 days before.</div>
 </div>
-<p>The position jump alone is worth sitting with: climbing more than <strong>7 spots on average</strong> is the difference between the bottom of page 2 and the top of page 1 on Google - for the site's average ranking across every query it appears for, not just its best-performing ones.</p>
 <h3>Where the growth is coming from</h3>
 <p>Branded searches for Verdi's own name still account for a meaningful share of clicks, as expected for an established local brand. What's more telling for an SEO engagement is the growth in <strong>non-branded, competitive category terms</strong> - searches from people who didn't already know Verdi's name. The site now holds strong, page-1 positions for high-intent phrases like "dispensary near me" and neighborhood-specific searches like "park slope dispensary" - the kind of category-level demand that used to go entirely to competitors.</p>
 <p>This kind of non-branded visibility is also the foundation for <a href="/services/geo-ai-search-optimization/">GEO and AI search optimization</a>, where assistants need clear, crawlable, trustworthy pages to cite.</p>
 <h3>New pages are carrying real weight</h3>
-<p>The majority of the site's highest-traffic pages today had little to no visibility in the previous six months. Individual store-location pages and a growing set of individual product pages - covering vape hardware, batteries, and accessories - are now ranking and driving traffic on their own, instead of funneling everything through the homepage. These are exactly the pages the old iFrame setup made invisible.</p>
+<p>The majority of the site's highest-traffic pages today had little to no visibility before the migration. Individual store-location pages and a growing set of individual product pages - covering vape hardware, batteries, and accessories - are now ranking and driving traffic on their own, instead of funneling everything through the homepage. These are exactly the pages the old iFrame setup made invisible.</p>
 <h2 id="drivers">What Actually Drove the Growth</h2>
 <p>Three things compounded together, rather than any single fix:</p>
 <ul>
 <li><strong>Indexable store and product pages.</strong> Once the Dutchie Pro migration was live, the store and product URLs were finally crawlable - and started ranking independently instead of contributing nothing.</li>
 <li><strong>Semantic expansion.</strong> The site moved from ranking almost entirely for its own brand name to appearing across a wide range of non-branded search queries it never used to show up for at all.</li>
-<li><strong>A rising average position.</strong> A 7+ spot improvement across the board points to on-page and technical SEO improvements compounding over the period, not a one-off spike from a single page.</li>
+<li><strong>Growth across the site.</strong> Clicks and impressions rose together, which points to on-page and technical SEO improvements compounding over the period, not a one-off spike from a single page.</li>
 </ul>
 <div class="ta-note">
 <strong>Why did CTR drop if traffic grew?</strong> When a site expands from mostly branded queries into new, broad, non-branded ones, average CTR naturally falls - broad category terms like "weed dispensary" get clicked less often per impression than someone searching your exact brand name. Total clicks still grew substantially over the period. A falling CTR alongside rising impressions and clicks is a sign of healthy expansion, not a problem to fix.
@@ -340,7 +341,7 @@ box-shadow: var(--glow-strong);
 </div>
 <div class="ta-faq-item">
 <p class="ta-faq-question">How long does a Dutchie Pro migration take to show results?</p>
-<p class="ta-faq-answer">Indexing of the newly crawlable pages typically begins within the first few weeks. Meaningful ranking and traffic gains build over 3-6 months as Google gains confidence in the new URLs - which matches the 6-month window in these results.</p>
+<p class="ta-faq-answer">Indexing of the newly crawlable pages typically begins within the first few weeks. Meaningful ranking and traffic gains build over the first 3-6 months as Google gains confidence in the new URLs - and Verdi's results, measured in the third month after launch, fit that timeline.</p>
 </div>
 </div>
 </section>
