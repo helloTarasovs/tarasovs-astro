@@ -30,26 +30,67 @@
       "NYC Dispensary"
     ],
     "badge": "Dutchie Pro SDK Developer",
-    "proof": {
-      "label": "Our Dutchie Pro project",
-      "items": [
-        {
-          "name": "Verdi Cannabis",
-          "label": "Dutchie Pro Migration + SEO",
-          "highlight": "+64% organic clicks · 4× search impressions",
-          "href": "https://verdicannabis.com/stores/verdi",
-          "img": {
-            "src": "/wp-content/uploads/2026/10/verdi-cannabis-storefront-thumb.webp",
-            "alt": "",
-            "width": 130,
-            "height": 130
-          }
-        }
-      ]
-    },
     "leadAfterProof": "<p><strong>Same-Domain Storefront · Custom SDK Development · SEO Migration &amp; Redirects</strong></p>"
   },
   "sections": [
+    {
+      "id": "proof",
+      "eyebrow": "",
+      "title": "A Real Dutchie Pro Project. Real Results.",
+      "intro": "<p>We've successfully implemented Dutchie E-Commerce Pro for Verdi Cannabis in New York, combining storefront development, website integration, and SEO migration.</p>",
+      "blocks": [
+        {
+          "type": "cases",
+          "items": [
+            {
+              "label": "Dutchie Pro Migration + SEO",
+              "title": "Verdi Cannabis",
+              "html": "<p>Migrated Verdi Cannabis from its previous Dutchie menu integration to E-Commerce Pro, integrating the new storefront with its WordPress website and implementing SEO migration improvements.</p>",
+              "deliverables": [
+                "Dutchie E-Commerce Pro migration",
+                "WordPress integration",
+                "Cloudflare reverse proxy configuration",
+                "SEO redirects, canonical URLs, and indexing optimization"
+              ],
+              "resultsTitle": "Results",
+              "results": [
+                {
+                  "value": "+64%",
+                  "label": "organic clicks from Google"
+                },
+                {
+                  "value": "4×",
+                  "label": "Google Search impressions"
+                },
+                {
+                  "value": "~900",
+                  "label": "product pages now indexed in Google"
+                }
+              ],
+              "note": "Google Search Console, third month after the February 2026 migration vs. the 90 days before.",
+              "img": {
+                "src": "/wp-content/uploads/2026/10/verdi-cannabis-dutchie-pro-storefront.webp",
+                "alt": "Verdi Cannabis website with the Dutchie Pro storefront: category navigation and delivery banner",
+                "width": 1000,
+                "height": 563
+              },
+              "link": {
+                "label": "View Live Storefront",
+                "href": "https://verdicannabis.com/stores/verdi"
+              },
+              "secondary": {
+                "label": "Read the full case study",
+                "href": "/verdi-cannabis-dutchie-pro-case-study/"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "html": "<p>We work directly with the Dutchie Pro SDK, so the storefront build, the integration with your website, and the SEO migration are handled by one agency.</p>"
+        }
+      ]
+    },
     {
       "eyebrow": "",
       "title": "Two Ways We Can Help Your Dispensary",
@@ -138,64 +179,6 @@
             "title": "Get a Free Dutchie Storefront Audit",
             "text": "Send us your website and we'll review your current Dutchie menu setup, which product and category pages Google can index, and what to fix first. You'll get a short audit by email."
           }
-        }
-      ]
-    },
-    {
-      "id": "proof",
-      "eyebrow": "",
-      "title": "A Real Dutchie Pro Project. Real Results.",
-      "intro": "<p>We've successfully implemented Dutchie E-Commerce Pro for Verdi Cannabis in New York, combining storefront development, website integration, and SEO migration.</p>",
-      "blocks": [
-        {
-          "type": "cases",
-          "items": [
-            {
-              "label": "Dutchie Pro Migration + SEO",
-              "title": "Verdi Cannabis",
-              "html": "<p>Migrated Verdi Cannabis from its previous Dutchie menu integration to E-Commerce Pro, integrating the new storefront with its WordPress website and implementing SEO migration improvements.</p>",
-              "deliverables": [
-                "Dutchie E-Commerce Pro migration",
-                "WordPress integration",
-                "Cloudflare reverse proxy configuration",
-                "SEO redirects, canonical URLs, and indexing optimization"
-              ],
-              "resultsTitle": "Results",
-              "results": [
-                {
-                  "value": "+64%",
-                  "label": "organic clicks from Google"
-                },
-                {
-                  "value": "4×",
-                  "label": "Google Search impressions"
-                },
-                {
-                  "value": "~900",
-                  "label": "product pages now indexed in Google"
-                }
-              ],
-              "note": "Google Search Console, third month after the February 2026 migration vs. the 90 days before.",
-              "img": {
-                "src": "/wp-content/uploads/2026/10/verdi-cannabis-dutchie-pro-storefront.webp",
-                "alt": "Verdi Cannabis website with the Dutchie Pro storefront: category navigation and delivery banner",
-                "width": 1000,
-                "height": 563
-              },
-              "link": {
-                "label": "View Live Storefront",
-                "href": "https://verdicannabis.com/stores/verdi"
-              },
-              "secondary": {
-                "label": "Read the full case study",
-                "href": "/verdi-cannabis-dutchie-pro-case-study/"
-              }
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "html": "<p>We work directly with the Dutchie Pro SDK, so the storefront build, the integration with your website, and the SEO migration are handled by one agency.</p>"
         }
       ]
     },
