@@ -627,7 +627,7 @@ text-shadow: none !important;
 
 <h2 id="ta-track">How to track it over time</h2>
 <p>The manual audit tells you what the summary says. Search Console tells you how often your site's links appear.</p>
-<p>Search Console's Generative AI performance report for Search tracks impressions of links to your site in AI Overviews and AI Mode. Discover has a separate generative AI report. These reports measure your site's visibility, not every AI answer that mentions your brand. If you do not see the report at all, your site may not have enough impressions in these features yet.</p>
+<p>Search Console's <a href="/track-ai-overviews-ai-mode-google-search-console/">Generative AI performance report for Search</a> tracks impressions of links to your site in AI Overviews and AI Mode. Discover has a separate generative AI report. These reports measure your site's visibility, not every AI answer that mentions your brand. If you do not see the report at all, your site may not have enough impressions in these features yet.</p>
 <p>Check the report once a month and record the total, your top pages and the country split. Then look at branded queries in the main Performance report. If branded impressions stay stable while clicks fall, investigate changes in rankings, query mix, devices and other search features alongside AI Overview visibility. The trend alone does not prove that AI Overviews caused the decline.</p>
 <p>Search Console will not show you what the summary says. That is why the manual check still matters. Third-party tools can add scale, but Google warns that no outside tool has access to its internal ranking or AI systems, so judge their claims carefully.</p>
 <h2 id="ta-related">Related reading</h2>

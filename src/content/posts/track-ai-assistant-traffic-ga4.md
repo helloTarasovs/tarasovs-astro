@@ -397,7 +397,7 @@ ai-assistant</div>
 <p>The first is looking for AI Overviews clicks inside the AI Assistant channel, finding none, and concluding that Google's generative features send no traffic at all. They may well send a great deal of it, but it is sitting in Organic Search where nothing distinguishes it from a conventional blue-link click.</p>
 <p>The second is the reverse: watching Organic Search grow, attributing that growth to AI Overviews, and having no way to prove it from GA4. The channel definitions simply do not separate the two, so any such claim is inference rather than measurement.</p>
 <p>In June 2026, Google announced a dedicated <a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" rel="noopener">Generative AI performance report in Search Console</a>. The report is initially rolling out to a subset of websites and can show impressions in generative AI features, pages shown, countries, devices, and performance over time. As currently documented, it does not expose the user's exact generative AI prompt.</p>
-<p>GA4 and Search Console should be read together. Search Console tells you whether pages appeared in Google's generative search features. GA4 tells you what visitors did after clicking through to the website.</p>
+<p>GA4 and Search Console should be read together (<a href="/track-ai-overviews-ai-mode-google-search-console/">our step-by-step guide to the Search Console report</a>). Search Console tells you whether pages appeared in Google's generative search features. GA4 tells you what visitors did after clicking through to the website.</p>
 <h2 id="mistakes">Common AI traffic attribution problems</h2>
 <div class="ta-mistakes">
 <div class="ta-mistake">
