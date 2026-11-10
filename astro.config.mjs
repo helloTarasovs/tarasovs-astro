@@ -1,12 +1,22 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { SITE } from './src/lib/site.ts';
 import { alternatesFor } from './src/lib/i18n.ts';
 
 // A page is built if dist/<path>index.html exists (sitemap runs after the build).
 const built = (path) => existsSync(fileURLToPath(new URL(`./dist${path}index.html`, import.meta.url)));
+
+// Pages that ask not to be indexed (meta robots noindex) stay out of the sitemap.
+const isNoindex = (url) => {
+  try {
+    const html = readFileSync(fileURLToPath(new URL(`./dist${new URL(url).pathname}index.html`, import.meta.url)), 'utf8');
+    return /<meta name="robots" content="[^"]*noindex/i.test(html);
+  } catch {
+    return false;
+  }
+};
 
 export default defineConfig({
   site: 'https://tarasovs.me',
@@ -21,7 +31,7 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/404'),
+      filter: (page) => !page.includes('/404') && !isNoindex(page),
       // Keys are URL path segments, values are language codes.
       i18n: { defaultLocale: 'en', locales: { en: 'en', ua: 'uk' } },
       // The plugin pairs only identical paths (/x/ <-> /ua/x/). Our UA slugs differ, so alternates come

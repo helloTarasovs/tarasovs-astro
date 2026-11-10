@@ -1,8 +1,12 @@
 import { getCollection } from 'astro:content';
 import { POSTS_PER_PAGE } from './site';
 
+// Posts with robots "noindex" are drafts: the page is built (for review by link) but stays out of the
+// blog index, pagination, RSS and the sitemap.
+export const isDraft = (data: { seo?: { robots?: string } }) => /noindex/i.test(data.seo?.robots ?? '');
+
 export async function sortedPosts() {
-  const posts = await getCollection('posts');
+  const posts = (await getCollection('posts')).filter((p) => !isDraft(p.data));
   return posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 }
 
@@ -35,7 +39,7 @@ export const tagLabel = (slug: string) =>
     .replace('UI UX', 'UI/UX');
 
 // Topic tag that has no WordPress category: posts whose slug is about dispensaries or cannabis.
-const DISPENSARY_SLUG = /dispensar|cannabis/;
+const DISPENSARY_SLUG = /dispensar|cannabis|dutchie/;
 
 export function postTags(data: { tags?: string[]; categories?: string[]; slug?: string }, max = 3) {
   const list = data.tags?.length ? data.tags : (data.categories ?? []).filter((c) => c !== 'insights');
