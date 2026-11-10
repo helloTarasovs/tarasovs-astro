@@ -5,16 +5,16 @@ pubDate: "2026-11-10T09:00:00Z"
 excerpt: "How we moved a NYC dispensary from an embedded Dutchie menu to E-Commerce Pro on Shopify, with a custom branded storefront and 820+ product pages now showing in Google."
 categories: ["geo-ai-search-optimization","seo"]
 cover:
-  src: "/wp-content/uploads/2026/10/mighty-lucky-dutchie-pro-storefront.webp"
-  alt: "Mighty Lucky website with the Dutchie E-Commerce Pro storefront"
-  width: 1000
-  height: 563
+  src: "/wp-content/uploads/2026/11/mighty-lucky-dutchie-pro-flower-category-page.webp"
+  alt: "Mighty Lucky Flower category page on the Dutchie E-Commerce Pro storefront, with filters and product cards"
+  width: 1600
+  height: 1079
 seo:
   title: "Mighty Lucky Dutchie Pro Migration Case Study | Tarasovs Digital Agency"
   description: "How we moved a NYC dispensary from an embedded Dutchie menu to E-Commerce Pro on Shopify, with a custom branded storefront and 820+ product pages now showing in Google."
   canonical: "/mighty-lucky-dutchie-pro-case-study/"
   robots: "noindex, nofollow"
-  ogImage: "/wp-content/uploads/2026/10/mighty-lucky-dutchie-pro-storefront.webp"
+  ogImage: "/wp-content/uploads/2026/11/mighty-lucky-dutchie-pro-flower-category-page.webp"
 ---
 <style>
 .ta-post {
@@ -510,7 +510,7 @@ text-shadow: none !important;
 </div>
 <p class="ta-stats-note">Results in the first 4 weeks after launch. Source: Google Search Console.</p>
 <figure class="ta-image ta-hero-image">
-<img src="/wp-content/uploads/2026/10/mighty-lucky-dutchie-pro-storefront.webp" alt="Mighty Lucky website with the Dutchie E-Commerce Pro storefront" width="1000" height="563" loading="lazy" decoding="async">
+<img src="/wp-content/uploads/2026/11/mighty-lucky-dutchie-pro-flower-category-page.webp" alt="Mighty Lucky Flower category page on the Dutchie E-Commerce Pro storefront, with filters and product cards" width="1600" height="1079" loading="lazy" decoding="async">
 </figure>
 <nav class="ta-toc" aria-label="Table of contents">
 <div class="ta-toc-label">In this case study</div>
