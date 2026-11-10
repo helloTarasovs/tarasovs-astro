@@ -30,6 +30,7 @@ export const PAIRS: Record<Lang, string>[] = [
   { uk: '/ua/blog/share-of-model/', en: '/share-of-model-ai-search-visibility/' },
   { uk: '/ua/blog/yak-potrapyty-v-google-ai-overviews/', en: '/how-to-appear-in-google-ai-overviews/' },
   { uk: '/ua/blog/trafik-vid-ai-asystentiv-ga4/', en: '/track-ai-assistant-traffic-ga4/' },
+  { uk: '/ua/blog/ai-overviews-ai-mode-google-search-console/', en: '/track-ai-overviews-ai-mode-google-search-console/' },
   { uk: '/ua/blog/geo-seo-aeo/', en: '/geo-vs-seo-vs-aeo/' },
   { uk: '/ua/blog/llms-txt-posibnyk/', en: '/llms-txt-guide/' },
   { uk: '/ua/blog/yak-ranzhuvatysia-v-chatgpt-search/', en: '/how-to-rank-in-chatgpt-search/' },
