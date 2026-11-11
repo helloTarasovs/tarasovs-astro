@@ -130,6 +130,7 @@ export const UK: VideoCopy = {
     northline_cold_brew: { format: 'Вертикальне відео у стилі UGC', use: 'AI-згенерований вертикальний продуктовий контент у стилі UGC.', alt: 'Кадр із вертикального відео Northline Cold Brew' },
     slake: { format: 'Продуктове відео / соцмережі', use: 'Продуктове відео, адаптоване під соцмережі.', alt: 'Кадр із вертикального відео Slake' },
     sweet_bloom_coffee_roasters: { format: 'Моушн-айдентика', use: 'Дослідження моушн-айдентики для соцмереж.', alt: 'Кадр із моушн-айдентики Sweet Bloom Coffee Roasters' },
+    '172_coffee_roasters': { format: 'Різдвяне промо-відео', use: 'Сезонне вертикальне промо для обсмажувача кави.', alt: 'Пакет кави з крилами летить над засніженим англійським селом уночі, кадр із різдвяного відео 172 Coffee Roasters' },
     promo_of_framer_website: { format: 'Промо-відео', use: 'Промо до запуску сайту.', alt: 'Кадр із вертикального промо-відео Promo of Framer website' },
   },
   serviceText: {},

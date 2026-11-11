@@ -26,6 +26,7 @@ const VIDEOS: Record<string, string> = {
   'northline-cold-brew': 'Ugc-Model-1.mp4',
   slake: 'Slake.mp4',
   'promo-of-framer-website': 'framer.mp4',
+  '172-coffee-roasters': 'IMG_5407.MP4',
 };
 
 const P = (slug: string, p: Omit<Project, 'id' | 'url' | 'poster' | 'video'>): Project => ({
@@ -43,6 +44,7 @@ export const PROJECTS: Record<string, Project> = {
   northline: P('northline-cold-brew', { title: 'Northline Cold Brew', format: 'Vertical UGC-style video', use: 'AI-generated UGC-style vertical product content.', width: 720, height: 1280, alt: 'Frame from the Northline Cold Brew vertical video', status: 'Self-initiated' }),
   slake: P('slake', { title: 'Slake', format: 'Product / social video', use: 'Product video adapted for social placements.', width: 1200, height: 675, alt: 'Frame from the Slake vertical video', status: 'Self-initiated' }),
   sweetBloom: P('sweet-bloom-coffee-roasters', { title: 'Sweet Bloom Coffee Roasters', format: 'Motion identity', use: 'Motion identity study for social placements.', width: 1200, height: 675, alt: 'Frame from the Sweet Bloom Coffee Roasters motion identity', status: 'Self-initiated' }),
+  coffee172: P('172-coffee-roasters', { title: '172 Coffee Roasters', format: 'Christmas promo video', use: 'Seasonal vertical promo for a coffee roaster.', width: 720, height: 1280, alt: 'A coffee bag with wings flying over a snowy English village at night, frame from the 172 Coffee Roasters Christmas video', status: 'Commissioned' }),
   framerPromo: P('promo-of-framer-website', { title: 'Promo of Framer website', format: 'Promotional video', use: 'Launch promo for a website.', width: 1200, height: 675, alt: 'Frame from the Promo of Framer website vertical video', status: 'Commissioned' }),
 };
 
@@ -53,6 +55,7 @@ export const WORK_VERTICAL = [
   PROJECTS.northline,
   vertical(PROJECTS.slake, '/images/video/slake-v.webp'),
   vertical(PROJECTS.framerPromo, '/images/video/promo-of-framer-website-v.webp'),
+  PROJECTS.coffee172,
 ];
 
 export interface VideoService {
