@@ -19,6 +19,7 @@ export const MAIN_NAV: NavItem[] = [
         children: [{ label: 'Framer Design & Development', href: '/services/framer-development/' }],
       },
       { label: 'E-Commerce Website Design', href: '/services/e-commerce/' },
+      { label: 'AI Video Production', href: '/services/ai-video-production/' },
       { label: 'SEO Services', href: '/services/seo-services/' },
       { label: 'GEO AI Search Optimization', href: '/services/geo-ai-search-optimization/' },
       {

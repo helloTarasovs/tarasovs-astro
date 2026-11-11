@@ -2951,5 +2951,49 @@
         ]
       }
     ]
+  },
+  {
+    "url": "/services/ai-video-production/",
+    "file": null,
+    "title": "AI Video Production Services for Brands",
+    "updatedDate": "2026-11-11T09:00:00Z",
+    "seo": {
+      "title": "AI Video Production Services for Brands | Tarasovs",
+      "description": "AI video production for product films, website hero loops, brand stories and social campaigns. Explore our work and discuss your project with Tarasovs.",
+      "canonical": "/services/ai-video-production/",
+      "robots": "index, follow",
+      "ogImage": "/images/video/hero-tennis.jpg"
+    },
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://tarasovs.me/services/ai-video-production/#service",
+        "name": "AI Video Production",
+        "serviceType": "AI video production",
+        "url": "https://tarasovs.me/services/ai-video-production/",
+        "mainEntityOfPage": {
+          "@id": "https://tarasovs.me/services/ai-video-production/"
+        },
+        "description": "AI-assisted video production for product films, website hero loops, brand films, launch videos, social videos and motion identity, available standalone or together with a website project.",
+        "provider": {
+          "@id": "https://tarasovs.me/#organization"
+        },
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "United States"
+          },
+          {
+            "@type": "Country",
+            "name": "United Kingdom"
+          },
+          {
+            "@type": "Place",
+            "name": "Europe"
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -219,6 +219,21 @@
           ]
         }
       ]
+    },
+    {
+      "title": "Add video to your website",
+      "blocks": [
+        {
+          "type": "callout",
+          "eyebrow": "AI Video Production",
+          "title": "Video built for your website",
+          "text": "Planning a Framer site with a hero video or a launch film? We produce the video and build the site as one project.",
+          "action": {
+            "label": "Explore AI video production",
+            "href": "/services/ai-video-production/"
+          }
+        }
+      ]
     }
   ],
   "faq": {

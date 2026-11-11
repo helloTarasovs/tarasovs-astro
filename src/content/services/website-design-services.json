@@ -173,6 +173,21 @@
           ]
         }
       ]
+    },
+    {
+      "title": "Add video to your website",
+      "blocks": [
+        {
+          "type": "callout",
+          "eyebrow": "AI Video Production",
+          "title": "Video built for your website",
+          "text": "Need a hero video, a launch film or social cut-downs for your new site? We can produce them alongside the design.",
+          "action": {
+            "label": "Explore AI video production",
+            "href": "/services/ai-video-production/"
+          }
+        }
+      ]
     }
   ],
   "faq": {

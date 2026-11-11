@@ -1,0 +1,92 @@
+---
+// Project inquiry form for /services/ai-video-production/. Posts to Web3Forms (same mechanism as ContactForm);
+// the shared FormSubmit script handles fetch, sending state, success and error. Extra fields travel with the message:
+// page, selected service and agency flag.
+import { FORM_SERVICES } from '../data/ai-video';
+import FormSubmit from './FormSubmit.astro';
+
+const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? '';
+const pageUrl = 'https://tarasovs.me/services/ai-video-production/';
+---
+<form id="video-inquiry" class="vform" action="https://api.web3forms.com/submit" method="POST" data-contact-form data-video-form
+  data-success="Thank you! Your project inquiry has been sent. We will review the brief and get back to you with the next step."
+  data-error="Sorry, the inquiry could not be sent. Your text is still here, so you can try again, or email hello@tarasovs.me.">
+  <input type="hidden" name="access_key" value={accessKey} />
+  <input type="hidden" name="subject" value="New AI video project inquiry" />
+  <input type="hidden" name="from_name" value="tarasovs.me" />
+  <input type="hidden" name="inquiry_page" value={pageUrl} />
+  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+  <div class="row">
+    <div class="field">
+      <label for="vf-name">Name <span class="req">(required)</span></label>
+      <input id="vf-name" name="name" type="text" autocomplete="name" required maxlength="200" />
+    </div>
+    <div class="field">
+      <label for="vf-email">Email <span class="req">(required)</span></label>
+      <input id="vf-email" name="email" type="email" autocomplete="email" required maxlength="200" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="field">
+      <label for="vf-company">Company or website <span class="req">(optional)</span></label>
+      <input id="vf-company" name="company_or_website" type="text" autocomplete="organization" maxlength="300" />
+    </div>
+    <div class="field">
+      <label for="vf-service">Service <span class="req">(optional)</span></label>
+      <select id="vf-service" name="service">
+        {FORM_SERVICES.map((s) => <option value={s.label} data-id={s.value}>{s.label}</option>)}
+      </select>
+    </div>
+  </div>
+  <label class="check"><input type="checkbox" id="vf-agency" name="agency_project" value="Yes" /><span>Agency project</span></label>
+  <div class="field">
+    <label for="vf-brief">Project brief <span class="req">(required)</span></label>
+    <textarea id="vf-brief" name="message" rows="6" required maxlength="3000" placeholder="What are you creating, who is it for and where will the video be used? You can include links to references."></textarea>
+  </div>
+  <div class="row">
+    <div class="field">
+      <label for="vf-date">Target launch date <span class="req">(optional)</span></label>
+      <input id="vf-date" name="target_launch_date" type="text" maxlength="100" />
+    </div>
+    <div class="field">
+      <label for="vf-budget">Approximate budget <span class="req">(optional)</span></label>
+      <input id="vf-budget" name="approximate_budget" type="text" maxlength="100" />
+    </div>
+  </div>
+
+  <p class="consent">
+    By submitting this form, I agree to the <a href="/terms-of-service-tarasovs-digital-agency/">terms &amp; conditions</a> and <a href="/privacy-cookie-policy-tarasovs-digital-agency/">privacy policy</a>.
+  </p>
+  <button class="button" type="submit" data-submit>Send project inquiry</button>
+  <p class="status" role="status" aria-live="polite" data-status></p>
+</form>
+
+<style>
+  .vform { display: grid; gap: var(--space-4); }
+  .row { display: grid; gap: var(--space-4); }
+  @media (min-width: 40em) { .row { grid-template-columns: 1fr 1fr; } }
+  .field { display: grid; gap: var(--space-2); }
+  label { font-weight: 500; font-size: var(--text-sm); }
+  .req { color: var(--color-text-muted); font-weight: 400; }
+  input:not([type='hidden']):not([type='checkbox']), textarea, select {
+    width: 100%; min-height: 48px; padding: 0.75rem 1rem;
+    border: 1px solid var(--color-text-muted); border-radius: var(--radius-sm);
+    background: var(--color-bg); color: var(--color-text); font: inherit; font-size: 1rem;
+  }
+  textarea { resize: vertical; min-height: 150px; }
+  textarea::placeholder { color: var(--color-text-muted); opacity: 1; }
+  input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; }
+  .check { display: inline-flex; align-items: center; gap: var(--space-3); min-height: 44px; cursor: pointer; }
+  .check input { width: 1.25rem; height: 1.25rem; margin: 0; accent-color: var(--brand-violet); }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .consent { color: var(--color-text-muted); font-size: var(--text-xs); }
+  .button { justify-self: start; min-width: 200px; }
+  .button[disabled] { opacity: 0.7; cursor: progress; }
+  .status:empty { display: none; }
+  .status { padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm); font-size: var(--text-sm); }
+  .status.is-success { background: color-mix(in srgb, #16a34a 14%, transparent); }
+  .status.is-error { background: color-mix(in srgb, #dc2626 14%, transparent); }
+</style>
+
+<FormSubmit />

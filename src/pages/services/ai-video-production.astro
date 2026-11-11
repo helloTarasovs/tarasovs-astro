@@ -1,0 +1,323 @@
+---
+// /services/ai-video-production/ - copy and data live in src/data/ai-video.ts, SEO fields in _wp-export/pages.json.
+import Base from '../../layouts/Base.astro';
+import VideoInquiryForm from '../../components/VideoInquiryForm.astro';
+import { wpPage } from '../../lib/pages';
+import { breadcrumbSchema } from '../../lib/schema';
+import { FAQ, FILMS_URL, INCLUDED, INCLUDED_FORMATS, INCLUDED_NOTE, PROCESS, PROCESS_NOTE, PROJECTS, SERVICES, WORK_HORIZONTAL, WORK_VERTICAL } from '../../data/ai-video';
+
+const URL_PATH = '/services/ai-video-production/';
+const page = wpPage(URL_PATH);
+const crumbs = [{ name: 'Home', path: '/' }, { name: 'Services', path: '/services/' }, { name: 'AI Video Production', path: URL_PATH }];
+const jsonld = [...page.jsonld, breadcrumbSchema(crumbs)];
+const HERO_VIDEO = 'https://media.tarasovs.me/tenis2.mp4';
+const HERO_POSTER = '/images/video/hero-tennis.jpg';
+---
+<Base title={page.seo.title} description={page.seo.description} canonical={page.seo.canonical} robots={page.seo.robots} ogImage={page.seo.ogImage} jsonld={jsonld} headerCta="#project-inquiry">
+  <article class="vp">
+    <header class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <nav class="crumbs" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li><a href="/services/">Services</a></li>
+              <li><span aria-current="page">AI Video Production</span></li>
+            </ol>
+          </nav>
+          <p class="eyebrow">AI VIDEO &amp; MOTION</p>
+          <h1>AI video production for brands, websites and campaigns</h1>
+          <p class="lead">We create product films, website hero loops, brand stories and social videos with AI-assisted production, creative direction, editing and sound. Commission a standalone film or combine video with a new website.</p>
+          <p class="actions">
+            <a class="button" href="#project-inquiry" data-cta="hero_primary">Discuss your video project</a>
+            <a class="button button--ghost" href="#selected-work">Explore video work</a>
+          </p>
+        </div>
+        <figure class="hero-media">
+          <video id="hero-video" data-src={HERO_VIDEO} poster={HERO_POSTER} width="1280" height="720" muted loop playsinline preload="none" aria-label="Looping AI-generated tennis video, no sound"></video>
+          <button type="button" class="vtoggle" id="hero-video-toggle" aria-pressed="true">Play video</button>
+        </figure>
+      </div>
+    </header>
+
+    <section class="section" id="selected-work" aria-labelledby="selected-work-title">
+      <div class="container">
+        <div class="head">
+          <h2 id="selected-work-title">Selected video work</h2>
+          <p class="intro">A selection of commissioned and self-initiated projects, from product films to website visuals and vertical content.</p>
+        </div>
+        <h3 class="work-sub">Horizontal films</h3>
+        <ul class="work work--wide">
+          {WORK_HORIZONTAL.map((p) => (
+            <li class="work-card">
+              <a href={p.url} data-film-link data-project-id={p.id} data-cta="selected_work">
+                <img src={p.poster} alt={p.alt} width={p.width} height={p.height} loading="lazy" decoding="async" />
+                <span class="work-body">
+                  <span class="work-meta"><span>{p.format}</span><span class="status-badge">{p.status}</span></span>
+                  <span class="work-title">{p.title}</span>
+                  <span class="work-use">{p.use}</span>
+                  <span class="work-go">View project<span class="visually-hidden"> {p.title} on films.tarasovs.me</span> <span aria-hidden="true">&rarr;</span></span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <h3 class="work-sub">Vertical videos for reels and shorts</h3>
+        <ul class="work work--tall">
+          {WORK_VERTICAL.map((p) => (
+            <li class="work-card">
+              <a href={p.url} data-film-link data-project-id={p.id} data-cta="selected_work">
+                <img src={p.poster} alt={p.alt} width={p.width} height={p.height} loading="lazy" decoding="async" />
+                <span class="work-body">
+                  <span class="work-meta"><span>{p.format}</span><span class="status-badge">{p.status}</span></span>
+                  <span class="work-title">{p.title}</span>
+                  <span class="work-use">{p.use}</span>
+                  <span class="work-go">View project<span class="visually-hidden"> {p.title} on films.tarasovs.me</span> <span aria-hidden="true">&rarr;</span></span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <p class="actions"><a class="button button--ghost" href={FILMS_URL} data-film-link data-project-id="all_work" data-cta="selected_work_all">View full film portfolio</a></p>
+      </div>
+    </section>
+
+    <section class="section tone" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="head">
+          <h2 id="services-title">Our AI video production services</h2>
+          <p class="intro">Choose the format around where the video will live, what it needs to communicate and how your audience will watch it.</p>
+        </div>
+        <div class="services">
+          {SERVICES.map((s) => (
+            <article class="svc" id={s.id}>
+              <h3 set:html={s.title} />
+              <p>{s.text}</p>
+              <p class="label">Good for</p>
+              <ul>{s.for.map((f) => <li>{f}</li>)}</ul>
+              <p class="outputs">{s.outputs}</p>
+              {s.examples.length > 0 ? (
+                <p class="examples"><span class="label">{s.exampleLabel ?? (s.examples.length > 1 ? 'Examples' : 'Example')}:</span>{' '}
+                  {s.examples.map((e, i) => <>{i > 0 && ', '}<a href={e.url} data-film-link data-project-id={e.id} data-cta={`service_${s.serviceId}`}>{e.title}</a></>)}
+                </p>
+              ) : (
+                <p class="examples">No dedicated case yet. See the <a href={FILMS_URL} data-film-link data-project-id="all_work" data-cta={`service_${s.serviceId}`}>general film portfolio</a>.</p>
+              )}
+              <a class="button" href="#project-inquiry" data-service-cta={s.serviceId} data-cta={`service_${s.serviceId}`}>{s.cta}</a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="included" aria-labelledby="included-title">
+      <div class="container">
+        <div class="head"><h2 id="included-title">What can be included in your project</h2></div>
+        <ul class="grid3">
+          {INCLUDED.map((i) => (
+            <li class="box"><h3>{i.title}</h3><p>{i.text}</p></li>
+          ))}
+        </ul>
+        <p class="note"><strong>{INCLUDED_NOTE}</strong></p>
+        <p class="note">{INCLUDED_FORMATS}</p>
+      </div>
+    </section>
+
+    <section class="section tone" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="head"><h2 id="process-title">How your video project works</h2></div>
+        <ol class="steps">
+          {PROCESS.map((p) => <li><h3>{p.title}</h3><p>{p.text}</p></li>)}
+        </ol>
+        <p class="note">{PROCESS_NOTE}</p>
+      </div>
+    </section>
+
+    <section class="section" id="website-video" aria-labelledby="website-video-title">
+      <div class="container prose">
+        <h2 id="website-video-title">Video built for your website</h2>
+        <p>Video works best when it is planned with the page. We compose the frame around your headline and call to action, prepare versions for the screens your visitors use, and deliver files made for web delivery. When the website is part of the same project, the whole solution can be built and approved in one place.</p>
+        <p>This sits alongside our existing services: <a href="/services/framer-development/">Framer development</a>, <a href="/services/website-design-services/">website design</a> and <a href="/services/website-development/">website development</a> for Framer, Webflow and WordPress.</p>
+      </div>
+    </section>
+
+    <section class="section tone" id="agencies" aria-labelledby="agencies-title">
+      <div class="container prose">
+        <h2 id="agencies-title">A production partner for agencies</h2>
+        <p>Any of the six video services can be delivered as part of an agency project. You can hand us a finished brief and design, or involve us in shaping the concept, and video production runs as a separate module inside the wider client project.</p>
+        <p>White-label format, communication with the end client, responsibilities, confidentiality and the right to publish a case study are agreed up front.</p>
+        <p class="actions"><a class="button" href="#project-inquiry" data-service-cta="not_sure" data-agency data-cta="agency">Discuss an agency project</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="founder" aria-labelledby="founder-title">
+      <div class="container founder">
+        <img src="/wp-content/uploads/2026/10/yurii-tarasov.webp" alt="Portrait of Yurii Tarasov" width="1200" height="1500" loading="lazy" decoding="async" />
+        <div class="prose">
+          <h2 id="founder-title">Led by Yurii Tarasov</h2>
+          <p>Yurii leads the creative direction and the edit personally. A background in web design and development shapes how the video is planned for real sites and campaigns.</p>
+          <p class="actions"><a class="button button--ghost" href={FILMS_URL} data-film-link data-project-id="all_work" data-cta="founder">Explore Yurii's film portfolio</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tone" id="faq" aria-labelledby="faq-title">
+      <div class="container prose">
+        <h2 id="faq-title">Frequently asked questions about AI video production</h2>
+        {FAQ.map((f) => <div class="qa"><h3>{f.q}</h3><p>{f.a}</p></div>)}
+      </div>
+    </section>
+
+    <section class="section" id="project-inquiry" aria-labelledby="inquiry-title">
+      <div class="container inquiry">
+        <h2 id="inquiry-title">Tell us about your video project</h2>
+        <p class="intro">Share what you want to create, where it will be used and your target launch date. We will review the brief and suggest the next step.</p>
+        <VideoInquiryForm />
+      </div>
+    </section>
+  </article>
+
+<script is:inline>
+  (function () {
+    var track = function (name, params) { try { if (typeof window.gtag === 'function') window.gtag('event', name, params); } catch (e) {} };
+    // Hero video: loads and autoplays (muted) only on screens from 48em that allow motion. Phones and reduced-motion
+    // visitors get the still frame and no download until they press "Play video".
+    var hv = document.getElementById('hero-video'), tg = document.getElementById('hero-video-toggle');
+    var load = function () { if (!hv.src) hv.src = hv.getAttribute('data-src'); };
+    var setBtn = function () { var p = hv.paused; tg.textContent = p ? 'Play video' : 'Pause video'; tg.setAttribute('aria-pressed', String(p)); };
+    if (matchMedia('(min-width: 48em)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) { load(); hv.play().catch(function () {}); }
+    hv.addEventListener('play', setBtn); hv.addEventListener('pause', setBtn); setBtn();
+    tg.addEventListener('click', function () { if (hv.paused) { load(); hv.play().catch(function () {}); } else hv.pause(); });
+    var form = document.getElementById('video-inquiry');
+    var select = document.getElementById('vf-service');
+    var agency = document.getElementById('vf-agency');
+    var idOf = function () { var o = select.options[select.selectedIndex]; return o ? o.getAttribute('data-id') : 'not_sure'; };
+
+    // Service CTAs fill the form (only on a click) and move focus to it.
+    document.querySelectorAll('[data-service-cta]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var id = a.getAttribute('data-service-cta');
+        for (var i = 0; i < select.options.length; i++) if (select.options[i].getAttribute('data-id') === id) select.selectedIndex = i;
+        if (a.hasAttribute('data-agency')) agency.checked = true;
+        track('select_service', { service_id: id, cta_location: a.getAttribute('data-cta') });
+        track('contact_click', { service_id: id, cta_location: a.getAttribute('data-cta') });
+        setTimeout(function () { document.getElementById('vf-name').focus({ preventScroll: true }); }, 400);
+      });
+    });
+    document.querySelectorAll('[data-cta="hero_primary"]').forEach(function (a) {
+      a.addEventListener('click', function () { track('contact_click', { service_id: idOf(), cta_location: 'hero_primary' }); });
+    });
+    document.querySelectorAll('[data-film-link]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        track('film_portfolio_click', { project_id: a.getAttribute('data-project-id'), link_url: a.href, cta_location: a.getAttribute('data-cta') });
+      });
+    });
+    // No name, email, brief or budget is ever sent to GA4.
+    var started = false;
+    form.addEventListener('focusin', function () {
+      if (started) return;
+      started = true;
+      track('form_start', { form_id: 'video_inquiry', service_id: idOf() });
+    });
+    var sent = false;
+    form.addEventListener('submit', function () { sent = false; });
+    form.addEventListener('form:success', function () {
+      if (sent) return;
+      sent = true;
+      track('generate_lead', { form_id: 'video_inquiry', service_id: idOf(), agency_project: agency.checked });
+    });
+  })();
+</script>
+</Base>
+
+<style>
+  .vp { padding-bottom: var(--space-6); }
+  .hero { padding-block: var(--space-5) var(--space-7); }
+  .hero-grid { display: grid; gap: var(--space-6); align-items: center; }
+  .crumbs ol { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-1) var(--space-2); padding: 0; list-style: none; font-size: var(--text-xs); color: var(--color-text-muted); }
+  .crumbs li + li::before { content: '/'; margin-right: var(--space-2); opacity: 0.6; }
+  .crumbs li { display: flex; align-items: center; }
+  .crumbs a, .crumbs span { display: inline-block; padding-block: 0.4rem; }
+  .crumbs a { color: inherit; text-decoration: none; }
+  .crumbs a:hover { color: var(--color-link); text-decoration: underline; }
+  .hero .eyebrow { margin-top: var(--space-5); }
+  .hero h1 { margin-top: var(--space-3); max-width: 18ch; }
+  .lead { margin-top: var(--space-5); max-width: 58ch; font-size: var(--text-lg); color: var(--color-text-muted); }
+  .actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
+  .hero-media { position: relative; margin: 0; }
+  .vtoggle { position: absolute; right: var(--space-3); bottom: var(--space-3); min-height: 44px; padding: 0.4rem 1rem; border: 0; border-radius: var(--radius-pill); background: rgb(19 15 36 / 0.85); color: #fff; font: inherit; font-size: var(--text-sm); font-weight: 600; cursor: pointer; }
+  .vtoggle:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+  .hero-media video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-lg); background: var(--brand-navy); }
+  @media (min-width: 64em) { .hero-grid { grid-template-columns: 1fr 1.05fr; gap: var(--space-7); } }
+
+  .section { padding-block: var(--space-7); }
+  .tone { background: var(--color-surface); }
+  .head { max-width: 46rem; margin-bottom: var(--space-6); }
+  .intro { margin-top: var(--space-3); color: var(--color-text-muted); font-size: var(--text-lg); }
+  .head h2 + .intro { margin-top: var(--space-3); }
+
+  .work-sub { margin-block: var(--space-6) var(--space-4); font-size: var(--text-h4); }
+  .work-sub:first-of-type { margin-top: 0; }
+  .work { display: grid; gap: var(--space-5); padding: 0; list-style: none; }
+  @media (min-width: 40em) { .work { grid-template-columns: repeat(3, 1fr); } }
+  .work--tall { max-width: 56rem; }
+  .work-card { border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-bg); overflow: hidden; }
+  .work-card a { display: flex; flex-direction: column; height: 100%; color: inherit; text-decoration: none; }
+  .work--wide .work-card img { aspect-ratio: 16 / 9; }
+  .work--tall .work-card img { aspect-ratio: 9 / 16; }
+  .work-card img { display: block; width: 100%; object-fit: cover; background: var(--brand-navy); }
+  .work-body { display: grid; gap: var(--space-2); align-content: start; padding: var(--space-4); }
+  .work-meta { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; font-size: var(--text-xs); color: var(--color-text-muted); }
+  .status-badge { padding: 0.1rem 0.6rem; border: 1px solid var(--color-border); border-radius: var(--radius-pill); color: var(--color-text); }
+  .work-title { font-family: var(--font-title); font-size: var(--text-h4); font-weight: 600; color: var(--color-heading); line-height: 1.2; }
+  .work-use { font-size: var(--text-sm); color: var(--color-text-muted); }
+  .work-go { margin-top: var(--space-2); font-weight: 600; font-size: var(--text-sm); color: var(--color-link); }
+  .work-card a:hover .work-go { text-decoration: underline; }
+  .work-card a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: -3px; }
+
+  .services { display: grid; gap: var(--space-5); }
+  @media (min-width: 64em) { .services { grid-template-columns: repeat(2, 1fr); } }
+  .svc { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-bg); scroll-margin-top: calc(var(--header-h) + var(--space-4)); }
+  .svc h3 { font-size: var(--text-h4); }
+  .svc ul { margin: 0; padding-left: 1.2rem; display: grid; gap: var(--space-1); font-size: var(--text-sm); }
+  .label { font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-muted); }
+  .outputs { font-size: var(--text-sm); color: var(--color-text-muted); }
+  .examples { font-size: var(--text-sm); }
+  .examples a { text-decoration: underline; display: inline-block; padding-block: 0.25rem; }
+  .svc .button { margin-top: auto; }
+
+  .grid3 { display: grid; gap: var(--space-4); padding: 0; list-style: none; }
+  @media (min-width: 40em) { .grid3 { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 64em) { .grid3 { grid-template-columns: repeat(3, 1fr); } }
+  .box { padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+  .box h3 { font-size: var(--text-h4); }
+  .box p { margin-top: var(--space-2); color: var(--color-text-muted); font-size: var(--text-sm); }
+  .note { margin-top: var(--space-5); max-width: 62ch; }
+  .note + .note { margin-top: var(--space-3); color: var(--color-text-muted); font-size: var(--text-sm); }
+
+  .steps { display: grid; gap: var(--space-4); padding: 0; list-style: none; counter-reset: s; }
+  @media (min-width: 64em) { .steps { grid-template-columns: repeat(5, 1fr); } }
+  .steps li { counter-increment: s; padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg); }
+  .steps li::before { content: counter(s, decimal-leading-zero); display: block; margin-bottom: var(--space-2); font-family: var(--font-title); font-weight: 700; color: var(--color-link); }
+  .steps h3 { font-size: var(--text-h4); }
+  .steps p { margin-top: var(--space-2); font-size: var(--text-sm); color: var(--color-text-muted); }
+
+  .prose { max-width: 52rem; }
+  .prose h2 { margin-bottom: var(--space-4); }
+  .prose p + p { margin-top: var(--space-3); }
+  .prose a:not(.button) { text-decoration: underline; }
+  .prose .actions { margin-top: var(--space-5); }
+  .founder { display: grid; gap: var(--space-6); align-items: center; }
+  .founder img { width: 100%; max-width: 20rem; height: auto; border-radius: var(--radius-lg); }
+  @media (min-width: 48em) { .founder { grid-template-columns: 20rem 1fr; } }
+  .qa { padding-block: var(--space-4); border-bottom: 1px solid var(--color-border); }
+  .qa h3 { font-size: var(--text-h4); }
+  .qa p { margin-top: var(--space-2); }
+  .qa:last-child { border-bottom: 0; }
+
+  .inquiry { max-width: 52rem; }
+  .inquiry .intro { margin-bottom: var(--space-5); }
+  #project-inquiry { scroll-margin-top: calc(var(--header-h) + var(--space-4)); }
+
+  @media (prefers-reduced-motion: reduce) { .vp * { transition: none !important; scroll-behavior: auto !important; } }
+</style>

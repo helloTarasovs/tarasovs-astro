@@ -74,6 +74,21 @@
           "html": "<p>Businesses in New York and Europe that need a website that works – not just looks good in a preview. Startups launching their first site. Established companies replacing underperforming platforms. Agencies that need a reliable development partner.</p>"
         }
       ]
+    },
+    {
+      "title": "Add video to your website",
+      "blocks": [
+        {
+          "type": "callout",
+          "eyebrow": "AI Video Production",
+          "title": "Video built for your website",
+          "text": "Want video on the site you are building? We produce hero loops and launch films that are prepared for Framer, Webflow and WordPress.",
+          "action": {
+            "label": "Explore AI video production",
+            "href": "/services/ai-video-production/"
+          }
+        }
+      ]
     }
   ],
   "faq": {

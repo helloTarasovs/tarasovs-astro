@@ -61,6 +61,14 @@
               }
             },
             {
+              "title": "AI Video Production",
+              "html": "<p>Product films, website hero loops, brand stories, launch videos and social content, made with AI-assisted production, creative direction, editing and sound. Order a standalone film or combine video with a new website.<br><br><strong>Best for:</strong> brands, website owners and agencies that need video for a launch, a hero section or a campaign.</p>",
+              "link": {
+                "label": "Get started",
+                "href": "/services/ai-video-production/"
+              }
+            },
+            {
               "title": "UI/UX Design",
               "html": "<p>User experience design grounded in research, not assumptions. We run discovery, build wireframes, prototype, test with real users, and deliver high-fidelity UI design ready for developer handoff. Available as a standalone service or integrated into a full web design and development project.<br><br><strong>Best for:</strong> SaaS products, complex web applications, and businesses whose current site frustrates users or underconverts.</p>",
               "link": {
