@@ -21,13 +21,13 @@ export interface Project {
 const P = (slug: string, p: Omit<Project, 'id' | 'url' | 'poster'> & { vertical?: boolean }): Project => ({
   id: slug.replaceAll('-', '_'),
   url: `https://films.tarasovs.me/projects/${slug}`,
-  poster: `/images/video/${slug}.webp`,
+  poster: `/images/video/${slug}.${slug === 'meridian' ? 'jpg' : 'webp'}`,
   ...p,
 });
 
 export const PROJECTS: Record<string, Project> = {
   florist: P('florist-website-hero-banner', { title: 'Florist website hero banner', format: 'Website hero video', use: 'Atmospheric video for the first screen of a website.', width: 1200, height: 675, alt: 'Frame from the Florist website hero banner video', status: 'Self-initiated' }),
-  meridian: P('meridian', { title: 'Meridian', format: 'Product film', use: 'Product presentation for a premium wireless product.', width: 1200, height: 675, alt: 'Frame from the Meridian product film', status: 'Self-initiated' }),
+  meridian: P('meridian', { title: 'Meridian', format: 'Product film', use: 'Product presentation for a premium wireless product.', width: 1200, height: 675, alt: 'Wireless earbud floating against a soft studio background, frame from the Meridian product film', status: 'Self-initiated' }),
   centra: P('centra-datacore', { title: 'Centra DataCore', format: 'Launch film', use: 'Visual presentation for a product launch.', width: 1200, height: 675, alt: 'Frame from the Centra DataCore launch film', status: 'Self-initiated' }),
   northline: P('northline-cold-brew', { title: 'Northline Cold Brew', format: 'Vertical UGC-style video', use: 'AI-generated UGC-style vertical product content.', width: 720, height: 1280, alt: 'Frame from the Northline Cold Brew vertical video', status: 'Self-initiated' }),
   slake: P('slake', { title: 'Slake', format: 'Product / social video', use: 'Product video adapted for social placements.', width: 1200, height: 675, alt: 'Frame from the Slake vertical video', status: 'Self-initiated' }),
@@ -50,8 +50,8 @@ export interface VideoService {
   title: string;
   text: string;
   for: string[];
-  outputs: string;
-  note?: string;
+  outputs: string; // deliverables, shown in a collapsible block
+  details?: string; // extra scope notes, same block
   examples: Project[];
   exampleLabel?: string;
   cta: string;
@@ -64,7 +64,7 @@ export const SERVICES: VideoService[] = [
     title: 'Website hero videos &amp; seamless loops',
     text: 'Custom video for the opening screen of your website. We plan the composition around your headline, mobile crop and loop point, then prepare the files for a clear, responsive presentation.',
     for: ['The first screen of a corporate, product or portfolio website.', 'Atmospheric background video.', 'A seamless loop in a website section or on a landing page.', 'The visual side of scroll-driven storytelling, when it is part of the project.'],
-    outputs: 'Possible deliverables: a horizontal loop, a mobile crop, a static poster and web-optimised files. Implementation in Framer, Webflow or WordPress is estimated separately or included in an agreed combined project.',
+    outputs: 'Possible deliverables: a horizontal loop, a mobile crop, a static poster and web-optimised files. Building it into Framer, Webflow or WordPress can be quoted separately or included in a combined website project.',
     examples: [PROJECTS.florist],
     cta: 'Discuss a website video',
   },
@@ -74,7 +74,7 @@ export const SERVICES: VideoService[] = [
     title: 'Product video production',
     text: 'Product-led films for launches, product pages and campaigns. We develop the visual direction around your product references, then build and edit the scenes for the placements you need.',
     for: ['Presenting a physical product or a digital solution.', 'Showing materials, details, packaging and the visual character of a brand.', 'A product page, launch, presentation or ad placement.'],
-    outputs: 'Possible deliverables: a main film, agreed cut-downs, horizontal or vertical versions and posters. Shape, logos and packaging are checked against the references you provide; whether extra compositing is needed is assessed per task.',
+    outputs: 'Possible deliverables: a main film, agreed cut-downs, horizontal or vertical versions and posters. We check shape, logos and packaging against your references and tell you up front if a scene needs extra finishing.',
     examples: [PROJECTS.meridian, PROJECTS.slake, PROJECTS.centra],
     cta: 'Discuss a product video',
   },
@@ -84,7 +84,7 @@ export const SERVICES: VideoService[] = [
     title: 'Brand films',
     text: 'Films that express the character of a brand through imagery, rhythm and sound. We shape a concept around your audience and message, then develop a consistent visual world for the film.',
     for: ['A brand image film or a brand refresh.', 'Conveying mood, aesthetics and positioning.', 'A campaign, a presentation or a standalone brand project.'],
-    outputs: 'Possible deliverables: a concept, a visual direction and an agreed film with adaptations. Length and complexity are defined after the brief.',
+    outputs: 'Possible deliverables: a concept, a visual direction and an agreed film with adaptations. Length and complexity are set once we have your brief.',
     examples: [],
     cta: 'Discuss a brand film',
   },
@@ -94,7 +94,7 @@ export const SERVICES: VideoService[] = [
     title: 'Launch &amp; promotional videos',
     text: 'Video for the moment something new goes live: a product, a website or a campaign. We create the main visual sequence and the supporting versions needed for your launch channels.',
     for: ['Launching a website, product, service or campaign.', 'A short teaser or promo.', 'An opening sequence for a presentation.', 'Short supporting versions for announcements.'],
-    outputs: 'Possible deliverables: a main launch version, short announcements, titles and agreed adaptations. A hero loop for permanent use on a website belongs to Website hero videos; here the focus is the launch moment and its message.',
+    outputs: 'Possible deliverables: a main launch version, short announcements, titles and agreed adaptations.',
     examples: [PROJECTS.centra, PROJECTS.framerPromo],
     cta: 'Plan a launch video',
   },
@@ -104,7 +104,7 @@ export const SERVICES: VideoService[] = [
     title: 'Social &amp; vertical videos',
     text: 'Short-form video planned for the feed, from vertical product clips to AI-generated UGC-style concepts. We build the framing, opening and captions around how the audience will watch.',
     for: ['Reels, Shorts and vertical ads.', 'Short product and branded videos.', 'Vertical adaptations of a main film.', 'AI-generated UGC-style video with a character or presenter, when agreed in the brief.'],
-    outputs: 'Possible deliverables: 9:16, 4:5 or 1:1 versions with agreed hooks, titles, subtitles and variants. The number of versions and any extra voice-over depend on the scope. AI-generated UGC-style work is exactly that: it is not a documentary testimonial from a real customer. We create the creative; ad account management and ROAS guarantees are not part of this service.',
+    outputs: 'Possible deliverables: 9:16, 4:5 or 1:1 versions with agreed hooks, titles, subtitles and variants. The number of versions and any voice-over depend on the scope. UGC-style videos are AI-generated concepts, not testimonials from real customers. We make the creative; we do not run ad accounts or guarantee ad results.',
     examples: [PROJECTS.northline, PROJECTS.slake, PROJECTS.sweetBloom],
     cta: 'Discuss social video content',
   },
@@ -114,7 +114,7 @@ export const SERVICES: VideoService[] = [
     title: 'Motion identity &amp; logo animation',
     text: 'Motion that gives a brand a recognisable way to move. We create logo animations, short idents and reusable motion elements that can work across websites, films and social content.',
     for: ['Logo animation.', 'Short intros, outros and idents.', 'Branded titles, transitions and repeatable elements.', 'A consistent motion language for digital channels.'],
-    outputs: 'Possible deliverables: agreed video files and a set of motion elements. A transparent background, Lottie, Rive and source files are not included automatically; the technical format is agreed per task.',
+    outputs: 'Possible deliverables: agreed video files and a set of motion elements. Transparent backgrounds, Lottie, Rive and source files can be added when the project needs them; we agree the technical format with you at the start.',
     examples: [PROJECTS.sweetBloom],
     exampleLabel: 'Example (self-initiated motion identity study)',
     cta: 'Discuss motion for your brand',
@@ -131,7 +131,7 @@ export const INCLUDED = [
 ];
 
 export const INCLUDED_NOTE = 'The proposal defines the film length, number of shots, formats, revision stages and delivery files before production begins.';
-export const INCLUDED_FORMATS = 'Formats are possibilities, not a universal package: 16:9, 9:16, 4:5 and 1:1; 1080p or 4K depending on requirements. MP4 or WebM, posters, subtitles, seamless loops and web optimisation are decided per placement.';
+export const INCLUDED_FORMATS = 'We agree formats for each placement: 16:9, 9:16, 4:5 or 1:1, in 1080p or 4K, as MP4 or WebM, with posters, subtitles, seamless loops and web optimisation where they are needed.';
 
 export const PROCESS = [
   { title: 'Brief & scope', text: 'We define the task, the audience, where the video will be used, the materials, the deadline and the budget range. Then we shape the scope of the order.' },

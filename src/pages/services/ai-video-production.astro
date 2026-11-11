@@ -88,6 +88,9 @@ const HERO_POSTER = '/images/video/hero-tennis.jpg';
           <h2 id="services-title">Our AI video production services</h2>
           <p class="intro">Choose the format around where the video will live, what it needs to communicate and how your audience will watch it.</p>
         </div>
+        <nav class="quicknav" aria-label="Video services">
+          <ul>{SERVICES.map((s) => <li><a href={`#${s.id}`} set:html={s.title.replace('&amp; ', '&amp; ')} /></li>)}</ul>
+        </nav>
         <div class="services">
           {SERVICES.map((s) => (
             <article class="svc" id={s.id}>
@@ -95,13 +98,13 @@ const HERO_POSTER = '/images/video/hero-tennis.jpg';
               <p>{s.text}</p>
               <p class="label">Good for</p>
               <ul>{s.for.map((f) => <li>{f}</li>)}</ul>
-              <p class="outputs">{s.outputs}</p>
+              <details class="more"><summary>Deliverables and details</summary><p class="outputs">{s.outputs}</p></details>
               {s.examples.length > 0 ? (
                 <p class="examples"><span class="label">{s.exampleLabel ?? (s.examples.length > 1 ? 'Examples' : 'Example')}:</span>{' '}
                   {s.examples.map((e, i) => <>{i > 0 && ', '}<a href={e.url} data-film-link data-project-id={e.id} data-cta={`service_${s.serviceId}`}>{e.title}</a></>)}
                 </p>
               ) : (
-                <p class="examples">No dedicated case yet. See the <a href={FILMS_URL} data-film-link data-project-id="all_work" data-cta={`service_${s.serviceId}`}>general film portfolio</a>.</p>
+                <p class="examples">See related work in the <a href={FILMS_URL} data-film-link data-project-id="all_work" data-cta={`service_${s.serviceId}`}>film portfolio</a>.</p>
               )}
               <a class="button" href="#project-inquiry" data-service-cta={s.serviceId} data-cta={`service_${s.serviceId}`}>{s.cta}</a>
             </article>
@@ -164,7 +167,7 @@ const HERO_POSTER = '/images/video/hero-tennis.jpg';
     <section class="section tone" id="faq" aria-labelledby="faq-title">
       <div class="container prose">
         <h2 id="faq-title">Frequently asked questions about AI video production</h2>
-        {FAQ.map((f) => <div class="qa"><h3>{f.q}</h3><p>{f.a}</p></div>)}
+        {FAQ.map((f) => <details class="qa"><summary><h3>{f.q}</h3></summary><p>{f.a}</p></details>)}
       </div>
     </section>
 
@@ -285,6 +288,7 @@ const HERO_POSTER = '/images/video/hero-tennis.jpg';
   .examples { font-size: var(--text-sm); }
   .examples a { text-decoration: underline; display: inline-block; padding-block: 0.25rem; }
   .svc .button { margin-top: auto; }
+  .svc :is(.more) { margin-top: var(--space-1); }
 
   .grid3 { display: grid; gap: var(--space-4); padding: 0; list-style: none; }
   @media (min-width: 40em) { .grid3 { grid-template-columns: repeat(2, 1fr); } }
@@ -311,8 +315,21 @@ const HERO_POSTER = '/images/video/hero-tennis.jpg';
   .founder img { width: 100%; max-width: 20rem; height: auto; border-radius: var(--radius-lg); }
   @media (min-width: 48em) { .founder { grid-template-columns: 20rem 1fr; } }
   .qa { padding-block: var(--space-4); border-bottom: 1px solid var(--color-border); }
+  .qa summary { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); min-height: 44px; cursor: pointer; list-style: none; }
+  .qa summary::-webkit-details-marker { display: none; }
+  .qa summary::after, .more summary::after { content: '+'; flex: none; font-size: 1.4rem; line-height: 1; color: var(--color-link); }
+  .qa[open] summary::after, .more[open] summary::after { content: '\2212'; }
+  .qa summary:focus-visible, .more summary:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; }
   .qa h3 { font-size: var(--text-h4); }
   .qa p { margin-top: var(--space-2); }
+  .more { width: 100%; border-top: 1px solid var(--color-border); }
+  .more summary { display: flex; align-items: center; justify-content: space-between; min-height: 44px; cursor: pointer; list-style: none; font-size: var(--text-sm); font-weight: 600; }
+  .more summary::-webkit-details-marker { display: none; }
+  .more .outputs { padding-bottom: var(--space-2); }
+  .quicknav ul { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0 0 var(--space-6); padding: 0; list-style: none; }
+  .quicknav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0.4rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-pill); background: var(--color-bg); color: var(--color-text); font-size: var(--text-sm); font-weight: 500; text-decoration: none; }
+  .quicknav a:hover { border-color: var(--color-link); color: var(--color-link); }
+  .quicknav a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; }
   .qa:last-child { border-bottom: 0; }
 
   .inquiry { max-width: 52rem; }
