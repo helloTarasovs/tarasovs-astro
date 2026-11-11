@@ -36,6 +36,9 @@ export const PAIRS: Record<Lang, string>[] = [
   { uk: '/ua/blog/geo-seo-aeo/', en: '/geo-vs-seo-vs-aeo/' },
   { uk: '/ua/blog/llms-txt-posibnyk/', en: '/llms-txt-guide/' },
   { uk: '/ua/blog/yak-ranzhuvatysia-v-chatgpt-search/', en: '/how-to-rank-in-chatgpt-search/' },
+  { uk: '/ua/blog/skilky-koshtuie-ai-video-produktsiia/', en: '/how-much-does-ai-video-production-cost/' },
+  { uk: '/ua/blog/hero-video-dlia-saitu-pidhotovka/', en: '/website-hero-video-brief/' },
+  { uk: '/ua/blog/ai-video-produktu-stabilnist-upakovky/', en: '/ai-product-video-consistency/' },
   { uk: '/ua/blog/yak-potrapyty-v-tsytaty-chatgpt/', en: '/how-to-get-your-business-cited-in-chatgpt-answers/' },
 ];
 
