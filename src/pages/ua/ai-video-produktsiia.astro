@@ -1,0 +1,25 @@
+---
+// Ukrainian version of /services/ai-video-production/ (hreflang pair in src/lib/i18n.ts). Copy: src/data/ai-video-uk.ts.
+import AiVideoPage from '../../components/AiVideoPage.astro';
+import { SITE } from '../../lib/site';
+const path = '/ua/ai-video-produktsiia/';
+const seo = {
+  title: 'AI-відеопродакшн для брендів і сайтів | Tarasovs',
+  description: 'AI-відеопродакшн: продуктові ролики, hero-відео для сайтів, бренд-фільми та відео для соцмереж. Подивіться роботи й обговоріть проєкт з Tarasovs.',
+  canonical: path,
+  ogImage: '/images/video/hero-tennis.jpg',
+};
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE.url}${path}#service`,
+  name: 'AI-відеопродакшн',
+  serviceType: 'AI-відеопродакшн',
+  description: seo.description,
+  url: `${SITE.url}${path}`,
+  inLanguage: 'uk',
+  provider: { '@id': `${SITE.url}/#organization` },
+  areaServed: { '@type': 'Country', name: 'Україна' },
+};
+---
+<AiVideoPage lang="uk" seo={seo} jsonld={[service]} />

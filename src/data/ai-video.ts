@@ -10,6 +10,7 @@ export interface Project {
   title: string;
   url: string;
   poster: string; // /images/video/<slug>.webp
+  video?: string; // hover preview (muted loop), loaded only on hover / keyboard focus
   width: number;
   height: number;
   alt: string;
@@ -18,7 +19,17 @@ export interface Project {
   status: 'Self-initiated' | 'Commissioned';
 }
 
-const P = (slug: string, p: Omit<Project, 'id' | 'url' | 'poster'> & { vertical?: boolean }): Project => ({
+const VIDEOS: Record<string, string> = {
+  'florist-website-hero-banner': 'Florist.mp4',
+  meridian: 'meridian.mp4',
+  'centra-datacore': 'centra.mp4',
+  'northline-cold-brew': 'Ugc-Model-1.mp4',
+  slake: 'Slake.mp4',
+  'promo-of-framer-website': 'framer.mp4',
+};
+
+const P = (slug: string, p: Omit<Project, 'id' | 'url' | 'poster' | 'video'>): Project => ({
+  video: VIDEOS[slug] ? `https://media.tarasovs.me/${VIDEOS[slug]}` : undefined,
   id: slug.replaceAll('-', '_'),
   url: `https://films.tarasovs.me/projects/${slug}`,
   poster: `/images/video/${slug}.${slug === 'meridian' ? 'jpg' : 'webp'}`,
@@ -164,3 +175,58 @@ export const FORM_SERVICES: { value: string; label: string }[] = [
   { value: 'social_video', label: 'Social & vertical videos' },
   { value: 'motion_identity', label: 'Motion identity & logo animation' },
 ];
+
+// ---- Per-language copy bundle used by components/AiVideoPage.astro (the Ukrainian bundle is in ai-video-uk.ts) ----
+export interface VideoCopy {
+  lang: 'en' | 'uk';
+  path: string;
+  home: { name: string; href: string };
+  servicesCrumb: { name: string; href: string };
+  ui: Record<string, string>;
+  services: VideoService[];
+  included: { title: string; text: string }[];
+  process: { title: string; text: string }[];
+  faq: { q: string; a: string }[];
+  formServices: { value: string; label: string }[];
+  projectText: Record<string, { format?: string; use?: string; alt?: string; title?: string }>;
+  statuses: Record<Project['status'], string>;
+  serviceText: Record<string, Partial<Pick<VideoService, 'title' | 'text' | 'for' | 'outputs' | 'cta' | 'exampleLabel'>>>;
+}
+
+export const EN: VideoCopy = {
+  lang: 'en',
+  path: '/services/ai-video-production/',
+  home: { name: 'Home', href: '/' },
+  servicesCrumb: { name: 'Services', href: '/services/' },
+  ui: {
+    crumbPage: 'AI Video Production', breadcrumb: 'Breadcrumb',
+    eyebrow: 'AI VIDEO & MOTION',
+    h1: 'AI video production for brands, websites and campaigns',
+    lead: 'We create product films, website hero loops, brand stories and social videos with AI-assisted production, creative direction, editing and sound. Commission a standalone film or combine video with a new website.',
+    ctaPrimary: 'Discuss your video project', ctaSecondary: 'Explore video work',
+    heroVideoLabel: 'Looping AI-generated tennis video, no sound', play: 'Play video', pause: 'Pause video',
+    workTitle: 'Selected video work', workIntro: 'A selection of commissioned and self-initiated projects, from product films to website visuals and vertical content.',
+    horizontal: 'Horizontal films', vertical: 'Vertical videos for reels and shorts',
+    viewProject: 'View project', onFilms: 'on films.tarasovs.me', viewAll: 'View full film portfolio',
+    servicesTitle: 'Our AI video production services', servicesIntro: 'Choose the format around where the video will live, what it needs to communicate and how your audience will watch it.',
+    quicknav: 'Video services', goodFor: 'Good for', details: 'Deliverables and details', examples: 'Examples', example: 'Example',
+    related1: 'See related work in the', relatedLink: 'film portfolio', related2: '.',
+    includedTitle: 'What can be included in your project', includedNote: INCLUDED_NOTE, includedFormats: INCLUDED_FORMATS,
+    processTitle: 'How your video project works', processNote: PROCESS_NOTE,
+    webTitle: 'Video built for your website',
+    webP1: 'Video works best when it is planned with the page. We compose the frame around your headline and call to action, prepare versions for the screens your visitors use, and deliver files made for web delivery. When the website is part of the same project, the whole solution can be built and approved in one place.',
+    webP2: 'This sits alongside our existing services: <a href="/services/framer-development/">Framer development</a>, <a href="/services/website-design-services/">website design</a> and <a href="/services/website-development/">website development</a> for Framer, Webflow and WordPress.',
+    agTitle: 'A production partner for agencies',
+    agP1: 'Any of the six video services can be delivered as part of an agency project. You can hand us a finished brief and design, or involve us in shaping the concept, and video production runs as a separate module inside the wider client project.',
+    agP2: 'White-label format, communication with the end client, responsibilities, confidentiality and the right to publish a case study are agreed up front.',
+    agCta: 'Discuss an agency project',
+    founderTitle: 'Led by Yurii Tarasov', founderAlt: 'Portrait of Yurii Tarasov',
+    founderP: 'Yurii leads the creative direction and the edit personally. A background in web design and development shapes how the video is planned for real sites and campaigns.',
+    founderCta: "Explore Yurii's film portfolio",
+    faqTitle: 'Frequently asked questions about AI video production',
+    inquiryTitle: 'Tell us about your video project',
+    inquiryIntro: 'Share what you want to create, where it will be used and your target launch date. We will review the brief and suggest the next step.',
+  },
+  services: SERVICES, included: INCLUDED, process: PROCESS, faq: FAQ, formServices: FORM_SERVICES,
+  projectText: {}, statuses: { 'Self-initiated': 'Self-initiated', Commissioned: 'Commissioned' }, serviceText: {},
+};

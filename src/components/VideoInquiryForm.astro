@@ -3,14 +3,37 @@
 // the shared FormSubmit script handles fetch, sending state, success and error. Extra fields travel with the message:
 // page, selected service and agency flag.
 import { FORM_SERVICES } from '../data/ai-video';
+import { UK } from '../data/ai-video-uk';
+
+interface Props { lang?: 'en' | 'uk' }
+const lang = Astro.props.lang ?? 'en';
+const uk = lang === 'uk';
+const services = uk ? UK.formServices : FORM_SERVICES;
+const t = uk ? {
+  name: "Ім'я", email: 'Емейл', company: 'Компанія або сайт', service: 'Послуга', agency: 'Проєкт для агенції', brief: 'Бриф проєкту',
+  placeholder: 'Що ви створюєте, для кого і де використовуватиметься відео? Можна додати посилання на референси.',
+  date: 'Бажана дата запуску', budget: 'Орієнтовний бюджет', req: "(обов'язково)", opt: "(необов'язково)", submit: 'Надіслати запит',
+  consent: ['Надсилаючи форму, я погоджуюся з', 'умовами використання (англ.)', 'і', 'політикою конфіденційності'], privacy: '/ua/polityka-konfidentsiinosti/',
+  sending: 'Надсилаємо…',
+  success: 'Дякуємо! Запит надіслано. Ми розглянемо бриф і повернемося з наступним кроком.',
+  error: 'Не вдалося надіслати запит. Введений текст збережено, можна спробувати ще раз або написати на hello@tarasovs.me.',
+} : {
+  name: 'Name', email: 'Email', company: 'Company or website', service: 'Service', agency: 'Agency project', brief: 'Project brief',
+  placeholder: 'What are you creating, who is it for and where will the video be used? You can include links to references.',
+  date: 'Target launch date', budget: 'Approximate budget', req: '(required)', opt: '(optional)', submit: 'Send project inquiry',
+  consent: ['By submitting this form, I agree to the', 'terms & conditions', 'and', 'privacy policy'], privacy: '/privacy-cookie-policy-tarasovs-digital-agency/',
+  sending: 'Sending…',
+  success: 'Thank you! Your project inquiry has been sent. We will review the brief and get back to you with the next step.',
+  error: 'Sorry, the inquiry could not be sent. Your text is still here, so you can try again, or email hello@tarasovs.me.',
+};
 import FormSubmit from './FormSubmit.astro';
 
 const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? '';
-const pageUrl = 'https://tarasovs.me/services/ai-video-production/';
+const pageUrl = uk ? 'https://tarasovs.me/ua/ai-video-produktsiia/' : 'https://tarasovs.me/services/ai-video-production/';
 ---
 <form id="video-inquiry" class="vform" action="https://api.web3forms.com/submit" method="POST" data-contact-form data-video-form
-  data-success="Thank you! Your project inquiry has been sent. We will review the brief and get back to you with the next step."
-  data-error="Sorry, the inquiry could not be sent. Your text is still here, so you can try again, or email hello@tarasovs.me.">
+  data-success={t.success} data-sending={t.sending}
+  data-error={t.error}>
   <input type="hidden" name="access_key" value={accessKey} />
   <input type="hidden" name="subject" value="New AI video project inquiry" />
   <input type="hidden" name="from_name" value="tarasovs.me" />
@@ -19,46 +42,46 @@ const pageUrl = 'https://tarasovs.me/services/ai-video-production/';
 
   <div class="row">
     <div class="field">
-      <label for="vf-name">Name <span class="req">(required)</span></label>
+      <label for="vf-name">{t.name} <span class="req">{t.req}</span></label>
       <input id="vf-name" name="name" type="text" autocomplete="name" required maxlength="200" />
     </div>
     <div class="field">
-      <label for="vf-email">Email <span class="req">(required)</span></label>
+      <label for="vf-email">{t.email} <span class="req">{t.req}</span></label>
       <input id="vf-email" name="email" type="email" autocomplete="email" required maxlength="200" />
     </div>
   </div>
   <div class="row">
     <div class="field">
-      <label for="vf-company">Company or website <span class="req">(optional)</span></label>
+      <label for="vf-company">{t.company} <span class="req">{t.opt}</span></label>
       <input id="vf-company" name="company_or_website" type="text" autocomplete="organization" maxlength="300" />
     </div>
     <div class="field">
-      <label for="vf-service">Service <span class="req">(optional)</span></label>
+      <label for="vf-service">{t.service} <span class="req">{t.opt}</span></label>
       <select id="vf-service" name="service">
-        {FORM_SERVICES.map((s) => <option value={s.label} data-id={s.value}>{s.label}</option>)}
+        {services.map((s) => <option value={s.label} data-id={s.value}>{s.label}</option>)}
       </select>
     </div>
   </div>
-  <label class="check"><input type="checkbox" id="vf-agency" name="agency_project" value="Yes" /><span>Agency project</span></label>
+  <label class="check"><input type="checkbox" id="vf-agency" name="agency_project" value="Yes" /><span>{t.agency}</span></label>
   <div class="field">
-    <label for="vf-brief">Project brief <span class="req">(required)</span></label>
-    <textarea id="vf-brief" name="message" rows="6" required maxlength="3000" placeholder="What are you creating, who is it for and where will the video be used? You can include links to references."></textarea>
+    <label for="vf-brief">{t.brief} <span class="req">{t.req}</span></label>
+    <textarea id="vf-brief" name="message" rows="6" required maxlength="3000" placeholder={t.placeholder}></textarea>
   </div>
   <div class="row">
     <div class="field">
-      <label for="vf-date">Target launch date <span class="req">(optional)</span></label>
+      <label for="vf-date">{t.date} <span class="req">{t.opt}</span></label>
       <input id="vf-date" name="target_launch_date" type="text" maxlength="100" />
     </div>
     <div class="field">
-      <label for="vf-budget">Approximate budget <span class="req">(optional)</span></label>
+      <label for="vf-budget">{t.budget} <span class="req">{t.opt}</span></label>
       <input id="vf-budget" name="approximate_budget" type="text" maxlength="100" />
     </div>
   </div>
 
   <p class="consent">
-    By submitting this form, I agree to the <a href="/terms-of-service-tarasovs-digital-agency/">terms &amp; conditions</a> and <a href="/privacy-cookie-policy-tarasovs-digital-agency/">privacy policy</a>.
+    {t.consent[0]} <a href={uk ? '/terms-of-service-tarasovs-digital-agency/' : '/terms-of-service-tarasovs-digital-agency/'}>{t.consent[1]}</a> {t.consent[2]} <a href={t.privacy}>{t.consent[3]}</a>.
   </p>
-  <button class="button" type="submit" data-submit>Send project inquiry</button>
+  <button class="button" type="submit" data-submit>{t.submit}</button>
   <p class="status" role="status" aria-live="polite" data-status></p>
 </form>
 
