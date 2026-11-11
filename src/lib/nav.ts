@@ -52,6 +52,7 @@ export const MAIN_NAV_UK: NavItem[] = [
     children: [
       { label: 'Створення сайтів', href: '/ua/stvorennia-saitiv/' },
       { label: 'Дизайн сайтів', href: '/ua/dyzain-saitiv/' },
+      { label: 'Інтернет-магазини', href: '/ua/internet-mahazyny/' },
       { label: 'AI-відеопродакшн', href: '/ua/ai-video-produktsiia/' },
       { label: 'Просування сайтів', href: '/ua/prosuvannia-saitiv/' },
       { label: 'AI-видимість', href: '/ua/ai-vydymist/' },

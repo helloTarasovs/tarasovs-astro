@@ -14,6 +14,7 @@ export const PAIRS: Record<Lang, string>[] = [
   { uk: '/ua/prosuvannia-saitiv/', en: '/services/seo-services/' },
   { uk: '/ua/ai-vydymist/', en: '/services/geo-ai-search-optimization/' },
   { uk: '/ua/dyzain-saitiv/', en: '/services/website-design-services/' },
+  { uk: '/ua/internet-mahazyny/', en: '/services/e-commerce/' },
   { uk: '/ua/ai-video-produktsiia/', en: '/services/ai-video-production/' },
   { uk: '/ua/kontakty/', en: '/contact-us/' },
   { uk: '/ua/roboty/', en: '/case-studies/' },

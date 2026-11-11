@@ -14,7 +14,7 @@ const featured = plans.length === 3 ? 1 : -1;
       <ul class="features">
         {p.features.map((f) => <li set:html={f} />)}
       </ul>
-      {p.action && <a class:list={['button', { 'button--highlight': i === featured }]} href={p.action.href}>{p.action.label}<span class="visually-hidden"> with {p.name}</span></a>}
+      {p.action && <a class:list={['button', { 'button--highlight': i === featured }]} href={p.action.href}>{p.action.label}<span class="visually-hidden">: {p.name}</span></a>}
     </li>
   ))}
 </ul>

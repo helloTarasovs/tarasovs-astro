@@ -1,0 +1,7 @@
+---
+// Ukrainian page: translation of /services/e-commerce/ (Dutchie/cannabis case material left out, as on the rest of /ua/), data in src/content/ua/internet-mahazyny.json.
+import ServicePage from '../../layouts/ServicePage.astro';
+import data from '../../content/ua/internet-mahazyny.json';
+import type { ServicePageData } from '../../lib/service-page';
+---
+<ServicePage data={data as ServicePageData} />
