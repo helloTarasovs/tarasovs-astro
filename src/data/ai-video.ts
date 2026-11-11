@@ -145,7 +145,7 @@ export const INCLUDED = [
 ];
 
 export const INCLUDED_NOTE = 'The proposal defines the film length, number of shots, formats, revision stages and delivery files before production begins.';
-export const INCLUDED_FORMATS = 'We agree formats for each placement: 16:9, 9:16, 4:5 or 1:1, in 1080p or 4K, as MP4 or WebM, with posters, subtitles, seamless loops and web optimisation where they are needed.';
+export const INCLUDED_FORMATS = 'We agree formats for each placement: 16:9, 9:16, 4:5 or 1:1, in 1080p, as MP4 or WebM, with posters, subtitles, seamless loops and web optimisation where they are needed.';
 
 export const PROCESS = [
   { title: 'Brief & scope', text: 'We define the task, the audience, where the video will be used, the materials, the deadline and the budget range. Then we shape the scope of the order.' },
@@ -163,7 +163,9 @@ export const FAQ = [
   { q: 'Can you work from product photos and brand guidelines?', a: 'Yes. Product images, packaging artwork and brand guidelines help establish the visual direction. We review the materials and the required product detail before confirming the production approach.' },
   { q: 'Can I get horizontal and vertical versions?', a: 'Yes. The required aspect ratios and the number of versions are agreed in the proposal. Some placements need a different edit or composition rather than a simple crop.' },
   { q: 'Do you create AI-generated UGC-style videos?', a: 'Yes, for suitable briefs. These are AI-generated concepts featuring a character or presenter, rather than recordings of a real customer’s experience. The format and production approach are agreed before work starts.' },
-  { q: 'How much does AI video production cost?', a: 'The quote depends on the concept, film length, number of scenes, product or character requirements, sound and delivery formats. Send a short brief and we will propose a scope for the work.' },
+  { q: 'How much does AI video production cost?', a: 'Website Hero projects start at $350, Product Video projects at $650, and the Social Launch Kit at $950. Prices are in USD and apply to the starting scope shown in each package. We confirm the final quote after reviewing your brief, source materials, product detail and delivery requirements.' },
+  { q: 'What does a revision round include?', a: 'A revision round is one consolidated set of feedback within the agreed creative direction. Website Hero includes one round. Product Video and Social Launch Kit include two. Corrections needed to meet the agreed brief are part of delivery. A new concept or added scope is quoted separately.' },
+  { q: 'Does the Social Launch Kit include three different concepts?', a: 'The kit includes one main video and two alternative opening edits, delivered as three vertical versions. They share the agreed creative direction, scenes and main edit. Separate concepts can be scoped as a custom project.' },
   { q: 'How long does a project take?', a: 'The schedule depends on the scope and review stages. We confirm the delivery plan after reviewing the brief and source materials.' },
   { q: 'Can you add the video to our website?', a: 'Website integration can be scoped alongside production, including responsive presentation, poster images and delivery files for the chosen platform.' },
   { q: 'Do you work with agencies?', a: 'Yes. We can contribute video production to an agency-led project. Responsibilities, communication and any white-label requirements are agreed at the start.' },

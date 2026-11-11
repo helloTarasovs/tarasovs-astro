@@ -7,11 +7,15 @@ import { breadcrumbSchema } from '../lib/schema';
 import { FILMS_URL, PROJECTS, WORK_HORIZONTAL, WORK_VERTICAL, type Project } from '../data/ai-video';
 import { EN } from '../data/ai-video';
 import { UK } from '../data/ai-video-uk';
+import { PACKAGES, PACKAGES_EN, PACKAGES_UK, formatPrice } from '../data/ai-video-packages';
 
 interface Props { lang: 'en' | 'uk'; seo: { title: string; description?: string; canonical?: string; robots?: string; ogImage?: string }; jsonld: unknown[] }
 const { lang, seo, jsonld: pageJsonld } = Astro.props;
 const C = lang === 'uk' ? UK : EN;
 const u = C.ui;
+const PK = lang === 'uk' ? PACKAGES_UK : PACKAGES_EN;
+const pk = PK.ui;
+const packages = PACKAGES.map((p) => ({ ...p, ...PK.items[p.id], price: formatPrice(p) }));
 const crumbs = [C.home, { name: C.servicesCrumb.name, path: C.servicesCrumb.href }, { name: u.crumbPage, path: C.path }].map((c: any) => ({ name: c.name, path: c.path ?? c.href }));
 const jsonld = [...pageJsonld, breadcrumbSchema(crumbs)];
 const HERO_VIDEO = 'https://media.tarasovs.me/tenis2.mp4';
@@ -98,7 +102,7 @@ const services = C.services.map((s) => ({ ...s, examples: s.examples.map(loc) })
           <p class="intro">{u.servicesIntro}</p>
         </div>
         <nav class="quicknav" aria-label={u.quicknav}>
-          <ul>{services.map((s) => <li><a href={`#${s.id}`} set:html={s.title} /></li>)}</ul>
+          <ul>{services.map((s) => <li><a href={`#${s.id}`} set:html={s.title} /></li>)}<li><a href="#video-packages">{pk.nav}</a></li></ul>
         </nav>
         <div class="services">
           {services.map((s) => (
@@ -118,6 +122,40 @@ const services = C.services.map((s) => ({ ...s, examples: s.examples.map(loc) })
               <a class="button" href="#project-inquiry" data-service-cta={s.serviceId} data-cta={`service_${s.serviceId}`}>{s.cta}</a>
             </article>
           ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="video-packages" aria-labelledby="packages-title">
+      <div class="container">
+        <div class="head">
+          <p class="eyebrow">{pk.eyebrow}</p>
+          <h2 id="packages-title">{pk.title}</h2>
+          <p class="intro">{pk.intro}</p>
+        </div>
+        <p class="pkg-note">{pk.priceNote}</p>
+        <ul class="packages">
+          {packages.map((p) => (
+            <li class="pkg">
+              <div class="pkg-head"><h3>{p.name}</h3>{p.tag && <p class="pkg-tag">{p.tag}</p>}</div>
+              <p class="pkg-price"><span class="pkg-from">{pk.from}</span> <strong>{p.price}</strong> <span class="pkg-unit">{pk.perProject}</span></p>
+              <p class="pkg-desc">{p.description}</p>
+              <p class="label">{pk.includedLabel}</p>
+              <ul class="pkg-list">{p.included.map((i) => <li>{i}</li>)}</ul>
+              <p class="pkg-scope">{p.scopeNote}</p>
+              <a class="button" href="#project-inquiry" data-package-cta={p.id} data-cta="packages">{p.cta}</a>
+            </li>
+          ))}
+        </ul>
+        <div class="pkg-notes">
+          <h3>{pk.notesTitle}</h3>
+          <p>{pk.notes}</p>
+          <p>{pk.notesExtra}</p>
+        </div>
+        <div class="pkg-custom">
+          <h3>{pk.customTitle}</h3>
+          <p>{pk.customText}</p>
+          <a class="button button--ghost" href="#project-inquiry" data-package-cta="custom" data-cta="packages">{pk.customCta}</a>
         </div>
       </div>
     </section>
@@ -218,17 +256,56 @@ const services = C.services.map((s) => ({ ...s, examples: s.examples.map(loc) })
     var select = document.getElementById('vf-service');
     var agency = document.getElementById('vf-agency');
     var idOf = function () { var o = select.options[select.selectedIndex]; return o ? o.getAttribute('data-id') : 'not_sure'; };
+    var pkg = document.getElementById('vf-package');
+    var live = document.getElementById('vf-package-live');
+    var pkgOpt = function () { return pkg.options[pkg.selectedIndex]; };
+    var setService = function (id) { for (var i = 0; i < select.options.length; i++) if (select.options[i].getAttribute('data-id') === id) select.selectedIndex = i; };
+    // A concrete package belongs to one service; if the service no longer matches, the package goes back to "Not sure yet".
+    var reconcilePackage = function () { var need = pkgOpt().getAttribute('data-service'); if (need && need !== idOf()) pkg.selectedIndex = 0; };
 
     // Service CTAs fill the form (only on a click) and move focus to it.
     document.querySelectorAll('[data-service-cta]').forEach(function (a) {
       a.addEventListener('click', function () {
         var id = a.getAttribute('data-service-cta');
-        for (var i = 0; i < select.options.length; i++) if (select.options[i].getAttribute('data-id') === id) select.selectedIndex = i;
+        setService(id);
+        reconcilePackage();
         if (a.hasAttribute('data-agency')) agency.checked = true;
         track('select_service', { service_id: id, cta_location: a.getAttribute('data-cta') });
         track('contact_click', { service_id: id, cta_location: a.getAttribute('data-cta') });
         setTimeout(function () { document.getElementById('vf-name').focus({ preventScroll: true }); }, 400);
       });
+    });
+    // Package CTAs fill Package (and Service for a concrete package) only on a click. Custom keeps the current Service.
+    document.querySelectorAll('[data-package-cta]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var id = a.getAttribute('data-package-cta');
+        for (var i = 0; i < pkg.options.length; i++) if (pkg.options[i].value === id) pkg.selectedIndex = i;
+        var o = pkgOpt(), svc = o.getAttribute('data-service');
+        if (svc) setService(svc);
+        live.textContent = '';
+        setTimeout(function () { live.textContent = live.getAttribute('data-' + (svc ? 'text' : 'custom')).replace('{name}', o.getAttribute('data-name')).replace('{price}', '$' + o.getAttribute('data-price')); }, 60);
+        track('select_video_package', { package_id: id, service_id: idOf(), cta_location: 'packages' });
+        track('contact_click', { service_id: idOf(), cta_location: 'packages' });
+        setTimeout(function () { document.getElementById('vf-name').focus({ preventScroll: true }); }, 400);
+      });
+    });
+    // Manual changes in the form. Programmatic changes above do not fire "change", so no second event is sent.
+    pkg.addEventListener('change', function () {
+      var svc = pkgOpt().getAttribute('data-service');
+      if (svc) setService(svc);
+      track('select_video_package', { package_id: pkg.value || 'not_sure', service_id: idOf(), cta_location: 'inquiry_form' });
+    });
+    select.addEventListener('change', reconcilePackage);
+    // Package details travel with the inquiry. Name and price come from the option (rendered from the package config) by id;
+    // an empty choice and Custom project carry no amount.
+    form.addEventListener('formdata', function (e) {
+      var fd = e.formData, o = pkgOpt(), id = pkg.value;
+      fd.set('service_id', idOf());
+      ['package_id', 'package_name', 'package_starting_price', 'currency'].forEach(function (k) { fd.delete(k); });
+      if (!id) return;
+      fd.set('package_id', id);
+      fd.set('package_name', o.getAttribute('data-name'));
+      if (o.getAttribute('data-price')) { fd.set('package_starting_price', o.getAttribute('data-price')); fd.set('currency', o.getAttribute('data-currency')); }
     });
     document.querySelectorAll('[data-cta="hero_primary"]').forEach(function (a) {
       a.addEventListener('click', function () { track('contact_click', { service_id: idOf(), cta_location: 'hero_primary' }); });
@@ -245,12 +322,13 @@ const services = C.services.map((s) => ({ ...s, examples: s.examples.map(loc) })
       started = true;
       track('form_start', { form_id: 'video_inquiry', service_id: idOf() });
     });
-    var sent = false;
-    form.addEventListener('submit', function () { sent = false; });
+    // The form resets itself before form:success fires, so the values are taken at submit time.
+    var sent = false, snap = null;
+    form.addEventListener('submit', function () { sent = false; snap = { service_id: idOf(), package_id: pkg.value || 'not_sure', agency_project: agency.checked }; });
     form.addEventListener('form:success', function () {
-      if (sent) return;
+      if (sent || !snap) return;
       sent = true;
-      track('generate_lead', { form_id: 'video_inquiry', service_id: idOf(), agency_project: agency.checked });
+      track('generate_lead', { form_id: 'video_inquiry', service_id: snap.service_id, package_id: snap.package_id, agency_project: snap.agency_project });
     });
   })();
 </script>
@@ -316,6 +394,29 @@ const services = C.services.map((s) => ({ ...s, examples: s.examples.map(loc) })
   .examples a { text-decoration: underline; display: inline-block; padding-block: 0.25rem; }
   .svc .button { margin-top: auto; }
   .svc :is(.more) { margin-top: var(--space-1); }
+
+
+  .pkg-note { max-width: 62ch; margin-bottom: var(--space-5); color: var(--color-text-muted); font-size: var(--text-sm); }
+  .packages { display: grid; gap: var(--space-5); margin: 0; padding: 0; list-style: none; }
+  @media (min-width: 64em) { .packages { grid-template-columns: repeat(3, 1fr); } }
+  .pkg { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); }
+  .pkg h3 { font-size: var(--text-h4); }
+  .pkg-head { width: 100%; display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-3); }
+  .pkg-tag { margin: 0; padding: 0.1rem 0.7rem; border: 1px solid var(--color-border); border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 600; }
+  .pkg-price { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-2); }
+  .pkg-price strong { font-family: var(--font-title); font-size: var(--text-h3); line-height: 1; color: var(--color-heading); }
+  .pkg-from, .pkg-unit { font-size: var(--text-sm); color: var(--color-text-muted); }
+  .pkg-desc { font-size: var(--text-sm); }
+  .pkg-list { margin: 0; padding-left: 1.2rem; display: grid; gap: var(--space-1); font-size: var(--text-sm); }
+  .pkg-scope { font-size: var(--text-sm); color: var(--color-text-muted); }
+  .pkg .button { margin-top: auto; }
+  .pkg-notes { max-width: 62ch; margin-top: var(--space-6); }
+  .pkg-notes h3, .pkg-custom h3 { font-size: var(--text-h4); }
+  .pkg-notes p, .pkg-custom p { margin-top: var(--space-2); }
+  .pkg-notes p + p { color: var(--color-text-muted); font-size: var(--text-sm); }
+  .pkg-custom { max-width: 62ch; margin-top: var(--space-6); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+  .pkg-custom .button { margin-top: var(--space-4); }
+  #included { border-top: 1px solid var(--color-border); }
 
   .grid3 { display: grid; gap: var(--space-4); padding: 0; list-style: none; }
   @media (min-width: 40em) { .grid3 { grid-template-columns: repeat(2, 1fr); } }

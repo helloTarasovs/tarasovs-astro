@@ -4,11 +4,15 @@
 // page, selected service and agency flag.
 import { FORM_SERVICES } from '../data/ai-video';
 import { UK } from '../data/ai-video-uk';
+import { PACKAGES, PACKAGES_EN, PACKAGES_UK, CUSTOM_PACKAGE, formatPrice } from '../data/ai-video-packages';
 
 interface Props { lang?: 'en' | 'uk' }
 const lang = Astro.props.lang ?? 'en';
 const uk = lang === 'uk';
 const services = uk ? UK.formServices : FORM_SERVICES;
+const pk = (uk ? PACKAGES_UK : PACKAGES_EN).ui;
+const announce = pk.announce;
+const announceCustom = uk ? 'Вибрано індивідуальний проєкт. Заповніть форму запиту нижче.' : 'Selected: custom project. Please fill in the project inquiry form below.';
 const t = uk ? {
   name: "Ім'я", email: 'Емейл', company: 'Компанія або сайт', service: 'Послуга', agency: 'Проєкт для агенції', brief: 'Бриф проєкту',
   placeholder: 'Що ви створюєте, для кого і де використовуватиметься відео? Можна додати посилання на референси.',
@@ -61,6 +65,15 @@ const pageUrl = uk ? 'https://tarasovs.me/ua/ai-video-produktsiia/' : 'https://t
         {services.map((s) => <option value={s.label} data-id={s.value}>{s.label}</option>)}
       </select>
     </div>
+  </div>
+  <div class="field">
+    <label for="vf-package">{pk.formLabel} <span class="req">{t.opt}</span></label>
+    <select id="vf-package" name="package">
+      <option value="" data-name="">{pk.notSure}</option>
+      {PACKAGES.map((p) => <option value={p.id} data-service={p.serviceId} data-name={p.name} data-price={p.startingPrice} data-currency={p.currency}>{p.name}, {pk.from.toLowerCase()} {formatPrice(p)}</option>)}
+      <option value={CUSTOM_PACKAGE.id} data-name={CUSTOM_PACKAGE.name}>{pk.customLabel}</option>
+    </select>
+    <p class="visually-hidden" role="status" aria-live="polite" id="vf-package-live" data-text={announce} data-custom={announceCustom}></p>
   </div>
   <label class="check"><input type="checkbox" id="vf-agency" name="agency_project" value="Yes" /><span>{t.agency}</span></label>
   <div class="field">

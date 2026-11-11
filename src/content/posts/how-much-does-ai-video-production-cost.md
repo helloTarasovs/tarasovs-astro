@@ -532,7 +532,7 @@ text-shadow: none !important;
 </div>
 <h2 id="ta-not-cost">What Does Not Change the Price Much</h2>
 <p>Some assumptions from traditional production do not carry over directly. Location, crew size, travel and equipment are not the main cost lines in an AI-assisted project. At the same time, "AI" does not mean unlimited iterations for free. A project is priced around a defined result, so a clear scope matters more than a low hourly figure.</p>
-<div class="ta-note">We do not publish a price list or typical ranges on this page. Any number given without a brief would be a guess, and a guess is not useful when you are planning a budget.</div>
+<div class="ta-note">Our <a href="/services/ai-video-production/#video-packages">starting packages</a> begin at $350 for a website hero loop, $650 for a product video and $950 for a social launch kit. These are starting prices for a defined base scope, not a quote. Anything outside that scope is priced after we review the brief.</div>
 <h2 id="ta-scope">What a Proposal Should Define Before Production Starts</h2>
 <p>Whoever you work with, ask for the following to be written down. This is also how we scope our own <a href="/services/ai-video-production/">AI video production</a> projects.</p>
 <ul>
