@@ -60,6 +60,13 @@ const build = [
     link: { label: 'Prepare for AI Search', href: '/services/geo-ai-search-optimization/' },
     img: { src: `${U}/2026/06/tarasovs-ui-optimisation-for-ai-seo.webp`, alt: 'AI Search Optimization', width: 1536, height: 1024 },
   },
+  {
+    meta: 'Video & motion',
+    title: 'AI Video Production',
+    html: '<p>Product films, website hero loops, brand stories and social videos, made with AI-assisted production, creative direction, editing and sound. Order a standalone film or combine video with a new website.</p>',
+    link: { label: 'Explore AI Video Production', href: '/services/ai-video-production/' },
+    img: { src: '/images/video/meridian.jpg', alt: 'Wireless earbud from the Meridian product film', width: 1200, height: 675 },
+  },
 ];
 
 const improve = ['Website structure and page hierarchy', 'Service page clarity', 'SEO-friendly content', 'FAQ sections', 'Schema markup', 'Internal linking', 'Brand trust signals', 'Case study structure'];
@@ -164,10 +171,10 @@ const stats = [
       <h2 id="build-title">What We Help You Build</h2>
       <p class="intro">A website should do more than look good. It should explain your offer, build trust, guide visitors, support SEO, and help your brand become easier to discover across modern search platforms.</p>
     </div>
-    {[build.slice(0, 2), build.slice(2, 4)].map((pair, row) => {
+    {[build.slice(0, 2), build.slice(2, 4), build.slice(4)].map((pair, row) => {
       const img = pair.find((c) => c.img)!.img!;
       return (
-        <div class:list={['build-row', { reverse: row === 1 }]}>
+        <div class:list={['build-row', { reverse: row % 2 === 1 }]}>
           <div class="build-cards">
             {pair.map((c) => (
               <article class="build-card reveal">

@@ -47,10 +47,16 @@ const services = [
     html: '<p>Перевіряємо, що відповідають ChatGPT та інші AI на запити ваших клієнтів, і виправляємо те, що заважає згадувати ваш бізнес.</p>',
     href: '/ua/ai-vydymist/',
   },
+  {
+    title: 'AI-відеопродакшн',
+    html: '<p>Продуктові фільми, hero-відео для сайтів, бренд-історії та відео для соцмереж. Замовте окремий фільм або поєднайте відео з новим сайтом.</p>',
+    href: '/ua/ai-video-produktsiia/',
+  },
 ];
 const rows = [
   { cards: services.slice(0, 2), img: { src: `${U}/2026/05/tarasovs-home-2.webp`, alt: 'Процес дизайну й розробки сайту', width: 1424, height: 976 } },
-  { cards: services.slice(2), img: { src: `${U}/2026/06/tarasovs-ui-optimisation-for-ai-seo.webp`, alt: 'AI-видимість сайту', width: 1536, height: 1024 } },
+  { cards: services.slice(2, 3), img: { src: `${U}/2026/06/tarasovs-ui-optimisation-for-ai-seo.webp`, alt: 'AI-видимість сайту', width: 1536, height: 1024 } },
+  { cards: services.slice(3), img: { src: '/images/video/meridian.jpg', alt: 'Бездротовий навушник із продуктового фільму Meridian', width: 1200, height: 675 } },
 ];
 
 const audit = [
@@ -108,7 +114,7 @@ const faqLd = {
       <h2 id="services-title">Що ми робимо</h2>
     </div>
     {rows.map((row, i) => (
-      <div class:list={['build-row', { reverse: i === 1, single: row.cards.length === 1 }]}>
+      <div class:list={['build-row', { reverse: i % 2 === 1, single: row.cards.length === 1 }]}>
         <div class="build-cards">
           {row.cards.map((c) => (
             <article class="build-card reveal">
