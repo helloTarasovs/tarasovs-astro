@@ -414,7 +414,7 @@ color: var(--text); font-variant-numeric: tabular-nums; min-width: 62px; text-al
 </div>
 <div class="ta-faq__item">
 <h3 class="ta-faq__q">Does a zero score mean the dispensary does not exist online?</h3>
-<p class="ta-faq__a">No. It means that on the check date, across ten standardized prompts, the business was not named in any recorded response. A dispensary can have a working website, an active Google Business Profile and strong local search rankings and still score zero here, because AI recommendation and traditional local search run on different inputs. Owners can request a recheck of any profile at any time.</p>
+<p class="ta-faq__a">No. It means that on the check date, across ten standardized prompts, the business was not named in any recorded response. A dispensary can have a working website, an active Google Business Profile and strong <a href="/local-seo-manhattan-brooklyn/">local search rankings</a> and still score zero here, because AI recommendation and traditional local search run on different inputs. Owners can request a recheck of any profile at any time.</p>
 </div>
 <div class="ta-faq__item">
 <h3 class="ta-faq__q">Why does Manhattan perform worse than upstate markets?</h3>

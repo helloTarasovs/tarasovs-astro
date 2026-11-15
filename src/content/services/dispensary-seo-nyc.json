@@ -59,8 +59,8 @@
               "html": "<p>Optimize categories, services, reviews, photos, posts, and local relevance signals to improve Maps visibility.</p>",
               "meta": "Google Business",
               "link": {
-                "label": "Get started",
-                "href": "#CForm"
+                "label": "Google Business Profile optimization",
+                "href": "/google-business-profile-optimization/"
               }
             },
             {
@@ -68,8 +68,8 @@
               "html": "<p>Make sure your Dutchie menu, categories, and product pages are discoverable, crawlable, and connected to your main website’s SEO strategy.</p>",
               "meta": "Dutchie iFrame",
               "link": {
-                "label": "Get started",
-                "href": "#CForm"
+                "label": "Dutchie menu SEO",
+                "href": "/dutchie-menu-seo/"
               }
             },
             {
@@ -77,8 +77,8 @@
               "html": "<p>Planning a move from Dutchie Plus, Dutchie iFrame, or a legacy Dutchie setup to Dutchie Pro? We help protect rankings, menu visibility, URL structure, and search data during migration.</p>",
               "meta": "Dutchie Pro",
               "link": {
-                "label": "Get started",
-                "href": "#CForm"
+                "label": "Dutchie Pro migration SEO",
+                "href": "/dutchie-pro-migration-seo/"
               }
             },
             {
@@ -86,8 +86,8 @@
               "html": "<p>When customers ask ChatGPT, Perplexity, or Google’s AI for the best dispensary nearby, we make sure your name is the one it recommends – not your competitor’s.</p>",
               "meta": "AI Search (GEO)",
               "link": {
-                "label": "Get started",
-                "href": "#CForm"
+                "label": "AI search optimization (GEO)",
+                "href": "/services/geo-ai-search-optimization/"
               }
             },
             {

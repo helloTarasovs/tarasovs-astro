@@ -2,7 +2,7 @@
   "url": "/local-seo-manhattan-brooklyn/",
   "variant": "center",
   "hero": {
-    "title": "Local SEO That Puts Your Dispensary on the Map – Literally",
+    "title": "Dispensary Local SEO in NYC That Puts You on the Map – Literally",
     "lead": "<p>In NYC, customers find dispensaries through Google Maps, “near me” searches, and neighborhood queries – and with cannabis ads off the table, that local visibility is your storefront. We get licensed dispensaries in Manhattan and Brooklyn into the Map Pack, ranking for the searches that walk real customers through your door.</p>",
     "actions": [
       {
@@ -47,7 +47,11 @@
             {
               "title": "Google Business Profile",
               "html": "<p>Cannabis-correct categories, services, attributes, hours, and posts – optimized for Map Pack relevance and kept compliant so your listing doesn’t get suspended.</p>",
-              "meta": "GBP"
+              "meta": "GBP",
+              "link": {
+                "label": "Google Business Profile optimization for dispensaries",
+                "href": "/google-business-profile-optimization/"
+              }
             },
             {
               "title": "Map Pack Ranking",
@@ -200,7 +204,7 @@
       "blocks": [
         {
           "type": "prose",
-          "html": "<p>“New York dispensary” is too broad to convert – real customers search their block. We target the neighborhoods you actually serve: Chelsea, SoHo, the Lower East Side, Midtown, Harlem and the Village in Manhattan; Williamsburg, Park Slope, Bushwick, Bed-Stuy, DUMBO and Downtown Brooklyn.</p><p>Rank for high-intent searches like “dispensary near me,”<br>“weed delivery Manhattan,” “cannabis dispensary Brooklyn,”<br>and neighborhood-specific searches. For dedicated Google Maps<br>and neighborhood optimization, explore our local SEO for NYC dispensaries<br>.</p>"
+          "html": "<p>“New York dispensary” is too broad to convert – real customers search their block. We target the neighborhoods you actually serve: Chelsea, SoHo, the Lower East Side, Midtown, Harlem and the Village in Manhattan; Williamsburg, Park Slope, Bushwick, Bed-Stuy, DUMBO and Downtown Brooklyn.</p><p>Local SEO covers the Map Pack and “near me” searches. For the full search picture, including organic rankings, Dutchie menu SEO and AI search, see our <a href=\"/dispensary-seo-nyc/\">cannabis dispensary SEO services in NYC</a>. Outside the city, we cover <a href=\"/dispensary-seo-new-york/\">dispensary SEO across New York State</a>.</p>"
         }
       ]
     },
@@ -268,6 +272,10 @@
     {
       "name": "Dispensary SEO",
       "path": "/dispensary-seo-new-york/"
+    },
+    {
+      "name": "Dispensary SEO NYC",
+      "path": "/dispensary-seo-nyc/"
     }
   ],
   "formSubject": "New audit request: Local SEO That Puts Your Dispensary on the Map – Literally"
