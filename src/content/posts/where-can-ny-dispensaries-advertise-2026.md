@@ -471,6 +471,7 @@ border: none !important; outline: none !important;
 <div class="ta-cta">
 <h2 id="related-reading">Related reading</h2>
 <ul>
+<li><a href="/dispensary-software-new-york-dutchie-alternatives/">Dispensary Software in New York: Dutchie and Alternatives Compared (2026)</a></li>
 <li><a href="/new-york-dispensary-ai-visibility-index/">New York Dispensary AI Visibility Index: Methodology &amp; Scoring</a></li>
 <li><a href="/dispensary-seo-2026/">Cannabis Dispensary SEO in 2026: Local, Dutchie &amp; AI Search</a></li>
 <li><a href="/ny-dispensary-chatgpt-visibility-study/">We Benchmarked 100 NY Dispensaries in ChatGPT. 31 Are Invisible</a></li>
