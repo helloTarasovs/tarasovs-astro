@@ -95,6 +95,8 @@ export function siteGraph(lang: Lang = 'en') {
           'https://www.facebook.com/tarasovs.web/',
           'https://www.instagram.com/tarasovs.me/',
           'https://www.linkedin.com/company/tarasovs-digital-agency/',
+          // Google Business Profile (Giroc, Timiș); cid from the maps.app.goo.gl link in lib/nav.ts
+          'https://www.google.com/maps?cid=14781910386875247520',
           // /ua/ pages also list the Ukrainian Facebook page
           ...(lang === 'uk' ? [FACEBOOK_UA] : []),
         ],

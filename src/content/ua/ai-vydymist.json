@@ -2,8 +2,8 @@
   "url": "/ua/ai-vydymist/",
   "lang": "uk",
   "seo": {
-    "title": "AI-видимість: чи згадує ChatGPT ваш бізнес | Tarasovs",
-    "description": "Перевіряємо, чи з'являється ваш бізнес у відповідях ChatGPT, Perplexity і Google AI Overviews, і покращуємо це. Без гарантій. Безкоштовний міні-аудит."
+    "title": "GEO-просування та AI-видимість бізнесу в ChatGPT | Tarasovs",
+    "description": "GEO-оптимізація сайту: перевіряємо, чи згадують ваш бізнес ChatGPT, Perplexity і Google AI Overviews, і покращуємо це. Без гарантій. Безкоштовний міні-аудит."
   },
   "service": {
     "name": "AI-видимість (GEO)"
@@ -15,7 +15,7 @@
     }
   ],
   "hero": {
-    "title": "AI-видимість: чи згадують ваш бізнес у відповідях ChatGPT",
+    "title": "AI-видимість і GEO-просування: чи згадують ваш бізнес у відповідях ChatGPT",
     "crumb": "AI-видимість",
     "lead": "<p>Дедалі більше людей питають поради в ChatGPT, Perplexity і Google AI Overviews, а не лише шукають у Google. Якщо AI не знає про ваш бізнес або описує його неточно, ви втрачаєте частину клієнтів, яких навіть не бачите.</p>",
     "actions": [

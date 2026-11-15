@@ -404,6 +404,16 @@
     min-height: 46px;
     text-align: center;
 }
+.tdv-card__owner {
+    margin: 4px 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: center;
+}
+@media (max-width: 720px) {
+.tdv-card__owner { text-align: left; }
+}
 .tdv-card__cta-note {
     color: var(--tdv-muted);
     font-size: 11px;

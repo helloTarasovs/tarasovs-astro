@@ -1,34 +1,21 @@
-User-agent: *
-Allow: /
+# One group for every crawler: a bot named in its own group ignores the "*" group,
+# so the feed rules below must sit in the same group to apply to all of them.
 
-# OpenAI / ChatGPT – live citation only. GPTBot (training crawler) stays
+# OpenAI / ChatGPT: live citation only. GPTBot (training crawler) stays
 # blocked via Cloudflare AI Crawl Control, do not re-allow it here.
-User-agent: OAI-SearchBot
-Allow: /
-User-agent: ChatGPT-User
-Allow: /
-
-# Anthropic / Claude – live citation only. ClaudeBot (training crawler)
+# Anthropic / Claude: live citation only. ClaudeBot (training crawler)
 # stays blocked via Cloudflare AI Crawl Control, do not re-allow it here.
+User-agent: *
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
 User-agent: Claude-User
-Allow: /
-
-# Perplexity
 User-agent: PerplexityBot
-Allow: /
 User-agent: Perplexity-User
-Allow: /
-
-# Common search bots
 User-agent: Bingbot
-Allow: /
 User-agent: Googlebot
-Allow: /
 User-agent: Applebot
-Allow: /
 User-agent: YouBot
 Allow: /
-
 Disallow: /tag/*/feed/
 Disallow: /category/*/feed/
 
